@@ -1,0 +1,100 @@
+name: MA2 Forums Miner CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run weekly scraping on Sunday at 00:00 UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pylint pytest
+        
+    - name: Lint with pylint
+      run: |
+        pylint src/ma2_miner --disable=C0114,C0115,C0116 || true
+        
+    - name: Check imports
+      run: |
+        python -c "from ma2_miner import scraper, downloader, manifest, clustering, cli"
+        
+  scrape-and-cluster:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: write
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -e .
+        
+    - name: Restore manifest and data
+      uses: actions/cache@v3
+      with:
+        path: |
+          manifest.json
+          output/
+        key: ma2-data-${{ github.run_number }}
+        restore-keys: |
+          ma2-data-
+          
+    - name: Run scraper
+      run: |
+        python -m ma2_miner.cli scrape --output-dir output --manifest manifest.json
+      timeout-minutes: 60
+      
+    - name: Run clustering
+      run: |
+        python -m ma2_miner.cli cluster --output-dir output
+      timeout-minutes: 30
+      
+    - name: Show statistics
+      run: |
+        python -m ma2_miner.cli stats --manifest manifest.json
+        
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: scraped-data
+        path: |
+          output/
+          manifest.json
+          output/clusters.json
+        retention-days: 30
+        
+    - name: Commit and push if changed
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git add -A
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update scraped data [skip ci]" && git push)
+      continue-on-error: true
