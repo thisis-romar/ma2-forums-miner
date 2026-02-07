@@ -54,6 +54,7 @@ class ThreadClusterer:
         
         if not output_path.exists():
             print(f"Output directory not found: {output_dir}")
+            print("Run 'ma2-miner scrape' first to download thread data.")
             return threads
             
         # Find all metadata.json files
@@ -70,6 +71,7 @@ class ThreadClusterer:
                         threads.append(thread_data)
                 except Exception as e:
                     print(f"Error loading {metadata_file}: {e}")
+                    print(f"  Possible cause: corrupted JSON or missing required fields")
                     
         return threads
         

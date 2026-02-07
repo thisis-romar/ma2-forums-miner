@@ -26,7 +26,7 @@ class Manifest:
                 with open(self.manifest_path, 'r', encoding='utf-8') as f:
                     self.data = json.load(f)
             except Exception as e:
-                print(f"Warning: Could not load manifest: {e}")
+                print(f"Warning: Could not load manifest from {self.manifest_path}: {e}")
                 self.data = {}
         else:
             self.data = {}
@@ -40,7 +40,7 @@ class Manifest:
             with open(self.manifest_path, 'w', encoding='utf-8') as f:
                 json.dump(self.data, f, indent=2, ensure_ascii=False)
         except Exception as e:
-            print(f"Error saving manifest: {e}")
+            print(f"Error saving manifest to {self.manifest_path}: {e}")
             
     def is_thread_scraped(self, thread_id: str) -> bool:
         """Check if a thread has been scraped.

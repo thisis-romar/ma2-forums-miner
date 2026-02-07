@@ -59,7 +59,7 @@ class Downloader:
             return True
             
         except Exception as e:
-            print(f"Error downloading {url}: {e}")
+            print(f"Error downloading {url} to {output_path}: {e}")
             return False
             
     async def download_attachments(

@@ -44,9 +44,12 @@ class ForumScraper:
         Returns:
             HTML content as string
         """
-        async with self.session.get(url) as response:
-            response.raise_for_status()
-            return await response.text()
+        try:
+            async with self.session.get(url) as response:
+                response.raise_for_status()
+                return await response.text()
+        except Exception as e:
+            raise Exception(f"Failed to fetch {url}: {e}") from e
             
     async def get_thread_list_page(self, page: int = 1) -> BeautifulSoup:
         """Get a thread list page.
