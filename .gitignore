@@ -38,6 +38,7 @@ data/
 output/
 downloads/
 manifest.json
+example_manifest.json
 
 # Testing
 .pytest_cache/

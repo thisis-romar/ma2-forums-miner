@@ -6,7 +6,7 @@ setup(
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     install_requires=[
-        "aiohttp>=3.9.0",
+        "aiohttp>=3.13.3",
         "aiofiles>=23.2.1",
         "beautifulsoup4>=4.12.0",
         "lxml>=4.9.0",
