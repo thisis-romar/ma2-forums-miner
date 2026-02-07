@@ -108,8 +108,5 @@ class ThreadMetadata:
         Returns:
             Dictionary representation with all fields serialized.
         """
-        data = asdict(self)
-        # Ensure assets are properly converted (asdict handles this, but being explicit)
-        data['assets'] = [asset.to_dict() if hasattr(asset, 'to_dict') else asset 
-                         for asset in self.assets]
-        return data
+        # asdict() automatically handles nested dataclasses recursively
+        return asdict(self)
