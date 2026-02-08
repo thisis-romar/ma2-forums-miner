@@ -33,9 +33,8 @@ ENV/
 *.swo
 *~
 
-# Project outputs (generated at runtime)
-output/
-manifest.json
+# Project outputs (committed by GitHub Actions)
+# output/ and manifest.json are now tracked for automated data collection
 
 # Legacy data directories (if using old structure)
 data/
