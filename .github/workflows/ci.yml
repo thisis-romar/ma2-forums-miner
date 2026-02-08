@@ -32,11 +32,11 @@ jobs:
         
     - name: Lint with pylint
       run: |
-        pylint src/ma2_miner --disable=C0114,C0115,C0116 || true
-        
+        pylint scraper --disable=C0114,C0115,C0116 || true
+
     - name: Check imports
       run: |
-        python -c "from ma2_miner import scraper, downloader, manifest, clustering, cli"
+        python -c "from scraper import scraper, models, utils"
         
   scrape-and-cluster:
     runs-on: ubuntu-latest
@@ -69,17 +69,8 @@ jobs:
           
     - name: Run scraper
       run: |
-        python -m ma2_miner.cli scrape --output-dir output --manifest manifest.json
-      timeout-minutes: 60
-      
-    - name: Run clustering
-      run: |
-        python -m ma2_miner.cli cluster --output-dir output
-      timeout-minutes: 30
-      
-    - name: Show statistics
-      run: |
-        python -m ma2_miner.cli stats --manifest manifest.json
+        python run_scrape.py
+      timeout-minutes: 120
         
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
@@ -88,7 +79,6 @@ jobs:
         path: |
           output/
           manifest.json
-          output/clusters.json
         retention-days: 30
         
     - name: Commit and push if changed
