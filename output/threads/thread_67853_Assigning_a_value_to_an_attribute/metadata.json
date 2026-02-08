@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "dahinn",
+  "post_date": null,
+  "post_text": "January 20, 2024 at 11:39 AM#1Hello, I'm looking for a way to assign a value to an attribute in range of 0 thru 255.Sure, I can type something like this:Fixture 1 Attribute \"pan\" at [0 thru 100] - [0 thru 100] means percent values,orFixture 1 Attribute \"pan\" at [-270 thru 270] - [-270 thru 270] means the pan rotation degree of the fixture 1.But I want to assign the exact value of the dmx signal - [0 thru 255].Can anybody help me ?",
+  "replies": 0,
+  "thread_id": "67853",
+  "title": "Assigning a value to an attribute",
+  "url": "https://forum.malighting.com/forum/thread/67853-assigning-a-value-to-an-attribute/",
+  "views": 0
+}
