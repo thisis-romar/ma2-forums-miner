@@ -33,11 +33,13 @@ ENV/
 *.swo
 *~
 
-# Data
-data/
+# Project outputs (generated at runtime)
 output/
-downloads/
 manifest.json
+
+# Legacy data directories (if using old structure)
+data/
+downloads/
 example_manifest.json
 
 # Testing

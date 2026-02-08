@@ -1,0 +1,86 @@
+name: Scrape MA2 Forums
+
+# This workflow runs the scraper on a schedule and can be triggered manually.
+# It implements incremental scraping - only new threads are processed each run.
+
+on:
+  # Manual trigger via GitHub Actions UI
+  workflow_dispatch:
+  
+  # Automatic weekly scraping on Sunday at 3 AM UTC
+  # Cron syntax: minute hour day-of-month month day-of-week
+  schedule:
+    - cron: '0 3 * * 0'  # Every Sunday at 3:00 AM UTC
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    
+    # Required permissions for the job
+    permissions:
+      contents: write  # Needed to commit and push scraped data
+    
+    steps:
+      # -------------------------------------------------------
+      # STEP 1: Checkout the repository
+      # -------------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch full history to ensure we have the latest manifest
+          fetch-depth: 0
+      
+      # -------------------------------------------------------
+      # STEP 2: Set up Python environment
+      # -------------------------------------------------------
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          # Cache pip dependencies for faster runs
+          cache: 'pip'
+      
+      # -------------------------------------------------------
+      # STEP 3: Install dependencies
+      # -------------------------------------------------------
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      # -------------------------------------------------------
+      # STEP 4: Run the scraper
+      # -------------------------------------------------------
+      # This is the main scraping step.
+      # The scraper will:
+      # - Load manifest.json to see what's already scraped
+      # - Discover new threads
+      # - Download metadata and attachments
+      # - Update manifest.json incrementally
+      - name: Run scraper
+        run: python run_scrape.py
+        timeout-minutes: 120  # 2 hour timeout to prevent runaway jobs
+      
+      # -------------------------------------------------------
+      # STEP 5: Commit and push new data
+      # -------------------------------------------------------
+      # This step commits any new or changed files back to the repo.
+      # The manifest.json and output/ directory track incremental changes.
+      - name: Commit new data
+        run: |
+          # Configure git with bot identity
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Add all changes in output/ and manifest.json
+          git add output/ manifest.json
+          
+          # Check if there are any staged changes
+          # If nothing changed, git diff --staged --quiet returns 0 (success)
+          # If there are changes, it returns 1 (failure), and we commit
+          git diff --staged --quiet || git commit -m "chore: update scraped data [skip ci]"
+          
+          # Push changes back to the repository
+          # [skip ci] in the commit message prevents triggering this workflow again
+          git push
+        continue-on-error: true  # Don't fail the job if there's nothing to commit

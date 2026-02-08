@@ -1,253 +1,397 @@
 # MA2 Forums Miner
 
-An async Python CLI tool that crawls the MA Lighting grandMA2 Macro Share forum, downloads attachments, extracts metadata, and performs NLP clustering using sentence-transformers + HDBSCAN.
+A production-grade, educational async web scraper for the [MA Lighting grandMA2 Macro Share forum](https://forum.malighting.com/forum/board/35-grandma2-macro-share/). This tool demonstrates modern Python async patterns, implements delta scraping for efficient incremental updates, and prepares data for downstream ML clustering pipelines.
 
-## Features
+## 🎯 Project Goals
 
-- **Async Scraping**: Fast, concurrent thread scraping with `aiohttp`
-- **Pagination**: Automatically discovers and scrapes all pages
-- **Attachment Downloading**: Downloads `.xml`, `.zip`, `.gz`, and `.show` files
-- **Full Metadata Extraction**: Captures thread titles, authors, dates, replies, views, and post content
-- **Organized Storage**: Each thread saved to its own folder with `metadata.json`
-- **Delta Scraping**: Manifest-based tracking to only scrape new threads
-- **NLP Clustering**: Semantic clustering using sentence-transformers and HDBSCAN
-- **GitHub Actions**: Automated weekly scraping workflow
-- **Modular Design**: Separate scraper, downloader, and clustering modules
+1. **Educational**: Learn async/await, concurrency control, and web scraping best practices
+2. **Production-Ready**: Implements rate limiting, exponential backoff, and robust error handling
+3. **ML-Friendly**: Structured output format optimized for NLP clustering and analysis
+4. **Efficient**: Delta scraping ensures you only process new content on subsequent runs
 
-## Installation
+## ✨ Features
+
+### Core Scraping Engine
+- **🚀 Async + HTTP/2**: Built with `httpx.AsyncClient` for efficient concurrent requests
+- **⚡ Concurrency Control**: `asyncio.Semaphore` limits simultaneous connections (default: 8)
+- **🕐 Rate Limiting**: Configurable delays (1.5s default) between requests to respect servers
+- **🔄 Exponential Backoff**: Automatic retry with backoff for HTTP 429 rate limit errors
+- **📊 Delta Scraping**: `manifest.json` tracks visited threads for incremental updates
+- **💾 Per-Thread Storage**: Self-contained folders with metadata and downloaded assets
+- **🔐 Checksums**: SHA256 hashing for download integrity and deduplication
+
+### Data Collection
+- **Complete Metadata**: Thread ID, title, author, date, post text, replies, views
+- **Asset Downloads**: Automatic download of `.xml`, `.zip`, `.gz`, `.show` files
+- **Type Safety**: Dataclass models with full docstrings for all data structures
+
+### Automation
+- **GitHub Actions**: Automated weekly scraping with data commits
+- **Idempotent**: Safe to run multiple times without duplicating work
+- **Progress Tracking**: Real-time progress bars and detailed status messages
+
+## 📋 Prerequisites
+
+- **Python 3.10+** (required for modern async syntax)
+- **pip** (Python package installer)
+- **Git** (for cloning the repository)
+
+## 🚀 Installation
+
+### 1. Clone the Repository
 
 ```bash
-# Clone the repository
 git clone https://github.com/thisis-romar/ma2-forums-miner.git
 cd ma2-forums-miner
+```
 
-# Install dependencies
+### 2. Create Virtual Environment (Recommended)
+
+```bash
+# Create virtual environment
+python -m venv .venv
+
+# Activate it
+# On macOS/Linux:
+source .venv/bin/activate
+# On Windows:
+.venv\Scripts\activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install --upgrade pip
 pip install -r requirements.txt
-
-# Or install as package
-pip install -e .
 ```
 
-## Usage
+**Key dependencies:**
+- `httpx[http2]` - Async HTTP client with HTTP/2 support
+- `beautifulsoup4` + `lxml` - HTML parsing
+- `orjson` - Fast JSON serialization
+- `tqdm` - Progress bars
 
-### Scraping Threads
+## 📖 Usage
 
-Scrape all threads from the forum:
+### Manual Scraping
+
+Run the scraper from the command line:
 
 ```bash
-python -m ma2_miner.cli scrape
+python run_scrape.py
 ```
 
-Options:
-- `--output-dir`: Output directory (default: `output`)
-- `--manifest`: Manifest file path (default: `manifest.json`)
-- `--full`: Force full scrape, ignoring manifest
-- `--no-attachments`: Skip downloading attachments
+**What happens:**
+1. Loads `manifest.json` to check previously scraped threads
+2. Discovers all threads from the forum (handles pagination automatically)
+3. Downloads metadata and attachments for **new threads only**
+4. Saves each thread to `output/threads/thread_{id}_{title}/`
+5. Updates `manifest.json` after each successful thread
 
-### Delta Scraping
+**First run:**
+- Scrapes all threads (may take 30-60 minutes depending on forum size)
 
-By default, the scraper uses a manifest file to track already-scraped threads:
+**Subsequent runs:**
+- Only scrapes NEW threads posted since last run (much faster!)
+- Idempotent - safe to run as often as you want
 
-```bash
-# First run: scrapes all threads
-python -m ma2_miner.cli scrape
+### GitHub Actions (Automated)
 
-# Second run: only scrapes new threads
-python -m ma2_miner.cli scrape
-```
+The included workflow (`.github/workflows/scrape.yml`) automatically scrapes weekly.
 
-To force a full re-scrape:
+**Automatic Schedule:**
+- Runs every Sunday at 3:00 AM UTC
+- Commits new data back to the repository
 
-```bash
-python -m ma2_miner.cli scrape --full
-```
+**Manual Trigger:**
+1. Go to your repository on GitHub
+2. Click the **Actions** tab
+3. Select **"Scrape MA2 Forums"**
+4. Click **"Run workflow"**
+5. Wait for completion (check logs for progress)
 
-### NLP Clustering
+The workflow will:
+- Run the scraper
+- Commit new threads to `output/`
+- Update `manifest.json`
+- Push changes back to the repo
 
-Run clustering analysis on scraped threads:
+## 📁 Output Structure
 
-```bash
-python -m ma2_miner.cli cluster
-```
-
-Options:
-- `--output-dir`: Directory with scraped data (default: `output`)
-- `--model`: Sentence transformer model (default: `all-MiniLM-L6-v2`)
-- `--min-cluster-size`: Minimum cluster size (default: `5`)
-- `--result-file`: Output file for results (default: `clusters.json`)
-
-### Statistics
-
-View scraping statistics:
-
-```bash
-python -m ma2_miner.cli stats
-```
-
-## Project Structure
-
-```
-ma2-forums-miner/
-├── .github/
-│   └── workflows/
-│       └── ci.yml              # GitHub Actions workflow
-├── src/
-│   └── ma2_miner/
-│       ├── __init__.py         # Package initialization
-│       ├── scraper.py          # Forum scraping logic
-│       ├── downloader.py       # Attachment downloader
-│       ├── manifest.py         # Delta scraping manifest
-│       ├── clustering.py       # NLP clustering module
-│       └── cli.py              # CLI interface
-├── .gitignore
-├── requirements.txt            # Python dependencies
-├── setup.py                    # Package setup
-└── README.md                   # This file
-```
-
-## Output Structure
-
-Each scraped thread is saved to its own directory:
+Each scraped thread is saved to its own self-contained folder:
 
 ```
 output/
-├── {thread_id}_{thread_title}/
-│   ├── metadata.json           # Thread metadata and posts
-│   └── attachments/            # Downloaded attachments
-│       ├── file1.xml
-│       ├── file2.zip
-│       └── ...
-└── clusters.json               # Clustering results
+└── threads/
+    └── thread_30890_Moving_Fixtures_Between_Layers/
+        ├── metadata.json          # Complete thread metadata
+        ├── macro_example.xml      # Downloaded attachments
+        └── showfile.zip
 ```
 
 ### metadata.json Format
 
 ```json
 {
-  "thread_id": "12345",
-  "title": "Thread Title",
-  "url": "https://forum.malighting.com/...",
-  "author": "Username",
-  "date": "2024-01-01T00:00:00Z",
-  "replies": 10,
-  "views": 150,
-  "posts": [
+  "thread_id": "30890",
+  "title": "Moving Fixtures Between Layers",
+  "url": "https://forum.malighting.com/thread/30890-...",
+  "author": "johndoe",
+  "post_date": "2024-01-15T10:30:00Z",
+  "post_text": "Full text content of the first post...",
+  "replies": 5,
+  "views": 1234,
+  "assets": [
     {
-      "post_id": "67890",
-      "author": "Username",
-      "date": "2024-01-01T00:00:00Z",
-      "content": "Post content..."
-    }
-  ],
-  "attachments": [
-    {
-      "url": "https://...",
-      "filename": "file.xml",
-      "post_id": "67890"
-    }
-  ],
-  "downloaded_attachments": [
-    "output/12345_Thread_Title/attachments/file.xml"
-  ]
-}
-```
-
-## Clustering Output
-
-The clustering module generates a `clusters.json` file:
-
-```json
-{
-  "num_threads": 150,
-  "num_clusters": 8,
-  "cluster_info": {
-    "0": {
-      "size": 25,
-      "representative_title": "Most representative thread title",
-      "thread_ids": ["123", "456", ...]
-    }
-  },
-  "threads": [
-    {
-      "thread_id": "123",
-      "title": "Thread Title",
-      "cluster": 0
+      "filename": "macro.xml",
+      "url": "https://forum.malighting.com/attachment/12345/",
+      "size": 2048,
+      "download_count": null,
+      "checksum": "sha256:abc123def456..."
     }
   ]
 }
 ```
 
-## GitHub Actions Workflow
+## 🏗️ Architecture
 
-The included workflow automatically:
-- Runs linting and import checks on push/PR
-- Performs weekly scraping (Sunday 00:00 UTC)
-- Runs clustering analysis
-- Uploads artifacts
-- Optionally commits results back to the repository
+### High-Level Overview
 
-Trigger manually:
-1. Go to Actions tab in GitHub
-2. Select "MA2 Forums Miner CI"
-3. Click "Run workflow"
+```
+┌─────────────────┐
+│  run_scrape.py  │  Entry point - runs asyncio event loop
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────────────────────────────────────────────┐
+│              ForumScraper (scraper.py)                 │
+│                                                         │
+│  ┌─────────────────────────────────────────────────┐  │
+│  │ 1. Load manifest.json (delta tracking)          │  │
+│  └─────────────────────────────────────────────────┘  │
+│  ┌─────────────────────────────────────────────────┐  │
+│  │ 2. Initialize httpx.AsyncClient (HTTP/2)        │  │
+│  └─────────────────────────────────────────────────┘  │
+│  ┌─────────────────────────────────────────────────┐  │
+│  │ 3. Discover thread URLs (async pagination)      │  │
+│  └─────────────────────────────────────────────────┘  │
+│  ┌─────────────────────────────────────────────────┐  │
+│  │ 4. Filter new threads (set difference)          │  │
+│  └─────────────────────────────────────────────────┘  │
+│  ┌─────────────────────────────────────────────────┐  │
+│  │ 5. Process threads (concurrent with semaphore)  │  │
+│  │    ├─ Fetch metadata                            │  │
+│  │    ├─ Download assets (checksums)               │  │
+│  │    ├─ Save metadata.json                        │  │
+│  │    └─ Update manifest                           │  │
+│  └─────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────┘
+         │
+         ▼
+┌─────────────────────────────────────────────────────────┐
+│              Output Structure                           │
+│  manifest.json         (visited thread URLs)            │
+│  output/threads/       (per-thread folders)             │
+└─────────────────────────────────────────────────────────┘
+```
 
-## Architecture
+### Module Breakdown
 
-### Modular Components
+**`scraper/scraper.py`** - Main scraper engine
+- `ForumScraper` class with async/await throughout
+- Thread discovery with automatic pagination
+- Concurrent processing with semaphore-based rate limiting
+- Exponential backoff for HTTP 429 errors
+- Manifest-based delta scraping
 
-1. **Scraper** (`scraper.py`): Async forum scraping with BeautifulSoup
-   - Thread list pagination
-   - Thread detail extraction
-   - Post and attachment parsing
+**`scraper/models.py`** - Type-safe data models
+- `ThreadMetadata` dataclass for thread information
+- `Asset` dataclass for downloadable attachments
+- JSON serialization helpers
 
-2. **Downloader** (`downloader.py`): Async file downloading
-   - Concurrent attachment downloads
-   - Automatic filename conflict resolution
-   - Organized folder structure
+**`scraper/utils.py`** - Utility functions
+- `sha256_file()` - Compute checksums for downloaded files
+- `safe_thread_folder()` - Generate filesystem-safe folder names
 
-3. **Manifest** (`manifest.py`): Delta scraping support
-   - JSON-based tracking
-   - Thread metadata persistence
-   - Incremental update support
+**`run_scrape.py`** - Entry point
+- Simple wrapper that runs `asyncio.run(scraper.run())`
+- Handles KeyboardInterrupt gracefully
 
-4. **Clustering** (`clustering.py`): NLP analysis
-   - Sentence embeddings with sentence-transformers
-   - HDBSCAN clustering
-   - Cluster analysis and reporting
+## 🔄 How Delta Scraping Works
 
-5. **CLI** (`cli.py`): Command-line interface
-   - Click-based commands
-   - Async execution
-   - Progress reporting
+Delta scraping ensures efficient incremental updates:
 
-## Dependencies
+1. **First Run:**
+   ```
+   manifest.json: []  (empty)
+   ↓
+   Scrape ALL threads (e.g., 500 threads)
+   ↓
+   manifest.json: ["url1", "url2", ..., "url500"]
+   ```
 
-- **aiohttp**: Async HTTP requests
-- **aiofiles**: Async file I/O
-- **beautifulsoup4**: HTML parsing
-- **lxml**: Fast XML/HTML parser
-- **sentence-transformers**: Semantic embeddings
-- **hdbscan**: Density-based clustering
-- **numpy**: Numerical operations
-- **scikit-learn**: ML utilities
-- **tqdm**: Progress bars
-- **click**: CLI framework
+2. **Second Run (1 week later):**
+   ```
+   manifest.json: ["url1", ..., "url500"]
+   ↓
+   Discover 505 threads on forum
+   ↓
+   Filter: 505 - 500 = 5 new threads
+   ↓
+   Scrape ONLY 5 new threads
+   ↓
+   manifest.json: ["url1", ..., "url505"]
+   ```
 
-## License
+3. **Benefits:**
+   - ✅ No duplicate downloads
+   - ✅ Fast incremental updates
+   - ✅ Resume after interruption
+   - ✅ Bandwidth efficient
 
-MIT License
+**Forcing a full re-scrape:**
+```bash
+# Delete the manifest and run again
+rm manifest.json
+python run_scrape.py
+```
 
-## Contributing
+## 🧠 Code Style & Learning Focus
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+This project prioritizes **educational clarity** over brevity:
 
-## Target Forum
+### ✅ What You'll Find
+- **Verbose inline comments** explaining *why*, not just *what*
+- **Detailed docstrings** on every class, method, and function
+- **Step-by-step breakdowns** of complex async patterns
+- **Explicit error handling** with clear try/except blocks
+- **Descriptive variable names** (`thread_metadata` not `tm`)
 
-This tool scrapes: https://forum.malighting.com/forum/board/35-grandma2-macro-share/
+### 📚 Learning Topics Covered
+1. **Async/Await Fundamentals**
+   - When to use `async def` vs regular `def`
+   - How `await` yields control to the event loop
+   - Why async improves I/O-bound performance
 
-## Notes
+2. **Concurrency Control**
+   - `asyncio.Semaphore` for limiting simultaneous requests
+   - `asyncio.gather()` for waiting on multiple coroutines
+   - Balancing speed vs server load
 
-- The scraper includes delays between requests to be respectful to the server
-- Large forums may take significant time to scrape fully
-- Clustering requires sufficient memory for embedding generation
-- The manifest enables efficient delta updates for scheduled scraping
+3. **HTTP Best Practices**
+   - Rate limiting with configurable delays
+   - Exponential backoff for transient failures
+   - Proper User-Agent headers
+
+4. **Data Engineering**
+   - Structured folder hierarchy for ML pipelines
+   - SHA256 checksums for integrity verification
+   - Idempotent operations
+
+## 🛠️ Configuration
+
+All configuration is done via constants in `scraper/scraper.py`:
+
+```python
+# Concurrency and rate limiting
+MAX_CONCURRENT_REQUESTS = 8      # Simultaneous HTTP requests
+REQUEST_DELAY = 1.5              # Seconds between requests
+REQUEST_TIMEOUT = 30.0           # Request timeout in seconds
+
+# Exponential backoff
+MAX_RETRIES = 5                  # Retry attempts for failed requests
+INITIAL_BACKOFF = 2              # Initial backoff delay (doubles each retry)
+```
+
+**Tuning guidance:**
+- **Increase `MAX_CONCURRENT_REQUESTS`** (e.g., 16) for faster scraping if your network supports it
+- **Increase `REQUEST_DELAY`** (e.g., 3.0) if you encounter rate limiting
+- **Decrease delays** only if you're scraping your own test server
+
+## 🗺️ Roadmap
+
+### ✅ Phase 1: Core Scraping (Current)
+- [x] Async scraper with httpx
+- [x] Delta scraping via manifest
+- [x] Per-thread folder structure
+- [x] Asset downloading with checksums
+- [x] GitHub Actions workflow
+
+### 🔜 Phase 2: NLP Clustering (Next)
+- [ ] Sentence embeddings with `sentence-transformers`
+- [ ] HDBSCAN clustering algorithm
+- [ ] Cluster visualization and analysis
+- [ ] Topic modeling for cluster interpretation
+
+### 🔮 Phase 3: Advanced Features (Future)
+- [ ] Web dashboard for browsing clusters
+- [ ] Automated macro quality scoring
+- [ ] Duplicate detection across versions
+- [ ] API for accessing scraped data
+
+## 🐛 Troubleshooting
+
+**Problem: Rate limited (HTTP 429)**
+```
+Solution: Increase REQUEST_DELAY in scraper.py
+Example: REQUEST_DELAY = 3.0  # Was 1.5
+```
+
+**Problem: Timeout errors**
+```
+Solution: Increase REQUEST_TIMEOUT in scraper.py
+Example: REQUEST_TIMEOUT = 60.0  # Was 30.0
+```
+
+**Problem: Want to re-scrape everything**
+```bash
+# Delete manifest and run again
+rm manifest.json
+python run_scrape.py
+```
+
+**Problem: Script interrupted mid-run**
+```
+Solution: Just run it again! Progress is saved in manifest.json.
+The scraper will pick up where it left off.
+```
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## 🎓 Educational Use
+
+This project is designed as a learning resource for:
+- Python async/await patterns
+- Web scraping best practices
+- Concurrent programming with semaphores
+- Data pipeline design for ML
+
+Feel free to use this as a reference for your own scraping projects!
+
+## 🔗 Target Forum
+
+This scraper targets: https://forum.malighting.com/forum/board/35-grandma2-macro-share/
+
+**Please be respectful:**
+- Default rate limiting is conservative (1.5s delays)
+- Only scrape during off-peak hours if possible
+- Consider contacting forum admins for large-scale scraping
+
+## ⚠️ Disclaimer
+
+This tool is for educational purposes. Always:
+- Respect robots.txt and terms of service
+- Implement rate limiting and backoff
+- Be a good internet citizen
+- Seek permission for large-scale scraping
+
+---
+
+**Built with ❤️ for the grandMA2 community**
+
