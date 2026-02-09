@@ -6,6 +6,7 @@ This module provides helper functions for file operations and path management.
 
 import hashlib
 import re
+import mimetypes
 from pathlib import Path
 from typing import Union
 
@@ -139,3 +140,65 @@ def safe_thread_folder(thread_id: str, title: str, max_length: int = 50) -> str:
     folder_name = f"thread_{thread_id}_{slug}"
     
     return folder_name
+
+
+def sha256_string(text: str) -> str:
+    """
+    Calculate the SHA256 hash of a string.
+    
+    Used for content fingerprinting to detect changes in post text.
+    
+    Args:
+        text: String to hash
+        
+    Returns:
+        SHA256 hash in format "sha256:hexdigest"
+        
+    Example:
+        hash_val = sha256_string("Hello, world!")
+        # Returns: "sha256:315f5bdb76d078c43b8ac0064e4a0164612b1fce77c869345bfc94c75894edd3"
+    """
+    sha256_hash = hashlib.sha256()
+    sha256_hash.update(text.encode('utf-8'))
+    return f"sha256:{sha256_hash.hexdigest()}"
+
+
+def infer_mime_type(filename: str, content_type: str = None) -> str:
+    """
+    Infer MIME type from filename extension or Content-Type header.
+    
+    Prefers Content-Type header if provided, falls back to extension-based
+    inference using Python's mimetypes module.
+    
+    Args:
+        filename: Name of the file
+        content_type: Content-Type header value (if available)
+        
+    Returns:
+        MIME type string (e.g., "application/xml", "application/zip")
+        Returns "application/octet-stream" if type cannot be determined
+        
+    Example:
+        mime = infer_mime_type("macro.xml", "application/xml")
+        # Returns: "application/xml"
+        
+        mime = infer_mime_type("script.xml")
+        # Returns: "application/xml" (inferred from extension)
+        
+        mime = infer_mime_type("unknown.dat")
+        # Returns: "application/octet-stream" (unknown type)
+    """
+    # Prefer explicit Content-Type header
+    if content_type:
+        # Extract just the MIME type, ignore parameters like charset
+        mime = content_type.split(';')[0].strip()
+        if mime:
+            return mime
+    
+    # Fall back to extension-based inference
+    guessed_type, _ = mimetypes.guess_type(filename)
+    if guessed_type:
+        return guessed_type
+    
+    # Default to generic binary type
+    return "application/octet-stream"
