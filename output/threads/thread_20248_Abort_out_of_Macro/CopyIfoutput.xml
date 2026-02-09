@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA major_vers="1" minor_vers="7" stream_vers="0">
+	<Macro name="Copy Ifoutput" cli="0">
+		<Macroline>
+			<text>SetUserVar $Store=( &quot;Copy Ifoutput To Cue Number:&quot; )</text>
+		</Macroline>
+		<Macroline>
+			<text>SetUserVar $StoreCueOnly=( &quot;For CueOnly, Type: 1&quot; )</text>
+		</Macroline>
+		<Macroline>
+			<text>[$Store&gt;0] IfOutput</text>
+		</Macroline>
+		<Macroline>
+			<text>[$Store&gt;0] On Attribute Thru</text>
+		</Macroline>
+		<Macroline>
+			<text>[$Store&gt;0] Channel Thru</text>
+		</Macroline>
+		<Macroline>
+			<text>[$Store&gt;0] Fixture Thru</text>
+		</Macroline>
+		<Macroline>
+			<text>[$Store&gt;0] On Attribute Dim</text>
+		</Macroline>
+		<Macroline>
+			<text>[$StoreCueOnly==1] Store Cue $Store /CueOnly</text>
+		</Macroline>
+		<Macroline>
+			<text>[$StoreCueOnly==1] SetUserVar $Store=</text>
+		</Macroline>
+		<Macroline>
+			<text>[$StoreCueOnly==1] ClearAll</text>
+		</Macroline>
+		<Macroline>
+			<text>[$Store&gt;0] Store Cue $Store</text>
+		</Macroline>
+		<Macroline>
+			<text>[$Store&gt;0] ClearAll</text>
+		</Macroline>
+		<Macroline>
+			<text>SetUserVar $Store=</text>
+		</Macroline>
+		<Macroline>
+			<text>SetUserVar $StoreCueOnly=</text>
+		</Macroline>
+	</Macro>
+</MA>
