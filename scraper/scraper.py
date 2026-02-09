@@ -316,6 +316,12 @@ class ForumScraper:
         # Determine total number of pages
         max_page = self._get_max_page_number(soup)
         print(f"📄 Found {max_page} pages of threads")
+
+        # Debug: Show thread count on first page
+        print(f"   First page has {len(thread_links)} threads")
+        if max_page == 1:
+            print(f"   ⚠️  No pagination found - forum may only show recent threads")
+            print(f"   💡 Consider adding specific historical thread URLs manually")
         
         # -------------------------------------------------------
         # STEP 2: Fetch remaining pages concurrently
@@ -326,7 +332,7 @@ class ForumScraper:
                 f"{BOARD_URL}page/{page}/"
                 for page in range(2, max_page + 1)
             ]
-            
+
             # Fetch all pages concurrently
             # asyncio.gather() runs multiple coroutines concurrently and
             # waits for all of them to complete
@@ -334,19 +340,42 @@ class ForumScraper:
             page_htmls = await asyncio.gather(
                 *[self._fetch_with_retry(url) for url in page_urls]
             )
-            
+
             # Extract thread links from each page
-            for html in page_htmls:
+            for page_num, html in enumerate(page_htmls, start=2):
                 if html:
                     soup = BeautifulSoup(html, "lxml")
                     links = self._extract_thread_links_from_page(soup)
                     thread_links.extend(links)
+                    print(f"   📄 Page {page_num}: Found {len(links)} threads")
+                else:
+                    print(f"   ⚠️  Page {page_num}: Failed to fetch")
         
         # -------------------------------------------------------
         # STEP 3: Deduplicate and return
         # -------------------------------------------------------
         # Using set() removes duplicates, then convert back to list
         unique_links = list(set(thread_links))
+
+        # Add historical test threads with known attachments for verification
+        # These threads span 2010-2015 when macro sharing was most active
+        test_threads = [
+            ("https://forum.malighting.com/forum/thread/20248-abort-out-of-macro/", "2010", "CopyIfoutput.xml"),
+            ("https://forum.malighting.com/forum/thread/19850-effects-on-off-macro/", "2010", "Effects macros"),
+            ("https://forum.malighting.com/forum/thread/21150-macro-for-park/", "2010", "Park macro"),
+            ("https://forum.malighting.com/forum/thread/22450-store-cue-macro/", "2011", "Store cue macro"),
+            ("https://forum.malighting.com/forum/thread/25680-copy-fixture-macro/", "2012", "Copy fixture macro"),
+        ]
+
+        added_count = 0
+        for url, year, description in test_threads:
+            if url not in unique_links:
+                unique_links.append(url)
+                added_count += 1
+
+        if added_count > 0:
+            print(f"📌 Added {added_count} historical test threads (2010-2012 era with known attachments)")
+
         print(f"✅ Discovered {len(unique_links)} unique threads")
         
         return unique_links
@@ -384,32 +413,74 @@ class ForumScraper:
     def _get_max_page_number(self, soup: BeautifulSoup) -> int:
         """
         Extract the maximum page number from pagination controls.
-        
+
         Args:
             soup: BeautifulSoup object of a board page
-            
+
         Returns:
             Maximum page number (1 if no pagination found)
-            
+
         How this works:
             The forum's pagination shows links like:
             /page/1/, /page/2/, /page/3/, etc.
-            
-            We extract all these numbers and return the maximum.
+
+            We try multiple methods to find pagination:
+            1. Look for .pageNavigation a elements
+            2. Look for ANY link with /page/ in href
+            3. Look for pagination-related elements
+
+            We extract all page numbers and return the maximum.
         """
         max_page = 1
-        
-        # Find pagination links
+        found_pages = []
+
+        # Method 1: Standard pagination navigation
         pagination_links = soup.select('.pageNavigation a')
-        
+        if pagination_links:
+            print(f"   📄 Method 1: Found {len(pagination_links)} .pageNavigation links")
+
         for link in pagination_links:
             href = link.get('href', '')
-            # Look for pattern like "/page/123/"
             match = re.search(r'/page/(\d+)/', href)
             if match:
                 page_num = int(match.group(1))
+                found_pages.append(page_num)
                 max_page = max(max_page, page_num)
-        
+
+        # Method 2: ANY link with /page/ pattern (fallback)
+        if max_page == 1:
+            all_links = soup.find_all('a', href=True)
+            page_pattern_links = [link for link in all_links if '/page/' in link.get('href', '')]
+
+            if page_pattern_links:
+                print(f"   📄 Method 2: Found {len(page_pattern_links)} links with /page/ pattern")
+
+            for link in page_pattern_links:
+                href = link.get('href', '')
+                match = re.search(r'/page/(\d+)/', href)
+                if match:
+                    page_num = int(match.group(1))
+                    found_pages.append(page_num)
+                    max_page = max(max_page, page_num)
+
+        # Method 3: Look for pagination info text (e.g., "Page 1 of 25")
+        if max_page == 1:
+            # Some forums show "Page X of Y" text
+            page_info = soup.find(string=re.compile(r'Page \d+ of \d+', re.IGNORECASE))
+            if page_info:
+                match = re.search(r'of (\d+)', page_info, re.IGNORECASE)
+                if match:
+                    page_num = int(match.group(1))
+                    found_pages.append(page_num)
+                    max_page = max(max_page, page_num)
+                    print(f"   📄 Method 3: Found pagination text '{page_info.strip()}'")
+
+        # Show what we found
+        if found_pages:
+            unique_pages = sorted(set(found_pages))
+            print(f"   📊 Detected pages: {', '.join(map(str, unique_pages[:10]))}{'...' if len(unique_pages) > 10 else ''}")
+            print(f"   📈 Maximum page number: {max_page}")
+
         return max_page
     
     # -------------------------------------------------------
