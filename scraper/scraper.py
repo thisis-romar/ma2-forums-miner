@@ -25,6 +25,7 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 
 from .models import Asset, Post, ThreadMetadata
+from .state_manager import StateManager
 from .utils import sha256_file, safe_thread_folder
 
 
@@ -37,8 +38,8 @@ from .utils import sha256_file, safe_thread_folder
 # Base directory for all output
 OUTPUT_DIR = Path("output/threads")
 
-# Manifest file tracks which threads we've already scraped
-MANIFEST_FILE = Path("manifest.json")
+# SQLite database for state tracking (replaces manifest.json)
+STATE_DB_PATH = "scraper_state.db"
 
 # Forum URLs
 BASE_URL = "https://forum.malighting.com"
@@ -64,7 +65,7 @@ class ForumScraper:
     2. **Concurrency Control**: Semaphore limits simultaneous requests
     3. **Rate Limiting**: Built-in delays between requests
     4. **Error Handling**: Exponential backoff for transient failures
-    5. **Delta Scraping**: Only scrapes new threads via manifest tracking
+    5. **Delta Scraping**: Only scrapes new threads via state database tracking
     6. **Organized Output**: Per-thread folders with metadata and assets
     
     Usage:
@@ -75,7 +76,7 @@ class ForumScraper:
     def __init__(
         self,
         output_dir: Path = OUTPUT_DIR,
-        manifest_file: Path = MANIFEST_FILE,
+        state_db_path: str = STATE_DB_PATH,
         max_concurrent: int = MAX_CONCURRENT_REQUESTS,
         request_delay: float = REQUEST_DELAY
     ):
@@ -84,14 +85,20 @@ class ForumScraper:
         
         Args:
             output_dir: Base directory for scraped data
-            manifest_file: Path to manifest JSON file
+            state_db_path: Path to SQLite state database
             max_concurrent: Maximum concurrent HTTP requests
             request_delay: Delay between requests in seconds
         """
         self.output_dir = output_dir
-        self.manifest_file = manifest_file
         self.max_concurrent = max_concurrent
         self.request_delay = request_delay
+        
+        # -------------------------------------------------------
+        # Initialize state manager (replaces manifest.json)
+        # -------------------------------------------------------
+        # StateManager provides ACID-compliant state tracking with
+        # metadata for smart update detection
+        self.state_manager = StateManager(state_db_path)
         
         # -------------------------------------------------------
         # Semaphore for concurrency control
@@ -106,75 +113,8 @@ class ForumScraper:
         # - Ensures we're being a "good citizen" on the internet
         self.semaphore = asyncio.Semaphore(max_concurrent)
         
-        # Visited threads tracking (loaded from manifest)
-        self.visited_urls: Set[str] = set()
-        
         # HTTP client (initialized in run())
         self.client: Optional[httpx.AsyncClient] = None
-    
-    # -------------------------------------------------------
-    # MANIFEST MANAGEMENT
-    # -------------------------------------------------------
-    # The manifest tracks which threads we've already scraped.
-    # This enables "delta scraping" - on subsequent runs, we only
-    # process NEW threads, making the scraper efficient and safe
-    # to run repeatedly without duplicating work.
-    # -------------------------------------------------------
-    
-    def _load_manifest(self) -> Set[str]:
-        """
-        Load the set of previously visited thread URLs from manifest.json.
-        
-        The manifest is a simple JSON array of URL strings. Using a set
-        provides O(1) lookup performance when checking if a thread was
-        already scraped.
-        
-        Returns:
-            Set of URL strings that have already been processed.
-            Returns an empty set if no manifest exists yet.
-            
-        Why orjson?
-            orjson is significantly faster than the standard library's json
-            module, especially for large files. Since the manifest grows
-            over time, this optimization matters for long-running projects.
-        """
-        if self.manifest_file.exists():
-            try:
-                # orjson.loads() requires bytes, not str
-                data = orjson.loads(self.manifest_file.read_bytes())
-                print(f"📖 Loaded manifest: {len(data)} threads already scraped")
-                return set(data)
-            except Exception as e:
-                print(f"⚠️  Warning: Could not load manifest: {e}")
-                print("   Starting fresh...")
-                return set()
-        else:
-            print("📄 No manifest found - starting fresh scrape")
-            return set()
-    
-    def _save_manifest(self):
-        """
-        Save the current set of visited URLs to manifest.json.
-        
-        This is called after each thread is successfully scraped to ensure
-        we don't lose progress if the script is interrupted.
-        
-        Why save after each thread?
-            If the script crashes or is interrupted, we want to preserve
-            as much progress as possible. Saving incrementally means we
-            never have to re-scrape threads we've already completed.
-        """
-        try:
-            # Convert set to sorted list for consistent output
-            data = sorted(list(self.visited_urls))
-            
-            # orjson.dumps() produces bytes, write directly
-            # option=orjson.OPT_INDENT_2 makes the file human-readable
-            self.manifest_file.write_bytes(
-                orjson.dumps(data, option=orjson.OPT_INDENT_2)
-            )
-        except Exception as e:
-            print(f"⚠️  Warning: Could not save manifest: {e}")
     
     # -------------------------------------------------------
     # HTTP REQUEST HANDLING
@@ -826,7 +766,7 @@ class ForumScraper:
         2. Create a dedicated folder for this thread
         3. Download all assets/attachments
         4. Save metadata.json with all information
-        5. Mark thread as visited in manifest
+        5. Mark thread as visited in state database
         """
         try:
             # -------------------------------------------------------
@@ -869,10 +809,17 @@ class ForumScraper:
             metadata_file.write_bytes(metadata_json)
             
             # -------------------------------------------------------
-            # STEP 5: Update manifest
+            # STEP 5: Update state database
             # -------------------------------------------------------
-            self.visited_urls.add(url)
-            self._save_manifest()
+            # Store thread state in SQLite database with metadata
+            # for future smart update detection
+            self.state_manager.update_thread_state({
+                'thread_id': metadata.thread_id,
+                'url': url,
+                'title': metadata.title,
+                'reply_count': metadata.replies,
+                'view_count': metadata.views
+            })
             
             print(f"    💾 Saved to {folder_name}")
             return True
@@ -890,7 +837,7 @@ class ForumScraper:
         Main entry point for the scraper.
         
         This method orchestrates the complete scraping workflow:
-        1. Load manifest (delta scraping)
+        1. Load state database (delta scraping)
         2. Initialize HTTP client
         3. Discover all thread URLs
         4. Filter out already-scraped threads
@@ -906,9 +853,12 @@ class ForumScraper:
         print("="*60)
         
         # -------------------------------------------------------
-        # STEP 1: Load manifest for delta scraping
+        # STEP 1: Load state from database for delta scraping
         # -------------------------------------------------------
-        self.visited_urls = self._load_manifest()
+        # Get visited URLs from state manager for filtering
+        visited_urls = self.state_manager.get_visited_set()
+        thread_count = self.state_manager.get_thread_count()
+        print(f"📖 Loaded state: {thread_count} threads already scraped")
         
         # -------------------------------------------------------
         # STEP 2: Initialize HTTP client with HTTP/2 support
@@ -960,15 +910,15 @@ class ForumScraper:
             # STEP 4: Filter for new threads (delta scraping)
             # -------------------------------------------------------
             # This is the "delta" part - we only process threads
-            # that aren't in our manifest yet
+            # that aren't in our state database yet
             new_threads = [
                 url for url in all_thread_urls
-                if url not in self.visited_urls
+                if url not in visited_urls
             ]
             
             print(f"\n📊 Thread Status:")
             print(f"   Total threads on forum: {len(all_thread_urls)}")
-            print(f"   Already scraped: {len(self.visited_urls)}")
+            print(f"   Already scraped: {len(visited_urls)}")
             print(f"   New threads to scrape: {len(new_threads)}")
             
             if not new_threads:
@@ -1011,9 +961,9 @@ class ForumScraper:
             print("="*60)
             print(f"   Successful: {successful}")
             print(f"   Failed: {failed}")
-            print(f"   Total scraped (all time): {len(self.visited_urls)}")
+            print(f"   Total scraped (all time): {self.state_manager.get_thread_count()}")
             print(f"   Output directory: {self.output_dir}")
-            print(f"   Manifest file: {self.manifest_file}")
+            print(f"   State database: {self.state_manager.db_path}")
             print("="*60)
             
         finally:
