@@ -549,6 +549,16 @@ class ForumScraper:
         # Try multiple possible selectors for attachments
         attachment_links = soup.select('a.messageAttachment, a.attachment, a[class*="attachment"], a[href*="file-download"]')
 
+        # DEBUG: If no links found, print HTML sample to diagnose
+        if len(attachment_links) == 0:
+            downloads_text = soup.find(string=lambda text: text and "Downloads" in text and ".xml" in text)
+            if downloads_text:
+                print(f"    [DEBUG] Found attachment text but no <a> link!")
+                print(f"    [DEBUG] Text: {downloads_text[:100]}")
+                print(f"    [DEBUG] Parent tag: {downloads_text.parent.name if downloads_text.parent else 'None'}")
+                if downloads_text.parent:
+                    print(f"    [DEBUG] Parent HTML: {str(downloads_text.parent)[:400]}")
+
         for link in attachment_links:
             href = link.get('href')
             if not href:
