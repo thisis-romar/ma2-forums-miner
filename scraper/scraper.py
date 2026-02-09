@@ -328,8 +328,9 @@ class ForumScraper:
         # -------------------------------------------------------
         if max_page > 1:
             # Create list of page URLs to fetch
+            # Forum uses ?pageNo=N query parameter format
             page_urls = [
-                f"{BOARD_URL}page/{page}/"
+                f"{BOARD_URL}?pageNo={page}"
                 for page in range(2, max_page + 1)
             ]
 
@@ -452,23 +453,25 @@ class ForumScraper:
 
         for link in pagination_links:
             href = link.get('href', '')
-            match = re.search(r'/page/(\d+)/', href)
+            # Try both URL formats: /page/N/ and ?pageNo=N
+            match = re.search(r'/page/(\d+)/', href) or re.search(r'[?&]pageNo=(\d+)', href)
             if match:
                 page_num = int(match.group(1))
                 found_pages.append(page_num)
                 max_page = max(max_page, page_num)
 
-        # Method 2: ANY link with /page/ pattern (fallback)
+        # Method 2: ANY link with /page/ or pageNo= pattern (fallback)
         if max_page == 1:
             all_links = soup.find_all('a', href=True)
-            page_pattern_links = [link for link in all_links if '/page/' in link.get('href', '')]
+            page_pattern_links = [link for link in all_links if '/page/' in link.get('href', '') or 'pageNo=' in link.get('href', '')]
 
             if page_pattern_links:
-                print(f"   📄 Method 2: Found {len(page_pattern_links)} links with /page/ pattern")
+                print(f"   📄 Method 2: Found {len(page_pattern_links)} links with page pattern")
 
             for link in page_pattern_links:
                 href = link.get('href', '')
-                match = re.search(r'/page/(\d+)/', href)
+                # Try both URL formats: /page/N/ and ?pageNo=N
+                match = re.search(r'/page/(\d+)/', href) or re.search(r'[?&]pageNo=(\d+)', href)
                 if match:
                     page_num = int(match.group(1))
                     found_pages.append(page_num)
