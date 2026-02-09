@@ -502,19 +502,6 @@ Multi-level delta scraping enables fine-grained change detection:
 ```bash
 # Delete the state and run again
 rm scraper_state.json
-   manifest.json: ["url1", "url2", ..., "url500"]
-   ```
-
-2. **Second Run (1 week later):**
-   ```
-   manifest.json: ["url1", ..., "url500"]
-   ↓
-   Discover 505 threads on forum
-   ↓
-   Filter: 505 - 500 = 5 new threads
-   ↓
-   Scrape ONLY 5 new threads
-   ↓
 python run_scrape.py
 ```
 

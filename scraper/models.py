@@ -7,7 +7,6 @@ Using dataclasses provides clear structure, type hints, and easy JSON serializat
 
 from dataclasses import dataclass, field, asdict
 from typing import List, Optional, Dict
-from datetime import datetime
 
 
 @dataclass
