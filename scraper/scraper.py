@@ -4,9 +4,11 @@ Async forum scraper for MA Lighting grandMA2 Macro Share forum.
 This module implements a production-grade, educational scraper that demonstrates:
 - Async/await patterns for efficient I/O
 - Concurrency control with semaphores
-- Rate limiting and exponential backoff
-- Delta scraping for incremental updates
+- Adaptive rate limiting with token bucket and jitter
+- Delta scraping with multi-level state tracking
 - Organized output structure for ML pipelines
+- Response telemetry for monitoring
+- Parser resilience with CSS selector fallbacks
 
 Target: https://forum.malighting.com/forum/board/35-grandma2-macro-share/
 """
@@ -15,8 +17,9 @@ import asyncio
 import json
 import re
 import time
+from datetime import datetime, timezone
 from pathlib import Path
-from typing import List, Optional, Set
+from typing import List, Optional, Set, Dict
 from urllib.parse import urljoin
 
 import httpx
@@ -24,8 +27,13 @@ import orjson
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
-from .models import Asset, Post, ThreadMetadata
-from .utils import sha256_file, safe_thread_folder
+from .models import (
+    Asset, Post, ThreadMetadata, 
+    ThreadState, PostState, AssetState, ScraperState
+)
+from .utils import sha256_file, sha256_string, safe_thread_folder, infer_mime_type
+from .telemetry import ResponseStats, AdaptiveThrottler
+from .parser import ResilientParser
 
 
 # -------------------------------------------------------
@@ -37,7 +45,10 @@ from .utils import sha256_file, safe_thread_folder
 # Base directory for all output
 OUTPUT_DIR = Path("output/threads")
 
-# Manifest file tracks which threads we've already scraped
+# State file tracks scraper state (replaces simple manifest.json)
+STATE_FILE = Path("scraper_state.json")
+
+# Legacy manifest file (for backward compatibility)
 MANIFEST_FILE = Path("manifest.json")
 
 # Forum URLs
@@ -53,6 +64,10 @@ REQUEST_TIMEOUT = 30.0  # Seconds before timing out a request
 MAX_RETRIES = 5  # Maximum number of retry attempts
 INITIAL_BACKOFF = 2  # Initial backoff delay in seconds (doubles each retry)
 
+# Adaptive throttling settings (tokens per second ~= 1/REQUEST_DELAY)
+TOKENS_PER_SECOND = 0.67  # ~1 request per 1.5 seconds
+TOKEN_BUCKET_CAPACITY = 8  # Allow bursts up to max concurrent requests
+
 
 class ForumScraper:
     """
@@ -62,10 +77,12 @@ class ForumScraper:
     
     1. **Async/Await**: All I/O operations use async to avoid blocking
     2. **Concurrency Control**: Semaphore limits simultaneous requests
-    3. **Rate Limiting**: Built-in delays between requests
-    4. **Error Handling**: Exponential backoff for transient failures
-    5. **Delta Scraping**: Only scrapes new threads via manifest tracking
-    6. **Organized Output**: Per-thread folders with metadata and assets
+    3. **Adaptive Throttling**: Token bucket with jitter and cool-off
+    4. **Multi-level State**: Track threads, posts, and assets individually
+    5. **Error Handling**: Exponential backoff for transient failures
+    6. **Delta Scraping**: Only scrapes changed content via state tracking
+    7. **Telemetry**: Response classification and retry tracking
+    8. **Parser Resilience**: CSS selector fallback chains
     
     Usage:
         scraper = ForumScraper()
@@ -75,6 +92,7 @@ class ForumScraper:
     def __init__(
         self,
         output_dir: Path = OUTPUT_DIR,
+        state_file: Path = STATE_FILE,
         manifest_file: Path = MANIFEST_FILE,
         max_concurrent: int = MAX_CONCURRENT_REQUESTS,
         request_delay: float = REQUEST_DELAY
@@ -84,11 +102,13 @@ class ForumScraper:
         
         Args:
             output_dir: Base directory for scraped data
-            manifest_file: Path to manifest JSON file
+            state_file: Path to state JSON file (new state tracking)
+            manifest_file: Path to legacy manifest JSON file (for migration)
             max_concurrent: Maximum concurrent HTTP requests
             request_delay: Delay between requests in seconds
         """
         self.output_dir = output_dir
+        self.state_file = state_file
         self.manifest_file = manifest_file
         self.max_concurrent = max_concurrent
         self.request_delay = request_delay
@@ -106,89 +126,123 @@ class ForumScraper:
         # - Ensures we're being a "good citizen" on the internet
         self.semaphore = asyncio.Semaphore(max_concurrent)
         
-        # Visited threads tracking (loaded from manifest)
+        # -------------------------------------------------------
+        # State tracking (multi-level)
+        # -------------------------------------------------------
+        self.state: ScraperState = ScraperState()
+        
+        # Legacy: for backward compatibility during migration
         self.visited_urls: Set[str] = set()
+        
+        # -------------------------------------------------------
+        # Adaptive throttling and telemetry
+        # -------------------------------------------------------
+        self.throttler = AdaptiveThrottler(
+            tokens_per_second=TOKENS_PER_SECOND,
+            capacity=TOKEN_BUCKET_CAPACITY,
+            initial_backoff=INITIAL_BACKOFF
+        )
+        self.stats = ResponseStats()
         
         # HTTP client (initialized in run())
         self.client: Optional[httpx.AsyncClient] = None
     
     # -------------------------------------------------------
-    # MANIFEST MANAGEMENT
+    # STATE MANAGEMENT
     # -------------------------------------------------------
-    # The manifest tracks which threads we've already scraped.
-    # This enables "delta scraping" - on subsequent runs, we only
-    # process NEW threads, making the scraper efficient and safe
-    # to run repeatedly without duplicating work.
+    # The state tracks which threads/posts/assets we've already scraped
+    # and their current versions. This enables fine-grained delta scraping.
     # -------------------------------------------------------
     
-    def _load_manifest(self) -> Set[str]:
+    def _load_state(self) -> ScraperState:
         """
-        Load the set of previously visited thread URLs from manifest.json.
+        Load scraper state from state file.
         
-        The manifest is a simple JSON array of URL strings. Using a set
-        provides O(1) lookup performance when checking if a thread was
-        already scraped.
+        Supports migration from legacy manifest.json format.
         
         Returns:
-            Set of URL strings that have already been processed.
-            Returns an empty set if no manifest exists yet.
-            
-        Why orjson?
-            orjson is significantly faster than the standard library's json
-            module, especially for large files. Since the manifest grows
-            over time, this optimization matters for long-running projects.
+            ScraperState object with loaded state or empty state if no file exists
         """
+        # Try loading new state format first
+        if self.state_file.exists():
+            try:
+                data = orjson.loads(self.state_file.read_bytes())
+                state = ScraperState.from_dict(data)
+                print(f"📖 Loaded state: {len(state.threads)} threads tracked")
+                return state
+            except Exception as e:
+                print(f"⚠️  Warning: Could not load state file: {e}")
+        
+        # Fall back to migrating from legacy manifest.json
         if self.manifest_file.exists():
             try:
-                # orjson.loads() requires bytes, not str
                 data = orjson.loads(self.manifest_file.read_bytes())
-                print(f"📖 Loaded manifest: {len(data)} threads already scraped")
-                return set(data)
+                print(f"📖 Migrating from legacy manifest: {len(data)} threads")
+                
+                # Create state from legacy manifest
+                state = ScraperState()
+                for url in data:
+                    # Extract thread ID from URL
+                    match = re.search(r'/thread/(\d+)-', url)
+                    if match:
+                        thread_id = match.group(1)
+                        state.threads[thread_id] = ThreadState(
+                            thread_id=thread_id,
+                            url=url,
+                            last_seen_at=datetime.now(timezone.utc).isoformat(),
+                            reply_count_seen=0,
+                            views_seen=0
+                        )
+                
+                # Save migrated state
+                self._save_state(state)
+                print(f"✅ Migration complete: {len(state.threads)} threads in state")
+                return state
+                
             except Exception as e:
-                print(f"⚠️  Warning: Could not load manifest: {e}")
-                print("   Starting fresh...")
-                return set()
-        else:
-            print("📄 No manifest found - starting fresh scrape")
-            return set()
+                print(f"⚠️  Warning: Could not migrate from manifest: {e}")
+        
+        print("📄 No state found - starting fresh scrape")
+        return ScraperState()
     
-    def _save_manifest(self):
+    def _save_state(self, state: Optional[ScraperState] = None):
         """
-        Save the current set of visited URLs to manifest.json.
+        Save the current scraper state to state file.
         
         This is called after each thread is successfully scraped to ensure
         we don't lose progress if the script is interrupted.
         
-        Why save after each thread?
-            If the script crashes or is interrupted, we want to preserve
-            as much progress as possible. Saving incrementally means we
-            never have to re-scrape threads we've already completed.
+        Args:
+            state: State to save (defaults to self.state)
         """
+        if state is None:
+            state = self.state
+        
         try:
-            # Convert set to sorted list for consistent output
-            data = sorted(list(self.visited_urls))
+            # Update last_updated timestamp
+            state.last_updated = datetime.now(timezone.utc).isoformat()
             
-            # orjson.dumps() produces bytes, write directly
-            # option=orjson.OPT_INDENT_2 makes the file human-readable
-            self.manifest_file.write_bytes(
+            # Convert to dict and save
+            data = state.to_dict()
+            self.state_file.write_bytes(
                 orjson.dumps(data, option=orjson.OPT_INDENT_2)
             )
         except Exception as e:
-            print(f"⚠️  Warning: Could not save manifest: {e}")
+            print(f"⚠️  Warning: Could not save state: {e}")
     
     # -------------------------------------------------------
     # HTTP REQUEST HANDLING
     # -------------------------------------------------------
     # These methods handle fetching pages with proper error handling,
-    # rate limiting, and exponential backoff for transient failures.
+    # adaptive rate limiting, and telemetry tracking.
     # -------------------------------------------------------
     
     async def _fetch_with_retry(self, url: str) -> Optional[str]:
         """
-        Fetch a URL with exponential backoff retry logic.
+        Fetch a URL with exponential backoff retry logic and adaptive throttling.
         
         This method implements a robust retry strategy for handling
-        transient network errors and rate limiting (HTTP 429).
+        transient network errors and rate limiting (HTTP 429/503).
         
         Args:
             url: URL to fetch
@@ -196,29 +250,28 @@ class ForumScraper:
         Returns:
             Response text if successful, None if all retries failed
             
-        How exponential backoff works:
-            1. Try the request
-            2. If it fails with 429 (rate limit), wait and retry
-            3. Each retry waits TWICE as long as the previous attempt
-            4. Example: 2s, 4s, 8s, 16s, 32s
-            5. This gives the server time to recover from load
-            
-        Why use exponential backoff?
-            - Linear delays (2s, 2s, 2s...) can keep hammering a struggling server
-            - Exponential delays give increasing time for recovery
-            - Industry standard pattern (used by AWS, Google APIs, etc.)
+        How adaptive throttling works:
+            1. Use token bucket for normal rate limiting with jitter
+            2. If 429 or 503 encountered, enter cool-off mode
+            3. Cool-off period uses exponential backoff
+            4. Successful requests gradually reduce backoff
         """
         # -------------------------------------------------------
         # Use semaphore to limit concurrent requests
         # -------------------------------------------------------
-        # The 'async with' pattern automatically acquires a semaphore
-        # ticket at entry and releases it at exit (even if an exception occurs)
         async with self.semaphore:
             retries = 0
             backoff = INITIAL_BACKOFF
             
             while retries < MAX_RETRIES:
                 try:
+                    # -------------------------------------------------------
+                    # Adaptive throttling with jitter
+                    # -------------------------------------------------------
+                    wait_time = await self.throttler.acquire()
+                    if wait_time > 0:
+                        await asyncio.sleep(wait_time)
+                    
                     # -------------------------------------------------------
                     # Make the HTTP request
                     # -------------------------------------------------------
@@ -229,12 +282,29 @@ class ForumScraper:
                     )
                     
                     # -------------------------------------------------------
+                    # Record response for telemetry
+                    # -------------------------------------------------------
+                    self.stats.record_response(response.status_code)
+                    
+                    # -------------------------------------------------------
                     # Handle rate limiting (HTTP 429)
                     # -------------------------------------------------------
                     if response.status_code == 429:
-                        print(f"⏱️  Rate limited! Waiting {backoff}s before retry...")
+                        self.throttler.report_rate_limit()
+                        print(f"⏱️  Rate limited! Entering cool-off for {backoff}s...")
                         await asyncio.sleep(backoff)
                         backoff *= 2  # Double the backoff for next attempt
+                        retries += 1
+                        continue
+                    
+                    # -------------------------------------------------------
+                    # Handle service unavailable (HTTP 503)
+                    # -------------------------------------------------------
+                    if response.status_code == 503:
+                        self.throttler.report_service_unavailable()
+                        print(f"⚠️  Service unavailable! Cool-off for {backoff}s...")
+                        await asyncio.sleep(backoff)
+                        backoff *= 1.5
                         retries += 1
                         continue
                     
@@ -244,16 +314,15 @@ class ForumScraper:
                     response.raise_for_status()
                     
                     # -------------------------------------------------------
-                    # Rate limiting: delay before next request
+                    # Success - report to throttler
                     # -------------------------------------------------------
-                    # Even successful requests should be spaced out to be
-                    # respectful to the server
-                    await asyncio.sleep(self.request_delay)
+                    self.throttler.report_success()
                     
                     return response.text
                     
                 except httpx.HTTPStatusError as e:
                     print(f"❌ HTTP error for {url}: {e}")
+                    self.stats.record_retry_exhausted(f"HTTP {e.response.status_code}")
                     return None
                 except httpx.RequestError as e:
                     print(f"⚠️  Request error for {url}: {e}")
@@ -263,10 +332,12 @@ class ForumScraper:
                         backoff *= 2
                         retries += 1
                     else:
+                        self.stats.record_retry_exhausted(f"Request error: {type(e).__name__}")
                         return None
             
             # All retries exhausted
             print(f"❌ Failed to fetch {url} after {MAX_RETRIES} attempts")
+            self.stats.record_retry_exhausted("Max retries exceeded")
             return None
     
     # -------------------------------------------------------
@@ -525,16 +596,15 @@ class ForumScraper:
         thread_id = thread_id_match.group(1)
         
         # -------------------------------------------------------
-        # Extract thread title
+        # Extract thread title using resilient parser
         # -------------------------------------------------------
-        title_elem = soup.select_one('h1.topic-title, .contentTitle')
-        title = title_elem.text.strip() if title_elem else "Unknown Title"
+        title = ResilientParser.extract_thread_title(soup)
         
         # -------------------------------------------------------
         # Extract ALL posts (original + replies)
         # -------------------------------------------------------
         # Extract complete discussion thread including all replies
-        posts = self.extract_all_posts(soup)
+        posts = self.extract_all_posts(soup, thread_id)
 
         # For backward compatibility, get author and date from first post
         author = "Unknown"
@@ -552,8 +622,8 @@ class ForumScraper:
         replies = 0
         views = 0
         
-        # These might be in various places depending on forum layout
-        stats_elem = soup.select_one('.stats')
+        # Try resilient parser for stats, fall back to existing logic
+        stats_elem = ResilientParser.THREAD_STATS.select_one(soup)
         if stats_elem:
             stats_text = stats_elem.text
             
@@ -571,7 +641,7 @@ class ForumScraper:
         assets = self.extract_assets(soup)
         
         # -------------------------------------------------------
-        # Build and return ThreadMetadata object
+        # Build and return ThreadMetadata object with schema version
         # -------------------------------------------------------
         return ThreadMetadata(
             thread_id=thread_id,
@@ -580,21 +650,25 @@ class ForumScraper:
             author=author,
             post_date=post_date,
             post_text=post_text,  # Deprecated but kept for compatibility
-            posts=posts,  # NEW: Complete list of all posts
+            posts=posts,  # Complete list of all posts with hashes
             replies=replies,
             views=views,
-            assets=assets
+            assets=assets,
+            schema_version="1.0",
+            scraped_at=datetime.now(timezone.utc).isoformat()
         )
 
-    def extract_all_posts(self, soup: BeautifulSoup) -> List:
+    def extract_all_posts(self, soup: BeautifulSoup, thread_id: str) -> List:
         """
         Extract ALL posts from a thread (original post + all replies).
 
         This parses the entire discussion thread to capture the complete conversation,
-        not just the first post. Each post includes author, date, and text content.
+        not just the first post. Each post includes author, date, text content,
+        stable ID, and content hash for change detection.
 
         Args:
             soup: BeautifulSoup object of the thread page
+            thread_id: Thread ID for generating post IDs
 
         Returns:
             List of Post objects in chronological order (original post first)
@@ -608,36 +682,35 @@ class ForumScraper:
         """
         posts = []
 
-        # Find ALL message/post elements on the page
-        post_elements = soup.select('article.message')
+        # Use resilient parser to find post elements
+        post_elements = ResilientParser.extract_posts(soup)
 
         print(f"    [DEBUG] Found {len(post_elements)} posts in thread")
 
         for idx, post_elem in enumerate(post_elements, start=1):
-            # Extract author
-            author = "Unknown"
-            author_elem = post_elem.select_one('.username')
-            if author_elem:
-                author = author_elem.text.strip()
+            # Extract author using resilient parser
+            author = ResilientParser.extract_post_author(post_elem)
 
-            # Extract post date
-            post_date = None
-            time_elem = post_elem.select_one('time')
-            if time_elem and time_elem.get('datetime'):
-                post_date = time_elem['datetime']
+            # Extract post date using resilient parser
+            post_date = ResilientParser.extract_post_date(post_elem)
 
-            # Extract post text content
-            post_text = ""
-            content_elem = post_elem.select_one('.messageContent, .messageText')
-            if content_elem:
-                post_text = content_elem.get_text(strip=True)
+            # Extract post text content using resilient parser
+            post_text = ResilientParser.extract_post_content(post_elem)
 
-            # Create Post object
+            # Generate stable post ID
+            post_id = f"{thread_id}-{idx}"
+            
+            # Calculate content hash for change detection
+            content_hash = sha256_string(post_text) if post_text else None
+
+            # Create Post object with all tracking fields
             post = Post(
                 author=author,
                 post_date=post_date,
                 post_text=post_text,
-                post_number=idx
+                post_number=idx,
+                post_id=post_id,
+                content_hash=content_hash
             )
 
             posts.append(post)
@@ -754,8 +827,9 @@ class ForumScraper:
         
         This method:
         1. Downloads the file to the thread's folder
-        2. Computes SHA256 checksum for integrity
-        3. Updates the asset object with size and checksum
+        2. Captures HTTP headers (Content-Type, ETag, Last-Modified)
+        3. Computes SHA256 checksum for integrity
+        4. Updates the asset object with metadata
         
         Args:
             asset: Asset object to download
@@ -771,12 +845,33 @@ class ForumScraper:
         """
         try:
             async with self.semaphore:
+                # Wait for throttle permission
+                wait_time = await self.throttler.acquire()
+                if wait_time > 0:
+                    await asyncio.sleep(wait_time)
+                
                 response = await self.client.get(
                     asset.url,
                     timeout=REQUEST_TIMEOUT,
                     follow_redirects=True
                 )
+                
+                # Record telemetry
+                self.stats.record_response(response.status_code)
+                
                 response.raise_for_status()
+                
+                # -------------------------------------------------------
+                # Capture HTTP headers for change detection
+                # -------------------------------------------------------
+                content_type = response.headers.get('Content-Type')
+                etag = response.headers.get('ETag')
+                last_modified = response.headers.get('Last-Modified')
+                
+                # Infer MIME type from headers or filename
+                asset.mime_type = infer_mime_type(asset.filename, content_type)
+                asset.etag = etag
+                asset.last_modified = last_modified
                 
                 # -------------------------------------------------------
                 # Save file to disk
@@ -806,6 +901,7 @@ class ForumScraper:
                 
         except Exception as e:
             print(f"    ❌ Failed to download {asset.filename}: {e}")
+            self.stats.record_retry_exhausted(f"Asset download: {type(e).__name__}")
             return False
     
     async def process_thread(self, url: str) -> bool:
@@ -869,10 +965,47 @@ class ForumScraper:
             metadata_file.write_bytes(metadata_json)
             
             # -------------------------------------------------------
-            # STEP 5: Update manifest
+            # STEP 5: Update state tracking
             # -------------------------------------------------------
+            # Update thread state
+            self.state.threads[metadata.thread_id] = ThreadState(
+                thread_id=metadata.thread_id,
+                url=url,
+                last_seen_at=datetime.now(timezone.utc).isoformat(),
+                reply_count_seen=metadata.replies,
+                views_seen=metadata.views
+            )
+            
+            # Update post states
+            for post in metadata.posts:
+                if post.post_id and post.content_hash:
+                    self.state.posts[post.post_id] = PostState(
+                        post_id=post.post_id,
+                        thread_id=metadata.thread_id,
+                        post_number=post.post_number,
+                        content_hash=post.content_hash,
+                        observed_at=datetime.now(timezone.utc).isoformat()
+                    )
+            
+            # Update asset states
+            for asset in metadata.assets:
+                if asset.checksum:  # Only if download was successful
+                    self.state.assets[asset.url] = AssetState(
+                        url=asset.url,
+                        filename=asset.filename,
+                        content_hash=asset.checksum,
+                        mime_type=asset.mime_type,
+                        size=asset.size,
+                        downloaded_at=datetime.now(timezone.utc).isoformat(),
+                        last_modified=asset.last_modified,
+                        etag=asset.etag
+                    )
+            
+            # Save state after each thread
+            self._save_state()
+            
+            # Legacy: Also update visited_urls for backward compatibility
             self.visited_urls.add(url)
-            self._save_manifest()
             
             print(f"    💾 Saved to {folder_name}")
             return True
@@ -890,12 +1023,13 @@ class ForumScraper:
         Main entry point for the scraper.
         
         This method orchestrates the complete scraping workflow:
-        1. Load manifest (delta scraping)
+        1. Load state (multi-level delta scraping)
         2. Initialize HTTP client
         3. Discover all thread URLs
         4. Filter out already-scraped threads
         5. Process new threads with progress tracking
-        6. Clean up resources
+        6. Print telemetry summary
+        7. Clean up resources
         
         This is the method you call to run the entire scraper:
             scraper = ForumScraper()
@@ -906,9 +1040,14 @@ class ForumScraper:
         print("="*60)
         
         # -------------------------------------------------------
-        # STEP 1: Load manifest for delta scraping
+        # STEP 1: Load state for delta scraping
         # -------------------------------------------------------
-        self.visited_urls = self._load_manifest()
+        self.state = self._load_state()
+        
+        # Build visited_urls set for backward compatibility
+        self.visited_urls = {
+            thread_state.url for thread_state in self.state.threads.values()
+        }
         
         # -------------------------------------------------------
         # STEP 2: Initialize HTTP client with HTTP/2 support
@@ -1004,7 +1143,7 @@ class ForumScraper:
                     pbar.update(1)
             
             # -------------------------------------------------------
-            # STEP 6: Print summary
+            # STEP 6: Print summary and telemetry
             # -------------------------------------------------------
             print("\n" + "="*60)
             print("✅ Scraping Complete!")
@@ -1013,7 +1152,12 @@ class ForumScraper:
             print(f"   Failed: {failed}")
             print(f"   Total scraped (all time): {len(self.visited_urls)}")
             print(f"   Output directory: {self.output_dir}")
-            print(f"   Manifest file: {self.manifest_file}")
+            print(f"   State file: {self.state_file}")
+            print()
+            print("📊 Response Telemetry:")
+            print("="*60)
+            for line in self.stats.get_summary().split('\n'):
+                print(f"   {line}")
             print("="*60)
             
         finally:

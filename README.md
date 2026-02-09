@@ -1,10 +1,10 @@
 # MA2 Forums Miner
 
-A production-grade, educational async web scraper for the [MA Lighting grandMA2 Macro Share forum](https://forum.malighting.com/forum/board/35-grandma2-macro-share/). This tool demonstrates modern Python async patterns, implements delta scraping for efficient incremental updates, and prepares data for downstream ML clustering pipelines.
+A production-grade, educational async web scraper for the [MA Lighting grandMA2 Macro Share forum](https://forum.malighting.com/forum/board/35-grandma2-macro-share/). This tool demonstrates modern Python async patterns, implements advanced delta scraping with multi-level state tracking, adaptive throttling, and prepares data for downstream ML clustering pipelines.
 
 ## 📊 Current Statistics
 
-**Last Updated**: See latest commit in `manifest.json`
+**Last Updated**: See latest commit in `scraper_state.json`
 
 | Metric | Count |
 |--------|-------|
@@ -26,28 +26,36 @@ A production-grade, educational async web scraper for the [MA Lighting grandMA2 
 ## 🎯 Project Goals
 
 1. **Educational**: Learn async/await, concurrency control, and web scraping best practices
-2. **Production-Ready**: Implements rate limiting, exponential backoff, and robust error handling
-3. **ML-Friendly**: Structured output format optimized for NLP clustering and analysis
-4. **Efficient**: Delta scraping ensures you only process new content on subsequent runs
+2. **Production-Ready**: Implements adaptive throttling, exponential backoff, and robust error handling
+3. **ML-Friendly**: Structured output format with schema versioning optimized for NLP clustering and analysis
+4. **Efficient**: Multi-level delta scraping ensures you only process changed content on subsequent runs
 
 ## ✨ Features
 
 ### Core Scraping Engine
 - **🚀 Async + HTTP/2**: Built with `httpx.AsyncClient` for efficient concurrent requests
 - **⚡ Concurrency Control**: `asyncio.Semaphore` limits simultaneous connections (default: 8)
-- **🕐 Rate Limiting**: Configurable delays (1.5s default) between requests to respect servers
-- **🔄 Exponential Backoff**: Automatic retry with backoff for HTTP 429 rate limit errors
-- **📊 Delta Scraping**: `manifest.json` tracks visited threads for incremental updates
-- **💾 Per-Thread Storage**: Self-contained folders with metadata and downloaded assets
+- **🎯 Adaptive Throttling**: Token bucket algorithm with jitter prevents server overload
+- **🛡️ Smart Rate Limiting**: Automatic cool-off for HTTP 429/503 with exponential backoff
+- **📊 Multi-Level Delta Scraping**: `scraper_state.json` tracks threads, posts, and assets individually
+- **🔄 Content Change Detection**: SHA256 hashing detects edited posts and updated files
+- **💾 Per-Thread Storage**: Self-contained folders with schema-versioned metadata and assets
 - **🔐 Checksums**: SHA256 hashing for download integrity and deduplication
+- **🌐 Parser Resilience**: CSS selector fallback chains adapt to forum template changes
 
 ### Data Collection
-- **Thread Metadata**: Thread ID, title, author, date, original post text, reply count, views
-- **Original Post Only**: Captures first post content (not full discussion thread)
+- **Thread Metadata**: Thread ID, title, author, date, complete post history, reply count, views
+- **Complete Post History**: Captures ALL posts (original + replies) with stable IDs and content hashes
 - **Asset Downloads**: Automatic download of `.xml`, `.zip`, `.gz`, `.show` files from all posts
+- **HTTP Header Tracking**: Captures Content-Type, ETag, Last-Modified for efficient re-downloads
+- **MIME Type Detection**: Smart detection from headers and file extensions
+- **Schema Versioning**: All metadata includes schema_version and scraped_at timestamps
 - **Type Safety**: Dataclass models with full docstrings for all data structures
 
-**Note:** The scraper captures the original post text and counts replies, but does not store individual reply posts. All downloadable macro files from the entire thread are captured.
+### Telemetry & Monitoring
+- **📈 Response Classification**: Tracks 2xx/3xx/4xx/5xx response counts
+- **⚠️ Retry Tracking**: Records retry exhaustion reasons for diagnostics
+- **📊 Telemetry Summary**: Detailed statistics displayed after each run
 
 ### Automation
 - **GitHub Actions**: Automated weekly scraping with data commits
@@ -155,25 +163,92 @@ output/
 
 ### metadata.json Format
 
+The metadata now includes schema versioning and complete post history:
+
 ```json
 {
+  "schema_version": "1.0",
+  "scraped_at": "2024-01-15T10:30:00Z",
   "thread_id": "30890",
   "title": "Moving Fixtures Between Layers",
   "url": "https://forum.malighting.com/thread/30890-...",
   "author": "johndoe",
   "post_date": "2024-01-15T10:30:00Z",
-  "post_text": "Full text content of the original post (replies not included)...",
-  "replies": 5,  // Count of replies (actual reply content not captured)
+  "post_text": "Full text content (deprecated - use posts[0].post_text)",
+  "posts": [
+    {
+      "post_id": "30890-1",
+      "post_number": 1,
+      "author": "johndoe",
+      "post_date": "2024-01-15T10:30:00Z",
+      "post_text": "Full text of original post...",
+      "content_hash": "sha256:abc123..."
+    },
+    {
+      "post_id": "30890-2",
+      "post_number": 2,
+      "author": "helper",
+      "post_date": "2024-01-15T14:20:00Z",
+      "post_text": "Here's how to solve that...",
+      "content_hash": "sha256:def456..."
+    }
+  ],
+  "replies": 1,
   "views": 1234,
   "assets": [
     {
       "filename": "macro.xml",
       "url": "https://forum.malighting.com/attachment/12345/",
       "size": 2048,
-      "download_count": null,
-      "checksum": "sha256:abc123def456..."
+      "download_count": 15,
+      "checksum": "sha256:abc123def456...",
+      "post_number": 1,
+      "mime_type": "application/xml",
+      "etag": "\"abc123\"",
+      "last_modified": "Mon, 14 Jan 2024 16:20:00 GMT"
     }
   ]
+}
+```
+
+### scraper_state.json Format
+
+The new state file tracks threads, posts, and assets individually for fine-grained delta scraping:
+
+```json
+{
+  "schema_version": "1.0",
+  "last_updated": "2024-01-15T10:30:00Z",
+  "threads": {
+    "30890": {
+      "thread_id": "30890",
+      "url": "https://forum.../thread/30890-...",
+      "last_seen_at": "2024-01-15T10:30:00Z",
+      "reply_count_seen": 1,
+      "views_seen": 1234
+    }
+  },
+  "posts": {
+    "30890-1": {
+      "post_id": "30890-1",
+      "thread_id": "30890",
+      "post_number": 1,
+      "content_hash": "sha256:abc123...",
+      "observed_at": "2024-01-15T10:30:00Z"
+    }
+  },
+  "assets": {
+    "https://forum.../attachment/12345/": {
+      "url": "https://forum.../attachment/12345/",
+      "filename": "macro.xml",
+      "content_hash": "sha256:abc123...",
+      "mime_type": "application/xml",
+      "size": 2048,
+      "downloaded_at": "2024-01-15T10:30:00Z",
+      "etag": "\"abc123\"",
+      "last_modified": "Mon, 14 Jan 2024 16:20:00 GMT"
+    }
+  }
 }
 ```
 
@@ -181,20 +256,20 @@ output/
 
 ### What's Captured
 ✅ **610 total threads** from grandMA2 Macro Share forum (100% coverage as of Feb 9, 2026)
-✅ **Original post text** - The first post in each thread
-✅ **Thread metadata** - Author, title, date, reply count, view count
+✅ **Complete post history** - ALL posts including original and all replies
+✅ **Content change detection** - SHA256 hashes detect edited posts
+✅ **Thread metadata** - Author, title, date, reply count, view count with timestamps
 ✅ **All macro files** - .xml, .zip, .gz, .show files from entire thread
-✅ **File metadata** - Checksums, sizes, download counts
+✅ **File metadata** - Checksums, sizes, MIME types, HTTP headers (ETag, Last-Modified)
+✅ **Schema versioning** - All data includes schema_version for future migrations
 
 ### What's NOT Captured
-❌ **Individual replies** - Only the original post text is stored, not the full discussion
-❌ **Reply content** - The "replies" field shows the count, but reply posts aren't saved
 ❌ **Images/screenshots** - Only macro files are downloaded
 
 ### Statistics
 - **610 threads total**
 - **75 threads (12.3%)** contain downloadable macro files
-- **535 threads (87.7%)** are discussion-only (no files, but original post text captured)
+- **535 threads (87.7%)** are discussion-only (but ALL posts are captured)
 - **99 macro files** downloaded (78 XML, 21 ZIP/GZ/Show)
 
 ## 🔍 Finding Threads with Downloadable Files
@@ -301,30 +376,37 @@ For a complete breakdown of all 75 threads with attachments, see **`STATISTICS.m
 │              ForumScraper (scraper.py)                 │
 │                                                         │
 │  ┌─────────────────────────────────────────────────┐  │
-│  │ 1. Load manifest.json (delta tracking)          │  │
+│  │ 1. Load scraper_state.json (multi-level state)  │  │
+│  │    - Thread states (reply counts, views)        │  │
+│  │    - Post states (content hashes)               │  │
+│  │    - Asset states (checksums, ETags)            │  │
 │  └─────────────────────────────────────────────────┘  │
 │  ┌─────────────────────────────────────────────────┐  │
 │  │ 2. Initialize httpx.AsyncClient (HTTP/2)        │  │
+│  │    - Adaptive throttler with token bucket       │  │
+│  │    - Response telemetry                         │  │
+│  │    - Parser resilience with fallback chains     │  │
 │  └─────────────────────────────────────────────────┘  │
 │  ┌─────────────────────────────────────────────────┐  │
 │  │ 3. Discover thread URLs (async pagination)      │  │
 │  └─────────────────────────────────────────────────┘  │
 │  ┌─────────────────────────────────────────────────┐  │
-│  │ 4. Filter new threads (set difference)          │  │
+│  │ 4. Filter new/updated threads (state checks)    │  │
 │  └─────────────────────────────────────────────────┘  │
 │  ┌─────────────────────────────────────────────────┐  │
 │  │ 5. Process threads (concurrent with semaphore)  │  │
-│  │    ├─ Fetch metadata                            │  │
-│  │    ├─ Download assets (checksums)               │  │
-│  │    ├─ Save metadata.json                        │  │
-│  │    └─ Update manifest                           │  │
+│  │    ├─ Fetch metadata with resilient parser      │  │
+│  │    ├─ Hash all post content                     │  │
+│  │    ├─ Download assets with HTTP header capture  │  │
+│  │    ├─ Save metadata.json (schema v1.0)          │  │
+│  │    └─ Update scraper_state.json                 │  │
 │  └─────────────────────────────────────────────────┘  │
 └─────────────────────────────────────────────────────────┘
          │
          ▼
 ┌─────────────────────────────────────────────────────────┐
 │              Output Structure                           │
-│  manifest.json         (visited thread URLs)            │
+│  scraper_state.json    (multi-level state tracking)    │
 │  output/threads/       (per-thread folders)             │
 └─────────────────────────────────────────────────────────┘
 ```
@@ -334,59 +416,92 @@ For a complete breakdown of all 75 threads with attachments, see **`STATISTICS.m
 **`scraper/scraper.py`** - Main scraper engine
 - `ForumScraper` class with async/await throughout
 - Thread discovery with automatic pagination
-- Concurrent processing with semaphore-based rate limiting
-- Exponential backoff for HTTP 429 errors
-- Manifest-based delta scraping
+- Adaptive throttling with token bucket algorithm
+- Exponential backoff for HTTP 429/503 errors
+- Multi-level state tracking and delta scraping
+- Response telemetry and retry tracking
 
 **`scraper/models.py`** - Type-safe data models
-- `ThreadMetadata` dataclass for thread information
-- `Asset` dataclass for downloadable attachments
+- `ThreadMetadata` - Complete thread information with schema versioning
+- `Post` - Individual post with stable ID and content hash
+- `Asset` - Downloadable attachment with HTTP headers
+- `ThreadState`, `PostState`, `AssetState` - State tracking models
+- `ScraperState` - Complete scraper state container
 - JSON serialization helpers
 
 **`scraper/utils.py`** - Utility functions
 - `sha256_file()` - Compute checksums for downloaded files
+- `sha256_string()` - Compute checksums for text content
 - `safe_thread_folder()` - Generate filesystem-safe folder names
+- `infer_mime_type()` - MIME type detection from headers/extensions
+
+**`scraper/telemetry.py`** - Monitoring and rate limiting
+- `ResponseStats` - HTTP response classification and tracking
+- `TokenBucket` - Token bucket rate limiter with jitter
+- `AdaptiveThrottler` - Adaptive rate limiting with cool-off
+
+**`scraper/parser.py`** - Resilient HTML parsing
+- `SelectorChain` - CSS selector fallback chains
+- `ResilientParser` - Forum-specific parsing with fallbacks
 
 **`run_scrape.py`** - Entry point
 - Simple wrapper that runs `asyncio.run(scraper.run())`
 - Handles KeyboardInterrupt gracefully
 
-## 🔄 How Delta Scraping Works
+## 🔄 How Multi-Level Delta Scraping Works
 
-Delta scraping ensures efficient incremental updates:
+Multi-level delta scraping enables fine-grained change detection:
 
 1. **First Run:**
    ```
-   manifest.json: []  (empty)
+   scraper_state.json: empty
    ↓
    Scrape ALL threads (e.g., 500 threads)
    ↓
-   manifest.json: ["url1", "url2", ..., "url500"]
+   Track: threads, posts, assets with hashes
+   ↓
+   scraper_state.json: 500 threads tracked
    ```
 
 2. **Second Run (1 week later):**
    ```
-   manifest.json: ["url1", ..., "url500"]
+   scraper_state.json: 500 threads
    ↓
    Discover 505 threads on forum
    ↓
-   Filter: 505 - 500 = 5 new threads
+   Filter: 5 new threads
+   Check: 500 existing threads for changes
    ↓
-   Scrape ONLY 5 new threads
+   Scrape: 5 new + threads with reply_count increases
    ↓
-   manifest.json: ["url1", ..., "url505"]
+   scraper_state.json: 505 threads tracked
    ```
 
-3. **Benefits:**
+3. **Change Detection:**
+   ```
+   Thread changes: reply_count increased → re-scrape
+   Post changes: content_hash differs → detect edit
+   Asset changes: etag/last-modified differs → re-download
+   ```
+
+4. **Benefits:**
    - ✅ No duplicate downloads
+   - ✅ Detect edited posts
+   - ✅ Track asset updates
    - ✅ Fast incremental updates
    - ✅ Resume after interruption
    - ✅ Bandwidth efficient
 
+**Legacy Support:**
+```bash
+# Old manifest.json is automatically migrated to scraper_state.json
+# on first run with the new version
+```
+
 **Forcing a full re-scrape:**
 ```bash
-# Delete the manifest and run again
-rm manifest.json
+# Delete the state and run again
+rm scraper_state.json
 python run_scrape.py
 ```
 
@@ -410,17 +525,26 @@ This project prioritizes **educational clarity** over brevity:
 2. **Concurrency Control**
    - `asyncio.Semaphore` for limiting simultaneous requests
    - `asyncio.gather()` for waiting on multiple coroutines
+   - Token bucket algorithm for rate limiting
    - Balancing speed vs server load
 
 3. **HTTP Best Practices**
-   - Rate limiting with configurable delays
-   - Exponential backoff for transient failures
+   - Adaptive rate limiting with jitter
+   - Exponential backoff for transient failures (429/503)
+   - HTTP header capture (ETag, Last-Modified)
    - Proper User-Agent headers
 
 4. **Data Engineering**
+   - Schema versioning for data migrations
+   - Multi-level state tracking for change detection
+   - Content fingerprinting with SHA256
    - Structured folder hierarchy for ML pipelines
-   - SHA256 checksums for integrity verification
    - Idempotent operations
+
+5. **Parser Resilience**
+   - CSS selector fallback chains
+   - Graceful degradation when HTML changes
+   - Defensive parsing strategies
 
 ## 🛠️ Configuration
 
