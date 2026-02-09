@@ -347,8 +347,15 @@ class ForumScraper:
         # -------------------------------------------------------
         # Using set() removes duplicates, then convert back to list
         unique_links = list(set(thread_links))
+
+        # Add test thread 20248 which has known attachments for verification
+        test_thread = "https://forum.malighting.com/forum/thread/20248-abort-out-of-macro/"
+        if test_thread not in unique_links:
+            unique_links.append(test_thread)
+            print(f"📌 Added test thread 20248 (has known attachment: CopyIfoutput.xml)")
+
         print(f"✅ Discovered {len(unique_links)} unique threads")
-        
+
         return unique_links
     
     def _extract_thread_links_from_page(self, soup: BeautifulSoup) -> List[str]:
@@ -548,6 +555,16 @@ class ForumScraper:
         # Find all attachment links using the actual WoltLab forum structure
         # Try multiple possible selectors for attachments
         attachment_links = soup.select('a.messageAttachment, a.attachment, a[class*="attachment"], a[href*="file-download"]')
+
+        # DEBUG: If no links found, print HTML sample to diagnose
+        if len(attachment_links) == 0:
+            downloads_text = soup.find(string=lambda text: text and "Downloads" in text and ".xml" in text)
+            if downloads_text:
+                print(f"    [DEBUG] Found attachment text but no <a> link!")
+                print(f"    [DEBUG] Text: {downloads_text[:100]}")
+                print(f"    [DEBUG] Parent tag: {downloads_text.parent.name if downloads_text.parent else 'None'}")
+                if downloads_text.parent:
+                    print(f"    [DEBUG] Parent HTML: {str(downloads_text.parent)[:400]}")
 
         for link in attachment_links:
             href = link.get('href')
