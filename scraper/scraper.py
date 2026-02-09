@@ -549,6 +549,16 @@ class ForumScraper:
         # Attachments use class "messageAttachment" with filename in child span
         attachment_links = soup.select('a.messageAttachment')
 
+        # DEBUG: Print what we found
+        print(f"    [DEBUG] Found {len(attachment_links)} attachment links")
+        if len(attachment_links) == 0:
+            # Try to find ANY links with 'attachment' in the class
+            all_links_with_attachment = soup.find_all('a', class_=lambda x: x and any('attachment' in c.lower() for c in x) if x else False)
+            print(f"    [DEBUG] Found {len(all_links_with_attachment)} links with 'attachment' in class")
+            if all_links_with_attachment:
+                for link in all_links_with_attachment[:3]:
+                    print(f"    [DEBUG] Sample: class={link.get('class')}, href={link.get('href')[:80] if link.get('href') else 'No href'}")
+
         for link in attachment_links:
             href = link.get('href')
             if not href:
