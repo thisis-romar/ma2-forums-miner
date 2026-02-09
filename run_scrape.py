@@ -38,11 +38,11 @@ import asyncio
 import sys
 from pathlib import Path
 
-# Add scraper package to path if needed
+# Add src to path to import the package
 # This allows running the script from repository root
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent / "src"))
 
-from scraper.scraper import ForumScraper
+from ma2_forums_miner.scraper import ForumScraper
 
 
 def main():

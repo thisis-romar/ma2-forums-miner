@@ -32,11 +32,11 @@ jobs:
         
     - name: Lint with pylint
       run: |
-        pylint scraper --disable=C0114,C0115,C0116 || true
+        pylint src/ma2_forums_miner --disable=C0114,C0115,C0116 || true
 
     - name: Check imports
       run: |
-        python -c "from scraper import scraper, models, utils"
+        python -c "from ma2_forums_miner import scraper, models, utils"
         
   scrape-and-cluster:
     runs-on: ubuntu-latest
