@@ -347,8 +347,15 @@ class ForumScraper:
         # -------------------------------------------------------
         # Using set() removes duplicates, then convert back to list
         unique_links = list(set(thread_links))
+
+        # Add test thread 20248 which has known attachments for verification
+        test_thread = "https://forum.malighting.com/forum/thread/20248-abort-out-of-macro/"
+        if test_thread not in unique_links:
+            unique_links.append(test_thread)
+            print(f"📌 Added test thread 20248 (has known attachment: CopyIfoutput.xml)")
+
         print(f"✅ Discovered {len(unique_links)} unique threads")
-        
+
         return unique_links
     
     def _extract_thread_links_from_page(self, soup: BeautifulSoup) -> List[str]:
