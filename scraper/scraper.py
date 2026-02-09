@@ -24,7 +24,7 @@ import orjson
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
-from .models import Asset, ThreadMetadata
+from .models import Asset, Post, ThreadMetadata
 from .utils import sha256_file, safe_thread_folder
 
 
@@ -531,31 +531,20 @@ class ForumScraper:
         title = title_elem.text.strip() if title_elem else "Unknown Title"
         
         # -------------------------------------------------------
-        # Extract first post (the main thread content)
+        # Extract ALL posts (original + replies)
         # -------------------------------------------------------
-        # The first post contains the primary content we'll use for
-        # clustering and analysis
-        first_post = soup.select_one('article.message')
-        
+        # Extract complete discussion thread including all replies
+        posts = self.extract_all_posts(soup)
+
+        # For backward compatibility, get author and date from first post
         author = "Unknown"
         post_date = None
-        post_text = ""
-        
-        if first_post:
-            # Extract author
-            author_elem = first_post.select_one('.username')
-            if author_elem:
-                author = author_elem.text.strip()
-            
-            # Extract post date
-            time_elem = first_post.select_one('time')
-            if time_elem and time_elem.get('datetime'):
-                post_date = time_elem['datetime']
-            
-            # Extract post text content
-            content_elem = first_post.select_one('.messageContent, .messageText')
-            if content_elem:
-                post_text = content_elem.get_text(strip=True)
+        post_text = ""  # Deprecated - use posts list instead
+
+        if posts:
+            author = posts[0].author
+            post_date = posts[0].post_date
+            post_text = posts[0].post_text  # Keep for backward compatibility
         
         # -------------------------------------------------------
         # Extract thread statistics (replies, views)
@@ -590,12 +579,71 @@ class ForumScraper:
             url=url,
             author=author,
             post_date=post_date,
-            post_text=post_text,
+            post_text=post_text,  # Deprecated but kept for compatibility
+            posts=posts,  # NEW: Complete list of all posts
             replies=replies,
             views=views,
             assets=assets
         )
-    
+
+    def extract_all_posts(self, soup: BeautifulSoup) -> List:
+        """
+        Extract ALL posts from a thread (original post + all replies).
+
+        This parses the entire discussion thread to capture the complete conversation,
+        not just the first post. Each post includes author, date, and text content.
+
+        Args:
+            soup: BeautifulSoup object of the thread page
+
+        Returns:
+            List of Post objects in chronological order (original post first)
+            Returns empty list if no posts found
+
+        Forum Structure:
+            - Each post is in an <article class="message"> element
+            - Author is in .username
+            - Date is in <time datetime="...">
+            - Content is in .messageContent or .messageText
+        """
+        posts = []
+
+        # Find ALL message/post elements on the page
+        post_elements = soup.select('article.message')
+
+        print(f"    [DEBUG] Found {len(post_elements)} posts in thread")
+
+        for idx, post_elem in enumerate(post_elements, start=1):
+            # Extract author
+            author = "Unknown"
+            author_elem = post_elem.select_one('.username')
+            if author_elem:
+                author = author_elem.text.strip()
+
+            # Extract post date
+            post_date = None
+            time_elem = post_elem.select_one('time')
+            if time_elem and time_elem.get('datetime'):
+                post_date = time_elem['datetime']
+
+            # Extract post text content
+            post_text = ""
+            content_elem = post_elem.select_one('.messageContent, .messageText')
+            if content_elem:
+                post_text = content_elem.get_text(strip=True)
+
+            # Create Post object
+            post = Post(
+                author=author,
+                post_date=post_date,
+                post_text=post_text,
+                post_number=idx
+            )
+
+            posts.append(post)
+
+        return posts
+
     def extract_assets(self, soup: BeautifulSoup) -> List[Asset]:
         """
         Extract downloadable attachments from a thread page.
