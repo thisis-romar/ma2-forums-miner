@@ -2,6 +2,27 @@
 
 A production-grade, educational async web scraper for the [MA Lighting grandMA2 Macro Share forum](https://forum.malighting.com/forum/board/35-grandma2-macro-share/). This tool demonstrates modern Python async patterns, implements delta scraping for efficient incremental updates, and prepares data for downstream ML clustering pipelines.
 
+## 📊 Current Statistics
+
+**Last Updated**: See latest commit in `manifest.json`
+
+| Metric | Count |
+|--------|-------|
+| **Threads Scraped** | 21 |
+| **Threads with Attachments** | 1 (4.8%) |
+| **Attachment Files Downloaded** | 1 |
+| **XML Files** | 1 (CopyIfoutput.xml) |
+| **ZIP Files** | 0 |
+| **Thread ID Range** | 20248 - 69661 |
+| **Oldest Thread** | 2010 (thread 20248) |
+| **Newest Thread** | 2019+ (thread 69661) |
+
+### Attachment Success Rate
+- ✅ **1 thread with attachments** (thread_20248: CopyIfoutput.xml)
+- ⚠️ **20 threads without attachments** (recent threads likely have no files)
+
+**Note**: Most recent threads (2017-2019) appear to have no attachments. Older threads (2010-2015) are more likely to have downloadable macro files. See [SCOPE_ANALYSIS.md](SCOPE_ANALYSIS.md) for detailed breakdown.
+
 ## 🎯 Project Goals
 
 1. **Educational**: Learn async/await, concurrency control, and web scraping best practices
