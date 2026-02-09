@@ -467,6 +467,9 @@ class ForumScraper:
 
             if page_pattern_links:
                 print(f"   📄 Method 2: Found {len(page_pattern_links)} links with page pattern")
+                # Debug: show first few links
+                for i, link in enumerate(page_pattern_links[:3]):
+                    print(f"      Sample link {i+1}: {link.get('href', '')}")
 
             for link in page_pattern_links:
                 href = link.get('href', '')
