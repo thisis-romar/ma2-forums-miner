@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "robk82",
+  "post_date": null,
+  "post_text": "July 19, 2018 at 3:34 PM#1I need to create a numerical counter to keep track of things in my venue. My idea is to have the operator simply hit a layout view button or an xKey macro that will then show the amount of times that button has been hit in the layout view. This is to help us keep track of certain things that continually happen throughout the day and also shows real time information to the stage manager. Is this doable with a simple macro?My 1st thought is to have an image displayed in the layout at zero, then each time the button is hit the image will overwrite with the corresponding number. Any thoughts or suggestions of how to go about this in a easier way?Any help is appreciated.Cheers,~Rob K",
+  "replies": 0,
+  "thread_id": "61794",
+  "title": "Create a numerical counter.",
+  "url": "https://forum.malighting.com/forum/thread/61794-create-a-numerical-counter/",
+  "views": 0
+}

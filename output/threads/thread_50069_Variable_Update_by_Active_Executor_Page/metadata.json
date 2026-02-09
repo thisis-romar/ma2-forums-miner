@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "JCostello",
+  "post_date": null,
+  "post_text": "November 30, 2015 at 4:50 PM#1I am having trouble coming up with the proper syntax for the start of a chain of macros.  What I am looking to do is to have a variable change depending on which page of executors is currently active.  Something like this, with the section with asterisks around it being the trouble spot:setvar $actfixpage = *Active Page*Not sure if this is even possible to work the way I want it to without running the macro each time I switch executor pages, but would definitely save a lot of time if there is a way to make this work.  Any suggestions?Jim",
+  "replies": 0,
+  "thread_id": "50069",
+  "title": "Variable Update by Active Executor Page",
+  "url": "https://forum.malighting.com/forum/thread/50069-variable-update-by-active-executor-page/",
+  "views": 0
+}

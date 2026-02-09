@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "abc",
+  "post_date": null,
+  "post_text": "April 10, 2017 at 12:25 PM#1HelloI would like to create a macro that will create a macro lineIt is quite easy to do, but I can not integrate the quotation marks in the right placeStore macro 1.1Store macro 1.1.1Assign Macro 1.1.1 / cmd = \"Group 2 At Preset 2.\" Blind Up \"\"I need quotation marks on each side of \"Blind Up\", to call the preset, because there is a space between the two wordsBut since there are 4 quotation marks, the GrandMa does not includeIf you have an idea of the correct syntax, it will be greatThank you in advance",
+  "replies": 0,
+  "thread_id": "58023",
+  "title": "The correct syntax with multiple quotation marks \"...\"",
+  "url": "https://forum.malighting.com/forum/thread/58023-the-correct-syntax-with-multiple-quotation-marks/",
+  "views": 0
+}

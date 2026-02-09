@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Jemx",
+  "post_date": null,
+  "post_text": "May 2, 2019 at 8:37 PM#1Hey guys,does anyone know, how to create a new effectline inside a effect and how to assign a attribute to it purely via the cmd?I know that i can access a existing line by using e.g.CodeAssign Effect 1.1.1 /rate=0.25but i cant figure out, how to crate a new one and how to assign/change the attribute of a line.Thanks in advance!",
+  "replies": 0,
+  "thread_id": "63852",
+  "title": "Creating a new effectline in a effect via cmd",
+  "url": "https://forum.malighting.com/forum/thread/63852-creating-a-new-effectline-in-a-effect-via-cmd/",
+  "views": 0
+}

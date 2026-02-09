@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "fr4nk13",
+  "post_date": null,
+  "post_text": "November 14, 2017 at 2:34 AM#1Hello all,I've been working on getting the knobs of the APC40 to play nice with the encoders. I've got it about 90% functional, and I wanted to share my progress and possibly illicit some help if possible.Task: Map Encoder wheels to knobs of APC 40Using [url=http://www.ma-share.net/forum/read.php…30983#msg-30983]Pichi's Midicon macros[/url] I was able to get input to the encoder values.Then using some rules in bome I was able to get the knobs to react like continuous encoders (see code below)Codegd=pp-gaga=ppif gd==0 then Goto \"Check\"if gd>0 then Goto \"Up\"if gd<0 then Goto \"Down\"Label \"Check\"if pp==127 then Goto \"Up\"if pp==0 then Goto \"Down\"Label \"Up\"qq=65rr=12exit rules, execute Outgoing ActionLabel \"Down\"qq=63rr=11exit rules, execute Outgoing ActionDisplay MoreThe only issue I'm having now is that the align function resets to off as soon as I touch the encoder.Would anyone be able to shed some light on this?",
+  "replies": 0,
+  "thread_id": "59995",
+  "title": "APC40 Rotary Encoders",
+  "url": "https://forum.malighting.com/forum/thread/59995-apc40-rotary-encoders/",
+  "views": 0
+}

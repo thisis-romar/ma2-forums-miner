@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Hblightguy",
+  "post_date": null,
+  "post_text": "May 19, 2016 at 4:44 AM#1Is there a thread or manual on macro creation from the command line? I'm looking for a way to add lines to macros and edit the cmd in them at line.End goal is creating a macro that can auto write other macros.I.e auto create 6 macros that each assign a preset to a fixture.I can't seem to find the syntax anywhere.",
+  "replies": 0,
+  "thread_id": "53106",
+  "title": "Macro Creation From Command line",
+  "url": "https://forum.malighting.com/forum/thread/53106-macro-creation-from-command-line/",
+  "views": 0
+}

@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2017-03-09T20:00:31" showfile="plugin - macro test" />
+	<Macro index="66" name="PRESETS COLOR">
+		<Appearance Color="007fff" />
+		<Macroline index="0" delay="0.01">
+			<text>Fixture 1 Thru</text>
+		</Macroline>
+		<Macroline index="1" delay="0.01">
+			<text>Attribute colorrgb1 At 100 ; Attribute colorrgb2 At 0 ; Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="2" delay="0.01">
+			<text>Store Preset 4.1 /m &quot;Red&quot;</text>
+		</Macroline>
+		<Macroline index="3" delay="0.01">
+			<text>Attribute colorrgb1 At 100 ; Attribute colorrgb2 At 18 ; Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="4" delay="0.01">
+			<text>Store Preset 4.2 /m &quot;Orange&quot;</text>
+		</Macroline>
+		<Macroline index="5" delay="0.01">
+			<text>Attribute colorrgb1 At 100 ; Attribute colorrgb2 At 36.5 ; Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="6" delay="0.01">
+			<text>Store Preset 4.3 /m &quot;Amber&quot;</text>
+		</Macroline>
+		<Macroline index="7" delay="0.01">
+			<text>Attribute colorrgb1 At 100 ; Attribute colorrgb2 At 100 ; Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="8" delay="0.01">
+			<text>Store Preset 4.4 /m &quot;Yellow&quot;</text>
+		</Macroline>
+		<Macroline index="9" delay="0.01">
+			<text>Attribute colorrgb1 At 100 ; Attribute colorrgb2 At 75 ; Attribute colorrgb3 At 30</text>
+		</Macroline>
+		<Macroline index="10" delay="0.01">
+			<text>Store Preset 4.5 /m &quot;CTO&quot;</text>
+		</Macroline>
+		<Macroline index="11" delay="0.01">
+			<text>Attribute colorrgb1 At 100 ; Attribute colorrgb2 At 100 ; Attribute colorrgb3 At 70</text>
+		</Macroline>
+		<Macroline index="12" delay="0.01">
+			<text>Store Preset 4.6 /m &quot;Lt. CTO&quot;</text>
+		</Macroline>
+		<Macroline index="13" delay="0.01">
+			<text>Attribute colorrgb1 At 100 ; Attribute colorrgb2 At 75 ; Attribute colorrgb3 At 86</text>
+		</Macroline>
+		<Macroline index="14" delay="0.01">
+			<text>Store Preset 4.7 /m &quot;Rose&quot;</text>
+		</Macroline>
+		<Macroline index="15" delay="0.01">
+			<text>Attribute colorrgb1 At 100 ; Attribute colorrgb2 At 0 ; Attribute colorrgb3 At 18</text>
+		</Macroline>
+		<Macroline index="16" delay="0.01">
+			<text>Store Preset 4.8 /m &quot;Pink&quot;</text>
+		</Macroline>
+		<Macroline index="17" delay="0.01">
+			<text>Attribute colorrgb1 At 100 ; Attribute colorrgb2 At 0 ; Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="18" delay="0.01">
+			<text>Store Preset 4.9 /m &quot;Magenta&quot;</text>
+		</Macroline>
+		<Macroline index="19" delay="0.01">
+			<text>Attribute colorrgb1 At 71 ; Attribute colorrgb2 At 7 ; Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="20" delay="0.01">
+			<text>Store Preset 4.10 /m &quot;Violet&quot;</text>
+		</Macroline>
+		<Macroline index="21" delay="0.01">
+			<text>Attribute colorrgb1 At 50 ; Attribute colorrgb2 At 7 ; Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="22" delay="0.01">
+			<text>Store Preset 4.11 /m &quot;Lav&quot;</text>
+		</Macroline>
+		<Macroline index="23" delay="0.01">
+			<text>Attribute colorrgb1 At 0 ; Attribute colorrgb2 At 0 ; Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="24" delay="0.01">
+			<text>Store Preset 4.12 /m &quot;Blue&quot;</text>
+		</Macroline>
+		<Macroline index="25" delay="0.01">
+			<text>Attribute colorrgb1 At 0 ; Attribute colorrgb2 At 35 ; Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="26" delay="0.01">
+			<text>Store Preset 4.13 /m &quot;Lt. Blue&quot;</text>
+		</Macroline>
+		<Macroline index="27" delay="0.01">
+			<text>Attribute colorrgb1 At 0 ; Attribute colorrgb2 At 100 ; Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="28" delay="0.01">
+			<text>Store Preset 4.14 /m &quot;Cyan&quot;</text>
+		</Macroline>
+		<Macroline index="29" delay="0.01">
+			<text>Attribute colorrgb1 At 74 ; Attribute colorrgb2 At 100 ; Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="30" delay="0.01">
+			<text>Store Preset 4.15 /m &quot;CTB&quot;</text>
+		</Macroline>
+		<Macroline index="31" delay="0.01">
+			<text>Attribute colorrgb1 At 100 ; Attribute colorrgb2 At 0 ; Attribute colorrgb3 At 43</text>
+		</Macroline>
+		<Macroline index="32" delay="0.01">
+			<text>Store Preset 4.16 /m &quot;Pink 2&quot;</text>
+		</Macroline>
+		<Macroline index="33" delay="0.01">
+			<text>Attribute colorrgb1 At 91 ; Attribute colorrgb2 At 37.5 ; Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="34" delay="0.01">
+			<text>Store Preset 4.17 /m &quot;Gold&quot;</text>
+		</Macroline>
+		<Macroline index="35" delay="0.01">
+			<text>Attribute colorrgb1 At 55 ; Attribute colorrgb2 At 46 ; Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="36" delay="0.01">
+			<text>Store Preset 4.18 /m &quot;Lt. Lav&quot;</text>
+		</Macroline>
+		<Macroline index="37" delay="0.01">
+			<text>Attribute colorrgb1 At 0 ; Attribute colorrgb2 At 100 ; Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="38" delay="0.01">
+			<text>Store Preset 4.19 /m &quot;Green&quot;</text>
+		</Macroline>
+		<Macroline index="39" delay="0.01">
+			<text>Attribute colorrgb1 At 0 ; Attribute colorrgb2 At 100 ; Attribute colorrgb3 At 5</text>
+		</Macroline>
+		<Macroline index="40" delay="0.01">
+			<text>Store Preset 4.20 /m &quot;Turk&quot;</text>
+		</Macroline>
+		<Macroline index="41" delay="0.01">
+			<text>Attribute colorrgb1 At 0 ; Attribute colorrgb2 At 100 ; Attribute colorrgb3 At 16</text>
+		</Macroline>
+		<Macroline index="42" delay="0.01">
+			<text>Store Preset 4.21 /m &quot;Teal&quot;</text>
+		</Macroline>
+		<Macroline index="43" delay="0.01">
+			<text>Attribute colorrgb1 At 50 ; Attribute colorrgb2 At 100 ; Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="44" delay="0.01">
+			<text>Store Preset 4.22 /m &quot;Lt. Cyan&quot;</text>
+		</Macroline>
+		<Macroline index="45" delay="0.01">
+			<text>Attribute colorrgb1 At 100 ; Attribute colorrgb2 At 100 ; Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="46" delay="0.01">
+			<text>Store Preset 4.23 /m &quot;White&quot;</text>
+		</Macroline>
+		<Macroline index="47" delay="0.01">
+			<text>Clear All</text>
+		</Macroline>
+		<Macroline index="48" delay="0.01">
+			<text>Clear</text>
+		</Macroline>
+		<Macroline index="49" delay="0.01">
+			<text>Clear</text>
+		</Macroline>
+		<Macroline index="50" delay="0.01">
+			<text>Clear</text>
+		</Macroline>
+	</Macro>
+</MA>

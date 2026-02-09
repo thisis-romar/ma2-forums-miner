@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.1.2/MA.xsd" major_vers="3" minor_vers="1" stream_vers="2">
+	<Info datetime="2015-11-02T00:08:37" showfile="new show 2015-11-01" />
+	<Macro index="0" name="text">
+		<Appearance Color="88ff07" />
+		<Macroline index="0">
+			<text>SetVar $col = (how many columns  ?)</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>SetVar $row = (how many rows ?)</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>SetVar $exec = (Enter exec x.y)</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>Select $exec</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>SetVar $countrow = 0</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>SetVar $count = 0</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>SetVar $start = (First fixture number ?)</text>
+		</Macroline>
+		<Macroline index="7">
+			<text>SetVar $end = $col ; AddVar $end = $start ; AddVar $end = -1</text>
+		</Macroline>
+		<Macroline index="8">
+			<text>Store Cue 1</text>
+		</Macroline>
+		<Macroline index="9">
+			<text>Macro &quot;count&quot;</text>
+		</Macroline>
+	</Macro>
+	<Macro index="1" name="count">
+		<Macroline index="0">
+			<text>Off Macro &quot;Row&quot;</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>AddVar $count = 1</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>[$countrow == $row] Off Macro &quot;Text&quot; &quot;count&quot; &quot;Copy&quot;</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>[$count &gt; $col] Macro &quot;Copy&quot; [$count &lt; $col] Macro &quot;Copy&quot;</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>[$count == $col] Macro &quot;Row&quot;</text>
+		</Macroline>
+	</Macro>
+	<Macro index="2" name="Copy">
+		<Macroline index="0">
+			<text>Fixture $start Thru $end</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>CircularCopy +1</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>On Attribute dim</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>SetVar $cue = 1 ; AddVar $cue = $count</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>Store Cue $cue /m</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>Macro &quot;count&quot;</text>
+		</Macroline>
+	</Macro>
+	<Macro index="3" name="row">
+		<Macroline index="0">
+			<text>AddVar $countrow = 1</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>SetVar $start = $end ; AddVar $start = 1 ; AddVar $end = $col</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>SetVar $count = 0</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>[$countrow == $row] Off Macro &quot;text&quot; ; Off Macro &quot;count&quot; ; Off Macro &quot;copy&quot; ; Assign Executor $exec /chaser =On ; ClearAll</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>[$countrow == $row] Assign Toggle At ExecButton1 $exec ; Assign Pause At ExecButton2 $exec ; Assign Learn At ExecButton3 $exec ; Label Executor $exec (&quot;Chaser name ?&quot;)</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>[$countrow == $row] Toggle Executor $exec</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>[$countrow &gt; $row] [$countrow &lt; $row] Macro &quot;count&quot;</text>
+		</Macroline>
+	</Macro>
+</MA>

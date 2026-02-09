@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "knissone",
+  "post_date": null,
+  "post_text": "April 30, 2019 at 7:39 PM#1Hey all, been staring at this for a bit and need some extra eyes... I'm trying to change various bits of an effect line via macro, with this syntax:Syntax: Assign Effect $FXCurrentTemplate /groups = $GroupsFXLess Variables: Assign Effect 397 thru 417 /groups = 1Now, that does change the groups like it should, but it also starts the effects with any fixtures selected, which I don't want. The issue is that I'm wanting the macro to change a handful of template effects, but in practice I am likely running ONE of those effects and using this macro to change the line, which also starts the other effects.I just need a way to not start the effect(s) when I change a line within those effects. Feels like I'm missing something dumb... Any thoughts? Thanks in advance!",
+  "replies": 0,
+  "thread_id": "63836",
+  "title": "Change effect lines without taking effect",
+  "url": "https://forum.malighting.com/forum/thread/63836-change-effect-lines-without-taking-effect/",
+  "views": 0
+}

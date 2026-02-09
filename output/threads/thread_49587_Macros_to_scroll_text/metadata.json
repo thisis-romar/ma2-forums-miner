@@ -1,0 +1,19 @@
+{
+  "assets": [
+    {
+      "checksum": "sha256:df180d0f915ad0f940a2ff3735a21c5e30d2854d3bcb9cdf4e93753c1f172d77",
+      "download_count": 70,
+      "filename": "scroll text.xml",
+      "size": 3354,
+      "url": "https://forum.malighting.com/file-download/3845/"
+    }
+  ],
+  "author": "Duplicate bentoylight",
+  "post_date": null,
+  "post_text": "November 1, 2015 at 10:42 PM#1HiHere is 4 macros which allow you to write text, or what you want, on a matrix pannel and scroll it. No vpu, no bitmap effect. Just chaser...It asks you for colums, row, exec, first fixture number and name.Assigns toggle, pause, learn to your chaser exec buttons.Write or draw what you want on your matrix pannel, then run macro \"text\".There are 4 macros cause gma3.1.2 disabbles loop in macro.\"text\" macro set variable, select your exec and store your text as cue 1\"count\" counts the loops and run macro \"copy\" or \"row\"\"copy\" makes circular copy in row and run \"count\"\"row\" change each row, label exec, change it as chaser, assign buttons, and toggle it, or run \"count\"Note that it is for pannel numbered from  left to right, up to down...It's built for dimmer attribute.That can be changed.EnjoyFilesscroll text.xml3.35 kB – 70 Downloads",
+  "replies": 0,
+  "thread_id": "49587",
+  "title": "Macros to scroll text",
+  "url": "https://forum.malighting.com/forum/thread/49587-macros-to-scroll-text/",
+  "views": 0
+}

@@ -1,0 +1,19 @@
+{
+  "assets": [
+    {
+      "checksum": "sha256:34d501bfb60dada271dcfca8197ea78b7c1880ee4732ad225bdcafa6fe5ec915",
+      "download_count": 38,
+      "filename": "Ifoutput by PresetType.xml",
+      "size": 990,
+      "url": "https://forum.malighting.com/file-download/3542/"
+    }
+  ],
+  "author": "sebmdp",
+  "post_date": null,
+  "post_text": "October 27, 2014 at 6:12 PM#1Dear all,I'm looking for the right syntax to filter the result of the ifoutput function by the keyword PresetType.Seems that those syntaxes don't work :CodeifOutput PresetType x (where x is the choosen PresetType)ifOutput PresetType x.x.x (for the choosen attribute of feature x of preset type x)ifOutput At PresetType xifOutput On PresetType xwhileCodeIfOutput Preset 4.5for color preset nb 5 worksPlease note that I really want to filter the result by the PresetType and not by recorded Preset. For example I want to be able to find fixtures that have a blade engaged or a gobo parameter >0Thanks for your help.Regards.S.D.",
+  "replies": 0,
+  "thread_id": "43985",
+  "title": "IfOutput filtered by PresetType",
+  "url": "https://forum.malighting.com/forum/thread/43985-ifoutput-filtered-by-presettype/",
+  "views": 0
+}

@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "konfuzius_sagt",
+  "post_date": null,
+  "post_text": "February 1, 2016 at 6:30 PM#1Hey there,ive created a some Reference Presets for my own Fixture Type.I store it  as Merge / Global into the Preset. But some Value is wrong , so i try to Remove the Value out of the Preset with Select the Fixture (only 1 fixture is in the patch) than make active the parameter i wanna remove store /Global / remove and hit the preset... but the wrong values are still in the preset.So i remember that there is something new in 3.1.1 that there are also fixturetypes stored in the preset.i go for it and say edit preset and than i see in the programmer \"fixturetype 16.1.1 is included\".SO i try to remove that but nothing works... what is the right way to remove some value of a fixture type from a preset??Any ideas?(What i try is 1. Select Fixturetype 16.1.1 / all values active / store , global , remove ... nothing changes and 2. edit preset / off fixturetype 16.1.1 / update...nothign changes)Thx",
+  "replies": 0,
+  "thread_id": "50894",
+  "title": "Remove FixtureType from Preset",
+  "url": "https://forum.malighting.com/forum/thread/50894-remove-fixturetype-from-preset/",
+  "views": 0
+}

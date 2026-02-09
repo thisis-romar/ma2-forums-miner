@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.4/MA.xsd" major_vers="3" minor_vers="3" stream_vers="4">
+	<Info datetime="2019-06-16T19:46:15" showfile="swge opening 5-19-19" />
+	<Macro index="16" name="Position Form Generator">
+		<Macroline index="0">
+			<info>Macro created by Jeff Handke (MA-Share User: JSHDesigns) 6/16/19</info>
+		</Macroline>
+		<Macroline index="1" delay="0.03">
+			<text>SetVar $form = (What Form #?)</text>
+			<info>Prompts User to Pick a Form Number</info>
+		</Macroline>
+		<Macroline index="2" delay="0.03">
+			<text>Store Form $form</text>
+			<info>Creates the Form</info>
+		</Macroline>
+		<Macroline index="3" delay="0.03">
+			<text>Label Form $form (&quot;Form Label?&quot;)</text>
+			<info>Prompts User to Label the Form</info>
+		</Macroline>
+		<Macroline index="4" delay="0.03">
+			<text>Store Form $form.1 Thru $form.2</text>
+			<info>Creates 2 New Graphs in the Form</info>
+		</Macroline>
+		<Macroline index="5" delay="0.03">
+			<text>Delete Form $form.1</text>
+			<info>Deletes the first default graph created</info>
+		</Macroline>
+		<Macroline index="6" delay="0.03">
+			<text>Label Form $form.1 &quot;Pan&quot;</text>
+			<info>Labels first graph Pan</info>
+		</Macroline>
+		<Macroline index="7" delay="0.03">
+			<text>Delete Form $form.1.1 Thru $form.1.2</text>
+			<info>Deletes the first two default points in the first graph</info>
+		</Macroline>
+		<Macroline index="8" delay="0.03">
+			<text>Label Form $form.2 &quot;Tilt&quot;</text>
+			<info>Labels second graph Tilt</info>
+		</Macroline>
+		<Macroline index="9" delay="0.03">
+			<text>Delete Form $form.2.1 Thru $form.2.2</text>
+			<info>Deletes the first two default points in the second graph</info>
+		</Macroline>
+		<Macroline index="10" delay="0.03">
+			<text>SetVar $posamount = (How Many Positions? 3 or 4?)</text>
+			<info>Prompts User how many positions in the form, 3 or 4</info>
+		</Macroline>
+		<Macroline index="11" delay="0.03">
+			<text>[$posamount == 3] Store Form $form.1.1 Thru $form.1.3 + $form.2.1 Thru $form.2.3</text>
+			<info>Creates three points on both graphs if 3 position form</info>
+		</Macroline>
+		<Macroline index="12" delay="0.03">
+			<text>[$posamount == 4] Store Form $form.1.1 Thru $form.1.4 + $form.2.1 Thru $form.2.4</text>
+			<info>Creates four points on both graphs if 4 position form</info>
+		</Macroline>
+		<Macroline index="13" delay="0.03">
+			<text>SetVar $posinfo = (Pan Percentage Value in first position?)</text>
+			<info>Prompts user for Pan Value of first position (in percentage)</info>
+		</Macroline>
+		<Macroline index="14" delay="0.03">
+			<text>Assign Form $form.1.1 /y= $posinfo</text>
+			<info>Assigns Pan Value of first position to graph</info>
+		</Macroline>
+		<Macroline index="15" delay="0.03">
+			<text>SetVar $posinfo = (Tilt Percentage Value in first positiom?)</text>
+			<info>Prompts user for Tilt Value of first position (in percentage)</info>
+		</Macroline>
+		<Macroline index="16" delay="0.03">
+			<text>Assign Form $form.2.1 /y= $posinfo</text>
+			<info>Assigns Tilt Value of first position to graph</info>
+		</Macroline>
+		<Macroline index="17" delay="0.03">
+			<text>SetVar $posinfo = (Pan Percentage Value in second position?)</text>
+			<info>Prompts user for Pan Value of second position (in percentage)</info>
+		</Macroline>
+		<Macroline index="18" delay="0.03">
+			<text>Assign Form $form.1.2 /y= $posinfo</text>
+			<info>Assigns Pan Value of second position to graph</info>
+		</Macroline>
+		<Macroline index="19" delay="0.03">
+			<text>SetVar $posinfo = (Tilt Percentage Value in second position?)</text>
+			<info>Prompts user for Tilt Value of second position (in percentage)</info>
+		</Macroline>
+		<Macroline index="20" delay="0.03">
+			<text>Assign Form $form.2.2 /y= $posinfo</text>
+			<info>Assigns Tilt Value of second position to graph</info>
+		</Macroline>
+		<Macroline index="21" delay="0.03">
+			<text>[$posamount == 3] SetVar $posinfo = (Pan Percentage Value in third position?)</text>
+			<info>Prompts user for Pan Value of third position (Pan in percentage)</info>
+		</Macroline>
+		<Macroline index="22" delay="0.03">
+			<text>[$posamount == 3] Assign Form $form.1.3 /y= $posinfo</text>
+			<info>Assigns Pan Value of third position to graph</info>
+		</Macroline>
+		<Macroline index="23" delay="0.03">
+			<text>[$posamount == 3] SetVar $posinfo = (Tilt Percentage Value in third position?)</text>
+			<info>Prompts user for Tilt Value of third position (in percentage)</info>
+		</Macroline>
+		<Macroline index="24" delay="0.03">
+			<text>[$posamount == 3] Assign Form $form.2.3 /y= $posinfo</text>
+			<info>Assigns Tilt Value of third position to graph</info>
+		</Macroline>
+		<Macroline index="25" delay="0.03">
+			<text>[$posamount == 3] Assign Form $form.1.1 + $form.2.1 /x= 0</text>
+			<info>Assigns X Value to first point of both graphs</info>
+		</Macroline>
+		<Macroline index="26" delay="0.03">
+			<text>[$posamount == 3] Assign Form $form.1.2 + $form.2.2 /x= 33.33</text>
+			<info>Assigns X Value to second point of both graphs</info>
+		</Macroline>
+		<Macroline index="27" delay="0.03">
+			<text>[$posamount == 3] Assign Form $form.1.3 + $form.2.3 /x= 66.66</text>
+			<info>Assigns X Value to third point of both graphs</info>
+		</Macroline>
+		<Macroline index="28" />
+		<Macroline index="29" delay="0.03">
+			<text>[$posamount == 4] SetVar $posinfo = (Pan Percentage Value in third position?)</text>
+			<info>Prompts user for Pan Value of third position (in percentage)</info>
+		</Macroline>
+		<Macroline index="30" delay="0.03">
+			<text>[$posamount == 4] Assign Form $form.1.3 /y= $posinfo</text>
+			<info>Assigns Pan Value of third position to graph</info>
+		</Macroline>
+		<Macroline index="31" delay="0.03">
+			<text>[$posamount == 4] SetVar $posinfo = (Tilt Percentage Value in third position?)</text>
+			<info>Prompts user for Tilt Value of third position (in percentage)</info>
+		</Macroline>
+		<Macroline index="32" delay="0.03">
+			<text>[$posamount == 4] Assign Form $form.2.3 /y= $posinfo</text>
+			<info>Assigns Tilt Value of third position to graph</info>
+		</Macroline>
+		<Macroline index="33" delay="0.03">
+			<text>[$posamount == 4] SetVar $posinfo = (Pan Percentage Value in fourth position?)</text>
+			<info>Prompts user for Pan Value of fourth position (in percentage) if 4 position</info>
+		</Macroline>
+		<Macroline index="34" delay="0.03">
+			<text>[$posamount == 4] Assign Form $form.1.4 /y= $posinfo</text>
+			<info>Assigns Pan Value of fourth position to graph if 4 position</info>
+		</Macroline>
+		<Macroline index="35" delay="0.03">
+			<text>[$posamount == 4] SetVar $posinfo = (Tilt Percentage Value in fourth position?)</text>
+			<info>Prompts user for Tilt Value of fourth position (in percentage) if 4 position</info>
+		</Macroline>
+		<Macroline index="36" delay="0.03">
+			<text>[$posamount == 4] Assign Form $form.2.4 /y= $posinfo</text>
+			<info>Assigns Tilt Value of fourth position to graph if 4 position</info>
+		</Macroline>
+		<Macroline index="37" delay="0.03">
+			<text>[$posamount == 4] Assign Form $form.1.1 + $form.2.1 /x= 0</text>
+			<info>Assigns X Value to first point of both graphs</info>
+		</Macroline>
+		<Macroline index="38" delay="0.03">
+			<text>[$posamount == 4] Assign Form $form.1.2 + $form.2.2 /x= 25</text>
+			<info>Assigns X Value to second point of both graphs</info>
+		</Macroline>
+		<Macroline index="39" delay="0.03">
+			<text>[$posamount == 4] Assign Form $form.1.3 + $form.2.3 /x= 50</text>
+			<info>Assigns X Value to third point of both graphs</info>
+		</Macroline>
+		<Macroline index="40" delay="0.03">
+			<text>[$posamount == 4] Assign Form $form.1.4 + $form.2.4 /x= 75</text>
+			<info>Assigns X Value to fourth point of both graphs</info>
+		</Macroline>
+		<Macroline index="41" />
+		<Macroline index="42" delay="0.03">
+			<text>SetVar $formtype = (&quot;1=Spline or 2=Linear between positions?&quot;)</text>
+			<info>Prompts User if form should sline or linear fade between positions</info>
+		</Macroline>
+		<Macroline index="43" delay="0.03">
+			<text>[$formtype == 1] AddVar $posamount = 1</text>
+			<info>Logic to distinguish Spline Form from Linear Form</info>
+		</Macroline>
+		<Macroline index="44" delay="0.03">
+			<text>[$formtype == 2] AddVar $posamount = 3</text>
+			<info>Logic to distinguish Spline Form from Linear Form</info>
+		</Macroline>
+		<Macroline index="45" />
+		<Macroline index="46" delay="0.03">
+			<text>[$posamount == 4] Assign Form $form.1.1 Thru $form.1.3 + $form.2.1 Thru $form.2.3 /Mode=Spline</text>
+			<info>Assigns all points of graph to Spline Mode if 3 Position Form</info>
+		</Macroline>
+		<Macroline index="47" />
+		<Macroline index="48" delay="0.03">
+			<text>[$posamount == 5] Assign Form $form.1.1 Thru $form.1.4 + $form.2.1 Thru $form.2.4 /Mode=Spline</text>
+			<info>Assigns all points of graph to Spline Mode if 4 Position Form</info>
+		</Macroline>
+		<Macroline index="49" />
+		<Macroline index="50">
+			<text>SetVar $form = ; SetVar $posinfo = ; SetVar $formtype = ; SetVar $posamount =</text>
+			<info>Removes all created variables from this macro</info>
+		</Macroline>
+	</Macro>
+</MA>

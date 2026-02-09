@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2016-12-17T11:49:58" showfile="wehleider" />
+	<Macro index="106" name="Assign Exec Temp Load Go Tempfade">
+		<Macroline index="0">
+			<text>SetUserVar $faderpage (Which Fader Page?)</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>SetUserVar $executor (Which Executor?)</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Assign Temp ExecButton1 $faderpage.$executor</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>Assign Load ExecButton2 $faderpage.$executor</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>Assign Go ExecButton3 $faderpage.$executor</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>Assign TempFader Fader $faderpage.$executor</text>
+		</Macroline>
+	</Macro>
+</MA>

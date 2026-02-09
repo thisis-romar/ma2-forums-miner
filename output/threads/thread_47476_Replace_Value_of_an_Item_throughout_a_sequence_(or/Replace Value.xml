@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.0.0/MA.xsd" major_vers="3" minor_vers="0" stream_vers="0">
+	<Info datetime="2015-06-27T12:02:57" showfile="tdlep 2015-06-27 save3" />
+	<Macro index="5" name="Replace Value" cli="false" timing="true">
+		<Macroline index="0">
+			<text>SetUserVar $replaceFocus=(&quot;Item to Edit?&quot;)</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>SetUserVar $replaceSource=(&quot;Where Looking&quot;)</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>SetUserVar $replaceSourceValue=(&quot;What Value do you want to replace?&quot;)</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>SetUserVar $replaceNewValue=(&quot;What is the new value?&quot;)</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>Search $replaceFocus If $replaceSource /nc</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>Search $replaceSourceValue If SearchResult /nc</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>Replace $replaceSourceValue With $replaceNewValue If SearchResult</text>
+		</Macroline>
+	</Macro>
+</MA>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.7.0/MA.xsd" major_vers="3" minor_vers="7" stream_vers="0">
+	<Info datetime="2019-08-02T16:01:42" showfile="tsar zaltan 11.6.2019 23h finale" />
+	<Macro index="1104" name="Label preset Live Cue">
+		<Macroline index="0">
+			<text>ChangeDest @</text>
+			<info>Go into the Preset. Waiting for user input. ESC to cancel next steps</info>
+		</Macroline>
+		<Macroline index="1" delay="0.05">
+			<text>LUA &quot;gma.show.setvar(&apos;CAPTURE&apos;,(&apos;Lua %q&apos;):format([[local u,p,t,h,a,s=gma.user,gma.show.property,{};h=u.getcmddest();s=u.setvar;a=p.amount(h);for i=0,a do t[i+1]=&apos;C_&apos;..p.name(h,i):gsub(&apos;%W&apos;,&apos;&apos;);s(t[i+1],p.get(h,i))end;gma.cmd(&apos;ListUs C_*&apos;);gma.sleep(1);for i=0,a do s(t[i+1])end]]))&quot;</text>
+			<info>Install GLAD Intellivar $capture</info>
+		</Macroline>
+		<Macroline index="2" delay="0.05">
+			<text>$capture</text>
+			<info>call $CAPTURE to create temp variables from properties of current destination</info>
+		</Macroline>
+		<Macroline index="3">
+			<text>ChangeDest /</text>
+			<info>Going back to the root</info>
+		</Macroline>
+		<Macroline index="4">
+			<text>SetVar $Qlabel = &quot;Q &quot;</text>
+			<info>Set my label variable</info>
+		</Macroline>
+		<Macroline index="5">
+			<text>AddVar $Qlabel = $selectedexeccue</text>
+			<info>Add the live cue number into the variable</info>
+		</Macroline>
+		<Macroline index="6">
+			<text>Label Preset $C_NO $&quot;Qlabel&quot;</text>
+			<info>Label the preset using the extracted variable from $capture and label with live cue number variable</info>
+		</Macroline>
+		<Macroline index="7">
+			<text>SetVar $Qlabel</text>
+			<info>Clear label variable</info>
+		</Macroline>
+		<Macroline index="8">
+			<text>SetVar $capture</text>
+			<info>Uninstall GLAD Intellivar $Capture</info>
+		</Macroline>
+	</Macro>
+</MA>

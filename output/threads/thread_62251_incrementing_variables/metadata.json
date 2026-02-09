@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "isakwang",
+  "post_date": null,
+  "post_text": "September 5, 2018 at 2:33 PM#1HiIs it possible to increment a variable in a loop? I would prefer a for or while loop but as far as I can see ma2 doesn't support that. I know lua could do this but i would prefer doing it internally. Im trying to automate the process of updating some cues in several cuelist.",
+  "replies": 0,
+  "thread_id": "62251",
+  "title": "incrementing variables",
+  "url": "https://forum.malighting.com/forum/thread/62251-incrementing-variables/",
+  "views": 0
+}

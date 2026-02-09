@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Martijnsummer",
+  "post_date": null,
+  "post_text": "April 14, 2017 at 12:31 PM#1Hi,it is a bug or a feature?this commandline does not work. Does anyone have some suggestions?Setuservar $Name (\"Set name\")Assign Executor $Selectedexec cue 1 /cmd=\"off exec $\"Name[color=#FF0000]\"\"[/color]thanks a lotwith kind regards,Martijn",
+  "replies": 0,
+  "thread_id": "58120",
+  "title": "name in cmd line",
+  "url": "https://forum.malighting.com/forum/thread/58120-name-in-cmd-line/",
+  "views": 0
+}

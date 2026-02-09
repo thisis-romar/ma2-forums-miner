@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Duplicate vjandrea",
+  "post_date": null,
+  "post_text": "June 26, 2018 at 7:56 AM#1Hello there,I'm searching an efficient way to adjust Group Masters via command line: right now I set the level of the assigned executor, likeCodeExecutor 1.\"OUT\" At 100but i was wondering if there's a more efficient way to do it. I see that SpecialMasters don't include Group Masters and the GroupMaster keyword does not exist. Any suggestion?thanksandrea",
+  "replies": 0,
+  "thread_id": "61633",
+  "title": "Adjusting Group Master via command line",
+  "url": "https://forum.malighting.com/forum/thread/61633-adjusting-group-master-via-command-line/",
+  "views": 0
+}

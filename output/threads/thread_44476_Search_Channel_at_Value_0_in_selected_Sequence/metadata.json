@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Marek",
+  "post_date": null,
+  "post_text": "December 3, 2014 at 4:11 PM#1This Macro searches for Channels at DimmerValue < 1 in the selected Sequence. Quick search for stored but not used Channels.[size=medium][size=large]ClearSearch Channel at Value 1 thru 100 If Cue Thru /ncSelfix-Searchresult[/size][/size]",
+  "replies": 0,
+  "thread_id": "44476",
+  "title": "Search Channel at Value 0 in selected Sequence",
+  "url": "https://forum.malighting.com/forum/thread/44476-search-channel-at-value-0-in-selected-sequence/",
+  "views": 0
+}

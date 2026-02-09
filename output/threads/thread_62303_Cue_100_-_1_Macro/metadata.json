@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "scoobytoobins",
+  "post_date": null,
+  "post_text": "September 11, 2018 at 4:21 PM#1Hey all,Trying to create a macro to select the cue before my Cue 100 (Scene cue which offs all pages besides the scene page) on each executor. Is this possible?Was trying to create a variable for cue '100 - 1' but because the cue before it may be cue 25 on Executor 1 and cue 39 on Executor 2 it's not seeming to make much sense.Any ideas?",
+  "replies": 0,
+  "thread_id": "62303",
+  "title": "Cue 100 - 1 Macro",
+  "url": "https://forum.malighting.com/forum/thread/62303-cue-100-1-macro/",
+  "views": 0
+}

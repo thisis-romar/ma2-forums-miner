@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "robk82",
+  "post_date": null,
+  "post_text": "May 31, 2019 at 3:07 PM#1Hello all,I have a certain macro that when an operator triggers it, I'd like an alert message to pop up for them to select ok button.Right now I have dialog box pop up and there's not enough room for the description of what to do.I think this is possible without Lua, but I'm not sure.Any ideas?",
+  "replies": 0,
+  "thread_id": "64025",
+  "title": "Pop up alert message",
+  "url": "https://forum.malighting.com/forum/thread/64025-pop-up-alert-message/",
+  "views": 0
+}

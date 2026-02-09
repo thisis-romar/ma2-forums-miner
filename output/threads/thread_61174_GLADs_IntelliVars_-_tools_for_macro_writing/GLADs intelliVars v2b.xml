@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.7.0/MA.xsd" major_vers="3" minor_vers="7" stream_vers="0">
+	<Info datetime="2019-09-01T16:20:13" showfile="test" />
+	<Macro index="2" name="create GLADs IntelliVars V2b" timing="true">
+		<InfoItems>
+			<Info date="2018-09-02T22:33:01">Run macro once to create GLADs IntelliVars
+(the macro may be deleted afterwards)
+
+GLADs IntelliVars are small Lua scripts embedded in
+$variables for direct access from commandline/macros
+
+make sure to give macrolines with $Intellivars a small wait to allow the script to complete,
+if the next lines rely on the Intellivar results
+
+----------------------------
+         $CAPTURE
+----------------------------
+
+creates temporary variables labeled C_propertyname
+of the properties of the current destination.
+
+Example:
+
+CD Preset 1.1
+$CAPTURE 
+CD /
+
+Result:(commandlinefeedback)
+C_SPECIAL = Normal
+C_NO = 1.1
+C_NAME = White
+
+the C_variables will self-delete after 1 second,
+so make sure to use or copy the ones you need in the proceeding
+lines of your macro:
+
+SetUserVar $myNameForLater = $&quot;C_NAME&quot;
+
+----------------------------
+         $LOOP***
+----------------------------
+
+These IntelliVars may be used for repeating commands
+similar to a for loop.
+
+Example:
+
+$LOOPFROM 1 ; $LOOPTO 3
+$LOOPCMD &quot;Fixture @ At 50 ; Store EXec 10@&quot;
+$LOOPCMDADD &quot; ; Label EXec 10@ &apos;F@&apos; &quot;
+$LOOPRUN
+
+Result:
+Fixture 1 At 50
+Store Exec 101
+Label Exec 101 &quot;F1&quot;
+Fixture 2 At 50
+Store Exec 102
+Label Exec 102 &quot;F2&quot;
+etc
+
+Use @ wherever in they syntax where you want to 
+insert the loopcounter. if you need quotes inside your syntax, 
+use single quotes,(the gets replaced with regular double quotes.
+when loop is executed 
+
+----------------------------
+    $FORMULA, $CALCULATE
+----------------------------
+
+These IntelliVars may be used to perform arithmetic operations on uservariables
+
+Example:
+
+$FORMULA &quot;$myresult=($var1+$var2)/2&quot;; $CALCULATE
+
+sets the uservariable $myresult to the mean average of $var1 and $var2</Info>
+		</InfoItems>
+		<Macroline index="0">
+			<text># Open the &quot;INFO&quot; Window &amp; read instruction</text>
+		</Macroline>
+		<Macroline index="1">
+			<text># - - - - - - - - - - - - $CAPTURE - - - - - - - - - - - - - -</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>LUA &quot;gma.show.setvar(&apos;CAPTURE&apos;,(&apos;Lua %q&apos;):format([[local u,p,t,h,a,s=gma.user,gma.show.property,{};h=u.getcmddest();s=u.setvar;a=p.amount(h);for i=0,a do t[i+1]=&apos;C_&apos;..(p.name(h,i)or&apos;&apos;):gsub(&apos;%W&apos;,&apos;&apos;);s(t[i+1],p.get(h,i))end;gma.cmd(&apos;ListUs C_*&apos;);gma.sleep(1);for i=0,a do s(t[i+1])end]]))&quot;</text>
+			<info>call $CAPTURE to create temp variables from properties of current destination</info>
+		</Macroline>
+		<Macroline index="3">
+			<text># - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</text>
+		</Macroline>
+		<Macroline index="4">
+			<text># - - $LOOPFROM, $LOOPTO, $LOOPCMD, $LOOPCMDADD, $LOOPRUN - -</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>LUA &quot;local s,u=gma.show.setvar,&apos;SetUserVar &apos;;s(&apos;LOOPFROM&apos;,u..&apos;$L_1=&apos;);s(&apos;LOOPTO&apos;,u..&apos;$L_2=&apos;);s(&apos;LOOPCMD&apos;,u..&apos;$L_3=&apos;);s(&apos;LOOPCMDADD&apos;,&apos;AddUserVar $L_3=&apos;)&quot;</text>
+			<info>EX.: $LOOPFROM 1; $LOOPTO 3; $LOOPCMD &quot;Att ColorRGB@ At 50&quot; ;$LOOPRUN   @ will be replaced by counter, use single quotes instead of double.</info>
+		</Macroline>
+		<Macroline index="6">
+			<text>LUA &quot;gma.show.setvar(&apos;LOOPRUN&apos;,(&apos;Lua %q&apos;):format([[local s,g,t,a,b,c=string.char,gma.user.getvar,tonumber;a,b=t(g(&apos;L_1&apos;)),t(g(&apos;L_2&apos;));c=a&lt;b and 1 or -1; for i=a,b,c do gma.cmd((g(&apos;L_3&apos;):gsub(&apos;@&apos;,tostring(i)):gsub(s(39),s(34))))end]]))&quot;</text>
+		</Macroline>
+		<Macroline index="7">
+			<text># - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</text>
+		</Macroline>
+		<Macroline index="8">
+			<text># - - - - - - - - $FORMULA, $CALCULATE - - - - - - - - -</text>
+		</Macroline>
+		<Macroline index="9">
+			<text>LUA &quot;local s=gma.show.setvar;s(&apos;FORMULA&apos;,&apos;SetUserVar $FM =&apos;);s(&apos;CALCULATE&apos;,(&apos;Lua %q&apos;):format([[local g,u,f,a,b=gma;u=g.user;f=function(v,x);v=v:gsub(&apos;%$&apos;,&apos;&apos;);return u.getvar(v) or 0;end;a=f(&apos;FM&apos;):match(&apos;%$(%w+)%s*=&apos;);b=f(&apos;FM&apos;):match(&apos;=(.+)$&apos;):gsub(&apos;(%$%w+)&apos;,f);u.setvar(a,(&apos;%g&apos;):format(load(&apos;return &apos;..b)()));g.echo(f(&apos;FM&apos;),&apos;=&apos;,b,&apos;=&apos;,f(a))]]))&quot;</text>
+			<info>EX.: $FORMULA &quot;$myvar = $myvar / 2&quot; ; $CALCULATE</info>
+		</Macroline>
+		<Macroline index="10">
+			<text># - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</text>
+		</Macroline>
+		<Macroline index="11">
+			<text># This Macro requires GLADs IntelliVars - www.ma-share.net</text>
+			<info>please include credit, and share on ma-share if you used Intellivars in some cool macro</info>
+		</Macroline>
+	</Macro>
+</MA>

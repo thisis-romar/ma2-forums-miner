@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.5.3/MA.xsd" major_vers="2" minor_vers="5" stream_vers="3">
+	<Info datetime="2012-02-12T19:02:17" showfile="new show 2012-02-11" />
+	<Macro index="0" name="Create Scroller Fixture">
+		<Macroline index="0">
+			<text>SetUserVar $myID=1 /info= &quot;myID must match with the macronumber&quot;</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>SetUserVar $usepercent= &quot;false&quot;</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>SetUserVar $usedecimal = &quot;false&quot;</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>SetUserVar $I_am_me= &quot;false&quot;</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>SetUserVar $IDcheck=136</text>
+		</Macroline>
+		<Macroline index="5" delay="0.200">
+			<text>Go Macro 1.$myID.$IDcheck</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>[$I_am_me==false] (&quot;Warning - Edit myID in macroline 1&quot;)</text>
+		</Macroline>
+		<Macroline index="7">
+			<text>SetVar $framename= &quot;_frame_&quot;</text>
+		</Macroline>
+		<Macroline index="8">
+			<text>SetUserVar $editsetup= &quot;Root 6&quot;</text>
+		</Macroline>
+		<Macroline index="9">
+			<text>[$I_am_me==true] Label Macro $myID &quot;Wizard Started&quot;</text>
+		</Macroline>
+		<Macroline index="10">
+			<text>SetUserVar $loopline=57</text>
+		</Macroline>
+		<Macroline index="11">
+			<text>[$I_am_me==true] SetUserVar $editsetup= &quot;Root 7&quot;</text>
+		</Macroline>
+		<Macroline index="12" delay="0.200">
+			<text>ChangeDest $editsetup</text>
+		</Macroline>
+		<Macroline index="13">
+			<text>ChangeDest FixtureType</text>
+		</Macroline>
+		<Macroline index="14">
+			<text>SelectDrive 1</text>
+		</Macroline>
+		<Macroline index="15" delay="0.200">
+			<text>Import &quot;generic@scroller_dimmer@00&quot; At 1</text>
+		</Macroline>
+		<Macroline index="16" delay="0.200">
+			<text>Label FixtureType 1</text>
+		</Macroline>
+		<Macroline index="17">
+			<text>ChangeDest 1</text>
+		</Macroline>
+		<Macroline index="18">
+			<text>SetUserVar $attribute = &quot;1.1.2&quot;</text>
+		</Macroline>
+		<Macroline index="19">
+			<text>SetUserVar $channelfunc= &quot;1.1.2.1&quot;</text>
+		</Macroline>
+		<Macroline index="20">
+			<text>SetUserVar $wheel= &quot;3.1&quot;</text>
+		</Macroline>
+		<Macroline index="21">
+			<text>[$I_am_me==true] SetUserVar $frames=( &quot;Number of frames, 2-30&quot; )</text>
+		</Macroline>
+		<Macroline index="22">
+			<text>[$frames==2] SetUserVar $halfto= &quot;1.5&quot;</text>
+		</Macroline>
+		<Macroline index="23">
+			<text>[$frames==3] SetUserVar $halfto= &quot;2.5&quot;</text>
+		</Macroline>
+		<Macroline index="24">
+			<text>[$frames==4] SetUserVar $halfto= &quot;3.5&quot;</text>
+		</Macroline>
+		<Macroline index="25">
+			<text>[$frames==5] SetUserVar $halfto= &quot;4.5&quot;</text>
+		</Macroline>
+		<Macroline index="26">
+			<text>[$frames==6] SetUserVar $halfto= &quot;5.5&quot;</text>
+		</Macroline>
+		<Macroline index="27">
+			<text>[$frames==7] SetUserVar $halfto= &quot;6.5&quot;</text>
+		</Macroline>
+		<Macroline index="28">
+			<text>[$frames==8] SetUserVar $halfto= &quot;7.5&quot;</text>
+		</Macroline>
+		<Macroline index="29">
+			<text>[$frames==9] SetUserVar $halfto= &quot;8.5&quot;</text>
+		</Macroline>
+		<Macroline index="30">
+			<text>[$frames==10] SetUserVar $halfto= &quot;9.5&quot;</text>
+		</Macroline>
+		<Macroline index="31">
+			<text>[$frames==11] SetUserVar $halfto= &quot;10.5&quot;</text>
+		</Macroline>
+		<Macroline index="32">
+			<text>[$frames==12] SetUserVar $halfto= &quot;11.5&quot;</text>
+		</Macroline>
+		<Macroline index="33">
+			<text>[$frames==13] SetUserVar $halfto= &quot;12.5&quot;</text>
+		</Macroline>
+		<Macroline index="34">
+			<text>[$frames==14] SetUserVar $halfto= &quot;13.5&quot;</text>
+		</Macroline>
+		<Macroline index="35">
+			<text>[$frames==15] SetUserVar $halfto= &quot;14.5&quot;</text>
+		</Macroline>
+		<Macroline index="36">
+			<text>[$frames==16] SetUserVar $halfto= &quot;15.5&quot;</text>
+		</Macroline>
+		<Macroline index="37">
+			<text>[$frames==17] SetUserVar $halfto= &quot;16.5&quot;</text>
+		</Macroline>
+		<Macroline index="38">
+			<text>[$frames==18] SetUserVar $halfto= &quot;17.5&quot;</text>
+		</Macroline>
+		<Macroline index="39">
+			<text>[$frames==19] SetUserVar $halfto= &quot;18.5&quot;</text>
+		</Macroline>
+		<Macroline index="40">
+			<text>[$frames==20] SetUserVar $halfto= &quot;19.5&quot;</text>
+		</Macroline>
+		<Macroline index="41">
+			<text>[$frames==21] SetUserVar $halfto= &quot;20.5&quot;</text>
+		</Macroline>
+		<Macroline index="42">
+			<text>[$frames==22] SetUserVar $halfto= &quot;21.5&quot;</text>
+		</Macroline>
+		<Macroline index="43">
+			<text>[$frames==23] SetUserVar $halfto= &quot;22.5&quot;</text>
+		</Macroline>
+		<Macroline index="44">
+			<text>[$frames==24] SetUserVar $halfto= &quot;23.5&quot;</text>
+		</Macroline>
+		<Macroline index="45">
+			<text>[$frames==25] SetUserVar $halfto= &quot;24.5&quot;</text>
+		</Macroline>
+		<Macroline index="46">
+			<text>[$frames==26] SetUserVar $halfto= &quot;25.5&quot;</text>
+		</Macroline>
+		<Macroline index="47">
+			<text>[$frames==27] SetUserVar $halfto= &quot;26.5&quot;</text>
+		</Macroline>
+		<Macroline index="48">
+			<text>[$frames==28] SetUserVar $halfto= &quot;27.5&quot;</text>
+		</Macroline>
+		<Macroline index="49">
+			<text>[$frames==29] SetUserVar $halfto= &quot;28.5&quot;</text>
+		</Macroline>
+		<Macroline index="50">
+			<text>[$frames==30] SetUserVar $halfto= &quot;29.5&quot;</text>
+		</Macroline>
+		<Macroline index="51">
+			<text>Assign $channelfunc /from=0.5 /to=$halfto</text>
+		</Macroline>
+		<Macroline index="52">
+			<text>Delete $channelfunc.1 Thru</text>
+		</Macroline>
+		<Macroline index="53">
+			<text>Delete $wheel.1 Thru</text>
+		</Macroline>
+		<Macroline index="54">
+			<text>SetUserVar $count= &quot;0&quot;</text>
+		</Macroline>
+		<Macroline index="55">
+			<text>SetUserVar $ready= &quot;false&quot;</text>
+		</Macroline>
+		<Macroline index="56">
+			<text>[$count==0] SetUserVar $frameID= &quot;1&quot;</text>
+		</Macroline>
+		<Macroline index="57">
+			<text>[$count==1] SetUserVar $frameID= &quot;2&quot;</text>
+		</Macroline>
+		<Macroline index="58">
+			<text>[$count==2] SetUserVar $frameID= &quot;3&quot;</text>
+		</Macroline>
+		<Macroline index="59">
+			<text>[$count==3] SetUserVar $frameID= &quot;4&quot;</text>
+		</Macroline>
+		<Macroline index="60">
+			<text>[$count==4] SetUserVar $frameID= &quot;5&quot;</text>
+		</Macroline>
+		<Macroline index="61">
+			<text>[$count==5] SetUserVar $frameID= &quot;6&quot;</text>
+		</Macroline>
+		<Macroline index="62">
+			<text>[$count==6] SetUserVar $frameID= &quot;7&quot;</text>
+		</Macroline>
+		<Macroline index="63">
+			<text>[$count==7] SetUserVar $frameID= &quot;8&quot;</text>
+		</Macroline>
+		<Macroline index="64">
+			<text>[$count==8] SetUserVar $frameID= &quot;9&quot;</text>
+		</Macroline>
+		<Macroline index="65">
+			<text>[$count==9] SetUserVar $frameID= &quot;10&quot;</text>
+		</Macroline>
+		<Macroline index="66">
+			<text>[$count==10] SetUserVar $frameID= &quot;11&quot;</text>
+		</Macroline>
+		<Macroline index="67">
+			<text>[$count==11] SetUserVar $frameID= &quot;12&quot;</text>
+		</Macroline>
+		<Macroline index="68">
+			<text>[$count==12] SetUserVar $frameID= &quot;13&quot;</text>
+		</Macroline>
+		<Macroline index="69">
+			<text>[$count==13] SetUserVar $frameID= &quot;14&quot;</text>
+		</Macroline>
+		<Macroline index="70">
+			<text>[$count==14] SetUserVar $frameID= &quot;15&quot;</text>
+		</Macroline>
+		<Macroline index="71">
+			<text>[$count==15] SetUserVar $frameID= &quot;16&quot;</text>
+		</Macroline>
+		<Macroline index="72">
+			<text>[$count==16] SetUserVar $frameID= &quot;17&quot;</text>
+		</Macroline>
+		<Macroline index="73">
+			<text>[$count==17] SetUserVar $frameID= &quot;18&quot;</text>
+		</Macroline>
+		<Macroline index="74">
+			<text>[$count==18] SetUserVar $frameID= &quot;19&quot;</text>
+		</Macroline>
+		<Macroline index="75">
+			<text>[$count==19] SetUserVar $frameID= &quot;20&quot;</text>
+		</Macroline>
+		<Macroline index="76">
+			<text>[$count==20] SetUserVar $frameID= &quot;21&quot;</text>
+		</Macroline>
+		<Macroline index="77">
+			<text>[$count==21] SetUserVar $frameID= &quot;22&quot;</text>
+		</Macroline>
+		<Macroline index="78">
+			<text>[$count==22] SetUserVar $frameID= &quot;23&quot;</text>
+		</Macroline>
+		<Macroline index="79">
+			<text>[$count==23] SetUserVar $frameID= &quot;24&quot;</text>
+		</Macroline>
+		<Macroline index="80">
+			<text>[$count==24] SetUserVar $frameID= &quot;25&quot;</text>
+		</Macroline>
+		<Macroline index="81">
+			<text>[$count==25] SetUserVar $frameID= &quot;26&quot;</text>
+		</Macroline>
+		<Macroline index="82">
+			<text>[$count==26] SetUserVar $frameID= &quot;27&quot;</text>
+		</Macroline>
+		<Macroline index="83">
+			<text>[$count==27] SetUserVar $frameID= &quot;28&quot;</text>
+		</Macroline>
+		<Macroline index="84">
+			<text>[$count==28] SetUserVar $frameID= &quot;29&quot;</text>
+		</Macroline>
+		<Macroline index="85">
+			<text>[$count==29] SetUserVar $frameID= &quot;30&quot;</text>
+		</Macroline>
+		<Macroline index="86">
+			<text>[$frameID==1] SetUserVar $popuptext= &quot;Name for frame 1&quot;</text>
+		</Macroline>
+		<Macroline index="87">
+			<text>[$frameID==2] SetUserVar $popuptext= &quot;Name for frame 2&quot;</text>
+		</Macroline>
+		<Macroline index="88">
+			<text>[$frameID==3] SetUserVar $popuptext= &quot;Name for frame 3&quot;</text>
+		</Macroline>
+		<Macroline index="89">
+			<text>[$frameID==4] SetUserVar $popuptext= &quot;Name for frame 4&quot;</text>
+		</Macroline>
+		<Macroline index="90">
+			<text>[$frameID==5] SetUserVar $popuptext= &quot;Name for frame 5&quot;</text>
+		</Macroline>
+		<Macroline index="91">
+			<text>[$frameID==6] SetUserVar $popuptext= &quot;Name for frame 6&quot;</text>
+		</Macroline>
+		<Macroline index="92">
+			<text>[$frameID==7] SetUserVar $popuptext= &quot;Name for frame 7&quot;</text>
+		</Macroline>
+		<Macroline index="93">
+			<text>[$frameID==8] SetUserVar $popuptext= &quot;Name for frame 8&quot;</text>
+		</Macroline>
+		<Macroline index="94">
+			<text>[$frameID==9] SetUserVar $popuptext= &quot;Name for frame 9&quot;</text>
+		</Macroline>
+		<Macroline index="95">
+			<text>[$frameID==10] SetUserVar $popuptext= &quot;Name for frame 10&quot;</text>
+		</Macroline>
+		<Macroline index="96">
+			<text>[$frameID==11] SetUserVar $popuptext= &quot;Name for frame 11&quot;</text>
+		</Macroline>
+		<Macroline index="97">
+			<text>[$frameID==12] SetUserVar $popuptext= &quot;Name for frame 12&quot;</text>
+		</Macroline>
+		<Macroline index="98">
+			<text>[$frameID==13] SetUserVar $popuptext= &quot;Name for frame 13&quot;</text>
+		</Macroline>
+		<Macroline index="99">
+			<text>[$frameID==14] SetUserVar $popuptext= &quot;Name for frame 14&quot;</text>
+		</Macroline>
+		<Macroline index="100">
+			<text>[$frameID==15] SetUserVar $popuptext= &quot;Name for frame 15&quot;</text>
+		</Macroline>
+		<Macroline index="101">
+			<text>[$frameID==16] SetUserVar $popuptext= &quot;Name for frame 16&quot;</text>
+		</Macroline>
+		<Macroline index="102">
+			<text>[$frameID==17] SetUserVar $popuptext= &quot;Name for frame 17&quot;</text>
+		</Macroline>
+		<Macroline index="103">
+			<text>[$frameID==18] SetUserVar $popuptext= &quot;Name for frame 18&quot;</text>
+		</Macroline>
+		<Macroline index="104">
+			<text>[$frameID==19] SetUserVar $popuptext= &quot;Name for frame 19&quot;</text>
+		</Macroline>
+		<Macroline index="105">
+			<text>[$frameID==20] SetUserVar $popuptext= &quot;Name for frame 20&quot;</text>
+		</Macroline>
+		<Macroline index="106">
+			<text>[$frameID==21] SetUserVar $popuptext= &quot;Name for frame 21&quot;</text>
+		</Macroline>
+		<Macroline index="107">
+			<text>[$frameID==22] SetUserVar $popuptext= &quot;Name for frame 22&quot;</text>
+		</Macroline>
+		<Macroline index="108">
+			<text>[$frameID==23] SetUserVar $popuptext= &quot;Name for frame 23&quot;</text>
+		</Macroline>
+		<Macroline index="109">
+			<text>[$frameID==24] SetUserVar $popuptext= &quot;Name for frame 24&quot;</text>
+		</Macroline>
+		<Macroline index="110">
+			<text>[$frameID==25] SetUserVar $popuptext= &quot;Name for frame 25&quot;</text>
+		</Macroline>
+		<Macroline index="111">
+			<text>[$frameID==26] SetUserVar $popuptext= &quot;Name for frame 26&quot;</text>
+		</Macroline>
+		<Macroline index="112">
+			<text>[$frameID==27] SetUserVar $popuptext= &quot;Name for frame 27&quot;</text>
+		</Macroline>
+		<Macroline index="113">
+			<text>[$frameID==28] SetUserVar $popuptext= &quot;Name for frame 28&quot;</text>
+		</Macroline>
+		<Macroline index="114">
+			<text>[$frameID==29] SetUserVar $popuptext= &quot;Name for frame 29&quot;</text>
+		</Macroline>
+		<Macroline index="115">
+			<text>[$frameID==30] SetUserVar $popuptext= &quot;Name for frame 30&quot;</text>
+		</Macroline>
+		<Macroline index="116">
+			<text>[$I_am_me==true] SetUserVar $framename=( $popuptext)</text>
+		</Macroline>
+		<Macroline index="117">
+			<text>Store $channelfunc.$frameID</text>
+		</Macroline>
+		<Macroline index="118">
+			<text>Assign $channelfunc.$frameID /name=$framename</text>
+		</Macroline>
+		<Macroline index="119">
+			<text>Assign $channelfunc.$frameID /from=$count /to=$frameID /slotNo=$frameID</text>
+		</Macroline>
+		<Macroline index="120">
+			<text>Store $wheel.$frameID</text>
+		</Macroline>
+		<Macroline index="121">
+			<text>Assign $wheel.$frameID /medianame=$framename</text>
+		</Macroline>
+		<Macroline index="122">
+			<text>SetUserVar $count=$frameID</text>
+		</Macroline>
+		<Macroline index="123">
+			<text>[$frameID==$frames] SetUserVar $ready= &quot;true&quot;</text>
+		</Macroline>
+		<Macroline index="124" delay="0.100">
+			<text>[$ready==false] Go Macro 1.$myID.$loopline</text>
+		</Macroline>
+		<Macroline index="125">
+			<text>Assign $channelfunc.1/slotfrom=0</text>
+		</Macroline>
+		<Macroline index="126">
+			<text>Assign $channelfunc.$frames/slotto=0</text>
+		</Macroline>
+		<Macroline index="127">
+			<text>[$I_am_me==true] SetUserVar $defaultframe=( &quot;Enter default frame number&quot; )</text>
+		</Macroline>
+		<Macroline index="128">
+			<text>Assign $channelfunc /from=1 /to=$frames</text>
+		</Macroline>
+		<Macroline index="129">
+			<text>Assign $attribute /default =$defaultframe</text>
+		</Macroline>
+		<Macroline index="130">
+			<text>[$usepercent==&quot;true&quot;] Assign $channelfunc /from=0 /to=100</text>
+		</Macroline>
+		<Macroline index="131">
+			<text>[$usedecimal==&quot;true&quot;] Assign $channelfunc /from=0 /to=255</text>
+		</Macroline>
+		<Macroline index="132">
+			<text>Label Macro $myID &quot;Create Scroller Fixture&quot;</text>
+		</Macroline>
+		<Macroline index="133">
+			<text>ChangeDest /</text>
+		</Macroline>
+		<Macroline index="134">
+			<text>[$I_am_me==true] Menu &quot;fixtureschedule&quot;</text>
+		</Macroline>
+		<Macroline index="135">
+			<text>SetUserVar $I_am_me= &quot;true&quot;</text>
+		</Macroline>
+	</Macro>
+</MA>

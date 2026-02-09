@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "willybsm",
+  "post_date": null,
+  "post_text": "December 7, 2015 at 2:52 PM#1HiI try to change the syntax by Store option Preset Type Default but fashion is not working?My command :Assign Root \"Userprofiles\".$\"USERPROFILE\".\"StoreDefaults\".\"PresetDefaults\" /MODE=PRESET TYPE DEFAULTI have tried on :Preset Type defaultPresetTypeDefaultetc.. without successWith this number also appears incomplete, 0 = Selective; 1 = GlobalIf I try 2 it does not work too many, so it seems impossible to call Universal and Preset Type Default by numberthanks for your help",
+  "replies": 0,
+  "thread_id": "50145",
+  "title": "Syntax mode Store option",
+  "url": "https://forum.malighting.com/forum/thread/50145-syntax-mode-store-option/",
+  "views": 0
+}

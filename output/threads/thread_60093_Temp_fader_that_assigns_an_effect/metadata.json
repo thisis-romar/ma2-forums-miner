@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Viktor Lyskaster",
+  "post_date": null,
+  "post_text": "November 24, 2017 at 6:57 PM#1Hi!I am not sure if this is possible, but I want to make a temp fader that can edit/assign the value of pan/tilt in an effect. I DONT want to fire the effect when i pull the fader up i just want to edit/assign the value. I also want to do it to more than one effect per fader, so I dont want to just assign the effect to a fader and then \"flip\" the fader.I have already made some cuelists so i can change for example the wings, and that works fine. I just use the command: assign effect 1.(the effect i want to edit) /wings=2. I have also done the same to the direction, blocks and groups. I my head i have to do something similar, just with a fader that fades from high value 0 to 25 and low value 0 to -25, but I cant figure out how i can fade between the values.If there is a better way to do it, please tell me.Thank you.",
+  "replies": 0,
+  "thread_id": "60093",
+  "title": "Temp fader that assigns an effect",
+  "url": "https://forum.malighting.com/forum/thread/60093-temp-fader-that-assigns-an-effect/",
+  "views": 0
+}

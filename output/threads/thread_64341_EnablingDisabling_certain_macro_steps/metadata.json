@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Lowkeys",
+  "post_date": null,
+  "post_text": "July 24, 2019 at 10:09 PM#1Hey guys! I have a syntax that reads this:Assign Root .\"Macros\".\"Global\".\"Selection at 0% Exec\".9  Thru .12 /Disabled=\"Yes\"Which works perfectly fine. It disables only steps 9 thru 12 in that macro.However, this syntax:Assign Root .\"Macros\".\"Global\".\"Selection at 0% Exec\".13  Thru .16 /Disabled=\"Yes\"Will disable steps 13 thru 17 (step 17 being the last one in the macro)What am I missing here? I also have lines like the above that enable/disable steps 1 thru 4 and 5 thru 8, and all of those work perfectly fine.",
+  "replies": 0,
+  "thread_id": "64341",
+  "title": "Enabling/Disabling certain macro steps",
+  "url": "https://forum.malighting.com/forum/thread/64341-enabling-disabling-certain-macro-steps/",
+  "views": 0
+}

@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Hwellink",
+  "post_date": null,
+  "post_text": "February 4, 2016 at 12:09 AM#1Hi there, It's me again..I'm having issues with effects referring to high-low values from presets.I use macros to change those presets, to make a lot of color bumps for example with only a few effects.It works, except from the fact that I have to run the macro twice for the effect to keep up. Is this a bug in the software?'The solution I have now is that I copy the color preset to the one i used in the effect twice, with a slight delay. It works, but makes the console do twice as much work. And because of the delay, the color change happens with a delay too.Maybe I'm forgetting something, a setting for the effect, or a function to reload the effects engine or something.Thanks!Harm Wellink",
+  "replies": 0,
+  "thread_id": "50972",
+  "title": "Effects with preset reference dont follow",
+  "url": "https://forum.malighting.com/forum/thread/50972-effects-with-preset-reference-dont-follow/",
+  "views": 0
+}

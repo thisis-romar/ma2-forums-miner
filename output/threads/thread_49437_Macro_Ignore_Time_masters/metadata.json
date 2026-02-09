@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "ambulance2314",
+  "post_date": null,
+  "post_text": "October 25, 2015 at 9:10 PM#1I have made a Macro that change the color of my color bump.When I run the macro, it changes the color immediately.The execute- and the program- masters has a time of 1 sec.Is there a way to change the color with a macro and a fade time that is set by one of the time masters?My Macro for the first color.Color 20 and 21 are in a chase that bumps the colors.Code1: Blind2: Group 8 At Preset 4.13: Store Preset 4.20 /m4: Clear5: Clear6: Blind",
+  "replies": 0,
+  "thread_id": "49437",
+  "title": "Macro Ignore Time masters",
+  "url": "https://forum.malighting.com/forum/thread/49437-macro-ignore-time-masters/",
+  "views": 0
+}

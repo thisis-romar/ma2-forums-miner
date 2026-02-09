@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "thruvik",
+  "post_date": null,
+  "post_text": "September 24, 2014 at 10:57 AM#1Hi,I am wondering how to create a macro for editing values or attributes through a cuelist. Let's say I want to bring channel 1 thru 6 down 6% if their values are above 50 for the entire cuelist. For an idividual, active cue, I would make a macro which goes:IfOutput channel 1 thru 6 at 50 thruAt -6Update /cIf I would make it for a cuelist, I could add a >>> and Go Macro, to make it recursive. But how will I make the makro stop running at the end of the cuelist?",
+  "replies": 0,
+  "thread_id": "43560",
+  "title": "Edit all cues in a list",
+  "url": "https://forum.malighting.com/forum/thread/43560-edit-all-cues-in-a-list/",
+  "views": 0
+}

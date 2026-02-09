@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "b34tn1k",
+  "post_date": null,
+  "post_text": "February 20, 2017 at 4:54 PM#1Hi,Little question here. I am working on automating my showfile and I am looking for a method to choose whether I want to overwrite or merge the programmer into existing sequences.I was trying to do it like this:1. setvar $option= (\"Overwrite or Merge?\")2. group x at preset y3. store /$option sequence zBut that doesn't seem to work... Any ideas?Thanks!",
+  "replies": 0,
+  "thread_id": "57240",
+  "title": "store option variable",
+  "url": "https://forum.malighting.com/forum/thread/57240-store-option-variable/",
+  "views": 0
+}

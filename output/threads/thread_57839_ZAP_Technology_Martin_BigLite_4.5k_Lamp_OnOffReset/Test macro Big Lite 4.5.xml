@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2017-03-27T23:55:40" showfile="foxie28" />
+	<Macro index="1301" name="Test Lamp On Big Lite 4.5">
+		<Appearance Color="3f3fff" />
+		<Macroline index="0">
+			<text>Attribute Lampcontrol At 0.392*100</text>
+		</Macroline>
+		<Macroline index="1" delay="0.5">
+			<text>Attribute Shutter2 At 0.392*86</text>
+		</Macroline>
+		<Macroline index="2" delay="10">
+			<text>Attribute Shutter2 At 0.392*171</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>Attribute Shutter2 At 0</text>
+		</Macroline>
+		<Macroline index="4" delay="0.5">
+			<text>Attribute Lampcontrol At 0</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>Off Selection</text>
+		</Macroline>
+	</Macro>
+	<Macro index="1311" name="Test Lamp Off Big Lite 4.5">
+		<Appearance Color="3f3fff" />
+		<Macroline index="0">
+			<text>Attribute Lampcontrol At 0.392*240</text>
+		</Macroline>
+		<Macroline index="1" delay="0.5">
+			<text>Attribute Shutter2 At 0.392*86</text>
+		</Macroline>
+		<Macroline index="2" delay="10">
+			<text>Attribute Shutter2 At 0.392*171</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>Attribute Shutter2 At 0</text>
+		</Macroline>
+		<Macroline index="4" delay="0.5">
+			<text>Attribute Lampcontrol At 0</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>Off Selection</text>
+		</Macroline>
+	</Macro>
+	<Macro index="1321" name="Test reset Big Lite 4.5">
+		<Appearance Color="3f3fff" />
+		<Macroline index="0">
+			<text>Attribute Lampcontrol At 0.392*210</text>
+		</Macroline>
+		<Macroline index="1" delay="0.5">
+			<text>Attribute Shutter2 At 0.392*86</text>
+		</Macroline>
+		<Macroline index="2" delay="10">
+			<text>Attribute Shutter2 At 0.392*171</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>Attribute Shutter2 At 0</text>
+		</Macroline>
+		<Macroline index="4" delay="0.5">
+			<text>Attribute Lampcontrol At 0</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>Off Selection</text>
+		</Macroline>
+	</Macro>
+</MA>

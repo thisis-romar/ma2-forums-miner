@@ -1,0 +1,40 @@
+{
+  "assets": [
+    {
+      "checksum": "sha256:d57f35f5ba5701126d1d33dee837a22cd6d71674d5e313ab72336a2a3619c3fe",
+      "download_count": 85,
+      "filename": "BuildSeq.xml",
+      "size": 48366,
+      "url": "https://forum.malighting.com/file-download/3197/"
+    },
+    {
+      "checksum": "sha256:e78065d23ad5c9da26f7f8e4b287c48576f68a9135954fddd31f3680b6c7d5ad",
+      "download_count": 77,
+      "filename": "BuildSeq2.xml",
+      "size": 96230,
+      "url": "https://forum.malighting.com/file-download/3198/"
+    },
+    {
+      "checksum": "sha256:15442468967ce8349256a53684814a3319fe0d53fad8045881aa221b3e13efee",
+      "download_count": 98,
+      "filename": "Colour Create and Label.xml",
+      "size": 28517,
+      "url": "https://forum.malighting.com/file-download/3635/"
+    },
+    {
+      "checksum": "sha256:2f4d704d6b4ed81cfa27cd7fd7e9bafcfb08d1fb30f2545ca1fa78bc2c6f87d0",
+      "download_count": 111,
+      "filename": "Create Color Sequence.xml",
+      "size": 6403,
+      "url": "https://forum.malighting.com/file-download/3636/"
+    }
+  ],
+  "author": "Florian Schimsky",
+  "post_date": null,
+  "post_text": "March 6, 2012 at 1:39 PM#1Hi I search for a Macro wich make a Sequence with my for Example Color presets with selectet Fixtures...1i make a Selection2 i assign a executer where the list should be3 please and now it buld me automatic a Cuelist with colorsThanks and sorry for my bad English",
+  "replies": 0,
+  "thread_id": "29739",
+  "title": "Macro wich automatic dreate cuelist with preset",
+  "url": "https://forum.malighting.com/forum/thread/29739-macro-wich-automatic-dreate-cuelist-with-preset/",
+  "views": 0
+}

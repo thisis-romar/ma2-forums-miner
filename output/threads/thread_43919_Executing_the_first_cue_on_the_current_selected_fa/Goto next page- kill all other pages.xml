@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.0.0/MA.xsd" major_vers="3" minor_vers="0" stream_vers="0">
+	<Info datetime="2014-10-23T00:02:30" showfile="basis 3.0.0.5" />
+	<Macro index="141" name="Goto next page- kill all other pages">
+		<Macroline index="0">
+			<text>Page +</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>Select Executor 201</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Go Executor 201</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>Off Executor 1 Thru 100 Page Thru - $faderpage; Off Executor 101 Thru 220 Page Thru - $buttonpage</text>
+		</Macroline>
+	</Macro>
+</MA>

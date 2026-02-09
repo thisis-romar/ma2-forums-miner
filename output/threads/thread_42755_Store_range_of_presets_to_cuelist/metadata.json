@@ -1,0 +1,26 @@
+{
+  "assets": [
+    {
+      "checksum": "sha256:509b8ed279029bcaed7a167a4ecf0682342090547aceedbfc49c6b16133f2313",
+      "download_count": 66,
+      "filename": "preset cue executor 900.xml",
+      "size": 1690,
+      "url": "https://forum.malighting.com/file-download/3505/"
+    },
+    {
+      "checksum": "sha256:c7b8522b837c818a444d12f76aaba0bebe7c50b3719e9094e3fa8162dbaa0b8c",
+      "download_count": 64,
+      "filename": "preset cue list 901.xml",
+      "size": 1392,
+      "url": "https://forum.malighting.com/file-download/3506/"
+    }
+  ],
+  "author": "emanueltilly",
+  "post_date": null,
+  "post_text": "July 30, 2014 at 1:58 PM#1Hi!I usually have a exec for a certain fixture group with one cue for every col preset I have. At the moment I do I all manual, but is there a way to create a macro that stores preset 1.4.1 thru 1.4.20 for a specific group of lights to cues?Tried some things but they really never worked out that great.",
+  "replies": 0,
+  "thread_id": "42755",
+  "title": "Store range of presets to cuelist?",
+  "url": "https://forum.malighting.com/forum/thread/42755-store-range-of-presets-to-cuelist/",
+  "views": 0
+}

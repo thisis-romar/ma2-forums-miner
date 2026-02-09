@@ -1,0 +1,19 @@
+{
+  "assets": [
+    {
+      "checksum": "sha256:15442468967ce8349256a53684814a3319fe0d53fad8045881aa221b3e13efee",
+      "download_count": 130,
+      "filename": "Colour Create and Label.xml",
+      "size": 28517,
+      "url": "https://forum.malighting.com/file-download/3639/"
+    }
+  ],
+  "author": "TonyVision",
+  "post_date": null,
+  "post_text": "July 26, 2014 at 9:27 PM#1Hello,I'm just beginning to dive into the macro world and things are begining to make sense to me a bit.  But I am am having trouble creating an AutoCreate Macro.I can't seem to find AutoCreate in the cd/ listI want to make a make a macro that quickly creates the new MA Colors in the Additional Presets/Swatchbook tab of AutoCreate.  I can't seem to find the path to it.  Any hints?I would also like to make a macro for the AutoCreate Hue/Saturation.  Basically asking me \"what group\", \"how many hues\", \"how many saturation\" \"add or merge MixColor\"Can someone point me in the right direction?Thank you.",
+  "replies": 0,
+  "thread_id": "42694",
+  "title": "Auto Create Macro",
+  "url": "https://forum.malighting.com/forum/thread/42694-auto-create-macro/",
+  "views": 0
+}

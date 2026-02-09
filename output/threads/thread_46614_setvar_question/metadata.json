@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "NiceG2000",
+  "post_date": null,
+  "post_text": "May 12, 2015 at 9:20 PM#1I have been pondering for awhile a way to make an effective macro to turn everything else off except for the page I am on. Right now I have a 40+ line macro that turns everything off by name. I have been told you can use SetVar to make the line shorter. How would your write,\" set the variable to \"johnny be good\" if not \"johnny be good\" turn off\" ? When I add new pages I don't want to have to write  40+ line macro. Thanks.",
+  "replies": 0,
+  "thread_id": "46614",
+  "title": "setvar question",
+  "url": "https://forum.malighting.com/forum/thread/46614-setvar-question/",
+  "views": 0
+}

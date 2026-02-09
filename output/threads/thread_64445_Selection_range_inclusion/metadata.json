@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Rex",
+  "post_date": null,
+  "post_text": "August 21, 2019 at 4:41 PM#1I wrote this to try and select all the subInstances of a fixture and exclude the Main Module[*.1] instance:[color=#00FF33]Fixture *.2 Thru[/color]The result of this; a selection of all of the subInstances, even the .1[main] instances of a fixtures???  I don't want that....pfffft, and don't get it.  Why all the *.1's as well, I thought I specified from only starting .2 onward?!?I had used this some time ago and it works to only select the Main instances:[color=#00FF33]Fixture *.1[/color]and this works perfectly; no matter how many fixtures are patched, only the main instances are selected.  What have I done wrong to include the *.1 instances as well in my calling?  At least in the GUI the .1 instances are yellow and seem selected and I have to deselect them get them to grey out.Thanks!",
+  "replies": 0,
+  "thread_id": "64445",
+  "title": "Selection range inclusion??",
+  "url": "https://forum.malighting.com/forum/thread/64445-selection-range-inclusion/",
+  "views": 0
+}

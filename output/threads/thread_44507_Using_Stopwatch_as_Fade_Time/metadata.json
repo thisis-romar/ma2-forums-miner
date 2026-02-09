@@ -1,0 +1,19 @@
+{
+  "assets": [
+    {
+      "checksum": "sha256:7ae6d796785ffc3e5d4d41ea056f8358bd584cfc367b1b9d3598fe2fa321353d",
+      "download_count": 171,
+      "filename": "Cue Fade Timer.xml",
+      "size": 852,
+      "url": "https://forum.malighting.com/file-download/3556/"
+    }
+  ],
+  "author": "martyuk",
+  "post_date": null,
+  "post_text": "December 4, 2014 at 11:03 PM#1Been working at a venue on a show for a few weeks and talking to one of the in-house Lighting Designer/Programmers and he was saying the newer versions of software that you can use the stopwatch in the console to time how long a fade takes, and then use that timer and assign the value as the fade time for the cue.We had a look into it, and found that whilst you can do that, you would have to manually start timer, press go, stop timer, and then assign the value back to the cue.  Had a look into the pre-defined macros aswell, and there isn't anything in there either that does this.So, having a bit of time around shows we decided to each have a crack at making a macro to do it, and came up with the following.  It works for the selected sequence but I am sure you could adapt it to ask for which sequence you wanted to run it on):In the Edit Macro Window:Line 1: Store Timer 555 \"Fade Timer\"  - FOLLOWLine 2: Go Timer 555                       - FOLLOWLine 3: Go                                     - GOLine 4: Toggle Timer 555                  - FOLLOWLine 5: Assign Fade $Timer555 Cue     - FOLLOWLine 6: Off Timer 555Timer number can be anything but wanted to keep it away from anything else you might be using. You can use the locked system stopwatch aswell by using Timer number as 1.On the first press of the Macro button (I have it assigned to a User Button under screen 1) it creates the timer (if it's already there then it just seems to skip this and doesn't throw an error), starts the timer and presses \"Go\" to move into the next cue.The second press of the Macro button will then Pause the timer (toggle from running to paused), and then write that fade time into the cue you've just transitioned into.  It then finally turns the timer off (resets it back to '0') for the next time you want to use it.Might be useful for people who need to get fades a precise time with music, or a person walking across stage where a moving light tracks them (assuming they walk at the same speed every day - which they usually don't!)Thanks to Jeff @ NCFR for looking at it with me and planting the idea that it could be done!  I've uploaded the xml file that can be imported to the console aswell.Hope this helps someone else!MartyFilesCue Fade Timer.xml852 Byte – 171 Downloads",
+  "replies": 0,
+  "thread_id": "44507",
+  "title": "Using Stopwatch as Fade Time",
+  "url": "https://forum.malighting.com/forum/thread/44507-using-stopwatch-as-fade-time/",
+  "views": 0
+}

@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "robk82",
+  "post_date": null,
+  "post_text": "May 13, 2018 at 3:28 PM#1I was wondering if it is possible to write a macro to change the screen resolution for the external screens at the console. The basic idea would be to change the resolution at startup with a macro, wait a bit then bring up the calibrate screen prompt. If not directly through a macro perhaps I can do it with a Lua plugin?Any ideas?",
+  "replies": 0,
+  "thread_id": "61330",
+  "title": "Change Screen Resolution",
+  "url": "https://forum.malighting.com/forum/thread/61330-change-screen-resolution/",
+  "views": 0
+}

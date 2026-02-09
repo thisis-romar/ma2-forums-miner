@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.0.0/MA.xsd" major_vers="3" minor_vers="0" stream_vers="0">
+	<Info datetime="2015-04-26T11:23:19" showfile="bfstartshow1.0" />
+	<Macro index="156" name="Create Color Sequence">
+		<Appearance Color="3f9fff" />
+		<Macroline index="0">
+			<text>Delete Sequence 1000/noconfirm</text>
+			<info>Delete old Sequence</info>
+		</Macroline>
+		<Macroline index="1" delay="0.2">
+			<text>Blind On</text>
+			<info>Blind Mode</info>
+		</Macroline>
+		<Macroline index="2" delay="0.2">
+			<text>Fixture (Enter Fixture or Range)</text>
+			<info>Chosse Fix</info>
+		</Macroline>
+		<Macroline index="3" delay="0.2">
+			<text>At Preset 4.9</text>
+			<info>White</info>
+		</Macroline>
+		<Macroline index="4" delay="0.2">
+			<text>Store Sequence 1000 Cue 1/overwrite/keep Activation</text>
+			<info>Save Sequence</info>
+		</Macroline>
+		<Macroline index="5" delay="0.2">
+			<text>Label Sequence 1000 &quot;Colour1&quot;</text>
+			<info>Label Sequence</info>
+		</Macroline>
+		<Macroline index="6" delay="0.2">
+			<text>Assign Sequence 1000 (Enter Executor -&gt; Page . Exec)</text>
+			<info>Choose Exec</info>
+		</Macroline>
+		<Macroline index="7" delay="0.2">
+			<text>Label Sequence 1000 Cue 1 &quot;White&quot;</text>
+			<info>Label Cue1</info>
+		</Macroline>
+		<Macroline index="8" delay="0.2">
+			<text>Appearance Sequence 1000 Cue 1 /r=100 /g=100 /b=100</text>
+			<info>Color Cue1</info>
+		</Macroline>
+		<Macroline index="9" delay="0.2">
+			<text>At Preset 4.38</text>
+			<info>Dark Orange</info>
+		</Macroline>
+		<Macroline index="10" delay="0.2">
+			<text>Store Sequence 1000 Cue 2/overwrite/keep Activation</text>
+		</Macroline>
+		<Macroline index="11" delay="0.2">
+			<text>Label Sequence 1000 Cue 2 &quot;Dark Orange&quot;</text>
+		</Macroline>
+		<Macroline index="12" delay="0.2">
+			<text>Appearance Sequence 1000 Cue 2 /r=100 /g=40 /b=0</text>
+		</Macroline>
+		<Macroline index="13" delay="0.2">
+			<text>At Preset 4.37</text>
+			<info>Red</info>
+		</Macroline>
+		<Macroline index="14" delay="0.2">
+			<text>Store Sequence 1000 Cue 3/overwrite/keep Activation</text>
+		</Macroline>
+		<Macroline index="15" delay="0.2">
+			<text>Label Sequence 1000 Cue 3 &quot;Red&quot;</text>
+		</Macroline>
+		<Macroline index="16" delay="0.2">
+			<text>Appearance Sequence 1000 Cue 3 /r=100 /g=0 /b=0</text>
+		</Macroline>
+		<Macroline index="17" delay="0.2">
+			<text>At Preset 4.41</text>
+			<info>Yellow</info>
+		</Macroline>
+		<Macroline index="18" delay="0.2">
+			<text>Store Sequence 1000 Cue 4/overwrite/keep Activation</text>
+		</Macroline>
+		<Macroline index="19" delay="0.2">
+			<text>Label Sequence 1000 Cue 4 &quot;Yellow&quot;</text>
+		</Macroline>
+		<Macroline index="20" delay="0.2">
+			<text>Appearance Sequence 1000 Cue 4 /r=100 /g=90 /b=0</text>
+		</Macroline>
+		<Macroline index="21" delay="0.2">
+			<text>At Preset 4.51</text>
+			<info>Green</info>
+		</Macroline>
+		<Macroline index="22" delay="0.2">
+			<text>Store Sequence 1000 Cue 5/overwrite/keep Activation</text>
+		</Macroline>
+		<Macroline index="23" delay="0.2">
+			<text>Label Sequence 1000 Cue 5 &quot;Green&quot;</text>
+		</Macroline>
+		<Macroline index="24" delay="0.2">
+			<text>Appearance Sequence 1000 Cue 5 /r=0 /g=100 /b=0</text>
+		</Macroline>
+		<Macroline index="25" delay="0.2">
+			<text>At Preset 4.21</text>
+			<info>Steel Blue</info>
+		</Macroline>
+		<Macroline index="26" delay="0.2">
+			<text>Store Sequence 1000 Cue 6/overwrite/keep Activation</text>
+		</Macroline>
+		<Macroline index="27" delay="0.2">
+			<text>Label Sequence 1000 Cue 6 &quot;Steel Blue&quot;</text>
+		</Macroline>
+		<Macroline index="28" delay="0.2">
+			<text>Appearance Sequence 1000 Cue 6 /r=0 /g=60 /b=100</text>
+		</Macroline>
+		<Macroline index="29" delay="0.2">
+			<text>At Preset 4.25</text>
+			<info>D.Blue</info>
+		</Macroline>
+		<Macroline index="30" delay="0.2">
+			<text>Store Sequence 1000 Cue 7/overwrite/keep Activation</text>
+		</Macroline>
+		<Macroline index="31" delay="0.2">
+			<text>Label Sequence 1000 Cue 7 &quot;Dark Blue&quot;</text>
+		</Macroline>
+		<Macroline index="32" delay="0.2">
+			<text>Appearance Sequence 1000 Cue 7 /r=0 /g=0 /b=100</text>
+		</Macroline>
+		<Macroline index="33" delay="0.2">
+			<text>At Preset 4.27</text>
+			<info>Congo</info>
+		</Macroline>
+		<Macroline index="34" delay="0.2">
+			<text>Store Sequence 1000 Cue 8/overwrite/keep Activation</text>
+		</Macroline>
+		<Macroline index="35" delay="0.2">
+			<text>Label Sequence 1000 Cue 8 &quot;Congo&quot;</text>
+		</Macroline>
+		<Macroline index="36" delay="0.2">
+			<text>Appearance Sequence 1000 Cue 8 /r=35 /g=0 /b=100</text>
+		</Macroline>
+		<Macroline index="37" delay="0.2">
+			<text>At Preset 4.29</text>
+			<info>Lavender</info>
+		</Macroline>
+		<Macroline index="38" delay="0.2">
+			<text>Store Sequence 1000 Cue 9/overwrite/keep Activation</text>
+		</Macroline>
+		<Macroline index="39" delay="0.2">
+			<text>Label Sequence 1000 Cue 9 &quot;Lavender&quot;</text>
+		</Macroline>
+		<Macroline index="40" delay="0.2">
+			<text>Appearance Sequence 1000 Cue 9 /r=70 /g=0 /b=100</text>
+		</Macroline>
+		<Macroline index="41" delay="0.2">
+			<text>At Preset 4.31</text>
+			<info>Pink</info>
+		</Macroline>
+		<Macroline index="42" delay="0.2">
+			<text>Store Sequence 1000 Cue 10/overwrite/keep Activation</text>
+		</Macroline>
+		<Macroline index="43" delay="0.2">
+			<text>Label Sequence 1000 Cue 10 &quot;Pink&quot;</text>
+		</Macroline>
+		<Macroline index="44" delay="0.2">
+			<text>Appearance Sequence 1000 Cue 10 /r=100 /g=0 /b=70</text>
+		</Macroline>
+		<Macroline index="45" delay="0.2">
+			<text>At Preset 4.33</text>
+			<info>Balerina Red</info>
+		</Macroline>
+		<Macroline index="46" delay="0.2">
+			<text>Store Sequence 1000 Cue 11/overwrite/keep Activation</text>
+		</Macroline>
+		<Macroline index="47" delay="0.2">
+			<text>Label Sequence 1000 Cue 11 &quot;Balerina Red&quot;</text>
+		</Macroline>
+		<Macroline index="48" delay="0.2">
+			<text>Appearance Sequence 1000 Cue 11 /r=100 /g=0 /b=30</text>
+		</Macroline>
+		<Macroline index="49" delay="0.2">
+			<text>ClearAll</text>
+		</Macroline>
+		<Macroline index="50" delay="0.2">
+			<text>Blind Off</text>
+		</Macroline>
+	</Macro>
+</MA>

@@ -1,0 +1,19 @@
+{
+  "assets": [
+    {
+      "checksum": "sha256:848a9651a5ca523262970df7c504fc68b1432be79627facdbbb4ea8871b2ed5c",
+      "download_count": 100,
+      "filename": "Goto next page- kill all other pages.xml",
+      "size": 828,
+      "url": "https://forum.malighting.com/file-download/3538/"
+    }
+  ],
+  "author": "omgstfu",
+  "post_date": null,
+  "post_text": "October 22, 2014 at 7:01 PM#1I am writing a page + macro that will change to the next page, off everything from the previous executors and then select the first fader on the page. I am having trouble getting the first cue to fire though. I am trying to avoid using something like \"go executor 10.1\"  because the songs may not be in the same order every day so if I move pages and forget to update the macros I would fire the wrong cue. It would also mean I needed a separate macro for each page. Could someone help me out?",
+  "replies": 0,
+  "thread_id": "43919",
+  "title": "Executing the first cue on the current selected fader.",
+  "url": "https://forum.malighting.com/forum/thread/43919-executing-the-first-cue-on-the-current-selected-fader/",
+  "views": 0
+}

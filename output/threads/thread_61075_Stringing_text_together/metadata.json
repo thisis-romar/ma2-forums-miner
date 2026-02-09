@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "no2pencilonly",
+  "post_date": null,
+  "post_text": "April 5, 2018 at 4:22 AM#1So I am using a looping macro and would like to string text together to call out different effectsgroup 1SetVar $fx=1Call Effect \"red blue\" + $fxAddVar $fx=1[$fx<5]  Macro 1.\"fx call red blue\".3my computer programing instinct is to use a plus to add the variable to the string but I am not even sure if this is possible. I have tried using addvar with an initial $fx=\"red blue 1\" and that also did not work.if anyone has any thoughts please share!",
+  "replies": 0,
+  "thread_id": "61075",
+  "title": "Stringing text together",
+  "url": "https://forum.malighting.com/forum/thread/61075-stringing-text-together/",
+  "views": 0
+}

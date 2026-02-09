@@ -1,0 +1,19 @@
+{
+  "assets": [
+    {
+      "checksum": "sha256:0f53065ecb41b7c9adc4eaabdf0585eec37a5294284b37ff697ca8e085c10517",
+      "download_count": 110,
+      "filename": "move selection in 3d.xml",
+      "size": 1866,
+      "url": "https://forum.malighting.com/file-download/3921/"
+    }
+  ],
+  "author": "Niklas Aumüller",
+  "post_date": null,
+  "post_text": "January 30, 2016 at 1:38 AM#1Hi I want to create a few Macros to adjust the PosX and PosY attribute of some lightsI found out that it is possible to assign new positions via cmd line in the following way:Code1: cd \"EditSetup\"2: cd \"Layers\"3: cd 2 //goto my second layer4: cd 1 //goto my first fixture in this layer5: Assign 1 /PosX=\"1\"   //Will set PosX to 1 for the first SubFixturehow can i edit this values in a relativ way? e.g. macro \"+1 X\" will move the fixture for 1m along the x axisI tried:CodeAssign 1 /PosX=\"+1\"andCodeAssign 1 /PosX=+1but none of these workhow can i assign this value to the current selected fixtures (no matter on which layer they are)?EDIT:My goal is to have a few macros that will move my current selected fixture(s) to the right position so that the follow function of the stage view will work also in reallife. My Fixtures will be more or less in the right position but not exact enough to use the follow Mode of the MA2 in a precise manner so i need to adjust the position information of my fixtures to match the reallife situation.",
+  "replies": 0,
+  "thread_id": "50865",
+  "title": "Change Position relativ via Macro",
+  "url": "https://forum.malighting.com/forum/thread/50865-change-position-relativ-via-macro/",
+  "views": 0
+}

@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "tomvis",
+  "post_date": null,
+  "post_text": "August 30, 2016 at 11:22 AM#1Hi there,I'm getting stumped by a fairly simple problem. Can anyone help?Default PresetType \"Position\"  At center //works fine//after experimentation it's not working, just setting the channel to 0.by the same logic:Default PresetType \"Control\"  At \"Lamp On\" //Does not workAt Preset \"Lamp On\" //Does not workI cant find the right syntax.3.2.2.3 OnPC",
+  "replies": 0,
+  "thread_id": "54685",
+  "title": "Struggling with Lamp On macro",
+  "url": "https://forum.malighting.com/forum/thread/54685-struggling-with-lamp-on-macro/",
+  "views": 0
+}

@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "TimBoland",
+  "post_date": null,
+  "post_text": "January 19, 2016 at 5:11 AM#1I'm trying to have a macro define a set of executors so that I can apply a command to multiple cue stacks.I feel like this should work but its not happening.[Pause] [Macro] [1] , where macro 1 = \"@ Executor 2.101 + 2.102 + 2.103\"",
+  "replies": 0,
+  "thread_id": "50639",
+  "title": "Whats wrong with this macro?",
+  "url": "https://forum.malighting.com/forum/thread/50639-whats-wrong-with-this-macro/",
+  "views": 0
+}
