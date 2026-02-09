@@ -2,6 +2,41 @@
 
 A production-grade, educational async web scraper for the [MA Lighting grandMA2 Macro Share forum](https://forum.malighting.com/forum/board/35-grandma2-macro-share/). This tool demonstrates modern Python async patterns, implements delta scraping for efficient incremental updates, and prepares data for downstream ML clustering pipelines.
 
+## 📊 Current Collection Statistics
+
+| Metric | Count |
+|--------|-------|
+| **Total Threads Scraped** | 610 |
+| **Threads with Downloadable Files** | 75 (12.3%) |
+| **Total Macro Files** | 99 |
+| **XML Files** | 78 |
+| **ZIP/GZ/Show Files** | 21 |
+| **Total Collection Size** | 14 MB |
+| **Forum Coverage** | Complete (30 pages) |
+
+### 🎯 Threads with Downloadable Files
+
+Browse the complete collection in `output/threads/`. Here are some notable threads with macro files:
+
+**Large Showfiles & Archives:**
+- Thread 10646: `BuildSeq.xml` (1.5MB), `BuildSeq2.xml` (3.1MB), `Colour Create and Label.xml` (875KB)
+- Thread 67220: `strange variable.show.gz` (1.29MB)
+- Thread 66952: `shaper test.show.gz` (1006KB)
+- Thread 66922: `worlds.show.gz` (350KB)
+- Thread 66365: `dmx remotes.show.gz` (966KB)
+
+**Macro Collections:**
+- Thread 33854: `ScrollerWizard.xml` (414KB), `ScrollerWizardV3.xml` (190KB)
+- Thread 38697: `Invert SelOrder.xml` (2.3MB)
+- Thread 32922: LEE & ROSCO Filter macros (1.15MB, 1.06MB)
+
+**See `STATISTICS.md` for complete per-thread breakdown of all 75 threads with attachments!**
+
+### 📈 Growth Timeline
+
+- **Feb 9, 2026**: Complete forum scrape - 610 threads, 99 files
+- **Automated weekly updates** via GitHub Actions
+
 ## 🎯 Project Goals
 
 1. **Educational**: Learn async/await, concurrency control, and web scraping best practices
@@ -152,6 +187,96 @@ output/
   ]
 }
 ```
+
+## 🔍 Finding Threads with Downloadable Files
+
+### Quick Commands
+
+**List all threads with XML files:**
+```bash
+find output/threads -name "*.xml" -exec dirname {} \; | sort -u
+```
+
+**List all threads with ZIP/GZ files:**
+```bash
+find output/threads -name "*.zip" -o -name "*.gz" | xargs -n1 dirname | sort -u
+```
+
+**Count files per thread:**
+```bash
+for dir in output/threads/*/; do
+  count=$(find "$dir" -type f \( -name "*.xml" -o -name "*.zip" -o -name "*.gz" \) | wc -l)
+  if [ $count -gt 0 ]; then
+    echo "$count files: $(basename "$dir")"
+  fi
+done | sort -rn
+```
+
+**Search for specific macro types:**
+```bash
+# Find color-related macros
+grep -l "color\|colour" output/threads/*/metadata.json
+
+# Find effect macros
+grep -l "effect" output/threads/*/metadata.json
+
+# Find preset macros
+grep -l "preset" output/threads/*/metadata.json
+```
+
+### Using Python to Find Files
+
+```python
+import json
+from pathlib import Path
+
+def find_threads_with_files():
+    """Find all threads that have downloadable macro files."""
+    threads_with_files = []
+
+    for thread_dir in Path("output/threads").iterdir():
+        if not thread_dir.is_dir():
+            continue
+
+        metadata_file = thread_dir / "metadata.json"
+        if metadata_file.exists():
+            with open(metadata_file) as f:
+                data = json.load(f)
+
+            # Check if thread has attachments
+            if data.get("assets") and len(data["assets"]) > 0:
+                # List actual files in directory
+                files = list(thread_dir.glob("*.xml")) + \
+                       list(thread_dir.glob("*.zip")) + \
+                       list(thread_dir.glob("*.gz"))
+
+                if files:
+                    threads_with_files.append({
+                        "thread_id": data["thread_id"],
+                        "title": data["title"],
+                        "url": data["url"],
+                        "file_count": len(files),
+                        "files": [f.name for f in files]
+                    })
+
+    return threads_with_files
+
+# Run it
+threads = find_threads_with_files()
+print(f"Found {len(threads)} threads with downloadable files")
+
+for t in threads[:10]:  # Show first 10
+    print(f"\nThread {t['thread_id']}: {t['title']}")
+    print(f"  Files: {', '.join(t['files'])}")
+```
+
+### Detailed Statistics
+
+For a complete breakdown of all 75 threads with attachments, see **`STATISTICS.md`** which includes:
+- Per-thread file listings
+- File sizes and types
+- Direct links to forum threads
+- Attachment download counts
 
 ## 🏗️ Architecture
 
