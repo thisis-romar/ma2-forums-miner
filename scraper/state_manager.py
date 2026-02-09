@@ -12,7 +12,7 @@ Key improvements over manifest.json:
 - Foundation for future "smart updates" feature
 """
 
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, Optional, Set
 
@@ -106,11 +106,13 @@ class StateManager:
         # Create all tables if they don't exist
         Base.metadata.create_all(self.engine)
         
-        # Create session factory
+        # Create session factory with expire_on_commit=False
+        # This allows returned objects to be used outside the session context
         self.SessionLocal = sessionmaker(
             bind=self.engine,
             autoflush=False,
-            autocommit=False
+            autocommit=False,
+            expire_on_commit=False
         )
         
         print(f"📊 State manager initialized: {self.db_path}")
@@ -173,7 +175,7 @@ class StateManager:
                     # Update existing record
                     existing.url = metadata['url']
                     existing.title = metadata['title']
-                    existing.last_scraped_at = datetime.utcnow()
+                    existing.last_scraped_at = datetime.now(timezone.utc)
                     existing.reply_count = metadata.get('reply_count', 0)
                     existing.view_count = metadata.get('view_count', 0)
                 else:
@@ -182,7 +184,7 @@ class StateManager:
                         thread_id=metadata['thread_id'],
                         url=metadata['url'],
                         title=metadata['title'],
-                        last_scraped_at=datetime.utcnow(),
+                        last_scraped_at=datetime.now(timezone.utc),
                         reply_count=metadata.get('reply_count', 0),
                         view_count=metadata.get('view_count', 0)
                     )
