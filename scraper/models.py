@@ -42,7 +42,7 @@ class Post:
 class Asset:
     """
     Represents a downloadable attachment from a forum thread.
-    
+
     Attributes:
         filename: The name of the file (e.g., "macro.xml", "show.gz")
         url: The full URL where the file can be downloaded
@@ -50,14 +50,17 @@ class Asset:
         download_count: Number of times this asset has been downloaded (from forum metadata)
         checksum: SHA256 hash of the file content for integrity verification
                  Format: "sha256:abc123..." for consistency
-    
+        post_number: Which post this asset was attached to (1 = original, 2+ = replies)
+                    None if unable to determine
+
     Example:
         asset = Asset(
             filename="moving_fixtures.xml",
             url="https://forum.malighting.com/attachment/12345/",
             size=2048,
             download_count=15,
-            checksum="sha256:abc123def456..."
+            checksum="sha256:abc123def456...",
+            post_number=1
         )
     """
     filename: str
@@ -65,6 +68,7 @@ class Asset:
     size: Optional[int] = None
     download_count: Optional[int] = None
     checksum: Optional[str] = None
+    post_number: Optional[int] = None
     
     def to_dict(self) -> dict:
         """

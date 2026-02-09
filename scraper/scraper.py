@@ -646,16 +646,18 @@ class ForumScraper:
 
     def extract_assets(self, soup: BeautifulSoup) -> List[Asset]:
         """
-        Extract downloadable attachments from a thread page.
+        Extract downloadable attachments from ALL posts in a thread page.
 
-        This looks for file attachments with extensions we care about:
-        .xml, .zip, .gz, .show
+        This searches the ENTIRE thread (original post + all replies) for
+        file attachments with extensions we care about: .xml, .zip, .gz, .show
+
+        Each asset is tagged with which post it came from (post_number).
 
         Args:
             soup: BeautifulSoup object of the thread page
 
         Returns:
-            List of Asset objects for downloadable files
+            List of Asset objects for downloadable files from all posts
 
         Why these file types?
             - .xml: Macro XML files (the primary resource we want)
@@ -665,8 +667,11 @@ class ForumScraper:
         """
         assets = []
 
+        # Find ALL posts on the page to map attachments to post numbers
+        post_elements = soup.select('article.message')
+
         # Find all attachment links using the actual WoltLab forum structure
-        # Try multiple possible selectors for attachments
+        # This searches THE ENTIRE PAGE (all posts, not just first)
         attachment_links = soup.select('a.messageAttachment, a.attachment, a[class*="attachment"], a[href*="file-download"]')
 
         # DEBUG: If no links found, print HTML sample to diagnose
@@ -693,6 +698,13 @@ class ForumScraper:
             href = link.get('href')
             if not href:
                 continue
+
+            # Determine which post this attachment belongs to
+            post_number = None
+            for idx, post_elem in enumerate(post_elements, start=1):
+                if link in post_elem.find_all('a', recursive=True):
+                    post_number = idx
+                    break
 
             # Extract filename from the span.messageAttachmentFilename child element
             filename_elem = link.select_one('span.messageAttachmentFilename')
@@ -726,9 +738,13 @@ class ForumScraper:
                     url=full_url,
                     size=None,  # Will be populated after download
                     download_count=download_count,
-                    checksum=None  # Will be computed after download
+                    checksum=None,  # Will be computed after download
+                    post_number=post_number  # NEW: Track which post this came from
                 )
                 assets.append(asset)
+
+                if post_number:
+                    print(f"    [DEBUG] Found asset '{filename}' in post #{post_number}")
 
         return assets
     
