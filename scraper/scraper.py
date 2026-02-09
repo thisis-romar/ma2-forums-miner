@@ -498,6 +498,14 @@ class ForumScraper:
             print(f"   📊 Detected pages: {', '.join(map(str, unique_pages[:10]))}{'...' if len(unique_pages) > 10 else ''}")
             print(f"   📈 Maximum page number: {max_page}")
 
+        # Method 4: Force-try known pages if detection failed
+        # We know from forum searches that pages 2-30+ exist, even though
+        # the forum doesn't show pagination links on page 1
+        if max_page == 1:
+            print(f"   💡 Pagination detection failed, but we know pages 2-30 exist")
+            print(f"   🔧 Force-trying pages 2-30 based on confirmed forum structure")
+            max_page = 30  # Try up to page 30 (confirmed via web search)
+
         return max_page
     
     # -------------------------------------------------------
