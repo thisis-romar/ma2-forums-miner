@@ -27,6 +27,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          # Checkout the branch that triggered the workflow
+          ref: ${{ github.ref }}
           # Fetch full history to ensure we have the latest manifest
           fetch-depth: 0
       
