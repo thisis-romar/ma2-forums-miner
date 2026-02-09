@@ -24,7 +24,7 @@ import orjson
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
-from .models import Asset, ThreadMetadata
+from .models import Asset, Post, ThreadMetadata
 from .utils import sha256_file, safe_thread_folder
 
 
@@ -531,31 +531,20 @@ class ForumScraper:
         title = title_elem.text.strip() if title_elem else "Unknown Title"
         
         # -------------------------------------------------------
-        # Extract first post (the main thread content)
+        # Extract ALL posts (original + replies)
         # -------------------------------------------------------
-        # The first post contains the primary content we'll use for
-        # clustering and analysis
-        first_post = soup.select_one('article.message')
-        
+        # Extract complete discussion thread including all replies
+        posts = self.extract_all_posts(soup)
+
+        # For backward compatibility, get author and date from first post
         author = "Unknown"
         post_date = None
-        post_text = ""
-        
-        if first_post:
-            # Extract author
-            author_elem = first_post.select_one('.username')
-            if author_elem:
-                author = author_elem.text.strip()
-            
-            # Extract post date
-            time_elem = first_post.select_one('time')
-            if time_elem and time_elem.get('datetime'):
-                post_date = time_elem['datetime']
-            
-            # Extract post text content
-            content_elem = first_post.select_one('.messageContent, .messageText')
-            if content_elem:
-                post_text = content_elem.get_text(strip=True)
+        post_text = ""  # Deprecated - use posts list instead
+
+        if posts:
+            author = posts[0].author
+            post_date = posts[0].post_date
+            post_text = posts[0].post_text  # Keep for backward compatibility
         
         # -------------------------------------------------------
         # Extract thread statistics (replies, views)
@@ -590,24 +579,85 @@ class ForumScraper:
             url=url,
             author=author,
             post_date=post_date,
-            post_text=post_text,
+            post_text=post_text,  # Deprecated but kept for compatibility
+            posts=posts,  # NEW: Complete list of all posts
             replies=replies,
             views=views,
             assets=assets
         )
-    
-    def extract_assets(self, soup: BeautifulSoup) -> List[Asset]:
-        """
-        Extract downloadable attachments from a thread page.
 
-        This looks for file attachments with extensions we care about:
-        .xml, .zip, .gz, .show
+    def extract_all_posts(self, soup: BeautifulSoup) -> List:
+        """
+        Extract ALL posts from a thread (original post + all replies).
+
+        This parses the entire discussion thread to capture the complete conversation,
+        not just the first post. Each post includes author, date, and text content.
 
         Args:
             soup: BeautifulSoup object of the thread page
 
         Returns:
-            List of Asset objects for downloadable files
+            List of Post objects in chronological order (original post first)
+            Returns empty list if no posts found
+
+        Forum Structure:
+            - Each post is in an <article class="message"> element
+            - Author is in .username
+            - Date is in <time datetime="...">
+            - Content is in .messageContent or .messageText
+        """
+        posts = []
+
+        # Find ALL message/post elements on the page
+        post_elements = soup.select('article.message')
+
+        print(f"    [DEBUG] Found {len(post_elements)} posts in thread")
+
+        for idx, post_elem in enumerate(post_elements, start=1):
+            # Extract author
+            author = "Unknown"
+            author_elem = post_elem.select_one('.username')
+            if author_elem:
+                author = author_elem.text.strip()
+
+            # Extract post date
+            post_date = None
+            time_elem = post_elem.select_one('time')
+            if time_elem and time_elem.get('datetime'):
+                post_date = time_elem['datetime']
+
+            # Extract post text content
+            post_text = ""
+            content_elem = post_elem.select_one('.messageContent, .messageText')
+            if content_elem:
+                post_text = content_elem.get_text(strip=True)
+
+            # Create Post object
+            post = Post(
+                author=author,
+                post_date=post_date,
+                post_text=post_text,
+                post_number=idx
+            )
+
+            posts.append(post)
+
+        return posts
+
+    def extract_assets(self, soup: BeautifulSoup) -> List[Asset]:
+        """
+        Extract downloadable attachments from ALL posts in a thread page.
+
+        This searches the ENTIRE thread (original post + all replies) for
+        file attachments with extensions we care about: .xml, .zip, .gz, .show
+
+        Each asset is tagged with which post it came from (post_number).
+
+        Args:
+            soup: BeautifulSoup object of the thread page
+
+        Returns:
+            List of Asset objects for downloadable files from all posts
 
         Why these file types?
             - .xml: Macro XML files (the primary resource we want)
@@ -617,8 +667,11 @@ class ForumScraper:
         """
         assets = []
 
+        # Find ALL posts on the page to map attachments to post numbers
+        post_elements = soup.select('article.message')
+
         # Find all attachment links using the actual WoltLab forum structure
-        # Try multiple possible selectors for attachments
+        # This searches THE ENTIRE PAGE (all posts, not just first)
         attachment_links = soup.select('a.messageAttachment, a.attachment, a[class*="attachment"], a[href*="file-download"]')
 
         # DEBUG: If no links found, print HTML sample to diagnose
@@ -645,6 +698,13 @@ class ForumScraper:
             href = link.get('href')
             if not href:
                 continue
+
+            # Determine which post this attachment belongs to
+            post_number = None
+            for idx, post_elem in enumerate(post_elements, start=1):
+                if link in post_elem.find_all('a', recursive=True):
+                    post_number = idx
+                    break
 
             # Extract filename from the span.messageAttachmentFilename child element
             filename_elem = link.select_one('span.messageAttachmentFilename')
@@ -678,9 +738,13 @@ class ForumScraper:
                     url=full_url,
                     size=None,  # Will be populated after download
                     download_count=download_count,
-                    checksum=None  # Will be computed after download
+                    checksum=None,  # Will be computed after download
+                    post_number=post_number  # NEW: Track which post this came from
                 )
                 assets.append(asset)
+
+                if post_number:
+                    print(f"    [DEBUG] Found asset '{filename}' in post #{post_number}")
 
         return assets
     
@@ -860,12 +924,25 @@ class ForumScraper:
         # - Server push capability (though we don't use it here)
         # - Better performance for multiple concurrent requests
         print("\n🌐 Initializing HTTP client with HTTP/2 support...")
+        # Use realistic browser headers to avoid bot detection
+        # These headers mimic a real Chrome browser on Windows
         self.client = httpx.AsyncClient(
             http2=True,  # Enable HTTP/2
             timeout=REQUEST_TIMEOUT,
             follow_redirects=True,
             headers={
-                'User-Agent': 'MA2-Forums-Miner/1.0 (Educational Project)'
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+                'Accept-Language': 'en-US,en;q=0.9',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'DNT': '1',
+                'Connection': 'keep-alive',
+                'Upgrade-Insecure-Requests': '1',
+                'Sec-Fetch-Dest': 'document',
+                'Sec-Fetch-Mode': 'navigate',
+                'Sec-Fetch-Site': 'none',
+                'Sec-Fetch-User': '?1',
+                'Cache-Control': 'max-age=0'
             }
         )
         
