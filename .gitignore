@@ -36,6 +36,10 @@ ENV/
 # Project outputs (committed by GitHub Actions)
 # output/ and manifest.json are now tracked for automated data collection
 
+# State database (new SQLite-based state management)
+scraper_state.db
+*.db
+
 # Legacy data directories (if using old structure)
 data/
 downloads/
