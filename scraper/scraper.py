@@ -358,13 +358,24 @@ class ForumScraper:
         unique_links = list(set(thread_links))
 
         # Add historical test threads with known attachments for verification
-        # These threads span 2010-2015 when macro sharing was most active
+        # These threads span 2010-2016 when macro sharing was most active
+        # Discovered via forum search for threads mentioning attachments/downloads
         test_threads = [
+            # Confirmed working thread
             ("https://forum.malighting.com/forum/thread/20248-abort-out-of-macro/", "2010", "CopyIfoutput.xml"),
-            ("https://forum.malighting.com/forum/thread/19850-effects-on-off-macro/", "2010", "Effects macros"),
-            ("https://forum.malighting.com/forum/thread/21150-macro-for-park/", "2010", "Park macro"),
-            ("https://forum.malighting.com/forum/thread/22450-store-cue-macro/", "2011", "Store cue macro"),
-            ("https://forum.malighting.com/forum/thread/25680-copy-fixture-macro/", "2012", "Copy fixture macro"),
+
+            # High priority - explicitly mention attached files
+            ("https://forum.malighting.com/forum/thread/29800-preset-copy-macro/", "2012", "Preset Copy macros"),
+            ("https://forum.malighting.com/forum/thread/30119-macro-commands-not-executed/", "2013", "macro commands file"),
+            ("https://forum.malighting.com/forum/thread/57574-preset-macros/", "2016", "Clay Paky Sharpy macro"),
+            ("https://forum.malighting.com/forum/thread/47912-preset-and-sequence-references/", "2015", "preset references macro"),
+
+            # Medium priority - likely have XML files
+            ("https://forum.malighting.com/forum/thread/17992-importing-macro-xml-s/", "2010", "Macro XMLs"),
+            ("https://forum.malighting.com/forum/thread/27613-exporting-colors/", "2011", "Color export XMLs"),
+            ("https://forum.malighting.com/forum/thread/29698-bcf4ma2-bcf-2000-for-gma2/", "2012", "bcf4ma2.xml"),
+            ("https://forum.malighting.com/forum/thread/24996-change-page-macro/", "2011", "Page change macro"),
+            ("https://forum.malighting.com/forum/thread/23621-macro-for-encoder/", "2011", "Encoder macro"),
         ]
 
         added_count = 0
@@ -374,7 +385,7 @@ class ForumScraper:
                 added_count += 1
 
         if added_count > 0:
-            print(f"📌 Added {added_count} historical test threads (2010-2012 era with known attachments)")
+            print(f"📌 Added {added_count} historical test threads (2010-2016 era with potential attachments)")
 
         print(f"✅ Discovered {len(unique_links)} unique threads")
         
