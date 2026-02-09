@@ -527,16 +527,16 @@ class ForumScraper:
     def extract_assets(self, soup: BeautifulSoup) -> List[Asset]:
         """
         Extract downloadable attachments from a thread page.
-        
+
         This looks for file attachments with extensions we care about:
         .xml, .zip, .gz, .show
-        
+
         Args:
             soup: BeautifulSoup object of the thread page
-            
+
         Returns:
             List of Asset objects for downloadable files
-            
+
         Why these file types?
             - .xml: Macro XML files (the primary resource we want)
             - .zip: Compressed macro packages
@@ -544,35 +544,52 @@ class ForumScraper:
             - .show: GrandMA2 show files
         """
         assets = []
-        
-        # Find all attachment links
-        # Attachments typically have class "attachment" or similar
-        attachment_links = soup.select('a.attachment, a.bbCodeBlock-attachment')
-        
+
+        # Find all attachment links using the actual WoltLab forum structure
+        # Attachments use class "messageAttachment" with filename in child span
+        attachment_links = soup.select('a.messageAttachment')
+
         for link in attachment_links:
             href = link.get('href')
             if not href:
                 continue
-            
-            # Get filename from link text or URL
-            filename = link.text.strip()
-            if not filename:
-                # Extract filename from URL as fallback
-                filename = href.split('/')[-1]
-            
+
+            # Extract filename from the span.messageAttachmentFilename child element
+            filename_elem = link.select_one('span.messageAttachmentFilename')
+            if filename_elem:
+                filename = filename_elem.text.strip()
+            else:
+                # Fallback to link text or URL
+                filename = link.text.strip()
+                if not filename:
+                    filename = href.split('/')[-1]
+
             # Filter by file extensions we care about
             if any(filename.lower().endswith(ext) for ext in ['.xml', '.zip', '.gz', '.show']):
                 full_url = urljoin(BASE_URL, href)
-                
+
+                # Optionally extract size and download count from metadata span
+                download_count = None
+                meta_elem = link.select_one('span.messageAttachmentMeta')
+                if meta_elem:
+                    meta_text = meta_elem.text.strip()
+                    # Format: "5.07 kB – 317 Downloads"
+                    if '–' in meta_text and 'Downloads' in meta_text:
+                        try:
+                            downloads_str = meta_text.split('–')[1].strip().split()[0]
+                            download_count = int(downloads_str)
+                        except (IndexError, ValueError):
+                            pass
+
                 asset = Asset(
                     filename=filename,
                     url=full_url,
                     size=None,  # Will be populated after download
-                    download_count=None,  # Could be extracted if visible in UI
+                    download_count=download_count,
                     checksum=None  # Will be computed after download
                 )
                 assets.append(asset)
-        
+
         return assets
     
     async def download_asset(self, asset: Asset, folder: Path) -> bool:
