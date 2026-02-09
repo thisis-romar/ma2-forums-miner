@@ -546,8 +546,8 @@ class ForumScraper:
         assets = []
 
         # Find all attachment links using the actual WoltLab forum structure
-        # Attachments use class "messageAttachment" with filename in child span
-        attachment_links = soup.select('a.messageAttachment')
+        # Try multiple possible selectors for attachments
+        attachment_links = soup.select('a.messageAttachment, a.attachment, a[class*="attachment"], a[href*="file-download"]')
 
         for link in attachment_links:
             href = link.get('href')
