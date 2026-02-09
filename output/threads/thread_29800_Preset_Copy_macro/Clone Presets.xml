@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.5.3/MA.xsd" major_vers="2" minor_vers="5" stream_vers="3">
+	<Info datetime="2012-03-08T20:35:20" showfile="clone" />
+	<Macro index="173" name="CloneSel AllPresets">
+		<Macroline index="0">
+			<text>Store Group 999 &quot;Selection&quot; /overwrite</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>Clone Fixture (FixtureSource) At Group 999 If Preset 0.1 Thru + 1.1 Thru + 2.1 Thru + 3.1 Thru + 4.1 Thru + 5.1 Thru + 6.1 Thru + 7.1 Thru + 8.1 Thru + 9.1 Thru</text>
+		</Macroline>
+	</Macro>
+	<Macro index="174" name="CloneSel To Preset">
+		<Macroline index="0">
+			<text>Store Group 999 &quot;Selection&quot; /overwrite</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>Clone Fixture (FixtureSource) At Group 999 If Preset (PresetRange)</text>
+		</Macroline>
+	</Macro>
+</MA>
