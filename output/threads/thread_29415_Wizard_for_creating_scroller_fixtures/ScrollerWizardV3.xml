@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.0.0/MA.xsd" major_vers="3" minor_vers="0" stream_vers="0">
+	<Info datetime="2014-09-25T22:46:15" showfile="new show 2014-09-25" />
+	<Macro index="0" name="Create Scroller Fixture">
+		<Macroline index="0">
+			<text>#settings</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>SetUserVar $myname=&quot;Create Scroller Fixture&quot;</text>
+			<info>name of macro needed for selftrigg of loop</info>
+		</Macroline>
+		<Macroline index="2">
+			<text>SetUserVar $usepercent=&quot;false&quot;</text>
+			<info>set to &quot;true&quot; if scrollrange should be stored as 0-100 instead of slots</info>
+		</Macroline>
+		<Macroline index="3">
+			<text>SetUserVar $usedecimal=&quot;false&quot;</text>
+			<info>set to &quot;true&quot; if scrollrange should be stored as 0-255 instead of slots</info>
+		</Macroline>
+		<Macroline index="4">
+			<text>SetVar $framename= &quot;_frame_&quot;</text>
+			<info>fallbackvalue if framename is not entered</info>
+		</Macroline>
+		<Macroline index="5">
+			<text>SetVar $frames= 11</text>
+			<info>falbackvalue if number of frames is not entered</info>
+		</Macroline>
+		<Macroline index="6">
+			<text>SetVar $defaultframe= 1</text>
+			<info>fallbackvalue if default frame is not entered</info>
+		</Macroline>
+		<Macroline index="7">
+			<text>#macro intro</text>
+		</Macroline>
+		<Macroline index="8" delay="0.2">
+			<text>ChangeDest &quot;EditSetup&quot;</text>
+			<info>enter setup</info>
+		</Macroline>
+		<Macroline index="9">
+			<text>ChangeDest FixtureType</text>
+			<info>change destination to fixturetypes</info>
+		</Macroline>
+		<Macroline index="10">
+			<text>SelectDrive 1</text>
+			<info>select drive for inbuldt library</info>
+		</Macroline>
+		<Macroline index="11" delay="0.2">
+			<text>Import &quot;generic@scroller_dimmer@00&quot; At 1</text>
+			<info>import generic scroller to use as template</info>
+		</Macroline>
+		<Macroline index="12" delay="0.2">
+			<text>Label FixtureType 1</text>
+			<info>and rename it</info>
+		</Macroline>
+		<Macroline index="13">
+			<text>ChangeDest 1</text>
+			<info>Enter new fixturetype</info>
+		</Macroline>
+		<Macroline index="14">
+			<text>SetUserVar $attribute = &quot;1.1.2&quot;</text>
+			<info>subpath for attribute</info>
+		</Macroline>
+		<Macroline index="15">
+			<text>SetUserVar $channelfunc= &quot;1.1.2.1&quot;</text>
+			<info>subpath for channelfunc</info>
+		</Macroline>
+		<Macroline index="16">
+			<text>SetUserVar $wheel= &quot;3.1&quot;</text>
+			<info>subpath for wheel</info>
+		</Macroline>
+		<Macroline index="17">
+			<text>SetUserVar $frames=( &quot;Number of frames&quot; )</text>
+			<info>Input number of frames</info>
+		</Macroline>
+		<Macroline index="18">
+			<text>SetUserVar $frameID=0</text>
+			<info>Init frameID</info>
+		</Macroline>
+		<Macroline index="19">
+			<text>Assign $channelfunc /from=1 /to=$frames</text>
+			<info>Assign channelfunc range according to number of frames</info>
+		</Macroline>
+		<Macroline index="20">
+			<text>Delete $channelfunc.1 Thru</text>
+			<info>delete any existing channelset child entries</info>
+		</Macroline>
+		<Macroline index="21">
+			<text>Delete $wheel.1 Thru</text>
+			<info>delete any existing wheel child entries</info>
+		</Macroline>
+		<Macroline index="22">
+			<text>#looping section below</text>
+		</Macroline>
+		<Macroline index="23">
+			<text>SetUserVar $loopentryline=24</text>
+			<info>set which line the macro should restart from for each frame</info>
+		</Macroline>
+		<Macroline index="24">
+			<text>AddUserVar $frameID=1</text>
+			<info>Increment current FrameID</info>
+		</Macroline>
+		<Macroline index="25">
+			<text>SetUserVar $popuptext= &quot;Name for frame #&quot;</text>
+			<info>create popuptext</info>
+		</Macroline>
+		<Macroline index="26">
+			<text>AddUserVar $popuptext= $&quot;frameID&quot;</text>
+			<info>with framenumber</info>
+		</Macroline>
+		<Macroline index="27">
+			<text>SetUserVar $framename=(&quot;$popuptext&quot;)</text>
+			<info>Input name/color for current frame</info>
+		</Macroline>
+		<Macroline index="28">
+			<text>SetUserVar $from=$frameID</text>
+			<info>startrange for current frame</info>
+		</Macroline>
+		<Macroline index="29">
+			<text>[$frameID&gt;1] AddUserVar $from= -0.5</text>
+			<info>should be half below, unless it is first frame</info>
+		</Macroline>
+		<Macroline index="30">
+			<text>SetUserVar $to=$frameID</text>
+			<info>endrange for current frame</info>
+		</Macroline>
+		<Macroline index="31">
+			<text>[$frameID&lt;$frames] AddUserVar $to= 0.5</text>
+			<info>should be half above, unless it is last frame</info>
+		</Macroline>
+		<Macroline index="32">
+			<text>Store $channelfunc.$frameID</text>
+			<info>create channelset for frame</info>
+		</Macroline>
+		<Macroline index="33">
+			<text>Assign $channelfunc.$frameID /name=$&quot;framename&quot;</text>
+			<info>with given name</info>
+		</Macroline>
+		<Macroline index="34">
+			<text>Assign $channelfunc.$frameID /from=$from /to=$to /slotNo=$frameID</text>
+			<info>and correct ranges and slot reference</info>
+		</Macroline>
+		<Macroline index="35">
+			<text>Store $wheel.$frameID</text>
+			<info>create corresponsing wheelslot</info>
+		</Macroline>
+		<Macroline index="36">
+			<text>Assign $wheel.$frameID /medianame=$&quot;framename&quot;</text>
+			<info>using same name/label</info>
+		</Macroline>
+		<Macroline index="37" delay="0.1">
+			<text>[$frameID&lt;$frames] Go Macro 1.$&quot;myname&quot;.$loopentryline</text>
+			<info>if current frame is not last frame, jump back to line ¤loopentryline</info>
+		</Macroline>
+		<Macroline index="38">
+			<text>#Macro outro after looping</text>
+		</Macroline>
+		<Macroline index="39">
+			<text>Assign $channelfunc.1/fromphys=0</text>
+			<info>correct slot visualization for first</info>
+		</Macroline>
+		<Macroline index="40">
+			<text>Assign $channelfunc.$frames/tophys=0</text>
+			<info>and for last slot</info>
+		</Macroline>
+		<Macroline index="41">
+			<text>SetUserVar $defaultframe=( &quot;Enter default frame number&quot; )</text>
+			<info>Input frame number to use as defaultvalue</info>
+		</Macroline>
+		<Macroline index="42">
+			<text>Assign $attribute /default=$defaultframe</text>
+			<info>Assign defaultframe</info>
+		</Macroline>
+		<Macroline index="43">
+			<text>[$usepercent==&quot;true&quot;] Assign $channelfunc /from=0 /to=100</text>
+			<info>changes range to 0-100 if desired</info>
+		</Macroline>
+		<Macroline index="44">
+			<text>[$usedecimal==&quot;true&quot;] Assign $channelfunc /from=0 /to=255</text>
+			<info>changes range to 0-255 if desired</info>
+		</Macroline>
+		<Macroline index="45">
+			<text>ChangeDest /</text>
+			<info>leave setup</info>
+		</Macroline>
+		<Macroline index="46">
+			<text>Menu &quot;fixtureschedule&quot;</text>
+			<info>open GUI to enter FT-editor to pick colors for Wheel</info>
+		</Macroline>
+	</Macro>
+</MA>

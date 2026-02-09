@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.4/MA.xsd" major_vers="3" minor_vers="3" stream_vers="4">
+	<Info datetime="2018-02-17T14:49:02" showfile="kc master 3.0 (3.3.4.3)" />
+	<Macro index="150" name="V SPOT C-SYM">
+		<Appearance Color="00ffff" />
+		<Macroline index="0">
+			<text>ClearAll</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>SetVar $GROUPINDEX=1</text>
+			<info>// DECLARE INDEX COUNTER = 1</info>
+		</Macroline>
+		<Macroline index="2">
+			<info>GROUP INDEX LOOP TO HERE</info>
+		</Macroline>
+		<Macroline index="3">
+			<text>[$GROUPINDEX==1] SetVar $SOURCEGROUP=&apos;&quot;V SPOT DS&quot;&apos;; SetVar $C-SYMGROUP=&apos;&quot;V SPOT DS C-SYM&quot;&apos;</text>
+			<info>// DECLARE SOURCE GROUP AND DESTINATION GROUP VARIABLES</info>
+		</Macroline>
+		<Macroline index="4">
+			<text>[$GROUPINDEX==2] SetVar $SOURCEGROUP=&apos;&quot;V SPOT MS&quot;&apos;; SetVar $C-SYMGROUP=&apos;&quot;V SPOT MS C-SYM&quot;&apos;</text>
+			<info>// DECLARE SOURCE GROUP AND DESTINATION GROUP VARIABLES</info>
+		</Macroline>
+		<Macroline index="5">
+			<text>[$GROUPINDEX==3] SetVar $SOURCEGROUP=&apos;&quot;V SPOT US&quot;&apos;; SetVar $C-SYMGROUP=&apos;&quot;V SPOT US C-SYM&quot;&apos;</text>
+			<info>// DECLARE SOURCE GROUP AND DESTINATION GROUP VARIABLES</info>
+		</Macroline>
+		<Macroline index="6">
+			<text>[$GROUPINDEX==4] SetVar $SOURCEGROUP=&apos;&quot;V SPOT USF&quot;&apos;; SetVar $C-SYMGROUP=&apos;&quot;V SPOT USF C-SYM&quot;&apos;</text>
+			<info>// DECLARE SOURCE GROUP AND DESTINATION GROUP VARIABLES</info>
+		</Macroline>
+		<Macroline index="7">
+			<text>[$GROUPINDEX==5] SetVar $SOURCEGROUP=&apos;&quot;V SPOT DSF&quot;&apos;; SetVar $C-SYMGROUP=&apos;&quot;V SPOT DSF C-SYM&quot;&apos;</text>
+			<info>// DECLARE SOURCE GROUP AND DESTINATION GROUP VARIABLES</info>
+		</Macroline>
+		<Macroline index="8">
+			<text>[$GROUPINDEX==6] Macro 1.&quot;V SPOT C-SYM&quot;.25</text>
+			<info>// EXIT ALL LOOPS</info>
+		</Macroline>
+		<Macroline index="9">
+			<text>Store Group $C-SYMGROUP /O</text>
+			<info>// EMPTY DESTINATION GROUP</info>
+		</Macroline>
+		<Macroline index="10">
+			<text>Group $SOURCEGROUP</text>
+			<info>// SELECT SOURCE GROUP</info>
+		</Macroline>
+		<Macroline index="11">
+			<text>SetVar $C-SYM=0</text>
+			<info>// BEGIN PAIR COUNT SEQUENCE</info>
+		</Macroline>
+		<Macroline index="12">
+			<text>SetVar $TOTALFIXTURES=$SELECTEDFIXTURESCOUNT</text>
+			<info>// SET TOTAL NUMBER OF FIXTURES IN SELECTINO VARIABLE</info>
+		</Macroline>
+		<Macroline index="13">
+			<text>AddVar $TOTALFIXTURES= -2</text>
+			<info>$C-SYM COUNT - LOOP TO HERE</info>
+		</Macroline>
+		<Macroline index="14">
+			<text>AddVar $C-SYM= 1</text>
+			<info>// ADD TO COUNTER</info>
+		</Macroline>
+		<Macroline index="15">
+			<text>[$TOTALFIXTURES&gt;=1] Macro 1.&quot;V SPOT C-SYM&quot;.14</text>
+			<info>// LOOP TO $C-SYM COUNT</info>
+		</Macroline>
+		<Macroline index="16">
+			<text>MAtricksWings 2</text>
+		</Macroline>
+		<Macroline index="17">
+			<text>Previous</text>
+			<info>PREV STORE LOOP TO HERE</info>
+		</Macroline>
+		<Macroline index="18">
+			<text>Store Group $C-SYMGROUP /M</text>
+			<info>// STORE AT DESTINATION GROUP</info>
+		</Macroline>
+		<Macroline index="19">
+			<text>AddVar $C-SYM= -1</text>
+			<info>// COUNTER -1</info>
+		</Macroline>
+		<Macroline index="20">
+			<text>[$C-SYM&gt;=1] Macro 1.&quot;V SPOT C-SYM&quot;.18</text>
+			<info>// LOOP TO PREVIOUS</info>
+		</Macroline>
+		<Macroline index="21">
+			<text>AddVar $GROUPINDEX=1</text>
+			<info>// GROUP INDEX COUNTER +1</info>
+		</Macroline>
+		<Macroline index="22">
+			<text>ClearAll</text>
+		</Macroline>
+		<Macroline index="23">
+			<text>Macro 1.&quot;V SPOT C-SYM&quot;.3</text>
+			<info>// LOOP TO NEW GROUP START</info>
+		</Macroline>
+		<Macroline index="24">
+			<text>ClearAll</text>
+		</Macroline>
+		<Macroline index="25">
+			<text>Group &quot;V SPOT DS C-SYM&quot;</text>
+			<info>// SELECT DS C-SYM</info>
+		</Macroline>
+		<Macroline index="26">
+			<text>Group &quot;V SPOT MS C-SYM&quot;</text>
+			<info>// SELECT MS C-SYM</info>
+		</Macroline>
+		<Macroline index="27">
+			<text>Group &quot;V SPOT US C-SYM&quot;</text>
+			<info>// SELECT US C-SYM</info>
+		</Macroline>
+		<Macroline index="28">
+			<text>Group &quot;V SPOT USF C-SYM&quot;</text>
+			<info>// SELECT USF C-SYM</info>
+		</Macroline>
+		<Macroline index="29">
+			<text>Group &quot;V SPOT DSF C-SYM&quot;</text>
+			<info>// SELECT DSF C-SYM</info>
+		</Macroline>
+		<Macroline index="30">
+			<text>Store Group &quot;V SPOT C-SYM&quot; /O</text>
+			<info>// STORE ALL C-SYM GROUP</info>
+		</Macroline>
+		<Macroline index="31">
+			<text>ClearAll</text>
+		</Macroline>
+	</Macro>
+</MA>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.1.0/MA.xsd" major_vers="3" minor_vers="1" stream_vers="0">
+	<Info datetime="2015-08-08T11:09:57" showfile="iftest" />
+	<Macro index="0" name="Selection +90 degrees">
+		<Macroline index="0">
+			<text>Search Selection</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>SearchResult</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Replace Attribute &quot;pan&quot; At -500 Thru 500 With -410 Thru 590 If SearchResult /nc</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>World 1</text>
+		</Macroline>
+	</Macro>
+	<Macro index="1" name="Selection -90 degrees">
+		<Macroline index="0">
+			<text>Search Selection</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>SearchResult</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Replace Attribute &quot;pan&quot; At -500 Thru 500 With -590 Thru 410 If SearchResult /nc</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>World 1</text>
+		</Macroline>
+	</Macro>
+</MA>

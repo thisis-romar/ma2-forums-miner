@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.7.0/MA.xsd" major_vers="3" minor_vers="7" stream_vers="0">
+	<Info datetime="2019-09-03T00:21:03" showfile="prueba macro glad" />
+	<Macro index="724" name="Add Fade v3">
+		<Macroline index="0" delay="0.05">
+			<text>ChangeDest Part 0</text>
+			<info>ChangeDest to cue part to add time</info>
+		</Macroline>
+		<Macroline index="1" delay="0.05">
+			<text>$capture</text>
+			<info>$capture to create temp variables</info>
+		</Macroline>
+		<Macroline index="2" delay="0.01">
+			<text>SetUserVar $Var1= $C_fade</text>
+			<info>Extract fade time</info>
+		</Macroline>
+		<Macroline index="3" delay="0.01">
+			<text>SetUserVar $Var2=(&quot;Add  Fade&quot;)</text>
+			<info>Ask fade to add / remove</info>
+		</Macroline>
+		<Macroline index="4" delay="0.05">
+			<text>$FORMULA &quot;$myresult=($Var1+$Var2)&quot; ; $CALCULATE</text>
+			<info>Calculate values</info>
+		</Macroline>
+		<Macroline index="5" delay="0.01">
+			<text>ChangeDest /</text>
+			<info>Go back to root</info>
+		</Macroline>
+		<Macroline index="6" delay="0.01">
+			<text>Assign Fade $myresult</text>
+			<info>Assign new fade to cue</info>
+		</Macroline>
+		<Macroline index="7">
+			<text>SetUserVar $Var1</text>
+			<info>Delete all variables created by macro</info>
+		</Macroline>
+		<Macroline index="8">
+			<text>SetUserVar $Var2</text>
+		</Macroline>
+		<Macroline index="9">
+			<text>SetUserVar $myresult</text>
+		</Macroline>
+		<Macroline index="10">
+			<text>SetUserVar $fm</text>
+		</Macroline>
+		<Macroline index="11">
+			<text># This Macro requires GLADs IntelliVars - www.ma-share.net</text>
+		</Macroline>
+	</Macro>
+</MA>

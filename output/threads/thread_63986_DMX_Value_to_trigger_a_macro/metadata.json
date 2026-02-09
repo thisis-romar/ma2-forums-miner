@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "nathandkdesign",
+  "post_date": null,
+  "post_text": "May 22, 2019 at 11:25 PM#1Does anybody know if it's possible to have dmx values trigger a macro?i.e.If dmx address 1.1 (universe 1, dmx address 1) = 10Then execute Macro 1Furthermore, I would need 2 different values to match...i.e.If dmx address 1.1 = 10 AND dmx address 1.2 = 25Then execute Macro 1",
+  "replies": 0,
+  "thread_id": "63986",
+  "title": "DMX Value to trigger a macro",
+  "url": "https://forum.malighting.com/forum/thread/63986-dmx-value-to-trigger-a-macro/",
+  "views": 0
+}

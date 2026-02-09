@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.5.70/MA.xsd" major_vers="2" minor_vers="5" stream_vers="70">
+	<Info datetime="2012-03-27T21:59:51" showfile="all-ard skm 6.4" />
+	<Macro index="245" name="Touch to create fade int pos" cli="false">
+		<Macroline index="0">
+			<text>Clear All ; Blind Off ; Clear All</text>
+		</Macroline>
+		<Macroline index="1" />
+		<Macroline index="2">
+			<text>Select @</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>Delete Cue 1.5 /normal</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>Delete Cue 2 /normal</text>
+		</Macroline>
+		<Macroline index="5" />
+		<Macroline index="6">
+			<text>Edit Cue 1</text>
+		</Macroline>
+		<Macroline index="7">
+			<text>Store Cue 1.5 /overwrite</text>
+		</Macroline>
+		<Macroline index="8">
+			<text>Edit Cue 1.5 ; Store Cue 1.5 /release</text>
+		</Macroline>
+		<Macroline index="9">
+			<text>Clear All</text>
+		</Macroline>
+		<Macroline index="10">
+			<text>Store Cue 2</text>
+		</Macroline>
+		<Macroline index="11" />
+		<Macroline index="12">
+			<text>Assign Cue 1 /fade=4</text>
+		</Macroline>
+		<Macroline index="13">
+			<text>Assign Cue 1.5 /fade=4</text>
+		</Macroline>
+		<Macroline index="14">
+			<text>Assign Cue 2 /mode=release</text>
+		</Macroline>
+		<Macroline index="15">
+			<text>Assign Cue 2 /trig=follow</text>
+		</Macroline>
+		<Macroline index="16" />
+		<Macroline index="17">
+			<text>Label Cue 1.5 &quot;off..&quot;</text>
+		</Macroline>
+		<Macroline index="18">
+			<text>Label Cue 2 &quot;release&quot;</text>
+		</Macroline>
+		<Macroline index="19" />
+		<Macroline index="20">
+			<text>Assign Go ;</text>
+		</Macroline>
+		<Macroline index="21">
+			<text>Clear All ; Blind Off ; Clear All</text>
+		</Macroline>
+	</Macro>
+</MA>

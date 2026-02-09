@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "sethtsen",
+  "post_date": null,
+  "post_text": "May 10, 2016 at 8:28 PM#1So I am trying to create a macro with user input to change the autostart.  If I type in \"Assign exec 14 /autostart=on\" that will turn on the auto start from the command line.  But I am trying to do it where line 1 lets you select the exec and line 2 changes the auto start or on or off.  trying to put @ in the command line isn't allowing me to do it either.  any thoughts?EDITFigured it out, incase anyone is wondering/autostart=on assign@then when you select that executor it will turn on auto start",
+  "replies": 0,
+  "thread_id": "52980",
+  "title": "auto start macro",
+  "url": "https://forum.malighting.com/forum/thread/52980-auto-start-macro/",
+  "views": 0
+}

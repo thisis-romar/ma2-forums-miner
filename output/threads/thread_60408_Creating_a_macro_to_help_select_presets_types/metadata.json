@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Thecrump",
+  "post_date": null,
+  "post_text": "January 9, 2018 at 5:37 AM#1Hello,I am trying to create a macro that will allow the user to make sure that particular a storing preset type is selected.Such as having a macro to select when you want to be in \"selective\", \"global\", or \"universal\" mode.I have seen a few syntax'sex.Root \"Userprofiles\".$\"USERPROFILE\".\"StoreDefaults\".\"PresetDefaults\" /MODE=PRESET TYPE DEFAULTRoot PresetType /defaultscope=selectiveAny advice or information would be amazing!all the best.-Jenn",
+  "replies": 0,
+  "thread_id": "60408",
+  "title": "Creating a macro to help select presets types",
+  "url": "https://forum.malighting.com/forum/thread/60408-creating-a-macro-to-help-select-presets-types/",
+  "views": 0
+}

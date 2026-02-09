@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Duplicate cedric-e",
+  "post_date": null,
+  "post_text": "March 28, 2015 at 12:22 PM#1Hi all,Im creating a macro to rotate fixture position's by 90 degrees.Store group 999/o (this syntax store's the selected fixture)Replace Attribute \"PAN\"  At -270  Thru 270  With -360  Thru 180/NC if group 999The CMDline feedback tells me: The replace value's operations gave 0 results.When I delete the if group 999 the syntax works fine and rotate my fixtures.To work around this I created another macro:Store World 999/oWorld 999SetUserVar $direction= (\"select direction - OR +)[$direction==-]  Replace Attribute \"PAN\"  At -270  Thru 270  With -360  Thru 180/NC[$direction==+]  Replace Attribute \"PAN\"  At -270  Thru 270  With -180  Thru 360/NCWorld 1Delete World 999SetUserVar $direction=\"\"\"can someone help my why the if group doens't work?many thanks",
+  "replies": 0,
+  "thread_id": "46021",
+  "title": "replace if group",
+  "url": "https://forum.malighting.com/forum/thread/46021-replace-if-group/",
+  "views": 0
+}

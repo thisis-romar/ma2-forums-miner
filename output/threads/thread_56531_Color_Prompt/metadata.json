@@ -1,0 +1,19 @@
+{
+  "assets": [
+    {
+      "checksum": "sha256:918ff468f6342e8f9e39205f7480d47914593086e1fb9485f0ee496d145a44e5",
+      "download_count": 96,
+      "filename": "COLORprompt.xml",
+      "size": 780,
+      "url": "https://forum.malighting.com/file-download/4151/"
+    }
+  ],
+  "author": "pmdjh",
+  "post_date": null,
+  "post_text": "January 6, 2017 at 6:15 PM#1I would like to be able to have a macro that prompts me for a color choice via the color picker.Basically:Fixture 1PROMPT FOR COLORstore preset 4.1 /mergeClear x 3How can I do this?",
+  "replies": 0,
+  "thread_id": "56531",
+  "title": "Color Prompt",
+  "url": "https://forum.malighting.com/forum/thread/56531-color-prompt/",
+  "views": 0
+}

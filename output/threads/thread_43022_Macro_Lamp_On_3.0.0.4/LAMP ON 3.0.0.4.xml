@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.0.0/MA.xsd" major_vers="3" minor_vers="0" stream_vers="0">
+	<Info datetime="2014-08-15T17:37:14" showfile="3-4 wing 2014" />
+	<Macro index="63" name="LAMP ON 3.0.0.4">
+		<Appearance Color="00ff00" />
+		<Macroline index="0" delay="0.01">
+			<text>SetUserVar $Serial = &quot;1234&quot;</text>
+			<info>Serial code pour eviter de lancer par erreur la macro</info>
+		</Macroline>
+		<Macroline index="1" delay="0.01">
+			<text>SetUserVar $PremierGroupe = (&quot;Premier groupe a traiter :&quot;)</text>
+			<info>Defini le premier groupe a traiter. Ex 12</info>
+		</Macroline>
+		<Macroline index="2" delay="0.01">
+			<text>SetUserVar $DernierGroupe = (&quot;Dernier groupe a traiter ?&quot;)</text>
+			<info>Defini le dernier groupe à traiter. Ex 23</info>
+		</Macroline>
+		<Macroline index="3" delay="0.01">
+			<text>AddUserVar $DernierGroupe = 1</text>
+			<info>Ajout 1 unité pour finir la macro</info>
+		</Macroline>
+		<Macroline index="4" delay="0.01">
+			<text>SetUserVar $GoLamp = (&quot;Serial LAMP ON ?&quot;)</text>
+			<info>Validation du serial code pour lancer la procédure</info>
+		</Macroline>
+		<Macroline index="5" delay="0.5">
+			<text>[$GoLamp==$Serial] Group $PremierGroupe</text>
+			<info>Sélectionne le groupe</info>
+		</Macroline>
+		<Macroline index="6" delay="5">
+			<text>[$GoLamp==$Serial] At Preset *.&quot;LampOn&quot;</text>
+			<info>Effectue le lamp on</info>
+		</Macroline>
+		<Macroline index="7" delay="0.01">
+			<text>[$GoLamp==$Serial] ClearAll</text>
+			<info>Vide le programmeur</info>
+		</Macroline>
+		<Macroline index="8" delay="0.01">
+			<text>AddUserVar $PremierGroupe = 1</text>
+			<info>Incrémente le groupe suivant -----------------</info>
+		</Macroline>
+		<Macroline index="9" delay="0.01">
+			<text>[$DernierGroupe==$PremierGroupe] Go Macro 1.65.13</text>
+			<info>Tous les groupes sont traités, stopper la macro</info>
+		</Macroline>
+		<Macroline index="10" delay="0.01">
+			<text>Go Macro 1.65.6</text>
+			<info>Il reste des groupes à traiter, je recommence</info>
+		</Macroline>
+		<Macroline index="11" disabled="true">
+			<text># &quot;-------------------------------------------------&quot;</text>
+			<info>FIN DE LA MACRO</info>
+		</Macroline>
+		<Macroline index="12" delay="0.01">
+			<text>SetUserVar $GoLamp = &quot;&quot;</text>
+			<info>initialise le serial code</info>
+		</Macroline>
+		<Macroline index="13" delay="0.01">
+			<text>SetUserVar $PremierGroupe = &quot;&quot;</text>
+			<info>Initialise numero du groupe</info>
+		</Macroline>
+		<Macroline index="14" delay="0.01">
+			<text>SetUserVar $DernierGroupe = &quot;&quot;</text>
+			<info>Initialise incrementation</info>
+		</Macroline>
+	</Macro>
+</MA>

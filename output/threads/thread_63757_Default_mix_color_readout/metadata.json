@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "robk82",
+  "post_date": null,
+  "post_text": "April 13, 2019 at 3:27 AM#1I know the syntax to change the default mix color readout is...Assign Root 39.2  /defaultmixcolorreadout=cmyAssign Root 39.2  /defaultmixcolorreadout=cmyor the same with RGBBut I do not really understand why this works. Can anyone explain it in a short easy way?",
+  "replies": 0,
+  "thread_id": "63757",
+  "title": "Default mix color readout",
+  "url": "https://forum.malighting.com/forum/thread/63757-default-mix-color-readout/",
+  "views": 0
+}

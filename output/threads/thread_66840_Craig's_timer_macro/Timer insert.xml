@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.60/MA.xsd" major_vers="3" minor_vers="9" stream_vers="60">
+	<Info datetime="2021-10-13T07:26:36" showfile="zs_associates_day1" />
+	<Macro index="205" name="Timer ins">
+		<Appearance Color="ff7f00" />
+		<Macroline index="0">
+			<text>SetUserVar $Timer_Pool=(Timer pool object number?)</text>
+			<info>Sets the timer number. This should be an empty pool object</info>
+		</Macroline>
+		<Macroline index="1">
+			<text>Store Timer $Timer_Pool</text>
+			<info>Stores the pool object</info>
+		</Macroline>
+		<Macroline index="2">
+			<text>SetUserVar $Timer_Name=(&quot;Name - no spaces please&quot;)</text>
+			<info>Sets the name / label as a variable</info>
+		</Macroline>
+		<Macroline index="3">
+			<text>Assign Timer $Timer_Pool /Name=$&quot;Timer_name&quot;</text>
+			<info>Sets the name</info>
+		</Macroline>
+		<Macroline index="4">
+			<text>SetVar $Total_Time=(Minutes?)M</text>
+			<info>Sets the minutes</info>
+		</Macroline>
+		<Macroline index="5">
+			<text>SetVar $Seconds=(Seconds?).00S</text>
+			<info>Sets the seconds</info>
+		</Macroline>
+		<Macroline index="6">
+			<text>AddVar $Total_Time=$&quot;Seconds&quot;</text>
+			<info>Adds the two together</info>
+		</Macroline>
+		<Macroline index="7">
+			<text>Assign Timer $Timer_Name /TimerMode=Countdown</text>
+			<info>Sets the mode to countdown, turns off alerts</info>
+		</Macroline>
+		<Macroline index="8">
+			<text>Assign Timer $Timer_Name /WhenRestarting=Reset</text>
+			<info>Reset when restarted</info>
+		</Macroline>
+		<Macroline index="9">
+			<text>Assign Timer $Timer_Name /AlertType=None</text>
+			<info>Sets no alert mode</info>
+		</Macroline>
+		<Macroline index="10">
+			<text>Assign Timer $Timer_Name /countdowntime=$Total_Time</text>
+			<info>Sets the time.</info>
+		</Macroline>
+		<Macroline index="11">
+			<text>SetVar $Final_cmd=&quot;Top Timer &quot;</text>
+			<info>Sets the top command</info>
+		</Macroline>
+		<Macroline index="12">
+			<text>AddVar $Final_cmd=$&quot;Timer_Name&quot;</text>
+			<info>Starts assembling the final command</info>
+		</Macroline>
+		<Macroline index="13">
+			<text>SetVar $select_cmd=&quot;; Select Timer &quot;</text>
+			<info>Sets the Select command</info>
+		</Macroline>
+		<Macroline index="14">
+			<text>AddVar $select_cmd=$&quot;Timer_name&quot;</text>
+			<info>Adds the timer name to the select_cmd variable</info>
+		</Macroline>
+		<Macroline index="15">
+			<text>AddVar $Final_cmd=$&quot;select_cmd&quot;</text>
+			<info>Adds the now-assembled select_cmd</info>
+		</Macroline>
+		<Macroline index="16">
+			<text>SetVar $toggle_cmd=&quot;; Toggle Timer &quot;</text>
+			<info>Like LEGO blocks</info>
+		</Macroline>
+		<Macroline index="17">
+			<text>AddVar $toggle_cmd=$&quot;Timer_Name&quot;</text>
+			<info>Assemble the second variable</info>
+		</Macroline>
+		<Macroline index="18">
+			<text>AddVar $Final_cmd=$&quot;toggle_cmd&quot;</text>
+			<info>Adds it all together</info>
+		</Macroline>
+		<Macroline index="19">
+			<text>SetVar $view_cmd=&quot;; View &apos;Timer&apos;&quot;</text>
+			<info>View command</info>
+		</Macroline>
+		<Macroline index="20">
+			<text>AddVar $Final_cmd=$&quot;view_cmd&quot;</text>
+			<info>Add to the final string</info>
+		</Macroline>
+		<Macroline index="21">
+			<text>Assign Cue () /CMD=$&quot;Final_cmd&quot;</text>
+			<info>Puts it into the currrent cue!</info>
+		</Macroline>
+		<Macroline index="22">
+			<text>SetVar $Total_Time=</text>
+			<info>Clears variables</info>
+		</Macroline>
+		<Macroline index="23">
+			<text>SetVar $seconds=</text>
+			<info>Clears variables</info>
+		</Macroline>
+		<Macroline index="24">
+			<text>SetVar $minutes=</text>
+			<info>Clears variables</info>
+		</Macroline>
+	</Macro>
+</MA>

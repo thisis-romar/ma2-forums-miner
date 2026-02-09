@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Bensley69",
+  "post_date": null,
+  "post_text": "October 18, 2018 at 2:45 PM#1Hello All,I have recently gotten into doing macros on MA2 and now have the need to start using MIDI. I have a very special use case for my console so if your like why would you ever need this, just trust me hahah.Pretty much i want a variable that takes the midi imput and selects the appropriate executor based on this. I know i could make 120 odd commands and do it that way but a variable would me more economical.An idea i had, since i know the velocity of the midi note can be represented as a executor fader, is to have the velocity move up and down the fader attached to a macro which takes that and places that as a variable, then send another note to send the select executor [variable] commandfor examplei am using CH 1 NOTE 1 Velocity 100 for the command 'Select Executor [ Variable]'then another note CH1 NOTE 2 and the velocity sets the fader and is assigned a macro to set the variableif anyone has any ideas please let me knowAlso if you know of a macro that will auto cross fade between executors when i turn them off that would be greatThanks,Bensley",
+  "replies": 0,
+  "thread_id": "62546",
+  "title": "Select Executor Variable MIDI (Not As Easy As You Think)",
+  "url": "https://forum.malighting.com/forum/thread/62546-select-executor-variable-midi-not-as-easy-as-you-think/",
+  "views": 0
+}

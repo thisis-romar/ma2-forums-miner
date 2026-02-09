@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "SaraW.LGN",
+  "post_date": null,
+  "post_text": "October 13, 2020 at 10:23 AM#1Hi,Having a bit of trouble getting this syntax right. I'm creating a setvar to call pool objects that beigns with a certain name. So far as I understand you cannot have quotation marks within quotations when setting variables, i.e :setvar $myvar = \"effect 1.\"$whatevereffects\".1\"This syntax doesn't return an error, but the syntax will cut off before my named pool object. I've tried to $\"whatevereffects\" in the syntax but it returns as the same result. Anyone knows the proper syntax for this or if there is a workaround? Any help is much appreciated!",
+  "replies": 0,
+  "thread_id": "66141",
+  "title": "setvar using Object Name",
+  "url": "https://forum.malighting.com/forum/thread/66141-setvar-using-object-name/",
+  "views": 0
+}

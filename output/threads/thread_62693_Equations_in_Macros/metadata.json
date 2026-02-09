@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Duplicate ZaneBlanchard",
+  "post_date": null,
+  "post_text": "November 10, 2018 at 3:07 AM#1I'm trying to set up a macro so that I can type in my color temperature for a Skypanel and the macro does the calculations for me. I have it down but it requires me to divide twice, in the correct order of operations.Here's the Macro:PresetType \"Color\"Attribute \"ColorTemperature\" At (Color Temperature) - 2800 / 0.10986496 / 655.35Mathematically this works to get the correct percentage, however the command line is processing the equation as a whole. It needs to subtract 2800, divide that answer by .10986496, then divide that answer by 655.35 (For 16-bit).Is there a way instead to set the attribute to the dmx value wherever it lands in 0-65535 in the macro so I don't need to divide by 655.35 to get the percentage?",
+  "replies": 0,
+  "thread_id": "62693",
+  "title": "Equations in Macros",
+  "url": "https://forum.malighting.com/forum/thread/62693-equations-in-macros/",
+  "views": 0
+}

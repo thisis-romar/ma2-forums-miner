@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "aerian",
+  "post_date": null,
+  "post_text": "October 31, 2021 at 7:54 PM#1Hello,In the Demoshow \"demo dimmer and more.show.gz\", there is a sequence \"Look\" which use effects 40 and 43. I select all fixtures and I do please twice, then I store it in a Preset All. When I recall my Preset, the fixtures are not in the expected state (the effect ID is empty in the Effect Layer of the Fixture View).I try to store it again in a other sequence it's ok.I try to store it in a Preset All without the Preset Filter and I allow Embedded.So it is not possible to store Effect ID in a Preset All ?Thanks again for you help !Best regards.",
+  "replies": 0,
+  "thread_id": "66859",
+  "title": "Store Effect ID",
+  "url": "https://forum.malighting.com/forum/thread/66859-store-effect-id/",
+  "views": 0
+}

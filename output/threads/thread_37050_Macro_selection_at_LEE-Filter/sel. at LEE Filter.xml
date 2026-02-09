@@ -1,0 +1,1150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.1.1/MA.xsd" major_vers="3" minor_vers="1" stream_vers="1">
+	<Info datetime="2015-07-28T09:21:58" showfile="0patch119" />
+	<Macro index="264" name="sel. at LEE Filter">
+		<InfoItems>
+			<Info date="2014-05-19T17:31:49">ACHTUNG -- damit das Macro funktioniert muss CMY als Default MixColor gewaehlt sein --
+
+Fixtures selektieren, Macro starten und die LEE-Farbnummer eingeben
+z.B. Lee -068- &gt; eingabe im Macro nur 68 OHNE die Null
+
+Roman P. 19.05.2014</Info>
+		</InfoItems>
+		<Macroline index="0">
+			<text>SetUserVar $myinput (Lee Nr. ?)</text>
+			<info>www.roman-prg.de</info>
+		</Macroline>
+		<Macroline index="1">
+			<text>[$myinput==2] Attribute colorrgb1 At 20.5; Attribute colorrgb2 At 47.0; Attribute colorrgb3 At 26.4</text>
+			<info>rose pink</info>
+		</Macroline>
+		<Macroline index="2">
+			<text>[$myinput==3] Attribute colorrgb1 At 8.2; Attribute colorrgb2 At 8.2; Attribute colorrgb3 At 6.0</text>
+			<info>lavender tint</info>
+		</Macroline>
+		<Macroline index="3">
+			<text>[$myinput==4] Attribute colorrgb1 At 8.9; Attribute colorrgb2 At 15.3; Attribute colorrgb3 At 29.9</text>
+			<info>medium bastard amber</info>
+		</Macroline>
+		<Macroline index="4">
+			<text>[$myinput==7] Attribute colorrgb1 At 8.2; Attribute colorrgb2 At 2.9; Attribute colorrgb3 At 25.3</text>
+			<info>pale yellow</info>
+		</Macroline>
+		<Macroline index="5">
+			<text>[$myinput==8] Attribute colorrgb1 At 10.2; Attribute colorrgb2 At 19.4; Attribute colorrgb3 At 45.1</text>
+			<info>dark salmon</info>
+		</Macroline>
+		<Macroline index="6">
+			<text>[$myinput==9] Attribute colorrgb1 At 6.4; Attribute colorrgb2 At 6.0; Attribute colorrgb3 At 40.3</text>
+			<info>pale amber gold</info>
+		</Macroline>
+		<Macroline index="7">
+			<text>[$myinput==10] Attribute colorrgb1 At 21.6; Attribute colorrgb2 At 3.4; Attribute colorrgb3 At 89.4</text>
+			<info>medium yellow</info>
+		</Macroline>
+		<Macroline index="8">
+			<text>[$myinput==13] Attribute colorrgb1 At 7.3; Attribute colorrgb2 At 5.4; Attribute colorrgb3 At 49.6</text>
+			<info>straw tint</info>
+		</Macroline>
+		<Macroline index="9">
+			<text>[$myinput==15] Attribute colorrgb1 At 7.3; Attribute colorrgb2 At 9.8; Attribute colorrgb3 At 87.6</text>
+			<info>deep straw</info>
+		</Macroline>
+		<Macroline index="10">
+			<text>[$myinput==17] Attribute colorrgb1 At 29.3; Attribute colorrgb2 At 38.2; Attribute colorrgb3 At 66.7</text>
+			<info>surprise peach</info>
+		</Macroline>
+		<Macroline index="11">
+			<text>[$myinput==19] Attribute colorrgb1 At 26.6; Attribute colorrgb2 At 66.3; Attribute colorrgb3 At 94.0</text>
+			<info>fire</info>
+		</Macroline>
+		<Macroline index="12">
+			<text>[$myinput==20] Attribute colorrgb1 At 11.3; Attribute colorrgb2 At 20.3; Attribute colorrgb3 At 85.7</text>
+			<info>medium amber</info>
+		</Macroline>
+		<Macroline index="13">
+			<text>[$myinput==21] Attribute colorrgb1 At 18.6; Attribute colorrgb2 At 41.6; Attribute colorrgb3 At 93.9</text>
+			<info>gold amber</info>
+		</Macroline>
+		<Macroline index="14">
+			<text>[$myinput==22] Attribute colorrgb1 At 22.5; Attribute colorrgb2 At 55.0; Attribute colorrgb3 At 97.3</text>
+			<info>dark amber</info>
+		</Macroline>
+		<Macroline index="15">
+			<text>[$myinput==24] Attribute colorrgb1 At 38.8; Attribute colorrgb2 At 81.0; Attribute colorrgb3 At 96.4</text>
+			<info>scarlet</info>
+		</Macroline>
+		<Macroline index="16">
+			<text>[$myinput==25] Attribute colorrgb1 At 21.5; Attribute colorrgb2 At 48.9; Attribute colorrgb3 At 83.4</text>
+			<info>sunset red</info>
+		</Macroline>
+		<Macroline index="17">
+			<text>[$myinput==26] Attribute colorrgb1 At 36.8; Attribute colorrgb2 At 61.6; Attribute colorrgb3 At 66.3</text>
+			<info>bright red</info>
+		</Macroline>
+		<Macroline index="18">
+			<text>[$myinput==27] Attribute colorrgb1 At 46.8; Attribute colorrgb2 At 76.0; Attribute colorrgb3 At 77.1</text>
+			<info>medium red</info>
+		</Macroline>
+		<Macroline index="19">
+			<text>[$myinput==29] Attribute colorrgb1 At 42.4; Attribute colorrgb2 At 84.0; Attribute colorrgb3 At 94.6</text>
+			<info>plasa red</info>
+		</Macroline>
+		<Macroline index="20">
+			<text>[$myinput==35] Attribute colorrgb1 At 8.9; Attribute colorrgb2 At 18.5; Attribute colorrgb3 At 13.9</text>
+			<info>light pink</info>
+		</Macroline>
+		<Macroline index="21">
+			<text>[$myinput==36] Attribute colorrgb1 At 15.5; Attribute colorrgb2 At 33.1; Attribute colorrgb3 At 25.4</text>
+			<info>medium pink</info>
+		</Macroline>
+		<Macroline index="22">
+			<text>[$myinput==39] Attribute colorrgb1 At 9.2; Attribute colorrgb2 At 20.2; Attribute colorrgb3 At 11.7</text>
+			<info>pink carnation</info>
+		</Macroline>
+		<Macroline index="23">
+			<text>[$myinput==46] Attribute colorrgb1 At 45.2; Attribute colorrgb2 At 78.7; Attribute colorrgb3 At 71.4</text>
+			<info>dark magenta</info>
+		</Macroline>
+		<Macroline index="24">
+			<text>[$myinput==48] Attribute colorrgb1 At 38.8; Attribute colorrgb2 At 60.5; Attribute colorrgb3 At 35.8</text>
+			<info>rose purple</info>
+		</Macroline>
+		<Macroline index="25">
+			<text>[$myinput==49] Attribute colorrgb1 At 52.0; Attribute colorrgb2 At 81.2; Attribute colorrgb3 At 48.6</text>
+			<info>medium purple</info>
+		</Macroline>
+		<Macroline index="26">
+			<text>[$myinput==52] Attribute colorrgb1 At 38.9; Attribute colorrgb2 At 35.3; Attribute colorrgb3 At 23.6</text>
+			<info>light lavender</info>
+		</Macroline>
+		<Macroline index="27">
+			<text>[$myinput==53] Attribute colorrgb1 At 19.6; Attribute colorrgb2 At 14.8; Attribute colorrgb3 At 10.9</text>
+			<info>paler lavender</info>
+		</Macroline>
+		<Macroline index="28">
+			<text>[$myinput==58] Attribute colorrgb1 At 76.2; Attribute colorrgb2 At 68.4; Attribute colorrgb3 At 45.2</text>
+			<info>lavender</info>
+		</Macroline>
+		<Macroline index="29">
+			<text>[$myinput==61] Attribute colorrgb1 At 26.8; Attribute colorrgb2 At 16.8; Attribute colorrgb3 At 12.4</text>
+			<info>mist blue</info>
+		</Macroline>
+		<Macroline index="30">
+			<text>[$myinput==63] Attribute colorrgb1 At 35.4; Attribute colorrgb2 At 22.2; Attribute colorrgb3 At 16.3</text>
+			<info>pale blue</info>
+		</Macroline>
+		<Macroline index="31">
+			<text>[$myinput==68] Attribute colorrgb1 At 86.7; Attribute colorrgb2 At 63.9; Attribute colorrgb3 At 45.2</text>
+			<info>sky blue</info>
+		</Macroline>
+		<Macroline index="32">
+			<text>[$myinput==71] Attribute colorrgb1 At 100.0; Attribute colorrgb2 At 100.0; Attribute colorrgb3 At 100.0</text>
+			<info>tokyo blue</info>
+		</Macroline>
+		<Macroline index="33">
+			<text>[$myinput==75] Attribute colorrgb1 At 85.8; Attribute colorrgb2 At 65.6; Attribute colorrgb3 At 45.2</text>
+			<info>evening blue</info>
+		</Macroline>
+		<Macroline index="34">
+			<text>[$myinput==79] Attribute colorrgb1 At 92.8; Attribute colorrgb2 At 74.0; Attribute colorrgb3 At 52.7</text>
+			<info>just blue</info>
+		</Macroline>
+		<Macroline index="35">
+			<text>[$myinput==85] Attribute colorrgb1 At 96.2; Attribute colorrgb2 At 82.5; Attribute colorrgb3 At 62.4</text>
+			<info>deeper blue</info>
+		</Macroline>
+		<Macroline index="36">
+			<text>[$myinput==88] Attribute colorrgb1 At 38.9; Attribute colorrgb2 At 8.9; Attribute colorrgb3 At 77.8</text>
+			<info>lime green</info>
+		</Macroline>
+		<Macroline index="37">
+			<text>[$myinput==89] Attribute colorrgb1 At 65.6; Attribute colorrgb2 At 28.6; Attribute colorrgb3 At 75.9</text>
+			<info>moss green</info>
+		</Macroline>
+		<Macroline index="38">
+			<text>[$myinput==90] Attribute colorrgb1 At 86.9; Attribute colorrgb2 At 46.8; Attribute colorrgb3 At 89.2</text>
+			<info>dark yellow green</info>
+		</Macroline>
+		<Macroline index="39">
+			<text>[$myinput==100] Attribute colorrgb1 At 24.8; Attribute colorrgb2 At 3.7; Attribute colorrgb3 At 85.6</text>
+			<info>spring yellow</info>
+		</Macroline>
+		<Macroline index="40">
+			<text>[$myinput==101] Attribute colorrgb1 At 18.2; Attribute colorrgb2 At 5.1; Attribute colorrgb3 At 92.6</text>
+			<info>yellow</info>
+		</Macroline>
+		<Macroline index="41">
+			<text>[$myinput==102] Attribute colorrgb1 At 11.8; Attribute colorrgb2 At 5.1; Attribute colorrgb3 At 75.4</text>
+			<info>light amber</info>
+		</Macroline>
+		<Macroline index="42">
+			<text>[$myinput==103] Attribute colorrgb1 At 5.2; Attribute colorrgb2 At 3.7; Attribute colorrgb3 At 29.8</text>
+			<info>straw</info>
+		</Macroline>
+		<Macroline index="43">
+			<text>[$myinput==104] Attribute colorrgb1 At 8.2; Attribute colorrgb2 At 6.0; Attribute colorrgb3 At 80.8</text>
+			<info>deep amber</info>
+		</Macroline>
+		<Macroline index="44">
+			<text>[$myinput==105] Attribute colorrgb1 At 13.5; Attribute colorrgb2 At 30.5; Attribute colorrgb3 At 96.6</text>
+			<info>orange</info>
+		</Macroline>
+		<Macroline index="45">
+			<text>[$myinput==106] Attribute colorrgb1 At 40.0; Attribute colorrgb2 At 81.4; Attribute colorrgb3 At 96.2</text>
+			<info>primary red</info>
+		</Macroline>
+		<Macroline index="46">
+			<text>[$myinput==107] Attribute colorrgb1 At 14.7; Attribute colorrgb2 At 31.7; Attribute colorrgb3 At 29.1</text>
+			<info>light rose</info>
+		</Macroline>
+		<Macroline index="47">
+			<text>[$myinput==108] Attribute colorrgb1 At 10.2; Attribute colorrgb2 At 19.4; Attribute colorrgb3 At 44.7</text>
+			<info>english rose</info>
+		</Macroline>
+		<Macroline index="48">
+			<text>[$myinput==109] Attribute colorrgb1 At 12.4; Attribute colorrgb2 At 25.4; Attribute colorrgb3 At 24.0</text>
+			<info>light salmon</info>
+		</Macroline>
+		<Macroline index="49">
+			<text>[$myinput==110] Attribute colorrgb1 At 13.9; Attribute colorrgb2 At 27.7; Attribute colorrgb3 At 21.0</text>
+			<info>middle rose</info>
+		</Macroline>
+		<Macroline index="50">
+			<text>[$myinput==111] Attribute colorrgb1 At 19.0; Attribute colorrgb2 At 45.1; Attribute colorrgb3 At 33.0</text>
+			<info>dark pink</info>
+		</Macroline>
+		<Macroline index="51">
+			<text>[$myinput==113] Attribute colorrgb1 At 34.9; Attribute colorrgb2 At 79.6; Attribute colorrgb3 At 73.2</text>
+			<info>magenta</info>
+		</Macroline>
+		<Macroline index="52">
+			<text>[$myinput==115] Attribute colorrgb1 At 68.1; Attribute colorrgb2 At 30.2; Attribute colorrgb3 At 27.9</text>
+			<info>peacock blue</info>
+		</Macroline>
+		<Macroline index="53">
+			<text>[$myinput==116] Attribute colorrgb1 At 83.3; Attribute colorrgb2 At 43.3; Attribute colorrgb3 At 42.4</text>
+			<info>medium-blue green</info>
+		</Macroline>
+		<Macroline index="54">
+			<text>[$myinput==117] Attribute colorrgb1 At 38.4; Attribute colorrgb2 At 19.4; Attribute colorrgb3 At 15.1</text>
+			<info>steel blue</info>
+		</Macroline>
+		<Macroline index="55">
+			<text>[$myinput==118] Attribute colorrgb1 At 78.0; Attribute colorrgb2 At 46.9; Attribute colorrgb3 At 34.9</text>
+			<info>light blue</info>
+		</Macroline>
+		<Macroline index="56">
+			<text>[$myinput==119] Attribute colorrgb1 At 95.4; Attribute colorrgb2 At 79.1; Attribute colorrgb3 At 58.4</text>
+			<info>dark blue</info>
+		</Macroline>
+		<Macroline index="57">
+			<text>[$myinput==120] Attribute colorrgb1 At 97.8; Attribute colorrgb2 At 87.7; Attribute colorrgb3 At 68.4</text>
+			<info>deep blue</info>
+		</Macroline>
+		<Macroline index="58">
+			<text>[$myinput==121] Attribute colorrgb1 At 49.3; Attribute colorrgb2 At 13.9; Attribute colorrgb3 At 75.7</text>
+			<info>lee green</info>
+		</Macroline>
+		<Macroline index="59">
+			<text>[$myinput==122] Attribute colorrgb1 At 57.5; Attribute colorrgb2 At 18.6; Attribute colorrgb3 At 70.6</text>
+			<info>fern green</info>
+		</Macroline>
+		<Macroline index="60">
+			<text>[$myinput==124] Attribute colorrgb1 At 77.4; Attribute colorrgb2 At 31.5; Attribute colorrgb3 At 75.6</text>
+			<info>dark green</info>
+		</Macroline>
+		<Macroline index="61">
+			<text>[$myinput==126] Attribute colorrgb1 At 57.1; Attribute colorrgb2 At 84.1; Attribute colorrgb3 At 50.5</text>
+			<info>mauve</info>
+		</Macroline>
+		<Macroline index="62">
+			<text>[$myinput==127] Attribute colorrgb1 At 40.0; Attribute colorrgb2 At 54.3; Attribute colorrgb3 At 50.1</text>
+			<info>smokey pink</info>
+		</Macroline>
+		<Macroline index="63">
+			<text>[$myinput==128] Attribute colorrgb1 At 31.5; Attribute colorrgb2 At 72.1; Attribute colorrgb3 At 47.4</text>
+			<info>bright pink</info>
+		</Macroline>
+		<Macroline index="64">
+			<text>[$myinput==130] Attribute colorrgb1 At 2.7; Attribute colorrgb2 At 2.3; Attribute colorrgb3 At 3.9</text>
+			<info>clear</info>
+		</Macroline>
+		<Macroline index="65">
+			<text>[$myinput==131] Attribute colorrgb1 At 55.1; Attribute colorrgb2 At 23.4; Attribute colorrgb3 At 23.1</text>
+			<info>marine blue</info>
+		</Macroline>
+		<Macroline index="66">
+			<text>[$myinput==132] Attribute colorrgb1 At 89.5; Attribute colorrgb2 At 66.5; Attribute colorrgb3 At 48.6</text>
+			<info>medium blue</info>
+		</Macroline>
+		<Macroline index="67">
+			<text>[$myinput==134] Attribute colorrgb1 At 17.2; Attribute colorrgb2 At 27.9; Attribute colorrgb3 At 76.0</text>
+			<info>golden amber</info>
+		</Macroline>
+		<Macroline index="68">
+			<text>[$myinput==135] Attribute colorrgb1 At 24.8; Attribute colorrgb2 At 59.6; Attribute colorrgb3 At 97.6</text>
+			<info>deep golden amber</info>
+		</Macroline>
+		<Macroline index="69">
+			<text>[$myinput==136] Attribute colorrgb1 At 28.7; Attribute colorrgb2 At 27.7; Attribute colorrgb3 At 19.5</text>
+			<info>pale lavender</info>
+		</Macroline>
+		<Macroline index="70">
+			<text>[$myinput==137] Attribute colorrgb1 At 50.7; Attribute colorrgb2 At 39.9; Attribute colorrgb3 At 26.0</text>
+			<info>special lavender</info>
+		</Macroline>
+		<Macroline index="71">
+			<text>[$myinput==138] Attribute colorrgb1 At 27.6; Attribute colorrgb2 At 7.3; Attribute colorrgb3 At 49.1</text>
+			<info>pale green</info>
+		</Macroline>
+		<Macroline index="72">
+			<text>[$myinput==139] Attribute colorrgb1 At 86.7; Attribute colorrgb2 At 45.2; Attribute colorrgb3 At 94.0</text>
+			<info>primary green</info>
+		</Macroline>
+		<Macroline index="73">
+			<text>[$myinput==140] Attribute colorrgb1 At 56.3; Attribute colorrgb2 At 30.8; Attribute colorrgb3 At 23.6</text>
+			<info>summer blue</info>
+		</Macroline>
+		<Macroline index="74">
+			<text>[$myinput==141] Attribute colorrgb1 At 84.0; Attribute colorrgb2 At 54.1; Attribute colorrgb3 At 40.0</text>
+			<info>bright blue</info>
+		</Macroline>
+		<Macroline index="75">
+			<text>[$myinput==142] Attribute colorrgb1 At 64.2; Attribute colorrgb2 At 49.6; Attribute colorrgb3 At 32.3</text>
+			<info>pale violet</info>
+		</Macroline>
+		<Macroline index="76">
+			<text>[$myinput==143] Attribute colorrgb1 At 73.0; Attribute colorrgb2 At 50.6; Attribute colorrgb3 At 41.1</text>
+			<info>pale navy blue</info>
+		</Macroline>
+		<Macroline index="77">
+			<text>[$myinput==144] Attribute colorrgb1 At 66.1; Attribute colorrgb2 At 37.8; Attribute colorrgb3 At 28.6</text>
+			<info>no colour blue</info>
+		</Macroline>
+		<Macroline index="78">
+			<text>[$myinput==147] Attribute colorrgb1 At 4.3; Attribute colorrgb2 At 6.9; Attribute colorrgb3 At 18.5</text>
+			<info>apricot</info>
+		</Macroline>
+		<Macroline index="79">
+			<text>[$myinput==148] Attribute colorrgb1 At 29.3; Attribute colorrgb2 At 68.1; Attribute colorrgb3 At 58.7</text>
+			<info>bright rose</info>
+		</Macroline>
+		<Macroline index="80">
+			<text>[$myinput==151] Attribute colorrgb1 At 7.9; Attribute colorrgb2 At 14.7; Attribute colorrgb3 At 22.7</text>
+			<info>gold tint</info>
+		</Macroline>
+		<Macroline index="81">
+			<text>[$myinput==152] Attribute colorrgb1 At 6.6; Attribute colorrgb2 At 11.4; Attribute colorrgb3 At 25.3</text>
+			<info>pale gold</info>
+		</Macroline>
+		<Macroline index="82">
+			<text>[$myinput==153] Attribute colorrgb1 At 8.2; Attribute colorrgb2 At 17.9; Attribute colorrgb3 At 16.1</text>
+			<info>pale salmon</info>
+		</Macroline>
+		<Macroline index="83">
+			<text>[$myinput==154] Attribute colorrgb1 At 6.3; Attribute colorrgb2 At 12.2; Attribute colorrgb3 At 16.6</text>
+			<info>pale rose</info>
+		</Macroline>
+		<Macroline index="84">
+			<text>[$myinput==156] Attribute colorrgb1 At 28.6; Attribute colorrgb2 At 31.7; Attribute colorrgb3 At 54.1</text>
+			<info>chocolate</info>
+		</Macroline>
+		<Macroline index="85">
+			<text>[$myinput==157] Attribute colorrgb1 At 19.0; Attribute colorrgb2 At 43.5; Attribute colorrgb3 At 41.3</text>
+			<info>pink</info>
+		</Macroline>
+		<Macroline index="86">
+			<text>[$myinput==158] Attribute colorrgb1 At 17.6; Attribute colorrgb2 At 40.6; Attribute colorrgb3 At 96.8</text>
+			<info>deep orange</info>
+		</Macroline>
+		<Macroline index="87">
+			<text>[$myinput==159] Attribute colorrgb1 At 4.0; Attribute colorrgb2 At 2.1; Attribute colorrgb3 At 14.0</text>
+			<info>no colour straw</info>
+		</Macroline>
+		<Macroline index="88">
+			<text>[$myinput==161] Attribute colorrgb1 At 69.1; Attribute colorrgb2 At 46.0; Attribute colorrgb3 At 31.5</text>
+			<info>slate blue</info>
+		</Macroline>
+		<Macroline index="89">
+			<text>[$myinput==162] Attribute colorrgb1 At 5.7; Attribute colorrgb2 At 9.1; Attribute colorrgb3 At 20.1</text>
+			<info>bastard amber</info>
+		</Macroline>
+		<Macroline index="90">
+			<text>[$myinput==164] Attribute colorrgb1 At 28.6; Attribute colorrgb2 At 67.2; Attribute colorrgb3 At 90.5</text>
+			<info>flame red</info>
+		</Macroline>
+		<Macroline index="91">
+			<text>[$myinput==165] Attribute colorrgb1 At 76.6; Attribute colorrgb2 At 51.4; Attribute colorrgb3 At 35.8</text>
+			<info>daylight blue</info>
+		</Macroline>
+		<Macroline index="92">
+			<text>[$myinput==166] Attribute colorrgb1 At 6.3; Attribute colorrgb2 At 11.5; Attribute colorrgb3 At 11.1</text>
+			<info>pale red</info>
+		</Macroline>
+		<Macroline index="93">
+			<text>[$myinput==169] Attribute colorrgb1 At 17.5; Attribute colorrgb2 At 16.8; Attribute colorrgb3 At 12.0</text>
+			<info>lilac tint</info>
+		</Macroline>
+		<Macroline index="94">
+			<text>[$myinput==170] Attribute colorrgb1 At 40.4; Attribute colorrgb2 At 40.1; Attribute colorrgb3 At 27.9</text>
+			<info>deep lavender</info>
+		</Macroline>
+		<Macroline index="95">
+			<text>[$myinput==172] Attribute colorrgb1 At 80.5; Attribute colorrgb2 At 46.1; Attribute colorrgb3 At 37.8</text>
+			<info>lagoon blue</info>
+		</Macroline>
+		<Macroline index="96">
+			<text>[$myinput==174] Attribute colorrgb1 At 57.4; Attribute colorrgb2 At 37.8; Attribute colorrgb3 At 26.6</text>
+			<info>dark steel blue</info>
+		</Macroline>
+		<Macroline index="97">
+			<text>[$myinput==176] Attribute colorrgb1 At 13.9; Attribute colorrgb2 At 27.4; Attribute colorrgb3 At 35.8</text>
+			<info>loving amber</info>
+		</Macroline>
+		<Macroline index="98">
+			<text>[$myinput==179] Attribute colorrgb1 At 10.9; Attribute colorrgb2 At 17.5; Attribute colorrgb3 At 95.8</text>
+			<info>chrome orange</info>
+		</Macroline>
+		<Macroline index="99">
+			<text>[$myinput==180] Attribute colorrgb1 At 81.2; Attribute colorrgb2 At 71.8; Attribute colorrgb3 At 46.8</text>
+			<info>dark lavender</info>
+		</Macroline>
+		<Macroline index="100">
+			<text>[$myinput==181] Attribute colorrgb1 At 96.9; Attribute colorrgb2 At 90.5; Attribute colorrgb3 At 68.4</text>
+			<info>congo blue</info>
+		</Macroline>
+		<Macroline index="101">
+			<text>[$myinput==182] Attribute colorrgb1 At 33.1; Attribute colorrgb2 At 76.1; Attribute colorrgb3 At 94.0</text>
+			<info>light red</info>
+		</Macroline>
+		<Macroline index="102">
+			<text>[$myinput==183] Attribute colorrgb1 At 82.2; Attribute colorrgb2 At 51.1; Attribute colorrgb3 At 38.8</text>
+			<info>moonlight blue</info>
+		</Macroline>
+		<Macroline index="103">
+			<text>[$myinput==184] Attribute colorrgb1 At 20.5; Attribute colorrgb2 At 21.4; Attribute colorrgb3 At 28.9</text>
+			<info>cosmetic peach</info>
+		</Macroline>
+		<Macroline index="104">
+			<text>[$myinput==185] Attribute colorrgb1 At 20.0; Attribute colorrgb2 At 21.5; Attribute colorrgb3 At 25.0</text>
+			<info>cosmetic burgundy</info>
+		</Macroline>
+		<Macroline index="105">
+			<text>[$myinput==186] Attribute colorrgb1 At 17.2; Attribute colorrgb2 At 20.4; Attribute colorrgb3 At 19.5</text>
+			<info>cosmetic silver rose</info>
+		</Macroline>
+		<Macroline index="106">
+			<text>[$myinput==187] Attribute colorrgb1 At 17.2; Attribute colorrgb2 At 18.8; Attribute colorrgb3 At 26.0</text>
+			<info>cosmetic rouge</info>
+		</Macroline>
+		<Macroline index="107">
+			<text>[$myinput==188] Attribute colorrgb1 At 15.9; Attribute colorrgb2 At 17.6; Attribute colorrgb3 At 23.5</text>
+			<info>cosmetic highlight</info>
+		</Macroline>
+		<Macroline index="108">
+			<text>[$myinput==189] Attribute colorrgb1 At 19.0; Attribute colorrgb2 At 14.7; Attribute colorrgb3 At 32.1</text>
+			<info>cosmetic silver moss</info>
+		</Macroline>
+		<Macroline index="109">
+			<text>[$myinput==190] Attribute colorrgb1 At 20.6; Attribute colorrgb2 At 17.6; Attribute colorrgb3 At 23.8</text>
+			<info>cosmetic emerald</info>
+		</Macroline>
+		<Macroline index="110">
+			<text>[$myinput==191] Attribute colorrgb1 At 21.4; Attribute colorrgb2 At 18.6; Attribute colorrgb3 At 19.5</text>
+			<info>cosmetic aqua blue</info>
+		</Macroline>
+		<Macroline index="111">
+			<text>[$myinput==192] Attribute colorrgb1 At 18.1; Attribute colorrgb2 At 44.1; Attribute colorrgb3 At 33.8</text>
+			<info>flesh pink</info>
+		</Macroline>
+		<Macroline index="112">
+			<text>[$myinput==193] Attribute colorrgb1 At 19.0; Attribute colorrgb2 At 43.2; Attribute colorrgb3 At 42.5</text>
+			<info>rosy amber</info>
+		</Macroline>
+		<Macroline index="113">
+			<text>[$myinput==194] Attribute colorrgb1 At 51.9; Attribute colorrgb2 At 44.9; Attribute colorrgb3 At 30.7</text>
+			<info>surprise pink</info>
+		</Macroline>
+		<Macroline index="114">
+			<text>[$myinput==195] Attribute colorrgb1 At 96.0; Attribute colorrgb2 At 82.9; Attribute colorrgb3 At 62.4</text>
+			<info>zenith blue</info>
+		</Macroline>
+		<Macroline index="115">
+			<text>[$myinput==196] Attribute colorrgb1 At 65.6; Attribute colorrgb2 At 41.2; Attribute colorrgb3 At 29.3</text>
+			<info>true blue</info>
+		</Macroline>
+		<Macroline index="116">
+			<text>[$myinput==197] Attribute colorrgb1 At 79.5; Attribute colorrgb2 At 61.4; Attribute colorrgb3 At 43.8</text>
+			<info>alice blue</info>
+		</Macroline>
+		<Macroline index="117">
+			<text>[$myinput==198] Attribute colorrgb1 At 94.4; Attribute colorrgb2 At 86.6; Attribute colorrgb3 At 68.4</text>
+			<info>palace blue</info>
+		</Macroline>
+		<Macroline index="118">
+			<text>[$myinput==199] Attribute colorrgb1 At 79.4; Attribute colorrgb2 At 67.4; Attribute colorrgb3 At 45.2</text>
+			<info>regal blue</info>
+		</Macroline>
+		<Macroline index="119">
+			<text>[$myinput==200] Attribute colorrgb1 At 74.8; Attribute colorrgb2 At 56.3; Attribute colorrgb3 At 38.8</text>
+			<info>double CT blue</info>
+		</Macroline>
+		<Macroline index="120">
+			<text>[$myinput==201] Attribute colorrgb1 At 49.1; Attribute colorrgb2 At 33.5; Attribute colorrgb3 At 23.6</text>
+			<info>full CT blue</info>
+		</Macroline>
+		<Macroline index="121">
+			<text>[$myinput==202] Attribute colorrgb1 At 30.7; Attribute colorrgb2 At 20.0; Attribute colorrgb3 At 14.3</text>
+			<info>1/2 CT blue</info>
+		</Macroline>
+		<Macroline index="122">
+			<text>[$myinput==203] Attribute colorrgb1 At 17.2; Attribute colorrgb2 At 10.7; Attribute colorrgb3 At 8.2</text>
+			<info>1/4 CT blue</info>
+		</Macroline>
+		<Macroline index="123">
+			<text>[$myinput==204] Attribute colorrgb1 At 9.2; Attribute colorrgb2 At 11.0; Attribute colorrgb3 At 61.5</text>
+			<info>full CT orange</info>
+		</Macroline>
+		<Macroline index="124">
+			<text>[$myinput==205] Attribute colorrgb1 At 6.5; Attribute colorrgb2 At 5.7; Attribute colorrgb3 At 39.4</text>
+			<info>1/2 CT orange</info>
+		</Macroline>
+		<Macroline index="125">
+			<text>[$myinput==206] Attribute colorrgb1 At 4.8; Attribute colorrgb2 At 3.7; Attribute colorrgb3 At 23.0</text>
+			<info>1/4 CT orange</info>
+		</Macroline>
+		<Macroline index="126">
+			<text>[$myinput==207] Attribute colorrgb1 At 23.6; Attribute colorrgb2 At 25.1; Attribute colorrgb3 At 69.2</text>
+			<info>full CT orange + .3ND</info>
+		</Macroline>
+		<Macroline index="127">
+			<text>[$myinput==208] Attribute colorrgb1 At 35.8; Attribute colorrgb2 At 37.3; Attribute colorrgb3 At 73.8</text>
+			<info>full CT orange + .6ND</info>
+		</Macroline>
+		<Macroline index="128">
+			<text>[$myinput==209] Attribute colorrgb1 At 16.6; Attribute colorrgb2 At 15.9; Attribute colorrgb3 At 17.9</text>
+			<info>.3 ND</info>
+		</Macroline>
+		<Macroline index="129">
+			<text>[$myinput==210] Attribute colorrgb1 At 30.1; Attribute colorrgb2 At 29.3; Attribute colorrgb3 At 31.5</text>
+			<info>.6 ND</info>
+		</Macroline>
+		<Macroline index="130">
+			<text>[$myinput==211] Attribute colorrgb1 At 40.9; Attribute colorrgb2 At 40.0; Attribute colorrgb3 At 41.8</text>
+			<info>.9 ND</info>
+		</Macroline>
+		<Macroline index="131">
+			<text>[$myinput==212] Attribute colorrgb1 At 6.9; Attribute colorrgb2 At 2.3; Attribute colorrgb3 At 23.4</text>
+			<info>LCT yellow</info>
+		</Macroline>
+		<Macroline index="132">
+			<text>[$myinput==213] Attribute colorrgb1 At 15.4; Attribute colorrgb2 At 5.4; Attribute colorrgb3 At 20.3</text>
+			<info>white flame green</info>
+		</Macroline>
+		<Macroline index="133">
+			<text>[$myinput==214] Attribute colorrgb1 At 31.8; Attribute colorrgb2 At 31.5; Attribute colorrgb3 At 33.1</text>
+			<info>full tough spun</info>
+		</Macroline>
+		<Macroline index="134">
+			<text>[$myinput==215] Attribute colorrgb1 At 16.7; Attribute colorrgb2 At 16.3; Attribute colorrgb3 At 17.6</text>
+			<info>half tough spun</info>
+		</Macroline>
+		<Macroline index="135">
+			<text>[$myinput==216] Attribute colorrgb1 At 26.9; Attribute colorrgb2 At 26.6; Attribute colorrgb3 At 29.5</text>
+			<info>white diffusion</info>
+		</Macroline>
+		<Macroline index="136">
+			<text>[$myinput==217] Attribute colorrgb1 At 27.5; Attribute colorrgb2 At 27.3; Attribute colorrgb3 At 31.5</text>
+			<info>blue diffusion</info>
+		</Macroline>
+		<Macroline index="137">
+			<text>[$myinput==218] Attribute colorrgb1 At 10.0; Attribute colorrgb2 At 6.6; Attribute colorrgb3 At 5.1</text>
+			<info>1/8 CT blue</info>
+		</Macroline>
+		<Macroline index="138">
+			<text>[$myinput==219] Attribute colorrgb1 At 54.1; Attribute colorrgb2 At 28.6; Attribute colorrgb3 At 37.3</text>
+			<info>lee fluorescent green</info>
+		</Macroline>
+		<Macroline index="139">
+			<text>[$myinput==220] Attribute colorrgb1 At 24.8; Attribute colorrgb2 At 25.7; Attribute colorrgb3 At 27.7</text>
+			<info>white frost</info>
+		</Macroline>
+		<Macroline index="140">
+			<text>[$myinput==221] Attribute colorrgb1 At 30.0; Attribute colorrgb2 At 30.6; Attribute colorrgb3 At 36.0</text>
+			<info>blue frost</info>
+		</Macroline>
+		<Macroline index="141">
+			<text>[$myinput==223] Attribute colorrgb1 At 3.4; Attribute colorrgb2 At 2.6; Attribute colorrgb3 At 13.3</text>
+			<info>1/8 CT orange</info>
+		</Macroline>
+		<Macroline index="142">
+			<text>[$myinput==224] Attribute colorrgb1 At 55.4; Attribute colorrgb2 At 46.3; Attribute colorrgb3 At 38.8</text>
+			<info>daylight blue frost</info>
+		</Macroline>
+		<Macroline index="143">
+			<text>[$myinput==225] Attribute colorrgb1 At 33.6; Attribute colorrgb2 At 32.3; Attribute colorrgb3 At 37.3</text>
+			<info>lee ND frost</info>
+		</Macroline>
+		<Macroline index="144">
+			<text>[$myinput==226] Attribute colorrgb1 At 3.6; Attribute colorrgb2 At 2.9; Attribute colorrgb3 At 5.9</text>
+			<info>lee UV</info>
+		</Macroline>
+		<Macroline index="145">
+			<text>[$myinput==228] Attribute colorrgb1 At 12.0; Attribute colorrgb2 At 11.6; Attribute colorrgb3 At 15.1</text>
+			<info>brushed silk</info>
+		</Macroline>
+		<Macroline index="146">
+			<text>[$myinput==229] Attribute colorrgb1 At 16.7; Attribute colorrgb2 At 16.3; Attribute colorrgb3 At 18.6</text>
+			<info>1/4 tough spun</info>
+		</Macroline>
+		<Macroline index="147">
+			<text>[$myinput==230] Attribute colorrgb1 At 22.1; Attribute colorrgb2 At 18.6; Attribute colorrgb3 At 44.4</text>
+			<info>super correction LCT yellow</info>
+		</Macroline>
+		<Macroline index="148">
+			<text>[$myinput==232] Attribute colorrgb1 At 16.8; Attribute colorrgb2 At 16.8; Attribute colorrgb3 At 53.6</text>
+			<info>super white flame green</info>
+		</Macroline>
+		<Macroline index="149">
+			<text>[$myinput==236] Attribute colorrgb1 At 10.9; Attribute colorrgb2 At 13.4; Attribute colorrgb3 At 56.7</text>
+			<info>HMI (to tungsten)</info>
+		</Macroline>
+		<Macroline index="150">
+			<text>[$myinput==237] Attribute colorrgb1 At 15.1; Attribute colorrgb2 At 21.4; Attribute colorrgb3 At 57.7</text>
+			<info>CID (to tungsten)</info>
+		</Macroline>
+		<Macroline index="151">
+			<text>[$myinput==238] Attribute colorrgb1 At 22.0; Attribute colorrgb2 At 26.0; Attribute colorrgb3 At 40.1</text>
+			<info>CSI (to tungsten)</info>
+		</Macroline>
+		<Macroline index="152">
+			<text>[$myinput==241] Attribute colorrgb1 At 49.2; Attribute colorrgb2 At 29.3; Attribute colorrgb3 At 27.3</text>
+			<info>lee fluorescent 5700 K</info>
+		</Macroline>
+		<Macroline index="153">
+			<text>[$myinput==242] Attribute colorrgb1 At 38.8; Attribute colorrgb2 At 22.0; Attribute colorrgb3 At 30.6</text>
+			<info>lee fluorescent 4300 K</info>
+		</Macroline>
+		<Macroline index="154">
+			<text>[$myinput==243] Attribute colorrgb1 At 31.7; Attribute colorrgb2 At 15.5; Attribute colorrgb3 At 32.4</text>
+			<info>lee fluorescent 3600 K</info>
+		</Macroline>
+		<Macroline index="155">
+			<text>[$myinput==244] Attribute colorrgb1 At 21.3; Attribute colorrgb2 At 7.6; Attribute colorrgb3 At 38.4</text>
+			<info>lee plus green</info>
+		</Macroline>
+		<Macroline index="156">
+			<text>[$myinput==245] Attribute colorrgb1 At 13.1; Attribute colorrgb2 At 4.8; Attribute colorrgb3 At 23.1</text>
+			<info>1/2 plus green</info>
+		</Macroline>
+		<Macroline index="157">
+			<text>[$myinput==246] Attribute colorrgb1 At 7.6; Attribute colorrgb2 At 3.4; Attribute colorrgb3 At 13.3</text>
+			<info>1/4 plus green</info>
+		</Macroline>
+		<Macroline index="158">
+			<text>[$myinput==247] Attribute colorrgb1 At 9.9; Attribute colorrgb2 At 19.4; Attribute colorrgb3 At 13.4</text>
+			<info>lee minus green</info>
+		</Macroline>
+		<Macroline index="159">
+			<text>[$myinput==248] Attribute colorrgb1 At 6.6; Attribute colorrgb2 At 11.8; Attribute colorrgb3 At 8.5</text>
+			<info>1/2 minus green</info>
+		</Macroline>
+		<Macroline index="160">
+			<text>[$myinput==249] Attribute colorrgb1 At 4.0; Attribute colorrgb2 At 6.6; Attribute colorrgb3 At 5.1</text>
+			<info>1/4 minus green</info>
+		</Macroline>
+		<Macroline index="161">
+			<text>[$myinput==250] Attribute colorrgb1 At 18.9; Attribute colorrgb2 At 18.6; Attribute colorrgb3 At 23.3</text>
+			<info>1/2 white diffusion</info>
+		</Macroline>
+		<Macroline index="162">
+			<text>[$myinput==251] Attribute colorrgb1 At 12.3; Attribute colorrgb2 At 12.0; Attribute colorrgb3 At 16.8</text>
+			<info>1/4 white diffusion</info>
+		</Macroline>
+		<Macroline index="163">
+			<text>[$myinput==252] Attribute colorrgb1 At 9.5; Attribute colorrgb2 At 9.2; Attribute colorrgb3 At 14.2</text>
+			<info>1/8 white diffusion</info>
+		</Macroline>
+		<Macroline index="164">
+			<text>[$myinput==253] Attribute colorrgb1 At 6.1; Attribute colorrgb2 At 5.7; Attribute colorrgb3 At 9.4</text>
+			<info>hampshire frost</info>
+		</Macroline>
+		<Macroline index="165">
+			<text>[$myinput==254] Attribute colorrgb1 At 7.3; Attribute colorrgb2 At 6.9; Attribute colorrgb3 At 11.3</text>
+			<info>new hampshire frost</info>
+		</Macroline>
+		<Macroline index="166">
+			<text>[$myinput==255] Attribute colorrgb1 At 9.2; Attribute colorrgb2 At 8.9; Attribute colorrgb3 At 11.7</text>
+			<info>hollywood frost</info>
+		</Macroline>
+		<Macroline index="167">
+			<text>[$myinput==256] Attribute colorrgb1 At 2.2; Attribute colorrgb2 At 1.8; Attribute colorrgb3 At 3.0</text>
+			<info>1/2 hampshire frost</info>
+		</Macroline>
+		<Macroline index="168">
+			<text>[$myinput==257] Attribute colorrgb1 At 3.8; Attribute colorrgb2 At 3.4; Attribute colorrgb3 At 5.3</text>
+			<info>1/4 hampshire frost</info>
+		</Macroline>
+		<Macroline index="169">
+			<text>[$myinput==258] Attribute colorrgb1 At 5.2; Attribute colorrgb2 At 4.8; Attribute colorrgb3 At 7.1</text>
+			<info>1/8 hampshire frost</info>
+		</Macroline>
+		<Macroline index="170">
+			<text>[$myinput==261] Attribute colorrgb1 At 35.1; Attribute colorrgb2 At 34.9; Attribute colorrgb3 At 39.0</text>
+			<info>tough spun fr - full</info>
+		</Macroline>
+		<Macroline index="171">
+			<text>[$myinput==262] Attribute colorrgb1 At 25.7; Attribute colorrgb2 At 25.4; Attribute colorrgb3 At 28.9</text>
+			<info>tough spun fr - 3/4</info>
+		</Macroline>
+		<Macroline index="172">
+			<text>[$myinput==263] Attribute colorrgb1 At 16.7; Attribute colorrgb2 At 16.3; Attribute colorrgb3 At 20.3</text>
+			<info>tough spun fr - 1/2</info>
+		</Macroline>
+		<Macroline index="173">
+			<text>[$myinput==264] Attribute colorrgb1 At 19.8; Attribute colorrgb2 At 19.5; Attribute colorrgb3 At 24.2</text>
+			<info>tough spun fr - 3/8</info>
+		</Macroline>
+		<Macroline index="174">
+			<text>[$myinput==269] Attribute colorrgb1 At 8.2; Attribute colorrgb2 At 7.9; Attribute colorrgb3 At 12.2</text>
+			<info>lee heat shield</info>
+		</Macroline>
+		<Macroline index="175">
+			<text>[$myinput==270] Attribute colorrgb1 At 5.8; Attribute colorrgb2 At 5.4; Attribute colorrgb3 At 6.9</text>
+			<info>lee scrim</info>
+		</Macroline>
+		<Macroline index="176">
+			<text>[$myinput==275] Attribute colorrgb1 At 32.6; Attribute colorrgb2 At 32.3; Attribute colorrgb3 At 35.5</text>
+			<info>black scrim</info>
+		</Macroline>
+		<Macroline index="177">
+			<text>[$myinput==278] Attribute colorrgb1 At 4.6; Attribute colorrgb2 At 2.3; Attribute colorrgb3 At 7.7</text>
+			<info>1/8 plus green</info>
+		</Macroline>
+		<Macroline index="178">
+			<text>[$myinput==279] Attribute colorrgb1 At 3.4; Attribute colorrgb2 At 5.3; Attribute colorrgb3 At 4.2</text>
+			<info>1/8 minus green</info>
+		</Macroline>
+		<Macroline index="179">
+			<text>[$myinput==281] Attribute colorrgb1 At 43.2; Attribute colorrgb2 At 28.9; Attribute colorrgb3 At 20.5</text>
+			<info>3/4 CT blue</info>
+		</Macroline>
+		<Macroline index="180">
+			<text>[$myinput==285] Attribute colorrgb1 At 7.6; Attribute colorrgb2 At 7.9; Attribute colorrgb3 At 53.2</text>
+			<info>3/4 CT orange</info>
+		</Macroline>
+		<Macroline index="181">
+			<text>[$myinput==298] Attribute colorrgb1 At 16.2; Attribute colorrgb2 At 15.5; Attribute colorrgb3 At 21.5</text>
+			<info>.15 ND</info>
+		</Macroline>
+		<Macroline index="182">
+			<text>[$myinput==299] Attribute colorrgb1 At 52.7; Attribute colorrgb2 At 53.1; Attribute colorrgb3 At 53.1</text>
+			<info>1.2 ND</info>
+		</Macroline>
+		<Macroline index="183">
+			<text>[$myinput==322] Attribute colorrgb1 At 58.8; Attribute colorrgb2 At 26.0; Attribute colorrgb3 At 39.6</text>
+			<info>soft green</info>
+		</Macroline>
+		<Macroline index="184">
+			<text>[$myinput==323] Attribute colorrgb1 At 69.9; Attribute colorrgb2 At 30.7; Attribute colorrgb3 At 44.1</text>
+			<info>jade</info>
+		</Macroline>
+		<Macroline index="185">
+			<text>[$myinput==325] Attribute colorrgb1 At 87.6; Attribute colorrgb2 At 52.7; Attribute colorrgb3 At 71.8</text>
+			<info>mallard green</info>
+		</Macroline>
+		<Macroline index="186">
+			<text>[$myinput==327] Attribute colorrgb1 At 80.5; Attribute colorrgb2 At 55.3; Attribute colorrgb3 At 75.4</text>
+			<info>forest green</info>
+		</Macroline>
+		<Macroline index="187">
+			<text>[$myinput==328] Attribute colorrgb1 At 26.6; Attribute colorrgb2 At 61.7; Attribute colorrgb3 At 37.0</text>
+			<info>follies pink</info>
+		</Macroline>
+		<Macroline index="188">
+			<text>[$myinput==332] Attribute colorrgb1 At 33.1; Attribute colorrgb2 At 78.5; Attribute colorrgb3 At 60.9</text>
+			<info>special rose pink</info>
+		</Macroline>
+		<Macroline index="189">
+			<text>[$myinput==341] Attribute colorrgb1 At 33.1; Attribute colorrgb2 At 42.3; Attribute colorrgb3 At 34.2</text>
+			<info>plum</info>
+		</Macroline>
+		<Macroline index="190">
+			<text>[$myinput==343] Attribute colorrgb1 At 85.9; Attribute colorrgb2 At 77.7; Attribute colorrgb3 At 52.7</text>
+			<info>special medium lavender</info>
+		</Macroline>
+		<Macroline index="191">
+			<text>[$myinput==344] Attribute colorrgb1 At 63.7; Attribute colorrgb2 At 51.2; Attribute colorrgb3 At 34.9</text>
+			<info>violet</info>
+		</Macroline>
+		<Macroline index="192">
+			<text>[$myinput==345] Attribute colorrgb1 At 54.4; Attribute colorrgb2 At 56.4; Attribute colorrgb3 At 35.8</text>
+			<info>fuchsia pink</info>
+		</Macroline>
+		<Macroline index="193">
+			<text>[$myinput==352] Attribute colorrgb1 At 73.4; Attribute colorrgb2 At 47.1; Attribute colorrgb3 At 34.9</text>
+			<info>glacier blue</info>
+		</Macroline>
+		<Macroline index="194">
+			<text>[$myinput==353] Attribute colorrgb1 At 61.4; Attribute colorrgb2 At 32.8; Attribute colorrgb3 At 24.8</text>
+			<info>lighter blue</info>
+		</Macroline>
+		<Macroline index="195">
+			<text>[$myinput==354] Attribute colorrgb1 At 66.6; Attribute colorrgb2 At 30.9; Attribute colorrgb3 At 26.6</text>
+			<info>special steel blue</info>
+		</Macroline>
+		<Macroline index="196">
+			<text>[$myinput==363] Attribute colorrgb1 At 96.5; Attribute colorrgb2 At 83.0; Attribute colorrgb3 At 62.4</text>
+			<info>special medium blue</info>
+		</Macroline>
+		<Macroline index="197">
+			<text>[$myinput==366] Attribute colorrgb1 At 69.7; Attribute colorrgb2 At 50.7; Attribute colorrgb3 At 37.8</text>
+			<info>cornflower</info>
+		</Macroline>
+		<Macroline index="198">
+			<text>[$myinput==400] Attribute colorrgb1 At 25.7; Attribute colorrgb2 At 25.4; Attribute colorrgb3 At 28.0</text>
+			<info>lee lux</info>
+		</Macroline>
+		<Macroline index="199">
+			<text>[$myinput==410] Attribute colorrgb1 At 17.4; Attribute colorrgb2 At 16.8; Attribute colorrgb3 At 23.6</text>
+			<info>opal frost</info>
+		</Macroline>
+		<Macroline index="200">
+			<text>[$myinput==416] Attribute colorrgb1 At 25.7; Attribute colorrgb2 At 25.4; Attribute colorrgb3 At 31.2</text>
+			<info>3/4 white diffusion</info>
+		</Macroline>
+		<Macroline index="201">
+			<text>[$myinput==420] Attribute colorrgb1 At 7.9; Attribute colorrgb2 At 7.6; Attribute colorrgb3 At 12.3</text>
+			<info>light opal frost</info>
+		</Macroline>
+		<Macroline index="202">
+			<text>[$myinput==441] Attribute colorrgb1 At 10.2; Attribute colorrgb2 At 11.3; Attribute colorrgb3 At 64.8</text>
+			<info>full CT straw</info>
+		</Macroline>
+		<Macroline index="203">
+			<text>[$myinput==442] Attribute colorrgb1 At 9.3; Attribute colorrgb2 At 6.3; Attribute colorrgb3 At 42.0</text>
+			<info>1/2 CT straw</info>
+		</Macroline>
+		<Macroline index="204">
+			<text>[$myinput==443] Attribute colorrgb1 At 6.9; Attribute colorrgb2 At 4.3; Attribute colorrgb3 At 24.2</text>
+			<info>1/4 CT straw</info>
+		</Macroline>
+		<Macroline index="205">
+			<text>[$myinput==444] Attribute colorrgb1 At 5.2; Attribute colorrgb2 At 3.7; Attribute colorrgb3 At 13.5</text>
+			<info>1/8 CT straw</info>
+		</Macroline>
+		<Macroline index="206">
+			<text>[$myinput==450] Attribute colorrgb1 At 19.3; Attribute colorrgb2 At 19.0; Attribute colorrgb3 At 25.4</text>
+			<info>3/8 white diffusion</info>
+		</Macroline>
+		<Macroline index="207">
+			<text>[$myinput==452] Attribute colorrgb1 At 8.9; Attribute colorrgb2 At 8.5; Attribute colorrgb3 At 12.5</text>
+			<info>1/16 white diffusion</info>
+		</Macroline>
+		<Macroline index="208">
+			<text>[$myinput==604] Attribute colorrgb1 At .0; Attribute colorrgb2 At 23.9; Attribute colorrgb3 At 41.6</text>
+			<info>full CT eight five</info>
+		</Macroline>
+		<Macroline index="209">
+			<text>[$myinput==642] Attribute colorrgb1 At 41.2; Attribute colorrgb2 At 49.0; Attribute colorrgb3 At 100.0</text>
+			<info>half mustard yellow</info>
+		</Macroline>
+		<Macroline index="210">
+			<text>[$myinput==643] Attribute colorrgb1 At 29.4; Attribute colorrgb2 At 37.3; Attribute colorrgb3 At 100.0</text>
+			<info>quarter mustard yellow</info>
+		</Macroline>
+		<Macroline index="211">
+			<text>[$myinput==650] Attribute colorrgb1 At 21.6; Attribute colorrgb2 At 34.1; Attribute colorrgb3 At 61.6</text>
+			<info>industrial sodium</info>
+		</Macroline>
+		<Macroline index="212">
+			<text>[$myinput==651] Attribute colorrgb1 At .0; Attribute colorrgb2 At 39.2; Attribute colorrgb3 At 62.7</text>
+			<info>HI sodium</info>
+		</Macroline>
+		<Macroline index="213">
+			<text>[$myinput==652] Attribute colorrgb1 At .0; Attribute colorrgb2 At 49.0; Attribute colorrgb3 At 72.5</text>
+			<info>urban sodium</info>
+		</Macroline>
+		<Macroline index="214">
+			<text>[$myinput==653] Attribute colorrgb1 At 41.2; Attribute colorrgb2 At 66.7; Attribute colorrgb3 At 100.0</text>
+			<info>LO sodium</info>
+		</Macroline>
+		<Macroline index="215">
+			<text>[$myinput==700] Attribute colorrgb1 At 51.0; Attribute colorrgb2 At 100.0; Attribute colorrgb3 At 19.6</text>
+			<info>perfect lavender</info>
+		</Macroline>
+		<Macroline index="216">
+			<text>[$myinput==701] Attribute colorrgb1 At 75.9; Attribute colorrgb2 At 71.5; Attribute colorrgb3 At 50.5</text>
+			<info>provence</info>
+		</Macroline>
+		<Macroline index="217">
+			<text>[$myinput==702] Attribute colorrgb1 At 24.7; Attribute colorrgb2 At 20.3; Attribute colorrgb3 At 14.3</text>
+			<info>special pale lavender</info>
+		</Macroline>
+		<Macroline index="218">
+			<text>[$myinput==703] Attribute colorrgb1 At 17.6; Attribute colorrgb2 At 49.0; Attribute colorrgb3 At 13.7</text>
+			<info>cold lavender</info>
+		</Macroline>
+		<Macroline index="219">
+			<text>[$myinput==704] Attribute colorrgb1 At 34.5; Attribute colorrgb2 At 32.9; Attribute colorrgb3 At 20.5</text>
+			<info>lily</info>
+		</Macroline>
+		<Macroline index="220">
+			<text>[$myinput==705] Attribute colorrgb1 At 40.3; Attribute colorrgb2 At 40.3; Attribute colorrgb3 At 25.4</text>
+			<info>lily frost</info>
+		</Macroline>
+		<Macroline index="221">
+			<text>[$myinput==706] Attribute colorrgb1 At 56.9; Attribute colorrgb2 At 72.5; Attribute colorrgb3 At 21.6</text>
+			<info>kings fals lavender</info>
+		</Macroline>
+		<Macroline index="222">
+			<text>[$myinput==707] Attribute colorrgb1 At 94.1; Attribute colorrgb2 At 88.1; Attribute colorrgb3 At 62.4</text>
+			<info>ultimate frost</info>
+		</Macroline>
+		<Macroline index="223">
+			<text>[$myinput==708] Attribute colorrgb1 At 40.1; Attribute colorrgb2 At 32.4; Attribute colorrgb3 At 27.9</text>
+			<info>cool lavender</info>
+		</Macroline>
+		<Macroline index="224">
+			<text>[$myinput==709] Attribute colorrgb1 At 45.9; Attribute colorrgb2 At 34.3; Attribute colorrgb3 At 24.2</text>
+			<info>electric lilac</info>
+		</Macroline>
+		<Macroline index="225">
+			<text>[$myinput==710] Attribute colorrgb1 At 45.1; Attribute colorrgb2 At 37.3; Attribute colorrgb3 At 5.9</text>
+			<info>spir special blue</info>
+		</Macroline>
+		<Macroline index="226">
+			<text>[$myinput==711] Attribute colorrgb1 At 63.1; Attribute colorrgb2 At 53.1; Attribute colorrgb3 At 41.1</text>
+			<info>cold blue</info>
+		</Macroline>
+		<Macroline index="227">
+			<text>[$myinput==712] Attribute colorrgb1 At 72.4; Attribute colorrgb2 At 54.1; Attribute colorrgb3 At 37.8</text>
+			<info>bedford blue</info>
+		</Macroline>
+		<Macroline index="228">
+			<text>[$myinput==713] Attribute colorrgb1 At 98.5; Attribute colorrgb2 At 90.0; Attribute colorrgb3 At 68.4</text>
+			<info>j winter blue</info>
+		</Macroline>
+		<Macroline index="229">
+			<text>[$myinput==714] Attribute colorrgb1 At 90.5; Attribute colorrgb2 At 73.3; Attribute colorrgb3 At 52.7</text>
+			<info>elysian blue</info>
+		</Macroline>
+		<Macroline index="230">
+			<text>[$myinput==715] Attribute colorrgb1 At 92.6; Attribute colorrgb2 At 77.0; Attribute colorrgb3 At 52.7</text>
+			<info>cabana blue</info>
+		</Macroline>
+		<Macroline index="231">
+			<text>[$myinput==716] Attribute colorrgb1 At 97.1; Attribute colorrgb2 At 85.0; Attribute colorrgb3 At 62.4</text>
+			<info>mikkel blue</info>
+		</Macroline>
+		<Macroline index="232">
+			<text>[$myinput==717] Attribute colorrgb1 At 52.7; Attribute colorrgb2 At 37.3; Attribute colorrgb3 At 26.0</text>
+			<info>shanklin frost</info>
+		</Macroline>
+		<Macroline index="233">
+			<text>[$myinput==718] Attribute colorrgb1 At 34.7; Attribute colorrgb2 At 23.4; Attribute colorrgb3 At 17.2</text>
+			<info>half shanklin frost</info>
+		</Macroline>
+		<Macroline index="234">
+			<text>[$myinput==719] Attribute colorrgb1 At 70.5; Attribute colorrgb2 At 51.6; Attribute colorrgb3 At 36.8</text>
+			<info>colour wash blue</info>
+		</Macroline>
+		<Macroline index="235">
+			<text>[$myinput==720] Attribute colorrgb1 At 47.3; Attribute colorrgb2 At 36.5; Attribute colorrgb3 At 25.4</text>
+			<info>durham daylight frost</info>
+		</Macroline>
+		<Macroline index="236">
+			<text>[$myinput==721] Attribute colorrgb1 At 93.7; Attribute colorrgb2 At 76.9; Attribute colorrgb3 At 55.3</text>
+			<info>berry blue</info>
+		</Macroline>
+		<Macroline index="237">
+			<text>[$myinput==722] Attribute colorrgb1 At 94.8; Attribute colorrgb2 At 77.3; Attribute colorrgb3 At 58.4</text>
+			<info>bray blue</info>
+		</Macroline>
+		<Macroline index="238">
+			<text>[$myinput==723] Attribute colorrgb1 At 89.6; Attribute colorrgb2 At 75.5; Attribute colorrgb3 At 58.4</text>
+			<info>virgin blue</info>
+		</Macroline>
+		<Macroline index="239">
+			<text>[$myinput==724] Attribute colorrgb1 At 64.3; Attribute colorrgb2 At 37.5; Attribute colorrgb3 At 27.3</text>
+			<info>ocean blue</info>
+		</Macroline>
+		<Macroline index="240">
+			<text>[$myinput==725] Attribute colorrgb1 At 39.7; Attribute colorrgb2 At 21.2; Attribute colorrgb3 At 15.9</text>
+			<info>old steel blue</info>
+		</Macroline>
+		<Macroline index="241">
+			<text>[$myinput==727] Attribute colorrgb1 At 100.0; Attribute colorrgb2 At 35.3; Attribute colorrgb3 At 29.4</text>
+			<info>QFD blue</info>
+		</Macroline>
+		<Macroline index="242">
+			<text>[$myinput==728] Attribute colorrgb1 At 38.3; Attribute colorrgb2 At 22.2; Attribute colorrgb3 At 21.0</text>
+			<info>steel green</info>
+		</Macroline>
+		<Macroline index="243">
+			<text>[$myinput==729] Attribute colorrgb1 At 68.6; Attribute colorrgb2 At 42.5; Attribute colorrgb3 At 41.1</text>
+			<info>scuba blue</info>
+		</Macroline>
+		<Macroline index="244">
+			<text>[$myinput==730] Attribute colorrgb1 At 29.6; Attribute colorrgb2 At 19.5; Attribute colorrgb3 At 26.4</text>
+			<info>liberty green</info>
+		</Macroline>
+		<Macroline index="245">
+			<text>[$myinput==731] Attribute colorrgb1 At 11.8; Attribute colorrgb2 At 2.0; Attribute colorrgb3 At 15.7</text>
+			<info>dirty ice</info>
+		</Macroline>
+		<Macroline index="246">
+			<text>[$myinput==733] Attribute colorrgb1 At 7.8; Attribute colorrgb2 At 3.1; Attribute colorrgb3 At 18.8</text>
+			<info>damp squib</info>
+		</Macroline>
+		<Macroline index="247">
+			<text>[$myinput==735] Attribute colorrgb1 At 88.3; Attribute colorrgb2 At 46.8; Attribute colorrgb3 At 78.3</text>
+			<info>velvet green</info>
+		</Macroline>
+		<Macroline index="248">
+			<text>[$myinput==736] Attribute colorrgb1 At 89.7; Attribute colorrgb2 At 50.5; Attribute colorrgb3 At 95.7</text>
+			<info>twickenham green</info>
+		</Macroline>
+		<Macroline index="249">
+			<text>[$myinput==738] Attribute colorrgb1 At 58.3; Attribute colorrgb2 At 17.6; Attribute colorrgb3 At 85.8</text>
+			<info>jas green</info>
+		</Macroline>
+		<Macroline index="250">
+			<text>[$myinput==740] Attribute colorrgb1 At 64.7; Attribute colorrgb2 At 56.9; Attribute colorrgb3 At 100.0</text>
+			<info>aurora borealis green</info>
+		</Macroline>
+		<Macroline index="251">
+			<text>[$myinput==741] Attribute colorrgb1 At 49.0; Attribute colorrgb2 At 60.8; Attribute colorrgb3 At 100.0</text>
+			<info>mustard yellow</info>
+		</Macroline>
+		<Macroline index="252">
+			<text>[$myinput==742] Attribute colorrgb1 At 11.8; Attribute colorrgb2 At 39.2; Attribute colorrgb3 At 68.6</text>
+			<info>bram brown</info>
+		</Macroline>
+		<Macroline index="253">
+			<text>[$myinput==744] Attribute colorrgb1 At 11.6; Attribute colorrgb2 At 10.6; Attribute colorrgb3 At 65.6</text>
+			<info>dirty white</info>
+		</Macroline>
+		<Macroline index="254">
+			<text>[$myinput==746] Attribute colorrgb1 At 68.4; Attribute colorrgb2 At 72.6; Attribute colorrgb3 At 91.7</text>
+			<info>brown</info>
+		</Macroline>
+		<Macroline index="255">
+			<text>[$myinput==747] Attribute colorrgb1 At 23.1; Attribute colorrgb2 At 29.4; Attribute colorrgb3 At 45.4</text>
+			<info>easy white</info>
+		</Macroline>
+		<Macroline index="256">
+			<text>[$myinput==748] Attribute colorrgb1 At 31.5; Attribute colorrgb2 At 43.9; Attribute colorrgb3 At 38.8</text>
+			<info>seedy pink</info>
+		</Macroline>
+		<Macroline index="257">
+			<text>[$myinput==749] Attribute colorrgb1 At 6.6; Attribute colorrgb2 At 12.5; Attribute colorrgb3 At 16.2</text>
+			<info>hampshire rose</info>
+		</Macroline>
+		<Macroline index="258">
+			<text>[$myinput==750] Attribute colorrgb1 At 4.9; Attribute colorrgb2 At 4.6; Attribute colorrgb3 At 5.7</text>
+			<info>durham frost</info>
+		</Macroline>
+		<Macroline index="259">
+			<text>[$myinput==763] Attribute colorrgb1 At 6.7; Attribute colorrgb2 At 2.9; Attribute colorrgb3 At 28.4</text>
+			<info>wheat</info>
+		</Macroline>
+		<Macroline index="260">
+			<text>[$myinput==764] Attribute colorrgb1 At 8.9; Attribute colorrgb2 At 4.0; Attribute colorrgb3 At 41.6</text>
+			<info>sun colour straw</info>
+		</Macroline>
+		<Macroline index="261">
+			<text>[$myinput==765] Attribute colorrgb1 At 10.4; Attribute colorrgb2 At 4.0; Attribute colorrgb3 At 54.8</text>
+			<info>lee yellow</info>
+		</Macroline>
+		<Macroline index="262">
+			<text>[$myinput==767] Attribute colorrgb1 At 14.0; Attribute colorrgb2 At 6.6; Attribute colorrgb3 At 94.9</text>
+			<info>oklahoma yellow</info>
+		</Macroline>
+		<Macroline index="263">
+			<text>[$myinput==768] Attribute colorrgb1 At .0; Attribute colorrgb2 At 22.4; Attribute colorrgb3 At 100.0</text>
+			<info>egg yolk yellow</info>
+		</Macroline>
+		<Macroline index="264">
+			<text>[$myinput==770] Attribute colorrgb1 At 12.0; Attribute colorrgb2 At 23.4; Attribute colorrgb3 At 97.2</text>
+			<info>burnt yellow</info>
+		</Macroline>
+		<Macroline index="265">
+			<text>[$myinput==773] Attribute colorrgb1 At 1.2; Attribute colorrgb2 At 22.7; Attribute colorrgb3 At 30.2</text>
+			<info>cardbox amber</info>
+		</Macroline>
+		<Macroline index="266">
+			<text>[$myinput==774] Attribute colorrgb1 At 7.6; Attribute colorrgb2 At 11.2; Attribute colorrgb3 At 33.7</text>
+			<info>soft amber key 1</info>
+		</Macroline>
+		<Macroline index="267">
+			<text>[$myinput==775] Attribute colorrgb1 At 8.2; Attribute colorrgb2 At 13.2; Attribute colorrgb3 At 42.0</text>
+			<info>soft amber key 2</info>
+		</Macroline>
+		<Macroline index="268">
+			<text>[$myinput==776] Attribute colorrgb1 At 10.2; Attribute colorrgb2 At 17.6; Attribute colorrgb3 At 52.1</text>
+			<info>nectarine</info>
+		</Macroline>
+		<Macroline index="269">
+			<text>[$myinput==777] Attribute colorrgb1 At 19.5; Attribute colorrgb2 At 31.5; Attribute colorrgb3 At 65.3</text>
+			<info>rust</info>
+		</Macroline>
+		<Macroline index="270">
+			<text>[$myinput==778] Attribute colorrgb1 At 20.0; Attribute colorrgb2 At 47.6; Attribute colorrgb3 At 95.3</text>
+			<info>millennium gold</info>
+		</Macroline>
+		<Macroline index="271">
+			<text>[$myinput==779] Attribute colorrgb1 At 14.3; Attribute colorrgb2 At 39.8; Attribute colorrgb3 At 61.3</text>
+			<info>bastard pink</info>
+		</Macroline>
+		<Macroline index="272">
+			<text>[$myinput==780] Attribute colorrgb1 At .0; Attribute colorrgb2 At 56.5; Attribute colorrgb3 At 100.0</text>
+			<info>AS golden amber</info>
+		</Macroline>
+		<Macroline index="273">
+			<text>[$myinput==781] Attribute colorrgb1 At 25.4; Attribute colorrgb2 At 62.8; Attribute colorrgb3 At 95.6</text>
+			<info>terry red</info>
+		</Macroline>
+		<Macroline index="274">
+			<text>[$myinput==787] Attribute colorrgb1 At 27.5; Attribute colorrgb2 At 100.0; Attribute colorrgb3 At 76.5</text>
+			<info>marius red</info>
+		</Macroline>
+		<Macroline index="275">
+			<text>[$myinput==789] Attribute colorrgb1 At 62.4; Attribute colorrgb2 At 86.3; Attribute colorrgb3 At 92.9</text>
+			<info>blood red</info>
+		</Macroline>
+		<Macroline index="276">
+			<text>[$myinput==790] Attribute colorrgb1 At 10.2; Attribute colorrgb2 At 19.7; Attribute colorrgb3 At 27.1</text>
+			<info>moroccan pink</info>
+		</Macroline>
+		<Macroline index="277">
+			<text>[$myinput==791] Attribute colorrgb1 At 15.9; Attribute colorrgb2 At 24.5; Attribute colorrgb3 At 32.4</text>
+			<info>moroccan frost</info>
+		</Macroline>
+		<Macroline index="278">
+			<text>[$myinput==793] Attribute colorrgb1 At 33.1; Attribute colorrgb2 At 77.4; Attribute colorrgb3 At 53.6</text>
+			<info>vanity fair</info>
+		</Macroline>
+		<Macroline index="279">
+			<text>[$myinput==794] Attribute colorrgb1 At 13.1; Attribute colorrgb2 At 28.1; Attribute colorrgb3 At 17.9</text>
+			<info>pretty &apos;n pink</info>
+		</Macroline>
+		<Macroline index="280">
+			<text>[$myinput==795] Attribute colorrgb1 At 33.1; Attribute colorrgb2 At 71.2; Attribute colorrgb3 At 40.7</text>
+			<info>magical magenta</info>
+		</Macroline>
+		<Macroline index="281">
+			<text>[$myinput==797] Attribute colorrgb1 At 73.9; Attribute colorrgb2 At 86.7; Attribute colorrgb3 At 55.3</text>
+			<info>deep purple</info>
+		</Macroline>
+		<Macroline index="282">
+			<text>[$myinput==798] Attribute colorrgb1 At 86.0; Attribute colorrgb2 At 81.9; Attribute colorrgb3 At 55.3</text>
+			<info>chrysalis pink</info>
+		</Macroline>
+		<Macroline index="283">
+			<text>[$myinput==799] Attribute colorrgb1 At 76.5; Attribute colorrgb2 At 100.0; Attribute colorrgb3 At 29.4</text>
+			<info>special KH lavender</info>
+		</Macroline>
+	</Macro>
+</MA>

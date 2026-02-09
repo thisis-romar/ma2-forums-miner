@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.4/MA.xsd" major_vers="3" minor_vers="3" stream_vers="4">
+	<Macro index="1" name="Create Gel">
+		<Macroline index="0">
+			<text>SetVar $gelpoolnumber (Pool Number); [$gelpool&gt;=0] Macro 1.&quot;create gel&quot;.3</text>
+			<info>Set Gelpool Var</info>
+		</Macroline>
+		<Macroline index="1">
+			<text>SetVar $gelpool (&quot;Pool Name&quot;)</text>
+			<info>Set Gelpool Var</info>
+		</Macroline>
+		<Macroline index="2">
+			<text>SetVar $gelnumber (Color Number); SetVar $gelname (&quot;Color Name&quot;)</text>
+			<info>Set Gel Var</info>
+		</Macroline>
+		<Macroline index="3">
+			<text>SetVar $gelkey (&quot;Key&quot;); SetVar $gelcolor (Color R+G+B)</text>
+			<info>Set Key and Color</info>
+		</Macroline>
+		<Macroline index="4">
+			<text>Store Gel $gelpoolnumber $&quot;gelpool&quot;</text>
+			<info>Store Gelpool</info>
+		</Macroline>
+		<Macroline index="5">
+			<text>Store Gel $gelpoolnumber.$gelnumber $&quot;gelname&quot;</text>
+			<info>Store Gel</info>
+		</Macroline>
+		<Macroline index="6">
+			<text>Assign Gel $gelpoolnumber.$gelnumber /key=$gelkey /color=$gelcolor</text>
+			<info>Assign Key and Color</info>
+		</Macroline>
+	</Macro>
+</MA>

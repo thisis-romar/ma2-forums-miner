@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "F Dijkers",
+  "post_date": null,
+  "post_text": "October 7, 2019 at 8:08 PM#1Hi guys,I just finished the cloning-part of my clone/PSR page in my showfile. I writed my macros to clone all my presets and stuff to the PSR-imported groups. But to make sure my effects will take the new groups (I just cloned my information to), I will have to do the following:- Open the effects I want to update (for example spot dim saw).- Select my PSR-imported group with the cloned information- Click \"take selection\" in the effect editor- Clear twiceIs there a way to do this by a macro? But like, for al my main groups apart. So spots, beams, wash, LED1, LED2, Strobes and blinders.I will have to make a macro for all those groups apart, but I just aren't experienced enough in advanced macro-writing to know exactly what syntax I need here.If you have any questions please reply, I'd love to solve this and fasten my cloning-process.Kind regards,Floris DijkersLighting Director & Designerflorisdijkers.comlighting@florisdijkers.com",
+  "replies": 0,
+  "thread_id": "64769",
+  "title": "Macro or syntax to update effects after cloning",
+  "url": "https://forum.malighting.com/forum/thread/64769-macro-or-syntax-to-update-effects-after-cloning/",
+  "views": 0
+}

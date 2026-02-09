@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.1.229/MA.xsd" major_vers="3" minor_vers="1" stream_vers="229">
+	<Info datetime="2016-04-10T17:18:15" showfile="new show 2016-04-10t14-13-39" />
+	<Macro index="1" name="Test Midi Note" timing="true">
+		<InfoItems>
+			<Info date="2016-04-10T17:01:58">Macro &quot;Test Midi Note&quot;
+=======================
+(c)4/2016 Frank Ploeger
+
+
+!Attention! Do not change the macro-name!
+
+
+Description:
+============
+On first run the macro will ask the user for a number.
+This is the midi-note, range from 0 to 127.
+Then the macro will execute the command midinote to
+send a midinote with the given number and velocity 127
+on the midi-channel given in MSC-setup.
+
+The macro will stay active waiting for another GO to
+repeat sending the given note.
+
+Stopping the macro with OFF-command will reset the
+given note-number.
+
+Restarting the macro will ask for a number again.</Info>
+		</InfoItems>
+		<Macroline index="0" disabled="true">
+			<text>WARNING! Don&apos;t Edit Macro -label!</text>
+			<info>last line calls macro by name</info>
+		</Macroline>
+		<Macroline index="1" disabled="true">
+			<text>please read Info On Macro On any details</text>
+			<info>(c)04/2016 Frank Ploeger</info>
+		</Macroline>
+		<Macroline index="2">
+			<text>SetVar $note = -1</text>
+			<info>set global default for $note (Makro will search for local/Uservar first then global if no uservar was found)</info>
+		</Macroline>
+		<Macroline index="3">
+			<text>[$note==-1] SetUserVar $note = (Note number [0..127])</text>
+			<info>if Uservar $note not exists...</info>
+		</Macroline>
+		<Macroline index="4">
+			<text>[$note&gt;127] SetUserVar $note</text>
+			<info>Error-handling wrong userinput</info>
+		</Macroline>
+		<Macroline index="5">
+			<text>[$note&lt;0] SetUserVar $note</text>
+			<info>Error-handling wrong userinput</info>
+		</Macroline>
+		<Macroline index="6">
+			<text>[$note==-1] Top Macro &quot;Test Midi Note&quot;</text>
+			<info>repeat asking for correct input</info>
+		</Macroline>
+		<Macroline index="7">
+			<text>[$note&gt;=0] MidiNote $note 127</text>
+			<info>if $note is set send note</info>
+		</Macroline>
+		<Macroline index="8">
+			<text>SetUserVar $backupnote = $note</text>
+			<info>backup note</info>
+		</Macroline>
+		<Macroline index="9" delay="-1">
+			<text>SetUserVar $note</text>
+			<info>delete $note to reset if macro is stopped</info>
+		</Macroline>
+		<Macroline index="10">
+			<text>SetUserVar $note = $backupnote</text>
+			<info>restore note if user recalls macro in repeat</info>
+		</Macroline>
+		<Macroline index="11">
+			<text>[$note&gt;=0] Top Macro &quot;Test Midi Note&quot;</text>
+			<info>loop endless, off macro will reset $note</info>
+		</Macroline>
+	</Macro>
+</MA>

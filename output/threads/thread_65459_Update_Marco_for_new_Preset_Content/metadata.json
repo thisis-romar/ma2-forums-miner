@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Benni",
+  "post_date": null,
+  "post_text": "March 22, 2020 at 11:06 AM#1Hello everybody,I will make a new Macro for Update Sequences with new content in Presets. For example. I have the fixture X with 1 P Channel for the Prisma. The Rotation for the Prisma is included in this channel. Then I clone my show to fixture y. This fixture as 1 Channel for the Prisma and 1 for the Rotation. After i have cloned my show. I updated my Presets with the Rotation Channel.And here is the point I need my new Macro.I need it to bring the Rotation Channel to my Programmed Cues. I will use Searchresults.Here is the was what i Think to do, but it doesn't bring the new Attribute to the Cue.setvar $updatedPreset=x.ysearch Preset $updatedPresetselfix Preset $updatedPresetat Preset $updatedPresetstore Sequence 1 Thru if SearchResult /mclearallsetvar $updatedPreset=\"\"Have anyone a Idea why it doesn't work, or a other idea.Thank you for your help",
+  "replies": 0,
+  "thread_id": "65459",
+  "title": "Update Marco for new Preset Content",
+  "url": "https://forum.malighting.com/forum/thread/65459-update-marco-for-new-preset-content/",
+  "views": 0
+}

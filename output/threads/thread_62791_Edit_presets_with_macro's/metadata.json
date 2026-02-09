@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Gaukert",
+  "post_date": null,
+  "post_text": "November 22, 2018 at 12:23 AM#1Hey,Can someone tell me how i can make a macro that will progam everything, all presets. I kinda figured some parts out but i cant figure out how can tell the CMD at which value it should store it.Lets say i want to progam a preset called Gobo 1, in this preset there is a G1 Gobo (so its shouldnt take G1<> aswell, only G1) and from the G1 there is a gobo called \"Gobo 1.1\". How do i store \"Gobo 1.1\" in a preset with a macro? And how can i make this that it will only select the things i want, ofc change the name but if say G1 to the CMD it includes G1<> aswell.Hope someone can help me out",
+  "replies": 0,
+  "thread_id": "62791",
+  "title": "Edit presets with macro's",
+  "url": "https://forum.malighting.com/forum/thread/62791-edit-presets-with-macro-s/",
+  "views": 0
+}

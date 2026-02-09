@@ -1,0 +1,19 @@
+{
+  "assets": [
+    {
+      "checksum": "sha256:c4c092ab7a9c2d06c25552b34490ae9401846dbedea74019a7c9b1a78b8873ca",
+      "download_count": 116,
+      "filename": "Store Defaults.xml",
+      "size": 2316,
+      "url": "https://forum.malighting.com/file-download/3864/"
+    }
+  ],
+  "author": "Duplicate cedric-e",
+  "post_date": null,
+  "post_text": "March 28, 2015 at 12:29 PM#1Hi all,This week I created 3 nice macro's to change the store option,(pf filter,embedded and store mode)The first 2 macro's works fine for me.But the third(mode selective,global,universal) are not working fine.my syntax is:  Assign Root 39.$USERPROFILE.15.3 /MODE=SELECTIVEWhen I look in the TUI (CD 39.userprofile.15) the syntax works.But when i return to the store option menu the mode is still the same.Can someone tell my why the TUI and the store option menu are not linked?Many thanks,Cedric",
+  "replies": 0,
+  "thread_id": "46022",
+  "title": "macro to change store mode",
+  "url": "https://forum.malighting.com/forum/thread/46022-macro-to-change-store-mode/",
+  "views": 0
+}

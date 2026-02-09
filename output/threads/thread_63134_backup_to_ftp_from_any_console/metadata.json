@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "a_a",
+  "post_date": null,
+  "post_text": "January 15, 2019 at 7:16 AM#1Hey, I have 2 consoles in session and FTP server connected to it. Is it possible to create a macro that saves the current show to the ftp server, regardless of which console the macro is activated? The ftp backup tab is only visible on the master console, but it would be convenient to be able to backup to server also from the slave console.If I start the slave console up first, making it master before the other takes over, the server tab will be visible on both desks, but sometimes both consoles freeze during server backup, demanding a restart, and I am guessing this happens because I backup to server from the slave console, even though the server shouldn't be visible from the slave console.Is there any way to solve this problem - for example creating a macro that always tells the master desk to run the macro, even if the macro is pressed on the backup console?",
+  "replies": 0,
+  "thread_id": "63134",
+  "title": "backup to ftp from any console?",
+  "url": "https://forum.malighting.com/forum/thread/63134-backup-to-ftp-from-any-console/",
+  "views": 0
+}

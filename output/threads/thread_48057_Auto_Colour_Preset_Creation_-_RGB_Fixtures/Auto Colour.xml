@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.1.1/MA.xsd" major_vers="3" minor_vers="1" stream_vers="1">
+	<Info datetime="2015-07-31T15:20:15" showfile="new show 2015-07-30" />
+	<Macro index="7" name="Auto Colour">
+		<Appearance Color="00ffff" />
+		<Macroline index="0">
+			<text>Fixture 1 Thru</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>Attribute colorRGB1 At 0</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Attribute colorRGB2 At 0</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>Attribute colorRGB3 At 0</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>Attribute colorRGB5 At 100</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>Store Preset 4.1</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>Label Preset 4.1 WHITE</text>
+		</Macroline>
+		<Macroline index="7">
+			<text>Attribute colorRGB1 At 100</text>
+		</Macroline>
+		<Macroline index="8">
+			<text>Attribute colorRGB2 At 0</text>
+		</Macroline>
+		<Macroline index="9">
+			<text>Attribute colorRGB3 At 0</text>
+		</Macroline>
+		<Macroline index="10">
+			<text>Attribute colorRGB5 At 0</text>
+		</Macroline>
+		<Macroline index="11">
+			<text>Store Preset 4.2</text>
+		</Macroline>
+		<Macroline index="12">
+			<text>Label Preset 4.2 RED</text>
+		</Macroline>
+		<Macroline index="13">
+			<text>Attribute colorRGB1 At 0</text>
+		</Macroline>
+		<Macroline index="14">
+			<text>Attribute colorRGB2 At 100</text>
+		</Macroline>
+		<Macroline index="15">
+			<text>Attribute colorRGB3 At 0</text>
+		</Macroline>
+		<Macroline index="16">
+			<text>Attribute colorRGB5 At 0</text>
+		</Macroline>
+		<Macroline index="17">
+			<text>Store Preset 4.3</text>
+		</Macroline>
+		<Macroline index="18">
+			<text>Label Preset 4.3 GREEN</text>
+		</Macroline>
+		<Macroline index="19">
+			<text>Attribute colorRGB1 At 0</text>
+		</Macroline>
+		<Macroline index="20">
+			<text>Attribute colorRGB2 At 0</text>
+		</Macroline>
+		<Macroline index="21">
+			<text>Attribute colorRGB3 At 100</text>
+		</Macroline>
+		<Macroline index="22">
+			<text>Attribute colorRGB5 At 0</text>
+		</Macroline>
+		<Macroline index="23">
+			<text>Store Preset 4.4</text>
+		</Macroline>
+		<Macroline index="24">
+			<text>Label Preset 4.4 BLUE</text>
+		</Macroline>
+		<Macroline index="25">
+			<text>Attribute colorRGB1 At 100</text>
+		</Macroline>
+		<Macroline index="26">
+			<text>Attribute colorRGB1 At 0</text>
+		</Macroline>
+		<Macroline index="27">
+			<text>Attribute colorRGB2 At 100</text>
+		</Macroline>
+		<Macroline index="28">
+			<text>Attribute colorRGB3 At 100</text>
+		</Macroline>
+		<Macroline index="29">
+			<text>Attribute colorRGB5 At 0</text>
+		</Macroline>
+		<Macroline index="30">
+			<text>Store Preset 4.5</text>
+		</Macroline>
+		<Macroline index="31">
+			<text>Label Preset 4.5 CYAN</text>
+		</Macroline>
+		<Macroline index="32">
+			<text>Attribute colorRGB1 At 100</text>
+		</Macroline>
+		<Macroline index="33">
+			<text>Attribute colorRGB2 At 0</text>
+		</Macroline>
+		<Macroline index="34">
+			<text>Attribute colorRGB3 At 100</text>
+		</Macroline>
+		<Macroline index="35">
+			<text>Attribute colorRGB5 At 0</text>
+		</Macroline>
+		<Macroline index="36">
+			<text>Store Preset 4.6</text>
+		</Macroline>
+		<Macroline index="37">
+			<text>Label Preset 4.6 MAGENTA</text>
+		</Macroline>
+		<Macroline index="38">
+			<text>Attribute colorRGB1 At 100</text>
+		</Macroline>
+		<Macroline index="39">
+			<text>Attribute colorRGB2 At 100</text>
+		</Macroline>
+		<Macroline index="40">
+			<text>Attribute colorRGB3 At 0</text>
+		</Macroline>
+		<Macroline index="41">
+			<text>Attribute colorRGB5 At 0</text>
+		</Macroline>
+		<Macroline index="42">
+			<text>Store Preset 4.7</text>
+		</Macroline>
+		<Macroline index="43">
+			<text>Label Preset 4.7 YELLOW</text>
+		</Macroline>
+		<Macroline index="44">
+			<text>Attribute colorRGB1 At 100</text>
+		</Macroline>
+		<Macroline index="45">
+			<text>Attribute colorRGB2 At 100</text>
+		</Macroline>
+		<Macroline index="46">
+			<text>Attribute colorRGB3 At 100</text>
+		</Macroline>
+		<Macroline index="47">
+			<text>Attribute colorRGB5 At 0</text>
+		</Macroline>
+		<Macroline index="48">
+			<text>Store Preset 4.8</text>
+		</Macroline>
+		<Macroline index="49">
+			<text>Label Preset 4.8 &quot;BAD WHITE</text>
+		</Macroline>
+		<Macroline index="50">
+			<text>Attribute colorRGB1 At 25.2</text>
+		</Macroline>
+		<Macroline index="51">
+			<text>Attribute colorRGB2 At 24.7</text>
+		</Macroline>
+		<Macroline index="52">
+			<text>Attribute colorRGB3 At 100</text>
+		</Macroline>
+		<Macroline index="53">
+			<text>Attribute colorRGB5 At 49.7</text>
+		</Macroline>
+		<Macroline index="54">
+			<text>Store Preset 4.9</text>
+		</Macroline>
+		<Macroline index="55">
+			<text>Label Preset 4.9 &quot;LAV 1</text>
+		</Macroline>
+		<Macroline index="56">
+			<text>Attribute colorRGB1 At 100</text>
+		</Macroline>
+		<Macroline index="57">
+			<text>Attribute colorRGB2 At 50</text>
+		</Macroline>
+		<Macroline index="58">
+			<text>Attribute colorRGB3 At 0</text>
+		</Macroline>
+		<Macroline index="59">
+			<text>Attribute colorRGB5 At 0</text>
+		</Macroline>
+		<Macroline index="60">
+			<text>Store Preset 4.10</text>
+		</Macroline>
+		<Macroline index="61">
+			<text>Label Preset 4.10 ORANGE</text>
+		</Macroline>
+		<Macroline index="62">
+			<text>Attribute colorRGB1 At 50</text>
+		</Macroline>
+		<Macroline index="63">
+			<text>Attribute colorRGB2 At 100</text>
+		</Macroline>
+		<Macroline index="64">
+			<text>Attribute colorRGB3 At 0</text>
+		</Macroline>
+		<Macroline index="65">
+			<text>Attribute colorRGB5 At 0</text>
+		</Macroline>
+		<Macroline index="66">
+			<text>Store Preset 4.11</text>
+		</Macroline>
+		<Macroline index="67">
+			<text>Label Preset 4.11 &quot;FERN GREEN</text>
+		</Macroline>
+		<Macroline index="68">
+			<text>Attribute colorRGB1 At 0</text>
+		</Macroline>
+		<Macroline index="69">
+			<text>Attribute colorRGB2 At 100</text>
+		</Macroline>
+		<Macroline index="70">
+			<text>Attribute colorRGB3 At 50</text>
+		</Macroline>
+		<Macroline index="71">
+			<text>Attribute colorRGB5 At 0</text>
+		</Macroline>
+		<Macroline index="72">
+			<text>Store Preset 4.12</text>
+		</Macroline>
+		<Macroline index="73">
+			<text>Label Preset 4.12 &quot;SEA GREEN</text>
+		</Macroline>
+		<Macroline index="74">
+			<text>Attribute colorRGB1 At 0</text>
+		</Macroline>
+		<Macroline index="75">
+			<text>Attribute colorRGB2 At 50</text>
+		</Macroline>
+		<Macroline index="76">
+			<text>Attribute colorRGB3 At 100</text>
+		</Macroline>
+		<Macroline index="77">
+			<text>Attribute colorRGB5 At 0</text>
+		</Macroline>
+		<Macroline index="78">
+			<text>Store Preset 4.13</text>
+		</Macroline>
+		<Macroline index="79">
+			<text>Label Preset 4.13 &quot;LAV 2</text>
+		</Macroline>
+		<Macroline index="80">
+			<text>Attribute colorRGB1 At 50</text>
+		</Macroline>
+		<Macroline index="81">
+			<text>Attribute colorRGB2 At 0</text>
+		</Macroline>
+		<Macroline index="82">
+			<text>Attribute colorRGB3 At 100</text>
+		</Macroline>
+		<Macroline index="83">
+			<text>Attribute colorRGB5 At 0</text>
+		</Macroline>
+		<Macroline index="84">
+			<text>Store Preset 4.14</text>
+		</Macroline>
+		<Macroline index="85">
+			<text>Label Preset 4.14 VIOLET</text>
+		</Macroline>
+		<Macroline index="86">
+			<text>Attribute colorRGB1 At 100</text>
+		</Macroline>
+		<Macroline index="87">
+			<text>Attribute colorRGB2 At 0</text>
+		</Macroline>
+		<Macroline index="88">
+			<text>Attribute colorRGB3 At 50</text>
+		</Macroline>
+		<Macroline index="89">
+			<text>Attribute colorRGB5 At 0</text>
+		</Macroline>
+		<Macroline index="90">
+			<text>Store Preset 4.15</text>
+		</Macroline>
+		<Macroline index="91">
+			<text>Label Preset 4.15 PINK</text>
+		</Macroline>
+		<Macroline index="92">
+			<text>Attribute colorRGB1 At 100</text>
+		</Macroline>
+		<Macroline index="93">
+			<text>Attribute colorRGB2 At 58</text>
+		</Macroline>
+		<Macroline index="94">
+			<text>Attribute colorRGB3 At 59</text>
+		</Macroline>
+		<Macroline index="95">
+			<text>Attribute colorRGB5 At 0</text>
+		</Macroline>
+		<Macroline index="96">
+			<text>Store Preset 4.16</text>
+		</Macroline>
+		<Macroline index="97">
+			<text>Label Preset 4.16 SALMON</text>
+		</Macroline>
+		<Macroline index="98">
+			<text>Attribute colorRGB1 At 74</text>
+		</Macroline>
+		<Macroline index="99">
+			<text>Attribute colorRGB2 At 100</text>
+		</Macroline>
+		<Macroline index="100">
+			<text>Attribute colorRGB3 At 66</text>
+		</Macroline>
+		<Macroline index="101">
+			<text>Attribute colorRGB5 At 0</text>
+		</Macroline>
+		<Macroline index="102">
+			<text>Store Preset 4.17</text>
+		</Macroline>
+		<Macroline index="103">
+			<text>Label Preset 4.17 SAGE</text>
+		</Macroline>
+		<Macroline index="104">
+			<text>Attribute colorRGB1 At 70</text>
+		</Macroline>
+		<Macroline index="105">
+			<text>Attribute colorRGB2 At 3.3</text>
+		</Macroline>
+		<Macroline index="106">
+			<text>Attribute colorRGB3 At 12.5</text>
+		</Macroline>
+		<Macroline index="107">
+			<text>Attribute colorRGB5 At 0</text>
+		</Macroline>
+		<Macroline index="108">
+			<text>Store Preset 4.18</text>
+		</Macroline>
+		<Macroline index="109">
+			<text>Label Preset 4.18 MAROON</text>
+		</Macroline>
+	</Macro>
+</MA>

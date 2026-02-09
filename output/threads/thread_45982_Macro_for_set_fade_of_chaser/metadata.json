@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "bartr",
+  "post_date": null,
+  "post_text": "March 25, 2015 at 7:21 PM#1Hello everyone,I'm searching for a macro to set all my fade (%) of all chasers.What i tried but didn't worked:- setuservar$ fade execbutton1 (buttons begin) thru exexbutton1 (buttons end) at (fadetime?)Anyone a solution?Thanks for reading.Greets",
+  "replies": 0,
+  "thread_id": "45982",
+  "title": "Macro for set fade of chaser",
+  "url": "https://forum.malighting.com/forum/thread/45982-macro-for-set-fade-of-chaser/",
+  "views": 0
+}

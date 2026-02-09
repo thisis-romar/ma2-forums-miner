@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "bdy",
+  "post_date": null,
+  "post_text": "March 25, 2020 at 12:37 PM#1Hi there,I cannot find a solution. Is it possible to make a store option as a variable?I have 2 que sequence that set what option I want with storing a group.[color=#00FF00]SetUserVar[/color] $WHAT = \"/remove\"or[color=#00FF00]SetUserVar[/color] $WHAT = \"/merge\"then in macro, I'm storing a group[color=#00FF33]Store Group[/color] 201 $WHATIn command-line feedback, everything looks good but I always have a pop window. And if I do /nc merge or remove doesn't work. I tried almost every combination but without a solution.Thank you!Daniel",
+  "replies": 0,
+  "thread_id": "65476",
+  "title": "store option as variable",
+  "url": "https://forum.malighting.com/forum/thread/65476-store-option-as-variable/",
+  "views": 0
+}

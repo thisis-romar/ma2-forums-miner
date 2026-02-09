@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.0.0/MA.xsd" major_vers="3" minor_vers="0" stream_vers="0">
+	<Info datetime="2014-11-04T01:10:02" showfile="test" />
+	<Macro index="0" name="Reverse Selection">
+		<Macroline index="0">
+			<text>SetUserVar $maxcount=100</text>
+			<info>max fixtures to reverse</info>
+		</Macroline>
+		<Macroline index="1">
+			<text>SetUserVar $loopcount=0</text>
+			<info>reset loop</info>
+		</Macroline>
+		<Macroline index="2">
+			<text>Store Group &quot;originalorder&quot; /overwrite</text>
+			<info>remember current selection</info>
+		</Macroline>
+		<Macroline index="3">
+			<text>Clear</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>Store Group &quot;neworder&quot; /overwrite</text>
+			<info>prepare for new selection</info>
+		</Macroline>
+		<Macroline index="5">
+			<text>SetUserVar $loopentry=7</text>
+			<info>following should be repeated</info>
+		</Macroline>
+		<Macroline index="6">
+			<text>Group &quot;neworder&quot; ; Group &quot;originalorder&quot;</text>
+			<info>select both new and old selection</info>
+		</Macroline>
+		<Macroline index="7">
+			<text>Previous</text>
+			<info>get last of old selection</info>
+		</Macroline>
+		<Macroline index="8">
+			<text>Store Group &quot;neworder&quot;/merge ; Store Group &quot;originalorder&quot;/remove</text>
+			<info>add to new selection and remove from old selection</info>
+		</Macroline>
+		<Macroline index="9">
+			<text>AddUserVar $loopcount=1</text>
+		</Macroline>
+		<Macroline index="10">
+			<text>[$loopcount&lt;$maxcount] Macro 1.&quot;Reverse Selection&quot;.$loopentry</text>
+			<info>repeat part of macro</info>
+		</Macroline>
+		<Macroline index="11">
+			<text>SelFix Group &quot;neworder&quot;</text>
+			<info>select the new group that is reversed</info>
+		</Macroline>
+		<Macroline index="12">
+			<text>Delete Group &quot;neworder&quot; + &quot;originalorder&quot; /nc</text>
+			<info>tidy up</info>
+		</Macroline>
+	</Macro>
+</MA>

@@ -1,0 +1,875 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.0.0/MA.xsd" major_vers="3" minor_vers="0" stream_vers="0">
+	<Info datetime="2015-04-26T11:23:17" showfile="bfstartshow1.0" />
+	<Macro index="155" name="Colour Create and Label">
+		<Appearance Color="3f9fff" />
+		<Macroline index="0">
+			<text>Store Group 999 /o</text>
+			<info>Store current selection to group 999</info>
+		</Macroline>
+		<Macroline index="1">
+			<text>ClearSelection</text>
+		</Macroline>
+		<Macroline index="2" delay="0.01">
+			<text>SetUserVar $fixture (Which fixtures?)</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>Fixture $fixture</text>
+		</Macroline>
+		<Macroline index="4" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="5" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="6" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="7" delay="0.01">
+			<text>Store /m Preset 4.16</text>
+		</Macroline>
+		<Macroline index="8" delay="0.01">
+			<text>Label Preset 4.16 &quot;*.OW&quot;</text>
+		</Macroline>
+		<Macroline index="9" delay="0.01">
+			<text>Attribute colorrgb1 At 25</text>
+		</Macroline>
+		<Macroline index="10" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="11" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="12" delay="0.01">
+			<text>Store /m Preset 4.17</text>
+		</Macroline>
+		<Macroline index="13" delay="0.01">
+			<text>Label Preset 4.17 &quot;*.Steely Cyan&quot;</text>
+		</Macroline>
+		<Macroline index="14" delay="0.01">
+			<text>Attribute colorrgb1 At 50</text>
+		</Macroline>
+		<Macroline index="15" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="16" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="17" delay="0.01">
+			<text>Store /m Preset 4.18</text>
+		</Macroline>
+		<Macroline index="18" delay="0.01">
+			<text>Label Preset 4.18 &quot;*.Dark Steely Cyan&quot;</text>
+		</Macroline>
+		<Macroline index="19" delay="0.01">
+			<text>Attribute colorrgb1 At 75</text>
+		</Macroline>
+		<Macroline index="20" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="21" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="22" delay="0.01">
+			<text>Store /m Preset 4.19</text>
+		</Macroline>
+		<Macroline index="23" delay="0.01">
+			<text>Label Preset 4.19 &quot;*.Light Blue&quot;</text>
+		</Macroline>
+		<Macroline index="24" delay="0.01">
+			<text>Attribute colorrgb1 At 100</text>
+		</Macroline>
+		<Macroline index="25" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="26" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="27" delay="0.01">
+			<text>Store /m Preset 4.20</text>
+		</Macroline>
+		<Macroline index="28" delay="0.01">
+			<text>Label Preset 4.20 &quot;*.Cyan&quot;</text>
+		</Macroline>
+		<Macroline index="29" delay="0.01">
+			<text>Attribute colorrgb1 At 30</text>
+		</Macroline>
+		<Macroline index="30" delay="0.01">
+			<text>Attribute colorrgb2 At 15</text>
+		</Macroline>
+		<Macroline index="31" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="32" delay="0.01">
+			<text>Store /m Preset 4.21</text>
+		</Macroline>
+		<Macroline index="33" delay="0.01">
+			<text>Label Preset 4.21 &quot;*.Steel Blue 1&quot;</text>
+		</Macroline>
+		<Macroline index="34" delay="0.01">
+			<text>Attribute colorrgb1 At 40</text>
+		</Macroline>
+		<Macroline index="35" delay="0.01">
+			<text>Attribute colorrgb2 At 30</text>
+		</Macroline>
+		<Macroline index="36" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="37" delay="0.01">
+			<text>Store /m Preset 4.22</text>
+		</Macroline>
+		<Macroline index="38" delay="0.01">
+			<text>Label Preset 4.22 &quot;*.Steel Blue 2&quot;</text>
+		</Macroline>
+		<Macroline index="39" delay="0.01">
+			<text>Attribute colorrgb1 At 100</text>
+		</Macroline>
+		<Macroline index="40" delay="0.01">
+			<text>Attribute colorrgb2 At 25</text>
+		</Macroline>
+		<Macroline index="41" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="42" delay="0.01">
+			<text>Store /m Preset 4.23</text>
+		</Macroline>
+		<Macroline index="43" delay="0.01">
+			<text>Label Preset 4.23 &quot;*.Sky Blue&quot;</text>
+		</Macroline>
+		<Macroline index="44" delay="0.01">
+			<text>Attribute colorrgb1 At 100</text>
+		</Macroline>
+		<Macroline index="45" delay="0.01">
+			<text>Attribute colorrgb2 At 50</text>
+		</Macroline>
+		<Macroline index="46" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="47" delay="0.01">
+			<text>Store /m Preset 4.24</text>
+		</Macroline>
+		<Macroline index="48" delay="0.01">
+			<text>Label Preset 4.24 &quot;*.Mid Blue&quot;</text>
+		</Macroline>
+		<Macroline index="49" delay="0.01">
+			<text>Attribute colorrgb1 At 100</text>
+		</Macroline>
+		<Macroline index="50" delay="0.01">
+			<text>Attribute colorrgb2 At 75</text>
+		</Macroline>
+		<Macroline index="51" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="52" delay="0.01">
+			<text>Store /m Preset 4.25</text>
+		</Macroline>
+		<Macroline index="53" delay="0.01">
+			<text>Label Preset 4.25 &quot;*.Dark Blue&quot;</text>
+		</Macroline>
+		<Macroline index="54" delay="0.01">
+			<text>Attribute colorrgb1 At 100</text>
+		</Macroline>
+		<Macroline index="55" delay="0.01">
+			<text>Attribute colorrgb2 At 100</text>
+		</Macroline>
+		<Macroline index="56" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="57" delay="0.01">
+			<text>Store /m Preset 4.26</text>
+		</Macroline>
+		<Macroline index="58" delay="0.01">
+			<text>Label Preset 4.26 &quot;*.Full Blue Congo&quot;</text>
+		</Macroline>
+		<Macroline index="59" delay="0.01">
+			<text>Attribute colorrgb1 At 75</text>
+		</Macroline>
+		<Macroline index="60" delay="0.01">
+			<text>Attribute colorrgb2 At 100</text>
+		</Macroline>
+		<Macroline index="61" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="62" delay="0.01">
+			<text>Store /m Preset 4.27</text>
+		</Macroline>
+		<Macroline index="63" delay="0.01">
+			<text>Label Preset 4.27 &quot;*.Congo&quot;</text>
+		</Macroline>
+		<Macroline index="64" delay="0.01">
+			<text>Attribute colorrgb1 At 50</text>
+		</Macroline>
+		<Macroline index="65" delay="0.01">
+			<text>Attribute colorrgb2 At 100</text>
+		</Macroline>
+		<Macroline index="66" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="67" delay="0.01">
+			<text>Store /m Preset 4.28</text>
+		</Macroline>
+		<Macroline index="68" delay="0.01">
+			<text>Label Preset 4.28 Purple</text>
+		</Macroline>
+		<Macroline index="69" delay="0.01">
+			<text>Attribute colorrgb1 At 25</text>
+		</Macroline>
+		<Macroline index="70" delay="0.01">
+			<text>Attribute colorrgb2 At 100</text>
+		</Macroline>
+		<Macroline index="71" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="72" delay="0.01">
+			<text>Store /m Preset 4.29</text>
+		</Macroline>
+		<Macroline index="73" delay="0.01">
+			<text>Label Preset 4.29 &quot;*.Dark Pink&quot;</text>
+		</Macroline>
+		<Macroline index="74" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="75" delay="0.01">
+			<text>Attribute colorrgb2 At 100</text>
+		</Macroline>
+		<Macroline index="76" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="77" delay="0.01">
+			<text>Store /m Preset 4.30</text>
+		</Macroline>
+		<Macroline index="78" delay="0.01">
+			<text>Label Preset 4.30 &quot;*.Magenta&quot;</text>
+		</Macroline>
+		<Macroline index="79" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="80" delay="0.01">
+			<text>Attribute colorrgb2 At 75</text>
+		</Macroline>
+		<Macroline index="81" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="82" delay="0.01">
+			<text>Store /m Preset 4.31</text>
+		</Macroline>
+		<Macroline index="83" delay="0.01">
+			<text>Label Preset 4.31 &quot;*.Bright Pink&quot;</text>
+		</Macroline>
+		<Macroline index="84" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="85" delay="0.01">
+			<text>Attribute colorrgb2 At 50</text>
+		</Macroline>
+		<Macroline index="86" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="87" delay="0.01">
+			<text>Store /m Preset 4.32</text>
+		</Macroline>
+		<Macroline index="88" delay="0.01">
+			<text>Label Preset 4.32 &quot;*.Pale Pink&quot;</text>
+		</Macroline>
+		<Macroline index="89" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="90" delay="0.01">
+			<text>Attribute colorrgb2 At 25</text>
+		</Macroline>
+		<Macroline index="91" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="92" delay="0.01">
+			<text>Store /m Preset 4.33</text>
+		</Macroline>
+		<Macroline index="93" delay="0.01">
+			<text>Label Preset 4.33 &quot;*.Pale Rose&quot;</text>
+		</Macroline>
+		<Macroline index="94" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="95" delay="0.01">
+			<text>Attribute colorrgb2 At 100</text>
+		</Macroline>
+		<Macroline index="96" delay="0.01">
+			<text>Attribute colorrgb3 At 25</text>
+		</Macroline>
+		<Macroline index="97" delay="0.01">
+			<text>Store /m Preset 4.34</text>
+		</Macroline>
+		<Macroline index="98" delay="0.01">
+			<text>Label Preset 4.34 &quot;*.Follies Pink&quot;</text>
+		</Macroline>
+		<Macroline index="99" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="100" delay="0.01">
+			<text>Attribute colorrgb2 At 100</text>
+		</Macroline>
+		<Macroline index="101" delay="0.01">
+			<text>Attribute colorrgb3 At 50</text>
+		</Macroline>
+		<Macroline index="102" delay="0.01">
+			<text>Store /m Preset 4.35</text>
+		</Macroline>
+		<Macroline index="103" delay="0.01">
+			<text>Label Preset 4.35 &quot;*.Moroccan Pink&quot;</text>
+		</Macroline>
+		<Macroline index="104" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="105" delay="0.01">
+			<text>Attribute colorrgb2 At 100</text>
+		</Macroline>
+		<Macroline index="106" delay="0.01">
+			<text>Attribute colorrgb3 At 75</text>
+		</Macroline>
+		<Macroline index="107" delay="0.01">
+			<text>Store /m Preset 4.36</text>
+		</Macroline>
+		<Macroline index="108" delay="0.01">
+			<text>Label Preset 4.36 &quot;*.Redish Pink&quot;</text>
+		</Macroline>
+		<Macroline index="109" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="110" delay="0.01">
+			<text>Attribute colorrgb2 At 100</text>
+		</Macroline>
+		<Macroline index="111" delay="0.01">
+			<text>Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="112" delay="0.01">
+			<text>Store /m Preset 4.37</text>
+		</Macroline>
+		<Macroline index="113" delay="0.01">
+			<text>Label Preset 4.37 &quot;*.Red&quot;</text>
+		</Macroline>
+		<Macroline index="114" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="115" delay="0.01">
+			<text>Attribute colorrgb2 At 75</text>
+		</Macroline>
+		<Macroline index="116" delay="0.01">
+			<text>Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="117" delay="0.01">
+			<text>Store /m Preset 4.38</text>
+		</Macroline>
+		<Macroline index="118" delay="0.01">
+			<text>Label Preset 4.38 &quot;*.Deep Orange&quot;</text>
+		</Macroline>
+		<Macroline index="119" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="120" delay="0.01">
+			<text>Attribute colorrgb2 At 50</text>
+		</Macroline>
+		<Macroline index="121" delay="0.01">
+			<text>Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="122" delay="0.01">
+			<text>Store /m Preset 4.39</text>
+		</Macroline>
+		<Macroline index="123" delay="0.01">
+			<text>Label Preset 4.39 &quot;*.Amber&quot;</text>
+		</Macroline>
+		<Macroline index="124" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="125" delay="0.01">
+			<text>Attribute colorrgb2 At 40</text>
+		</Macroline>
+		<Macroline index="126" delay="0.01">
+			<text>Attribute colorrgb3 At 45</text>
+		</Macroline>
+		<Macroline index="127" delay="0.01">
+			<text>Store /m Preset 4.40</text>
+		</Macroline>
+		<Macroline index="128" delay="0.01">
+			<text>Label Preset 4.40 &quot;*.Bastard Amber&quot;</text>
+		</Macroline>
+		<Macroline index="129" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="130" delay="0.01">
+			<text>Attribute colorrgb2 At 25</text>
+		</Macroline>
+		<Macroline index="131" delay="0.01">
+			<text>Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="132" delay="0.01">
+			<text>Store /m Preset 4.41</text>
+		</Macroline>
+		<Macroline index="133" delay="0.01">
+			<text>Label Preset 4.41 &quot;*.Warm Yellow&quot;</text>
+		</Macroline>
+		<Macroline index="134" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="135" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="136" delay="0.01">
+			<text>Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="137" delay="0.01">
+			<text>Store /m Preset 4.42</text>
+		</Macroline>
+		<Macroline index="138" delay="0.01">
+			<text>Label Preset 4.42 &quot;*.Hard Yelllow&quot;</text>
+		</Macroline>
+		<Macroline index="139" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="140" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="141" delay="0.01">
+			<text>Attribute colorrgb3 At 75</text>
+		</Macroline>
+		<Macroline index="142" delay="0.01">
+			<text>Store /m Preset 4.43</text>
+		</Macroline>
+		<Macroline index="143" delay="0.01">
+			<text>Label Preset 4.43 &quot;*.Lemon Yellow&quot;</text>
+		</Macroline>
+		<Macroline index="144" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="145" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="146" delay="0.01">
+			<text>Attribute colorrgb3 At 50</text>
+		</Macroline>
+		<Macroline index="147" delay="0.01">
+			<text>Store /m Preset 4.44</text>
+		</Macroline>
+		<Macroline index="148" delay="0.01">
+			<text>Label Preset 4.44 &quot;*.Pale Yellow&quot;</text>
+		</Macroline>
+		<Macroline index="149" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="150" delay="0.01">
+			<text>Attribute colorrgb2 At 25</text>
+		</Macroline>
+		<Macroline index="151" delay="0.01">
+			<text>Attribute colorrgb3 At 45</text>
+		</Macroline>
+		<Macroline index="152" delay="0.01">
+			<text>Store /m Preset 4.45</text>
+		</Macroline>
+		<Macroline index="153" delay="0.01">
+			<text>Label Preset 4.45 &quot;*.Double CTO&quot;</text>
+		</Macroline>
+		<Macroline index="154" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="155" delay="0.01">
+			<text>Attribute colorrgb2 At 10</text>
+		</Macroline>
+		<Macroline index="156" delay="0.01">
+			<text>Attribute colorrgb3 At 30</text>
+		</Macroline>
+		<Macroline index="157" delay="0.01">
+			<text>Store /m Preset 4.46</text>
+		</Macroline>
+		<Macroline index="158" delay="0.01">
+			<text>Label Preset 4.46 &quot;*.CTO&quot;</text>
+		</Macroline>
+		<Macroline index="159" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="160" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="161" delay="0.01">
+			<text>Attribute colorrgb3 At 25</text>
+		</Macroline>
+		<Macroline index="162" delay="0.01">
+			<text>Store /m Preset 4.47</text>
+		</Macroline>
+		<Macroline index="163" delay="0.01">
+			<text>Label Preset 4.47 &quot;*.Straw&quot;</text>
+		</Macroline>
+		<Macroline index="164" delay="0.01">
+			<text>Attribute colorrgb1 At 25</text>
+		</Macroline>
+		<Macroline index="165" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="166" delay="0.01">
+			<text>Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="167" delay="0.01">
+			<text>Store /m Preset 4.48</text>
+		</Macroline>
+		<Macroline index="168" delay="0.01">
+			<text>Label Preset 4.48 &quot;*.Slime&quot;</text>
+		</Macroline>
+		<Macroline index="169" delay="0.01">
+			<text>Attribute colorrgb1 At 50</text>
+		</Macroline>
+		<Macroline index="170" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="171" delay="0.01">
+			<text>Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="172" delay="0.01">
+			<text>Store /m Preset 4.49</text>
+		</Macroline>
+		<Macroline index="173" delay="0.01">
+			<text>Label Preset 4.49 &quot;*.Lime&quot;</text>
+		</Macroline>
+		<Macroline index="174" delay="0.01">
+			<text>Attribute colorrgb1 At 75</text>
+		</Macroline>
+		<Macroline index="175" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="176" delay="0.01">
+			<text>Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="177" delay="0.01">
+			<text>Store /m Preset 4.50</text>
+		</Macroline>
+		<Macroline index="178" delay="0.01">
+			<text>Label Preset 4.50 &quot;*.Bright Lime&quot;</text>
+		</Macroline>
+		<Macroline index="179" delay="0.01">
+			<text>Attribute colorrgb1 At 100</text>
+		</Macroline>
+		<Macroline index="180" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="181" delay="0.01">
+			<text>Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="182" delay="0.01">
+			<text>Store /m Preset 4.51</text>
+		</Macroline>
+		<Macroline index="183" delay="0.01">
+			<text>Label Preset 4.51 &quot;*.Green&quot;</text>
+		</Macroline>
+		<Macroline index="184" delay="0.01">
+			<text>Attribute colorrgb1 At 100</text>
+		</Macroline>
+		<Macroline index="185" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="186" delay="0.01">
+			<text>Attribute colorrgb3 At 75</text>
+		</Macroline>
+		<Macroline index="187" delay="0.01">
+			<text>Store /m Preset 4.52</text>
+		</Macroline>
+		<Macroline index="188" delay="0.01">
+			<text>Label Preset 4.52 &quot;*.Turqoise&quot;</text>
+		</Macroline>
+		<Macroline index="189" delay="0.01">
+			<text>Attribute colorrgb1 At 100</text>
+		</Macroline>
+		<Macroline index="190" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="191" delay="0.01">
+			<text>Attribute colorrgb3 At 50</text>
+		</Macroline>
+		<Macroline index="192" delay="0.01">
+			<text>Store /m Preset 4.53</text>
+		</Macroline>
+		<Macroline index="193" delay="0.01">
+			<text>Label Preset 4.53 &quot;*.Aqua&quot;</text>
+		</Macroline>
+		<Macroline index="194" delay="0.01">
+			<text>Attribute colorrgb1 At 15</text>
+		</Macroline>
+		<Macroline index="195" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="196" delay="0.01">
+			<text>Attribute colorrgb3 At 15</text>
+		</Macroline>
+		<Macroline index="197" delay="0.01">
+			<text>Store /m Preset 4.54</text>
+		</Macroline>
+		<Macroline index="198" delay="0.01">
+			<text>Label Preset 4.54 &quot;*.Steel Green 1&quot;</text>
+		</Macroline>
+		<Macroline index="199" delay="0.01">
+			<text>Attribute colorrgb1 At 30</text>
+		</Macroline>
+		<Macroline index="200" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="201" delay="0.01">
+			<text>Attribute colorrgb3 At 30</text>
+		</Macroline>
+		<Macroline index="202" delay="0.01">
+			<text>Store /m Preset 4.55</text>
+		</Macroline>
+		<Macroline index="203" delay="0.01">
+			<text>Label Preset 4.55 &quot;*.Steel Green 2&quot;</text>
+		</Macroline>
+		<Macroline index="204" delay="0.01">
+			<text>Attribute colorrgb1 At 100</text>
+		</Macroline>
+		<Macroline index="205" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="206" delay="0.01">
+			<text>Attribute colorrgb3 At 25</text>
+		</Macroline>
+		<Macroline index="207" delay="0.01">
+			<text>Store /m Preset 4.56</text>
+		</Macroline>
+		<Macroline index="208" delay="0.01">
+			<text>Label Preset 4.56 &quot;*.Bluey Green&quot;</text>
+		</Macroline>
+		<Macroline index="209" delay="0.01">
+			<text>Off Attribute colorrgb1</text>
+		</Macroline>
+		<Macroline index="210" delay="0.01">
+			<text>Off Attribute colorrgb2</text>
+		</Macroline>
+		<Macroline index="211" delay="0.01">
+			<text>Off Attribute colorrgb3</text>
+		</Macroline>
+		<Macroline index="212" delay="0.01">
+			<text>Attribute colorrgb4 At 0</text>
+		</Macroline>
+		<Macroline index="213" delay="0.01">
+			<text>Attribute colorrgb5 At 0</text>
+		</Macroline>
+		<Macroline index="214" delay="0.01">
+			<text>Store /m Preset 4.16 Thru 4.56</text>
+		</Macroline>
+		<Macroline index="215" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="216" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="217" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="218" delay="0.01">
+			<text>Attribute colorrgb4 At 0</text>
+		</Macroline>
+		<Macroline index="219" delay="0.01">
+			<text>Attribute colorrgb5 At 0</text>
+		</Macroline>
+		<Macroline index="220" delay="0.01">
+			<text>Store /m Preset 4.1</text>
+		</Macroline>
+		<Macroline index="221" delay="0.01">
+			<text>Label Preset 4.1 &quot;*.OW&quot;</text>
+		</Macroline>
+		<Macroline index="222" delay="0.01">
+			<text>Attribute colorrgb1 At 100</text>
+		</Macroline>
+		<Macroline index="223" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="224" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="225" delay="0.01">
+			<text>Attribute colorrgb4 At 0</text>
+		</Macroline>
+		<Macroline index="226" delay="0.01">
+			<text>Attribute colorrgb5 At 0</text>
+		</Macroline>
+		<Macroline index="227" delay="0.01">
+			<text>Store /m Preset 4.2</text>
+		</Macroline>
+		<Macroline index="228" delay="0.01">
+			<text>Label Preset 4.2 &quot;*.Full Cyan&quot;</text>
+		</Macroline>
+		<Macroline index="229" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="230" delay="0.01">
+			<text>Attribute colorrgb2 At 100</text>
+		</Macroline>
+		<Macroline index="231" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="232" delay="0.01">
+			<text>Attribute colorrgb4 At 0</text>
+		</Macroline>
+		<Macroline index="233" delay="0.01">
+			<text>Attribute colorrgb5 At 0</text>
+		</Macroline>
+		<Macroline index="234" delay="0.01">
+			<text>Store /m Preset 4.3</text>
+		</Macroline>
+		<Macroline index="235" delay="0.01">
+			<text>Label Preset 4.3 &quot;*.Full Magenta&quot;</text>
+		</Macroline>
+		<Macroline index="236" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="237" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="238" delay="0.01">
+			<text>Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="239" delay="0.01">
+			<text>Attribute colorrgb4 At 0</text>
+		</Macroline>
+		<Macroline index="240" delay="0.01">
+			<text>Attribute colorrgb5 At 0</text>
+		</Macroline>
+		<Macroline index="241" delay="0.01">
+			<text>Store /m Preset 4.4</text>
+		</Macroline>
+		<Macroline index="242" delay="0.01">
+			<text>Label Preset 4.4 &quot;*.Full Yellow&quot;</text>
+		</Macroline>
+		<Macroline index="243" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="244" delay="0.01">
+			<text>Attribute colorrgb2 At 100</text>
+		</Macroline>
+		<Macroline index="245" delay="0.01">
+			<text>Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="246" delay="0.01">
+			<text>Attribute colorrgb4 At 0</text>
+		</Macroline>
+		<Macroline index="247" delay="0.01">
+			<text>Attribute colorrgb5 At 0</text>
+		</Macroline>
+		<Macroline index="248" delay="0.01">
+			<text>Store /m Preset 4.5</text>
+		</Macroline>
+		<Macroline index="249" delay="0.01">
+			<text>Label Preset 4.5 &quot;*.Full Red&quot;</text>
+		</Macroline>
+		<Macroline index="250" delay="0.01">
+			<text>Attribute colorrgb1 At 100</text>
+		</Macroline>
+		<Macroline index="251" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="252" delay="0.01">
+			<text>Attribute colorrgb3 At 100</text>
+		</Macroline>
+		<Macroline index="253" delay="0.01">
+			<text>Attribute colorrgb4 At 0</text>
+		</Macroline>
+		<Macroline index="254" delay="0.01">
+			<text>Attribute colorrgb5 At 0</text>
+		</Macroline>
+		<Macroline index="255" delay="0.01">
+			<text>Store /m Preset 4.6</text>
+		</Macroline>
+		<Macroline index="256" delay="0.01">
+			<text>Label Preset 4.6 &quot;*.Full Green&quot;</text>
+		</Macroline>
+		<Macroline index="257" delay="0.01">
+			<text>Attribute colorrgb1 At 100</text>
+		</Macroline>
+		<Macroline index="258" delay="0.01">
+			<text>Attribute colorrgb2 At 100</text>
+		</Macroline>
+		<Macroline index="259" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="260" delay="0.01">
+			<text>Attribute colorrgb4 At 0</text>
+		</Macroline>
+		<Macroline index="261" delay="0.01">
+			<text>Attribute colorrgb5 At 0</text>
+		</Macroline>
+		<Macroline index="262" delay="0.01">
+			<text>Store /m Preset 4.7</text>
+		</Macroline>
+		<Macroline index="263" delay="0.01">
+			<text>Label Preset 4.7 &quot;*.Full Blue&quot;</text>
+		</Macroline>
+		<Macroline index="264" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="265" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="266" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="267" delay="0.01">
+			<text>Attribute colorrgb4 At 100</text>
+		</Macroline>
+		<Macroline index="268" delay="0.01">
+			<text>Attribute colorrgb5 At 0</text>
+		</Macroline>
+		<Macroline index="269" delay="0.01">
+			<text>Store /m Preset 4.8</text>
+		</Macroline>
+		<Macroline index="270" delay="0.01">
+			<text>Label Preset 4.8 &quot;*.Full Amber&quot;</text>
+		</Macroline>
+		<Macroline index="271" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="272" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="273" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="274" delay="0.01">
+			<text>Attribute colorrgb4 At 0</text>
+		</Macroline>
+		<Macroline index="275" delay="0.01">
+			<text>Attribute colorrgb5 At 100</text>
+		</Macroline>
+		<Macroline index="276" delay="0.01">
+			<text>Store /m Preset 4.9</text>
+		</Macroline>
+		<Macroline index="277" delay="0.01">
+			<text>Label Preset 4.9 &quot;*.Full White&quot;</text>
+		</Macroline>
+		<Macroline index="278" delay="0.01">
+			<text>Attribute colorrgb1 At 0</text>
+		</Macroline>
+		<Macroline index="279" delay="0.01">
+			<text>Attribute colorrgb2 At 0</text>
+		</Macroline>
+		<Macroline index="280" delay="0.01">
+			<text>Attribute colorrgb3 At 0</text>
+		</Macroline>
+		<Macroline index="281" delay="0.01">
+			<text>Attribute colorrgb4 At 100</text>
+		</Macroline>
+		<Macroline index="282" delay="0.01">
+			<text>Attribute colorrgb5 At 100</text>
+		</Macroline>
+		<Macroline index="283" delay="0.01">
+			<text>Store /m Preset 4.10</text>
+		</Macroline>
+		<Macroline index="284" delay="0.01">
+			<text>Label Preset 4.10 &quot;*.All On White RGBW&quot;</text>
+		</Macroline>
+		<Macroline index="285" delay="0.01">
+			<text>ClearAll</text>
+		</Macroline>
+		<Macroline index="286" delay="0.01">
+			<text>ClearAll</text>
+		</Macroline>
+		<Macroline index="287">
+			<text>Group 999</text>
+		</Macroline>
+		<Macroline index="288">
+			<text>Delete Group 999</text>
+		</Macroline>
+	</Macro>
+</MA>

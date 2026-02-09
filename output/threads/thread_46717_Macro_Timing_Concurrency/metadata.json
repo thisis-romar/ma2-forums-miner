@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "mvo",
+  "post_date": null,
+  "post_text": "May 17, 2015 at 2:41 PM#1As I have seen that...MA Lighting: Timing of Macros...I was literally shocked.What this states is, that one cannot be sure a command has terminated before the next one gets executed?! Or in other terms: Commands are non-blocking? If this is really the case that is BAD BAD BAD!This leads me to the following questions:- Is this 'only' true for macros?- If the operations are not executed sequentially, may I assume they get pooled and there are different worker threads executing them?- and therefore: Is at least the execution order preserved? Is the command execution atomic? Variable-assignment??Or to make things worse:- What happens if there is parallel execution happening? (e.g. executing the same macro multiple times in parallel)- What happens if there is a shared session running?Once again, relying on timing is areallybad style to avoid race conditions. Please, that cannot be true?Any hints, background information and workarounds are appreciated!-- mvo",
+  "replies": 0,
+  "thread_id": "46717",
+  "title": "Macro Timing / Concurrency",
+  "url": "https://forum.malighting.com/forum/thread/46717-macro-timing-concurrency/",
+  "views": 0
+}

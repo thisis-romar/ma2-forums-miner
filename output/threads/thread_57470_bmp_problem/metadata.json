@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "faderman",
+  "post_date": null,
+  "post_text": "March 7, 2017 at 12:20 PM#1hey guy's,Im working on a new showfile..just can't find a solution for this problem:I have an group, (group 100) that is my bump group..ill merge or remove other groups from group 100 and just have an macro with:group 100 ; matricks 2 ; store ex 1.201 cue 1group 100 ; matricks 3 ; store ex 1.201 cue 2it works flawlessly with matricks 1/2 1/3 and 1/4but i want to make the same for blocks and groups, anyone know the syntax for that?so it has to check how many fix is in group 100 and adjust the new executor and store it in the adjusted number of cues.thanks alot",
+  "replies": 0,
+  "thread_id": "57470",
+  "title": "bmp problem",
+  "url": "https://forum.malighting.com/forum/thread/57470-bmp-problem/",
+  "views": 0
+}

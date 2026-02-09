@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.0.0/MA.xsd" major_vers="3" minor_vers="0" stream_vers="0">
+	<Info datetime="2014-11-11T11:31:00" showfile="heavent2014" />
+	<Macro index="218" name="Ifoutput by Attribute">
+		<Macroline index="0">
+			<text>SetUserVar $Attribute=(&quot;Attribute number ?&quot;)</text>
+		</Macroline>
+		<Macroline index="1" delay="0.1">
+			<text>Fixture Thru At Fixture Thru</text>
+		</Macroline>
+		<Macroline index="2" delay="0.1">
+			<text>Off Attribute 1 Thru - $Attribute</text>
+		</Macroline>
+		<Macroline index="3" delay="0.1">
+			<text>IfActive</text>
+		</Macroline>
+		<Macroline index="4" delay="0.1">
+			<text>Store Group 999 /o</text>
+		</Macroline>
+		<Macroline index="5" delay="0.1">
+			<text>Off Attribute $Attribute</text>
+		</Macroline>
+	</Macro>
+</MA>

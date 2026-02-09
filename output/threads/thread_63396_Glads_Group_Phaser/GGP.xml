@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.5.0/MA.xsd" major_vers="3" minor_vers="5" stream_vers="0">
+	<Info datetime="2019-02-14T23:57:01" showfile="tools" />
+	<Macro index="0" name="Glads Group Phaser">
+		<InfoItems>
+			<Info date="2019-02-14T23:56:53">.
+      ------------------------
+      -  Glads Group Phaser  -
+      - (c)2019 Andreas Glad -
+      ------------------------ 
+
+GGP may be used to easily build effects across
+multiple groups with different fixturecount in
+each group, while still maintaining proper 
+synchronization within a group, and proper 
+distribution between the groups.
+
+Do not rename this macro, or import more than one
+instance, as macroname is used for internal looping.
+ 
+Open info window for instructions. 
+  
+ How to use:
+
+    1. Call the Macro
+
+    2. Enter amount of groups/steps,
+       (- followed by Please)
+
+    3. Confirm instructions/guide with Please
+
+    4. Select fixtures for first step. 
+       A) by pressing a GroupPool item
+       B) by entering a selection syntax 
+          (- followed by please)
+
+    5. Repeat (4.) until you have entered
+       selections for all steps.
+
+    6. Select a TemplateEffect in EffectPool
+
+    7. Select an empty space in EffectPool for
+       the generated Effect.
+
+    8. Enter the desired name/label, using
+       your qwerty keyboard.
+</Info>
+		</InfoItems>
+		<Macroline index="0">
+			<text>Assign Macro 1.&quot;Glads Group Phaser&quot;.1 /Disabled=Yes ; Lock Macro 1.&quot;Glads Group Phaser&quot;.*</text>
+			<info>run once</info>
+		</Macroline>
+		<Macroline index="1">
+			<text>SetVar $mystep=0; SetVar $mygroup=GroupEffectGroup; SetVar $mysample=GroupEffectSample ; SetVar $myname = &quot;Glads Group Phaser&quot; ; Info Macro $&quot;myname&quot;</text>
+			<info>Initialize variables used by macro</info>
+		</Macroline>
+		<Macroline index="2">
+			<text>SetVar $myMaxStep=(How many steps/groups?) ; SetVar $mydummy=(&quot;Press Please, then do as told by cmdline&quot;)</text>
+			<info>Prompt user for number of steps, and show guide/confirm dialog</info>
+		</Macroline>
+		<Macroline index="3">
+			<text>BlindEdit On ; ClearAll</text>
+			<info>Enter empty blind programmer</info>
+		</Macroline>
+		<Macroline index="4">
+			<text>SetVar $loopentry=5</text>
+			<info>Set entrypoint for next loop</info>
+		</Macroline>
+		<Macroline index="5">
+			<text>ClearSelection ; MAtricksReset</text>
+			<info>Reset last selection</info>
+		</Macroline>
+		<Macroline index="6">
+			<text>AddVar $mystep=1; AddVar $mygroup=X ; AddVar $mysample=X</text>
+			<info>count steps up, and append steptags to groupnames</info>
+		</Macroline>
+		<Macroline index="7">
+			<text>/Please_pick_groups_from_GroupPool @</text>
+			<info>Await for user to select group</info>
+		</Macroline>
+		<Macroline index="8" delay="0.05">
+			<text>Store Group $mygroup</text>
+			<info>Remember group/step selection</info>
+		</Macroline>
+		<Macroline index="9">
+			<text>MAtricksInterleave 1.1</text>
+			<info>take one of the selected as sample</info>
+		</Macroline>
+		<Macroline index="10" delay="0.05">
+			<text>Store Group $mysample</text>
+			<info>Remember sample for group/step</info>
+		</Macroline>
+		<Macroline index="11">
+			<text>[$mystep&lt;$myMaxStep] Go Macro 1.$&quot;myname&quot;.$loopentry</text>
+			<info>Loop back until all groups/steps are done</info>
+		</Macroline>
+		<Macroline index="12">
+			<text>ClearSelection ; MAtricksReset</text>
+			<info>Reset selection</info>
+		</Macroline>
+		<Macroline index="13">
+			<text>Group *GroupEffectSampleX*</text>
+			<info>Select all sample fixtures (one for each step)</info>
+		</Macroline>
+		<Macroline index="14">
+			<text>/Please_pick_TemplateEffect_from_EffectPool @</text>
+			<info>Await for user to apply template effect to samplefixtures</info>
+		</Macroline>
+		<Macroline index="15" delay="0.05">
+			<text>SetVar $mygroup=GroupEffectGroup; SetVar $mysample=GroupEffectSample</text>
+			<info>Reinitiate groupname variables</info>
+		</Macroline>
+		<Macroline index="16" delay="0.05">
+			<text>Store Effect &quot;myNewGroupEffect&quot; /o</text>
+			<info>Create new selective effect for samplefixtures</info>
+		</Macroline>
+		<Macroline index="17">
+			<text>Off Effect &quot;myNewGroupEffect&quot;</text>
+			<info>Knock effect out to reset phaseclock</info>
+		</Macroline>
+		<Macroline index="18">
+			<text>SetVar $loopentry=19</text>
+			<info>set entrypoint for next loop</info>
+		</Macroline>
+		<Macroline index="19">
+			<text>AddVar $mystep=-1; AddVar $mygroup=X; AddVar $mysample=X</text>
+			<info>count steps back to 0, and append stepmarkers to groupnames</info>
+		</Macroline>
+		<Macroline index="20">
+			<text>Clone Group *$mysample At *$mygroup If Effect &quot;myNewGroupEffect&quot; /lm /nc</text>
+			<info>Clone from single fixture step-sample to step-group</info>
+		</Macroline>
+		<Macroline index="21">
+			<text>[$mystep&gt;0] Go Macro 1.$&quot;myname&quot;.$loopentry</text>
+			<info>Loop back to repeat to repeat cloning for each step/group</info>
+		</Macroline>
+		<Macroline index="22">
+			<text>Copy Effect &quot;myNewGroupEffect&quot;</text>
+			<info>Export to clipboard for later import at user&apos;s choice of destination</info>
+		</Macroline>
+		<Macroline index="23">
+			<text>Delete Effect &quot;myNewGroupEffect&quot;</text>
+			<info>Remove temporary effect</info>
+		</Macroline>
+		<Macroline index="24">
+			<text>BlindEdit Off</text>
+			<info>Return into Live programmer</info>
+		</Macroline>
+		<Macroline index="25">
+			<text>Paste /Please_pick_empty_EffectPool_slot @</text>
+			<info>import from clipboard to destination chosen by user</info>
+		</Macroline>
+		<Macroline index="26" delay="0.05">
+			<text>SelFix Group *GroupEffectGroup*</text>
+			<info>Select all fixtures</info>
+		</Macroline>
+		<Macroline index="27">
+			<text>At Effect &quot;myNewGroupEffect&quot;</text>
+			<info>Apply effect to all fixtures</info>
+		</Macroline>
+		<Macroline index="28" delay="0.05">
+			<text>Label Effect &quot;myNewGroupEffect&quot; &quot;New Group Effect&quot;</text>
+			<info>rename to prevent issues next time</info>
+		</Macroline>
+		<Macroline index="29">
+			<text>SyncEffects</text>
+			<info>Restart phaseclock in case some of the fixtures had other effects running</info>
+		</Macroline>
+		<Macroline index="30">
+			<text>Delete Group *GroupEffect* /nc</text>
+			<info>remove temporary groups</info>
+		</Macroline>
+		<Macroline index="31">
+			<text>SetVar $myname; SetVar $mystep ; SetVar $myMaxStep ; SetVar $loopentry ; SetVar $mygroup ; SetVar $mysample ; SetVar $mydummy</text>
+			<info>remove temporary variables</info>
+		</Macroline>
+	</Macro>
+</MA>

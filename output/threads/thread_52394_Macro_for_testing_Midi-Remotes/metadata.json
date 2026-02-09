@@ -1,0 +1,19 @@
+{
+  "assets": [
+    {
+      "checksum": "sha256:2a330a32093394f1911aa6c502a481f0b27411f41991de735f7961aec388e413",
+      "download_count": 49,
+      "filename": "Test Midi Note.xml",
+      "size": 2932,
+      "url": "https://forum.malighting.com/file-download/3996/"
+    }
+  ],
+  "author": "gralf",
+  "post_date": null,
+  "post_text": "April 10, 2016 at 4:59 PM#1Hi!Here is a little macro I wrote recently to be able to test my Midi-Remote-Triggers myself without any additional hardware like laptop, midi-interface, software etc.Just plug in a midi-cable from midi-out to midi-in of your console. Make sure to disable midi-thru in \"setup/console/midi show control\" to avoid feedback-loops!Import the macro to any slot in macro-pool but do not rename it! Macro calls itself by name.When first calling the macro it asks the user for a number. This is the midi-note from 0 to 127. Then the macro runs the command \"midinote\" with the given number and a fixed velocity of 127 to send a MidiNoteOn-Event on the Midi-channel given in \"setup/console/midi show control\".Next the makro waits for another GO to repeat. This enables the user to send severaltimes the same note without having to enter the number again.When the macro is stopped the note is reset and must be entered again the next time the macro is run. This enables the user to easiely change the note.Make sure to switch back to Midiremote-source after testing or use a midi-merger.You may use this macro for free. If there is any need for editing, don't hesitate, but please post any bugs or improvements here.ThanksGralfFilesTest Midi Note.xml2.93 kB – 49 Downloads",
+  "replies": 0,
+  "thread_id": "52394",
+  "title": "Macro for testing Midi-Remotes",
+  "url": "https://forum.malighting.com/forum/thread/52394-macro-for-testing-midi-remotes/",
+  "views": 0
+}

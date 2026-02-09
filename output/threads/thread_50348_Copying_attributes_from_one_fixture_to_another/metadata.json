@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "mreicker",
+  "post_date": null,
+  "post_text": "December 22, 2015 at 4:31 AM#1Hello everyoneQ1: I was wondering if there is a way to copy an attribute from one fixture to another. I come from theatre and on an ETC Ion there is a \"copy to\" function that is incredibly useful.Example: if I have a Mac Viper with a gobo, focus, colour and I want another viper with the same attributes I would just hit Fixture 1 \"copy to\" fixture 2.I tried fixture 2 at fixture 1 on the MA and it didn't work. Wondering what the syntax is for the macro.Q2: There is also a \"recall from\" button on the ION that lets me recall all the attributes of a light from any cue I specify.Ex: Say I have a red cyc in cue 1 and I want a red cyc in cue 5 I would just say \"fixture 1 recall cue 1\" then I would record that as cue 5. No idea what the syntax would be for that.Those are the two most useful things for when I do theatre programming and would love to junk the ion for my next tour and just go with my MA2 wing.Thanks All!Matthew ReickerLighting DirectorMr. Light Solutionshttp://www.mrlightsolutions.com",
+  "replies": 0,
+  "thread_id": "50348",
+  "title": "Copying attributes from one fixture to another",
+  "url": "https://forum.malighting.com/forum/thread/50348-copying-attributes-from-one-fixture-to-another/",
+  "views": 0
+}

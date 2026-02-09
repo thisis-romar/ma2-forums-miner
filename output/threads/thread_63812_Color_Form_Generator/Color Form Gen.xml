@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.4/MA.xsd" major_vers="3" minor_vers="3" stream_vers="4">
+	<Info datetime="2019-04-24T19:07:19" showfile="new show 2019-02-09" />
+	<Macro index="2" name="Color Form Generator">
+		<Macroline index="0">
+			<info>Macro created by Jeff Handke (MA-Share User: JSHDesigns) 4/24/19</info>
+		</Macroline>
+		<Macroline index="1" delay="0.03">
+			<text>SetVar $form = (What Form #?)</text>
+			<info>Prompts User to Pick a Form Number</info>
+		</Macroline>
+		<Macroline index="2" delay="0.03">
+			<text>Store Form $form</text>
+			<info>Creates the Form</info>
+		</Macroline>
+		<Macroline index="3" delay="0.03">
+			<text>Label Form $form (&quot;Form Label?&quot;)</text>
+			<info>Prompts User to Label the Form</info>
+		</Macroline>
+		<Macroline index="4" delay="0.03">
+			<text>Store Form $form.1 Thru $form.3</text>
+			<info>Creates 3 New Graphs in the Form</info>
+		</Macroline>
+		<Macroline index="5" delay="0.03">
+			<text>Delete Form $form.1</text>
+			<info>Deletes the first default graph created</info>
+		</Macroline>
+		<Macroline index="6" delay="0.03">
+			<text>Label Form $form.1 &quot;Red&quot;</text>
+			<info>Labels first graph Red</info>
+		</Macroline>
+		<Macroline index="7" delay="0.03">
+			<text>Assign Form $form.1 /Color = 255</text>
+			<info>Colors first graph Red</info>
+		</Macroline>
+		<Macroline index="8" delay="0.03">
+			<text>Delete Form $form.1.1 Thru $form.1.2</text>
+			<info>Deletes the first two default points in the first graph</info>
+		</Macroline>
+		<Macroline index="9" delay="0.03">
+			<text>Label Form $form.2 &quot;Green&quot;</text>
+			<info>Labels second graph Green</info>
+		</Macroline>
+		<Macroline index="10" delay="0.03">
+			<text>Assign Form $form.2 /Color = 65280</text>
+			<info>Colors second graph Green</info>
+		</Macroline>
+		<Macroline index="11" delay="0.03">
+			<text>Delete Form $form.2.1 Thru $form.2.2</text>
+			<info>Deletes the first two default points in the second graph</info>
+		</Macroline>
+		<Macroline index="12" delay="0.03">
+			<text>Label Form $form.3 &quot;Blue&quot;</text>
+			<info>Labels third graph Blue</info>
+		</Macroline>
+		<Macroline index="13" delay="0.03">
+			<text>Assign Form $form.3 /Color = 16711680</text>
+			<info>Colors third graph Blue</info>
+		</Macroline>
+		<Macroline index="14" delay="0.03">
+			<text>Delete Form $form.3.1 Thru $form.3.2</text>
+			<info>Deletes the first two default points in the third graph</info>
+		</Macroline>
+		<Macroline index="15" delay="0.03">
+			<text>SetVar $coloramount = (How Many Colors? 3 or 4?)</text>
+			<info>Prompts User how many colors in the form, 3 or 4</info>
+		</Macroline>
+		<Macroline index="16" delay="0.03">
+			<text>[$coloramount == 3] Store Form $form.1.1 Thru $form.1.6 + $form.2.1 Thru $form.2.6 + $form.3.1 Thru $form.3.6</text>
+			<info>Creates six points on all 3 graphs if 3 color form</info>
+		</Macroline>
+		<Macroline index="17" delay="0.03">
+			<text>[$coloramount == 4] Store Form $form.1.1 Thru $form.1.8 + $form.2.1 Thru $form.2.8 + $form.3.1 Thru $form.3.8</text>
+			<info>Creates eight points on all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="18" delay="0.03">
+			<text>SetVar $colorinfo = (Red Percentage Value in first color?)</text>
+			<info>Prompts user for Red Value of first color (in percentage)</info>
+		</Macroline>
+		<Macroline index="19" delay="0.03">
+			<text>Assign Form $form.1.2 + $form.1.3 /y= $colorinfo</text>
+			<info>Assigns Red Value of first color to graph</info>
+		</Macroline>
+		<Macroline index="20" delay="0.03">
+			<text>SetVar $colorinfo = (Green Percentage Value in first color?)</text>
+			<info>Prompts user for Green Value of first color (in percentage)</info>
+		</Macroline>
+		<Macroline index="21" delay="0.03">
+			<text>Assign Form $form.2.2 + $form.2.3 /y= $colorinfo</text>
+			<info>Assigns Green Value of first color to graph</info>
+		</Macroline>
+		<Macroline index="22" delay="0.03">
+			<text>SetVar $colorinfo = (Blue Percentage Value in first color?)</text>
+			<info>Prompts user for Blue Value of first color (in percentage)</info>
+		</Macroline>
+		<Macroline index="23" delay="0.03">
+			<text>Assign Form $form.3.2 + $form.3.3 /y= $colorinfo</text>
+			<info>Assigns Blue Value of first color to graph</info>
+		</Macroline>
+		<Macroline index="24" delay="0.03">
+			<text>SetVar $colorinfo = (Red Percentage Value in second color?)</text>
+			<info>Prompts user for Red Value of second color (in percentage)</info>
+		</Macroline>
+		<Macroline index="25" delay="0.03">
+			<text>Assign Form $form.1.4 + $form.1.5 /y= $colorinfo</text>
+			<info>Assigns Red Value of second color to graph</info>
+		</Macroline>
+		<Macroline index="26" delay="0.03">
+			<text>SetVar $colorinfo = (Green Percentage Value in second color?)</text>
+			<info>Prompts user for Green Value of second color (in percentage)</info>
+		</Macroline>
+		<Macroline index="27" delay="0.03">
+			<text>Assign Form $form.2.4 + $form.2.5 /y= $colorinfo</text>
+			<info>Assigns Green Value of second color to graph</info>
+		</Macroline>
+		<Macroline index="28" delay="0.03">
+			<text>SetVar $colorinfo = (Blue Percentage Value in second color?)</text>
+			<info>Prompts user for Blue Value of second color (in percentage)</info>
+		</Macroline>
+		<Macroline index="29" delay="0.03">
+			<text>Assign Form $form.3.4 + $form.3.5 /y= $colorinfo</text>
+			<info>Assigns Blue Value of second color to graph</info>
+		</Macroline>
+		<Macroline index="30" delay="0.03">
+			<text>[$coloramount == 3] SetVar $colorinfo = (Red Percentage Value in third color?)</text>
+			<info>Prompts user for Red Value of third color (in percentage)</info>
+		</Macroline>
+		<Macroline index="31" delay="0.03">
+			<text>[$coloramount == 3] Assign Form $form.1.1 + $form.1.6 /y= $colorinfo</text>
+			<info>Assigns Red Value of third color to graph</info>
+		</Macroline>
+		<Macroline index="32" delay="0.03">
+			<text>[$coloramount == 3] SetVar $colorinfo = (Green Percentage Value in third color?)</text>
+			<info>Prompts user for Green Value of third color (in percentage)</info>
+		</Macroline>
+		<Macroline index="33" delay="0.03">
+			<text>[$coloramount == 3] Assign Form $form.2.1 + $form.2.6 /y= $colorinfo</text>
+			<info>Assigns Green Value of third color to graph</info>
+		</Macroline>
+		<Macroline index="34" delay="0.03">
+			<text>[$coloramount == 3] SetVar $colorinfo = (Blue Percentage Value in third color?)</text>
+			<info>Prompts user for Blue Value of third color (in percentage)</info>
+		</Macroline>
+		<Macroline index="35" delay="0.03">
+			<text>[$coloramount == 3] Assign Form $form.3.1 + $form.3.6 /y= $colorinfo</text>
+			<info>Assigns Blue Value of third color to graph</info>
+		</Macroline>
+		<Macroline index="36" delay="0.03">
+			<text>[$coloramount == 4] SetVar $colorinfo = (Red Percentage Value in third color?)</text>
+			<info>Prompts user for Red Value of third color (in percentage)</info>
+		</Macroline>
+		<Macroline index="37" delay="0.03">
+			<text>[$coloramount == 4] Assign Form $form.1.6 + $form.1.7 /y= $colorinfo</text>
+			<info>Assigns Red Value of third color to graph</info>
+		</Macroline>
+		<Macroline index="38" delay="0.03">
+			<text>[$coloramount == 4] SetVar $colorinfo = (Green Percentage Value in third color?)</text>
+			<info>Prompts user for Green Value of third color (in percentage)</info>
+		</Macroline>
+		<Macroline index="39" delay="0.03">
+			<text>[$coloramount == 4] Assign Form $form.2.6 + $form.2.7 /y= $colorinfo</text>
+			<info>Assigns Green Value of third color to graph</info>
+		</Macroline>
+		<Macroline index="40" delay="0.03">
+			<text>[$coloramount == 4] SetVar $colorinfo = (Blue Percentage Value in third color?)</text>
+			<info>Prompts user for Blue Value of third color (in percentage)</info>
+		</Macroline>
+		<Macroline index="41" delay="0.03">
+			<text>[$coloramount == 4] Assign Form $form.3.6 + $form.3.7 /y= $colorinfo</text>
+			<info>Assigns Blue Value of third color to graph</info>
+		</Macroline>
+		<Macroline index="42" delay="0.03">
+			<text>[$coloramount == 4] SetVar $colorinfo = (Red Percentage Value in fourth color?)</text>
+			<info>Prompts user for Red Value of fourth color (in percentage) if 4 color</info>
+		</Macroline>
+		<Macroline index="43" delay="0.03">
+			<text>[$coloramount == 4] Assign Form $form.1.1 + $form.1.8 /y= $colorinfo</text>
+			<info>Assigns Red Value of fourth color to graph if 4 color</info>
+		</Macroline>
+		<Macroline index="44" delay="0.03">
+			<text>[$coloramount == 4] SetVar $colorinfo = (Green Percentage Value in fourth color?)</text>
+			<info>Prompts user for Green Value of fourth color (in percentage) if 4 color</info>
+		</Macroline>
+		<Macroline index="45" delay="0.03">
+			<text>[$coloramount == 4] Assign Form $form.2.1 + $form.2.8 /y= $colorinfo</text>
+			<info>Assigns Green Value of fourth color to graph if 4 color</info>
+		</Macroline>
+		<Macroline index="46" delay="0.03">
+			<text>[$coloramount == 4] SetVar $colorinfo = (Blue Percentage Value in fourth color?)</text>
+			<info>Prompts user for Blue Value of fourth color (in percentage) if 4 color</info>
+		</Macroline>
+		<Macroline index="47" delay="0.03">
+			<text>[$coloramount == 4] Assign Form $form.3.1 + $form.3.8 /y= $colorinfo</text>
+			<info>Assigns Blue Value of fourth color to graph if 4 color</info>
+		</Macroline>
+		<Macroline index="48" />
+		<Macroline index="49" delay="0.03">
+			<text>SetVar $formtype = (&quot;1=Snap or 2=Xfade between colors?&quot;)</text>
+			<info>Prompts User if form should snap or fade between colors</info>
+		</Macroline>
+		<Macroline index="50" delay="0.03">
+			<text>[$formtype == 1] AddVar $coloramount = 1</text>
+			<info>Logic to distinguish 3 Color Fade, 3 Color Snap, 4 Color Fade, 4 Color Snap</info>
+		</Macroline>
+		<Macroline index="51" delay="0.03">
+			<text>[$formtype == 2] AddVar $coloramount = 3</text>
+			<info>Logic to distinguish 3 Color Fade, 3 Color Snap, 4 Color Fade, 4 Color Snap</info>
+		</Macroline>
+		<Macroline index="52" />
+		<Macroline index="53" delay="0.03">
+			<text>[$coloramount == 6] Assign Form $form.1.1 + $form.2.1 + $form.3.1 /x= 0</text>
+			<info>Assigns X Value to first point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="54" delay="0.03">
+			<text>[$coloramount == 6] Assign Form $form.1.2 + $form.2.2 + $form.3.2 /x= 16.67</text>
+			<info>Assigns X Value to second point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="55" delay="0.03">
+			<text>[$coloramount == 6] Assign Form $form.1.3 + $form.2.3 + $form.3.3 /x= 33.33</text>
+			<info>Assigns X Value to third point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="56" delay="0.03">
+			<text>[$coloramount == 6] Assign Form $form.1.4 + $form.2.4 + $form.3.4 /x= 50</text>
+			<info>Assigns X Value to fourth point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="57" delay="0.03">
+			<text>[$coloramount == 6] Assign Form $form.1.5 + $form.2.5 + $form.3.5 /x= 66.67</text>
+			<info>Assigns X Value to fifth point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="58" delay="0.03">
+			<text>[$coloramount == 6] Assign Form $form.1.6 + $form.2.6 + $form.3.6 /x= 83.33</text>
+			<info>Assigns X Value to sixth point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="59" />
+		<Macroline index="60" delay="0.03">
+			<text>[$coloramount == 4] Assign Form $form.1.1 + $form.2.1 + $form.3.1 /x= 0</text>
+			<info>Assigns X Value to first point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="61" delay="0.03">
+			<text>[$coloramount == 4] Assign Form $form.1.2 + $form.2.2 + $form.3.2 /x= 0.01</text>
+			<info>Assigns X Value to second point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="62" delay="0.03">
+			<text>[$coloramount == 4] Assign Form $form.1.3 + $form.2.3 + $form.3.3 /x= 33.33</text>
+			<info>Assigns X Value to third point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="63" delay="0.03">
+			<text>[$coloramount == 4] Assign Form $form.1.4 + $form.2.4 + $form.3.4 /x= 33.34</text>
+			<info>Assigns X Value to fourth point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="64" delay="0.03">
+			<text>[$coloramount == 4] Assign Form $form.1.5 + $form.2.5 + $form.3.5 /x= 66.67</text>
+			<info>Assigns X Value to fifth point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="65" delay="0.03">
+			<text>[$coloramount == 4] Assign Form $form.1.6 + $form.2.6 + $form.3.6 /x= 66.68</text>
+			<info>Assigns X Value to sixth point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="66" />
+		<Macroline index="67" delay="0.03">
+			<text>[$coloramount == 7] Assign Form $form.1.1 + $form.2.1 + $form.3.1 /x= 0</text>
+			<info>Assigns X Value to first point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="68" delay="0.03">
+			<text>[$coloramount == 7] Assign Form $form.1.2 + $form.2.2 + $form.3.2 /x= 12.5</text>
+			<info>Assigns X Value to second point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="69" delay="0.03">
+			<text>[$coloramount == 7] Assign Form $form.1.3 + $form.2.3 + $form.3.3 /x= 25</text>
+			<info>Assigns X Value to third point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="70" delay="0.03">
+			<text>[$coloramount == 7] Assign Form $form.1.4 + $form.2.4 + $form.3.4 /x= 37.5</text>
+			<info>Assigns X Value to fourth point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="71" delay="0.03">
+			<text>[$coloramount == 7] Assign Form $form.1.5 + $form.2.5 + $form.3.5 /x= 50</text>
+			<info>Assigns X Value to fifth point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="72" delay="0.03">
+			<text>[$coloramount == 7] Assign Form $form.1.6 + $form.2.6 + $form.3.6 /x= 62.5</text>
+			<info>Assigns X Value to sixth point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="73" delay="0.03">
+			<text>[$coloramount == 7] Assign Form $form.1.7 + $form.2.7 + $form.3.7 /x= 75</text>
+			<info>Assigns X Value to seventh point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="74" delay="0.03">
+			<text>[$coloramount == 7] Assign Form $form.1.8 + $form.2.8 + $form.3.8 /x= 87.50</text>
+			<info>Assigns X Value to eighth point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="75" />
+		<Macroline index="76" delay="0.03">
+			<text>[$coloramount == 5] Assign Form $form.1.1 + $form.2.1 + $form.3.1 /x= 0</text>
+			<info>Assigns X Value to first point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="77" delay="0.03">
+			<text>[$coloramount == 5] Assign Form $form.1.2 + $form.2.2 + $form.3.2 /x= 0.01</text>
+			<info>Assigns X Value to second point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="78" delay="0.03">
+			<text>[$coloramount == 5] Assign Form $form.1.3 + $form.2.3 + $form.3.3 /x= 25</text>
+			<info>Assigns X Value to third point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="79" delay="0.03">
+			<text>[$coloramount == 5] Assign Form $form.1.4 + $form.2.4 + $form.3.4 /x= 25.01</text>
+			<info>Assigns X Value to fourth point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="80" delay="0.03">
+			<text>[$coloramount == 5] Assign Form $form.1.5 + $form.2.5 + $form.3.5 /x= 50</text>
+			<info>Assigns X Value to fifth point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="81" delay="0.03">
+			<text>[$coloramount == 5] Assign Form $form.1.6 + $form.2.6 + $form.3.6 /x= 50.01</text>
+			<info>Assigns X Value to sixth point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="82" delay="0.03">
+			<text>[$coloramount == 5] Assign Form $form.1.7 + $form.2.7 + $form.3.7 /x= 75</text>
+			<info>Assigns X Value to seventh point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="83" delay="0.03">
+			<text>[$coloramount == 5] Assign Form $form.1.8 + $form.2.8 + $form.3.8 /x= 75.01</text>
+			<info>Assigns X Value to eighth point of all 3 graphs if 4 color form</info>
+		</Macroline>
+		<Macroline index="84" />
+		<Macroline index="85">
+			<text>SetVar $form = ; SetVar $colorinfo = ; SetVar $formtype = ; SetVar $coloramount =</text>
+			<info>Removes all created variables from this macro</info>
+		</Macroline>
+	</Macro>
+</MA>

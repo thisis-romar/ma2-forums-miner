@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Jbmckenzie",
+  "post_date": null,
+  "post_text": "May 14, 2021 at 6:15 AM#1If I want to store fixture instances through a macro I could do the following...> Group 1 ; If Fixture *.1 ;  Store Group @But lets say I want to store multiple instance into one group for a fixture like a JDC1, only wanting the color channels, the following will not work...> Group 1 ; If Fixture *.2 thru *14 ;  Store Group @Is there a work around so I do not have to have a new line for each instance?Thanks.",
+  "replies": 0,
+  "thread_id": "66591",
+  "title": "Storing Instances Question",
+  "url": "https://forum.malighting.com/forum/thread/66591-storing-instances-question/",
+  "views": 0
+}

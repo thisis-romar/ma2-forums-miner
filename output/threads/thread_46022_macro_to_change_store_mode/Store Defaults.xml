@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.1.2/MA.xsd" major_vers="3" minor_vers="1" stream_vers="2">
+	<Info datetime="2015-11-09T10:42:54" showfile="output test vpu" />
+	<Macro index="11" name="Store Default Active">
+		<Macroline index="0">
+			<text>ChangeDest &quot;UserProfiles&quot;</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>ChangeDest $USER</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Assign 8 + 15 /StoreFilter=Active</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>ChangeDest /</text>
+		</Macroline>
+	</Macro>
+	<Macro index="12" name="Store Default All for selected">
+		<Macroline index="0">
+			<text>ChangeDest &quot;UserProfiles&quot;</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>ChangeDest $USER</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Assign 8 + 15 /StoreFilter=Allforselected</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>ChangeDest /</text>
+		</Macroline>
+	</Macro>
+	<Macro index="13" name="Store Default Active for selected">
+		<Macroline index="0">
+			<text>ChangeDest &quot;UserProfiles&quot;</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>ChangeDest $USER</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Assign 8 + 15 /StoreFilter=Activeforselected</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>ChangeDest /</text>
+		</Macroline>
+	</Macro>
+	<Macro index="14" name="Store Default All">
+		<Macroline index="0">
+			<text>ChangeDest &quot;UserProfiles&quot;</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>ChangeDest $USER</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Assign 8 + 15 /StoreFilter=All</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>ChangeDest /</text>
+		</Macroline>
+	</Macro>
+	<Macro index="15" name="Store Default Look">
+		<Macroline index="0">
+			<text>ChangeDest &quot;UserProfiles&quot;</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>ChangeDest $USER</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Assign 8 + 15 /StoreFilter=Look</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>ChangeDest /</text>
+		</Macroline>
+	</Macro>
+</MA>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.0.0/MA.xsd" major_vers="3" minor_vers="0" stream_vers="0">
+	<Info datetime="2014-12-26T22:09:23" showfile="test pb audio" />
+	<Macro index="224" name="test ayrton">
+		<Macroline index="0">
+			<text>SetVar $myFixID= (fixture ?)</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>Fixture $myFixID.2 + Fixture $myFixID.5 + Fixture $myFixID.8 + Fixture $myFixID.11 + Fixture $myFixID.14 + Fixture $myFixID.17 + Fixture $myFixID.20 + Fixture $myFixID.23 + Fixture $myFixID.26 + Fixture $myFixID.29 + Fixture $myFixID.32 + Fixture $myFixID.35</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>At Full</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>SetVar $otherFixID= (&quot;copy to?&quot;)</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>Fixture $otherFixID At Fixture $myFixID</text>
+		</Macroline>
+	</Macro>
+</MA>

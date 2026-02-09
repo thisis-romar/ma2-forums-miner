@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "rchrdprks",
+  "post_date": null,
+  "post_text": "May 8, 2020 at 11:14 PM#1Hi There,I am trying to create a 'load if' type macro but can't quite get the syntax.I was was looking at some thing like;load executor x...then the pop up appears and I select a cue number,so then next line would be some thing like...assuming i selected cue 1if 1 label macro y \"white\"or if cue 2 selectedif 2 label macro y \"red\"or is it something like;2= label macro y \"red'Many thanks in advance,Richard",
+  "replies": 0,
+  "thread_id": "65645",
+  "title": "load if?",
+  "url": "https://forum.malighting.com/forum/thread/65645-load-if/",
+  "views": 0
+}

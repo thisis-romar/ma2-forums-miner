@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Redzye",
+  "post_date": null,
+  "post_text": "August 30, 2018 at 6:38 PM#1Hello guys,I am trying to change my effects via Macros.So far everything is working except when I try to change the phase of the effect to 0 thru 360..I can easily change it to a single number like 0, 90,180 but as soon as I try to add a 0 thru, it only accepts the 0.Command line :Assign $colorfx /phase=0 thru 180I also tried to put it in \"\" but that also didn't work.Even if I used the pop up window to manually type the phase it didn't work.I would appreciate any help.Thanks in advance.",
+  "replies": 0,
+  "thread_id": "62188",
+  "title": "Changing Effect Phase via Macro",
+  "url": "https://forum.malighting.com/forum/thread/62188-changing-effect-phase-via-macro/",
+  "views": 0
+}

@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "nao",
+  "post_date": null,
+  "post_text": "February 18, 2015 at 3:08 PM#1Hi,You can edit the value of a fixtures dim valuein a cue to 0 by using the tracking sheet. through right clicking or edit one field, then choose edit in the popup or press \"please\", and finally enter the value \"0\" and the command please.Is there any way to put this in a macro? So I can do this by just pressing the macro and then the one box in the tracking sheet.",
+  "replies": 0,
+  "thread_id": "45422",
+  "title": "Macro Edit Tracking Sheet",
+  "url": "https://forum.malighting.com/forum/thread/45422-macro-edit-tracking-sheet/",
+  "views": 0
+}

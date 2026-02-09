@@ -1,0 +1,19 @@
+{
+  "assets": [
+    {
+      "checksum": "sha256:0e8647ac9fbbefb0d5e9b511507f2e2c2a5710aebe56e27317f229686d48f4b1",
+      "download_count": 108,
+      "filename": "IMPORT_EXPORT.xml",
+      "size": 976,
+      "url": "https://forum.malighting.com/file-download/4164/"
+    }
+  ],
+  "author": "daynedehaven",
+  "post_date": null,
+  "post_text": "February 15, 2017 at 6:52 AM#1Hello all my fellow MA2 users.Here is an import and export macro for anyone who wants a carefree way to export anything from file to file.  Works on any part of your file from sequences to layouts etc.Make sure you keep track of your file names to insure that you importing the right files.Side note; drive 4 is always the first usb plugged into the desk... drive 1 is internal... you can see which drive is which by opening a command line window, pressing backup and selecting a drive. the command line will show you which drive you've selected.Happy exporting!-DayneFilesIMPORT_EXPORT.xml976 Byte – 108 Downloads",
+  "replies": 0,
+  "thread_id": "57160",
+  "title": "new import and export macros",
+  "url": "https://forum.malighting.com/forum/thread/57160-new-import-and-export-macros/",
+  "views": 0
+}

@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "kdelvo",
+  "post_date": null,
+  "post_text": "April 28, 2018 at 11:14 PM#1Hey everyone...I have a tour I'm working on. Some days I have my rig in a different configuration. It's kind of a A-Rig vs. B-Rig scenario. What I have done is create 2 Macros. They take certain Groups and assign them a different Position Preset. Then the same with the Bally-Hoo Effect.I created the macros & they seem to work fine. Wanted to post them here and see if anyone had a suggestion on how they could be improved and/or simplified.B-Rig Macro- Group 10 Thru 15 At Preset 2.6- Store /m @ Sequence 1 Cue 0.5 + 13- Group 10 Thru 15 At Effect 2- Store /m @ Sequence 1 Cue 11 + Cue 14A-Rig Macro- Group 10 Thru 15 At Preset 2.5- Store /m @ Sequence 1 Cue 0.5 + 13- Group 10 Thru 15 At Effect 4- Store /m @ Sequence 1 Cue 11 + Cue 14Thanks in advance.Ken",
+  "replies": 0,
+  "thread_id": "61252",
+  "title": "A Rig vs. B-Rig macros",
+  "url": "https://forum.malighting.com/forum/thread/61252-a-rig-vs-b-rig-macros/",
+  "views": 0
+}

@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "GertvanElderen",
+  "post_date": null,
+  "post_text": "November 2, 2021 at 9:03 AM#1Hi,I'am writing a macro which searches for presets in useBut I want the macro to check if there is program activity after selfixSo I taughtsearch preset 0.xselfix searchresultat fullIfprog Assign macro 1.x.x /disabled=yesbut then the macro won't disable anythingAnd if I makeIfprogAssign macro 1.x.x /disabled=yesthe macro will always disable the line.Who can help me with this issue?",
+  "replies": 0,
+  "thread_id": "66862",
+  "title": "Disable macro line when active program",
+  "url": "https://forum.malighting.com/forum/thread/66862-disable-macro-line-when-active-program/",
+  "views": 0
+}

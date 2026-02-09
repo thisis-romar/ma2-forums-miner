@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.0.0/MA.xsd" major_vers="3" minor_vers="0" stream_vers="0">
+	<Info datetime="2014-06-17T12:03:12" showfile="sar" />
+	<Macro index="5" name="Pan Offset -45 degrees for selection">
+		<Macroline index="0">
+			<text>Store World 50 /o</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>World 50</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Replace Attribute &quot;Pan&quot; At -270 Thru 270 With -315 Thru 225 /nc</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>World 1</text>
+		</Macroline>
+	</Macro>
+	<Macro index="6" name="Pan Offset -90 degrees for selection">
+		<Macroline index="0">
+			<text>Store World 50 /o</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>World 50</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Replace Attribute &quot;Pan&quot; At -270 Thru 270 With -360 Thru 180 /nc</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>World 1</text>
+		</Macroline>
+	</Macro>
+	<Macro index="7" name="Pan Offset +90 degrees for selection">
+		<Macroline index="0">
+			<text>Store World 50 /o</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>World 50</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Replace Attribute &quot;Pan&quot; At -270 Thru 270 With -180 Thru 360 /nc</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>World 1</text>
+		</Macroline>
+	</Macro>
+	<Macro index="8" name="Pan Offset +45 degrees for selection">
+		<Macroline index="0">
+			<text>Store World 50 /o</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>World 50</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Replace Attribute &quot;Pan&quot; At -270 Thru 270 With -225 Thru 315 /nc</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>World 1</text>
+		</Macroline>
+	</Macro>
+</MA>

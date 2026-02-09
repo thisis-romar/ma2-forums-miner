@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "Duplicate ttjm1997",
+  "post_date": null,
+  "post_text": "July 30, 2016 at 6:55 PM#1Hello all,I can't find the mistake i'm making, could someone help me out!Line 1; SetUserVar $showcolexe = 10.101 ;  SetUserVar $showcolexe2 = 10.1132; Assign Sequence 1  Thru 13  At Executor $Showcolexe  Thru Executor $showcolexe2/o3; AddUserVar $showcolexe2 = .0024; Assign Macro 226  At Executor $showcolexe2 /onow when i play te macro i get an error that $showcolexe2 = 10.115000 and to big to execute, tried differente things with one zero, without zeros. but or the nummer is incorrect or the nummer is wrong.I also triedline 1; Line 1; SetUserVar $showcolexe = 10.101 ; SetUserVar $showcolexe1 = 113 ; SetUserVar $showcolexe2 = 10.$showcolexe1line 3; 3; AddUserVar $showcolexe1 = .002now i get the variable $showcolexe = 10.\"113\" in the syntax listvarI hope someone could help me, or an other way to do the same thing.",
+  "replies": 0,
+  "thread_id": "54302",
+  "title": "addvar question",
+  "url": "https://forum.malighting.com/forum/thread/54302-addvar-question/",
+  "views": 0
+}

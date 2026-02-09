@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "madseckert",
+  "post_date": null,
+  "post_text": "March 20, 2015 at 7:49 PM#1HiDoes anybody know if it is possible to count the number of selected channels/fixtures in a macro?- E.g. a function that would return 3 if channels 5, 8 and 12 is selected.I would like to save it as a variable for looping purposes, so that I can have a loop run x times depending on how many channels is selected.Thanks, Mads",
+  "replies": 0,
+  "thread_id": "45917",
+  "title": "Count number of selected channels",
+  "url": "https://forum.malighting.com/forum/thread/45917-count-number-of-selected-channels/",
+  "views": 0
+}

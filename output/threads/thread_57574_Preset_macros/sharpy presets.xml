@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2017-03-13T12:16:20" showfile="plugin - macro test" />
+	<Macro index="74" name="SHARPY PRESETS">
+		<Appearance Color="007fff" />
+		<Macroline index="0" delay="0.01">
+			<text>Attribute DIM At 0 ; Attribute Shutter At 0</text>
+		</Macroline>
+		<Macroline index="1" delay="0.01">
+			<text>Store Preset 0.&quot;BLACK&quot; /m</text>
+		</Macroline>
+		<Macroline index="2" delay="0.01">
+			<text>Attribute DIM At 0 ; Attribute Shutter At 41.4</text>
+		</Macroline>
+		<Macroline index="3" delay="0.01">
+			<text>Store Preset 0.&quot;0%&quot; /m</text>
+		</Macroline>
+		<Macroline index="4" delay="0.01">
+			<text>Attribute DIM At 100 ; Attribute Shutter At 92.1</text>
+		</Macroline>
+		<Macroline index="5" delay="0.01">
+			<text>Store Preset 0.&quot;MED RDM&quot; /m</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>Attribute DIM At 100 ; Attribute Shutter At 94.4</text>
+		</Macroline>
+		<Macroline index="7">
+			<text>Store Preset 0.&quot;RDM&quot; /m</text>
+		</Macroline>
+		<Macroline index="8" delay="0.01">
+			<text>Attribute DIM At 100 ; Attribute shutter At 37.7</text>
+		</Macroline>
+		<Macroline index="9" delay="0.01">
+			<text>Store Preset 0.&quot;FAST&quot; /m</text>
+		</Macroline>
+		<Macroline index="10" delay="0.01">
+			<text>Attribute DIM At 100 ; Attribute Shutter At 40</text>
+		</Macroline>
+		<Macroline index="11" delay="0.01">
+			<text>Store Preset 0.&quot;VERY FAST&quot; /m</text>
+		</Macroline>
+		<Macroline index="12" delay="0.01">
+			<text>Attribute DIM At 100 ; Attribute Shutter At 41.4</text>
+		</Macroline>
+		<Macroline index="13" delay="0.01">
+			<text>Store Preset 0.&quot;100%&quot; /m</text>
+		</Macroline>
+		<Macroline index="14" delay="0.01">
+			<text>Attribute color1 At 4.1</text>
+		</Macroline>
+		<Macroline index="15" delay="0.01">
+			<text>Store Preset 4.&quot;RED&quot; /m</text>
+		</Macroline>
+		<Macroline index="16" delay="0.01">
+			<text>Attribute color1 At 7.6</text>
+		</Macroline>
+		<Macroline index="17" delay="0.01">
+			<text>Store Preset 4.&quot;Orange&quot; /m</text>
+		</Macroline>
+		<Macroline index="18" delay="0.01">
+			<text>Attribute color1 At 27.6</text>
+		</Macroline>
+		<Macroline index="19" delay="0.01">
+			<text>Store Preset 4.&quot;Yellow&quot; /m</text>
+		</Macroline>
+		<Macroline index="20" delay="0.01">
+			<text>Attribute color1 At 37.6</text>
+		</Macroline>
+		<Macroline index="21" delay="0.01">
+			<text>Store Preset 4.&quot;CTO&quot; /m</text>
+		</Macroline>
+		<Macroline index="22">
+			<text>Attribute color1 At 41</text>
+		</Macroline>
+		<Macroline index="23">
+			<text>Store Preset 4.&quot;Lt. CTO&quot; /m</text>
+		</Macroline>
+		<Macroline index="24">
+			<text>Attribute color1 At 24.1</text>
+		</Macroline>
+		<Macroline index="25">
+			<text>Store Preset 4.&quot;Pink&quot; /m</text>
+		</Macroline>
+		<Macroline index="26" delay="0.01">
+			<text>Attribute color1 At 31</text>
+		</Macroline>
+		<Macroline index="27" delay="0.01">
+			<text>Store Preset 4.&quot;Magenta&quot; /m</text>
+		</Macroline>
+		<Macroline index="28" delay="0.01">
+			<text>Attribute color1 At 47.6</text>
+		</Macroline>
+		<Macroline index="29" delay="0.01">
+			<text>Store Preset 4.&quot;Lav&quot; /m</text>
+		</Macroline>
+		<Macroline index="30" delay="0.01">
+			<text>Attribute color1 At 34.3</text>
+		</Macroline>
+		<Macroline index="31" delay="0.01">
+			<text>Store Preset 4.&quot;Blue&quot; /m</text>
+		</Macroline>
+		<Macroline index="32" delay="0.01">
+			<text>Attribute color1 At 10.8</text>
+		</Macroline>
+		<Macroline index="33" delay="0.01">
+			<text>Store Preset 4.&quot;Cyan&quot; /m</text>
+		</Macroline>
+		<Macroline index="34" delay="0.01">
+			<text>Attribute color1 At 44.3</text>
+		</Macroline>
+		<Macroline index="35" delay="0.01">
+			<text>Store Preset 4.&quot;CTB&quot; /m</text>
+		</Macroline>
+		<Macroline index="36" delay="0.01">
+			<text>Attribute color1 At 14.3</text>
+		</Macroline>
+		<Macroline index="37" delay="0.01">
+			<text>Store Preset 4.&quot;Green&quot; /m</text>
+		</Macroline>
+		<Macroline index="38" delay="0.01">
+			<text>Attribute color1 At 17.5</text>
+		</Macroline>
+		<Macroline index="39" delay="0.01">
+			<text>Store Preset 4.&quot;Turk&quot; /m</text>
+		</Macroline>
+		<Macroline index="40" delay="0.01">
+			<text>Attribute color1 At 0</text>
+		</Macroline>
+		<Macroline index="41" delay="0.01">
+			<text>Store Preset 4.&quot;White&quot; /m</text>
+		</Macroline>
+		<Macroline index="42">
+			<text>Attribute color1 At 73</text>
+		</Macroline>
+		<Macroline index="43">
+			<text>Store Preset 4.&quot;SLOW COL ROLL&quot; /m</text>
+		</Macroline>
+		<Macroline index="44">
+			<text>Attribute color1 At 65</text>
+		</Macroline>
+		<Macroline index="45">
+			<text>Store Preset 4.&quot;MED COL ROLL&quot; /m</text>
+		</Macroline>
+		<Macroline index="46">
+			<text>Attribute color1 At 50.2</text>
+		</Macroline>
+		<Macroline index="47">
+			<text>Store Preset 4.&quot;FAST COL ROLL&quot; /m</text>
+		</Macroline>
+		<Macroline index="48" delay="0.01">
+			<text>Attribute frost At 0 ; Attribute effectwheel At 0 ; Attribute Effectindexrotate At 0</text>
+		</Macroline>
+		<Macroline index="49" delay="0.01">
+			<text>Store Preset 5.&quot;OPEN&quot; /m</text>
+		</Macroline>
+		<Macroline index="50" delay="0.01">
+			<text>Attribute frost At 0</text>
+		</Macroline>
+		<Macroline index="51" delay="0.01">
+			<text>Store Preset 5.&quot;NO FROST&quot; /m</text>
+		</Macroline>
+		<Macroline index="52">
+			<text>Attribute frost At 100</text>
+		</Macroline>
+		<Macroline index="53">
+			<text>Store Preset 5.&quot;FROST&quot; /m</text>
+		</Macroline>
+		<Macroline index="54">
+			<text>Attribute Effectindexrotate At 75.1 ; Attribute effectwheel At 100</text>
+		</Macroline>
+		<Macroline index="55">
+			<text>Store Preset 5.&quot;8 WAY PRISM&quot; /m</text>
+		</Macroline>
+		<Macroline index="56">
+			<text>Attribute Effectindexrotate At 67 ; Attribute effectwheel At 100</text>
+		</Macroline>
+		<Macroline index="57">
+			<text>Store Preset 5.&quot;8 WAY PRISM SLOW&quot; /m</text>
+		</Macroline>
+		<Macroline index="58">
+			<text>Attribute Effectindexrotate At 63.5 ; Attribute effectwheel At 100</text>
+		</Macroline>
+		<Macroline index="59">
+			<text>Store Preset 5.&quot;8 WAY MED&quot; /m</text>
+		</Macroline>
+		<Macroline index="60">
+			<text>Attribute Effectindexrotate At 57.5 ; Attribute effectwheel At 100</text>
+		</Macroline>
+		<Macroline index="61">
+			<text>Store Preset 5.&quot;8 WAY FAST&quot; /m</text>
+		</Macroline>
+		<Macroline index="62">
+			<text>Attribute LAMPCONTROL At 100</text>
+		</Macroline>
+		<Macroline index="63">
+			<text>Store Preset 7.&quot;LAMP ON&quot; /m</text>
+		</Macroline>
+		<Macroline index="64">
+			<text>Attribute LAMPCONTROL At 24.8</text>
+		</Macroline>
+		<Macroline index="65">
+			<text>Store Preset 7.&quot;LAMP OFF&quot; /m</text>
+		</Macroline>
+		<Macroline index="66">
+			<text>Attribute fixtureglobalreset At 100</text>
+		</Macroline>
+		<Macroline index="67">
+			<text>Store Preset 7.&quot;RESET&quot; /m</text>
+		</Macroline>
+		<Macroline index="68">
+			<text>ClearAll</text>
+		</Macroline>
+		<Macroline index="69">
+			<text>Clear</text>
+		</Macroline>
+		<Macroline index="70">
+			<text>Clear</text>
+		</Macroline>
+		<Macroline index="71">
+			<text>Clear</text>
+		</Macroline>
+	</Macro>
+</MA>

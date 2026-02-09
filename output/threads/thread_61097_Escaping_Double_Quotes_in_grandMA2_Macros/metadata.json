@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "author": "bernardletendre",
+  "post_date": null,
+  "post_text": "April 8, 2018 at 2:07 PM#1Hello,Is anyone aware of a way of escaping double quotes in a grandMA2 macro?I am trying to get the macro to enter some double quotes in the info line of a cue but since the double quotes are needed by the /info=\" \" command, I cannot put double quotes inside there.  I know I could do single quotes but I am trying to keep the cue sheet coherent and double quotes are simply easier to read.Thanks in advance,Bernard LetendreHead of LightingCirque du Soleil - AMALUNA Tour",
+  "replies": 0,
+  "thread_id": "61097",
+  "title": "Escaping Double Quotes in grandMA2 Macros",
+  "url": "https://forum.malighting.com/forum/thread/61097-escaping-double-quotes-in-grandma2-macros/",
+  "views": 0
+}
