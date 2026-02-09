@@ -40,7 +40,7 @@ jobs:
         
   scrape-and-cluster:
     runs-on: ubuntu-latest
-    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event_name == 'pull_request'
     permissions:
       contents: write
     
@@ -88,7 +88,12 @@ jobs:
         git add -A
         if ! git diff --quiet || ! git diff --staged --quiet; then
           git commit -m "Update scraped data [skip ci]"
-          git push
+          # Only push if not a pull request (PRs are in detached HEAD)
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            git push
+          else
+            echo "Skipping push on PR - data available in artifacts"
+          fi
         else
           echo "No changes to commit"
         fi

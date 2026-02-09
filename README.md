@@ -2,40 +2,26 @@
 
 A production-grade, educational async web scraper for the [MA Lighting grandMA2 Macro Share forum](https://forum.malighting.com/forum/board/35-grandma2-macro-share/). This tool demonstrates modern Python async patterns, implements delta scraping for efficient incremental updates, and prepares data for downstream ML clustering pipelines.
 
-## 📊 Current Collection Statistics
+## 📊 Current Statistics
+
+**Last Updated**: See latest commit in `manifest.json`
 
 | Metric | Count |
 |--------|-------|
-| **Total Threads Scraped** | 610 |
-| **Threads with Downloadable Files** | 75 (12.3%) |
-| **Total Macro Files** | 99 |
-| **XML Files** | 78 |
-| **ZIP/GZ/Show Files** | 21 |
-| **Total Collection Size** | 14 MB |
-| **Forum Coverage** | Complete (30 pages) |
+| **Threads Scraped** | 21 |
+| **Threads with Attachments** | 1 (4.8%) |
+| **Attachment Files Downloaded** | 1 |
+| **XML Files** | 1 (CopyIfoutput.xml) |
+| **ZIP Files** | 0 |
+| **Thread ID Range** | 20248 - 69661 |
+| **Oldest Thread** | 2010 (thread 20248) |
+| **Newest Thread** | 2019+ (thread 69661) |
 
-### 🎯 Threads with Downloadable Files
+### Attachment Success Rate
+- ✅ **1 thread with attachments** (thread_20248: CopyIfoutput.xml)
+- ⚠️ **20 threads without attachments** (recent threads likely have no files)
 
-Browse the complete collection in `output/threads/`. Here are some notable threads with macro files:
-
-**Large Showfiles & Archives:**
-- Thread 10646: `BuildSeq.xml` (1.5MB), `BuildSeq2.xml` (3.1MB), `Colour Create and Label.xml` (875KB)
-- Thread 67220: `strange variable.show.gz` (1.29MB)
-- Thread 66952: `shaper test.show.gz` (1006KB)
-- Thread 66922: `worlds.show.gz` (350KB)
-- Thread 66365: `dmx remotes.show.gz` (966KB)
-
-**Macro Collections:**
-- Thread 33854: `ScrollerWizard.xml` (414KB), `ScrollerWizardV3.xml` (190KB)
-- Thread 38697: `Invert SelOrder.xml` (2.3MB)
-- Thread 32922: LEE & ROSCO Filter macros (1.15MB, 1.06MB)
-
-**See `STATISTICS.md` for complete per-thread breakdown of all 75 threads with attachments!**
-
-### 📈 Growth Timeline
-
-- **Feb 9, 2026**: Complete forum scrape - 610 threads, 99 files
-- **Automated weekly updates** via GitHub Actions
+**Note**: Most recent threads (2017-2019) appear to have no attachments. Older threads (2010-2015) are more likely to have downloadable macro files. See [SCOPE_ANALYSIS.md](SCOPE_ANALYSIS.md) for detailed breakdown.
 
 ## 🎯 Project Goals
 

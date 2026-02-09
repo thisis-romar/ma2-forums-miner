@@ -358,38 +358,14 @@ class ForumScraper:
         # Using set() removes duplicates, then convert back to list
         unique_links = list(set(thread_links))
 
-        # Add historical test threads with known attachments for verification
-        # These threads span 2010-2016 when macro sharing was most active
-        # Discovered via forum search for threads mentioning attachments/downloads
-        test_threads = [
-            # Confirmed working thread
-            ("https://forum.malighting.com/forum/thread/20248-abort-out-of-macro/", "2010", "CopyIfoutput.xml"),
-
-            # High priority - explicitly mention attached files
-            ("https://forum.malighting.com/forum/thread/29800-preset-copy-macro/", "2012", "Preset Copy macros"),
-            ("https://forum.malighting.com/forum/thread/30119-macro-commands-not-executed/", "2013", "macro commands file"),
-            ("https://forum.malighting.com/forum/thread/57574-preset-macros/", "2016", "Clay Paky Sharpy macro"),
-            ("https://forum.malighting.com/forum/thread/47912-preset-and-sequence-references/", "2015", "preset references macro"),
-
-            # Medium priority - likely have XML files
-            ("https://forum.malighting.com/forum/thread/17992-importing-macro-xml-s/", "2010", "Macro XMLs"),
-            ("https://forum.malighting.com/forum/thread/27613-exporting-colors/", "2011", "Color export XMLs"),
-            ("https://forum.malighting.com/forum/thread/29698-bcf4ma2-bcf-2000-for-gma2/", "2012", "bcf4ma2.xml"),
-            ("https://forum.malighting.com/forum/thread/24996-change-page-macro/", "2011", "Page change macro"),
-            ("https://forum.malighting.com/forum/thread/23621-macro-for-encoder/", "2011", "Encoder macro"),
-        ]
-
-        added_count = 0
-        for url, year, description in test_threads:
-            if url not in unique_links:
-                unique_links.append(url)
-                added_count += 1
-
-        if added_count > 0:
-            print(f"📌 Added {added_count} historical test threads (2010-2016 era with potential attachments)")
+        # Add test thread 20248 which has known attachments for verification
+        test_thread = "https://forum.malighting.com/forum/thread/20248-abort-out-of-macro/"
+        if test_thread not in unique_links:
+            unique_links.append(test_thread)
+            print(f"📌 Added test thread 20248 (has known attachment: CopyIfoutput.xml)")
 
         print(f"✅ Discovered {len(unique_links)} unique threads")
-        
+
         return unique_links
     
     def _extract_thread_links_from_page(self, soup: BeautifulSoup) -> List[str]:
@@ -642,8 +618,28 @@ class ForumScraper:
         assets = []
 
         # Find all attachment links using the actual WoltLab forum structure
-        # Attachments use class "messageAttachment" with filename in child span
-        attachment_links = soup.select('a.messageAttachment')
+        # Try multiple possible selectors for attachments
+        attachment_links = soup.select('a.messageAttachment, a.attachment, a[class*="attachment"], a[href*="file-download"]')
+
+        # DEBUG: If no links found, print HTML sample to diagnose
+        if len(attachment_links) == 0:
+            downloads_text = soup.find(string=lambda text: text and "Downloads" in text and ".xml" in text)
+            if downloads_text:
+                print(f"    [DEBUG] Found attachment text but no <a> link!")
+                print(f"    [DEBUG] Text: {downloads_text[:100]}")
+                print(f"    [DEBUG] Parent tag: {downloads_text.parent.name if downloads_text.parent else 'None'}")
+                if downloads_text.parent:
+                    print(f"    [DEBUG] Parent HTML: {str(downloads_text.parent)[:400]}")
+
+        # DEBUG: Print what we found
+        print(f"    [DEBUG] Found {len(attachment_links)} attachment links")
+        if len(attachment_links) == 0:
+            # Try to find ANY links with 'attachment' in the class
+            all_links_with_attachment = soup.find_all('a', class_=lambda x: x and any('attachment' in c.lower() for c in x) if x else False)
+            print(f"    [DEBUG] Found {len(all_links_with_attachment)} links with 'attachment' in class")
+            if all_links_with_attachment:
+                for link in all_links_with_attachment[:3]:
+                    print(f"    [DEBUG] Sample: class={link.get('class')}, href={link.get('href')[:80] if link.get('href') else 'No href'}")
 
         for link in attachment_links:
             href = link.get('href')
