@@ -254,18 +254,24 @@ def get_sorted_threads_by_date(
         parsed_date = parse_iso_date(date_str)
         
         if parsed_date:
-            # Primary sort: by date
-            # Secondary: threads with dates come first (0 < 1)
+            # Threads with dates: sort by date
+            # Use (0, date) so they come before threads without dates
             return (0, parsed_date)
         else:
-            # Threads without dates go to end
-            # Use thread_id as secondary sort for consistency
+            # Threads without dates: go to end regardless of reverse
+            # Use a sentinel datetime that works for both sort directions
+            # When reverse=False (oldest first): use datetime.max to put at end
+            # When reverse=True (newest first): use datetime.min to put at end
+            sentinel_date = datetime.min if reverse else datetime.max
+            
+            # Use thread_id as tie-breaker for consistency
             thread_id = thread.get('thread_id', '0')
             try:
                 tid = int(thread_id)
             except (ValueError, TypeError):
                 tid = 0
-            return (1, datetime.min if not reverse else datetime.max, tid)
+            
+            return (1, sentinel_date, tid)
     
     threads.sort(key=sort_key, reverse=reverse)
     

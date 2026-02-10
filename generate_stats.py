@@ -81,8 +81,7 @@ def analyze_threads() -> Dict[str, Any]:
                 thread_dir = d
                 break
 
-        # Extract thread ID from URL or directory name
-        thread_id = metadata.get('thread_id', '')
+        # Track thread ID range
         if thread_id:
             try:
                 tid = int(thread_id)
