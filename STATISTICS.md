@@ -19,7 +19,10 @@
 | `.xml` | 78 |
 | `.zip` | 13 |
 
-### Detailed Thread List
+### Detailed Thread List (Sorted by Date)
+
+*Threads are organized chronologically by their start date (oldest first)*
+
 
 | ID | Title | Date | Files | Attachments |
 |----|-------|------|-------|-------------|

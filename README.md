@@ -43,11 +43,16 @@ A production-grade, educational async web scraper for the [MA Lighting grandMA2 
 
 ### Data Collection
 - **Thread Metadata**: Thread ID, title, author, date, original post text, reply count, views
-- **Original Post Only**: Captures first post content (not full discussion thread)
+- **Complete Thread Capture**: Captures ALL posts including original post and all replies
+- **Reply Tracking**: Each post includes author, date, text content, and sequential post number
 - **Asset Downloads**: Automatic download of `.xml`, `.zip`, `.gz`, `.show` files from all posts
+- **Asset Attribution**: Each asset is tagged with which post it came from (post_number)
 - **Type Safety**: Dataclass models with full docstrings for all data structures
 
-**Note:** The scraper captures the original post text and counts replies, but does not store individual reply posts. All downloadable macro files from the entire thread are captured.
+**Enhanced Features:**
+- ✅ **All Replies Included**: The scraper now captures the complete discussion thread, not just the original post
+- ✅ **Chronological Organization**: Threads can be sorted and displayed by their start date
+- ✅ **Complete Conversations**: Posts list contains original post (posts[0]) + all replies (posts[1:])
 
 ### Automation
 - **GitHub Actions**: Automated weekly scraping with data commits
@@ -162,15 +167,32 @@ output/
   "url": "https://forum.malighting.com/thread/30890-...",
   "author": "johndoe",
   "post_date": "2024-01-15T10:30:00Z",
-  "post_text": "Full text content of the original post (replies not included)...",
-  "replies": 5,  // Count of replies (actual reply content not captured)
+  "post_text": "Original post text (for backward compatibility)",
+  "posts": [
+    {
+      "author": "johndoe",
+      "post_date": "2024-01-15T10:30:00Z",
+      "post_text": "Original post: How can I move fixtures between layers?",
+      "post_number": 1
+    },
+    {
+      "author": "helper",
+      "post_date": "2024-01-15T14:20:00Z",
+      "post_text": "You can use this macro to move fixtures...",
+      "post_number": 2
+    }
+  ],
+  "replies": 1,
   "views": 1234,
   "assets": [
     {
       "filename": "macro.xml",
       "url": "https://forum.malighting.com/attachment/12345/",
       "size": 2048,
-      "download_count": null,
+      "download_count": 15,
+      "checksum": "sha256:abc123def456...",
+      "post_number": 1
+    }
       "checksum": "sha256:abc123def456..."
     }
   ]
@@ -181,21 +203,23 @@ output/
 
 ### What's Captured
 ✅ **610 total threads** from grandMA2 Macro Share forum (100% coverage as of Feb 9, 2026)
-✅ **Original post text** - The first post in each thread
+✅ **Complete discussion threads** - Original post + all replies with full text content
 ✅ **Thread metadata** - Author, title, date, reply count, view count
 ✅ **All macro files** - .xml, .zip, .gz, .show files from entire thread
 ✅ **File metadata** - Checksums, sizes, download counts
+✅ **Asset attribution** - Each file is tagged with which post it came from
+✅ **Chronological sorting** - Threads can be organized by start date
 
 ### What's NOT Captured
-❌ **Individual replies** - Only the original post text is stored, not the full discussion
-❌ **Reply content** - The "replies" field shows the count, but reply posts aren't saved
-❌ **Images/screenshots** - Only macro files are downloaded
+❌ **Images/screenshots** - Only macro files are downloaded (text content is captured)
 
 ### Statistics
 - **610 threads total**
 - **75 threads (12.3%)** contain downloadable macro files
-- **535 threads (87.7%)** are discussion-only (no files, but original post text captured)
+- **535 threads (87.7%)** are discussion-only with complete text conversations
 - **99 macro files** downloaded (78 XML, 21 ZIP/GZ/Show)
+
+**Note:** Existing scraped data may only have original posts. Re-run the scraper to capture all replies with the updated code.
 
 ## 🔍 Finding Threads with Downloadable Files
 
@@ -286,6 +310,62 @@ For a complete breakdown of all 75 threads with attachments, see **`STATISTICS.m
 - File sizes and types
 - Direct links to forum threads
 - Attachment download counts
+- **Threads sorted chronologically** by start date
+
+## 🗓️ Sorting and Organizing Threads
+
+### Chronological Thread Organization
+
+Threads can be sorted and accessed by their start date using utility functions:
+
+```python
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path.cwd() / "src"))
+
+from ma2_forums_miner.utils import get_sorted_threads_by_date
+
+# Get all threads sorted oldest first
+threads = get_sorted_threads_by_date(Path("output/threads"), reverse=False)
+
+for thread in threads[:10]:  # Show first 10
+    date = thread.get('post_date', 'Unknown')[:10]
+    print(f"[{date}] {thread['title']}")
+
+# Get threads sorted newest first
+threads = get_sorted_threads_by_date(Path("output/threads"), reverse=True)
+```
+
+### Accessing All Posts and Replies
+
+```python
+from ma2_forums_miner.utils import load_thread_metadata
+from pathlib import Path
+
+# Load a specific thread
+thread_dir = Path("output/threads/thread_30890_Moving_Fixtures")
+metadata = load_thread_metadata(thread_dir)
+
+if metadata:
+    print(f"Thread: {metadata['title']}")
+    print(f"Total posts: {len(metadata['posts'])}")
+    
+    # Access all posts
+    for post in metadata['posts']:
+        print(f"\nPost #{post['post_number']} by {post['author']}")
+        print(f"Date: {post['post_date']}")
+        print(f"Text: {post['post_text'][:100]}...")
+```
+
+### Generate Sorted Statistics
+
+```bash
+# Generate statistics with threads sorted by date
+python generate_stats.py
+
+# Output: STATISTICS.md with chronologically organized threads
+```
 
 ## 🏗️ Architecture
 

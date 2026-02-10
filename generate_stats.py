@@ -2,6 +2,8 @@
 """
 Generate detailed statistics from scraped threads.
 Creates a comprehensive README section with per-thread details.
+
+Threads are organized chronologically by their start date.
 """
 
 import json
@@ -9,6 +11,11 @@ import sys
 from pathlib import Path
 from typing import Dict, List, Any
 from collections import defaultdict
+
+# Add src to path for imports
+sys.path.insert(0, str(Path(__file__).parent / "src"))
+
+from ma2_forums_miner.utils import get_sorted_threads_by_date, parse_iso_date
 
 
 def load_thread_metadata(thread_dir: Path) -> Dict[str, Any]:
@@ -41,8 +48,11 @@ def analyze_threads() -> Dict[str, Any]:
         print("❌ No output/threads directory found")
         return None
 
-    thread_dirs = sorted([d for d in output_dir.iterdir() if d.is_dir()])
-    print(f"📊 Analyzing {len(thread_dirs)} threads...")
+    # Get all threads sorted by date (oldest first)
+    print("📊 Loading and sorting threads by date...")
+    threads_metadata = get_sorted_threads_by_date(output_dir, reverse=False)
+    
+    print(f"📊 Analyzing {len(threads_metadata)} threads...")
 
     stats = {
         'total_threads': 0,
@@ -57,15 +67,21 @@ def analyze_threads() -> Dict[str, Any]:
         'newest_thread_id': 0,
     }
 
-    for thread_dir in thread_dirs:
-        metadata = load_thread_metadata(thread_dir)
-        if not metadata:
-            continue
-
+    for metadata in threads_metadata:
         stats['total_threads'] += 1
-
-        # Extract thread ID from URL or directory name
+        
+        # Get thread directory for file access
         thread_id = metadata.get('thread_id', '')
+        title = metadata.get('title', 'Unknown')
+        
+        # Find the thread directory
+        thread_dir = None
+        for d in output_dir.iterdir():
+            if d.is_dir() and thread_id in d.name:
+                thread_dir = d
+                break
+
+        # Track thread ID range
         if thread_id:
             try:
                 tid = int(thread_id)
@@ -95,16 +111,24 @@ def analyze_threads() -> Dict[str, Any]:
                 stats['file_types'][ext] += 1
 
                 # Check if file actually exists
-                file_path = thread_dir / filename
-                if file_path.exists():
-                    size = file_path.stat().st_size
-                    stats['total_size'] += size
-                    actual_files.append({
-                        'filename': filename,
-                        'size': size,
-                        'exists': True
-                    })
+                if thread_dir:
+                    file_path = thread_dir / filename
+                    if file_path.exists():
+                        size = file_path.stat().st_size
+                        stats['total_size'] += size
+                        actual_files.append({
+                            'filename': filename,
+                            'size': size,
+                            'exists': True
+                        })
+                    else:
+                        actual_files.append({
+                            'filename': filename,
+                            'size': asset.get('size'),
+                            'exists': False
+                        })
                 else:
+                    # Thread dir not found, just use metadata
                     actual_files.append({
                         'filename': filename,
                         'size': asset.get('size'),
@@ -140,8 +164,8 @@ def generate_readme_section(stats: Dict[str, Any]) -> str:
     if not stats:
         return "No statistics available."
 
-    # Sort threads by ID
-    stats['threads'].sort(key=lambda x: int(x['id']) if x['id'].isdigit() else 0)
+    # Threads are already sorted by date from analyze_threads()
+    # No need to sort again
 
     md = []
 
@@ -181,8 +205,10 @@ def generate_readme_section(stats: Dict[str, Any]) -> str:
             md.append(f"| {year} | {count} |")
         md.append("")
 
-    # Detailed thread list
-    md.append("### Detailed Thread List\n")
+    # Detailed thread list - sorted chronologically
+    md.append("### Detailed Thread List (Sorted by Date)\n")
+    md.append("*Threads are organized chronologically by their start date (oldest first)*\n")
+    md.append("")
     md.append("| ID | Title | Date | Files | Attachments |")
     md.append("|----|-------|------|-------|-------------|")
 

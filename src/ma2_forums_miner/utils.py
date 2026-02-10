@@ -5,9 +5,11 @@ This module provides helper functions for file operations and path management.
 """
 
 import hashlib
+import json
 import re
+from datetime import datetime
 from pathlib import Path
-from typing import Union
+from typing import List, Dict, Any, Union, Optional
 
 
 def sha256_file(file_path: Union[str, Path]) -> str:
@@ -139,3 +141,138 @@ def safe_thread_folder(thread_id: str, title: str, max_length: int = 50) -> str:
     folder_name = f"thread_{thread_id}_{slug}"
     
     return folder_name
+
+
+def load_thread_metadata(thread_dir: Path) -> Optional[Dict[str, Any]]:
+    """
+    Load metadata.json from a thread directory.
+    
+    Args:
+        thread_dir: Path to the thread directory
+        
+    Returns:
+        Dictionary with thread metadata, or None if file doesn't exist or is invalid
+        
+    Example:
+        metadata = load_thread_metadata(Path("output/threads/thread_12345_Title"))
+        if metadata:
+            print(f"Thread: {metadata['title']}")
+    """
+    metadata_file = thread_dir / "metadata.json"
+    
+    if not metadata_file.exists():
+        return None
+    
+    try:
+        with open(metadata_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except (json.JSONDecodeError, IOError) as e:
+        print(f"⚠️  Warning: Could not load {metadata_file}: {e}")
+        return None
+
+
+def parse_iso_date(date_str: Optional[str]) -> Optional[datetime]:
+    """
+    Parse an ISO 8601 date string to a datetime object.
+    
+    Args:
+        date_str: ISO 8601 formatted date string (e.g., "2024-01-15T10:30:00Z")
+        
+    Returns:
+        datetime object, or None if date_str is None or invalid
+        
+    Example:
+        dt = parse_iso_date("2024-01-15T10:30:00Z")
+        # Returns: datetime(2024, 1, 15, 10, 30, 0)
+    """
+    if not date_str:
+        return None
+    
+    try:
+        # Handle various ISO 8601 formats
+        # Try with timezone first
+        if date_str.endswith('Z'):
+            return datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+        else:
+            return datetime.fromisoformat(date_str)
+    except (ValueError, AttributeError) as e:
+        print(f"⚠️  Warning: Could not parse date '{date_str}': {e}")
+        return None
+
+
+def get_sorted_threads_by_date(
+    output_dir: Path, 
+    reverse: bool = False
+) -> List[Dict[str, Any]]:
+    """
+    Get all threads sorted chronologically by their start date (post_date).
+    
+    This function loads all thread metadata from the output directory and
+    returns them sorted by the date the thread was started (original post date).
+    
+    Args:
+        output_dir: Path to the threads output directory (e.g., "output/threads")
+        reverse: If True, sort newest first; if False, sort oldest first (default)
+        
+    Returns:
+        List of thread metadata dictionaries sorted by post_date
+        Threads with no date are placed at the end
+        
+    Example:
+        # Get threads sorted from oldest to newest
+        threads = get_sorted_threads_by_date(Path("output/threads"))
+        for thread in threads:
+            print(f"{thread['post_date']}: {thread['title']}")
+        
+        # Get threads sorted from newest to oldest
+        threads = get_sorted_threads_by_date(Path("output/threads"), reverse=True)
+    """
+    threads = []
+    
+    if not output_dir.exists():
+        print(f"⚠️  Warning: Output directory {output_dir} does not exist")
+        return threads
+    
+    # Load all thread metadata
+    for thread_dir in output_dir.iterdir():
+        if not thread_dir.is_dir():
+            continue
+        
+        metadata = load_thread_metadata(thread_dir)
+        if metadata:
+            threads.append(metadata)
+    
+    # Sort by post_date
+    # Threads with no date go to the end
+    def sort_key(thread: Dict[str, Any]) -> tuple:
+        """
+        Sort key function for threads.
+        Returns tuple (has_date, datetime) for proper sorting.
+        Threads without dates are sorted to the end.
+        """
+        date_str = thread.get('post_date')
+        parsed_date = parse_iso_date(date_str)
+        
+        if parsed_date:
+            # Threads with dates: sort by date
+            # Use (0, date) so they come before threads without dates
+            return (0, parsed_date)
+        else:
+            # Threads without dates: go to end regardless of reverse
+            # Use a sentinel datetime that works for both sort directions
+            # When reverse=False (oldest first): use datetime.max to put at end
+            # When reverse=True (newest first): use datetime.min to put at end
+            sentinel_date = datetime.min if reverse else datetime.max
+            
+            # Use thread_id as tie-breaker for consistency
+            thread_id = thread.get('thread_id', '0')
+            try:
+                tid = int(thread_id)
+            except (ValueError, TypeError):
+                tid = 0
+            
+            return (1, sentinel_date, tid)
+    
+    threads.sort(key=sort_key, reverse=reverse)
+    
+    return threads
