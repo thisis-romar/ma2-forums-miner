@@ -11,7 +11,7 @@ Main components:
 - Utility functions for file operations
 
 Usage:
-    from scraper.scraper import ForumScraper
+    from ma2_forums_miner.scraper import ForumScraper
     import asyncio
     
     scraper = ForumScraper()
