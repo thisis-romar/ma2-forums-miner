@@ -15,8 +15,10 @@ import asyncio
 import json
 import re
 import time
+from dataclasses import dataclass
+from datetime import datetime
 from pathlib import Path
-from typing import List, Optional, Set
+from typing import List, Optional, Set, Tuple
 from urllib.parse import urljoin
 
 import httpx
@@ -26,6 +28,20 @@ from tqdm import tqdm
 
 from .models import Asset, Post, ThreadMetadata
 from .utils import sha256_file, safe_thread_folder
+
+
+@dataclass
+class ThreadInfo:
+    """
+    Basic thread information extracted from board listing.
+    
+    Attributes:
+        url: Full URL to the thread
+        date: ISO 8601 formatted date/time when thread was created
+              None if date couldn't be extracted
+    """
+    url: str
+    date: Optional[str] = None
 
 
 # -------------------------------------------------------
@@ -276,18 +292,18 @@ class ForumScraper:
     # handling pagination automatically.
     # -------------------------------------------------------
     
-    async def get_all_thread_links(self) -> List[str]:
+    async def get_all_thread_links(self) -> List[ThreadInfo]:
         """
-        Discover all thread URLs from the forum board (all pages).
+        Discover all threads from the forum board (all pages).
         
         This method:
         1. Fetches the first page to determine total page count
         2. Fetches all pages concurrently (respecting semaphore limits)
-        3. Extracts thread URLs from each page
-        4. Returns deduplicated list of all thread URLs
+        3. Extracts thread info (URL + date) from each page
+        4. Returns deduplicated and date-sorted list of thread info
         
         Returns:
-            List of thread URLs (e.g., ["https://forum.../thread/12345-...", ...])
+            List of ThreadInfo objects sorted by date (oldest first)
             
         Why fetch pages concurrently?
             If there are 50 pages, fetching them sequentially would take:
@@ -310,15 +326,15 @@ class ForumScraper:
         
         soup = BeautifulSoup(first_page_html, "lxml")
         
-        # Extract thread links from first page
-        thread_links = self._extract_thread_links_from_page(soup)
+        # Extract thread info from first page
+        thread_infos = self._extract_thread_info_from_page(soup)
         
         # Determine total number of pages
         max_page = self._get_max_page_number(soup)
         print(f"📄 Found {max_page} pages of threads")
 
         # Debug: Show thread count on first page
-        print(f"   First page has {len(thread_links)} threads")
+        print(f"   First page has {len(thread_infos)} threads")
         if max_page == 1:
             print(f"   ⚠️  No pagination found - forum may only show recent threads")
             print(f"   💡 Consider adding specific historical thread URLs manually")
@@ -342,34 +358,121 @@ class ForumScraper:
                 *[self._fetch_with_retry(url) for url in page_urls]
             )
 
-            # Extract thread links from each page
+            # Extract thread info from each page
             for page_num, html in enumerate(page_htmls, start=2):
                 if html:
                     soup = BeautifulSoup(html, "lxml")
-                    links = self._extract_thread_links_from_page(soup)
-                    thread_links.extend(links)
-                    print(f"   📄 Page {page_num}: Found {len(links)} threads")
+                    infos = self._extract_thread_info_from_page(soup)
+                    thread_infos.extend(infos)
+                    print(f"   📄 Page {page_num}: Found {len(infos)} threads")
                 else:
                     print(f"   ⚠️  Page {page_num}: Failed to fetch")
         
         # -------------------------------------------------------
-        # STEP 3: Deduplicate and return
+        # STEP 3: Deduplicate by URL
         # -------------------------------------------------------
-        # Using set() removes duplicates, then convert back to list
-        unique_links = list(set(thread_links))
+        # Create a dict to deduplicate by URL (keeps first occurrence)
+        unique_threads = {}
+        for info in thread_infos:
+            if info.url not in unique_threads:
+                unique_threads[info.url] = info
 
         # Add test thread 20248 which has known attachments for verification
-        test_thread = "https://forum.malighting.com/forum/thread/20248-abort-out-of-macro/"
-        if test_thread not in unique_links:
-            unique_links.append(test_thread)
+        test_thread_url = "https://forum.malighting.com/forum/thread/20248-abort-out-of-macro/"
+        if test_thread_url not in unique_threads:
+            unique_threads[test_thread_url] = ThreadInfo(url=test_thread_url, date=None)
             print(f"📌 Added test thread 20248 (has known attachment: CopyIfoutput.xml)")
 
-        print(f"✅ Discovered {len(unique_links)} unique threads")
+        # -------------------------------------------------------
+        # STEP 4: Sort by date (oldest first)
+        # -------------------------------------------------------
+        # Sort by date using string comparison (works for ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ)
+        # The forum uses ISO 8601 formatted datetime strings, which sort correctly alphabetically
+        # Threads with no date go to the end
+        thread_list = list(unique_threads.values())
+        thread_list.sort(key=lambda t: t.date if t.date else "9999-99-99")
+        
+        print(f"✅ Discovered {len(thread_list)} unique threads")
+        print(f"📅 Sorted by date (oldest first)")
+        if thread_list:
+            # Show date range
+            threads_with_dates = [t for t in thread_list if t.date]
+            if threads_with_dates:
+                oldest_date = threads_with_dates[0].date
+                newest_date = threads_with_dates[-1].date
+                print(f"   Date range: {oldest_date} to {newest_date}")
 
-        return unique_links
+        return thread_list
+    
+    def _extract_thread_info_from_page(self, soup: BeautifulSoup) -> List[ThreadInfo]:
+        """
+        Extract thread information (URL + date) from a forum board page.
+        
+        Args:
+            soup: BeautifulSoup object of the page HTML
+            
+        Returns:
+            List of ThreadInfo objects found on this page
+            
+        How this works:
+            The forum HTML structure has thread list items with:
+            - Thread link: <a class="wbbTopicLink"> 
+            - Thread date: <time datetime="..."> element nearby
+            
+            We extract both URL and creation date for sorting purposes.
+        """
+        thread_infos = []
+        
+        # Find all thread list items (container for each thread row)
+        # Try multiple selectors to find thread containers
+        thread_containers = soup.select('li.wbbThread, tr.wbbThread, div.threadBit, article.thread')
+        
+        if not thread_containers:
+            # Fallback: Find all thread links and try to find dates nearby
+            thread_links = soup.select('a.wbbTopicLink')
+            for link in thread_links:
+                href = link.get('href')
+                if href:
+                    full_url = urljoin(BASE_URL, href)
+                    
+                    # Try to find a date near this link
+                    date = None
+                    # Look for <time> element in parent or nearby siblings
+                    parent = link.parent
+                    if parent:
+                        time_elem = parent.select_one('time')
+                        if time_elem and time_elem.get('datetime'):
+                            date = time_elem['datetime']
+                    
+                    thread_infos.append(ThreadInfo(url=full_url, date=date))
+        else:
+            # Extract from containers
+            for container in thread_containers:
+                # Extract URL
+                link_elem = container.select_one('a.wbbTopicLink')
+                if not link_elem:
+                    continue
+                    
+                href = link_elem.get('href')
+                if not href:
+                    continue
+                    
+                full_url = urljoin(BASE_URL, href)
+                
+                # Extract date
+                date = None
+                time_elem = container.select_one('time')
+                if time_elem and time_elem.get('datetime'):
+                    date = time_elem['datetime']
+                
+                thread_infos.append(ThreadInfo(url=full_url, date=date))
+        
+        return thread_infos
     
     def _extract_thread_links_from_page(self, soup: BeautifulSoup) -> List[str]:
         """
+        DEPRECATED: Use _extract_thread_info_from_page instead.
+        
         Extract thread URLs from a forum board page.
         
         Args:
@@ -948,11 +1051,11 @@ class ForumScraper:
         
         try:
             # -------------------------------------------------------
-            # STEP 3: Discover all thread URLs
+            # STEP 3: Discover all threads with dates
             # -------------------------------------------------------
-            all_thread_urls = await self.get_all_thread_links()
+            all_threads = await self.get_all_thread_links()
             
-            if not all_thread_urls:
+            if not all_threads:
                 print("\n⚠️  No threads discovered!")
                 return
             
@@ -962,12 +1065,12 @@ class ForumScraper:
             # This is the "delta" part - we only process threads
             # that aren't in our manifest yet
             new_threads = [
-                url for url in all_thread_urls
-                if url not in self.visited_urls
+                thread_info for thread_info in all_threads
+                if thread_info.url not in self.visited_urls
             ]
             
             print(f"\n📊 Thread Status:")
-            print(f"   Total threads on forum: {len(all_thread_urls)}")
+            print(f"   Total threads on forum: {len(all_threads)}")
             print(f"   Already scraped: {len(self.visited_urls)}")
             print(f"   New threads to scrape: {len(new_threads)}")
             
@@ -978,7 +1081,9 @@ class ForumScraper:
             # -------------------------------------------------------
             # STEP 5: Process new threads with progress tracking
             # -------------------------------------------------------
+            # Threads are already sorted by date (oldest first)
             print(f"\n⚡ Processing {len(new_threads)} new threads...")
+            print(f"   Order: Sorted by date (oldest first)")
             print(f"   Concurrency: {self.max_concurrent} simultaneous requests")
             print(f"   Rate limit: {self.request_delay}s between requests")
             print()
@@ -988,13 +1093,14 @@ class ForumScraper:
             failed = 0
             
             with tqdm(total=len(new_threads), desc="Scraping threads") as pbar:
-                for url in new_threads:
+                for thread_info in new_threads:
                     # Extract thread ID for display
-                    thread_id_match = re.search(r'/thread/(\d+)-', url)
+                    thread_id_match = re.search(r'/thread/(\d+)-', thread_info.url)
                     thread_id = thread_id_match.group(1) if thread_id_match else "???"
                     
-                    print(f"\n  📄 Thread {thread_id}:")
-                    success = await self.process_thread(url)
+                    date_str = f" [{thread_info.date[:10]}]" if thread_info.date else ""
+                    print(f"\n  📄 Thread {thread_id}{date_str}:")
+                    success = await self.process_thread(thread_info.url)
                     
                     if success:
                         successful += 1
