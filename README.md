@@ -42,12 +42,13 @@ A production-grade, educational async web scraper for the [MA Lighting grandMA2 
 - **🔐 Checksums**: SHA256 hashing for download integrity and deduplication
 
 ### Data Collection
-- **Thread Metadata**: Thread ID, title, author, date, original post text, reply count, views
-- **Original Post Only**: Captures first post content (not full discussion thread)
+- **Thread Metadata**: Thread ID, title, author, date, reply count, views
+- **Complete Discussions**: Captures ALL posts (original + replies) with full text content
 - **Asset Downloads**: Automatic download of `.xml`, `.zip`, `.gz`, `.show` files from all posts
 - **Type Safety**: Dataclass models with full docstrings for all data structures
+- **Chronological Order**: Threads are processed in date order (oldest first)
 
-**Note:** The scraper captures the original post text and counts replies, but does not store individual reply posts. All downloadable macro files from the entire thread are captured.
+**Note:** The scraper captures the complete discussion thread including all replies. All downloadable macro files from the entire thread are captured with associations to their respective posts.
 
 ### Automation
 - **GitHub Actions**: Automated weekly scraping with data commits
@@ -162,8 +163,22 @@ output/
   "url": "https://forum.malighting.com/thread/30890-...",
   "author": "johndoe",
   "post_date": "2024-01-15T10:30:00Z",
-  "post_text": "Full text content of the original post (replies not included)...",
-  "replies": 5,  // Count of replies (actual reply content not captured)
+  "post_text": "[Deprecated - use posts[0].post_text instead]",
+  "posts": [
+    {
+      "author": "johndoe",
+      "post_date": "2024-01-15T10:30:00Z",
+      "post_text": "Full text content of the original post...",
+      "post_number": 1
+    },
+    {
+      "author": "helper123",
+      "post_date": "2024-01-15T14:20:00Z",
+      "post_text": "Here's how you can solve it...",
+      "post_number": 2
+    }
+  ],
+  "replies": 5,
   "views": 1234,
   "assets": [
     {
@@ -171,24 +186,26 @@ output/
       "url": "https://forum.malighting.com/attachment/12345/",
       "size": 2048,
       "download_count": null,
-      "checksum": "sha256:abc123def456..."
+      "checksum": "sha256:abc123def456...",
+      "post_number": 1
     }
   ]
 }
 ```
 
+**Note**: The scraper now captures ALL posts (original + replies) in the `posts` array. The `post_text` field at the root level is deprecated but kept for backward compatibility with existing data.
+
 ## 📊 Data Scope & Coverage
 
 ### What's Captured
 ✅ **610 total threads** from grandMA2 Macro Share forum (100% coverage as of Feb 9, 2026)
-✅ **Original post text** - The first post in each thread
+✅ **Complete discussion threads** - Original post AND all replies with full text content
 ✅ **Thread metadata** - Author, title, date, reply count, view count
 ✅ **All macro files** - .xml, .zip, .gz, .show files from entire thread
-✅ **File metadata** - Checksums, sizes, download counts
+✅ **File metadata** - Checksums, sizes, download counts, post association
+✅ **Date-based ordering** - Threads are scraped in chronological order (oldest first)
 
 ### What's NOT Captured
-❌ **Individual replies** - Only the original post text is stored, not the full discussion
-❌ **Reply content** - The "replies" field shows the count, but reply posts aren't saved
 ❌ **Images/screenshots** - Only macro files are downloaded
 
 ### Statistics
@@ -389,6 +406,8 @@ Delta scraping ensures efficient incremental updates:
 rm manifest.json
 python run_scrape.py
 ```
+
+**Note**: If you have existing scraped data from an older version that doesn't include the `posts` field (only original post), you'll need to re-scrape to get the complete discussions with all replies. Delete `manifest.json` to force a full re-scrape.
 
 ## 🧠 Code Style & Learning Focus
 
