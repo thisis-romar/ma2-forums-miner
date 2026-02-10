@@ -163,7 +163,7 @@ output/
   "url": "https://forum.malighting.com/thread/30890-...",
   "author": "johndoe",
   "post_date": "2024-01-15T10:30:00Z",
-  "post_text": "[Deprecated - use posts[0].post_text instead]",
+  "post_text": "Full text content of the original post...",
   "posts": [
     {
       "author": "johndoe",
@@ -193,7 +193,7 @@ output/
 }
 ```
 
-**Note**: The scraper now captures ALL posts (original + replies) in the `posts` array. The `post_text` field at the root level is deprecated but kept for backward compatibility with existing data.
+**Note**: The scraper now captures ALL posts (original + replies) in the `posts` array. The `post_text` field at the root level still contains the original post text for backward compatibility with existing code, but new code should use `posts[0].post_text` instead.
 
 ## 📊 Data Scope & Coverage
 

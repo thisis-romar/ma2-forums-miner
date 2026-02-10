@@ -386,6 +386,8 @@ class ForumScraper:
         # -------------------------------------------------------
         # STEP 4: Sort by date (oldest first)
         # -------------------------------------------------------
+        # Sort by date using string comparison (works for ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ)
+        # The forum uses ISO 8601 formatted datetime strings, which sort correctly alphabetically
         # Threads with no date go to the end
         thread_list = list(unique_threads.values())
         thread_list.sort(key=lambda t: t.date if t.date else "9999-99-99")
