@@ -15,7 +15,7 @@ import asyncio
 import logging
 import re
 from pathlib import Path, PurePosixPath
-from typing import List, Optional, Set
+from typing import Dict, List, Optional, Set
 from urllib.parse import urljoin, urlparse
 
 import httpx
@@ -89,6 +89,8 @@ class ForumScraper:
         self.semaphore = asyncio.Semaphore(max_concurrent)
         self.visited_urls: Set[str] = set()
         self.client: Optional[httpx.AsyncClient] = None
+        # Tracks thread metadata keyed by URL for post-run index generation
+        self._thread_metadata: Dict[str, ThreadMetadata] = {}
     
     def _load_manifest(self) -> Set[str]:
         """Load previously visited thread URLs from manifest.json."""
@@ -536,12 +538,58 @@ class ForumScraper:
             metadata_file.write_bytes(metadata_json)
 
             self.visited_urls.add(url)
+            self._thread_metadata[url] = metadata
             self._save_manifest()
             return True
 
         except Exception as e:
             logger.error("Error processing thread %s: %s", url, e)
             return False
+
+    def _write_asset_type_index(self):
+        """Write asset_type_index.json grouping threads by file extension.
+
+        Output structure:
+            {
+              "by_type": { ".xml": [ {thread_id, title, url, files: [...]}, ... ] },
+              "multi_type_threads": [ {thread_id, title, url, asset_types: [...]} ]
+            }
+        """
+        by_type: Dict[str, list] = {}
+        multi_type: list = []
+
+        for url, meta in self._thread_metadata.items():
+            types = meta.asset_types
+            if not types:
+                continue
+
+            entry = {
+                "thread_id": meta.thread_id,
+                "title": meta.title,
+                "url": meta.url,
+            }
+
+            for ft in types:
+                by_type.setdefault(ft, [])
+                files = [a.filename for a in meta.assets if a.file_type == ft]
+                by_type[ft].append({**entry, "files": files})
+
+            if len(types) > 1:
+                multi_type.append({**entry, "asset_types": types})
+
+        index = {
+            "by_type": dict(sorted(by_type.items())),
+            "multi_type_threads": multi_type,
+        }
+        index_path = self.output_dir / "asset_type_index.json"
+        try:
+            tmp = index_path.with_suffix('.tmp')
+            tmp.write_bytes(orjson.dumps(index, option=orjson.OPT_INDENT_2 | orjson.OPT_SORT_KEYS))
+            tmp.rename(index_path)
+            logger.info("Wrote asset type index: %d types, %d multi-type threads",
+                        len(by_type), len(multi_type))
+        except Exception as e:
+            logger.warning("Could not write asset type index: %s", e)
 
     async def run(self):
         """Main entry point: discover threads, scrape new ones, save results."""
@@ -591,6 +639,8 @@ class ForumScraper:
 
             logger.info("Scraping complete: %d successful, %d failed, %d total",
                         successful, failed, len(self.visited_urls))
+
+            self._write_asset_type_index()
 
         finally:
             await self.client.aclose()

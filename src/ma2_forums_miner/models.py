@@ -6,7 +6,8 @@ Using dataclasses provides clear structure, type hints, and easy JSON serializat
 """
 
 from dataclasses import dataclass, field, asdict
-from typing import List, Optional
+from pathlib import PurePosixPath
+from typing import List, Optional, Set
 
 
 @dataclass
@@ -69,15 +70,24 @@ class Asset:
     download_count: Optional[int] = None
     checksum: Optional[str] = None
     post_number: Optional[int] = None
-    
+
+    @property
+    def file_type(self) -> str:
+        """Return the lowercase file extension (e.g. '.xml', '.zip').
+
+        Returns an empty string when the filename has no extension.
+        """
+        return PurePosixPath(self.filename).suffix.lower()
+
     def to_dict(self) -> dict:
+        """Convert the asset to a dictionary for JSON serialization.
+
+        Includes the computed ``file_type`` so consumers don't need to
+        re-derive it from the filename.
         """
-        Convert the asset to a dictionary for JSON serialization.
-        
-        Returns:
-            Dictionary representation of the asset with all fields.
-        """
-        return asdict(self)
+        d = asdict(self)
+        d["file_type"] = self.file_type
+        return d
 
 
 @dataclass
@@ -136,16 +146,28 @@ class ThreadMetadata:
     replies: int = 0
     views: int = 0
     assets: List[Asset] = field(default_factory=list)
-    
+
+    @property
+    def asset_types(self) -> List[str]:
+        """Sorted list of unique file extensions across all assets.
+
+        Example: [".gz", ".xml", ".zip"]
+        """
+        types: Set[str] = set()
+        for asset in self.assets:
+            ft = asset.file_type
+            if ft:
+                types.add(ft)
+        return sorted(types)
+
     def to_dict(self) -> dict:
+        """Convert the thread metadata to a dictionary for JSON serialization.
+
+        Includes computed ``asset_types`` and per-asset ``file_type``
+        so downstream consumers can group and filter without re-parsing.
         """
-        Convert the thread metadata to a dictionary for JSON serialization.
-        
-        This recursively converts the ThreadMetadata and all nested Asset
-        objects into plain dictionaries that can be written to JSON.
-        
-        Returns:
-            Dictionary representation with all fields serialized.
-        """
-        # asdict() automatically handles nested dataclasses recursively
-        return asdict(self)
+        d = asdict(self)
+        # Replace assets with enriched versions that include file_type
+        d["assets"] = [a.to_dict() for a in self.assets]
+        d["asset_types"] = self.asset_types
+        return d

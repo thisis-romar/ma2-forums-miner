@@ -59,6 +59,10 @@ def analyze_threads() -> Dict[str, Any]:
         'year_distribution': defaultdict(int),
         'oldest_thread_id': float('inf'),
         'newest_thread_id': 0,
+        # Asset-type grouping: maps extension -> list of thread entries
+        'threads_by_asset_type': defaultdict(list),
+        # Threads containing more than one distinct file extension
+        'multi_type_threads': [],
     }
 
     for thread_dir in thread_dirs:
@@ -121,6 +125,13 @@ def analyze_threads() -> Dict[str, Any]:
             year = post_date[:4] if len(post_date) >= 4 else 'unknown'
             stats['year_distribution'][year] += 1
 
+        # Collect unique asset types for this thread
+        thread_asset_types = sorted(set(
+            Path(a.get('filename', '')).suffix.lower()
+            for a in assets
+            if Path(a.get('filename', '')).suffix
+        ))
+
         # Store thread info
         thread_info = {
             'id': thread_id,
@@ -132,8 +143,17 @@ def analyze_threads() -> Dict[str, Any]:
             'views': metadata.get('views', 0),
             'attachment_count': len(assets),
             'files': actual_files,
+            'asset_types': thread_asset_types,
         }
         stats['threads'].append(thread_info)
+
+        # Group this thread under each of its asset types
+        for ext in thread_asset_types:
+            stats['threads_by_asset_type'][ext].append(thread_info)
+
+        # Flag threads with more than one distinct file type
+        if len(thread_asset_types) > 1:
+            stats['multi_type_threads'].append(thread_info)
 
     return stats
 
@@ -184,6 +204,34 @@ def generate_readme_section(stats: Dict[str, Any]) -> str:
         for year in sorted(stats['year_distribution'].keys(), reverse=True):
             count = stats['year_distribution'][year]
             md.append(f"| {year} | {count} |")
+        md.append("")
+
+    # Threads grouped by asset type
+    if stats['threads_by_asset_type']:
+        md.append("### Threads by Asset Type\n")
+        for ext in sorted(stats['threads_by_asset_type'].keys()):
+            threads = stats['threads_by_asset_type'][ext]
+            md.append(f"#### `{ext}` ({len(threads)} threads)\n")
+            md.append("| ID | Title | Date | Files |")
+            md.append("|----|-------|------|-------|")
+            for t in threads:
+                title = t['title'][:45] + "..." if len(t['title']) > 45 else t['title']
+                date = t['date'][:10] if t['date'] else "Unknown"
+                ext_files = [f['filename'] for f in t['files'] if f['filename'].lower().endswith(ext)]
+                files_str = ", ".join(f"`{fn}`" for fn in ext_files) or "*-*"
+                md.append(f"| {t['id']} | {title} | {date} | {files_str} |")
+            md.append("")
+
+    # Multi-type threads
+    if stats['multi_type_threads']:
+        md.append("### Threads with Multiple Asset Types\n")
+        md.append("| ID | Title | Date | Asset Types |")
+        md.append("|----|-------|------|-------------|")
+        for t in stats['multi_type_threads']:
+            title = t['title'][:45] + "..." if len(t['title']) > 45 else t['title']
+            date = t['date'][:10] if t['date'] else "Unknown"
+            types_str = ", ".join(f"`{x}`" for x in t['asset_types'])
+            md.append(f"| {t['id']} | {title} | {date} | {types_str} |")
         md.append("")
 
     # Detailed thread list
