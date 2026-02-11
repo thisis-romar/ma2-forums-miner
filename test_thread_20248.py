@@ -2,13 +2,15 @@
 """
 Test script to scrape thread 20248 which has known attachments.
 This verifies that our CSS selectors correctly find and download attachments.
+
+NOTE: This is a manual integration test requiring network access.
+For automated tests, see tests/
 """
 
 import asyncio
 import sys
 from pathlib import Path
 
-# Add src to path to import the package
 sys.path.insert(0, str(Path(__file__).parent / "src"))
 
 from ma2_forums_miner.scraper import ForumScraper
@@ -21,52 +23,51 @@ async def test_thread_20248():
     print("Testing Thread 20248 - Known to have CopyIfoutput.xml attachment")
     print("=" * 80)
 
-    # Initialize scraper
     scraper = ForumScraper()
 
-    # Thread URL
     thread_url = "https://forum.malighting.com/forum/thread/20248-abort-out-of-macro/"
 
-    # Scrape just this one thread
-    print(f"\n📥 Scraping: {thread_url}")
-    metadata = await scraper.scrape_thread(thread_url)
+    # Initialize the HTTP client (required before calling fetch_thread)
+    import httpx
+    scraper.client = httpx.AsyncClient(
+        http2=True, timeout=30.0, follow_redirects=True,
+        headers={'User-Agent': 'Mozilla/5.0 (compatible; MA2Miner/1.0)'}
+    )
 
-    if not metadata:
-        print("❌ Failed to scrape thread")
-        return False
+    try:
+        print(f"\nScraping: {thread_url}")
+        metadata = await scraper.fetch_thread(thread_url)
 
-    # Display results
-    print(f"\n📊 Thread: {metadata.title}")
-    print(f"   Author: {metadata.author}")
-    print(f"   Assets found: {len(metadata.assets)}")
+        if not metadata:
+            print("Failed to scrape thread")
+            return False
 
-    if metadata.assets:
-        print("\n✅ ATTACHMENTS FOUND:")
-        for asset in metadata.assets:
-            print(f"   - {asset.filename}")
-            print(f"     URL: {asset.url}")
-            print(f"     Downloads: {asset.download_count}")
+        print(f"\nThread: {metadata.title}")
+        print(f"   Author: {metadata.author}")
+        print(f"   Assets found: {len(metadata.assets)}")
 
-        # Try to download the first attachment
         if metadata.assets:
-            print(f"\n📥 Testing download of: {metadata.assets[0].filename}")
+            print("\nATTACHMENTS FOUND:")
+            for asset in metadata.assets:
+                print(f"   - {asset.filename} ({asset.url})")
+
             output_dir = Path("output/test_thread_20248")
             output_dir.mkdir(parents=True, exist_ok=True)
 
             success = await scraper.download_asset(metadata.assets[0], output_dir)
             if success:
-                print(f"✅ Successfully downloaded to: {output_dir / metadata.assets[0].filename}")
+                print(f"Downloaded: {metadata.assets[0].filename}")
                 print(f"   Size: {metadata.assets[0].size} bytes")
                 print(f"   SHA256: {metadata.assets[0].checksum}")
                 return True
             else:
-                print(f"❌ Failed to download attachment")
+                print("Failed to download attachment")
                 return False
-    else:
-        print("\n❌ NO ATTACHMENTS FOUND")
-        print("   This means our CSS selectors are not matching the HTML!")
-        print("   Expected to find: CopyIfoutput.xml")
-        return False
+        else:
+            print("\nNO ATTACHMENTS FOUND - CSS selectors may not match")
+            return False
+    finally:
+        await scraper.client.aclose()
 
 
 if __name__ == "__main__":

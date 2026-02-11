@@ -18,13 +18,14 @@ Usage:
     asyncio.run(scraper.run())
 """
 
-from .models import Asset, ThreadMetadata
+from .models import Asset, Post, ThreadMetadata
 from .scraper import ForumScraper
 from .utils import sha256_file, safe_thread_folder
 
 __all__ = [
     'ForumScraper',
     'ThreadMetadata',
+    'Post',
     'Asset',
     'sha256_file',
     'safe_thread_folder',

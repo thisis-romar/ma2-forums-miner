@@ -1,24 +1,7 @@
-# HTTP client with HTTP/2 support
-httpx[http2]>=0.25.0
-
-# HTML parsing
-beautifulsoup4>=4.12.0
-lxml>=5.0.0
-
-# Progress bars
-tqdm>=4.66.0
-
-# Fast JSON parsing
-orjson>=3.9.0
-
-# String utilities
-python-slugify>=8.0.0
-
-# Legacy dependencies (for existing src/ma2_miner if still needed)
-aiohttp>=3.13.3
-aiofiles>=23.2.1
-sentence-transformers>=2.2.0
-hdbscan>=0.8.33
-numpy>=1.24.0
-scikit-learn>=1.3.0
-click>=8.1.0
+# Core dependencies (actually used by the scraper)
+httpx[http2]>=0.25.0,<1.0
+beautifulsoup4>=4.12.0,<5.0
+lxml>=5.0.0,<6.0
+tqdm>=4.66.0,<5.0
+orjson>=3.9.0,<4.0
+python-slugify>=8.0.0,<9.0

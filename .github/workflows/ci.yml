@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    # Run weekly scraping on Sunday at 00:00 UTC
     - cron: '0 0 * * 0'
   workflow_dispatch:
 
@@ -15,48 +14,54 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-    
+
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.10'
-        
+        python-version: '3.11'
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        pip install -e .
         pip install pylint pytest
-        
+
     - name: Lint with pylint
       run: |
-        pylint src/ma2_forums_miner --disable=C0114,C0115,C0116 || true
+        pylint src/ma2_forums_miner --disable=C0114,C0115,C0116 --fail-under=7.0
 
     - name: Check imports
       run: |
-        python -c "from ma2_forums_miner import scraper, models, utils"
-        
+        python -c "from ma2_forums_miner import ForumScraper, ThreadMetadata, Post, Asset"
+
+    - name: Run tests
+      run: |
+        pytest tests/ -v
+
   scrape-and-cluster:
     runs-on: ubuntu-latest
-    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event_name == 'pull_request'
+    needs: lint-and-test
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     permissions:
       contents: write
-    
+
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.10'
-        
+        python-version: '3.11'
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        
+
     - name: Restore manifest and data
       uses: actions/cache@v4
       with:
@@ -66,12 +71,12 @@ jobs:
         key: ma2-data-${{ github.run_number }}
         restore-keys: |
           ma2-data-
-          
+
     - name: Run scraper
       run: |
         python run_scrape.py
       timeout-minutes: 120
-        
+
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
@@ -80,20 +85,15 @@ jobs:
           output/
           manifest.json
         retention-days: 30
-        
+
     - name: Commit and push if changed
       run: |
         git config --global user.name 'GitHub Action'
         git config --global user.email 'action@github.com'
-        git add -A
-        if ! git diff --quiet || ! git diff --staged --quiet; then
-          git commit -m "Update scraped data [skip ci]"
-          # Only push if not a pull request (PRs are in detached HEAD)
-          if [ "${{ github.event_name }}" != "pull_request" ]; then
-            git push
-          else
-            echo "Skipping push on PR - data available in artifacts"
-          fi
+        git add output/ manifest.json
+        if ! git diff --staged --quiet; then
+          git commit -m "chore: update scraped data [skip ci]"
+          git push
         else
           echo "No changes to commit"
         fi

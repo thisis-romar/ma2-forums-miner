@@ -150,9 +150,10 @@ def generate_readme_section(stats: Dict[str, Any]) -> str:
     md.append("### Summary\n")
     md.append("| Metric | Count |")
     md.append("|--------|-------|")
+    total = stats['total_threads'] or 1  # avoid division by zero
     md.append(f"| **Total Threads** | {stats['total_threads']} |")
-    md.append(f"| **Threads with Attachments** | {stats['threads_with_attachments']} ({stats['threads_with_attachments']/stats['total_threads']*100:.1f}%) |")
-    md.append(f"| **Threads without Attachments** | {stats['threads_without_attachments']} ({stats['threads_without_attachments']/stats['total_threads']*100:.1f}%) |")
+    md.append(f"| **Threads with Attachments** | {stats['threads_with_attachments']} ({stats['threads_with_attachments']/total*100:.1f}%) |")
+    md.append(f"| **Threads without Attachments** | {stats['threads_without_attachments']} ({stats['threads_without_attachments']/total*100:.1f}%) |")
     md.append(f"| **Total Attachment Files** | {stats['total_files']} |")
     md.append(f"| **Total Downloaded Size** | {get_file_size_str(stats['total_size'])} |")
 
