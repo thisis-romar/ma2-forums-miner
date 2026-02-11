@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "Pulselight",
+  "needs_rescrape": true,
+  "post_date": "2020-02-10T20:36:00",
+  "post_text": "February 10, 2020 at 8:36\u202fPM#1HiI want to disable/enable multiple lines in multiple macro\u2019sI know ;Assign macro 1.1601.12 thru 21 /Disable=yes (or no)Now I want to repeat this thru macro 1647So is there a way to ;Assign macro 1.1601.12 thru 21 thru macro 1.1647.12 thru 21 /Disable=yesOr do i have to make 47 lines to create this ?",
+  "replies": 0,
+  "thread_id": "65265",
+  "title": "Disabeling multiple macro lines in multiple macro\u2019s",
+  "url": "https://forum.malighting.com/forum/thread/65265-disabeling-multiple-macro-lines-in-multiple-macro-s/",
+  "views": 0
+}

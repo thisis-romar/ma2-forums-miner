@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "lbribiesca",
+  "needs_rescrape": true,
+  "post_date": "2016-04-16T06:56:00",
+  "post_text": "April 16, 2016 at 6:56\u202fAM#1HiI'm currently working with small motors and rotators controlled thru DMX and I'm using an executor as an emergency stop, this cue can be fired locally on the console or with a switch thru AnalogRemote, does any one know if it is possible to program this CUE in order that when fired it brings up to all console screens a POP-UP message to let the operator someone has fired the cue?Thanks in advance",
+  "replies": 0,
+  "thread_id": "52502",
+  "title": "Emergency Stop Cue",
+  "url": "https://forum.malighting.com/forum/thread/52502-emergency-stop-cue/",
+  "views": 0
+}

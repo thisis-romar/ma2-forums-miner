@@ -1,0 +1,33 @@
+{
+  "asset_type_category": "xml",
+  "asset_types": [
+    ".xml"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:80f1fc9c5df80a721603c26947894a81da151a99207770edbd5b3187de631a44",
+      "download_count": 135,
+      "file_type": ".xml",
+      "filename": "Auto Colour.xml",
+      "size": 9331,
+      "url": "https://forum.malighting.com/file-download/3723/"
+    },
+    {
+      "checksum": "sha256:784a73ac95d0963361dfaf20bc236b43150614ab97927f7857774fad7fa69c99",
+      "download_count": 136,
+      "file_type": ".xml",
+      "filename": "Color generator.xml",
+      "size": 6822,
+      "url": "https://forum.malighting.com/file-download/4185/"
+    }
+  ],
+  "author": "CL",
+  "needs_rescrape": true,
+  "post_date": "2015-08-01T09:50:00",
+  "post_text": "August 1, 2015 at 9:50\u202fAM#1Just a simple macro to search through your fixtures and create a bunch of presets according to RGB colour mixing fixture only.FilesAuto Colour.xml9.33 kB \u2013 135 Downloads",
+  "replies": 0,
+  "thread_id": "48057",
+  "title": "Auto Colour Preset Creation - RGB Fixtures",
+  "url": "https://forum.malighting.com/forum/thread/48057-auto-colour-preset-creation-rgb-fixtures/",
+  "views": 0
+}

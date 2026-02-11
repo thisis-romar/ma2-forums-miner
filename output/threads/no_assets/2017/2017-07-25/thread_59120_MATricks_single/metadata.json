@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "ambulance23",
+  "needs_rescrape": true,
+  "post_date": "2017-07-25T17:11:00",
+  "post_text": "July 25, 2017 at 5:11\u202fPM#1Is it possible to check if the single X in a MATricks is bigger than 1?I tried: [Interleave.=>1] setuservar $Test1 at 1. But it sets always $Test1 at 1",
+  "replies": 0,
+  "thread_id": "59120",
+  "title": "MATricks single",
+  "url": "https://forum.malighting.com/forum/thread/59120-matricks-single/",
+  "views": 0
+}

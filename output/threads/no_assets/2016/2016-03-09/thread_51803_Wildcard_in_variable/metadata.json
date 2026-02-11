@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "sebmdp",
+  "needs_rescrape": true,
+  "post_date": "2016-03-09T22:06:00",
+  "post_text": "March 9, 2016 at 10:06\u202fPM#1Dear all,What is the right syntax to use a wildcard in variable ? I'm talking about the variable name and not his value.e.g. I've some uservar $spot1, $spot2, $spot3 etc.... and want to search all my groups with a variable name starting with $spotThis may be something like :search group $spot*but it's not !Thanks for your help.Regards.",
+  "replies": 0,
+  "thread_id": "51803",
+  "title": "Wildcard in variable",
+  "url": "https://forum.malighting.com/forum/thread/51803-wildcard-in-variable/",
+  "views": 0
+}

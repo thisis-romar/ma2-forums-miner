@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "dadedesign",
+  "needs_rescrape": true,
+  "post_date": "2014-11-18T19:12:00",
+  "post_text": "November 18, 2014 at 7:12\u202fPM#1Hi,In MA1 the \">>> All_Chasers\" macro would step all running chasers.In MA2 the equivalent command \">>> AllChaseExecutors\" activates ALL chasers and steps them with 1 step.Is there a workaround or alternative keyword to achieve the exact same behaviour. I like to have a master Hog2 style play/pause/step button to step trough chase manually.I tried google and searching the help function, without much success.\"Pause AllChaseExecutors\" does apply only to running chases that is no problem.Ben",
+  "replies": 0,
+  "thread_id": "44274",
+  "title": "Step All active chasers",
+  "url": "https://forum.malighting.com/forum/thread/44274-step-all-active-chasers/",
+  "views": 0
+}

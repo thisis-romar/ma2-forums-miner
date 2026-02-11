@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "RUSANMA",
+  "needs_rescrape": true,
+  "post_date": "2020-03-04T17:49:00",
+  "post_text": "March 4, 2020 at 5:49\u202fPM#1Hi, I have a problem with a macro. I want the selected timecode to set the autostart to `` on '' and the others to off. I have got everyone on with this syntax. assign timecode thru / autostart = on. Thanks",
+  "replies": 0,
+  "thread_id": "65375",
+  "title": "Timecode autostart on",
+  "url": "https://forum.malighting.com/forum/thread/65375-timecode-autostart-on/",
+  "views": 0
+}

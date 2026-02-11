@@ -24,7 +24,7 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 
 from .models import Asset, Post, ThreadMetadata
-from .utils import sha256_file, safe_thread_folder, date_folder
+from .utils import sha256_file, safe_thread_folder, date_folder, extract_date_from_post_text
 
 logger = logging.getLogger(__name__)
 
@@ -511,17 +511,24 @@ class ForumScraper:
     async def process_thread(self, url: str) -> bool:
         """Process a single thread: fetch metadata, download assets, save to disk.
 
-        Output is organized by date posted:
-            output/threads/{YYYY}/{YYYY-MM-DD}/thread_{id}_{title}/
+        Output is organized by asset type category, then by date posted:
+            output/threads/{asset_type_category}/{YYYY}/{YYYY-MM-DD}/thread_{id}_{title}/
         """
         try:
             metadata = await self.fetch_thread(url)
             if not metadata:
                 return False
 
+            # If the scraper didn't extract a date, try parsing it from post_text
+            if not metadata.post_date and metadata.post_text:
+                extracted = extract_date_from_post_text(metadata.post_text)
+                if extracted:
+                    metadata.post_date = extracted
+
+            category = metadata.asset_type_category
             year, date_str = date_folder(metadata.post_date)
             folder_name = safe_thread_folder(metadata.thread_id, metadata.title)
-            thread_folder = self.output_dir / year / date_str / folder_name
+            thread_folder = self.output_dir / category / year / date_str / folder_name
             thread_folder.mkdir(parents=True, exist_ok=True)
 
             if metadata.assets:

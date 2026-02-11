@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "Jackmill1",
+  "needs_rescrape": true,
+  "post_date": "2021-03-28T22:35:00",
+  "post_text": "March 28, 2021 at 10:35\u202fPM#1Is there a way to use Extract to only strip away a single level of embedded-ness?For example, if presets 3.1, 4.1, 5.1 are all embedded in preset 0.1, I'd like to extract them from preset 0.1 in the current selection, but leave presets 3.1, 4.1, and 5.1 in place.It looks like extract always cuts down to the absolute data, and I can't find a way to be selective about it.",
+  "replies": 0,
+  "thread_id": "66499",
+  "title": "Extract a Single Level",
+  "url": "https://forum.malighting.com/forum/thread/66499-extract-a-single-level/",
+  "views": 0
+}

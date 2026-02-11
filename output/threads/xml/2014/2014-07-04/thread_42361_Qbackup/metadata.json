@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "xml",
+  "asset_types": [
+    ".xml"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:7432a9f49b8091c245bf260c5458d0499f1a6d4116a332a4c75663c1b4fe1568",
+      "download_count": 48,
+      "file_type": ".xml",
+      "filename": "QBackup.xml",
+      "size": 3017,
+      "url": "https://forum.malighting.com/file-download/3473/"
+    }
+  ],
+  "author": "glad",
+  "needs_rescrape": true,
+  "post_date": "2014-07-04T21:46:00",
+  "post_text": "July 4, 2014 at 9:46\u202fPM#1Macro1:\"Qbackup\"Copies a range of cues to a new backupsequenceMacro2:\"Archive old Qbackups\"Exports, then deletes old backupsequencesFilesQBackup.xml3.02 kB \u2013 48 Downloads",
+  "replies": 0,
+  "thread_id": "42361",
+  "title": "Qbackup",
+  "url": "https://forum.malighting.com/forum/thread/42361-qbackup/",
+  "views": 0
+}

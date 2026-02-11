@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "SaraW.LGN",
+  "needs_rescrape": true,
+  "post_date": "2017-08-01T04:01:00",
+  "post_text": "August 1, 2017 at 4:01\u202fAM#1hi all,I've made a macro to change forms for effects through macros :assign form 5 @and then i select the effect.problem is, it shows up in cmd line and i have to enter \"please\" manually for changes to take effect.i would like to use this macro during busk shows where i can change forms on the fly, along with grps,blocks, etc.my cues will be stored with selective effects, so i just have to change the variables.if anyone knows how to workaround the cmd line or a better solution, do reply.. it seems like a simple solution though i just cant figure it out right now. thanks alot in advance for any advise!",
+  "replies": 0,
+  "thread_id": "59155",
+  "title": "assign effect forms through macro for live shows",
+  "url": "https://forum.malighting.com/forum/thread/59155-assign-effect-forms-through-macro-for-live-shows/",
+  "views": 0
+}

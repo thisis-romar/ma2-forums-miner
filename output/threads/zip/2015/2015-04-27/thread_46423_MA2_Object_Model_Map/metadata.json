@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "zip",
+  "asset_types": [
+    ".zip"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:93dee31d9d28e953c22519cf190011c63132d2307bbd44574fc2b63cebcd4b75",
+      "download_count": 855,
+      "file_type": ".zip",
+      "filename": "MA2 Virtual Object Model REV A Blocks.zip",
+      "size": 75814,
+      "url": "https://forum.malighting.com/file-download/3627/"
+    }
+  ],
+  "author": "kdoemelt",
+  "needs_rescrape": true,
+  "post_date": "2015-04-27T21:53:00",
+  "post_text": "April 27, 2015 at 9:53\u202fPM#1Hello,If anyone is interested, I have started to diagram the MA2 Object Model. That is to say the directories and subdirectories of the command line interface.I have most of the 1st 8 folders fully mapped. I stopped to work out formatting standards and block creation before moving forward again.I was working on color coding the information for ease of understanding.[color=#A9A9A9]Grey = Directory Name[/color][color=#FF9900]Orange = Collection of Objects of specified type[/color][color=#00FF00]Green = Variable values that can be changed at the current directory level[/color][color=#FF0000]Red= Read Only variable values for the current directory level [/color][color=#33FFFF]Cyan= Valid values for each variable [/color][color=#0000FF]Blue=Example syntax for changing values of variables [/color][color=#FF00FF]Magenta=Directory End Point [/color]This is meant as a visual guide for understanding where objects and settings reside and how to make changes to them via macros.I would welcome any feedback and help on the progress so far.The file is a DWG, AutoCAD seemed the easiest way to lay this out, after all, I have no idea how big the system really is. There are 42 main directories, with an unknown amount of child folders. I\u2019ve gotten as far as the live patch menu directoy.Thank you,KurtFilesMA2 Virtual Object Model REV A Blocks.zip75.81 kB \u2013 855 Downloads",
+  "replies": 0,
+  "thread_id": "46423",
+  "title": "MA2 Object Model Map",
+  "url": "https://forum.malighting.com/forum/thread/46423-ma2-object-model-map/",
+  "views": 0
+}

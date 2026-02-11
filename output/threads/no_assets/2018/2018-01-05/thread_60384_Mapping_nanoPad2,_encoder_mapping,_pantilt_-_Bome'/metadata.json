@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "glover",
+  "needs_rescrape": true,
+  "post_date": "2018-01-05T20:47:00",
+  "post_text": "January 5, 2018 at 8:47\u202fPM#1Hi all,I post this message couse I had to search a lot and spend some time to create what I want. I think that it may be helpfull for some of you.I have Korg nanoPad2 - it consists from 16 touch sensitive pads x 4 scenes (so you get 64 assignable buttons) and touchpad.Mapping pads it's not so hard, you have to set your MIDI in device (nanoPad2 in my case) then add translation, in Incoming tab you have to chose CAPTURE MIDI and you get something like 80 3C 7F etc. In Outgoing tab you do the same (capture midi) but when you get midi message (80 3C 7F) you have to change first sign (8 in this case) to 9 - which mean \"note on\" instead of \"note off\", otherwise GrandMA won't work with that translation.Second case is the Touchpad. I thought that I can use it to set PAN and TILT of selected fixtures. The problem that I was strugling with is that the touchpad send only one midi message for move in X axis and one midi message for move in Y axis, so you can use it only for increase or decrease of atribute. What I was looking for is Rule for Bome's midi translator that will detect  direction of my finger move (up, down, left, right). And I found it. Now when I move finger UP I get midi note 2, when I move DOWN I get midi note 3, moving left - midi note 4 and right 5.As you can easy predict, each of this note can be assign in grandMA to one midi input. In REMOTE MIDI INPUT tab of setup, You have to set your midi note and assign CMD to this input. The command is Attribute \"pan\" At + 1 or Attribute \"tilt\" At - 1. If you done everything right you'll be able to control pan and tilt movment via touchpad.-----------EDIT-------------Extreme important thing is space after + or - and 1, if you enter +1 then attribute will always set to 1, if you add space after + then Attribute will grow with every next trigger.I guess that the same will work with macros that can release GrandMA's encoder in Increase or Decrease mode. So you can control GrandMA's encoder via normal midi controler encoder, couse Bome's translator will detect direction of encoders move.My Bome's sample preset is attached. I made only two sets of pads, becouse I didn't have time to end this up.I'm going to have nanoPad2 and one or two nanoKontrol's attached to GrandMA so I will have 64  assignable buttons and 8 or 16 assignable faders (not motorized but cheap:DYou can use my sample Bome's translation to set up your own TWO-WAY translations.FilesNANOPAD.rar831 Byte \u2013 103 Downloads",
+  "replies": 0,
+  "thread_id": "60384",
+  "title": "Mapping nanoPad2, encoder mapping, pan/tilt - Bome's",
+  "url": "https://forum.malighting.com/forum/thread/60384-mapping-nanopad2-encoder-mapping-pan-tilt-bome-s/",
+  "views": 0
+}

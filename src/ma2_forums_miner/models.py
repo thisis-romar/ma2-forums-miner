@@ -148,6 +148,21 @@ class ThreadMetadata:
     assets: List[Asset] = field(default_factory=list)
 
     @property
+    def asset_type_category(self) -> str:
+        """Return a single category label for folder organisation.
+
+        * ``"mixed"``      — thread has more than one distinct extension
+        * ``"xml"`` / ``"zip"`` / ``"gz"`` … — the single extension (without dot)
+        * ``"no_assets"``  — no downloadable attachments
+        """
+        types = self.asset_types
+        if len(types) == 0:
+            return "no_assets"
+        if len(types) > 1:
+            return "mixed"
+        return types[0].lstrip(".")
+
+    @property
     def asset_types(self) -> List[str]:
         """Sorted list of unique file extensions across all assets.
 
@@ -170,4 +185,5 @@ class ThreadMetadata:
         # Replace assets with enriched versions that include file_type
         d["assets"] = [a.to_dict() for a in self.assets]
         d["asset_types"] = self.asset_types
+        d["asset_type_category"] = self.asset_type_category
         return d

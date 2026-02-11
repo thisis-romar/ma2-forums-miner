@@ -1,0 +1,41 @@
+{
+  "asset_type_category": "xml",
+  "asset_types": [
+    ".xml"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:cf3d32bf13b955846bf5845a143d1a70fd3e5af7a6e3e5ce430756f2e2902ecd",
+      "download_count": 253,
+      "file_type": ".xml",
+      "filename": "GLADs intelliVars v2b.xml",
+      "size": 5340,
+      "url": "https://forum.malighting.com/file-download/4557/"
+    },
+    {
+      "checksum": "sha256:3c109ee0d64c78668885c7eb36c525162e6ae72fc0987f35f1b5b58712b8ed53",
+      "download_count": 197,
+      "file_type": ".xml",
+      "filename": "label_preset_live_cue.xml",
+      "size": 2084,
+      "url": "https://forum.malighting.com/file-download/4540/"
+    },
+    {
+      "checksum": "sha256:f776b13add835dd8b13fd59dc655e2efc89be91c1a668f3e6db99b72699d6c84",
+      "download_count": 197,
+      "file_type": ".xml",
+      "filename": "Add Fade v3.xml",
+      "size": 1849,
+      "url": "https://forum.malighting.com/file-download/4559/"
+    }
+  ],
+  "author": "glad",
+  "needs_rescrape": true,
+  "post_date": "2018-04-18T00:10:00",
+  "post_text": "April 18, 2018 at 12:10\u202fAM#1GLADs IntelliVars are small Lua scripts embedded in$variables for easy direct access via commandline/macros.These may be useful for people who find Lua too scary and complicated but still want a piece of the pie, served within their comfort zone of commandline and macrosDownload the attached Macro, import and run it once, tobuild the variables and get access to the functions described below----------------------------$CAPTURE----------------------------calling this variable creates temporary new variables C_.... containing properties of the current destination.Example:CodeCD Preset 1.1$CAPTURECD /(add a small wait (>0.05s) to the $capture line, to allow the captureprocess finish before continuing with the macro)Result:Code$C_SPECIAL = Normal$C_NO = 1.1$C_NAME = Opento not flood your list of vars, these temporary C_variables will self-delete after 1 second, so make sure to use, or copy the ones you need, in the proceeding lines of your macro:CodeSetUserVar $myNameForLater = $\"C_NAME\"----------------------------$LOOP***----------------------------The LOOP IntelliVars may be used for repeating commandssimilar to a regular FOR loop.Example:Code$LOOPFROM 1 ; $LOOPTO 3$LOOPCMD \"Fixture @ At 50 ; Store Exec 10@\"$LOOPCMDADD \" ; Label Exec 10@ 'F@' \"$LOOPRUNResult:CodeFixture 1 At 50Store Exec 101Label Exec 101 \"F1\"Fixture 2 At 50Store Exec 102Label Exec 102 \"F2\"Fixture 3 At 50Store Exec 103Label Exec 103 \"F3\"Use @ wherever in they syntax where you want toinsert the loopcounter.If you need quotes inside your syntax, use single quotes,(they gets replaced with regular double quotes when loop is executed)Remember to start with semicolon and space in the cmdtext, if you want to add additional syntax via $LOOPCMDADD .----------------------------------$FORMULA, $CALCULATE----------------------------------These IntelliVars may be used to perform arithmetic operations on uservariablesExample:Code$FORMULA \"$myresult=($var1+$var2)/2\" ; $CALCULATEsets the uservariable $myresult to the mean average of $var1 and $var2.Happy programmingAndreasFilesGLADs intelliVars v2b.xml5.34 kB \u2013 253 Downloads",
+  "replies": 0,
+  "thread_id": "61174",
+  "title": "GLADs IntelliVars - tools for macro writing",
+  "url": "https://forum.malighting.com/forum/thread/61174-glads-intellivars-tools-for-macro-writing/",
+  "views": 0
+}

@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "justinpma",
+  "needs_rescrape": true,
+  "post_date": "2016-03-01T03:45:00",
+  "post_text": "March 1, 2016 at 3:45\u202fAM#1Hi,I'm experimenting about SetUserVar but can't get to a conclusion;what I want is;* Copy cue (X Copy Cue Number?) at Cue(Y Store Cue Number?)* Stomp Cue Y* Update Cue Yso basically, I just enter the numbers for Copy Cue Number and Store Cue Number.The Stomp Cue and Update Cue will follow whatever number I key in on ' Y Store Cue Number 'I tried;* SetUserVar $selectedex=( \"Store Cue Number ?\" )* Copy Cue ( Copy Cue Number?) at Cue $selectedex* Stomp Cue $selectedex* Update Cue $selectedexIt work fine,But it will popup the 'Store Cue Number ?' firstI want it to popup 'Copy Cue Number?' first then 'Store Cue Number ?'Please advice",
+  "replies": 0,
+  "thread_id": "51586",
+  "title": "SetUserVar method",
+  "url": "https://forum.malighting.com/forum/thread/51586-setuservar-method/",
+  "views": 0
+}

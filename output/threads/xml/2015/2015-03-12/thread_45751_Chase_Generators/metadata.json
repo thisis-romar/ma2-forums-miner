@@ -1,0 +1,41 @@
+{
+  "asset_type_category": "xml",
+  "asset_types": [
+    ".xml"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:9fc6e3731ca625b342048156b359a0509f2b8b29d9fc1d4713cc746035bc0eb9",
+      "download_count": 65,
+      "file_type": ".xml",
+      "filename": "Simple Chase 2 Presets.xml",
+      "size": 4574,
+      "url": "https://forum.malighting.com/file-download/3584/"
+    },
+    {
+      "checksum": "sha256:6da174b934b8800901023be7498ddd3fde962933ffd7e9f60d198c27f0d39be3",
+      "download_count": 50,
+      "file_type": ".xml",
+      "filename": "Wave Chase 2 Presets.xml",
+      "size": 4923,
+      "url": "https://forum.malighting.com/file-download/3585/"
+    },
+    {
+      "checksum": "sha256:05aee2ed5161dd26628cb46b780732ee83e0103d846fbc657bf0d5e685fecb8f",
+      "download_count": 82,
+      "file_type": ".xml",
+      "filename": "Wave Chase 3 Presets.xml",
+      "size": 6275,
+      "url": "https://forum.malighting.com/file-download/3586/"
+    }
+  ],
+  "author": "MrRump",
+  "needs_rescrape": true,
+  "post_date": "2015-03-12T13:18:00",
+  "post_text": "March 12, 2015 at 1:18\u202fPM#1Here are useful Marcos to build some simple Chase.Please read the Info Text to learn the Macros.hope you enjoy itOliver RumpFilesSimple Chase 2 Presets.xml4.57 kB \u2013 65 DownloadsWave Chase 2 Presets.xml4.92 kB \u2013 50 DownloadsWave Chase 3 Presets.xml6.28 kB \u2013 82 Downloads",
+  "replies": 0,
+  "thread_id": "45751",
+  "title": "Chase Generators",
+  "url": "https://forum.malighting.com/forum/thread/45751-chase-generators/",
+  "views": 0
+}

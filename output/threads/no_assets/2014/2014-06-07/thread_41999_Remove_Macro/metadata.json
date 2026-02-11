@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "mattmills",
+  "needs_rescrape": true,
+  "post_date": "2014-06-07T23:08:00",
+  "post_text": "June 7, 2014 at 11:08\u202fPM#1Hello everyone, I currently have a macro that will remove a selected fixture, or fixtures, from my entire cue list but I was hoping someone might have a variation of it for me. Lets say I want to remove the selected fixtures from the current cue I'm on in the cue list and all the cues that follow it, what would the syntax be for that?",
+  "replies": 0,
+  "thread_id": "41999",
+  "title": "Remove Macro",
+  "url": "https://forum.malighting.com/forum/thread/41999-remove-macro/",
+  "views": 0
+}

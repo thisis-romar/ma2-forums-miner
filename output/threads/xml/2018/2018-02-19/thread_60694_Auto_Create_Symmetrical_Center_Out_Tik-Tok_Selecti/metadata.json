@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "xml",
+  "asset_types": [
+    ".xml"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:cca9df74e8b44f9faa335760a72e819bc723c7a122f922dc7bf893e568eb0245",
+      "download_count": 62,
+      "file_type": ".xml",
+      "filename": "V SPOT C-SYM.xml",
+      "size": 4868,
+      "url": "https://forum.malighting.com/file-download/4358/"
+    }
+  ],
+  "author": "kclarkmusic",
+  "needs_rescrape": true,
+  "post_date": "2018-02-19T21:22:00",
+  "post_text": "February 19, 2018 at 9:22\u202fPM#1Greetings,Here is a macro I've created for generating a symmetrical center out tik-tok selection order. This macro requires that you have already created your linear sequential order groups (ie. Spots 101 thru 110) and that you have also created destination groups to record to.Variables used relating to my show file:$SOURCEGROUP = linear sequential selection group \"V Spot DS\"$C-SYMGROUP = Destination group \"V Spot DS C-SYM\"$GROUPINDEX = Group Index Counter to specify certain lines of macro to skip or run$C-SYM = Counter used to store # of pairs within a selection$TOTALFIXTURES = an editable version of the built in MA variable $SELECTEDFIXTURESCOUNTImagesElegant Macros_C-SYM Selection.jpg424.02 kB1,375 \u00d7 891FilesV SPOT C-SYM.xml4.87 kB \u2013 62 Downloads",
+  "replies": 0,
+  "thread_id": "60694",
+  "title": "Auto Create Symmetrical Center Out Tik-Tok Selection Groups",
+  "url": "https://forum.malighting.com/forum/thread/60694-auto-create-symmetrical-center-out-tik-tok-selection-groups/",
+  "views": 0
+}

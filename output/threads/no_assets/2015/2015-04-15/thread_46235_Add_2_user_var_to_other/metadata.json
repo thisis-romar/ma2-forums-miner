@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "alenokia",
+  "needs_rescrape": true,
+  "post_date": "2015-04-15T21:58:00",
+  "post_text": "April 15, 2015 at 9:58\u202fPM#1its possible add 2 or more variables to another one? eg:setuservar $aa=1setuservar $bb=0setuservar $cc=3setuservar $vv=$\"aa\"; adduservar $vv=$\"bb\"; adduservar $vv=$\"cc\"-or-setuservar $vv=$\"aa\"$\"bb\"$\"cc\"my result  with adduservar is $vv=4.... not \"103\".... some idea?Thanks...ALe...",
+  "replies": 0,
+  "thread_id": "46235",
+  "title": "Add 2 user var to other",
+  "url": "https://forum.malighting.com/forum/thread/46235-add-2-user-var-to-other/",
+  "views": 0
+}

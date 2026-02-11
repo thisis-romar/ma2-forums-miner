@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "zip",
+  "asset_types": [
+    ".zip"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:0c34ba4ba8957adc0f3e8c86deaac324b0497c26e786666070d976661516ae4e",
+      "download_count": 746,
+      "file_type": ".zip",
+      "filename": "saveTime.zip",
+      "size": 1830,
+      "url": "https://forum.malighting.com/file-download/3474/"
+    }
+  ],
+  "author": "andresc4",
+  "needs_rescrape": true,
+  "post_date": "2014-07-10T18:38:00",
+  "post_text": "July 10, 2014 at 6:38\u202fPM#1My first macro, I made it from the tutorials on consoletraining, the idea of this macro is to save time saving the show on the consolememory and on the usb drive at the same timeBut I added a new line to get a \"file name?\" message box so we can enter the filename, the files will be labeled$filename.$date.$time .Run the Name+Save and enter a name without spaces or special characters ( it seems that spaces are not allowed, not sure )If the text entered is \"macarena\" the file will be save like \"macarena.10.7.2012.11h23m15.242s\" on bouth locations at the same timeThe second macro is to do the same job, but without asking for the name show. Bouth macros will create new files on each press!To save the changes without making a new file just press backup twice and it will save on the last file ( but on the console only! )If you forgot what is the name that you entered last time, just time ListVar and on the last line will be the $name variable contentFilessaveTime.zip1.83 kB \u2013 746 Downloads",
+  "replies": 0,
+  "thread_id": "42451",
+  "title": "macro to save on hd and usb with different filenames quickly",
+  "url": "https://forum.malighting.com/forum/thread/42451-macro-to-save-on-hd-and-usb-with-different-filenames-quickly/",
+  "views": 0
+}

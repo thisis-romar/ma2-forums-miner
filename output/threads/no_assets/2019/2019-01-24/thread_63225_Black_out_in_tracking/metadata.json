@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "pinch",
+  "needs_rescrape": true,
+  "post_date": "2019-01-24T13:26:00",
+  "post_text": "January 24, 2019 at 1:26\u202fPM#1Hello !I am trying to create a macro allowing me to do a B.O. after a cue in tracking mode. On the 2nd line of my macro I enter the cue before my black out and on line 9 I add 0.001 to my variable cue destination of my black out. Unfortunately the console adds me 3 zeros and it makes me a mistake ... (See the two photos attached)Someone would have an idea to addvar without the console does not add these 3 zeros?Thank you !Imagesimg1.jpg516.06 kB2,048 \u00d7 1,536img2.jpg465.7 kB2,048 \u00d7 1,536",
+  "replies": 0,
+  "thread_id": "63225",
+  "title": "Black out in tracking",
+  "url": "https://forum.malighting.com/forum/thread/63225-black-out-in-tracking/",
+  "views": 0
+}

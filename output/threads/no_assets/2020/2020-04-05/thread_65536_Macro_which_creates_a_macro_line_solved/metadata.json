@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "bennistrati",
+  "needs_rescrape": true,
+  "post_date": "2020-04-05T00:31:00",
+  "post_text": "April 5, 2020 at 12:31\u202fAM#1Hi!im trying to write a macro, which creates a new macro which then brings me to a specific faderpage.for example:SetVar $tmp=\"faderpage \"AddVar $tmp=(\"input\")Store Macro 1.3.1 $tmpThis naive way does'nt work, cause its trying to run \"store macro 1.3.1 faderpage 2\"Any suggestions?Greetz,Benjo",
+  "replies": 0,
+  "thread_id": "65536",
+  "title": "Macro which creates a macro line //solved",
+  "url": "https://forum.malighting.com/forum/thread/65536-macro-which-creates-a-macro-line-solved/",
+  "views": 0
+}

@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "zacaustin",
+  "needs_rescrape": true,
+  "post_date": "2017-01-21T05:22:00",
+  "post_text": "January 21, 2017 at 5:22\u202fAM#1I am trying to create a macro that creates a fade to black cue automatically, stores it as the next cue in the selected cue stack, advances to it, clears the programmer, then labels the cue \"blackout\". I've got everything working apart from labelling the cue. it works fine if i put \"Label Cue 20 \"Blackout\"\" but because I've created a new cue in the macro and the macro doesn't know the cue number, I cant put anything where 13 is in the command i just listed.CodeClearSelectionIfOutput EffectStomp Effect 1 ThruChannel 1 Thru At 0Fixture 1 Thru At 0Store Time 1GoClearAllI just need to know what I need to put in the command line that labels the last cue in the selected executor as \"blackout\".",
+  "replies": 0,
+  "thread_id": "56733",
+  "title": "label unknown cue from macro",
+  "url": "https://forum.malighting.com/forum/thread/56733-label-unknown-cue-from-macro/",
+  "views": 0
+}

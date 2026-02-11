@@ -69,6 +69,24 @@ class TestThreadMetadata:
         )
         assert meta.asset_types == [".xml", ".zip"]
 
+    def test_asset_type_category_no_assets(self):
+        meta = ThreadMetadata(thread_id="1", title="T", url="u", author="a")
+        assert meta.asset_type_category == "no_assets"
+
+    def test_asset_type_category_single(self):
+        meta = ThreadMetadata(
+            thread_id="1", title="T", url="u", author="a",
+            assets=[Asset(filename="a.xml", url="u")]
+        )
+        assert meta.asset_type_category == "xml"
+
+    def test_asset_type_category_mixed(self):
+        meta = ThreadMetadata(
+            thread_id="1", title="T", url="u", author="a",
+            assets=[Asset(filename="a.xml", url="u"), Asset(filename="b.zip", url="u")]
+        )
+        assert meta.asset_type_category == "mixed"
+
     def test_to_dict_nested(self):
         post = Post(author="alice", post_text="hi", post_number=1)
         asset = Asset(filename="f.xml", url="https://x.com/f")
@@ -83,3 +101,4 @@ class TestThreadMetadata:
         assert d["assets"][0]["filename"] == "f.xml"
         assert d["assets"][0]["file_type"] == ".xml"
         assert d["asset_types"] == [".xml"]
+        assert d["asset_type_category"] == "xml"

@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "deaconknives",
+  "needs_rescrape": true,
+  "post_date": "2016-01-21T03:34:00",
+  "post_text": "January 21, 2016 at 3:34\u202fAM#1Hi, wondering how to name a SetVar (which is the name of a preset), and then use that SetVar to recall it...Something like:SetVar $currentcolor=REDAt Preset 4.\"$currentcolor\"This doesn't work as it put the Var in quotation marks, where I just want to put the result in quotation marks if that makes sense...Thanks",
+  "replies": 0,
+  "thread_id": "50670",
+  "title": "Set Var AND Referencing Name \"\"",
+  "url": "https://forum.malighting.com/forum/thread/50670-set-var-and-referencing-name/",
+  "views": 0
+}

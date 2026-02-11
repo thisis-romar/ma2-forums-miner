@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "nathandkdesign",
+  "needs_rescrape": true,
+  "post_date": "2019-02-05T15:22:00",
+  "post_text": "February 5, 2019 at 3:22\u202fPM#1Hello, I found the following on a thread which works great.  However I need this macro on a different desk every show.  Is there a way to recall the existing host name of the console without having to put the actual name of the console (\"FOH\" below)Assign Root \"NetConfig\".\"Console\".\"FOH\" /XLRA=12Can I replace \"FOH\" with some keyword like hostname?",
+  "replies": 0,
+  "thread_id": "63305",
+  "title": "Command Line Syntax for changing dmx universe ports",
+  "url": "https://forum.malighting.com/forum/thread/63305-command-line-syntax-for-changing-dmx-universe-ports/",
+  "views": 0
+}

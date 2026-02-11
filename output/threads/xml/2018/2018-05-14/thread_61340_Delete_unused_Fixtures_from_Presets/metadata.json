@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "xml",
+  "asset_types": [
+    ".xml"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:b756d64d95d12cc4ca65c3c563a39b66713e970fb3a98377775aad634fee73e2",
+      "download_count": 73,
+      "file_type": ".xml",
+      "filename": "Delete unused Fixtures from Presets.xml",
+      "size": 2019,
+      "url": "https://forum.malighting.com/file-download/4400/"
+    }
+  ],
+  "author": "MrRump",
+  "needs_rescrape": true,
+  "post_date": "2018-05-14T13:08:00",
+  "post_text": "May 14, 2018 at 1:08\u202fPM#1Hi,this is a small cleanup tool.The macro deletes fixtures from Presets when they not used in sequences.Thanx to MaxMA SupportFilesDelete unused Fixtures from Presets.xml2.02 kB \u2013 73 Downloads",
+  "replies": 0,
+  "thread_id": "61340",
+  "title": "Delete unused Fixtures from Presets",
+  "url": "https://forum.malighting.com/forum/thread/61340-delete-unused-fixtures-from-presets/",
+  "views": 0
+}

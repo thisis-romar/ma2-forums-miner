@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "offirbh",
+  "needs_rescrape": true,
+  "post_date": "2019-07-29T23:37:00",
+  "post_text": "July 29, 2019 at 11:37\u202fPM#1HiIs there a way to assign mib early to a cue with syntex?Something like:Store cue 11 /m /mib=early. ?OrAssign cue 11 /mib=early. ?Thanks in advance",
+  "replies": 0,
+  "thread_id": "64363",
+  "title": "Mib assignment via macro",
+  "url": "https://forum.malighting.com/forum/thread/64363-mib-assignment-via-macro/",
+  "views": 0
+}

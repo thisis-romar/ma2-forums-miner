@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "xml",
+  "asset_types": [
+    ".xml"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:e988943dc26b54791ac9d690f781cd4862cca015ede27bf48c82c0e229829941",
+      "download_count": 130,
+      "file_type": ".xml",
+      "filename": "Clone Presets.xml",
+      "size": 1045,
+      "url": "https://forum.malighting.com/file-download/1930/"
+    }
+  ],
+  "author": "Duplicate ursschretzmeier",
+  "needs_rescrape": true,
+  "post_date": "2012-03-08T11:45:00",
+  "post_text": "March 8, 2012 at 11:45\u202fAM#1Hi there,i want to create macro to copy a bunch of presets from 1 to another group. But it just didnt work for me....It should look like this:setvar $presettype =(\"Presettype\")Setvar $preset1 = (\"preset\")Group 901at Preset $presettype.$preset1group 900 at group 901store /m preset $presettype.$preset1clearThis all works for me here... But i\u00b4d like it to have like this...:setvar $presettype =(\"Presettype\")Setvar $preset1 = (\"preset1\")Group 901at Preset $presettype.$preset1group 900 at group 901store /m preset $presettype.$preset1clearGroup 901at Preset $presettype.$preset1 +1group 900 at group 901store /m preset $presettype.$preset1 +1clear...Or better to have it like a range \"from..to\"Is it possible to give a range from preset x to y and to stop there?urs",
+  "replies": 0,
+  "thread_id": "29800",
+  "title": "Preset Copy macro",
+  "url": "https://forum.malighting.com/forum/thread/29800-preset-copy-macro/",
+  "views": 0
+}

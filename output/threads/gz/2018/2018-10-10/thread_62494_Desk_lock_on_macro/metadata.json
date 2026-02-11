@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "gz",
+  "asset_types": [
+    ".gz"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:2bf7853ad6a71c0567090d78e572b97f61591bca0bdb620de5e9591e89bebd95",
+      "download_count": 251,
+      "file_type": ".gz",
+      "filename": "pause with ma+fix.show.gz",
+      "size": 127647,
+      "url": "https://forum.malighting.com/file-download/4458/"
+    }
+  ],
+  "author": "slinso1",
+  "needs_rescrape": true,
+  "post_date": "2018-10-10T12:10:00",
+  "post_text": "October 10, 2018 at 12:10\u202fPM#1Hello guys,I wan`t to try to make a macro that lock my desk anyone that know that im 100% sure it is possible xDGreets,Stefan",
+  "replies": 0,
+  "thread_id": "62494",
+  "title": "Desk lock on macro",
+  "url": "https://forum.malighting.com/forum/thread/62494-desk-lock-on-macro/",
+  "views": 0
+}

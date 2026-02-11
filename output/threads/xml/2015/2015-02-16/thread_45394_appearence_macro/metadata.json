@@ -1,0 +1,57 @@
+{
+  "asset_type_category": "xml",
+  "asset_types": [
+    ".xml"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:f86967aef990a442d5b03a1bf8129c2c3427ea786f4678c4e50a101c57a9c7f5",
+      "download_count": 111,
+      "file_type": ".xml",
+      "filename": "Appear Groups.xml",
+      "size": 568,
+      "url": "https://forum.malighting.com/file-download/3640/"
+    },
+    {
+      "checksum": "sha256:8bc28437abb4cd8b0218069165a610c96d3b4c2501faa674bc006df9a34cfc6d",
+      "download_count": 94,
+      "file_type": ".xml",
+      "filename": "Appear Macros.xml",
+      "size": 559,
+      "url": "https://forum.malighting.com/file-download/3641/"
+    },
+    {
+      "checksum": "sha256:a04460d56c152b3c2ad94071b9013dc47a5ec98d22958bb9c9a5df418ade47dd",
+      "download_count": 115,
+      "file_type": ".xml",
+      "filename": "Appear Presets.xml",
+      "size": 573,
+      "url": "https://forum.malighting.com/file-download/3642/"
+    },
+    {
+      "checksum": "sha256:6d11254363f70f673f5edc6e645e15d376bbb509cb53fb487a2e09c5b63e2a2a",
+      "download_count": 96,
+      "file_type": ".xml",
+      "filename": "Appear sel. Cue.xml",
+      "size": 549,
+      "url": "https://forum.malighting.com/file-download/3643/"
+    },
+    {
+      "checksum": "sha256:1539682106799821fa3d951b6372e8d99cbc394f050da0964631dce23f2abbc2",
+      "download_count": 103,
+      "file_type": ".xml",
+      "filename": "Appearance.xml",
+      "size": 542,
+      "url": "https://forum.malighting.com/file-download/3644/"
+    }
+  ],
+  "author": "mschaich",
+  "needs_rescrape": true,
+  "post_date": "2015-02-16T20:21:00",
+  "post_text": "February 16, 2015 at 8:21\u202fPM#1HelloId like to write a macro. The macro should color my groups in the grouppool.appearence group 1 thru 10 \"color1\"appearence group 11 thru 20 \"color2\"and so onWhats teh right command for \"color1\"?thanks michi",
+  "replies": 0,
+  "thread_id": "45394",
+  "title": "appearence macro",
+  "url": "https://forum.malighting.com/forum/thread/45394-appearence-macro/",
+  "views": 0
+}

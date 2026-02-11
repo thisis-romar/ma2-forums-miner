@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "TRexroat",
+  "needs_rescrape": true,
+  "post_date": "2017-01-24T21:10:00",
+  "post_text": "January 24, 2017 at 9:10\u202fPM#1Hey guys,Just curious if there's a syntax option to boot other consoles off the session via IP address. I often times will have a console/workstation online in my dimmer pit. I usually assign that console the IP address 192.168.0.10, while my primary is x.1, and my backup is x.2.Wondering if I can remotely kick that IP address off from my master console?Thanks in advance,T-Rex",
+  "replies": 0,
+  "thread_id": "56774",
+  "title": "Remotely boot off other session members",
+  "url": "https://forum.malighting.com/forum/thread/56774-remotely-boot-off-other-session-members/",
+  "views": 0
+}

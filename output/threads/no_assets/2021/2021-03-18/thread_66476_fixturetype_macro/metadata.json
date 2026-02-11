@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "klann1m",
+  "needs_rescrape": true,
+  "post_date": "2021-03-18T03:02:00",
+  "post_text": "March 18, 2021 at 3:02\u202fAM#1Hey All!I've been working on a Macro to switch the FixtureType of a Fixture and am running into a couple issues. I have some 5 channel LED controllers on my show and we use them for different types of ribbon (RGB, RGBA, RGBW, RGBCwWw, WwCw, CwWw, yada yada). Right now, when the guys call out a controller number, I have to go into the Patch & Fixture Schedule, find the layer and fixture, then change the FixtureType. Not really a big deal, but I'm trying to streamline things some. So far, what I've created is close, but has a few issues. Let me know what you all think. Thanks!!1) When the Macro runs, it correctly swaps the FixtureType, but loses the DMX.2) I need to remember what FixtureType numbers correspond to the LED type. The List FixtureType line helps, but I've got to be in the Command Line Feedback view to see it.3) If I want to change Fixture 102, I have to type in 2 since that's its place in the list. This would be fine, but sometimes things get messy on the fly and numbers don't always match up. I'd like to be able to choose by Fixture ID instead.Here's what I have so far:Patch:Fixture 101 - DMX 1.101Fixture 102 - DMX 1.106~~Fixture 119 - DMX 1.191Fixture 120 - DMX 1.196FixtureTypes:1-Universal2-Dimmer3-RGB4.RGBA5.RGBCwWw6.CwWwMacro:1. cd editsetup2. cd 43. cd LED4. List FixtureType5. Assign FixtureType (FixtureType Number) at (Fixture Order Number)6. cd/",
+  "replies": 0,
+  "thread_id": "66476",
+  "title": "fixturetype macro",
+  "url": "https://forum.malighting.com/forum/thread/66476-fixturetype-macro/",
+  "views": 0
+}

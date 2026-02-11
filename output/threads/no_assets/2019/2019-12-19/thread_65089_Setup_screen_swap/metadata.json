@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "robk82",
+  "needs_rescrape": true,
+  "post_date": "2019-12-19T21:57:00",
+  "post_text": "December 19, 2019 at 9:57\u202fPM#1I'm thinking it is not possible.But could a macro be made to change what screen the setup window is on?Or any of the pop-up assignable windows... patch, macro edit... things like that.I looked through the root directory and can't seem to find a way to get it changed without clicking on the screen selection button at the top of the pop-up.Maybe this is LUA territory?Any thoughts are appreciated.Thanks!",
+  "replies": 0,
+  "thread_id": "65089",
+  "title": "Setup screen swap",
+  "url": "https://forum.malighting.com/forum/thread/65089-setup-screen-swap/",
+  "views": 0
+}

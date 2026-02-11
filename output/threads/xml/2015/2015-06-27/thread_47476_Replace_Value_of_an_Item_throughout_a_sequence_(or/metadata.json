@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "xml",
+  "asset_types": [
+    ".xml"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:fbcc02e8fe0257ff9964131f06e7cf21c212f16f687d4fb09b3345e3f3370d0e",
+      "download_count": 74,
+      "file_type": ".xml",
+      "filename": "Replace Value.xml",
+      "size": 1270,
+      "url": "https://forum.malighting.com/file-download/3706/"
+    }
+  ],
+  "author": "jabadger",
+  "needs_rescrape": true,
+  "post_date": "2015-06-27T06:01:00",
+  "post_text": "June 27, 2015 at 6:01\u202fAM#1Basic Replace macroCodeSetUserVar $replaceFocus=(\"Item to Edit?\")SetUserVar $replaceSource=(\"Where Looking?\")SetUserVar $replaceSourceValue=(\"What Value do you want to replace?\")SetUserVar $replaceNewValue=(\"What is the new value?\")Search $replaceFocus If $replaceSource /ncSearch $replaceSourceValue If SearchResult /ncReplace $replaceSourceValue With $replaceNewValue If SearchResultReplacing a color with another color, your answers would look like this:Fixture 4203Sequence 30Preset 4.217Preset 4.220Replacing a dimmer value:Fixture 4203Sequence 30At 70At 30FilesReplace Value.xml1.27 kB \u2013 74 Downloads",
+  "replies": 0,
+  "thread_id": "47476",
+  "title": "Replace Value of an Item throughout a sequence (or other)",
+  "url": "https://forum.malighting.com/forum/thread/47476-replace-value-of-an-item-throughout-a-sequence-or-other/",
+  "views": 0
+}

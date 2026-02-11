@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "LoudAndBright",
+  "needs_rescrape": true,
+  "post_date": "2017-12-19T19:03:00",
+  "post_text": "December 19, 2017 at 7:03\u202fPM#1Hi,is it possible to read out the number of the last cue of a sequence?I want to write a macro, which stores a cue into the selected sequence.Afterwards I want it to label and color the cue.One possibility would be to Top the sequence and going back one step.But if it's possible I want to use the macro without going to that cue.Christoph",
+  "replies": 0,
+  "thread_id": "60306",
+  "title": "Cue number last cue",
+  "url": "https://forum.malighting.com/forum/thread/60306-cue-number-last-cue/",
+  "views": 0
+}

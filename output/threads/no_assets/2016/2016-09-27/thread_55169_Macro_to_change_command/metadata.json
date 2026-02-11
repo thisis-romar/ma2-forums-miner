@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "justinpma",
+  "needs_rescrape": true,
+  "post_date": "2016-09-27T10:27:00",
+  "post_text": "September 27, 2016 at 10:27\u202fAM#1Hi,I would like to create a macro to assign the cmd of a cue.Example like assign cmd \"goto cue 10\" cue 9 sequence 1How can I do that?And also the macro to assign loop to a specific cue,I've found the assign cue x/loop=x is workshowever, I can't find the right key to turn it off, 'assign cue x/loop=off' ??Thank you",
+  "replies": 0,
+  "thread_id": "55169",
+  "title": "Macro to change command",
+  "url": "https://forum.malighting.com/forum/thread/55169-macro-to-change-command/",
+  "views": 0
+}

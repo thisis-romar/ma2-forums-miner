@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "RoodLD",
+  "needs_rescrape": true,
+  "post_date": "2014-07-25T02:40:00",
+  "post_text": "July 25, 2014 at 2:40\u202fAM#1My goal is to have a flash button trigger my Align<> macro. Then when I release the flash button have a macro trigger that restores the Align back to OFF.Im stuck on the restoring to OFF Align.  I cant seem to get the Syntax \"Off Flash Exectuer 1.107\" to trigger anything.  Ive tried multiple \"if\" commands with no success. Like \"If Off Flash Exec 1.107 Go exec 1.106\" Where 1.106 is the Align Off Seq Executer.Maybe I am over thinking it.  Any help would be appreciated.ThanksJim RoodLighting Designerhttp://www.jimrood.com",
+  "replies": 0,
+  "thread_id": "42656",
+  "title": "Help with Align Macro",
+  "url": "https://forum.malighting.com/forum/thread/42656-help-with-align-macro/",
+  "views": 0
+}

@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "gz",
+  "asset_types": [
+    ".gz"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:69a8a9fcd6db0256bc1458be22feae4407872ac99e3c15748bef83ddcaf7d99e",
+      "download_count": 191,
+      "file_type": ".gz",
+      "filename": "variable in quotation marks.show.gz",
+      "size": 120915,
+      "url": "https://forum.malighting.com/file-download/4364/"
+    }
+  ],
+  "author": "MrRump",
+  "needs_rescrape": true,
+  "post_date": "2018-03-01T13:54:00",
+  "post_text": "March 1, 2018 at 1:54\u202fPM#1Hi,attached is a show file in which a variable is put together and then entered as a readable CMD link in a cue.So far, no solution was found because quotes in quotation marks within a variable did not work.From the development department came this very good workaround.A variable in quotation marks is entered as plain text in the CMD field, e.g.Assign Cue 1 /CMD=$\"Name\"Filesvariable in quotation marks.show.gz120.92 kB \u2013 191 Downloads",
+  "replies": 0,
+  "thread_id": "60756",
+  "title": "Variables in quotation marks",
+  "url": "https://forum.malighting.com/forum/thread/60756-variables-in-quotation-marks/",
+  "views": 0
+}

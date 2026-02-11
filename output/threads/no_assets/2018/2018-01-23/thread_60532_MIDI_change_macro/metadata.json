@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "scoobytoobins",
+  "needs_rescrape": true,
+  "post_date": "2018-01-23T18:56:00",
+  "post_text": "January 23, 2018 at 6:56\u202fPM#1I'm trying, and having tons of difficulty, to write a macro that will change the destination of MIDI notes.For example, let's say Song 1 is playing and MIDI notes 1-50 will trigger cues 1-50. Simple.Then, hypothetical Macro is run for Song 2, and MIDI notes 1-50 will now trigger cues 1-50 on Song 2. The same macro but for Song 3 is run and then MIDI notes 1-50 will trigger cues 1-50 of Song 3. I'm having trouble accessing MIDI settings in the command line which is halting me from being able to make this macro. Any advice?Thanks in advance!",
+  "replies": 0,
+  "thread_id": "60532",
+  "title": "MIDI change macro",
+  "url": "https://forum.malighting.com/forum/thread/60532-midi-change-macro/",
+  "views": 0
+}

@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "jul poil",
+  "needs_rescrape": true,
+  "post_date": "2016-07-02T18:35:00",
+  "post_text": "July 2, 2016 at 6:35\u202fPM#1Hi EverybodyI need help to configure the command filter by a macro.I saw the command \"/pf=true\" which enable the presetfilter, but how can I choose which parameters I enable / disable in my presetfilter?Something to add like : \"pf=presettype 1\" (for exemple for dimmer)?My ideas doesn'works, do you have some?ThanksJul",
+  "replies": 0,
+  "thread_id": "53903",
+  "title": "How to configure the command filter via a macro?",
+  "url": "https://forum.malighting.com/forum/thread/53903-how-to-configure-the-command-filter-via-a-macro/",
+  "views": 0
+}

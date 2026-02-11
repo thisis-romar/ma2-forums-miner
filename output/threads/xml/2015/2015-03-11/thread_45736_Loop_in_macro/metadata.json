@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "xml",
+  "asset_types": [
+    ".xml"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:ba852cd7943f30fe3c688ede4f7adaa775cd3764c22f1df0d2eb4d904e70ef4b",
+      "download_count": 109,
+      "file_type": ".xml",
+      "filename": "Loop.xml",
+      "size": 1705,
+      "url": "https://forum.malighting.com/file-download/3590/"
+    }
+  ],
+  "author": "MetalMaarten",
+  "needs_rescrape": true,
+  "post_date": "2015-03-11T22:12:00",
+  "post_text": "March 11, 2015 at 10:12\u202fPM#1Hi all,Does anybody know how to create a loop in a macro with a counter that increases every run of the loop?I tried to use the \"with\" commando for this, but can't figure out what the syntax should be.setuservar $counter = 1with $counter = 1 thru 10 do -> other commands go here <-Thanks, Maarten",
+  "replies": 0,
+  "thread_id": "45736",
+  "title": "Loop in macro",
+  "url": "https://forum.malighting.com/forum/thread/45736-loop-in-macro/",
+  "views": 0
+}

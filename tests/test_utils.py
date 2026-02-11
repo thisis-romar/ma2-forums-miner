@@ -4,7 +4,7 @@ import hashlib
 import tempfile
 from pathlib import Path
 
-from ma2_forums_miner.utils import sha256_file, safe_thread_folder, date_folder
+from ma2_forums_miner.utils import sha256_file, safe_thread_folder, date_folder, extract_date_from_post_text
 
 
 class TestSha256File:
@@ -90,3 +90,29 @@ class TestDateFolder:
         year, date = date_folder("not-a-date")
         assert year == "unknown_year"
         assert date == "unknown_date"
+
+
+class TestExtractDateFromPostText:
+    def test_standard_format(self):
+        text = "November 3, 2009 at 6:42 AM#1I was able to export..."
+        result = extract_date_from_post_text(text)
+        assert result == "2009-11-03T06:42:00"
+
+    def test_pm_time(self):
+        text = "July 4, 2014 at 9:46 PM#1Some text here"
+        result = extract_date_from_post_text(text)
+        assert result == "2014-07-04T21:46:00"
+
+    def test_12_pm(self):
+        text = "March 15, 2020 at 12:30 PM#1Text"
+        result = extract_date_from_post_text(text)
+        assert result == "2020-03-15T12:30:00"
+
+    def test_no_date(self):
+        assert extract_date_from_post_text("Just normal text") is None
+
+    def test_empty(self):
+        assert extract_date_from_post_text("") is None
+
+    def test_none(self):
+        assert extract_date_from_post_text(None) is None

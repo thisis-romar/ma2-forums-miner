@@ -62,6 +62,42 @@ def sha256_file(file_path: Union[str, Path]) -> str:
     return f"sha256:{sha256_hash.hexdigest()}"
 
 
+_MONTH_NAMES = (
+    "January|February|March|April|May|June|"
+    "July|August|September|October|November|December"
+)
+
+_POST_TEXT_DATE_RE = re.compile(
+    rf"^({_MONTH_NAMES})\s+(\d{{1,2}}),\s+(\d{{4}})\s+at\s+(\d{{1,2}}):(\d{{2}})\s*([APap][Mm])"
+)
+
+
+def extract_date_from_post_text(post_text: str) -> Optional[str]:
+    """Extract an ISO 8601 date from a post_text that starts with a forum timestamp.
+
+    The MA Lighting forum embeds dates like:
+        ``November 3, 2009 at 6:42 AM#1Actual post content...``
+
+    Returns:
+        An ISO 8601 string (e.g. ``"2009-11-03T06:42:00"``) or *None* if no
+        date pattern is found.
+    """
+    if not post_text:
+        return None
+    m = _POST_TEXT_DATE_RE.match(post_text)
+    if not m:
+        return None
+    month_name, day, year, hour, minute, ampm = m.groups()
+    try:
+        dt = datetime.strptime(
+            f"{month_name} {day}, {year} {hour}:{minute} {ampm.upper()}",
+            "%B %d, %Y %I:%M %p",
+        )
+        return dt.isoformat()
+    except ValueError:
+        return None
+
+
 def date_folder(post_date: Optional[str]) -> Tuple[str, str]:
     """Parse an ISO 8601 date string into year and date folder components.
 

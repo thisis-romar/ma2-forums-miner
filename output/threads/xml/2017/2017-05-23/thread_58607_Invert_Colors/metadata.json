@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "xml",
+  "asset_types": [
+    ".xml"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:9bf43872e1427b12b2bae8ba4b9254523144cd0782911482c86176df888b3543",
+      "download_count": 47,
+      "file_type": ".xml",
+      "filename": "Invert Colors.xml",
+      "size": 1050,
+      "url": "https://forum.malighting.com/file-download/4233/"
+    }
+  ],
+  "author": "glad",
+  "needs_rescrape": true,
+  "post_date": "2017-05-23T22:51:00",
+  "post_text": "May 23, 2017 at 10:51\u202fPM#1temporary inverts the colors of your whole rig...have fun - use at own riskFilesInvert Colors.xml1.05 kB \u2013 47 Downloads",
+  "replies": 0,
+  "thread_id": "58607",
+  "title": "Invert Colors",
+  "url": "https://forum.malighting.com/forum/thread/58607-invert-colors/",
+  "views": 0
+}

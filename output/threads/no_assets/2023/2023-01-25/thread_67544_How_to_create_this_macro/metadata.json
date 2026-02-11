@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "latrix",
+  "needs_rescrape": true,
+  "post_date": "2023-01-25T09:19:00",
+  "post_text": "January 25, 2023 at 9:19\u202fAM#1Hello friends,During working\uff0csometimes I have adjusted a fixture's position, color, gobo .etc. Then I find another fixture is better. So I need to choose another fixture in layout to \"at\" current fixture, and \"off\" current fixture.Operations as follow\uff1aChoose fixtureB in layoutClick \"at\"Choose fixtureA in layoutClick \"off\"Choose fixtureA in layoutNow i need a macro to make them easier:Choose fixtureB in layoutClick this macroChoose fixtureA in layoutAnyone knows how to create this macro\uff1f",
+  "replies": 0,
+  "thread_id": "67544",
+  "title": "How to create this macro",
+  "url": "https://forum.malighting.com/forum/thread/67544-how-to-create-this-macro/",
+  "views": 0
+}

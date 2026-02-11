@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "Lightmean",
+  "needs_rescrape": true,
+  "post_date": "2017-01-09T01:05:00",
+  "post_text": "January 9, 2017 at 1:05\u202fAM#1Hey at All,I want to change the shape in the Fx. But I do not know how to do it.I've already tried it with:________________________assign effect 1 /form=4________________________assign effect 1 /form=Pwm________________________assign effect 1 form Pwm________________________Unfortunately nothing has worked.Can you help me?Lg Lightmean",
+  "replies": 0,
+  "thread_id": "56545",
+  "title": "How can I assign a Form to an Fx with a macro",
+  "url": "https://forum.malighting.com/forum/thread/56545-how-can-i-assign-a-form-to-an-fx-with-a-macro/",
+  "views": 0
+}

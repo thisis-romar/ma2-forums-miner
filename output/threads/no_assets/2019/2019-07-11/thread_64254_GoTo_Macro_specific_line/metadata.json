@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "Lowkeys",
+  "needs_rescrape": true,
+  "post_date": "2019-07-11T18:00:00",
+  "post_text": "July 11, 2019 at 6:00\u202fPM#1Is there a way to trigger a specific step in a macro with another macro? For example if I have Macro 1 with lines 1-10, I would want macro 2 to \"GoTo Macro 1 line 3\" and macro 3 to \"GoTo Macro Line 7.\" What would this syntax be? Thanks!",
+  "replies": 0,
+  "thread_id": "64254",
+  "title": "GoTo Macro specific line",
+  "url": "https://forum.malighting.com/forum/thread/64254-goto-macro-specific-line/",
+  "views": 0
+}

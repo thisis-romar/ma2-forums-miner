@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "willybsm",
+  "needs_rescrape": true,
+  "post_date": "2017-09-13T15:07:00",
+  "post_text": "September 13, 2017 at 3:07\u202fPM#1HiIs the following syntax functional ?Assign Root \"NetConfig\".\"Console\" /XLRA=12In the command line there is no error and if I do a test with List the modification has been taken into account but not in the section NetConfig or XLRA still remains on the universe 1?Thank you for your help",
+  "replies": 0,
+  "thread_id": "59517",
+  "title": "Functional Syntax",
+  "url": "https://forum.malighting.com/forum/thread/59517-functional-syntax/",
+  "views": 0
+}

@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "xml",
+  "asset_types": [
+    ".xml"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:39d06715a3c93efde0b29c9235a649ffcd98067a4a920d1e821160946fb353f1",
+      "download_count": 91,
+      "file_type": ".xml",
+      "filename": "TC change Exec.xml",
+      "size": 1633,
+      "url": "https://forum.malighting.com/file-download/4486/"
+    }
+  ],
+  "author": "glad",
+  "needs_rescrape": true,
+  "post_date": "2019-03-26T00:15:00",
+  "post_text": "March 26, 2019 at 12:15\u202fAM#1Changes executor used by timecode tracks, by exploiting executor move/copy functionality.1. Call macro2. Press the executor currently used by timecode3. Press the executor to use insteadFilesTC change Exec.xml1.63 kB \u2013 91 Downloads",
+  "replies": 0,
+  "thread_id": "63652",
+  "title": "Timecode - Change Executor",
+  "url": "https://forum.malighting.com/forum/thread/63652-timecode-change-executor/",
+  "views": 0
+}

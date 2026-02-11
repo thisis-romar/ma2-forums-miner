@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "GoslingProductions",
+  "needs_rescrape": true,
+  "post_date": "2014-07-18T13:09:00",
+  "post_text": "July 18, 2014 at 1:09\u202fPM#1Hi AllI am playing around with some FX macros and want to be able to adjust and 'hold' the EffectBPM parameter in my macro. I want to know if there is a way to suck out the EffectBPM encoder value and assign it to a uservar rather than having the user input a value.EgLine 1: Effect 1 EffectBPMLine 2: On EffectBPM (activates the value in the encoder and programmer)Line 3: Setvar $fx1 = Effect 1 EffectBPMBut I can't as much as I play and tweak find a way to import an encoder value into a macro. I want to do it so that even if the speed is adjusted by any means it takes a \"snapshot\" of the effectBPM so I can manipulate the playback!Any thoughts would be great!CheersGoz",
+  "replies": 0,
+  "thread_id": "42568",
+  "title": "Encoder Values into Macro",
+  "url": "https://forum.malighting.com/forum/thread/42568-encoder-values-into-macro/",
+  "views": 0
+}

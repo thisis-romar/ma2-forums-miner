@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "Redzye",
+  "needs_rescrape": true,
+  "post_date": "2017-04-01T20:54:00",
+  "post_text": "April 1, 2017 at 8:54\u202fPM#1Deleting one show, works perfectly fine.Now I read in the helpfile, using wildcards to delete multiple shows is possible. With (*)Sadly I can't get it to workFor my understanding, it should be..Deleteshow show_xyz.*Or am I getting it wrong?I want to delete the backups as well as the shows with one macro..",
+  "replies": 0,
+  "thread_id": "57936",
+  "title": "Deleting multiple shows via macros",
+  "url": "https://forum.malighting.com/forum/thread/57936-deleting-multiple-shows-via-macros/",
+  "views": 0
+}

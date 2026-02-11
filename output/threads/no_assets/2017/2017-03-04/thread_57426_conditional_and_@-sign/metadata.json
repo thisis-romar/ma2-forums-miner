@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "sebmdp",
+  "needs_rescrape": true,
+  "post_date": "2017-03-04T10:37:00",
+  "post_text": "March 4, 2017 at 10:37\u202fAM#1Hello,I'm trying to achieve a simple macro :if my variable comply with a value : select @if not, ignore the @-sign et keep going.Code[$myvar==toto] select @...To my experience a condional line ended by the @-sign will be operated whatever the condition result.If it's really the case and not a mistake on my side, how can I manage that when the condition is false ? how could I workaround, apart from a jump line order inside the macro ?Thanks for your help.Regards.",
+  "replies": 0,
+  "thread_id": "57426",
+  "title": "conditional and @-sign",
+  "url": "https://forum.malighting.com/forum/thread/57426-conditional-and-sign/",
+  "views": 0
+}

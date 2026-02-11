@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "Flyboy",
+  "needs_rescrape": true,
+  "post_date": "2015-06-09T18:34:00",
+  "post_text": "June 9, 2015 at 6:34\u202fPM#1I'm trying to write a macro that will toggle between an existing stage wash and a preset look (such as for a video roll). The trick is that I want it to be sensitive to fader levels (and therefore be able to restore to any look on stage). Is there a way to detect the level a fader is at, and store that as a variable to be recalled later?So pretty much: SetUserVar $Fader1Level = {value of the fader}",
+  "replies": 0,
+  "thread_id": "47120",
+  "title": "Detecting Fader Levels",
+  "url": "https://forum.malighting.com/forum/thread/47120-detecting-fader-levels/",
+  "views": 0
+}

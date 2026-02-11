@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "Viallon",
+  "needs_rescrape": true,
+  "post_date": "2016-02-07T17:03:00",
+  "post_text": "February 7, 2016 at 5:03\u202fPM#1Hi all,Trying to make a complex macro to practice :I want To give user choice to abort this macro (Show Cleaner).No. 1SetUserVar $AreYouSure=(\"Proceed Show Cleaner? 1=Go 0=Abort\")No. 2[$AreYouSure==1]  Delete Page ThruNo. 3[$AreYouSure==0]  Off Macro \"Show Cleaner\"It doesn't work properly. When I type 0 it won't execute line 4 thru... but macro is still activate (yellow triangle).If I test line, macro is desactivate as expected.I already tried with macro number but same behavior.Any idea?best",
+  "replies": 0,
+  "thread_id": "51121",
+  "title": "Off Macro with SetUserVar",
+  "url": "https://forum.malighting.com/forum/thread/51121-off-macro-with-setuservar/",
+  "views": 0
+}

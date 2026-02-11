@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "gz",
+  "asset_types": [
+    ".gz"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:2d7925f505484e9124d4788aae46478a360cbe79fcb148e3fd93030eaf781538",
+      "download_count": 117,
+      "file_type": ".gz",
+      "filename": "worlds.show.gz",
+      "size": 358932,
+      "url": "https://forum.malighting.com/file-download/4700/"
+    }
+  ],
+  "author": "Serge",
+  "needs_rescrape": true,
+  "post_date": "2021-11-24T19:24:00",
+  "post_text": "November 24, 2021 at 7:24\u202fPM#1Hi EveryoneI have 3 different fixtures in my show and I want to control quick the movement.How can I create an macro to put ON of or OFF the movement for 1,2 or all thefixtures?Thanks for your replySerge",
+  "replies": 0,
+  "thread_id": "66922",
+  "title": "Move On/Off selected fixtures",
+  "url": "https://forum.malighting.com/forum/thread/66922-move-on-off-selected-fixtures/",
+  "views": 0
+}

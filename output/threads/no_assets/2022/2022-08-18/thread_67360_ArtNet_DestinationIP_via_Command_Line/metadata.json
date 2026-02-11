@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "aerian",
+  "needs_rescrape": true,
+  "post_date": "2022-08-18T11:44:00",
+  "post_text": "August 18, 2022 at 11:44\u202fAM#1Hello,I would like to modify the Destination IP of a ArtNet Network via the command line. I tried \"Assign Root 4.1.1 / DestinationIP=\"2.0.0.1\" but it doesn't work. The same without the quotes. I did choose the OutputUnicast mode before.An brilliant idea ?Thanks.",
+  "replies": 0,
+  "thread_id": "67360",
+  "title": "ArtNet DestinationIP via Command Line",
+  "url": "https://forum.malighting.com/forum/thread/67360-artnet-destinationip-via-command-line/",
+  "views": 0
+}

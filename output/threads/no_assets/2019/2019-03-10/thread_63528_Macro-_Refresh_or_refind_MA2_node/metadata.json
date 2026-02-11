@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "binarylx",
+  "needs_rescrape": true,
+  "post_date": "2019-03-10T16:58:00",
+  "post_text": "March 10, 2019 at 4:58\u202fPM#1Hey,I was wondering if there is a way to create a macro within MA2 that would auto refresh finding an onPC node without having to restart the node/reload the software?I understand the process of \"setup/network/manetworkconfiguration\" then \"DMX node\" followed by \"add present\" way but I find it ends up being a trial and error thing with different results.Is a hard reset of the node/program the only way? Does anyone know a better way to do it through a creating a $variable or macro of sorts?Thanks in advance,Eric",
+  "replies": 0,
+  "thread_id": "63528",
+  "title": "Macro- Refresh or refind MA2 node",
+  "url": "https://forum.malighting.com/forum/thread/63528-macro-refresh-or-refind-ma2-node/",
+  "views": 0
+}

@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "xml",
+  "asset_types": [
+    ".xml"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:017d84a6351b089eb95c0c44f1a42e8e88146e4c75310ae75b49f78b1d95b944",
+      "download_count": 98,
+      "file_type": ".xml",
+      "filename": "Reverse Selection.xml",
+      "size": 2153,
+      "url": "https://forum.malighting.com/file-download/3540/"
+    }
+  ],
+  "author": "glad",
+  "needs_rescrape": true,
+  "post_date": "2014-11-04T00:17:00",
+  "post_text": "November 4, 2014 at 12:17\u202fAM#1reverses the selectionorder of the current selection.intended for smaller groups.if tou use on groups with more than 100 fixtures, edit line1, but be aware that the macro will be slowermacro calls it self (by name), please edit line11 if you want to rename the macroFilesReverse Selection.xml2.15 kB \u2013 98 Downloads",
+  "replies": 0,
+  "thread_id": "44082",
+  "title": "Reverse Selection",
+  "url": "https://forum.malighting.com/forum/thread/44082-reverse-selection/",
+  "views": 0
+}

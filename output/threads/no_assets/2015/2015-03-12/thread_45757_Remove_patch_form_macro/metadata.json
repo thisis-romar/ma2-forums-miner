@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "MetalMaarten",
+  "needs_rescrape": true,
+  "post_date": "2015-03-12T17:03:00",
+  "post_text": "March 12, 2015 at 5:03\u202fPM#1Hi,Trying to figure out how to remove the patch from a channel. I noticed that the assign keyword has the /reset function. But what is the syntax for this?Assign channel 101 at /rAssign channel 101 at dmx /rAssign channel 101 /rBut this does not result in an empty patch for this channel.Thanks,Maarten",
+  "replies": 0,
+  "thread_id": "45757",
+  "title": "Remove patch form macro",
+  "url": "https://forum.malighting.com/forum/thread/45757-remove-patch-form-macro/",
+  "views": 0
+}

@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "vudolight",
+  "needs_rescrape": true,
+  "post_date": "2016-03-01T02:00:00",
+  "post_text": "March 1, 2016 at 2:00\u202fAM#1As we all know there are a few fixtures which share Gobo index ansd continious spin on the same dmx slot. I have been fighting this issue with usually modifying the profile to the default gobo stop value and record a few sequences with slow, med and faster spin sequences. However never found a way to make a spin speed to be controlled by a speed master, Ideally I would like it to be controllled by effect and when I shut it down it gradually fades to default position.I have tryed before to limmit the dmx profile to have 0% as stop rotation and 100% as my full speed spin.Now adding to the complexity of the above... I am trying to prep my rig of B-Eyes, where the continueous spin is shared with index of the zoom rotation which gives coledo effect. So in this case I doo need to go past the spinning range to make my wide caledo look.So here is my ideas:1. Create (2) dmx profiles, one for spin and the other for indexing range, assign dmx profile spin to related dmx slots, then make a macro to replace dmx profile spin with indexing,***Someone please let me know how?2. Create one dmx profile, then via root assign new values to dmx profile everytime I want to swith in between profiles.Finnaly after switching to appropriatte (mode) program my cues with a thought in mind that I have to run the macro in every sequence which includes the related attributeLooking for comments, sugestions, your ways to do it",
+  "replies": 0,
+  "thread_id": "51581",
+  "title": "Change dmx profiles",
+  "url": "https://forum.malighting.com/forum/thread/51581-change-dmx-profiles/",
+  "views": 0
+}

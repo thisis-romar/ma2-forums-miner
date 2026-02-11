@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "Heather Cossette",
+  "needs_rescrape": true,
+  "post_date": "2016-05-04T02:05:00",
+  "post_text": "May 4, 2016 at 2:05\u202fAM#1Ok my beautiful MA2 programmers I need help...... I have looked pretty deep into MA-share and Google and can't find a solution so I just thought I would ask you guys.I am running MA2 onPC with a wing. This means I only have 6 faders...... for my punt page I have a midi pad set up that is firing executer buttons. What I want to do is store a position effect on a button and then set my two sub masters as size and speed. Speed I figured out..... set the cue to rate1 and one of my sub masters is rate1. The size function is what I am having trouble with. I know I could save the effects on a fader and make it a temp fader but I am looking for a more global option that doesn't eat up my 6 playback faders that I want to use for my fixture intensities. Im reading about writing a macro for it but I'm not sure if that is the right direction and what syntax would I use? As I write this I also realize I need it to control only position high and low values I wouldn't want to change a dimmer or color effect. Let me know what you think, or if you have the solution, and please let me know if I'm crazy and should stop wasting my time. Thanks!!!!!!",
+  "replies": 0,
+  "thread_id": "52848",
+  "title": "Controlling position effect size on one of the submasters.",
+  "url": "https://forum.malighting.com/forum/thread/52848-controlling-position-effect-size-on-one-of-the-submasters/",
+  "views": 0
+}

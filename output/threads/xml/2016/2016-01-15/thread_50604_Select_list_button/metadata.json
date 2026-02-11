@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "xml",
+  "asset_types": [
+    ".xml"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:a571f2d60e500257ea762a21746532e150b58facc67c6843bad4ea6b2491ec89",
+      "download_count": 95,
+      "file_type": ".xml",
+      "filename": "User 1.xml",
+      "size": 985,
+      "url": "https://forum.malighting.com/file-download/3983/"
+    }
+  ],
+  "author": "George12",
+  "needs_rescrape": true,
+  "post_date": "2016-01-15T12:03:00",
+  "post_text": "January 15, 2016 at 12:03\u202fPM#1Hi, anyone know the macro command to select the USER 1, USER 2 or LIST buttons next to the executer buttons below the multi touch and the store key. Thanks",
+  "replies": 0,
+  "thread_id": "50604",
+  "title": "Select list button",
+  "url": "https://forum.malighting.com/forum/thread/50604-select-list-button/",
+  "views": 0
+}

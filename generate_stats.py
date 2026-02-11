@@ -63,6 +63,8 @@ def analyze_threads() -> Dict[str, Any]:
         'threads_by_asset_type': defaultdict(list),
         # Threads containing more than one distinct file extension
         'multi_type_threads': [],
+        # Threads that need re-scraping (no posts array / missing replies)
+        'needs_rescrape': 0,
     }
 
     for thread_dir in thread_dirs:
@@ -155,6 +157,10 @@ def analyze_threads() -> Dict[str, Any]:
         if len(thread_asset_types) > 1:
             stats['multi_type_threads'].append(thread_info)
 
+        # Track threads needing re-scrape for replies
+        if metadata.get('needs_rescrape', False):
+            stats['needs_rescrape'] += 1
+
     return stats
 
 
@@ -183,6 +189,9 @@ def generate_readme_section(stats: Dict[str, Any]) -> str:
 
     if stats['oldest_thread_id'] != float('inf'):
         md.append(f"| **Thread ID Range** | {stats['oldest_thread_id']} - {stats['newest_thread_id']} |")
+
+    if stats['needs_rescrape']:
+        md.append(f"| **Needs Re-scrape (missing replies)** | {stats['needs_rescrape']} ({stats['needs_rescrape']/total*100:.1f}%) |")
 
     md.append("")
 

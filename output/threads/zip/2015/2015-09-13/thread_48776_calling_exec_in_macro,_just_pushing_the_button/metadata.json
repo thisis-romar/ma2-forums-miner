@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "zip",
+  "asset_types": [
+    ".zip"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:094fb508ee14f1b0b3eb1eb43dc895e495da55a103f2cdc3554956d823f814ab",
+      "download_count": 876,
+      "file_type": ".zip",
+      "filename": "Executor Buttons.zip",
+      "size": 495925,
+      "url": "https://forum.malighting.com/file-download/3782/"
+    }
+  ],
+  "author": "Duplicate bentoylight",
+  "needs_rescrape": true,
+  "post_date": "2015-09-13T21:06:00",
+  "post_text": "September 13, 2015 at 9:06\u202fPM#1Hi every bodyIs there a way to call exec in macro, not typing the number, but simply push one button ?I've tried with @ command, remembering i read a thing about it.But it doesn't workThanks and enjoy",
+  "replies": 0,
+  "thread_id": "48776",
+  "title": "calling exec in macro, just pushing the button",
+  "url": "https://forum.malighting.com/forum/thread/48776-calling-exec-in-macro-just-pushing-the-button/",
+  "views": 0
+}

@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "zip",
+  "asset_types": [
+    ".zip"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:1cee4315c0a3bef8b714d1a8974568076cf13c686fe482c20bdb96064d326d96",
+      "download_count": 594,
+      "file_type": ".zip",
+      "filename": "VPU Macro Pics.zip",
+      "size": 130197,
+      "url": "https://forum.malighting.com/file-download/4050/"
+    }
+  ],
+  "author": "MikeHolm",
+  "needs_rescrape": true,
+  "post_date": "2016-06-26T18:03:00",
+  "post_text": "June 26, 2016 at 6:03\u202fPM#1Hi guysI have turned every stone, but still haven't been able to find a way for a macro to trigger the distribution of content between VPU's.I have attached two images, that might help understand what I would like the macro to doDoes anybody know if it is possible at all to perform this task by macro/commandline or possibly a LUA script ??ThanksMike HolmFilesVPU Macro Pics.zip130.2 kB \u2013 594 Downloads",
+  "replies": 0,
+  "thread_id": "53787",
+  "title": "Macro to distribute VPU content",
+  "url": "https://forum.malighting.com/forum/thread/53787-macro-to-distribute-vpu-content/",
+  "views": 0
+}

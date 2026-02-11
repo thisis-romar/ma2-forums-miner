@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "gz",
+  "asset_types": [
+    ".gz"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:afb4f8d7d04e38e0fd451221b3568d8e7537f41939541289c07fcbea703fc862",
+      "download_count": 164,
+      "file_type": ".gz",
+      "filename": "shaper test.show.gz",
+      "size": 1030671,
+      "url": "https://forum.malighting.com/file-download/4696/"
+    }
+  ],
+  "author": "dahinn",
+  "needs_rescrape": true,
+  "post_date": "2021-12-06T13:14:00",
+  "post_text": "December 6, 2021 at 1:14\u202fPM#1Hi, collegues. I want to create a simple macro, but I am missing one final screw. Could somebody help me?From time to time, I light up banners or parts of the architecture. I use symmetrically situated profiles. I focus one of them and then try to make symmetrical copy to another. The value of the left profile attribute \"Blade1a\" must become the right profile attribute \"Blade3a\" etc.Filters or commands like [Attribute \"Blade3a\" if Fixture 2 at Attribute \"Blade1a\" if Fixture 1] don't work.My idea is something like this:1. SetUserVar $qwe = {Value of Fixture 1 Attribute \"Blade1a\"}2. Fixture 2 Attribute \"Blade3a\" at $qweThe question: how can I extract the value of an attribute?",
+  "replies": 0,
+  "thread_id": "66952",
+  "title": "The copy of a fixture attribute",
+  "url": "https://forum.malighting.com/forum/thread/66952-the-copy-of-a-fixture-attribute/",
+  "views": 0
+}

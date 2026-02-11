@@ -1,0 +1,25 @@
+{
+  "asset_type_category": "xml",
+  "asset_types": [
+    ".xml"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:1ec45c4bc505e438f6a22e799ba2123afb2ee42fa1191a3b43fa350e2a28f417",
+      "download_count": 99,
+      "file_type": ".xml",
+      "filename": "Ifoutput by Attribute.xml",
+      "size": 1011,
+      "url": "https://forum.malighting.com/file-download/3543/"
+    }
+  ],
+  "author": "sebmdp",
+  "needs_rescrape": true,
+  "post_date": "2014-11-11T10:35:00",
+  "post_text": "November 11, 2014 at 10:35\u202fAM#1Hello,The following macro selects Fixtures by Attribute from the command IfOutput. As the previous one, it's a workaround to the following command : IfOutput Attribute x, which doesn't work for now.You just have to type the Attribute number or name (e.g. 22 for Color1, 1b for rotation of first shaper) at the beginning of the macro.Be aware that your programmer values will be lost while running this macro.RegardsFilesIfoutput by Attribute.xml1.01 kB \u2013 99 Downloads",
+  "replies": 0,
+  "thread_id": "44186",
+  "title": "IfOutput filtered by Attribute",
+  "url": "https://forum.malighting.com/forum/thread/44186-ifoutput-filtered-by-attribute/",
+  "views": 0
+}

@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "r-young",
+  "needs_rescrape": true,
+  "post_date": "2014-09-13T20:06:00",
+  "post_text": "September 13, 2014 at 8:06\u202fPM#1Hi Everyone. I'm working on a auto palletizing macro, Basically want to extract the hard values out of a preset, then use those values to replace the hard values in a sequence with the preset. I can extract the preset values to the programmer, but I can't seem to figure out how to use the values in the programmer as my source for the replace. Anyone have any suggestions??Thanks,Ryan",
+  "replies": 0,
+  "thread_id": "43391",
+  "title": "Extract Replace",
+  "url": "https://forum.malighting.com/forum/thread/43391-extract-replace/",
+  "views": 0
+}

@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "TonyVision",
+  "needs_rescrape": true,
+  "post_date": "2014-07-26T23:56:00",
+  "post_text": "July 26, 2014 at 11:56\u202fPM#1The predefined Clone Fixture in Sequence Macro works great, but I'm looking to modify it.  The original Macro looks like this...Clone Fixture (fix#?) At (fix#?) If Sequence (seq#)What if I only want to clone the color of a fixture in a particular sequence and nothing else?I've different variations of...Clone Fixture (fix#?) At Fixture (fix#?) If Preset (preset#?) If Sequence (seq#)...but haven't had any luck.I've also tried variations of my Clone macro to work just on a selected sequence....The original is...SetVar $cloneitems=(0=sequence 1=dim 2=pos 3=gobo 4=color 5=beam 6=focus)[$cloneitems==0] Clone Fixture (fix#?) At Fixture (fix#?) If Sequence 1 Thru[$cloneitems==1] Clone Fixture (fix#?) At Fixture (fix#?) If Preset 1.1 Thru[$cloneitems==2] Clone Fixture (fix#?) At Fixture (fix#?) If Preset 2.1 Thru[$cloneitems==3] Clone Fixture (fix#?) At Fixture (fix#?) If Preset 3.1 Thru[$cloneitems==4] Clone Fixture (fix#?) At Fixture (fix#?) If Preset 4.1 Thru[$cloneitems==5] Clone Fixture (fix#?) At Fixture (fix#?) If Preset 5.1 Thru[$cloneitems==6] Clone Fixture (fix#?) At Fixture (fix#?) If Preset 6.1 ThruIt does great for true cloning for a whole show, but I want it to work for particular sequences only.Any help?There are two things I'm trying to accomplish.1) I have a fixture active in my programmer and I want to copy all active features to selectable fixtures.2) I have a fixture with a look stored in a sequence, but I only want to copy the color and/or gobo information to the other fixtures in that sequence.I've been scrambling my brain trying to figure it out.",
+  "replies": 0,
+  "thread_id": "42695",
+  "title": "Clone macro ?'s",
+  "url": "https://forum.malighting.com/forum/thread/42695-clone-macro-s/",
+  "views": 0
+}

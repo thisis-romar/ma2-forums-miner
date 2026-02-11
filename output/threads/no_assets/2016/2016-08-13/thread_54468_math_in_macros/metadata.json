@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "electroaudio",
+  "needs_rescrape": true,
+  "post_date": "2016-08-13T13:55:00",
+  "post_text": "August 13, 2016 at 1:55\u202fPM#1I want to control MADRIX over dmx , but instead of selecting a fixed storage in madrix i would like to make a intelligent selection depending on different parameters.one is which chase that is run and the other is which colour that chase has.for instance [current chase] * 8 + [current colour] and to output it to the madrix storage selectchannel.and everytime the colour or the chase is changed then the calculated value should update madrix.This is my first adventure into real macroprogramming in grandma , so i dont even know how to handle the problem properly....I could use commands in the CMD-box for every fader and button , like setvar $colour=\"1\" or setvar $chase=\"5\", is it then possible to add a macro after that in the commandline, that would calculate and send that value to madrix? or do i need to do one macro for each change with the proper setvar command? or can i somehow pass a value to a macro like in other shellscriptlanguages?",
+  "replies": 0,
+  "thread_id": "54468",
+  "title": "math in macros?",
+  "url": "https://forum.malighting.com/forum/thread/54468-math-in-macros/",
+  "views": 0
+}

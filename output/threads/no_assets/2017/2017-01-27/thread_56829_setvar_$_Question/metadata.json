@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "Vlad7",
+  "needs_rescrape": true,
+  "post_date": "2017-01-27T14:38:00",
+  "post_text": "January 27, 2017 at 2:38\u202fPM#1Hey guys!I'm not able to create new variable...Ex:setvar $allred= image 1 + 2 + 3 + 4In the command line it appeas like this:Executig: SetVar (in green) $allred= Image (in green) 1 + 2 + 3 + 4(All the + mark are in green too)But when i write Listvar in the commandline .. i didn't see my new $allred variable in the list..Any idea..i mean..every variable i try to add it doesn't work at all..thanks guy!",
+  "replies": 0,
+  "thread_id": "56829",
+  "title": "setvar $   Question",
+  "url": "https://forum.malighting.com/forum/thread/56829-setvar-question/",
+  "views": 0
+}

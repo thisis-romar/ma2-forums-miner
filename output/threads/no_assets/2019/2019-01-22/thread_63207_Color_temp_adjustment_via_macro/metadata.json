@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "Jbone",
+  "needs_rescrape": true,
+  "post_date": "2019-01-22T01:02:00",
+  "post_text": "January 22, 2019 at 1:02\u202fAM#1I use Skypanels constantly at work and I wrote a macro that gives me a pop up so that I can enter the desired color temperature. My question is, how can make it so that it only applies to my selection? If I have nothing selected and hit it, everything with that attribute goes to the color temp that I enter, but adding the word Selection at the begining doesn\u2019t do it. Any help is much appreciated.As it is now:Attribute\u201dcolortemperature\u201d At (Temp?)",
+  "replies": 0,
+  "thread_id": "63207",
+  "title": "Color temp adjustment via macro",
+  "url": "https://forum.malighting.com/forum/thread/63207-color-temp-adjustment-via-macro/",
+  "views": 0
+}

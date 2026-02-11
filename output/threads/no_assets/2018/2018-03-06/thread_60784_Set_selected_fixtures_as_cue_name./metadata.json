@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "LTwaters",
+  "needs_rescrape": true,
+  "post_date": "2018-03-06T08:57:00",
+  "post_text": "March 6, 2018 at 8:57\u202fAM#1Hi,I am trying to make the GrandMA label a cue according to the fixtures that are selected. I am programming 2 cues via 1 macro. In the first cue the selected fixtures go to 100% and on the second they go to 0% again.I can let the macro make a set label like \u201ctest\u201d, but I want it to label the cues it just recorded according to the selected Group or fixtures. What would be the line I would have to type in the macro?I now have: label $selectedexeccue, but there needs to be a variable after that. What would that be?With kind regards,Kevin",
+  "replies": 0,
+  "thread_id": "60784",
+  "title": "Set selected fixtures as cue name.",
+  "url": "https://forum.malighting.com/forum/thread/60784-set-selected-fixtures-as-cue-name/",
+  "views": 0
+}

@@ -1,0 +1,57 @@
+{
+  "asset_type_category": "xml",
+  "asset_types": [
+    ".xml"
+  ],
+  "assets": [
+    {
+      "checksum": "sha256:fbc886016644849b1357a02fcc3e1abb8d6ae67d8db4566051fab58285dad080",
+      "download_count": 98,
+      "file_type": ".xml",
+      "filename": "74 P10 Color Pulse _.xml",
+      "size": 7397,
+      "url": "https://forum.malighting.com/file-download/3875/"
+    },
+    {
+      "checksum": "sha256:15330de2f156f62183bb8df434bedc4de51b59b04730d39bde25e9b9146e7687",
+      "download_count": 78,
+      "file_type": ".xml",
+      "filename": "49 RGB CTO + 72.xml",
+      "size": 862,
+      "url": "https://forum.malighting.com/file-download/3876/"
+    },
+    {
+      "checksum": "sha256:445108559987a8c26788f3eca4bfdd6c6971a72498447cee1150ae00b9d109cd",
+      "download_count": 99,
+      "file_type": ".xml",
+      "filename": "50 RGB CTO + 144.xml",
+      "size": 868,
+      "url": "https://forum.malighting.com/file-download/3877/"
+    },
+    {
+      "checksum": "sha256:135b3ad965fc873819ef27b95c09f92d1d21dfa55ac7e985452397b071d5e249",
+      "download_count": 88,
+      "file_type": ".xml",
+      "filename": "51 RGB CTO + 216.xml",
+      "size": 868,
+      "url": "https://forum.malighting.com/file-download/3878/"
+    },
+    {
+      "checksum": "sha256:8b7821496de87700b1b55d4727fcb8e8669f55bb661516f0d612fc5122877517",
+      "download_count": 93,
+      "file_type": ".xml",
+      "filename": "52 RGB CTO + 288.xml",
+      "size": 868,
+      "url": "https://forum.malighting.com/file-download/3879/"
+    }
+  ],
+  "author": "GSnoodePlannen",
+  "needs_rescrape": true,
+  "post_date": "2015-11-18T16:17:00",
+  "post_text": "November 18, 2015 at 4:17\u202fPM#1I've made a macro to delete old, create and store new effects. Before the update I would start my macro, after a few lines it starts a second macro, which would run from first untill the last line, and after that the first macro would continue where it started.Commandline feedback looks like this:Go macro 1macro 1 line 1: ....macro 1 line 2 : go macro 2macro 2 line 1 : ....macro 2 line 2 : ....macro 2 line 3 : ....macro 2 line 4 : ....(end of macro 2)macro 1 line 3 : ....macro 1 line 4 : ....etc.After the update something changed with the timing, and I can't find the solution.Whenever I start the first macro, it starts like it should, but when it starts the second macro both macros run at the same time. Commandline feedback looks like this:Go macro 1macro 1 line 1 : ....macro 1 line 2 : go macro 2macro 2 line 1 : ....macro 1 line 3 : ....macro 2 line 2 : ....macro 1 line 4 : ...macro 2 line 3 : ....macro 1 line 5 : ....macro 2 line 4 : ....(end of macro 2)macro 1 line 6 : ....macro 1 line 7 : ....etc.Does anyone know how to solve this?",
+  "replies": 0,
+  "thread_id": "49911",
+  "title": "Macro f*ck up since update 3.1.2.5",
+  "url": "https://forum.malighting.com/forum/thread/49911-macro-f-ck-up-since-update-3-1-2-5/",
+  "views": 0
+}

@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "Duplicate vjandrea",
+  "needs_rescrape": true,
+  "post_date": "2018-09-16T00:09:00",
+  "post_text": "September 16, 2018 at 12:09\u202fAM#1Hello there,I am trying to retrieve and possibily edit the elements of a layout using the command line. If I use List I can see only two default elements for every layout (background and grid?) but not the elements added manually.Does anyone know if there's a way to interact with layout elements using the command line?thanksandreaP.S. the command I used to list the layout elements is:CodeList 38.1.*.*.*",
+  "replies": 0,
+  "thread_id": "62343",
+  "title": "List layout elements",
+  "url": "https://forum.malighting.com/forum/thread/62343-list-layout-elements/",
+  "views": 0
+}

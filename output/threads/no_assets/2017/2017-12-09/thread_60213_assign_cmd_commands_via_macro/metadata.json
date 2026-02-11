@@ -1,0 +1,14 @@
+{
+  "asset_type_category": "no_assets",
+  "asset_types": [],
+  "assets": [],
+  "author": "offirbh",
+  "needs_rescrape": true,
+  "post_date": "2017-12-09T12:24:00",
+  "post_text": "December 9, 2017 at 12:24\u202fPM#1hi ma forumi am trying to create a macro that will help me assign a trigger to cue in another sequence by promt quastionsassign executor 1.1 cue (what cue) /cmd=goto executor 2.101 cue (what cue)orassign executor 1.1 cue (what cue) /cmd=macro (macro number?)something like thatdid try using var  but did not go very wellthanks for the help",
+  "replies": 0,
+  "thread_id": "60213",
+  "title": "assign cmd commands via macro",
+  "url": "https://forum.malighting.com/forum/thread/60213-assign-cmd-commands-via-macro/",
+  "views": 0
+}
