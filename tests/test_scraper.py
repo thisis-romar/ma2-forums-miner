@@ -107,20 +107,24 @@ class TestExtractAllPosts:
 
 
 class TestExtractAssets:
-    def test_extracts_xml_files(self):
+    def test_extracts_all_attachments(self):
+        """All attached files are extracted regardless of extension."""
         scraper = ForumScraper()
         soup = BeautifulSoup(SAMPLE_ATTACHMENT_HTML, "lxml")
         assets = scraper.extract_assets(soup)
-        # Should find macro.xml but NOT readme.txt (wrong extension)
-        assert len(assets) == 1
-        assert assets[0].filename == "macro.xml"
-        assert "forum.malighting.com" in assets[0].url
+        assert len(assets) == 2
+        filenames = [a.filename for a in assets]
+        assert "macro.xml" in filenames
+        assert "readme.txt" in filenames
+        for asset in assets:
+            assert "forum.malighting.com" in asset.url
 
     def test_extracts_download_count(self):
         scraper = ForumScraper()
         soup = BeautifulSoup(SAMPLE_ATTACHMENT_HTML, "lxml")
         assets = scraper.extract_assets(soup)
-        assert assets[0].download_count == 317
+        xml_asset = [a for a in assets if a.filename == "macro.xml"][0]
+        assert xml_asset.download_count == 317
 
     def test_no_attachments(self):
         scraper = ForumScraper()
@@ -156,6 +160,34 @@ class TestGetMaxPageNumber:
         soup = BeautifulSoup(html, "lxml")
         # Should fall back to 30 (probe mode)
         assert scraper._get_max_page_number(soup) == 30
+
+
+class TestGetThreadMaxPage:
+    def test_single_page_thread(self):
+        html = "<html><body></body></html>"
+        scraper = ForumScraper()
+        soup = BeautifulSoup(html, "lxml")
+        assert scraper._get_thread_max_page(soup) == 1
+
+    def test_multi_page_thread(self):
+        html = """
+        <html><body>
+        <div class="pageNavigation">
+          <a href="/forum/thread/123-test/?pageNo=1">1</a>
+          <a href="/forum/thread/123-test/?pageNo=2">2</a>
+          <a href="/forum/thread/123-test/?pageNo=3">3</a>
+        </div>
+        </body></html>
+        """
+        scraper = ForumScraper()
+        soup = BeautifulSoup(html, "lxml")
+        assert scraper._get_thread_max_page(soup) == 3
+
+    def test_page_text_detection(self):
+        html = '<html><body><span>Page 1 of 7</span></body></html>'
+        scraper = ForumScraper()
+        soup = BeautifulSoup(html, "lxml")
+        assert scraper._get_thread_max_page(soup) == 7
 
 
 class TestDownloadAssetSafety:

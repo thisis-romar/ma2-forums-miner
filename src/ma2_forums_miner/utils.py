@@ -6,8 +6,9 @@ This module provides helper functions for file operations and path management.
 
 import hashlib
 import re
+from datetime import datetime
 from pathlib import Path
-from typing import Union
+from typing import Optional, Tuple, Union
 
 
 def sha256_file(file_path: Union[str, Path]) -> str:
@@ -59,6 +60,32 @@ def sha256_file(file_path: Union[str, Path]) -> str:
     # -------------------------------------------------------
     # Format: "sha256:hexdigest" for consistency and clarity
     return f"sha256:{sha256_hash.hexdigest()}"
+
+
+def date_folder(post_date: Optional[str]) -> Tuple[str, str]:
+    """Parse an ISO 8601 date string into year and date folder components.
+
+    Args:
+        post_date: ISO 8601 formatted date string (e.g. "2024-01-15T10:30:00Z")
+                   or None / empty string.
+
+    Returns:
+        Tuple of (year, date) strings, e.g. ("2024", "2024-01-15").
+        Returns ("unknown_year", "unknown_date") when the date cannot be parsed.
+    """
+    if not post_date:
+        return ("unknown_year", "unknown_date")
+    try:
+        # Handle various ISO 8601 formats
+        cleaned = post_date.replace("Z", "+00:00")
+        dt = datetime.fromisoformat(cleaned)
+        return (str(dt.year), dt.strftime("%Y-%m-%d"))
+    except (ValueError, TypeError):
+        # Try bare date (YYYY-MM-DD)
+        match = re.match(r"(\d{4})-(\d{2})-(\d{2})", post_date)
+        if match:
+            return (match.group(1), match.group(0))
+        return ("unknown_year", "unknown_date")
 
 
 def safe_thread_folder(thread_id: str, title: str, max_length: int = 50) -> str:

@@ -20,7 +20,7 @@ Usage:
 
 from .models import Asset, Post, ThreadMetadata
 from .scraper import ForumScraper
-from .utils import sha256_file, safe_thread_folder
+from .utils import sha256_file, safe_thread_folder, date_folder
 
 __all__ = [
     'ForumScraper',
@@ -29,6 +29,7 @@ __all__ = [
     'Asset',
     'sha256_file',
     'safe_thread_folder',
+    'date_folder',
 ]
 
 __version__ = '1.0.0'

@@ -24,7 +24,7 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 
 from .models import Asset, Post, ThreadMetadata
-from .utils import sha256_file, safe_thread_folder
+from .utils import sha256_file, safe_thread_folder, date_folder
 
 logger = logging.getLogger(__name__)
 
@@ -267,8 +267,31 @@ class ForumScraper:
 
         return max_page
     
+    def _get_thread_max_page(self, soup: BeautifulSoup) -> int:
+        """Detect how many pages a thread has (reply pagination)."""
+        max_page = 1
+        for link in soup.select('.pageNavigation a, .pagination a'):
+            href = link.get('href', '')
+            match = re.search(r'/page/(\d+)/', href) or re.search(r'[?&]pageNo=(\d+)', href)
+            if match:
+                max_page = max(max_page, int(match.group(1)))
+        if max_page == 1:
+            for link in soup.find_all('a', href=True):
+                href = link.get('href', '')
+                if '/page/' in href or 'pageNo=' in href:
+                    match = re.search(r'/page/(\d+)/', href) or re.search(r'[?&]pageNo=(\d+)', href)
+                    if match:
+                        max_page = max(max_page, int(match.group(1)))
+        if max_page == 1:
+            page_info = soup.find(string=re.compile(r'Page \d+ of \d+', re.IGNORECASE))
+            if page_info:
+                match = re.search(r'of (\d+)', page_info, re.IGNORECASE)
+                if match:
+                    max_page = max(max_page, int(match.group(1)))
+        return max_page
+
     async def fetch_thread(self, url: str) -> Optional[ThreadMetadata]:
-        """Fetch and parse a single thread's metadata, posts, and assets."""
+        """Fetch and parse a single thread including ALL pages of replies and assets."""
         html = await self._fetch_with_retry(url)
         if not html:
             return None
@@ -284,7 +307,35 @@ class ForumScraper:
         title_elem = soup.select_one('h1.topic-title, .contentTitle')
         title = title_elem.text.strip() if title_elem else "Unknown Title"
 
+        # Extract posts and assets from first page
         posts = self.extract_all_posts(soup)
+        assets = self.extract_assets(soup)
+
+        # Fetch remaining pages if the thread has multiple pages of replies
+        max_page = self._get_thread_max_page(soup)
+        if max_page > 1:
+            logger.info("Thread %s has %d pages, fetching all...", thread_id, max_page)
+            # Build page URLs — strip any existing pageNo from the base URL
+            base_thread_url = re.sub(r'[?&]pageNo=\d+', '', url).rstrip('/')
+            page_urls = [
+                f"{base_thread_url}?pageNo={page}"
+                for page in range(2, max_page + 1)
+            ]
+            page_htmls = await asyncio.gather(
+                *[self._fetch_with_retry(pu) for pu in page_urls]
+            )
+            for page_num, page_html in enumerate(page_htmls, start=2):
+                if not page_html:
+                    logger.warning("Thread %s page %d: failed to fetch", thread_id, page_num)
+                    continue
+                page_soup = BeautifulSoup(page_html, "lxml")
+                page_posts = self.extract_all_posts(page_soup)
+                # Renumber posts to continue from the previous page
+                offset = len(posts)
+                for p in page_posts:
+                    p.post_number = offset + p.post_number
+                posts.extend(page_posts)
+                assets.extend(self.extract_assets(page_soup))
 
         author = "Unknown"
         post_date = None
@@ -305,8 +356,6 @@ class ForumScraper:
             views_match = re.search(r'(\d+)\s*(?:views|ansichten)', stats_text, re.I)
             if views_match:
                 views = int(views_match.group(1))
-
-        assets = self.extract_assets(soup)
 
         return ThreadMetadata(
             thread_id=thread_id,
@@ -383,9 +432,6 @@ class ForumScraper:
                 if not filename:
                     filename = href.split('/')[-1]
 
-            if not any(filename.lower().endswith(ext) for ext in ['.xml', '.zip', '.gz', '.show']):
-                continue
-
             # Extract download count from metadata
             download_count = None
             meta_elem = link.select_one('span.messageAttachmentMeta')
@@ -461,14 +507,19 @@ class ForumScraper:
             return False
     
     async def process_thread(self, url: str) -> bool:
-        """Process a single thread: fetch metadata, download assets, save to disk."""
+        """Process a single thread: fetch metadata, download assets, save to disk.
+
+        Output is organized by date posted:
+            output/threads/{YYYY}/{YYYY-MM-DD}/thread_{id}_{title}/
+        """
         try:
             metadata = await self.fetch_thread(url)
             if not metadata:
                 return False
 
+            year, date_str = date_folder(metadata.post_date)
             folder_name = safe_thread_folder(metadata.thread_id, metadata.title)
-            thread_folder = self.output_dir / folder_name
+            thread_folder = self.output_dir / year / date_str / folder_name
             thread_folder.mkdir(parents=True, exist_ok=True)
 
             if metadata.assets:

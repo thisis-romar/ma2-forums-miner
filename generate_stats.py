@@ -41,7 +41,11 @@ def analyze_threads() -> Dict[str, Any]:
         print("❌ No output/threads directory found")
         return None
 
-    thread_dirs = sorted([d for d in output_dir.iterdir() if d.is_dir()])
+    # Find thread dirs: support both flat (thread_*) and date-nested (YYYY/YYYY-MM-DD/thread_*)
+    thread_dirs = sorted([
+        d for d in output_dir.rglob("thread_*")
+        if d.is_dir() and (d / "metadata.json").exists()
+    ])
     print(f"📊 Analyzing {len(thread_dirs)} threads...")
 
     stats = {

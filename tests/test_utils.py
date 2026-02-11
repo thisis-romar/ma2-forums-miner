@@ -4,7 +4,7 @@ import hashlib
 import tempfile
 from pathlib import Path
 
-from ma2_forums_miner.utils import sha256_file, safe_thread_folder
+from ma2_forums_miner.utils import sha256_file, safe_thread_folder, date_folder
 
 
 class TestSha256File:
@@ -58,3 +58,35 @@ class TestSafeThreadFolder:
         assert "/" not in result
         assert "\\" not in result
         assert result.startswith("thread_1_")
+
+
+class TestDateFolder:
+    def test_iso_datetime(self):
+        year, date = date_folder("2024-01-15T10:30:00Z")
+        assert year == "2024"
+        assert date == "2024-01-15"
+
+    def test_iso_datetime_with_offset(self):
+        year, date = date_folder("2023-06-01T08:00:00+02:00")
+        assert year == "2023"
+        assert date == "2023-06-01"
+
+    def test_bare_date(self):
+        year, date = date_folder("2022-12-25")
+        assert year == "2022"
+        assert date == "2022-12-25"
+
+    def test_none(self):
+        year, date = date_folder(None)
+        assert year == "unknown_year"
+        assert date == "unknown_date"
+
+    def test_empty_string(self):
+        year, date = date_folder("")
+        assert year == "unknown_year"
+        assert date == "unknown_date"
+
+    def test_garbage_string(self):
+        year, date = date_folder("not-a-date")
+        assert year == "unknown_year"
+        assert date == "unknown_date"
