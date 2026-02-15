@@ -3,6 +3,50 @@
   "author": "18486613",
   "post_date": null,
   "post_text": "May 15, 2022 at 6:13 AM#1hi everyone：How to quickly delete  sequences that is not assginned to  executors?",
+  "posts": [
+    {
+      "author": "18486613",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 15, 2022 at 6:13 AM#1hi everyone：How to quickly delete  sequences that is not assginned to  executors?"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 15, 2022 at 5:08 PM#2HiA workaround is to build a sequence with each cue having a command : delete seq #ex : cue 1 cmd=\"del seq  1\"cue 2 cmd=\"del seq 2\"etcRun your sequence, at the end the confirmation pop-up will appear\"objects are in use, do you want to delete ?\"Hit EscapeAll unassigned sequences are deleted, the assigned ones aren't.Exemple of macro to create the sequence :Macro 'unused sequences\"1.Setvar $fseq = (first sequence to scan ?)2.Setvar $lseq = (last seq to scan ?)3.Setvar $range = $lseq; addvar $range = -$fseq4.Store Seq 999 cue 1 thru $range /o5.Assign Seq 999 cue 2 thru /trig=follow6.Setvar $cue = 17.Setvar $cmd = \"del seq \"; addvar $cmd = $fseq8.Assign seq 999 cue $cue /cmd=$\"cmd\"9.addvar $cue = 1; Addvar $fseq = 110.[$fseq<=$lseq] macro 1.'unused sequences\".711.Go Seq 99912. Delete seq 999 /nc"
+    },
+    {
+      "author": "18486613",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 17, 2022 at 10:57 AM#3thanks a million!"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 17, 2022 at 7:38 PM#4The idea is not mine.You can do same with presets.Enjoy"
+    },
+    {
+      "author": "18486613",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 26, 2022 at 5:00 PM#5Thanks for the sharing,it is help me a great business."
+    },
+    {
+      "author": "chaolg",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "July 3, 2022 at 10:17 AM#6Re: how to delete sequences not on executors"
+    },
+    {
+      "author": "DannyCaine",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "August 1, 2022 at 11:46 PM#7Why doesn't \"Cleanup Sequence Thru\" work?It's in the manual, but it does nothing.ThanksEDIT: UGH, That's MA3. Sorry"
+    }
+  ],
   "replies": 0,
   "thread_id": "67219",
   "title": "how to delete sequences not on executors",

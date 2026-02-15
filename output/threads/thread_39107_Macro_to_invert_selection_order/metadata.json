@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:09065b9edea9c8f83502747961dcabf11ffc1824eb31d72a204727325ff372b3",
-      "download_count": 219,
+      "download_count": 229,
       "filename": "Invert SelOrder.xml",
+      "post_number": 3,
       "size": 67145,
       "url": "https://forum.malighting.com/file-download/2671/"
     }
@@ -11,6 +12,38 @@
   "author": "Youri",
   "post_date": null,
   "post_text": "November 8, 2013 at 5:31 PM#1Hello!Will it be possible to have a macro which takes your selection and put it from last to first?? It would be very cool!ie: I select group 1 (fixture from 1 th 10), push the macro and get fixture 10 th 1!And whatever I have with first selection, I get the inverse!ie: group 1 is fixture 1/9/7/3/4, I get 4/3/7/9/1!Ideas? Could MA doing something??Thank you!",
+  "posts": [
+    {
+      "author": "Youri",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 8, 2013 at 5:31 PM#1Hello!Will it be possible to have a macro which takes your selection and put it from last to first?? It would be very cool!ie: I select group 1 (fixture from 1 th 10), push the macro and get fixture 10 th 1!And whatever I have with first selection, I get the inverse!ie: group 1 is fixture 1/9/7/3/4, I get 4/3/7/9/1!Ideas? Could MA doing something??Thank you!"
+    },
+    {
+      "author": "willybsm",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 9, 2013 at 1:31 PM#2Salut Yourijette un oeil sur le forum LC, je viens d'y mettre une macro qui pourra t'interresser.a+"
+    },
+    {
+      "author": "GH",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 9, 2013 at 1:42 PM#3Hi,A macro like this?Delete some lines if its to big or copy some lines if its to littleFilesInvert SelOrder.xml67.15 kB – 229 Downloads"
+    },
+    {
+      "author": "Youri",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "November 10, 2013 at 3:43 PM#4Hi!Yes GH, it was what I looking for!!! Thank you very much!Cheers,"
+    },
+    {
+      "author": "simonh74",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "April 20, 2015 at 3:42 PM#5That is a very handy macro, thanks for sharing"
+    }
+  ],
   "replies": 0,
   "thread_id": "39107",
   "title": "Macro to invert selection order",

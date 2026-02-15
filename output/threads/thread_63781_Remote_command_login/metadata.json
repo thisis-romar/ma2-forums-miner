@@ -3,6 +3,26 @@
   "author": "robk82",
   "post_date": null,
   "post_text": "April 18, 2019 at 5:23 PM#1Is it possible to remotecommand login my RPU from my console? Or does that command only get processed on the master of the session?",
+  "posts": [
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 18, 2019 at 5:23 PM#1Is it possible to remotecommand login my RPU from my console? Or does that command only get processed on the master of the session?"
+    },
+    {
+      "author": "Moe696",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 19, 2019 at 12:29 PM#2[url=http://www.ma-share.net/forum/read.php…56169#msg-56169]Have a look here please![/url]"
+    },
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 19, 2019 at 5:03 PM#3Thanks, I got that. But my goal is to logout and leave the login screen up until the next operator comes to the console. Then they'd be able to login the RPU from the console. I am having trouble logging in remotely. Switching to a different user isn't quite what I'm looking for..Thanks though! I appreciate the help"
+    }
+  ],
   "replies": 0,
   "thread_id": "63781",
   "title": "Remote command login",

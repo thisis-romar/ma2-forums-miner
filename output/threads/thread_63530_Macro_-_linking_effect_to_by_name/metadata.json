@@ -3,6 +3,50 @@
   "author": "binarylx",
   "post_date": null,
   "post_text": "March 10, 2019 at 10:24 PM#1Hello guys,I'm wondering what I'm missing. I can make the macro work just fine with a simple reference to the effect in question:Example:assign effect 1.67 /wings= 0Yet I'm attempting to make a series of effects with the same naming convention that can be affected by the same macro.Example:Assign effect 1.*\"stage\"*.1 /wings= 0The idea is to create a series of effects such as stage(wash) stage(wash2) stage(left) etc.... but have one series of macros affect those groups.When I do this I keep getting:error 14 \" Object does not exist\"Am I missing something?",
+  "posts": [
+    {
+      "author": "binarylx",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 10, 2019 at 10:24 PM#1Hello guys,I'm wondering what I'm missing. I can make the macro work just fine with a simple reference to the effect in question:Example:assign effect 1.67 /wings= 0Yet I'm attempting to make a series of effects with the same naming convention that can be affected by the same macro.Example:Assign effect 1.*\"stage\"*.1 /wings= 0The idea is to create a series of effects such as stage(wash) stage(wash2) stage(left) etc.... but have one series of macros affect those groups.When I do this I keep getting:error 14 \" Object does not exist\"Am I missing something?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 10, 2019 at 11:00 PM#2try putting the wildcards inside the quotes:CodeAssign effect 1.\"*stage*\".1 /wings= 0"
+    },
+    {
+      "author": "binarylx",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 11, 2019 at 1:01 AM#3No dice"
+    },
+    {
+      "author": "binarylx",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 11, 2019 at 1:05 AM#4You're actually correct. I had a space where a space should not be.Answer:Assign Effect 1.\"*stage*\".1 /wings=0"
+    },
+    {
+      "author": "binarylx",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "March 11, 2019 at 7:43 AM#5One interesting outcome of this command line is thatAssign effect 1.67 /wings = 0Does not hinder the effect in motion. If the effect is in the programmer then it remains running.vsAssign effect \"*stage*\".1/ wings = 0It stops the effect and changes the wings value. The effect has to be triggered again to continue. Somehow this command trigger creates a \"stomp\" like affect on the effect.Any thoughts?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "March 11, 2019 at 7:56 AM#6are you sure the examples exactly represent your actual syntax?If so, the second is not valid.please look up the Effect Keyword in the manual, and examine how one, two or three dot-separated numbers/names are mappedCodeEffect a -> a=EffectIDEffect b.c -> b=PoolID(always 1),  c=EffectIDEffect d.e.f ->  d=PoolID(always 1),  e=EffectID, f=EffectLine"
+    },
+    {
+      "author": "zakkbeard",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "March 15, 2019 at 4:02 AM#7the wildcard is a marker, so in quotes it won't really get what you need. I don't have the console in front of me, but I THINK it should read like:assign effect 1.\"stage\"*.x /wings=0remember that in the macro, for symmetrical effects, you'll want to add a different line that changes pan values to -2, -4, etc.I have something similar in my punt file for my various effects, but not for changing parameters, I use it for updating the fixture counts of my effects."
+    }
+  ],
   "replies": 0,
   "thread_id": "63530",
   "title": "Macro - linking effect to by name",

@@ -3,6 +3,20 @@
   "author": "entex",
   "post_date": null,
   "post_text": "December 5, 2018 at 9:52 PM#1Hey folks,i'd love to control the lights of my executor buttons to let them blink like the B.O button. I know i can control the global intensity, but haven't found an option to control just one button. Does so know if or how this can be done?greetings!",
+  "posts": [
+    {
+      "author": "entex",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 5, 2018 at 9:52 PM#1Hey folks,i'd love to control the lights of my executor buttons to let them blink like the B.O button. I know i can control the global intensity, but haven't found an option to control just one button. Does so know if or how this can be done?greetings!"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 19, 2018 at 12:06 PM#2I'am pretty sure this is not possible"
+    }
+  ],
   "replies": 0,
   "thread_id": "62877",
   "title": "Controlling background light of individual hardkeys",

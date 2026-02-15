@@ -3,6 +3,20 @@
   "author": "madseckert",
   "post_date": null,
   "post_text": "March 20, 2015 at 7:49 PM#1HiDoes anybody know if it is possible to count the number of selected channels/fixtures in a macro?- E.g. a function that would return 3 if channels 5, 8 and 12 is selected.I would like to save it as a variable for looping purposes, so that I can have a loop run x times depending on how many channels is selected.Thanks, Mads",
+  "posts": [
+    {
+      "author": "madseckert",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 20, 2015 at 7:49 PM#1HiDoes anybody know if it is possible to count the number of selected channels/fixtures in a macro?- E.g. a function that would return 3 if channels 5, 8 and 12 is selected.I would like to save it as a variable for looping purposes, so that I can have a loop run x times depending on how many channels is selected.Thanks, Mads"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 20, 2015 at 8:02 PM#2I believe you will need quite a heavy workaround for this..here's one approach that might work:create a dummy channel in fixtureschedule. e.g. channel 512, and a dmx-remote for this channel.add the dummy to your selection+ Channel 512create a looping macro that:counts via addvarnext thru your selection, with highlight enabledwhen channel 512 is reached (last of selection) have it's DMX-remote terminate the looping macro"
+    }
+  ],
   "replies": 0,
   "thread_id": "45917",
   "title": "Count number of selected channels",

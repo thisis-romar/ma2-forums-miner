@@ -3,6 +3,38 @@
   "author": "discodisco",
   "post_date": null,
   "post_text": "June 19, 2016 at 7:25 PM#1For the purposes of this I have 20 fixtures which I need to manipulate the Dimmer Intensity using 3 presets. DimMax, DimHalf, DimMinI need a bump/wave to travel along these 20 fixtures step by step. With my key fixture at DimMax, fixture either side DimHalf and the rest remaining at DimMin.This need to travel as the same speed as the actors and steady cam down a corridor....I have two approaches; build a seq or an effectIf I build a 20 step sequence, with fade times, and manually trigger each cue as the steady cam passes... this works, but what if the lighting cameraman needs a width of two fixtures for the max level... I would need to rebuild the sequence again.... boring... and slow if needed on the fly....Is there a way in which I can control a Single Shot effect with the same level of control?Any ideas are appreciated. I've got a week to perfect a solution.Dan.",
+  "posts": [
+    {
+      "author": "discodisco",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 19, 2016 at 7:25 PM#1For the purposes of this I have 20 fixtures which I need to manipulate the Dimmer Intensity using 3 presets. DimMax, DimHalf, DimMinI need a bump/wave to travel along these 20 fixtures step by step. With my key fixture at DimMax, fixture either side DimHalf and the rest remaining at DimMin.This need to travel as the same speed as the actors and steady cam down a corridor....I have two approaches; build a seq or an effectIf I build a 20 step sequence, with fade times, and manually trigger each cue as the steady cam passes... this works, but what if the lighting cameraman needs a width of two fixtures for the max level... I would need to rebuild the sequence again.... boring... and slow if needed on the fly....Is there a way in which I can control a Single Shot effect with the same level of control?Any ideas are appreciated. I've got a week to perfect a solution.Dan."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 19, 2016 at 7:42 PM#2this might work:duplicate you sequence and start 3 HTP executor at the same time, trigger them in paralell with a macro or by selecting all 3.if you need a wider step, perofrm an additional go on only one or two of the execsor make two LTP executors, on that switches on one by one, another that switches off one by one, and start the second 1,2 or 3 cues after the first, then trigger both in paralell"
+    },
+    {
+      "author": "discodisco",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "June 20, 2016 at 12:34 PM#3Thank you for ideas Glad. All gratefully received and tried.Unfortunately the lamps are doing the first half of the fade out before the maintained level is kicked in from the duplicated, and then one cue behind sequence. - so they all dip when firing the go command across all four sequences.Any ideas?Cheers."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "June 20, 2016 at 12:53 PM#4have you tried to put a delay on the outfade, equal to the infade"
+    },
+    {
+      "author": "discodisco",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "March 12, 2017 at 1:20 PM#5This solved it. Thank you"
+    }
+  ],
   "replies": 0,
   "thread_id": "53664",
   "title": "Steady cam : Stepped Effect/Chase?",

@@ -3,6 +3,26 @@
   "author": "marlonpdm",
   "post_date": null,
   "post_text": "July 31, 2014 at 3:17 PM#1Hello!anyone can help me how to make macro that message (Welcome!) then after 3 sec. it escapes no need to enter anything?thank you!",
+  "posts": [
+    {
+      "author": "marlonpdm",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 31, 2014 at 3:17 PM#1Hello!anyone can help me how to make macro that message (Welcome!) then after 3 sec. it escapes no need to enter anything?thank you!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 8, 2014 at 12:17 PM#2to create a messagebox that closes after 3 seconds:CodeStore Timer \"WELCOME\"Assign Timer \"WELCOME\" /timermode=countdown /countdowntime=0.1 /alerttype=popup /alertduration=3to trigger the messagebox:CodeGo Timer \"WELCOME\""
+    },
+    {
+      "author": "marlonpdm",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 14, 2014 at 2:14 PM#3Thank you so much!"
+    }
+  ],
   "replies": 0,
   "thread_id": "42798",
   "title": "macro message",

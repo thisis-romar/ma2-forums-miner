@@ -3,6 +3,26 @@
   "author": "robk82",
   "post_date": null,
   "post_text": "January 13, 2019 at 9:34 AM#1Is there a way to give an executor a temp fader via command line?",
+  "posts": [
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 13, 2019 at 9:34 AM#1Is there a way to give an executor a temp fader via command line?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 13, 2019 at 11:39 AM#2CodeHelp TempFader"
+    },
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 13, 2019 at 3:27 PM#3Figured it right after I posted... Thanks tho!"
+    }
+  ],
   "replies": 0,
   "thread_id": "63123",
   "title": "Give an executor a temp fade via command line",

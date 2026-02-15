@@ -3,6 +3,20 @@
   "author": "willybsm",
   "post_date": null,
   "post_text": "March 10, 2019 at 6:33 AM#1HiThe assignment of the image mode in the Desklock BackGround works well only I can not assign an accurate image.Is this possible ?I did a lot of testing in style:CodeAssign Root \"Settings\".\"Local\" /desklockBackground=1 /Image=\"MyImage\"Thank you",
+  "posts": [
+    {
+      "author": "willybsm",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 10, 2019 at 6:33 AM#1HiThe assignment of the image mode in the Desklock BackGround works well only I can not assign an accurate image.Is this possible ?I did a lot of testing in style:CodeAssign Root \"Settings\".\"Local\" /desklockBackground=1 /Image=\"MyImage\"Thank you"
+    },
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 18, 2023 at 3:47 PM#2Did you ever get this figured out?"
+    }
+  ],
   "replies": 0,
   "thread_id": "63524",
   "title": "change background image",

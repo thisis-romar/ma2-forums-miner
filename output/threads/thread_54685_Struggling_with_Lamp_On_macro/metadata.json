@@ -3,6 +3,38 @@
   "author": "tomvis",
   "post_date": null,
   "post_text": "August 30, 2016 at 11:22 AM#1Hi there,I'm getting stumped by a fairly simple problem. Can anyone help?Default PresetType \"Position\"  At center //works fine//after experimentation it's not working, just setting the channel to 0.by the same logic:Default PresetType \"Control\"  At \"Lamp On\" //Does not workAt Preset \"Lamp On\" //Does not workI cant find the right syntax.3.2.2.3 OnPC",
+  "posts": [
+    {
+      "author": "tomvis",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 30, 2016 at 11:22 AM#1Hi there,I'm getting stumped by a fairly simple problem. Can anyone help?Default PresetType \"Position\"  At center //works fine//after experimentation it's not working, just setting the channel to 0.by the same logic:Default PresetType \"Control\"  At \"Lamp On\" //Does not workAt Preset \"Lamp On\" //Does not workI cant find the right syntax.3.2.2.3 OnPC"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 30, 2016 at 12:13 PM#2trye.g. 1CodeAt Preset \"Position\".\"Center\"e.g. 2CodeAt Preset \"Control\".\"Lamp On\""
+    },
+    {
+      "author": "tomvis",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 30, 2016 at 1:16 PM#3*Fixture 1 please*At Preset \"Control\".\"Lamp On\"gives me a \"object does not exists error\".I'm trying to access the default presets under the lamp control rotary.At presettype \"Control\" \"Lamp On\" set the control channel to 0 not to its lamp on values."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "August 30, 2016 at 1:19 PM#4it is not possible to access the channelset in the calculator via commandline.You will need to generate Presets, to use my syntax(create a preset in the Control PresetPool, labeled \"Lamp On\")"
+    },
+    {
+      "author": "tomvis",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "August 30, 2016 at 1:24 PM#5Ah ok its not possible,My goal was to create a macro to set up that control preset for a string of fixtures as part of start of the day automation. I guess that step will just have to be manual.Thanks"
+    }
+  ],
   "replies": 0,
   "thread_id": "54685",
   "title": "Struggling with Lamp On macro",

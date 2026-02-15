@@ -3,6 +3,38 @@
   "author": "ceddylee",
   "post_date": null,
   "post_text": "February 28, 2020 at 9:09 PM#1So i have a macro that runs that prompts me to set the BPM, and a second prompt that needs to be able to cut the given number by 2. Could someone help me understand how to do this?",
+  "posts": [
+    {
+      "author": "ceddylee",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 28, 2020 at 9:09 PM#1So i have a macro that runs that prompts me to set the BPM, and a second prompt that needs to be able to cut the given number by 2. Could someone help me understand how to do this?"
+    },
+    {
+      "author": "F Dijkers",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 29, 2020 at 9:49 AM#2Hi,You can halfspeed the executor where the BPM master is located. This will result in a smaller range though. Syntax:CodeHalfSpeed Executor x.xAn other option is to set a rate per effect or a ratemaster. Check the following link for that:https://help2.malighting.com/Page/grandMA2/…ter_rate/en/3.8Kind regards,Floris DijkersLighting Director & Designerflorisdijkers.comlighting@florisdijkers.com"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 3, 2020 at 9:20 PM#3I'd use the aforementioned methods here.the only way to have gma2 read a current specialmaster and then use math requires lua."
+    },
+    {
+      "author": "Nordiama",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 3, 2020 at 9:45 PM#4Would there be a way to divide variables, or is that also getting into lua?"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "March 5, 2020 at 2:43 PM#5check out glad's intellivars for this. i believe it avoids lua but it is not as simple as writing math into a macro."
+    }
+  ],
   "replies": 0,
   "thread_id": "65357",
   "title": "Equation to divide BPM by 2",

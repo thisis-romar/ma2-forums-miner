@@ -3,6 +3,32 @@
   "author": "Rivieroscope",
   "post_date": null,
   "post_text": "April 22, 2015 at 8:52 AM#1Hi guys , There is a way to make preset esealy ? For exemple : I have Sharpy , Mac 700 P and W and Mac aura so i would like to do global color presets without edit them one by one or type by type...Ideas ?",
+  "posts": [
+    {
+      "author": "Rivieroscope",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 22, 2015 at 8:52 AM#1Hi guys , There is a way to make preset esealy ? For exemple : I have Sharpy , Mac 700 P and W and Mac aura so i would like to do global color presets without edit them one by one or type by type...Ideas ?"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 24, 2015 at 11:26 PM#2autocreate"
+    },
+    {
+      "author": "alenokia",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 7, 2015 at 3:44 AM#3guys i cant do autocreato of preset to any fixture... i do this:QuoteAuto Create/Create Preset ReferencePresets can be added to fixture types as preset reference. Setup/ Autocreate provides access to create a preset reference and to create presets from a preset reference. Preset reference is part of the fixture type and will be exported and imported inside the fixture type file.Preset references can be created via commandline. At first a fixture of a fixture type must be selected. With the command \"Store Fixturetype x.5\" all presets of the currently selected fixtures are added to this fixture type. If a reference already exists, a pop-up occurs. The command can be restricted to single presettypes :\"Store Fixturetype x.5 if Presettype \"colour\". With \"Autocreate Preset Fixturetype x\" all preset of that type will be generated and to eventually existing merged (same name). With the extension \"/add\" always new presets are added. This can be limited with \"if\" for each presettype. Presets are identified by their name of each presettype and applicable overwritten. Example: \"Store Fixturetype x.5 /remove if Presettype \"colour\".Autocreate Presets creates preset label by merging channelset and attribute label.some ideas?"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 9, 2015 at 1:14 AM#4HiSet up/autocreate/preset from channel set and additionnals presets. You choose which preset types you want, then Merge presetsBut Sharpy are only colorwheel as m700 are cmy and aura Rgb."
+    }
+  ],
   "replies": 0,
   "thread_id": "46299",
   "title": "Basic preset problem",

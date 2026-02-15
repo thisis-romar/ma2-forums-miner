@@ -3,6 +3,50 @@
   "author": "jfarrow",
   "post_date": null,
   "post_text": "July 18, 2014 at 8:27 PM#1I'm looking for a more graceful way to achieve the followingI've built an exec (eg 1.1.210) that takes a GO, shifts color to open, then has an follow to cue 2 which has a cmd \"Off Executor 1.1.210\" which turns the exec off.  I've set off time to 0.7This has the effect of snapping the fixtures to open white and the fading back to the underlying color (nice with LED fixtures).  It all works fine untill I need to move the button; at which point I have to update the cmd to refer to the new location.My question: Is there a way for an exec to refer to itself dynamically?  Kind of like the new $SELECTEDEXEC in 3.0.0.4 but without it having to be the selected exec.  something like $SELFEXECOr maybe a different way to achieve the same end result.Thanks in advance",
+  "posts": [
+    {
+      "author": "jfarrow",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 18, 2014 at 8:27 PM#1I'm looking for a more graceful way to achieve the followingI've built an exec (eg 1.1.210) that takes a GO, shifts color to open, then has an follow to cue 2 which has a cmd \"Off Executor 1.1.210\" which turns the exec off.  I've set off time to 0.7This has the effect of snapping the fixtures to open white and the fading back to the underlying color (nice with LED fixtures).  It all works fine untill I need to move the button; at which point I have to update the cmd to refer to the new location.My question: Is there a way for an exec to refer to itself dynamically?  Kind of like the new $SELECTEDEXEC in 3.0.0.4 but without it having to be the selected exec.  something like $SELFEXECOr maybe a different way to achieve the same end result.Thanks in advance"
+    },
+    {
+      "author": "RomanP",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 19, 2014 at 7:57 AM#2Hi,try this ... start and off executor with the namegive the Executor a Label like\"MY Label 1\"in the CMD line you start the Executor with:go executor *.\"My Label 1\"or offwithoff executor *.\"My Label 1\"then you can move the Executor somewhere you want, it start everytime the right executorplease read the release notes of V3.0.0.2, because the \"*\" is newsorry for my bad english"
+    },
+    {
+      "author": "jfarrow",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 20, 2014 at 11:10 PM#3I did consider this after reading the release notes, but I would still have to edit the cmd if I rename or duplicate the seq.A simple way for an executor to refer to itself would be most helpful."
+    },
+    {
+      "author": "Duplicate pyroaxel",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "July 22, 2014 at 9:04 PM#4Try this:Cmd cue 1: Select @; GoCmd cue 2: off exe if select"
+    },
+    {
+      "author": "jfarrow",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "July 30, 2014 at 2:41 PM#5Quote from AxelCmd cue 1: Select @; GoCmd cue 2: off exe if selectThe problem with this technique is that it moves the master playback focus away from my primary seq and to a secondary seq.  I want to be able to call a series of \"hits\" (snap on the fade out) via the cmd line of the primary seq.  If I move the Select then I lose master playback control of the primary seq.I was really looking to see if there was a variable that I could call that would feedback some identifier of the executor that called it.  I guess I'll submit this as a feature request."
+    },
+    {
+      "author": "Tom Young",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "July 30, 2014 at 3:03 PM#6Hiya,What about if you recorded cue 1 which has the colour bump to open and give it a time of 0 seconds. Give the executor an off time of 0.7 or whatever you want it to be.Then change the mode for that cue to be \"Release\".As soon as the cue has finished running it will then automatically release itself.Does that do what you're after?Cheers!Tom"
+    },
+    {
+      "author": "jfarrow",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "July 30, 2014 at 4:16 PM#7Thanks Tom, thats exactly what I was looking for."
+    }
+  ],
   "replies": 0,
   "thread_id": "42570",
   "title": "Can an exec call \"self\"",

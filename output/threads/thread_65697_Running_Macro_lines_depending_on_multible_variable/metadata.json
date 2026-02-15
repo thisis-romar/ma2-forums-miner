@@ -3,6 +3,20 @@
   "author": "schackert",
   "post_date": null,
   "post_text": "May 19, 2020 at 1:52 PM#1Hi all,I know that ein can run or skip a line in a macro by setting a variable to a certain value. Is there a way to run/skip a line checking multible variables? Like run this line if $Var1 == 1 and $Var2 == 0?CheersKunstLichtSchalterRUN DMX",
+  "posts": [
+    {
+      "author": "schackert",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 19, 2020 at 1:52 PM#1Hi all,I know that ein can run or skip a line in a macro by setting a variable to a certain value. Is there a way to run/skip a line checking multible variables? Like run this line if $Var1 == 1 and $Var2 == 0?CheersKunstLichtSchalterRUN DMX"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 19, 2020 at 2:20 PM#2check this thread:http://www.ma-share.net/forum/read.php…60988#msg-60988"
+    }
+  ],
   "replies": 0,
   "thread_id": "65697",
   "title": "Running Macro lines depending on multible variables",

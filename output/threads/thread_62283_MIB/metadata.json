@@ -3,6 +3,20 @@
   "author": "Teo Benz",
   "post_date": null,
   "post_text": "September 7, 2018 at 4:25 PM#1hi crew, I realized that the moving head do the MIB not in the cue before turning on but 3 cue before. Now, it's not a big deal but ,,, how can I make him do the MIB in the cue that precedes the ignition?",
+  "posts": [
+    {
+      "author": "Teo Benz",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 7, 2018 at 4:25 PM#1hi crew, I realized that the moving head do the MIB not in the cue before turning on but 3 cue before. Now, it's not a big deal but ,,, how can I make him do the MIB in the cue that precedes the ignition?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 7, 2018 at 5:21 PM#2Change the MIB cell to Late instead of Early."
+    }
+  ],
   "replies": 0,
   "thread_id": "62283",
   "title": "MIB",

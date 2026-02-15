@@ -3,6 +3,20 @@
   "author": "robk82",
   "post_date": null,
   "post_text": "September 4, 2020 at 6:25 PM#1I'm trying to create a macro that once activated the user need only answer 3 questions and it will automatically add the item in the correct place.1. Setvar $AgendaDate= (What date would you like?)2. Setvar $AgendaTimeOn= (What time to start?)3. Setvar $AgendaTimeOff= (What time to end?)4. Assign sequ \"Backline work\" at $AgendaDate + $AgendaTimeOn Duration= 1sI'm just guessing really, but hopefully this gets the idea accross. I need the operator to answer questions as to what time and date to turn the sequence on and off.",
+  "posts": [
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 4, 2020 at 6:25 PM#1I'm trying to create a macro that once activated the user need only answer 3 questions and it will automatically add the item in the correct place.1. Setvar $AgendaDate= (What date would you like?)2. Setvar $AgendaTimeOn= (What time to start?)3. Setvar $AgendaTimeOff= (What time to end?)4. Assign sequ \"Backline work\" at $AgendaDate + $AgendaTimeOn Duration= 1sI'm just guessing really, but hopefully this gets the idea accross. I need the operator to answer questions as to what time and date to turn the sequence on and off."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 5, 2020 at 1:20 PM#2to create a new Agenda item via commandline, you would need to know how many entries that already existed.e.g.List Agenda Thru-> commandline feedback shows 10 entriesStore Agenda 11------However here is a plausible workaround for your scenario:Prerequisite:1. Manually create a new Agenda item with all necessary settings to switch your \"Backline work\" on, using an expired date/time2. Manually create a new Agenda item with all necessary settings to switch your \"Backline work\" off, using an expired date/time3. type \"List Agenda thru\" and notice the index of your last two entries you just made.e.g assuming you originally had 10 entries in the agenda, and the two new on/off agendas was created as index 11 and index 12, create a macro to be operated, that goes something like this:Code#create a copy of your known agenda itemsCD AgendaCopy 11 + 12PasteCD Root#get input from the user in proper formatSetvar $AgendaDate= (\"Date? e.g 12/31/2020\")Setvar $AgendaTimeOn= (\"Start? e.g. 20h30m)Setvar $AgendaTimeOff= (\"End? e.g. 22h0m\")#adjust the settings of the known agenda itemsAssign Agenda 11 /First=$\"AgendaDate\" /Time=$\"AgendaTimeOn\"Assign Agenda 12 /First=$\"AgendaDate\" /Time=$\"AgendaTimeOff\"Display More"
+    }
+  ],
   "replies": 0,
   "thread_id": "66039",
   "title": "Macro to create Agena appointment.",

@@ -3,6 +3,26 @@
   "author": "mattmills",
   "post_date": null,
   "post_text": "April 5, 2016 at 3:57 PM#1Hello everyone, wondering if this is even possible. Can a macro be made that will toggle on/off the Status Call option of the current timecode pool? My show is timecoded and during sound checks with the band ill turn off timecode to update a cue, once I'm finished I would like the cue list to catch back up. This is not a huge issue for me but I was really curious if it could even be done. Im always amazed at how powerful the macros are on the MA2 and thought I would throw this out there.",
+  "posts": [
+    {
+      "author": "mattmills",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 5, 2016 at 3:57 PM#1Hello everyone, wondering if this is even possible. Can a macro be made that will toggle on/off the Status Call option of the current timecode pool? My show is timecoded and during sound checks with the band ill turn off timecode to update a cue, once I'm finished I would like the cue list to catch back up. This is not a huge issue for me but I was really curious if it could even be done. Im always amazed at how powerful the macros are on the MA2 and thought I would throw this out there."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 5, 2016 at 4:05 PM#2As far as I know, there's no way to automatically know the currently selected tc show via the command line. If you say, for example, \"[color=#66FF00]Assign Timecode[/color] /statuscall=off\" (i.e. not specifying which show), that will be applied to all of your tc shows. If that doesn't work for you, it may be possible to retrieve that information with LUA though? Someone who's done more digging there than I will have to answer that."
+    },
+    {
+      "author": "mattmills",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 5, 2016 at 9:56 PM#3Thanks, that can actually work for my situation."
+    }
+  ],
   "replies": 0,
   "thread_id": "52275",
   "title": "Status Call Macro?",

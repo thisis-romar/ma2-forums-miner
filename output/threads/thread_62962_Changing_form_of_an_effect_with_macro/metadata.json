@@ -3,6 +3,26 @@
   "author": "ZachBerget",
   "post_date": null,
   "post_text": "December 20, 2018 at 1:44 AM#1Hi All!Having trouble when creating a command to change the form of an effect.Ex.Assign Effect 1.x.y /form=zIs this on the right path?Thanks!",
+  "posts": [
+    {
+      "author": "ZachBerget",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 20, 2018 at 1:44 AM#1Hi All!Having trouble when creating a command to change the form of an effect.Ex.Assign Effect 1.x.y /form=zIs this on the right path?Thanks!"
+    },
+    {
+      "author": "Duplicate dherderich",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 20, 2018 at 1:32 PM#2Try this:Assign Form x At Effect yAssign Form x At Effect 1.y.z"
+    },
+    {
+      "author": "ZachBerget",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 21, 2018 at 4:16 AM#3Thank you for your response! That was the ticket. Not sure how I didn't try that in the first couple tries.Thanks!"
+    }
+  ],
   "replies": 0,
   "thread_id": "62962",
   "title": "Changing form of an effect with macro",

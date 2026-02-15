@@ -3,6 +3,26 @@
   "author": "Pahegi",
   "post_date": null,
   "post_text": "July 17, 2016 at 2:45 PM#1I am searching for some solution where I can set a Variable to 1, if a button is pressed and again to 0 if the button is released.Thank you",
+  "posts": [
+    {
+      "author": "Pahegi",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 17, 2016 at 2:45 PM#1I am searching for some solution where I can set a Variable to 1, if a button is pressed and again to 0 if the button is released.Thank you"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 17, 2016 at 4:57 PM#21. Patch a dummy dimmer to an unused DMX address2. Store that dimmer at 100% in a flash button3. Store 2 cues to an empty executor, and put the 2 desired commands into the CMD cell of those cues4. Set the fader for that executor to XFade5. Create a DMX remote for the DMX address of the dummy dimmer that controls the fader of the CMD executor you just made.6. Press the flash button to go to one variable value, unpress to go to the other."
+    },
+    {
+      "author": "Pahegi",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 26, 2016 at 8:38 PM#3Thank you very much, it works!"
+    }
+  ],
   "replies": 0,
   "thread_id": "54095",
   "title": "Trigger cmd1 if Executorbutton is pressed and cmd2 if Button is released",

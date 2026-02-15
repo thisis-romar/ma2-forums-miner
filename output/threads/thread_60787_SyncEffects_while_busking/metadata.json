@@ -3,6 +3,38 @@
   "author": "linus00",
   "post_date": null,
   "post_text": "March 6, 2018 at 8:41 PM#1Hey guys, I have read a lot here in Macro share, but I cant get this work. I have differents cues with effects when Iam busking,Iam hitting this in diffrent times, but I wont a macro (or something else) to sync all my effects. So... Tell me what to do",
+  "posts": [
+    {
+      "author": "linus00",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 6, 2018 at 8:41 PM#1Hey guys, I have read a lot here in Macro share, but I cant get this work. I have differents cues with effects when Iam busking,Iam hitting this in diffrent times, but I wont a macro (or something else) to sync all my effects. So... Tell me what to do"
+    },
+    {
+      "author": "barthornesch",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 8, 2018 at 9:57 AM#2Hello linus00,One way you could sync all of your effects is by creating a macro that fires all the effects at once. This is what I use to sync all of my effects.If you need help creating this marco just let me know exactly what you want this macro to do.Bart HorneschLighting Designer,Lighting Technician,Lighting Operator."
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 16, 2018 at 2:15 PM#3A lot of the time hitting the buttons 'MA + effect' will sync effects, or at least that's its intended purpose. Sometimes it doesn't work, though.Another way is to set up two executors with SpecialMasters for dimmer and P/T and assign your effect speeds to those. Then you can tap the learn button or play with your faders until they fall back in line."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 16, 2018 at 2:50 PM#4SyncEffects is only for effects that are running in the programmer. If it \"doesn't work\" then you're probably not running some/all of your effects in the programmer."
+    },
+    {
+      "author": "Stereoface",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 18, 2018 at 11:28 PM#5The best way to do this I've found is by defining a variable to a list of where your FX executors.Then turning them off and on. So that when you fire the macro all the fx start over.setvar $fxexecutors = \"10.101 + 10.102 + 10.103\"          (Wherever they are for you)Off Executor $fxexecutorsOn Executor $fxexecutors"
+    }
+  ],
   "replies": 0,
   "thread_id": "60787",
   "title": "SyncEffects while busking",

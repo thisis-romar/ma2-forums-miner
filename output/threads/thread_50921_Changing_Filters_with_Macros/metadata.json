@@ -3,6 +3,20 @@
   "author": "Hwellink",
   "post_date": null,
   "post_text": "February 2, 2016 at 5:11 PM#1Hi there!I am trying to change filters using a macro, but i can't find the right syntax for it.I tried working around, by making different basic filters (Color, Iris, Focus, etc) and copy and merging them into one filter, but merging doesn't seem to work, as only the last copied filter remains in the new place.Hope anybody can help me out here, Thanks!",
+  "posts": [
+    {
+      "author": "Hwellink",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 2, 2016 at 5:11 PM#1Hi there!I am trying to change filters using a macro, but i can't find the right syntax for it.I tried working around, by making different basic filters (Color, Iris, Focus, etc) and copy and merging them into one filter, but merging doesn't seem to work, as only the last copied filter remains in the new place.Hope anybody can help me out here, Thanks!"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 3, 2016 at 11:13 AM#2Filter X will select a filter for your next store commandSelect Filter X will hold the filter until you select another oneMerging filters is not possible at the moment, this is a bug and is already reported and confirmed to/by MA-Lighting"
+    }
+  ],
   "replies": 0,
   "thread_id": "50921",
   "title": "Changing Filters with Macros",

@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:6bb3441b5eb21c9ce8b67bbfa0610aefb2cc286cfa89f4ee0e3724dc9b024b11",
-      "download_count": 89,
+      "download_count": 99,
       "filename": "generic@speed@.xml",
+      "post_number": 2,
       "size": 1211,
       "url": "https://forum.malighting.com/file-download/3603/"
     }
@@ -11,6 +12,32 @@
   "author": "Buzz313th",
   "post_date": null,
   "post_text": "April 6, 2015 at 5:52 PM#1Ok, I have been trying for some time to write a macro that will write a line in the CMD column of my \"Set\" cue at the beginning of each song to set BPM to a generic speed master, but I keep running into limitations that won't allow me to.  Here is what I have come up with and some of the limitations I am running into.Workflow goal....   To use the learn key on a Speed master called \"Tempo\" to capture a songs tempo and then capture that BPM in a uservar that is then written into the cmd line of the first cue of a song sequence...First problem is, that there is no way to get the MA2 to call the BPM of a Speed Master and assign that value to a uservar, so I have realized I need to manually enter the BPM after reading it off of the Speed master with a macro such as this...Generic speed master is labeled \"tempo\"setuservar $tempo=(Enter Song Tempo)assign executor 21 cue \"set\"/cmd=\"specialmaster 3.tempo at $tempo\"The first issue I am running into with the second line of the macro is that the uservar $tempo is a variable and will change it's value after each song I write...   since each song will have it's own discreet BPM..   So I want the second line to place a numeric value into the cmd column, not call a uservar, but I need to use a uservar to temporarily store that value so I can use the same macro to automate the building of each first cue in a song sequence...  Such as this..assign executor 21 cue \"set\"/cmd=\"specialmaster 3.tempo at 61.5\"The problem I am running into, is that I have not figured out how to get the numerical value of \"61.5\" into the cmd column of the cue by using a temporary uservar to actually write \"61.5\" at the end of the syntax \"specialmaster 3.tempo at\".The macro....    assign executor 21 cue \"set\"/cmd=\"specialmaster 3.tempo at\"Will write... specialmaster 3.tempo at...  into the cmd line, but now I need to get.... 61.5 ....in there after the assign macro..The macro...  assign executor 21 cue \"set\"/cmd=$tempoWill write...  61.5  ..  in the cmd column...So I can get the assign macro in there, and also get the value for $tempo in there, but I haven't been able to figure out how to get both in the same command line...I don't want to use a separate \"tempo\" uservar for each song and I also don't want to have a macro for each song..  I am specifically looking for a generic tool/macro that will simply speed up the process of having to manually write the cmd line ofassign executor 21 cue \"set\"/cmd=\"specialmaster 3.tempo at 60\"Ohh, and I have also tried the following macroassign executor 21 cue \"set\"/cmd=\"specialmaster 3.tempo at (Enter Song BPM)\"Any help would be appreciated",
+  "posts": [
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 6, 2015 at 5:52 PM#1Ok, I have been trying for some time to write a macro that will write a line in the CMD column of my \"Set\" cue at the beginning of each song to set BPM to a generic speed master, but I keep running into limitations that won't allow me to.  Here is what I have come up with and some of the limitations I am running into.Workflow goal....   To use the learn key on a Speed master called \"Tempo\" to capture a songs tempo and then capture that BPM in a uservar that is then written into the cmd line of the first cue of a song sequence...First problem is, that there is no way to get the MA2 to call the BPM of a Speed Master and assign that value to a uservar, so I have realized I need to manually enter the BPM after reading it off of the Speed master with a macro such as this...Generic speed master is labeled \"tempo\"setuservar $tempo=(Enter Song Tempo)assign executor 21 cue \"set\"/cmd=\"specialmaster 3.tempo at $tempo\"The first issue I am running into with the second line of the macro is that the uservar $tempo is a variable and will change it's value after each song I write...   since each song will have it's own discreet BPM..   So I want the second line to place a numeric value into the cmd column, not call a uservar, but I need to use a uservar to temporarily store that value so I can use the same macro to automate the building of each first cue in a song sequence...  Such as this..assign executor 21 cue \"set\"/cmd=\"specialmaster 3.tempo at 61.5\"The problem I am running into, is that I have not figured out how to get the numerical value of \"61.5\" into the cmd column of the cue by using a temporary uservar to actually write \"61.5\" at the end of the syntax \"specialmaster 3.tempo at\".The macro....    assign executor 21 cue \"set\"/cmd=\"specialmaster 3.tempo at\"Will write... specialmaster 3.tempo at...  into the cmd line, but now I need to get.... 61.5 ....in there after the assign macro..The macro...  assign executor 21 cue \"set\"/cmd=$tempoWill write...  61.5  ..  in the cmd column...So I can get the assign macro in there, and also get the value for $tempo in there, but I haven't been able to figure out how to get both in the same command line...I don't want to use a separate \"tempo\" uservar for each song and I also don't want to have a macro for each song..  I am specifically looking for a generic tool/macro that will simply speed up the process of having to manually write the cmd line ofassign executor 21 cue \"set\"/cmd=\"specialmaster 3.tempo at 60\"Ohh, and I have also tried the following macroassign executor 21 cue \"set\"/cmd=\"specialmaster 3.tempo at (Enter Song BPM)\"Any help would be appreciated"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 6, 2015 at 10:42 PM#2maybe this approach would be an easier solution:patch one of the attached fixture to e.g. DMX 10.001 FixId 1001Create a DMX-remote for your speedmaster with the chosen DMX address.adjust the BPM of your speedmaster via your programmer, or a macro:Fixture 1001Attribute \"speed\" At (bpm?)Store / update into your cues.Filesgeneric@speed@.xml1.21 kB – 99 Downloads"
+    },
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 7, 2015 at 12:48 AM#3Thanks for the reply Glad.Lemme wrap my head around what you got here and get back to you..Once again, I appreciate your help.JB"
+    },
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 7, 2015 at 12:59 AM#4Ok, I get it...   what a far out workaround..Nicely done.ThanksJB"
+    }
+  ],
   "replies": 0,
   "thread_id": "46112",
   "title": "MACRO To Set Speedmaster Bpm for each song sequence",

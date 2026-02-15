@@ -3,6 +3,32 @@
   "author": "justinpma",
   "post_date": null,
   "post_text": "August 31, 2017 at 12:44 PM#1Hi,What would be the macro to change the clock window to timecodeand also the macro to have the clock window to show timecode 1,2,3,4, etc?",
+  "posts": [
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 31, 2017 at 12:44 PM#1Hi,What would be the macro to change the clock window to timecodeand also the macro to have the clock window to show timecode 1,2,3,4, etc?"
+    },
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 31, 2017 at 12:51 PM#2One more,I'm looking for ways to stand by timecode generator at specific time.I manage to trigger timecode generator via macro; go, pause, off timecodeslot 1now I'm looking to stand by at specific time such pause at 1hr.What I'm trying to achieve*macro to change the clock window to view timecode slot 1 or 2*macro to stand by timecode slot 1 at 1hr*macro to go timecode slot 1 from 1h*macro to stand by timecode slot at 2hr*macro to go timecode slot 2 from 2hrthank youEDITThanks to Ryan I'm able to stand by my timecode slotTimecodeStatusThese are what can be found in [Setup] → {Timecode}Assign Root 3.6.x (or Root \"Settings\".\"TimecodeStatus\".xor Assign TimecodeSlot x) /Name /PreRoll /AfterRoll /GeneratorStartTime /GeneratorEndTime /GeneratorLooped /GeneratorTimeUnit /Infox = TimecodeSlot number or \"name\"/Name = \"My Awesome Name\"/PreRoll = 0.1s..1d3h46m40.00s - can also be input as raw seconds (i.e. 0.1..100000.00)/AfterRoll= 0.1s..1d3h46m40.00s - can also be input as raw seconds (i.e. 0.1..100000.00)/GeneratorStartTime = 0s..10d15h59m59.00s - can also be input as raw seconds (i.e. 0..921599)/GeneratorEndTime = 0s..10d15h59m59.00s - can also be input as raw seconds (i.e. 0..921599)/GeneratorLooped = off/on/GeneratorTimeUnit = \"1/100 Seconds\" / \"30 FPS\" / \"25 FPS\" / \"24 FPS\"/Info = \"informative text here\"Now, I only need to find out how to change the clock window to show between timer, clock, timecodeand view timecode 1,2,3,4, so on."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 31, 2017 at 10:06 PM#3HiStore a view with your TC clock, and call it with view \"TC Clock\""
+    },
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 1, 2017 at 4:22 AM#4That's one to work around it.Thank you"
+    }
+  ],
   "replies": 0,
   "thread_id": "59413",
   "title": "macro to change clock to timecode",

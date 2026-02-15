@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.0.0/MA.xsd" major_vers="3" minor_vers="0" stream_vers="0">
+	<Info datetime="2014-08-13T21:28:30" showfile="syndrome" />
+	<Macro index="900" name="preset cue list 901">
+		<Macroline index="0">
+			<text>SetUserVar $EXECUTOR=(&quot;WHICH EXECUTOR ?&quot;)</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>SetUserVar $PT=( &quot;PRESET TYPE&quot; )</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>SetUserVar $preStart=( &quot;FIRST PRESET&quot; )</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>SetUserVar $preEnd=( &quot;LAST PRESET&quot; )</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>[$preStart&lt;1] SetUserVar $preStart=1</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>At Preset $PT.$preStart</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>Store Executor $EXECUTOR Fade 3 /nc</text>
+		</Macroline>
+		<Macroline index="7">
+			<text>AddUserVar $preStart=1</text>
+		</Macroline>
+		<Macroline index="8">
+			<text>[$preStart&lt;=$preEnd] Go Macro 1.901.6</text>
+		</Macroline>
+		<Macroline index="9">
+			<text>[$preStart&gt;&gt;$preEnd] Off Macro 901</text>
+		</Macroline>
+	</Macro>
+</MA>

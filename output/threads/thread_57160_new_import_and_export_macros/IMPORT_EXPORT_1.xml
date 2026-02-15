@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.1.2/MA.xsd" major_vers="3" minor_vers="1" stream_vers="2">
+	<Info datetime="2017-02-13T21:06:55" showfile="blackhawks 1-28-17 after sc" />
+	<Macro index="23" name="EXPORT MACRO">
+		<Macroline index="0">
+			<text>SelectDrive (WHICH DRIVE, ME LORD? -1ST USB IS 4-)</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>Export (WHAT SHALL I EXPORT, MASTER?) (&quot;WHAT SHALL I CALL IT, ME LORD?&quot;)</text>
+		</Macroline>
+	</Macro>
+	<Macro index="24" name="IMPORT MACRO">
+		<Macroline index="0">
+			<text>SelectDrive (WHICH DRIVE ME LORD?)</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>Import (&quot;YOUR FILE NAME, MASTER?&quot;) At (WHERE SHALL I PUT IT, ME LORD?)</text>
+		</Macroline>
+	</Macro>
+</MA>

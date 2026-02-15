@@ -3,6 +3,14 @@
   "author": "Mclovin88",
   "post_date": null,
   "post_text": "December 15, 2015 at 8:50 PM#1Hello,I am looking to create a macro that will ask me for input on A) the number of cues to make, and B) what to store into those cues.The reason for this macro is to create simple cue stacks for Media programming to go through my video clips in order. For example:I have a folder of 60 \"images\" that I want to create a sequence stack for with 60 cues, each cue will have 1 of the images just advanced by one each cue i.e.. Cue 1, clip 1... cue 60 clip 60.I believe the conditions I would need would be (how many cues?) and (What Clip?) Thru (What Clip?) and (What bank?) but I can't seem to think of the best way to auto record cues stepping up by one.Who knows, maybe this is impossible?Thanks for the help!",
+  "posts": [
+    {
+      "author": "Mclovin88",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 15, 2015 at 8:50 PM#1Hello,I am looking to create a macro that will ask me for input on A) the number of cues to make, and B) what to store into those cues.The reason for this macro is to create simple cue stacks for Media programming to go through my video clips in order. For example:I have a folder of 60 \"images\" that I want to create a sequence stack for with 60 cues, each cue will have 1 of the images just advanced by one each cue i.e.. Cue 1, clip 1... cue 60 clip 60.I believe the conditions I would need would be (how many cues?) and (What Clip?) Thru (What Clip?) and (What bank?) but I can't seem to think of the best way to auto record cues stepping up by one.Who knows, maybe this is impossible?Thanks for the help!"
+    }
+  ],
   "replies": 0,
   "thread_id": "50263",
   "title": "Create Cue Stack with offset Macro",

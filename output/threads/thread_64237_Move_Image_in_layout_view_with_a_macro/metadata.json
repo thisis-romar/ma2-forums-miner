@@ -3,6 +3,20 @@
   "author": "Lowkeys",
   "post_date": null,
   "post_text": "July 8, 2019 at 2:44 AM#1Hey guys,Is it possible to move an image in layout view by way of macro? Been trying variances on this syntax:Assign Image 56 Layout 1 /x=18.3 /y=24Thanks!",
+  "posts": [
+    {
+      "author": "Lowkeys",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 8, 2019 at 2:44 AM#1Hey guys,Is it possible to move an image in layout view by way of macro? Been trying variances on this syntax:Assign Image 56 Layout 1 /x=18.3 /y=24Thanks!"
+    },
+    {
+      "author": "Aart24",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 22, 2019 at 8:22 AM#2Interesting question. I don´t know if it is possible. I would like to if it is possible to alter any parameter (position, color, etc.) of a layout item using a macro..."
+    }
+  ],
   "replies": 0,
   "thread_id": "64237",
   "title": "Move Image in layout view with a macro",

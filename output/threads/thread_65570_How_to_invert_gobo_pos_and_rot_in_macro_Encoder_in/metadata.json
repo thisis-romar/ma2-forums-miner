@@ -3,6 +3,32 @@
   "author": "kkaji",
   "post_date": null,
   "post_text": "April 15, 2020 at 2:00 AM#1Please tell me.  How to invert gobo pos and rot in macro?  \"Assign fixture (id) / gobo_posEnc invert = on\" Encoder invert error",
+  "posts": [
+    {
+      "author": "kkaji",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 15, 2020 at 2:00 AM#1Please tell me.  How to invert gobo pos and rot in macro?  \"Assign fixture (id) / gobo_posEnc invert = on\" Encoder invert error"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 15, 2020 at 2:35 PM#2I believe you can only invert the encoder wheels for pan and tilt (as displayed in the patch)."
+    },
+    {
+      "author": "kkaji",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 15, 2020 at 8:38 PM#3Thank you, isn't it possible to have a macro that inverts attributes other than position from the edit fixture?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 16, 2020 at 1:45 AM#4You can invert the attribute, but this is dmx invert, not encoder invert.Assign Fixture x Attribute \"name\" /invert=onMake sure you're using the libraryname not the screenname. \"List Attribute\" to find the library name."
+    }
+  ],
   "replies": 0,
   "thread_id": "65570",
   "title": "How to invert gobo pos and rot in macro?  Encoder invert",

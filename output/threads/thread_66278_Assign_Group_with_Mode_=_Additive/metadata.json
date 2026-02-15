@@ -3,6 +3,26 @@
   "author": "johnF",
   "post_date": null,
   "post_text": "December 23, 2020 at 11:57 PM#1I'm sure this is simple, but I've searched and can't find the syntax.I'm assigning a group via \"Assign Group 5 At Executor 10.2\" and I want to specify the Mode as Additive - by default it's set to Positive.Thanks!",
+  "posts": [
+    {
+      "author": "johnF",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 23, 2020 at 11:57 PM#1I'm sure this is simple, but I've searched and can't find the syntax.I'm assigning a group via \"Assign Group 5 At Executor 10.2\" and I want to specify the Mode as Additive - by default it's set to Positive.Thanks!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 24, 2020 at 10:27 PM#2after assigning the group to the executor, you change the mode of the executor via:Assign Executor 10.2 /Mode=Additive"
+    },
+    {
+      "author": "johnF",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 25, 2020 at 3:26 PM#3Just tested -- works great!  <curtsey> -- thank you so much!I was close purely by random attempts.  I'd added \"Mode = Additive\" to the end but the interpreter was changing \"Mode\" to \"Model\" ([Oops] to the rescue).  Also tried \"/m=additive\", \"/m=3\", \"/mode=3\", etc.  Your help is awesome!By the way, is this in the manual and if so can you point me to it?  I searched for \"mode\" and \"additive\", read the \"Group masters\" section and went through the \"Command Syntax and Keywords\" but never saw it or missed it. <shrug> In \"Executor Keyword\" (in \"Command Syntax and Keywords\") I see \"Assign Executor [ID] /[Parameter] = [Parameter Value]\" but \"Mode\" isn't listed.At any rate, thanks again on behalf of me, my head, and the wall I was banging it against!"
+    }
+  ],
   "replies": 0,
   "thread_id": "66278",
   "title": "Assign Group with Mode = Additive",

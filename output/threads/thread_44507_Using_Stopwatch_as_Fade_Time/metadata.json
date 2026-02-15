@@ -2,15 +2,90 @@
   "assets": [
     {
       "checksum": "sha256:7ae6d796785ffc3e5d4d41ea056f8358bd584cfc367b1b9d3598fe2fa321353d",
-      "download_count": 171,
+      "download_count": 181,
       "filename": "Cue Fade Timer.xml",
+      "post_number": 1,
       "size": 852,
       "url": "https://forum.malighting.com/file-download/3556/"
     }
   ],
   "author": "martyuk",
   "post_date": null,
-  "post_text": "December 4, 2014 at 11:03 PM#1Been working at a venue on a show for a few weeks and talking to one of the in-house Lighting Designer/Programmers and he was saying the newer versions of software that you can use the stopwatch in the console to time how long a fade takes, and then use that timer and assign the value as the fade time for the cue.We had a look into it, and found that whilst you can do that, you would have to manually start timer, press go, stop timer, and then assign the value back to the cue.  Had a look into the pre-defined macros aswell, and there isn't anything in there either that does this.So, having a bit of time around shows we decided to each have a crack at making a macro to do it, and came up with the following.  It works for the selected sequence but I am sure you could adapt it to ask for which sequence you wanted to run it on):In the Edit Macro Window:Line 1: Store Timer 555 \"Fade Timer\"  - FOLLOWLine 2: Go Timer 555                       - FOLLOWLine 3: Go                                     - GOLine 4: Toggle Timer 555                  - FOLLOWLine 5: Assign Fade $Timer555 Cue     - FOLLOWLine 6: Off Timer 555Timer number can be anything but wanted to keep it away from anything else you might be using. You can use the locked system stopwatch aswell by using Timer number as 1.On the first press of the Macro button (I have it assigned to a User Button under screen 1) it creates the timer (if it's already there then it just seems to skip this and doesn't throw an error), starts the timer and presses \"Go\" to move into the next cue.The second press of the Macro button will then Pause the timer (toggle from running to paused), and then write that fade time into the cue you've just transitioned into.  It then finally turns the timer off (resets it back to '0') for the next time you want to use it.Might be useful for people who need to get fades a precise time with music, or a person walking across stage where a moving light tracks them (assuming they walk at the same speed every day - which they usually don't!)Thanks to Jeff @ NCFR for looking at it with me and planting the idea that it could be done!  I've uploaded the xml file that can be imported to the console aswell.Hope this helps someone else!MartyFilesCue Fade Timer.xml852 Byte – 171 Downloads",
+  "post_text": "December 4, 2014 at 11:03 PM#1Been working at a venue on a show for a few weeks and talking to one of the in-house Lighting Designer/Programmers and he was saying the newer versions of software that you can use the stopwatch in the console to time how long a fade takes, and then use that timer and assign the value as the fade time for the cue.We had a look into it, and found that whilst you can do that, you would have to manually start timer, press go, stop timer, and then assign the value back to the cue.  Had a look into the pre-defined macros aswell, and there isn't anything in there either that does this.So, having a bit of time around shows we decided to each have a crack at making a macro to do it, and came up with the following.  It works for the selected sequence but I am sure you could adapt it to ask for which sequence you wanted to run it on):In the Edit Macro Window:Line 1: Store Timer 555 \"Fade Timer\"  - FOLLOWLine 2: Go Timer 555                       - FOLLOWLine 3: Go                                     - GOLine 4: Toggle Timer 555                  - FOLLOWLine 5: Assign Fade $Timer555 Cue     - FOLLOWLine 6: Off Timer 555Timer number can be anything but wanted to keep it away from anything else you might be using. You can use the locked system stopwatch aswell by using Timer number as 1.On the first press of the Macro button (I have it assigned to a User Button under screen 1) it creates the timer (if it's already there then it just seems to skip this and doesn't throw an error), starts the timer and presses \"Go\" to move into the next cue.The second press of the Macro button will then Pause the timer (toggle from running to paused), and then write that fade time into the cue you've just transitioned into.  It then finally turns the timer off (resets it back to '0') for the next time you want to use it.Might be useful for people who need to get fades a precise time with music, or a person walking across stage where a moving light tracks them (assuming they walk at the same speed every day - which they usually don't!)Thanks to Jeff @ NCFR for looking at it with me and planting the idea that it could be done!  I've uploaded the xml file that can be imported to the console aswell.Hope this helps someone else!MartyFilesCue Fade Timer.xml852 Byte – 181 Downloads",
+  "posts": [
+    {
+      "author": "martyuk",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 4, 2014 at 11:03 PM#1Been working at a venue on a show for a few weeks and talking to one of the in-house Lighting Designer/Programmers and he was saying the newer versions of software that you can use the stopwatch in the console to time how long a fade takes, and then use that timer and assign the value as the fade time for the cue.We had a look into it, and found that whilst you can do that, you would have to manually start timer, press go, stop timer, and then assign the value back to the cue.  Had a look into the pre-defined macros aswell, and there isn't anything in there either that does this.So, having a bit of time around shows we decided to each have a crack at making a macro to do it, and came up with the following.  It works for the selected sequence but I am sure you could adapt it to ask for which sequence you wanted to run it on):In the Edit Macro Window:Line 1: Store Timer 555 \"Fade Timer\"  - FOLLOWLine 2: Go Timer 555                       - FOLLOWLine 3: Go                                     - GOLine 4: Toggle Timer 555                  - FOLLOWLine 5: Assign Fade $Timer555 Cue     - FOLLOWLine 6: Off Timer 555Timer number can be anything but wanted to keep it away from anything else you might be using. You can use the locked system stopwatch aswell by using Timer number as 1.On the first press of the Macro button (I have it assigned to a User Button under screen 1) it creates the timer (if it's already there then it just seems to skip this and doesn't throw an error), starts the timer and presses \"Go\" to move into the next cue.The second press of the Macro button will then Pause the timer (toggle from running to paused), and then write that fade time into the cue you've just transitioned into.  It then finally turns the timer off (resets it back to '0') for the next time you want to use it.Might be useful for people who need to get fades a precise time with music, or a person walking across stage where a moving light tracks them (assuming they walk at the same speed every day - which they usually don't!)Thanks to Jeff @ NCFR for looking at it with me and planting the idea that it could be done!  I've uploaded the xml file that can be imported to the console aswell.Hope this helps someone else!MartyFilesCue Fade Timer.xml852 Byte – 181 Downloads"
+    },
+    {
+      "author": "Svartrose",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 12, 2014 at 9:47 AM#2Nice!How is $timer555 created?I'm trying to understand how this works but I can't figure out how that var is created and can't see it with ListVar.(I''m using version 3.0.0.5)EDIT: already found it in the release notes. Nice feature!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 13, 2014 at 2:45 AM#3$timerXis a system/virtual variableunless you have set this variable manually, referring to $timerXwill return the value (time) of Timer X of the Timer Pool- in this case, the time of Timer 555, which is created in macroline 1"
+    },
+    {
+      "author": "Chris.lim",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "January 15, 2015 at 3:57 PM#4MacroAssign Fade $timer1 cue (what cue ??)This way when the timer run you just have to click the macro at anytimeand u can set fade time for any cue numberWhat I need is to be able to set the trig time for any cue but not able to get it working"
+    },
+    {
+      "author": "jfarrow",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "January 15, 2015 at 9:27 PM#5TryAssign cue (what cue ??) Fade $timer1"
+    },
+    {
+      "author": "martyuk",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "March 2, 2015 at 4:58 PM#6I would have to have a look at it again as I haven't used the console since I played around with this!I also didn't know there had been responses - I need to find out how to make sure the forum notifies me when there has been replies!The way the initial macro is set up is that it works on the current selected cuelist - I would need to try it, but you could probably use the  Assign Exec (number) Cue (number) Fade $timer1 to then assign that time to any cuelist.The reason why there isn't a cue number in the original macro is because when you don't put a cue number in, then it assigns the time to the cue which is currently being played back.The syntax that Jeff mentioned in the previous post should work.  I had wondered if there was a way for the console to generate a dialogue box where you then input the cue number you want, and then it saves the $timerX value to the cue you specifiy, but didn't manage to get that far... maybe over the next couple of weeks when I'm back in front of a console I can have a play about with it again..."
+    },
+    {
+      "author": "Akjems",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "April 23, 2015 at 2:31 PM#7HiI really like this macro.I tried to modify it so that I could enter trigtime for a cue. But I could not find the right \"word\". I have tried \"time\" and \"trigtime\" instead of fade in line 5 but it does not work. And I also guess that instead of the time entered in the cue that I started in, the value should be entered in the cue that I end in.Does anybody know the magic word?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "April 24, 2015 at 12:06 AM#8there is no dedicated keyword for trigtime (as there is for fade)so you will need to use generic Assign syntax, /property=valueAssign Cue /trig=time /trigtime=$timer555"
+    },
+    {
+      "author": "Akjems",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "April 24, 2015 at 8:10 AM#9Thanks a million Glad. That has been on my wishlist for a long time!"
+    },
+    {
+      "author": "Thedge",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "May 1, 2015 at 9:43 AM#10To generate a dialog box the command is : SetVar $variable=( \"question\" )But I don't really understand the reason or the difference of this macro compare to EXEC TIME ? Cause there you can chose the fade time for the next cue too !?I'm wondering which is more interesting here, I might don't really understand the right goal of it !"
+    },
+    {
+      "author": "martyuk",
+      "post_date": null,
+      "post_number": 11,
+      "post_text": "May 20, 2015 at 12:58 PM#11Hi Again,Sorry - I am not regularly on here - I have the option set to follow this topic, but I still don't seem to be getting any notifications when someone has replied!  I'm going to take a look at my user settings on this forum to see if I've missed something!Thedge- I created this more for a use during a live situation.  Say you have a performer who is DSC and then at a particular moment they move to DSR, and you want the lighting to track the movement (could be used for anything though like a set piece flying in that you want to track, or a sweep that you want timed precisely to music etc).With this macro, it the first press of the button will trigger the 'go' on the selected cuelist, and set the timer running.  If you press the button again (say when the performer has reached their next mark, the set piece is in position, or the music has ended) then it will read the exact time taken from the timer and store that as your fade time.Obviously this assumes that your performer moves at roughly the same speed every day, or your flying piece is the same speed, but I've found it useful a few times during rehearsals to get a more exact fade time than having to try and guess how many 1/10ths of a second I need to add to get it right.I am not sure how you would do this with an exec time?In theory it could be used for delay times, or any other parameter that you can assign a time to.  Thanks for replying on how to create a dialogue box.Marty"
+    },
+    {
+      "author": "martyuk",
+      "post_date": null,
+      "post_number": 12,
+      "post_text": "May 20, 2015 at 1:01 PM#12Hi Anders,Sorry I haven't replied before now - I haven't been getting notifications when there has been a reply to the post.I am pleased that the macro is useful for you - and I notice that glad has given you the syntax for getting the timer to assign as a trigger time.Regards,Martin"
+    }
+  ],
   "replies": 0,
   "thread_id": "44507",
   "title": "Using Stopwatch as Fade Time",

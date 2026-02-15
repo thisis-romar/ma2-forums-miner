@@ -3,6 +3,26 @@
   "author": "Duplicate jbboutte",
   "post_date": null,
   "post_text": "March 25, 2019 at 9:28 PM#1Hi !I've recorded a timecode, assign to a sequence.then I copied the sequence to another one to work on it because the opérator need the desk.Now, I'm trying to link the new one one the original timecode.It is possible ?See you !",
+  "posts": [
+    {
+      "author": "Duplicate jbboutte",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 25, 2019 at 9:28 PM#1Hi !I've recorded a timecode, assign to a sequence.then I copied the sequence to another one to work on it because the opérator need the desk.Now, I'm trying to link the new one one the original timecode.It is possible ?See you !"
+    },
+    {
+      "author": "bullock",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 25, 2019 at 11:03 PM#2Assuming you have built TCs in the pool, rather than in Seq Assign, open your TC in the editor, click on the relevant Exec 1.x.x, then Track Functions, Change Exec/Fader and select the new sequence"
+    },
+    {
+      "author": "Duplicate jbboutte",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 26, 2019 at 5:34 PM#3Brilliant Bullock !It was what I looking for !Thanks !"
+    }
+  ],
   "replies": 0,
   "thread_id": "63648",
   "title": "Assign timecode to another sequence",

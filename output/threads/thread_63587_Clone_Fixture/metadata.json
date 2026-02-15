@@ -3,6 +3,26 @@
   "author": "Marco_Dias",
   "post_date": null,
   "post_text": "March 15, 2019 at 5:42 PM#1Hi,I want to clone fixture using groups, but actually want exclude group cloning by itself.[Clone Group A At Group B+C+D+E /merge /noconfirm]of course the reference group A will be updated with all the A+B+C+D+E, and this is what i want ti avoid.I want cloning everything expect groups.There is any command to filter like Cloning-GUI where you can chose \"NO GROUPS\"?Any clue?Thank You!",
+  "posts": [
+    {
+      "author": "Marco_Dias",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 15, 2019 at 5:42 PM#1Hi,I want to clone fixture using groups, but actually want exclude group cloning by itself.[Clone Group A At Group B+C+D+E /merge /noconfirm]of course the reference group A will be updated with all the A+B+C+D+E, and this is what i want ti avoid.I want cloning everything expect groups.There is any command to filter like Cloning-GUI where you can chose \"NO GROUPS\"?Any clue?Thank You!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 16, 2019 at 11:33 AM#2if you are not already selectively using the lock functionality, the easiest solution would probably be to lock/unlock all groupsCodeLock Group *Clone ........Unlock Group *otherwise you can do filtered cloning for all objects apart from groupsCodeClone ........ If Preset *.*Clone ........ If Sequence *etc"
+    },
+    {
+      "author": "Marco_Dias",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 17, 2019 at 10:10 AM#3Hi,The lock function will make the trick.Thank you!MD"
+    }
+  ],
   "replies": 0,
   "thread_id": "63587",
   "title": "Clone Fixture",

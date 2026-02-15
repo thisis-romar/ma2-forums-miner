@@ -3,6 +3,38 @@
   "author": "josvanlogten",
   "post_date": null,
   "post_text": "June 19, 2015 at 6:23 PM#1hello everyone!At first, sorry for my bad english, i'm a dutchieMy question is: how can i write a macro that label a cue name in a sequence?Jos van Logten",
+  "posts": [
+    {
+      "author": "josvanlogten",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 19, 2015 at 6:23 PM#1hello everyone!At first, sorry for my bad english, i'm a dutchieMy question is: how can i write a macro that label a cue name in a sequence?Jos van Logten"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 20, 2015 at 2:03 PM#2Try this: Label Sequence X  Cue Y (\"Name of the cue?\")X and Y are the numbers for sequence and cue numberWhen hitting the macro a popup will open to set the name of the cue"
+    },
+    {
+      "author": "josvanlogten",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "June 20, 2015 at 7:43 PM#3Thank you!Ik heb weer een vraag voor je bedacht mark! Is het mogelijk om met een macro views te maken? en dan bedoel ik niet om ze op te slaan, maar om ze echt te maken. Ik hoor het graag!Met vriendelijke groet,Jos van Logten"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "June 22, 2015 at 2:28 PM#4Since this is an international group we prefer to write the whole forum in English! There fore I switch back to EnglishIn conjunction to your question:I don't think its possible to create views by macro, what kind of views would you like to create?Maybe by a LUA Plugin but that's something I'm unfamiliar with."
+    },
+    {
+      "author": "HillaryKnox",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "October 7, 2015 at 7:32 PM#5Label @ <Please> will pop up a box for you to label the current cue of the currently selected Executor. If you're not in a cue in the currently selected Executor, it will label the Sequence assigned to the currently selected Executor."
+    }
+  ],
   "replies": 0,
   "thread_id": "47346",
   "title": "macro to label a cue name",

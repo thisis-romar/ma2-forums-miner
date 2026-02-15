@@ -3,6 +3,38 @@
   "author": "Ross.bristo",
   "post_date": null,
   "post_text": "October 8, 2016 at 11:52 AM#1Hi AllI've just taken over programming a show with timecode and I have a macro that when run will Off Timecode, runs a fader that is patched to the frame attribute of the video layer and then sets it at the current timecode point and therefore at the current frame point. The reasons for this are a little mind boggling and the function was originally programmed by someone else in the shows previous life - originally programmed on 3.1(I think) and I'm on 3.2.2.3.The macro is:-Off TimecodeFader 12 at 0%Fader 12 at 50%Go Timecode $currenttimecodeEverything runs as expected until the last line, what consistently happens is it will Go on the wrong timecode. For example, we are playing and have selected \"Timecode 2\" and when I run the macro in the command line I can see that it says \"Go Timecode 1\"; so it jumps back in to the wrong timecode and causes issues. It doesn't always jump back, if we're sitting in Timecode 3 it'll jump forward to timecode 4 and when we're in timecode 4 it doesn't jump. The same results happen when i run the commands manually in the cmd line.What is the variable $currenttimecodeactuallydoing and where is it getting its data from?ThanksRoss",
+  "posts": [
+    {
+      "author": "Ross.bristo",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 8, 2016 at 11:52 AM#1Hi AllI've just taken over programming a show with timecode and I have a macro that when run will Off Timecode, runs a fader that is patched to the frame attribute of the video layer and then sets it at the current timecode point and therefore at the current frame point. The reasons for this are a little mind boggling and the function was originally programmed by someone else in the shows previous life - originally programmed on 3.1(I think) and I'm on 3.2.2.3.The macro is:-Off TimecodeFader 12 at 0%Fader 12 at 50%Go Timecode $currenttimecodeEverything runs as expected until the last line, what consistently happens is it will Go on the wrong timecode. For example, we are playing and have selected \"Timecode 2\" and when I run the macro in the command line I can see that it says \"Go Timecode 1\"; so it jumps back in to the wrong timecode and causes issues. It doesn't always jump back, if we're sitting in Timecode 3 it'll jump forward to timecode 4 and when we're in timecode 4 it doesn't jump. The same results happen when i run the commands manually in the cmd line.What is the variable $currenttimecodeactuallydoing and where is it getting its data from?ThanksRoss"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 8, 2016 at 12:58 PM#2there is no $currenttimecodeI can only assume that the previous programmer selected timecode, not via pool or commandline, but via macros, which also would create and set the variable $currenttimecode, when selecting the timecodeCodeSetvar $currenttimecode=1Select Timecode $currenttimecodeCodeSetvar $currenttimecode=2Select Timecode $currenttimecode"
+    },
+    {
+      "author": "Ross.bristo",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 21, 2016 at 3:30 PM#3Hi GladSorry for the delay in replying. Thank you for clearing that up, I've never used SetUserVar but it all makes a lot more sense and i've been able to figureout out the show file.On that note I have another question about SetUserVar. In my show file I have macro's that set user var's which work great however when I run these on the Lite they don't set on the OnPC (same session, user etc.). So for example if on the Lite I run a macro to SetUserVar $currenttimecode and then the user of the OnPC runs a macro that is dependant on $currenttimecode it won't have that variable unless the OnPC user runs the first macro and sets the user var, which isn't ideal. Everything works perfectly when I run from the Lite, it's just the OnPC that is causing issues.Would RemoteCommand be a possible solution here?Am I using this incorrectly or is there a work around to ensure that when I set a user var on the Lite the var is on the OnPC too.ThanksRoss"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 21, 2016 at 9:36 PM#4SetUservaris will create local userspecific variablesuseSetVarif you want the variable to be global"
+    },
+    {
+      "author": "Ross.bristo",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "October 25, 2016 at 4:10 PM#5Thanks very much!"
+    }
+  ],
   "replies": 0,
   "thread_id": "55389",
   "title": "$currenttimecode bug",

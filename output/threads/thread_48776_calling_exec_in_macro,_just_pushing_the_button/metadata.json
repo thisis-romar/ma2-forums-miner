@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:094fb508ee14f1b0b3eb1eb43dc895e495da55a103f2cdc3554956d823f814ab",
-      "download_count": 876,
+      "download_count": 885,
       "filename": "Executor Buttons.zip",
+      "post_number": 14,
       "size": 495925,
       "url": "https://forum.malighting.com/file-download/3782/"
     }
@@ -11,6 +12,116 @@
   "author": "Duplicate bentoylight",
   "post_date": null,
   "post_text": "September 13, 2015 at 9:06 PM#1Hi every bodyIs there a way to call exec in macro, not typing the number, but simply push one button ?I've tried with @ command, remembering i read a thing about it.But it doesn't workThanks and enjoy",
+  "posts": [
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 13, 2015 at 9:06 PM#1Hi every bodyIs there a way to call exec in macro, not typing the number, but simply push one button ?I've tried with @ command, remembering i read a thing about it.But it doesn't workThanks and enjoy"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 15, 2015 at 3:24 AM#2I'm not sure I understand what your goal is. Can you elaborate?"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 15, 2015 at 7:54 PM#3hiIwant, if i write a macro to i.e select an exec by a pop-up question, instead of having to write the number of the exec, just push the button of the exec, or the preset or anything else i ask for.Is that clearer ?Thanks"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 16, 2015 at 2:04 AM#4Yeah, so you were on the right track, the @ symbol is the way to go:\"Select @\" would put select into your command line where you could then tap an executor button"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "September 17, 2015 at 12:48 AM#5ThanksBut still searching...Do you know what is the keyword for \"selected executor\". I've tried that but doesn't work.What i want isassign @ /offtime = 3i've tried many different syntaxes but none got the matchIt works on effect as : Assign SpecialMaster \"speedmaster\".(Enter speedgroup number)  At Effect @as i just have to push the effect + please.But not with exec."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "September 17, 2015 at 1:11 AM#6you need the @-singn at the end of the syntaxCode[s][color=#FF0000]assign @ /offtime=3[/color][/s]assign /offtime=3 @--"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "September 17, 2015 at 8:44 AM#7Thanks Glad"
+    },
+    {
+      "author": "A319",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "September 19, 2015 at 10:29 PM#8I'm looking for something similar, but these solutions don't work for me...I would like to be able to run a macro which would ask me for multiple sequences, and then run it after pressing Please...Currently, I have it working like this: I execute a one-line macro: Go Sequence (seq?), then I enter the numbers of sequences I wish to run into the pop-up window (i.e. 12+55+101), followed by PLEASE.Is there a way to have this kind of macro which would allow the same procedure but instead of typing in the sequences numbers, I could just touch the sequence tiles I wish to run..."
+    },
+    {
+      "author": "Go-Button",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "September 19, 2015 at 11:16 PM#9This can easily be done by pressing and holding the Select key followed by as many executors you like. Press the main Go+ Button to execute them at once."
+    },
+    {
+      "author": "A319",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "September 20, 2015 at 12:15 AM#10Go-Button Wrote:-------------------------------------------------------> This can easily be done by pressing and holding> the Select key followed by as many executors you> like. Press the main Go+ Button to execute them at> once.Yes, but you can't use this method with sequences, and that's what I'm looking for..."
+    },
+    {
+      "author": "Go-Button",
+      "post_date": null,
+      "post_number": 11,
+      "post_text": "September 20, 2015 at 12:34 AM#11Ah okay, hope there is a way to do it. If not then this way would be an option."
+    },
+    {
+      "author": "A319",
+      "post_date": null,
+      "post_number": 12,
+      "post_text": "September 20, 2015 at 12:38 AM#12Go-Button Wrote:-------------------------------------------------------> Ah okay, hope there is a way to do it. If not then> this way would be an option.Uff, if you don't know a way, I'm not so optimistic...I'm trying to solve this for some time now, but the only way I found is by using the macro + manual seq number entry I described above...Thanks anyway!"
+    },
+    {
+      "author": "Go-Button",
+      "post_date": null,
+      "post_number": 13,
+      "post_text": "September 20, 2015 at 12:53 AM#13The sequence pool is normally not made for playback cues. Its mainly to organize your show and have a backup if you need an already deleted executor back. Of course you can playback directly out of this pool, but I think it is more complicated. I haven't did what you've request before. I hope there is an easy solution but actually I'm not sure."
+    },
+    {
+      "author": "Go-Button",
+      "post_date": null,
+      "post_number": 14,
+      "post_text": "September 22, 2015 at 10:01 AM#14I have tried different commands but haven't found an easy solution.What speaks against assigning all sequences to virtual executors?Use the command: Assign Sequence x Thru y at Executor a.b Thru a.cThis will assign all sequences at once, but single, to multiple executors.This could look like in the attached photo. So you can use the advantages of the normal playback control and additionally you can select an run as much cues you like together.I know that this is not exactly what you've requested but could be an easy solution. Hope this will help youFilesExecutor Buttons.zip495.93 kB – 885 Downloads"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 15,
+      "post_text": "September 22, 2015 at 7:07 PM#15have you tried using the SpecialMaster \"Exec Time\" set to manual?this should enable you to Go several sequences, without the cues being executed, then you can fade them all in by operating the ExecTime fader."
+    },
+    {
+      "author": "A319",
+      "post_date": null,
+      "post_number": 16,
+      "post_text": "September 24, 2015 at 11:54 AM#16glad Wrote:-------------------------------------------------------> have you tried using the SpecialMaster \"Exec Time\"> set to manual?>> this should enable you to Go several sequences,> without the cues being executed, then you can fade> them all in by operating the ExecTime fader.Interesting idea... Not exactly the solution I'm looking for, but it can be used..."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 17,
+      "post_text": "September 24, 2015 at 12:52 PM#17you could operate the operationof set.time fader via a macroe.g. to fade in all your sequences in 3 seconds, macro could go something like this (not tested)prepare for common go:CodeSpecialmaster *.\"exec time\" At 0 [follow]ManualXfade On Specialmaster *.\"exec time\" [go]push sequence tiles in a poolplaybackmode enabled sequence poolcontinue macro to fade inn all sequences:CodeSpecialmaster *.\"exec time\" At [color=#CC3300][b]10[/b][/color] Time 3   [wait 3.1]ManualXfade Off Specialmaster *.\"exec time\" [follow]Specialmaster *.\"exec time\" At 0[color=#FF0000]* Assumes 10 seconds is default/max set-time range[/color]"
+    },
+    {
+      "author": "A319",
+      "post_date": null,
+      "post_number": 18,
+      "post_text": "September 25, 2015 at 8:28 PM#18Thanks GLAD...Your idea is very similar to the macro I wrote to do this. Gotta love MA!"
+    }
+  ],
   "replies": 0,
   "thread_id": "48776",
   "title": "calling exec in macro, just pushing the button",

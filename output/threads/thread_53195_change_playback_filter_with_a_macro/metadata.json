@@ -3,6 +3,20 @@
   "author": "josvanlogten",
   "post_date": null,
   "post_text": "May 24, 2016 at 3:37 PM#1Is it possible to change a playback filter of a executor, with a macro? I can't find the syntax for this one.Thanks.",
+  "posts": [
+    {
+      "author": "josvanlogten",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 24, 2016 at 3:37 PM#1Is it possible to change a playback filter of a executor, with a macro? I can't find the syntax for this one.Thanks."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 24, 2016 at 4:12 PM#2Assign Filter / World x Exec y.z"
+    }
+  ],
   "replies": 0,
   "thread_id": "53195",
   "title": "change playback filter with a macro",

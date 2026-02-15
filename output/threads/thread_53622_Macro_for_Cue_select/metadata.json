@@ -3,6 +3,26 @@
   "author": "Rick",
   "post_date": null,
   "post_text": "June 16, 2016 at 6:13 PM#1Hi there,I have a cuelist with different color bumps in it (2part, 3part etc) i want to create a macro that can load the different colorbumps. but i can't find the right syntax to load these bumps. does anybody here knows the right syntax.thanks already!",
+  "posts": [
+    {
+      "author": "Rick",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 16, 2016 at 6:13 PM#1Hi there,I have a cuelist with different color bumps in it (2part, 3part etc) i want to create a macro that can load the different colorbumps. but i can't find the right syntax to load these bumps. does anybody here knows the right syntax.thanks already!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 16, 2016 at 6:27 PM#2CodeLoad Cue x Executor ymake sure to use a Temp button, to activate the loaded cue, and set restart-option to 'Current Cue' to keep the loaded bump"
+    },
+    {
+      "author": "Rick",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "June 16, 2016 at 6:28 PM#3Thanks man!"
+    }
+  ],
   "replies": 0,
   "thread_id": "53622",
   "title": "Macro for Cue select",

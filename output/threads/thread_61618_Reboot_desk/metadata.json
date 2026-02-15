@@ -3,6 +3,26 @@
   "author": "hatfab",
   "post_date": null,
   "post_text": "June 23, 2018 at 4:34 PM#1Hi, is there a keystroke to restart a GrandMA 2 without switching it off and on ?Thank you",
+  "posts": [
+    {
+      "author": "hatfab",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 23, 2018 at 4:34 PM#1Hi, is there a keystroke to restart a GrandMA 2 without switching it off and on ?Thank you"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 23, 2018 at 4:52 PM#2\"Reboot\" is a keyword which reboots the whole desk (like restarting your computer).\"Restart\" is a keyword which restarts the gMA2 application (like closing and opening a program on your computer)If the application has crashed and you're sitting in the Linux root, you can type \"reboot\" which works the same way, or \"autostart\" which reopens the gMA2 application."
+    },
+    {
+      "author": "hatfab",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "June 26, 2018 at 10:47 AM#3Thank you !"
+    }
+  ],
   "replies": 0,
   "thread_id": "61618",
   "title": "Reboot desk",

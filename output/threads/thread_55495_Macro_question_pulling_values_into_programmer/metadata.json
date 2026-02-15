@@ -3,6 +3,20 @@
   "author": "Fitz",
   "post_date": null,
   "post_text": "October 18, 2016 at 12:02 AM#1Hello, I have a macro that pulls all output of the console back into the programmer (fixture thru at fixture thru)What would the syntax be if I just wanted to pull specific attributes (from running cues) back into the programmer? For example dimmer values or position values?Thanks",
+  "posts": [
+    {
+      "author": "Fitz",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 18, 2016 at 12:02 AM#1Hello, I have a macro that pulls all output of the console back into the programmer (fixture thru at fixture thru)What would the syntax be if I just wanted to pull specific attributes (from running cues) back into the programmer? For example dimmer values or position values?Thanks"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 18, 2016 at 9:29 AM#2append a filtering IF syntax at the end:e.g.CodeFixture Thru At Fixture Thru If Attribute \"Dim\"Fixture Thru At Fixture Thru If PresetType \"Position\""
+    }
+  ],
   "replies": 0,
   "thread_id": "55495",
   "title": "Macro question: pulling values into programmer",

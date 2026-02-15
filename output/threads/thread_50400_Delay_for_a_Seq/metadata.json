@@ -3,6 +3,38 @@
   "author": "freakstar50",
   "post_date": null,
   "post_text": "December 26, 2015 at 11:36 PM#1Hey GuysI can't figure it outi want to make a macro that assign a delay time for 15 cue's in a Sequence its for the presettype colorThanks",
+  "posts": [
+    {
+      "author": "freakstar50",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 26, 2015 at 11:36 PM#1Hey GuysI can't figure it outi want to make a macro that assign a delay time for 15 cue's in a Sequence its for the presettype colorThanks"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 27, 2015 at 1:51 AM#2If you're thinking of the PresetType Timing columns in the Sequence Exec sheet, these can't yet be reached through the command line. However, you could use syntax to set iTime. Something like:[color=#66FF00]Presettype[/color] 4 [color=#66FF00]At Delay[/color] x[color=#66FF00]Store Cue[/color] y [color=#66FF00]Thru[/color] z /m"
+    },
+    {
+      "author": "freakstar50",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 27, 2015 at 4:22 AM#3Hey RyanIts more like this i want the delay for each cue to be the same so first cue presettype is color delay 2 thru 0 thru 2 and that for all the cue'sThanks"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "December 27, 2015 at 5:46 AM#4Same principle:1. Select fixtures2. Presettype 4 at delay x thru y thru x3. Store Cue Thru /merge"
+    },
+    {
+      "author": "freakstar50",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "December 28, 2015 at 12:14 AM#5Thanks allotYou made my day"
+    }
+  ],
   "replies": 0,
   "thread_id": "50400",
   "title": "Delay for a Seq",

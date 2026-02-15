@@ -3,6 +3,56 @@
   "author": "JG-Lightdesign",
   "post_date": null,
   "post_text": "May 5, 2018 at 1:11 PM#1How can i Build a Macro what change the \"Off Time\" in sequences? I dont find the Syntax for itThanks a Lot",
+  "posts": [
+    {
+      "author": "JG-Lightdesign",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 5, 2018 at 1:11 PM#1How can i Build a Macro what change the \"Off Time\" in sequences? I dont find the Syntax for itThanks a Lot"
+    },
+    {
+      "author": "Moe696",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 5, 2018 at 1:22 PM#2You have to assign the off time to the executor, not the sequence.Example:Assign Executor 1.11 /offtime=1"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 6, 2018 at 11:42 AM#3Do List Exec x.y or List Seq x to see all options and syntax in your command line feedback window."
+    },
+    {
+      "author": "JG-Lightdesign",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 6, 2018 at 2:42 PM#4Thanks"
+    },
+    {
+      "author": "cn.liupei@live.com",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "July 28, 2018 at 12:37 PM#5U Can try my macro<Macro index=\"1\" name=\"Set Off Time\"><Macroline index=\"0\"><text>SetVar $lse=$selectedexec</text></Macroline><Macroline index=\"1\"><text>Select Executor @</text></Macroline><Macroline index=\"2\"><text>SetVar $offtime (OffTime)</text></Macroline><Macroline index=\"3\"><text>Assign Executor $selectedexec /offtime=$offtime</text></Macroline><Macroline index=\"4\"><text>Select Executor $lse</text></Macroline></Macro>"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "August 5, 2018 at 5:13 PM#6Just create a macro with one line :assign /offtime=(\"off time ?\") @"
+    },
+    {
+      "author": "cn.liupei@live.com",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "August 6, 2018 at 2:42 AM#7thank you ，you macro is best"
+    },
+    {
+      "author": "cn.liupei@live.com",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "August 6, 2018 at 2:42 AM#8thank you ，you macro is best"
+    }
+  ],
   "replies": 0,
   "thread_id": "61299",
   "title": "Change Off Time in seq with macro",

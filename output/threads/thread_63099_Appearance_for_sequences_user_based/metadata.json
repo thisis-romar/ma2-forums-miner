@@ -3,6 +3,20 @@
   "author": "viennaloco",
   "post_date": null,
   "post_text": "January 9, 2019 at 10:51 AM#1Hey everyone, my name is Juan and its my first time here writing a topic.I work in sessions with other users in. After a couple of weeksof running a show the sequencepool is full and its kinda hard tofigure out which sequences are stored by me and which not.Is there any user based data stored in a sequence? I want to changethe appearance on the sequence, as soon as i stored it, to a certaincolor, based on the user i am logged in? Thanks, have a great day, Juan",
+  "posts": [
+    {
+      "author": "viennaloco",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 9, 2019 at 10:51 AM#1Hey everyone, my name is Juan and its my first time here writing a topic.I work in sessions with other users in. After a couple of weeksof running a show the sequencepool is full and its kinda hard tofigure out which sequences are stored by me and which not.Is there any user based data stored in a sequence? I want to changethe appearance on the sequence, as soon as i stored it, to a certaincolor, based on the user i am logged in? Thanks, have a great day, Juan"
+    },
+    {
+      "author": "zakkbeard",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 15, 2019 at 4:09 AM#2I'm sure there's a crazy complicated way of making that happen, but you're probably better off (I'm thinking the simplest way possible) assigning a number of sequence pool slots to each of your guys, and they only use sequences in their allotted slots:Sequence 1 thru 20 are for globals and house cuesSequence 21 thru 120 are for LD #1 (you)121 thru 220 for LD #2221 thru 320 for LD #3ad so on."
+    }
+  ],
   "replies": 0,
   "thread_id": "63099",
   "title": "Appearance for sequences user based",

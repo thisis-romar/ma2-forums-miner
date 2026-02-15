@@ -3,6 +3,32 @@
   "author": "omgstfu",
   "post_date": null,
   "post_text": "October 15, 2014 at 4:35 PM#1I have a bunch of songs I have programed and have added some fixtures that I want to quickly breeze through and change colors in the fixtures.I have created a macro to select the fixtures, bring them to full, but I can't figure out how to select a color palette via the macro. Could anyone help? For an example the color I want to change to is preset 4.1 and its name is RED if that matters.",
+  "posts": [
+    {
+      "author": "omgstfu",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 15, 2014 at 4:35 PM#1I have a bunch of songs I have programed and have added some fixtures that I want to quickly breeze through and change colors in the fixtures.I have created a macro to select the fixtures, bring them to full, but I can't figure out how to select a color palette via the macro. Could anyone help? For an example the color I want to change to is preset 4.1 and its name is RED if that matters."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 15, 2014 at 6:42 PM#2if you look at the commandline response window when pressing the color preset you should see the correct syntax to use:CodeAt Preset 4.1or you could doCodeAt Preset \"color\".\"red\""
+    },
+    {
+      "author": "omgstfu",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 15, 2014 at 7:35 PM#3Thanks I feel like I tried that already but obviously I hadn't because it worked! I had a command line feedback window created but when I press a preset nothing seems to show up. I figured out what was wrong though. It was because the command line feedback window was open on console 2 , and I was issuing the command with console 1 so nothing showed up. Got it working now. In the window is says \"SelFix Preset 4.1\" but you said \"At Preset 4.1\". Both work, is there any difference between the two? once again thanks so much you probably saved me a few hours of programming."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 15, 2014 at 7:46 PM#4pressing a preset-tile will act differently depending on your selection status:if no fixtures is selected, pressing the tile will select all fixtures which may use the preset:\"SelFix Preset 4.1\"however if you have some fixtures selected,  pressing the tile will apply the values to the current selection:\"At Preset 4.1\"."
+    }
+  ],
   "replies": 0,
   "thread_id": "43846",
   "title": "Macro to change color palette.",

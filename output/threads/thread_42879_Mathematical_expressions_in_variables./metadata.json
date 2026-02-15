@@ -3,6 +3,32 @@
   "author": "kinglevel",
   "post_date": null,
   "post_text": "August 7, 2014 at 2:56 PM#1YaoSoo, what i have seen, it is not possible yet to do math in variables?Or am i wrong?meow",
+  "posts": [
+    {
+      "author": "kinglevel",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 7, 2014 at 2:56 PM#1YaoSoo, what i have seen, it is not possible yet to do math in variables?Or am i wrong?meow"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 7, 2014 at 3:26 PM#2from version 3.0 you may do simple math via the AddVar/AddUserVar keywords"
+    },
+    {
+      "author": "kinglevel",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 8, 2014 at 4:01 PM#3ok, example?I tried to do something like setuservar $Sum = $a + $bResult was something like \"$a\", seem like it handles variables only as strings..meow"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "August 8, 2014 at 7:19 PM#4http://help.malighting.com/view/reference…AddUserVar.html"
+    }
+  ],
   "replies": 0,
   "thread_id": "42879",
   "title": "Mathematical expressions in variables.",

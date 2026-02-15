@@ -3,6 +3,20 @@
   "author": "mflte_mflight",
   "post_date": null,
   "post_text": "October 28, 2020 at 9:37 PM#1good lit!  does any friend know how I can zoom fit the layout by macro?what would be the syntax!",
+  "posts": [
+    {
+      "author": "mflte_mflight",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 28, 2020 at 9:37 PM#1good lit!  does any friend know how I can zoom fit the layout by macro?what would be the syntax!"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 29, 2020 at 9:25 AM#2HiYou can't interact with layout via command line.Except \"assign object x at layout y /x=a /y=b"
+    }
+  ],
   "replies": 0,
   "thread_id": "66180",
   "title": "zoom fit in the macro layout?",

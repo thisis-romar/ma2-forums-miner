@@ -3,6 +3,32 @@
   "author": "andre lima",
   "post_date": null,
   "post_text": "June 5, 2019 at 1:16 AM#1Hello friendsI created a macro to change the dmx address of the fixtures through Layout View, but I would like to insert an Offset line for when I need to use it.Example: My Par LEDs are 6 in 6 dmx channels.I would like to add these lines to address them from 10 to 10 channels for example without having to enter Setup to make this change.Does anyone have any idea how to do this?Thank you everyone's attention.",
+  "posts": [
+    {
+      "author": "andre lima",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 5, 2019 at 1:16 AM#1Hello friendsI created a macro to change the dmx address of the fixtures through Layout View, but I would like to insert an Offset line for when I need to use it.Example: My Par LEDs are 6 in 6 dmx channels.I would like to add these lines to address them from 10 to 10 channels for example without having to enter Setup to make this change.Does anyone have any idea how to do this?Thank you everyone's attention."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 9, 2019 at 6:35 PM#2Hitry something like that :Macro \"patch\"1. setvar $adr = (start addres ?)2. setvar $fixt = (first fixture?); setvar $nmb (how many fixtures?)3. sevar $offset = 104. assign dmx $adr fixture $fixt5. addvar $adr $offset6. addvar $fixt = 17. [$fixt<=$nmb] macro 1.\"patch\".4"
+    },
+    {
+      "author": "andre lima",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "June 13, 2019 at 1:11 AM#3Hello friend, I made the macro as you passed and it did not work.It just does a Multipatch with the first fixture I select, the other devices does not change the original address."
+    },
+    {
+      "author": "jensgulbrandsen",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "June 24, 2019 at 6:43 PM#4Assign Fixture 11  At Dmx 22.22 /ncThe manual says opposite but, this works.. I don't know why."
+    }
+  ],
   "replies": 0,
   "thread_id": "64051",
   "title": "Using Offset for DMX Address with Macro",

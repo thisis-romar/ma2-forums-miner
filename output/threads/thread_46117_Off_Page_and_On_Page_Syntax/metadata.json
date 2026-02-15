@@ -3,6 +3,44 @@
   "author": "Buzz313th",
   "post_date": null,
   "post_text": "April 6, 2015 at 8:00 PM#1Running an executor on page 1 and page 2....Codeoff page 2Will off only page 2 leaving running executors on page 1..  ButCodeOff page 1Will off all pages.Why does off page 1 kill all pages and not just selectively kill all exec on page 1?JB",
+  "posts": [
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 6, 2015 at 8:00 PM#1Running an executor on page 1 and page 2....Codeoff page 2Will off only page 2 leaving running executors on page 1..  ButCodeOff page 1Will off all pages.Why does off page 1 kill all pages and not just selectively kill all exec on page 1?JB"
+    },
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 6, 2015 at 8:08 PM#2After further messing around..   It seems that it is possible to selectively off any page in a string, but anytime you include page 1 into it, it globally offs all pages...Is this a bug or by design?JB"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 6, 2015 at 9:27 PM#31.) a Page has no on or off status, when applying the Off-command to a Page, the command is relayed to the executors of the page.2.) a Speedgroup has no on or off status, when applying the Off-command to a Speedgroup, the command is relayed to any executors using that speedgroup.I assume you have a speedgroup assigned to an executor on page 1, and that your executors on other pages are linked to that speedgroup, thus offing page 1 will off your sdpeedgroup which will off your other pages"
+    },
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 6, 2015 at 10:30 PM#4I am using theOff page \"x\" command to globally shut of executors, so I'm good with that, but my question is why does the syntax  \"off page 1\" shut off all executors on all pages when the the command \"Off page 2\" only shuts off page 2 leaving all other pages executors running if running before the command.So when I include page 1 in a macro to shut off executors it does so globally and not only specific to page 1.."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "April 6, 2015 at 10:44 PM#5do you have a speedgroup on page 1 or not?"
+    },
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "April 7, 2015 at 12:39 AM#6Sorry Glad...I was on the road when I replied the last time..  Just got home and fired up the MA and I see what your saying...  By globally shutting off all executors on page one which is my \"Fixes/Template\" page and contains my speedmaster for general tempo it also shuts off all sequences with that speedmaster assigned to it..   Easy fix was to be more selective and not include the speedmaster on page one in the page off macro...Thanks again...Your a tremendous help..JB"
+    }
+  ],
   "replies": 0,
   "thread_id": "46117",
   "title": "Off Page and On Page Syntax",

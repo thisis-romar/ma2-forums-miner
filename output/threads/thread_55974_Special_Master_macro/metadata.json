@@ -3,6 +3,20 @@
   "author": "TRexroat",
   "post_date": null,
   "post_text": "November 20, 2016 at 5:50 AM#1Hey guys,So I've figured out how to toggle, on, and off the special masters (I've set my special master 2.2 + 2.3 to be Program and Exec times). Wondering how I can set the time for each master within a macro?Thanks,T-Rex",
+  "posts": [
+    {
+      "author": "TRexroat",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 20, 2016 at 5:50 AM#1Hey guys,So I've figured out how to toggle, on, and off the special masters (I've set my special master 2.2 + 2.3 to be Program and Exec times). Wondering how I can set the time for each master within a macro?Thanks,T-Rex"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 20, 2016 at 11:19 AM#2e.g. setting both to 5 seconds:CodeSpecialMaster 2.2 + 2.3 At 5"
+    }
+  ],
   "replies": 0,
   "thread_id": "55974",
   "title": "Special Master macro",

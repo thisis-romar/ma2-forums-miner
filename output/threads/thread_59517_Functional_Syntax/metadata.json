@@ -3,6 +3,26 @@
   "author": "willybsm",
   "post_date": null,
   "post_text": "September 13, 2017 at 3:07 PM#1HiIs the following syntax functional ?Assign Root \"NetConfig\".\"Console\" /XLRA=12In the command line there is no error and if I do a test with List the modification has been taken into account but not in the section NetConfig or XLRA still remains on the universe 1?Thank you for your help",
+  "posts": [
+    {
+      "author": "willybsm",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 13, 2017 at 3:07 PM#1HiIs the following syntax functional ?Assign Root \"NetConfig\".\"Console\" /XLRA=12In the command line there is no error and if I do a test with List the modification has been taken into account but not in the section NetConfig or XLRA still remains on the universe 1?Thank you for your help"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 13, 2017 at 6:56 PM#2Yes this syntax is functional and is working as intended.The Root \"NetConfig\".\"Console\" object is the parent/folder of all defined consoles in the session.The properties of this object is used for any new childs (new consoles that are added to the console tab of the network configuration)If what you want to do is to change the XLRA properties of an actual existing console, you need to specifythatconsole.e.g.Assign Root \"NetConfig\".\"Console\".\"FOH\" /XLRA=12"
+    },
+    {
+      "author": "willybsm",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 14, 2017 at 5:17 AM#3I understand better. Thank you for your help"
+    }
+  ],
   "replies": 0,
   "thread_id": "59517",
   "title": "Functional Syntax",

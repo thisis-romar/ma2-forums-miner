@@ -3,6 +3,38 @@
   "author": "paulheijkens.com",
   "post_date": null,
   "post_text": "June 22, 2015 at 2:31 PM#1hey i am looking for the cmd to set IgorneExeTime in a  macroand how do a set a rate master on a cue list with a macrois not Assign SpecialMaster=Rate4.1 at Executor 1",
+  "posts": [
+    {
+      "author": "paulheijkens.com",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 22, 2015 at 2:31 PM#1hey i am looking for the cmd to set IgorneExeTime in a  macroand how do a set a rate master on a cue list with a macrois not Assign SpecialMaster=Rate4.1 at Executor 1"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 22, 2015 at 2:45 PM#2This isnotpossible in V3.0.0.5 but possible in V3.1.0.8:Assign Executor X.Y/IgnoreExecTime=OnFor the rate question try this:Assign Executor X.Y/Ratemaster=NumberSo in your case: Assign Executor 1/Ratemaster=1"
+    },
+    {
+      "author": "paulheijkens.com",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "June 22, 2015 at 5:04 PM#3Beste Mark,de ignore werk supermaar de rate master nietdit heb ik geprobeerdAssign Executor 1.1/Ratemaster=2Assign Executor 1.1/Ratemaster=4.2Assign Executor 1/Ratemaster=1maar helaas werk het nog niet ik draai de laatste software versie op een MA2 Light"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "June 22, 2015 at 6:15 PM#4Hi Paul,Since this is an international group we prefer to write the whole forum in English! There fore I switch back to EnglishGlad to hear the Ignore Executor Time command is working but strange that the ratemaster command isn't working for youI'am using software version 3.1.0.8 (The latest release on a OnPC system) and all the commands you described are working here exept this one: [color=#FF0000]Assign Executor 1.1/Ratemaster=4.2[/color] Than the selected ratemaster has become the first digit you gave in (number 4 in this case)Have a good look in the use of spaces, sometimes this messes up macros"
+    },
+    {
+      "author": "paulheijkens.com",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "June 22, 2015 at 7:52 PM#5Yes it is working now Thanks"
+    }
+  ],
   "replies": 0,
   "thread_id": "47414",
   "title": "macro cmd",

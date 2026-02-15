@@ -3,6 +3,20 @@
   "author": "JazzWalker",
   "post_date": null,
   "post_text": "January 6, 2020 at 1:53 AM#1Hi,I'm fairly new to MA. I was wondering if there was macro I could create to make an agenda for the next morning?In the morning we have to have some Midinotes trigger to bring down a projector screen and route the AMX patching. There is a macro for doing all of this and I have to make an agenda manually for when I want it to be fired. Annoyingly the days always change when it is needed so I can't go through and add them all. So it would be handy if I could create a macro to do it then I can just press it the night before.Cheers,Jazz",
+  "posts": [
+    {
+      "author": "JazzWalker",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 6, 2020 at 1:53 AM#1Hi,I'm fairly new to MA. I was wondering if there was macro I could create to make an agenda for the next morning?In the morning we have to have some Midinotes trigger to bring down a projector screen and route the AMX patching. There is a macro for doing all of this and I have to make an agenda manually for when I want it to be fired. Annoyingly the days always change when it is needed so I can't go through and add them all. So it would be handy if I could create a macro to do it then I can just press it the night before.Cheers,Jazz"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 6, 2020 at 11:30 AM#2I think the easiest solution for your scenario would be to manually create a Daily repeating Agenda item, which always runs a named macro every morning e.g.Macro \"RunMeTomorrowMorning\"this morning macro could relabel itself as the last line e.g.Label Macro \"RunMeTomorrowMorning\" \"DontRunMeAnymore\"Then in your macro to run at the evenings before, relabel the macro back:Label Macro \"DontRunMeAnymore\" \"RunMeTomorrowMorning\""
+    }
+  ],
   "replies": 0,
   "thread_id": "65121",
   "title": "Macro to create and Agenda for the next day",

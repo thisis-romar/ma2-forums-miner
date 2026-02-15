@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.0.0/MA.xsd" major_vers="3" minor_vers="0" stream_vers="0">
+	<Info datetime="2015-06-29T13:27:58" showfile="kitlbs_chainon" />
+	<Macro index="0" name="assign buttons en lots">
+		<Macroline index="0" delay="0.1">
+			<text>SetUserVar $button = (wich button ?)</text>
+			<info>choose the button</info>
+		</Macroline>
+		<Macroline index="1" delay="0.1">
+			<text>[$button==1] SetUserVar $button = &quot;ExecButton1&quot; [$button==2] SetUserVar $button = &quot;ExecButton2&quot; [$button==3] SetUserVar $button = &quot;ExecButton3&quot;</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Assign (which fonction ? ie : flash, go, toggle ...) $button (which executor / ie : 1.5, 1.1 thru 2.3 ........)</text>
+			<info>choose the fonction and range of exec</info>
+		</Macroline>
+	</Macro>
+</MA>

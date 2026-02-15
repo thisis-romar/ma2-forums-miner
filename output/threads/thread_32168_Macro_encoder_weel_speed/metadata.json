@@ -3,6 +3,26 @@
   "author": "PinceDeCrabe",
   "post_date": null,
   "post_text": "August 10, 2012 at 11:56 AM#1HiI am looking a macro to pass any encoder wheel in \"normal\" \"fine\" \"ultra\"?Thank you",
+  "posts": [
+    {
+      "author": "PinceDeCrabe",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 10, 2012 at 11:56 AM#1HiI am looking a macro to pass any encoder wheel in \"normal\" \"fine\" \"ultra\"?Thank you"
+    },
+    {
+      "author": "kinglevel",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 29, 2012 at 5:25 PM#2i would also want thismeow"
+    },
+    {
+      "author": "David Misakyan",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 21, 2017 at 8:26 AM#3assign attribute pan /encoderresolution=fineto change every attribute encoder resolution :assign attribute * /encoderresolution=fineto change current attribute:assign attribute $attribute /encoderresolution=fine"
+    }
+  ],
   "replies": 0,
   "thread_id": "32168",
   "title": "Macro encoder weel speed?",

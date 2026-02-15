@@ -3,6 +3,44 @@
   "author": "HillaryKnox",
   "post_date": null,
   "post_text": "January 22, 2016 at 6:06 PM#1Thinking of how I can create a macro to reboot various network devices. I have ~24 2 port nodes that require occasional rebooting and I don't want to have to look up the IP addresses every time. I was hoping to have a macro that contains a list of node numbers and associated IP addresses, so when I hit the macro it asks me what number node I want to reboot, then it reboots it. I just don't know the syntax for making the list and then accessing values in that list, if that makes any sense. (What I want to avoid is having an individual reboot macro for each node if possible)",
+  "posts": [
+    {
+      "author": "HillaryKnox",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 22, 2016 at 6:06 PM#1Thinking of how I can create a macro to reboot various network devices. I have ~24 2 port nodes that require occasional rebooting and I don't want to have to look up the IP addresses every time. I was hoping to have a macro that contains a list of node numbers and associated IP addresses, so when I hit the macro it asks me what number node I want to reboot, then it reboots it. I just don't know the syntax for making the list and then accessing values in that list, if that makes any sense. (What I want to avoid is having an individual reboot macro for each node if possible)"
+    },
+    {
+      "author": "khumphrey",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 25, 2016 at 7:31 PM#2Haven't tested this but a macro along these lines should work...Line 1: SetUserVar $nodenumber (Which device to reboot?)Line 2: [$nodenumber==1] Reboot 192.168.0.1 /noconfirmLine 3: [$nodenumber==2] Reboot 192.168.0.2 /noconfirmLine 4: [$nodenumber==3] Reboot 192.168.0.3 /noconfirmLine 5: [$nodenumber==4] Reboot 192.168.0.4 /noconfirmYou can continue from there. This should pop open a dialong asking for a number then compare that number on each line. When it finds a match it will send the reboot command to that IP.Good Luck,Kevin"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 26, 2016 at 2:18 AM#3How about this:Menu commandlineresponseCD \"netconfig\"CD 7ListReboot /nc (which line?)CD/Here you don't need to know IP addresses - just choose which line number."
+    },
+    {
+      "author": "HillaryKnox",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 4, 2016 at 8:18 PM#4That's pretty cool...but here's a question for you. Can the List command include an argument to sort by IP address? (Sort by name would work too - in this case it would be the same thing)"
+    },
+    {
+      "author": "HillaryKnox",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "February 4, 2016 at 8:43 PM#5Hey you know what's a fun thing? Not doing the cd/ at the end of that whole sequence and then looking at your command line prompt right before the show starts. You've been warned."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "February 4, 2016 at 9:49 PM#6Hahahaha. Yeah, I bet!If you're using this in the same network often, at some point while you're in that directory, just reorder the nodes (e.g [color=#66FF00]Move[/color] 2 [color=#66FF00]At[/color] 1) so that they're in the order you want?"
+    }
+  ],
   "replies": 0,
   "thread_id": "50716",
   "title": "Reboot Macro",

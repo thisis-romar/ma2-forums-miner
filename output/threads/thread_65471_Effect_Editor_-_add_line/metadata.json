@@ -3,6 +3,20 @@
   "author": "Duplicate haypro",
   "post_date": null,
   "post_text": "March 23, 2020 at 12:21 PM#1trying to create an effect, using a macroI found some interesting info here to manipulate effect settingshttps://support.actlighting.com/knowledgeBase/11662803but did not find any information in how to add a line using macros, in the effect editor.also, a second question.. is it possible to select a predefined effect using a macro? In the effect editor, this is a list you can pop up using the button \"Load Predefined\".",
+  "posts": [
+    {
+      "author": "Duplicate haypro",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 23, 2020 at 12:21 PM#1trying to create an effect, using a macroI found some interesting info here to manipulate effect settingshttps://support.actlighting.com/knowledgeBase/11662803but did not find any information in how to add a line using macros, in the effect editor.also, a second question.. is it possible to select a predefined effect using a macro? In the effect editor, this is a list you can pop up using the button \"Load Predefined\"."
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 23, 2020 at 2:18 PM#2you can use store effect 1.effect.line to create a new lineyou can also copy effect 1.effect.line thru line at 1.effect.newlinei've never seen 'load predefined' from the effect editor in the command line.what you can do instead is store an effect, assign a form to that effect, assign attributes to specific lines and more from the command line."
+    }
+  ],
   "replies": 0,
   "thread_id": "65471",
   "title": "Effect Editor - add line",

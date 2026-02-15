@@ -3,6 +3,26 @@
   "author": "XIaoLe",
   "post_date": null,
   "post_text": "November 26, 2020 at 5:33 PM#1The meaning of macro symbol such as = or $ \"\"   Thank you",
+  "posts": [
+    {
+      "author": "XIaoLe",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 26, 2020 at 5:33 PM#1The meaning of macro symbol such as = or $ \"\"   Thank you"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 30, 2020 at 6:03 PM#2$ denotes a variable.= are used to set variables.and \"\" are used to set or remove variables.see manual here"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 30, 2020 at 6:36 PM#3HiYou don't need = to set a variable : setvar $var = x is same as setvar $var xIn fact, = is nothing in gma2's command line syntax. It doesn't exist.You can just use it for readibility.\"string\" is to set a string : setvar $name \"my name\"\"\" can be used to delete a variable, but as = , it's useless.Setvar $name \"my name\", to set the var.Setvar $name       to delete itYou also can read thisSpecial charactersEnjoy"
+    }
+  ],
   "replies": 0,
   "thread_id": "66235",
   "title": "macro  symbol",

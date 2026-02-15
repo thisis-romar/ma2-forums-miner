@@ -3,6 +3,32 @@
   "author": "Hblightguy",
   "post_date": null,
   "post_text": "May 19, 2016 at 4:44 AM#1Is there a thread or manual on macro creation from the command line? I'm looking for a way to add lines to macros and edit the cmd in them at line.End goal is creating a macro that can auto write other macros.I.e auto create 6 macros that each assign a preset to a fixture.I can't seem to find the syntax anywhere.",
+  "posts": [
+    {
+      "author": "Hblightguy",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 19, 2016 at 4:44 AM#1Is there a thread or manual on macro creation from the command line? I'm looking for a way to add lines to macros and edit the cmd in them at line.End goal is creating a macro that can auto write other macros.I.e auto create 6 macros that each assign a preset to a fixture.I can't seem to find the syntax anywhere."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 19, 2016 at 3:19 PM#2There's no way through the regular command line toeditan existing line of a macro - only to write a new one. If you're looking for some general syntax options,this is a good resource(open link in new tab)."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 19, 2016 at 6:41 PM#3assign macro 1.mymacro.myline /cmd=\"my command\"Sometimes, you can also write every lines you'll need and then enable or disable it :assign macro 1.mymacro.myline /disabled=(yes or no)"
+    },
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 21, 2016 at 7:44 PM#4I had a go experimenting with creating macros with macros and this is what I found.You first need to store the macro alone...store macro 1.1.1Then you need to add the lines...store macro 1.1.1 thru 5Then you can edit the lines....assign macro 1.1.1 thru 5 /cmd=\"test text\"I could not figure out the macro to do all in one line, unless you seperate the command syntax with a semicolon.Interestingly enough, as Ryan mentioned there doesn't seem to be a way to edit a macro with a command line..  I tried the syntax \"delete macro 1.1.3\" and it did nothing, thinking I could delete an existing line and then just add it back to assign a different command line..   But it looks like you would need to delete the macro and start over.   Maybe its possible with LUA?JB"
+    }
+  ],
   "replies": 0,
   "thread_id": "53106",
   "title": "Macro Creation From Command line",

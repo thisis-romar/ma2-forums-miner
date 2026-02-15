@@ -3,6 +3,20 @@
   "author": "pan_ilford",
   "post_date": null,
   "post_text": "February 7, 2019 at 7:57 PM#1HelloI would like to switch two channels' dimmer levels through the whole sequence, so the patch could stay 1:1. Thank you",
+  "posts": [
+    {
+      "author": "pan_ilford",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 7, 2019 at 7:57 PM#1HelloI would like to switch two channels' dimmer levels through the whole sequence, so the patch could stay 1:1. Thank you"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 7, 2019 at 9:20 PM#2you cannot directly swap two channels. [color=#FF0000]A[/color] [color=#336600]B[/color] -> [color=#336600]A[/color] [color=#FF0000]B[/color]however if you use an extra new or existing unused channel you can do this with a 3 step operationAssuming the channels to switch is A & B, and the extra channel is C:[color=#FF0000]A[/color] [color=#336600]B[/color] CReplace Channel A With C-> A [color=#336600]B[/color] [color=#FF0000]C[/color]Replace Channel B With A-> [color=#336600]A[/color] B [color=#FF0000]C[/color]Replace Channel C With B-> [color=#336600]A[/color] [color=#FF0000]B[/color] C[color=#FF0000]A[/color] [color=#336600]B[/color] C -> [color=#336600]A[/color] [color=#FF0000]B[/color] C"
+    }
+  ],
   "replies": 0,
   "thread_id": "63332",
   "title": "Switching channels in a sequence",

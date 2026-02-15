@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:ba852cd7943f30fe3c688ede4f7adaa775cd3764c22f1df0d2eb4d904e70ef4b",
-      "download_count": 109,
+      "download_count": 118,
       "filename": "Loop.xml",
+      "post_number": 2,
       "size": 1705,
       "url": "https://forum.malighting.com/file-download/3590/"
     }
@@ -11,6 +12,38 @@
   "author": "MetalMaarten",
   "post_date": null,
   "post_text": "March 11, 2015 at 10:12 PM#1Hi all,Does anybody know how to create a loop in a macro with a counter that increases every run of the loop?I tried to use the \"with\" commando for this, but can't figure out what the syntax should be.setuservar $counter = 1with $counter = 1 thru 10 do -> other commands go here <-Thanks, Maarten",
+  "posts": [
+    {
+      "author": "MetalMaarten",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 11, 2015 at 10:12 PM#1Hi all,Does anybody know how to create a loop in a macro with a counter that increases every run of the loop?I tried to use the \"with\" commando for this, but can't figure out what the syntax should be.setuservar $counter = 1with $counter = 1 thru 10 do -> other commands go here <-Thanks, Maarten"
+    },
+    {
+      "author": "sebmdp",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 17, 2015 at 12:42 PM#2Maarten,Here's a loop macro.It loops for 10 rounds and then exits.Regards.S.D.FilesLoop.xml1.71 kB – 118 Downloads"
+    },
+    {
+      "author": "MetalMaarten",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 19, 2015 at 3:44 PM#3Thanks S.D.Great, I was looking for a way to reroute the macro to a line in the macro. I understand that is what the syntaxMacro 1.\"Loop\".4does. It will route back to line 4 in the macro called \"loop\". But why do you need to put1.there?Greetings,Maarten"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 19, 2015 at 5:57 PM#4the \"1\" is to indicate which macro-pool (Pool number 1, the first pool)http://help.malighting.com/view/reference…word_Macro.html"
+    },
+    {
+      "author": "MetalMaarten",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "March 31, 2015 at 4:46 PM#5Ah, yes. Now I understand. Thanks glad."
+    }
+  ],
   "replies": 0,
   "thread_id": "45736",
   "title": "Loop in macro",

@@ -3,6 +3,32 @@
   "author": "Maxlolo",
   "post_date": null,
   "post_text": "December 5, 2016 at 5:03 PM#1Hi there,I use a usb hub with 2 USB keys for save my shows ; did you think can i use a macro for doing this process :BackupUSB1 - Save asUSB2 - Save asAt this time i've try to dosaveshow to drive 1but is saving my show to internal with name (drive 1)Thanks in advance !",
+  "posts": [
+    {
+      "author": "Maxlolo",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 5, 2016 at 5:03 PM#1Hi there,I use a usb hub with 2 USB keys for save my shows ; did you think can i use a macro for doing this process :BackupUSB1 - Save asUSB2 - Save asAt this time i've try to dosaveshow to drive 1but is saving my show to internal with name (drive 1)Thanks in advance !"
+    },
+    {
+      "author": "Maxlolo",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 5, 2016 at 6:33 PM#2EDITSDSaveshowis working on last USB manually selectedhow to force to select drive 1 or 3 or 8 in the macro ?thx"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 5, 2016 at 6:39 PM#3check your commandline feedback window, after selecting drive and saving show via the backupmenu."
+    },
+    {
+      "author": "Maxlolo",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "December 6, 2016 at 10:17 AM#4Yes well done, thanks man"
+    }
+  ],
   "replies": 0,
   "thread_id": "56177",
   "title": "Backup to usb drive macro",

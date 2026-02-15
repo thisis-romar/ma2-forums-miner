@@ -3,6 +3,20 @@
   "author": "ceddylee",
   "post_date": null,
   "post_text": "February 22, 2020 at 11:22 AM#1I need help creating a macro that give me the option to turn on, turn off, or reset(quick off and on) a dimmer that is set up as stage power.I want the command to prompt me with which option I want to chose, 1, 2 or 3, and then it ask me which channels I want that selected option to happen to.",
+  "posts": [
+    {
+      "author": "ceddylee",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 22, 2020 at 11:22 AM#1I need help creating a macro that give me the option to turn on, turn off, or reset(quick off and on) a dimmer that is set up as stage power.I want the command to prompt me with which option I want to chose, 1, 2 or 3, and then it ask me which channels I want that selected option to happen to."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 22, 2020 at 12:46 PM#2Setuservar $answer = (\"which option to use\")Setuservar $channels = (\"which channels to use\")[$answer==1] Park Channel $channels At Full[$answer==2] Park Channel $channels At Zero[$answer==3] Park Channel $channels At Zero[$answer==3] Park Channel $channels At Fullput a small Wait on the second last line"
+    }
+  ],
   "replies": 0,
   "thread_id": "65323",
   "title": "Need help with a macro creation",

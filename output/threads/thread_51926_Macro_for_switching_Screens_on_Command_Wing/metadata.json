@@ -3,6 +3,32 @@
   "author": "mwchgma3",
   "post_date": null,
   "post_text": "March 18, 2016 at 8:54 AM#1ist there a way to create a macro, for switching the Screens on the GMA Command wing on PC.example. the Programm on PC is starting, Screen go to (command screen).id like to make a macro to Switch automatic to Screen 2 witch i can wirte in theStartup Line in Setup.Thanks",
+  "posts": [
+    {
+      "author": "mwchgma3",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 18, 2016 at 8:54 AM#1ist there a way to create a macro, for switching the Screens on the GMA Command wing on PC.example. the Programm on PC is starting, Screen go to (command screen).id like to make a macro to Switch automatic to Screen 2 witch i can wirte in theStartup Line in Setup.Thanks"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 18, 2016 at 9:26 PM#2no, there is no commandline-access to ONPC-specific features"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 19, 2016 at 6:35 PM#3desk will start with your last view if you save when you quit.Switch off the desk with screen 2"
+    },
+    {
+      "author": "mwchgma3",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 24, 2016 at 9:00 PM#4thanks for your answer."
+    }
+  ],
   "replies": 0,
   "thread_id": "51926",
   "title": "Macro for switching Screens on Command Wing",

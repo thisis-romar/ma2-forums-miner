@@ -3,6 +3,26 @@
   "author": "Taiwan-Jimmy",
   "post_date": null,
   "post_text": "August 21, 2017 at 6:48 PM#1How to create a macro for pan encoder invert \"on & off\" ?Try many times, but still not work.Hope to learn!!!",
+  "posts": [
+    {
+      "author": "Taiwan-Jimmy",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 21, 2017 at 6:48 PM#1How to create a macro for pan encoder invert \"on & off\" ?Try many times, but still not work.Hope to learn!!!"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 23, 2017 at 11:15 PM#2Hiassign fixture x.* /panenc.invert=0 or 1 (off=0 on=1)List fixture 2List fixture 2.*to see all options and syntax"
+    },
+    {
+      "author": "Taiwan-Jimmy",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 28, 2017 at 10:40 AM#3Thanks for share"
+    }
+  ],
   "replies": 0,
   "thread_id": "59319",
   "title": "How to create a macro for pan encoder invert \"on & off\" ?",

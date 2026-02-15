@@ -3,6 +3,20 @@
   "author": "SouPortugues",
   "post_date": null,
   "post_text": "June 13, 2016 at 10:00 PM#1Howdy-I'm trying to make a world that is \"active selection\", but dynamic, as in, I can change the selection.Perhaps this would be better served as a filter? Either way, I would like to be able to assign it to a sequence, just like you do any other normal world.",
+  "posts": [
+    {
+      "author": "SouPortugues",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 13, 2016 at 10:00 PM#1Howdy-I'm trying to make a world that is \"active selection\", but dynamic, as in, I can change the selection.Perhaps this would be better served as a filter? Either way, I would like to be able to assign it to a sequence, just like you do any other normal world."
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 3, 2016 at 10:59 AM#2You should than save the selection to a worldLine 1: fixture (x) thru (y); store World z/overwrite      FollowLine 2: select World z                                                 FollowLine 3: select World 1                                                Go            This gets you back to all fixtures/parameters in the show"
+    }
+  ],
   "replies": 0,
   "thread_id": "53580",
   "title": "Dynamic World for \"active selection\"",

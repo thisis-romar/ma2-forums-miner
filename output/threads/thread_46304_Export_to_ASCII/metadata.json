@@ -3,6 +3,20 @@
   "author": "da960572",
   "post_date": null,
   "post_text": "April 22, 2015 at 9:44 AM#1Hi,Is it possible to have a MACRO that could export MA fie to ASCII and save to USB stick.orWelcome any idea how to do that.Vincent2015/4/22",
+  "posts": [
+    {
+      "author": "da960572",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 22, 2015 at 9:44 AM#1Hi,Is it possible to have a MACRO that could export MA fie to ASCII and save to USB stick.orWelcome any idea how to do that.Vincent2015/4/22"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 23, 2015 at 11:54 PM#2this is not possible to do with macros.This could possibly be done by via an XSLT stylesheet (http://en.wikipedia.org/wiki/XSLT) that transforms the XML you may export from grandMA2 into a textfile according to the ASCII standard.The grandMA2 already uses such stylesheets during export to i.e. create human readable versions in HTML of exported Patch or SequencesYou shouldn't consider this route unless you are a highly skilled computer programmer with a lot of time to spare."
+    }
+  ],
   "replies": 0,
   "thread_id": "46304",
   "title": "Export to ASCII",

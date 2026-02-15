@@ -3,6 +3,20 @@
   "author": "HillaryKnox",
   "post_date": null,
   "post_text": "March 17, 2016 at 2:50 PM#1Is there a command line syntax to open the Cloning window?",
+  "posts": [
+    {
+      "author": "HillaryKnox",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 17, 2016 at 2:50 PM#1Is there a command line syntax to open the Cloning window?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 18, 2016 at 3:39 AM#2Not as far as I know, but if you do a clone through the command line without any filtering (i.e. without using If) then the menu will open with that selection in it. Does that help?"
+    }
+  ],
   "replies": 0,
   "thread_id": "51916",
   "title": "Open Cloning Window syntax?",

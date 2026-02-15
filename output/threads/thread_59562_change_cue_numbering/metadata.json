@@ -3,6 +3,26 @@
   "author": "willybsm",
   "post_date": null,
   "post_text": "September 22, 2017 at 4:35 AM#1HiI want to change the cue numbering of the executor select command line.I have to write badly, I have no error but no satisfactory result, my order:CD seq \"myseq\"Assign Cue 1 /Number=1 or Assign Cue 1 /Number=1 /widht=1Thank you for your track",
+  "posts": [
+    {
+      "author": "willybsm",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 22, 2017 at 4:35 AM#1HiI want to change the cue numbering of the executor select command line.I have to write badly, I have no error but no satisfactory result, my order:CD seq \"myseq\"Assign Cue 1 /Number=1 or Assign Cue 1 /Number=1 /widht=1Thank you for your track"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 22, 2017 at 7:53 PM#2Use \"Move\" to renumber cues via command line. TBH though, the renumbering dialog is probably gonna be a lot faster if you have lots of cues to move."
+    },
+    {
+      "author": "willybsm",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 23, 2017 at 4:38 AM#3I need to change the numbers by a Lua plugin.Move could be the solution but it does not necessarily change to integer number, 1, 2, 3 etc ...if i do eg move cue thru at cue 1 the numbers will be 1, 1.001, 1.002, 1.003 which is not suitable but I will dig into that path.Thank you Ryan"
+    }
+  ],
   "replies": 0,
   "thread_id": "59562",
   "title": "change cue numbering",

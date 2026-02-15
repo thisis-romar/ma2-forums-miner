@@ -3,6 +3,20 @@
   "author": "RonniBang",
   "post_date": null,
   "post_text": "January 15, 2021 at 1:39 PM#1Is the a way to edit an effect, let´s say a p/t effect live for busking.I want to change the wings in the effect from 0 to wings 2. I know the syntax Assign Effect X /wings= 2, but I want to change the pan to -2 and the tilt to +2.Is there away to do this with a cmd and store it in a cue?",
+  "posts": [
+    {
+      "author": "RonniBang",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 15, 2021 at 1:39 PM#1Is the a way to edit an effect, let´s say a p/t effect live for busking.I want to change the wings in the effect from 0 to wings 2. I know the syntax Assign Effect X /wings= 2, but I want to change the pan to -2 and the tilt to +2.Is there away to do this with a cmd and store it in a cue?"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 15, 2021 at 4:28 PM#2Hiassign effect 1.x.1 /wings=-2assign effect 1.x.2 /wings=2"
+    }
+  ],
   "replies": 0,
   "thread_id": "66312",
   "title": "Edit effects on the fly",

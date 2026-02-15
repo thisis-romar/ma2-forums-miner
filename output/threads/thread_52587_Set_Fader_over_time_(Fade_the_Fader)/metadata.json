@@ -3,6 +3,38 @@
   "author": "MichaelK",
   "post_date": null,
   "post_text": "April 22, 2016 at 7:25 AM#1Hi Everyone,I have some Dimmers on a Fader/Executor and I know that I can set the fader with a Macro (e.g.: Fader x.y at 30), but with this the value comes up directly. Is there a way to change the Fader Value over time, like: Fader x.y at 30 in 2s?Cheers, Michael",
+  "posts": [
+    {
+      "author": "MichaelK",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 22, 2016 at 7:25 AM#1Hi Everyone,I have some Dimmers on a Fader/Executor and I know that I can set the fader with a Macro (e.g.: Fader x.y at 30), but with this the value comes up directly. Is there a way to change the Fader Value over time, like: Fader x.y at 30 in 2s?Cheers, Michael"
+    },
+    {
+      "author": "MichaelK",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 22, 2016 at 11:20 AM#2Got it!"
+    },
+    {
+      "author": "Sydneyld",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 3, 2016 at 10:11 PM#3Hey Mate,What did the macro end up being? i have a similar thing on a show I'm on currently."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "November 3, 2016 at 10:12 PM#4Exec x.y At z Fade a"
+    },
+    {
+      "author": "MichaelK",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "November 4, 2016 at 7:43 AM#5In my case i used:Fader x.y At z Fade aBecause it's a Fader, but therefore a Fader is an Exec there shouldn't be a difference. I guess.M."
+    }
+  ],
   "replies": 0,
   "thread_id": "52587",
   "title": "Set Fader over time (Fade the Fader)",

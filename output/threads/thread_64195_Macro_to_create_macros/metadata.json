@@ -3,6 +3,26 @@
   "author": "mvd02",
   "post_date": null,
   "post_text": "June 30, 2019 at 9:11 PM#1HelloIs iT possible to create a macro that automatically creats other macros?",
+  "posts": [
+    {
+      "author": "mvd02",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 30, 2019 at 9:11 PM#1HelloIs iT possible to create a macro that automatically creats other macros?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 30, 2019 at 10:50 PM#2yes, but it most often doesn't make any sense.it is much more work and complicated to create a super-macro that makes all your macros, than there is to just make all the macros manually.If you use a base showfile, all the macros are in there already from when you created them (manually or via a supermacro)so there is no benefit of a supermacro in this scenario.If you do not use a base showfile, you do not have your supermacro either, so that supermacro would need to be imported.but then why not just export and import all the created macros instead of the supermacro.one single import/export file can contain multiple macros:CodeExport Macro 101 Thru 199 \"mymacrocollection\"CD Macros; Import \"mymacrocollection\" ; CD /"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 6, 2019 at 3:09 PM#3I'd recommend what glad is saying,However, yes. You have to first store the macro and then store the CMD inside of it.store macro 1store macro 1.1.1 thru 1.1.3assign macro 1.1.1 /cmd =assign macro 1.1.2 /cmd =assign macro 1.1.3 /cmd ="
+    }
+  ],
   "replies": 0,
   "thread_id": "64195",
   "title": "Macro to create macros",

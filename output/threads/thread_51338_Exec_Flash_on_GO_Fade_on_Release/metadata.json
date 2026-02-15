@@ -3,6 +3,26 @@
   "author": "marqitopalomino",
   "post_date": null,
   "post_text": "February 17, 2016 at 10:46 PM#1What are the button options to make an Executor Flash ON zero time and when button is released it will Fade the OFF time. I can make it FLASH ON but instantly fades after completion.Cheers!",
+  "posts": [
+    {
+      "author": "marqitopalomino",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 17, 2016 at 10:46 PM#1What are the button options to make an Executor Flash ON zero time and when button is released it will Fade the OFF time. I can make it FLASH ON but instantly fades after completion.Cheers!"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 17, 2016 at 10:59 PM#21. Make the button \"Temp\" instead of \"Flash\"2. Set the cue's Fade time to 0.3. Set the executor's \"Off-Time\" to the desired fade out length. This is done by pressing [Edit], tapping the executor in question, pressing [Esc], and then your 4th encoder will be \"Off-Time\"."
+    },
+    {
+      "author": "marqitopalomino",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 17, 2016 at 11:12 PM#3Perfect, thanks!"
+    }
+  ],
   "replies": 0,
   "thread_id": "51338",
   "title": "Exec Flash on GO / Fade on Release",

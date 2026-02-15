@@ -3,6 +3,14 @@
   "author": "zakkbeard",
   "post_date": null,
   "post_text": "April 28, 2022 at 6:08 AM#1Hey all, I saw it done a while back and I can't remember for the life of me the syntax for it.On a festival soon where my console is acting as a master and a pass-through for artnet merge, etc. I have NPU's and nodes at my data rack, and I'd like to be able to assign them to a session (Headline act in session 2, Direct Support in session 3, etc.) so I don't have to have each operator manually uninvite the hardware, then manually invite it back to my session for other acts. Any help?",
+  "posts": [
+    {
+      "author": "zakkbeard",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 28, 2022 at 6:08 AM#1Hey all, I saw it done a while back and I can't remember for the life of me the syntax for it.On a festival soon where my console is acting as a master and a pass-through for artnet merge, etc. I have NPU's and nodes at my data rack, and I'd like to be able to assign them to a session (Headline act in session 2, Direct Support in session 3, etc.) so I don't have to have each operator manually uninvite the hardware, then manually invite it back to my session for other acts. Any help?"
+    }
+  ],
   "replies": 0,
   "thread_id": "67207",
   "title": "Assign NPU to session?",

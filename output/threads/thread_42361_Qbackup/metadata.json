@@ -2,15 +2,30 @@
   "assets": [
     {
       "checksum": "sha256:7432a9f49b8091c245bf260c5458d0499f1a6d4116a332a4c75663c1b4fe1568",
-      "download_count": 48,
+      "download_count": 57,
       "filename": "QBackup.xml",
+      "post_number": 1,
       "size": 3017,
       "url": "https://forum.malighting.com/file-download/3473/"
     }
   ],
   "author": "glad",
   "post_date": null,
-  "post_text": "July 4, 2014 at 9:46 PM#1Macro1:\"Qbackup\"Copies a range of cues to a new backupsequenceMacro2:\"Archive old Qbackups\"Exports, then deletes old backupsequencesFilesQBackup.xml3.02 kB – 48 Downloads",
+  "post_text": "July 4, 2014 at 9:46 PM#1Macro1:\"Qbackup\"Copies a range of cues to a new backupsequenceMacro2:\"Archive old Qbackups\"Exports, then deletes old backupsequencesFilesQBackup.xml3.02 kB – 57 Downloads",
+  "posts": [
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 4, 2014 at 9:46 PM#1Macro1:\"Qbackup\"Copies a range of cues to a new backupsequenceMacro2:\"Archive old Qbackups\"Exports, then deletes old backupsequencesFilesQBackup.xml3.02 kB – 57 Downloads"
+    },
+    {
+      "author": "jabadger",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 9, 2014 at 8:54 AM#2Nice."
+    }
+  ],
   "replies": 0,
   "thread_id": "42361",
   "title": "Qbackup",

@@ -3,6 +3,20 @@
   "author": "Duplicate ttjm1997",
   "post_date": null,
   "post_text": "March 18, 2016 at 2:27 PM#1Hello all,I want to make a macro that stores the content to the next free executor or preset.I hope you guys can help me,TimThe Netherlands",
+  "posts": [
+    {
+      "author": "Duplicate ttjm1997",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 18, 2016 at 2:27 PM#1Hello all,I want to make a macro that stores the content to the next free executor or preset.I hope you guys can help me,TimThe Netherlands"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 18, 2016 at 9:25 PM#2there is no dedicated keyword for \"next free\" numberthis approch however works in many cases:e.g.1CodeStore Preset 1.\"unique_non-existing_name\"Label Preset 1.\"unique_non-existing_name\" \"any_new_name\"e.g.2CodeStore Executor \"unique_non-existing_name\"Label Executor \"unique_non-existing_name\" \"any_new_name\""
+    }
+  ],
   "replies": 0,
   "thread_id": "51934",
   "title": "macro store next free",

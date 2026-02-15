@@ -3,6 +3,26 @@
   "author": "Jeffm436",
   "post_date": null,
   "post_text": "January 24, 2015 at 10:03 PM#1Is there a way to write a macro that would do the same thing as pressing \"sACN Output Active\" in the network Protocols window?Any advice would be great.Thanks",
+  "posts": [
+    {
+      "author": "Jeffm436",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 24, 2015 at 10:03 PM#1Is there a way to write a macro that would do the same thing as pressing \"sACN Output Active\" in the network Protocols window?Any advice would be great.Thanks"
+    },
+    {
+      "author": "bundao",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 24, 2015 at 10:22 PM#2Assign Root 4.4 /OutActive=On\"=Toggle\" doesnt seem to work for these so use \"=On\" or \"=Off\" in separate macros"
+    },
+    {
+      "author": "Jeffm436",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 25, 2015 at 1:44 AM#3This worked perfectly.Thanks for your help."
+    }
+  ],
   "replies": 0,
   "thread_id": "45124",
   "title": "Macro to turn on and off sACN",

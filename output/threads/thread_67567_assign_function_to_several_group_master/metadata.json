@@ -3,6 +3,26 @@
   "author": "abc",
   "post_date": null,
   "post_text": "February 6, 2023 at 10:19 PM#1Hello 1 have 15 group master on 15 fader .It is possible to use a command to assign the Negative mode to the 15 group master ?Thank's",
+  "posts": [
+    {
+      "author": "abc",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 6, 2023 at 10:19 PM#1Hello 1 have 15 group master on 15 fader .It is possible to use a command to assign the Negative mode to the 15 group master ?Thank's"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 21, 2023 at 8:17 PM#2Hi ABC,Try this:[color=#00FF00]Assign Executor A.B thru C.D/mode=negative[/color]Where A and C stand for pagenumbers and B and D for executornumbersFor Positive mode use:[color=#00FF00]Assign Executor A.B thru C.D/mode=positive[/color]And for Additive mode use:[color=#00FF00]Assign Executor A.B thru C.D/mode=additive[/color]"
+    },
+    {
+      "author": "abc",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 3, 2023 at 8:33 AM#3thank's !"
+    }
+  ],
   "replies": 0,
   "thread_id": "67567",
   "title": "assign function to several group master",

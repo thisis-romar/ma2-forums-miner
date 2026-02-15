@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:34d501bfb60dada271dcfca8197ea78b7c1880ee4732ad225bdcafa6fe5ec915",
-      "download_count": 38,
+      "download_count": 48,
       "filename": "Ifoutput by PresetType.xml",
+      "post_number": 5,
       "size": 990,
       "url": "https://forum.malighting.com/file-download/3542/"
     }
@@ -11,6 +12,38 @@
   "author": "sebmdp",
   "post_date": null,
   "post_text": "October 27, 2014 at 6:12 PM#1Dear all,I'm looking for the right syntax to filter the result of the ifoutput function by the keyword PresetType.Seems that those syntaxes don't work :CodeifOutput PresetType x (where x is the choosen PresetType)ifOutput PresetType x.x.x (for the choosen attribute of feature x of preset type x)ifOutput At PresetType xifOutput On PresetType xwhileCodeIfOutput Preset 4.5for color preset nb 5 worksPlease note that I really want to filter the result by the PresetType and not by recorded Preset. For example I want to be able to find fixtures that have a blade engaged or a gobo parameter >0Thanks for your help.Regards.S.D.",
+  "posts": [
+    {
+      "author": "sebmdp",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 27, 2014 at 6:12 PM#1Dear all,I'm looking for the right syntax to filter the result of the ifoutput function by the keyword PresetType.Seems that those syntaxes don't work :CodeifOutput PresetType x (where x is the choosen PresetType)ifOutput PresetType x.x.x (for the choosen attribute of feature x of preset type x)ifOutput At PresetType xifOutput On PresetType xwhileCodeIfOutput Preset 4.5for color preset nb 5 worksPlease note that I really want to filter the result by the PresetType and not by recorded Preset. For example I want to be able to find fixtures that have a blade engaged or a gobo parameter >0Thanks for your help.Regards.S.D."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 27, 2014 at 7:59 PM#2IfOutput and IfActive will obey the current world, so something like this might do the job, (if you create a set of worlds in advance, or on the fly inside the macro):World \"mygoboparameters\"IfOutput Exec *.*IfActiveWorld 1"
+    },
+    {
+      "author": "sebmdp",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 27, 2014 at 10:02 PM#3Worlds by type of preset were actually the workaround I used to work with, but I'm looking for a easier way to achieve this, specially because I need to filter by PresetTypes, attribute or feature on the go with numerical references without the \"limitations of parameters \" inside a predefined world.May Filters be a trail avoiding Worlds ?Something like (which doesn't work in state) :CodeIfOutput At Filter xIs IfOutput the only way to say :CodeOn Fixture Thru if parameters values are different from default"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 27, 2014 at 11:07 PM#4CodeOn Fixture Thru if parameters values are differentfrom defaultFixture Thru At Fixture Thrushould more or less do this job, by fetching values from all fixtures to all fixtures"
+    },
+    {
+      "author": "sebmdp",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "November 11, 2014 at 10:04 AM#5Thanks Andreas.So, the following macro is helpfull to find Fixtures by PresetType from the command IfOutput. Actually it's a workaround to the following command : IfOutput PrestType x, which doesn't work for now.This macro may certainly be improved, but it works. You just have to type the PresetType number (e.g. 4 for Color, 8 for shapers) at the beginning of the macro.Be aware that your programmer values will be lost while running this macro.RegardsFilesIfoutput by PresetType.xml990 Byte – 48 Downloads"
+    }
+  ],
   "replies": 0,
   "thread_id": "43985",
   "title": "IfOutput filtered by PresetType",

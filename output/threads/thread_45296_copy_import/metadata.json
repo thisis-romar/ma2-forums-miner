@@ -3,6 +3,32 @@
   "author": "RKHCKP",
   "post_date": null,
   "post_text": "February 9, 2015 at 12:16 AM#1trying to export my macros via OnPC showfile and everytime i press the \"e\" i get Edit, or ctrl \"e\" i get nothing or alt \"e\" i get effect.  i am trying to export macros from specific macros so I can import them inot another show file.how do I get the OnPC commandline to allow me to type syntax to export items?thanks in advancekeith",
+  "posts": [
+    {
+      "author": "RKHCKP",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 9, 2015 at 12:16 AM#1trying to export my macros via OnPC showfile and everytime i press the \"e\" i get Edit, or ctrl \"e\" i get nothing or alt \"e\" i get effect.  i am trying to export macros from specific macros so I can import them inot another show file.how do I get the OnPC commandline to allow me to type syntax to export items?thanks in advancekeith"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 9, 2015 at 9:16 AM#2Make a view which includes the commandline, than click on it and just type \" export macro X \" followed by the please button, or go to setup>import export> export> macro and select the macro you would like to export and than click export at the bottom right of your screen"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 9, 2015 at 9:39 AM#3you need to disable shortcut-mode (upper right corner on main window), to be able to type in keywords."
+    },
+    {
+      "author": "RKHCKP",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 9, 2015 at 1:43 PM#4thanks, disable shortcut, that is what i needed!!k"
+    }
+  ],
   "replies": 0,
   "thread_id": "45296",
   "title": "copy / import",

@@ -3,6 +3,32 @@
   "author": "mattehalen",
   "post_date": null,
   "post_text": "September 23, 2017 at 4:50 PM#1Need some help creating a Macro (if possible).I want to have a CountDown Timer count down to a specific time (say 16:00:00).I know I can use the $Time to get the current time but how to I set \"AlarmTime\" to be in the right formating?",
+  "posts": [
+    {
+      "author": "mattehalen",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 23, 2017 at 4:50 PM#1Need some help creating a Macro (if possible).I want to have a CountDown Timer count down to a specific time (say 16:00:00).I know I can use the $Time to get the current time but how to I set \"AlarmTime\" to be in the right formating?"
+    },
+    {
+      "author": "mattehalen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 23, 2017 at 8:56 PM#2This Macro dosen't workSetUserVar $AlarmTime = 23h00m0.000sSetUserVar $CurrentTime = $TimeSetUserVar $TimeTo = $AlarmTimeAddVar $TimeTo =  - $Time"
+    },
+    {
+      "author": "mcadenhead",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 5, 2017 at 6:38 PM#3I have had this problem too.  I did mine by writing 3 macros.  The first sets my variables (I have a variable in the same time format as $time) and begins running the second macro on a loop which is a check macro using conditional statements of $mytime>$time... etc, then, if false, re triggers the check macro.  If true, triggers my exec and stops the check macro.Its not elegant, but it works."
+    },
+    {
+      "author": "mattehalen",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 21, 2018 at 5:44 PM#4This code kide of works.But one thing i noticed is that it's stop being in sync after a wile and I don't know wayLUA \"alarmHour = 19 alarmMinute = 00 myTimer = 17 date = os.date() thisYear = os.date('%Y') thisMonth = os.date('%m') thisDay = os.date('%d') currentTime= os.time() alarmTime= os.time({year=thisYear, month=thisMonth , day=thisDay, hour=alarmHour , min=alarmMinute }) timeTo= alarmTime - currentTime gma.cmd('Assign Timer ' .. myTimer .. '/countDownTime ='.. timeTo) gma.cmd('Go Timer ' .. myTimer) gma.cmd('Select Timer ' .. myTimer)\""
+    }
+  ],
   "replies": 0,
   "thread_id": "59577",
   "title": "CountDown to Time - Help",

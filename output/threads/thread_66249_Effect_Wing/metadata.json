@@ -3,6 +3,44 @@
   "author": "XIaoLe",
   "post_date": null,
   "post_text": "December 2, 2020 at 6:44 PM#1If I want to edit the Effect Wing command as follows:Assign Effect x /Wing=2But I don’t want to specify which Effect. It can be used when I choose any EffectHow to use it, thank you very much",
+  "posts": [
+    {
+      "author": "XIaoLe",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 2, 2020 at 6:44 PM#1If I want to edit the Effect Wing command as follows:Assign Effect x /Wing=2But I don’t want to specify which Effect. It can be used when I choose any EffectHow to use it, thank you very much"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 2, 2020 at 8:50 PM#2several ways you could do this.you could specify the variable beforehand e.g:setvar $wingeffect = (which effect number?)assign effect $wingeffect /wing = 2which will assign the effect you just inputted a wing value of 2.you could probably do this without a variable at all with:assign effect (which effect number) /wings = 2though I'm not sure if that syntax works."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 3, 2020 at 12:30 AM#3Hiassign /wings=2 @will allow you to click on the effect you want in the effect pool.Orcd @assign * /wings=2cd/for same resultEnjoy"
+    },
+    {
+      "author": "XIaoLe",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "December 3, 2020 at 2:52 PM#4Assign Effect x /Wing=2It should be said that the instruction above is the EFFECT specified for me, but what I need is the one I choose at the moment, don’t specify"
+    },
+    {
+      "author": "XIaoLe",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "December 3, 2020 at 2:53 PM#5Assign Effect x /Wing=2It should be said that the instruction above is the EFFECT specified for me, but what I need is the one I choose at the moment, don’t specify"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "December 4, 2020 at 4:00 PM#6I don't believe there will be any simple way to do this. You can't, for example, use command syntax to say, in essence, \"current effects that are running, change wings to 2.\"I imagine there is a way with lua to determine what effects are running, then turn that into a variable, and then execute the command with the variable as Benoit and I have described above."
+    }
+  ],
   "replies": 0,
   "thread_id": "66249",
   "title": "Effect Wing",

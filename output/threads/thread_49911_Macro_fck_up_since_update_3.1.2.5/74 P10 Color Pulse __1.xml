@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.1.2/MA.xsd" major_vers="3" minor_vers="1" stream_vers="2">
+	<Info datetime="2015-11-18T19:20:24" showfile="basis gerben" />
+	<Macro index="73" name="P10 Color Pulse &lt;">
+		<Macroline index="0">
+			<text>ClearAll</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>Delete Effect 256 Thru 264 + 1120 Thru 1128</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Group 224 At Effect 16</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>Group 225 At Effect 16</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>Go Macro 49</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>Group 226 At Effect 16</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>Go Macro 50</text>
+		</Macroline>
+		<Macroline index="7">
+			<text>Group 227 At Effect 16</text>
+		</Macroline>
+		<Macroline index="8">
+			<text>Go Macro 51</text>
+		</Macroline>
+		<Macroline index="9">
+			<text>Group 228 At Effect 16</text>
+		</Macroline>
+		<Macroline index="10">
+			<text>Go Macro 52</text>
+		</Macroline>
+		<Macroline index="11">
+			<text>Store Effect 256</text>
+		</Macroline>
+		<Macroline index="12">
+			<text>Group 224 At Effect 17</text>
+		</Macroline>
+		<Macroline index="13">
+			<text>Group 225 At Effect 17</text>
+		</Macroline>
+		<Macroline index="14">
+			<text>Go Macro 49</text>
+		</Macroline>
+		<Macroline index="15">
+			<text>Group 226 At Effect 17</text>
+		</Macroline>
+		<Macroline index="16">
+			<text>Go Macro 50</text>
+		</Macroline>
+		<Macroline index="17">
+			<text>Group 227 At Effect 17</text>
+		</Macroline>
+		<Macroline index="18">
+			<text>Go Macro 51</text>
+		</Macroline>
+		<Macroline index="19">
+			<text>Group 228 At Effect 17</text>
+		</Macroline>
+		<Macroline index="20">
+			<text>Go Macro 52</text>
+		</Macroline>
+		<Macroline index="21">
+			<text>Store Effect 257</text>
+		</Macroline>
+		<Macroline index="22">
+			<text>Group 224 At Effect 18</text>
+		</Macroline>
+		<Macroline index="23">
+			<text>Group 225 At Effect 18</text>
+		</Macroline>
+		<Macroline index="24">
+			<text>Go Macro 49</text>
+		</Macroline>
+		<Macroline index="25">
+			<text>Group 226 At Effect 18</text>
+		</Macroline>
+		<Macroline index="26">
+			<text>Go Macro 50</text>
+		</Macroline>
+		<Macroline index="27">
+			<text>Group 227 At Effect 18</text>
+		</Macroline>
+		<Macroline index="28">
+			<text>Go Macro 51</text>
+		</Macroline>
+		<Macroline index="29">
+			<text>Group 228 At Effect 18</text>
+		</Macroline>
+		<Macroline index="30">
+			<text>Go Macro 52</text>
+		</Macroline>
+		<Macroline index="31">
+			<text>Store Effect 258</text>
+		</Macroline>
+		<Macroline index="32">
+			<text>Group 224 At Effect 19</text>
+		</Macroline>
+		<Macroline index="33">
+			<text>Group 225 At Effect 19</text>
+		</Macroline>
+		<Macroline index="34">
+			<text>Go Macro 49</text>
+		</Macroline>
+		<Macroline index="35">
+			<text>Group 226 At Effect 19</text>
+		</Macroline>
+		<Macroline index="36">
+			<text>Go Macro 50</text>
+		</Macroline>
+		<Macroline index="37">
+			<text>Group 227 At Effect 19</text>
+		</Macroline>
+		<Macroline index="38">
+			<text>Go Macro 51</text>
+		</Macroline>
+		<Macroline index="39">
+			<text>Group 228 At Effect 19</text>
+		</Macroline>
+		<Macroline index="40">
+			<text>Go Macro 52</text>
+		</Macroline>
+		<Macroline index="41">
+			<text>Store Effect 259</text>
+		</Macroline>
+		<Macroline index="42">
+			<text>Group 224 At Effect 20</text>
+		</Macroline>
+		<Macroline index="43">
+			<text>Group 225 At Effect 20</text>
+		</Macroline>
+		<Macroline index="44">
+			<text>Go Macro 49</text>
+		</Macroline>
+		<Macroline index="45">
+			<text>Group 226 At Effect 20</text>
+		</Macroline>
+		<Macroline index="46">
+			<text>Go Macro 50</text>
+		</Macroline>
+		<Macroline index="47">
+			<text>Group 227 At Effect 20</text>
+		</Macroline>
+		<Macroline index="48">
+			<text>Go Macro 51</text>
+		</Macroline>
+		<Macroline index="49">
+			<text>Group 228 At Effect 20</text>
+		</Macroline>
+		<Macroline index="50">
+			<text>Go Macro 52</text>
+		</Macroline>
+		<Macroline index="51">
+			<text>Store Effect 260</text>
+		</Macroline>
+		<Macroline index="52">
+			<text>Group 224 At Effect 21</text>
+		</Macroline>
+		<Macroline index="53">
+			<text>Group 225 At Effect 21</text>
+		</Macroline>
+		<Macroline index="54">
+			<text>Go Macro 49</text>
+		</Macroline>
+		<Macroline index="55">
+			<text>Group 226 At Effect 21</text>
+		</Macroline>
+		<Macroline index="56">
+			<text>Go Macro 50</text>
+		</Macroline>
+		<Macroline index="57">
+			<text>Group 227 At Effect 21</text>
+		</Macroline>
+		<Macroline index="58">
+			<text>Go Macro 51</text>
+		</Macroline>
+		<Macroline index="59">
+			<text>Group 228 At Effect 21</text>
+		</Macroline>
+		<Macroline index="60">
+			<text>Go Macro 52</text>
+		</Macroline>
+		<Macroline index="61">
+			<text>Store Effect 261</text>
+		</Macroline>
+		<Macroline index="62">
+			<text>Group 224 At Effect 22</text>
+		</Macroline>
+		<Macroline index="63">
+			<text>Group 225 At Effect 22</text>
+		</Macroline>
+		<Macroline index="64">
+			<text>Go Macro 49</text>
+		</Macroline>
+		<Macroline index="65">
+			<text>Group 226 At Effect 22</text>
+		</Macroline>
+		<Macroline index="66">
+			<text>Go Macro 50</text>
+		</Macroline>
+		<Macroline index="67">
+			<text>Group 227 At Effect 22</text>
+		</Macroline>
+		<Macroline index="68">
+			<text>Go Macro 51</text>
+		</Macroline>
+		<Macroline index="69">
+			<text>Group 228 At Effect 22</text>
+		</Macroline>
+		<Macroline index="70">
+			<text>Go Macro 52</text>
+		</Macroline>
+		<Macroline index="71">
+			<text>Store Effect 262</text>
+		</Macroline>
+		<Macroline index="72">
+			<text>Group 224 At Effect 23</text>
+		</Macroline>
+		<Macroline index="73">
+			<text>Group 225 At Effect 23</text>
+		</Macroline>
+		<Macroline index="74">
+			<text>Go Macro 49</text>
+		</Macroline>
+		<Macroline index="75">
+			<text>Group 226 At Effect 23</text>
+		</Macroline>
+		<Macroline index="76">
+			<text>Go Macro 50</text>
+		</Macroline>
+		<Macroline index="77">
+			<text>Group 227 At Effect 23</text>
+		</Macroline>
+		<Macroline index="78">
+			<text>Go Macro 51</text>
+		</Macroline>
+		<Macroline index="79">
+			<text>Group 228 At Effect 23</text>
+		</Macroline>
+		<Macroline index="80">
+			<text>Go Macro 52</text>
+		</Macroline>
+		<Macroline index="81">
+			<text>Store Effect 263</text>
+		</Macroline>
+		<Macroline index="82">
+			<text>Group 224 At Effect 24</text>
+		</Macroline>
+		<Macroline index="83">
+			<text>Group 225 At Effect 24</text>
+		</Macroline>
+		<Macroline index="84">
+			<text>Go Macro 49</text>
+		</Macroline>
+		<Macroline index="85">
+			<text>Group 226 At Effect 24</text>
+		</Macroline>
+		<Macroline index="86">
+			<text>Go Macro 50</text>
+		</Macroline>
+		<Macroline index="87">
+			<text>Group 227 At Effect 24</text>
+		</Macroline>
+		<Macroline index="88">
+			<text>Go Macro 51</text>
+		</Macroline>
+		<Macroline index="89">
+			<text>Group 228 At Effect 24</text>
+		</Macroline>
+		<Macroline index="90">
+			<text>Go Macro 52</text>
+		</Macroline>
+		<Macroline index="91">
+			<text>Store Effect 264</text>
+		</Macroline>
+		<Macroline index="92">
+			<text>ClearAll</text>
+		</Macroline>
+		<Macroline index="93">
+			<text>Go Macro 75</text>
+		</Macroline>
+	</Macro>
+</MA>

@@ -3,6 +3,32 @@
   "author": "Calle",
   "post_date": null,
   "post_text": "March 12, 2020 at 1:00 PM#1Hey guys,I've been searching for a way to target the next cue in my selected cue list.I would like to make a macro to assign the fade of the next cue, same thing as:Assign fade (fade time) pleaseBut for the next cue.Cheers.",
+  "posts": [
+    {
+      "author": "Calle",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 12, 2020 at 1:00 PM#1Hey guys,I've been searching for a way to target the next cue in my selected cue list.I would like to make a macro to assign the fade of the next cue, same thing as:Assign fade (fade time) pleaseBut for the next cue.Cheers."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 12, 2020 at 4:21 PM#2check this threadhttp://www.ma-share.net/forum/read.php…54674#msg-54674"
+    },
+    {
+      "author": "Calle",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 12, 2020 at 6:36 PM#3Awesome! Thanks, it didn’t show up when I searched for “next cue”.Well well, cheers!"
+    },
+    {
+      "author": "Moe696",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 13, 2020 at 7:19 PM#4The search function ignores words with three or less letters.Try searching for \"dmx\" - there will be no results.Same results for \"cue\", \"usb\" and other three letter keywords."
+    }
+  ],
   "replies": 0,
   "thread_id": "65422",
   "title": "Target next cue",

@@ -3,6 +3,20 @@
   "author": "Maraner94",
   "post_date": null,
   "post_text": "August 25, 2018 at 6:12 AM#1Hi all,I searched the forum and couldn’t find what I’m looking for. I’m trying to make a startup macro that brings up a pop up that asks you to type in a password. If you type in the wrong password I want it to go back to the pop up and not let you into the showfile. What is the easiest way to do this? What would the syntax be?",
+  "posts": [
+    {
+      "author": "Maraner94",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 25, 2018 at 6:12 AM#1Hi all,I searched the forum and couldn’t find what I’m looking for. I’m trying to make a startup macro that brings up a pop up that asks you to type in a password. If you type in the wrong password I want it to go back to the pop up and not let you into the showfile. What is the easiest way to do this? What would the syntax be?"
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 26, 2018 at 8:08 AM#2The feature you want is called \"Force Login\" and a feature since grandMA1. No need for a macro.It's in the global settings.To force a login by command/macro use the command \"login please\" without any user. This will popup the login-screen, too.Gralf"
+    }
+  ],
   "replies": 0,
   "thread_id": "62155",
   "title": "Login password pop up",

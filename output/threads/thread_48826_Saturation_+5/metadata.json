@@ -3,6 +3,44 @@
   "author": "ghosty",
   "post_date": null,
   "post_text": "September 16, 2015 at 2:16 PM#1Hi all,Trying to find a way to make a macro that adds or takes away 5% to saturation.  Anyone got any ideas how i would do this?Or even how i would affect hue and sat in the comand line.m",
+  "posts": [
+    {
+      "author": "ghosty",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 16, 2015 at 2:16 PM#1Hi all,Trying to find a way to make a macro that adds or takes away 5% to saturation.  Anyone got any ideas how i would do this?Or even how i would affect hue and sat in the comand line.m"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 16, 2015 at 3:36 PM#2Does your fixture have a saturation channel? Or is it just RGB/CMY?"
+    },
+    {
+      "author": "ghosty",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 16, 2015 at 5:17 PM#3No standard rgb and cmy values, i can make a hue sat fixture work with a macro to bost 5% ets.  but default fixtures that use the ma's inbuilt colour mixing.  i can obviously grab the fixtures and wind up or down the saturation in the colour picker but would be really good for some gigs just to have a macro that boosted 5% saturation ....."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 16, 2015 at 8:29 PM#4Assuming your colors is not reduced in brightness, then scaling the CMY representation of your colors should more or less work as saturating/desaturating.make sure that your default (=commandline-access) color-representation is  CMY:CodeAssign UserProfile $\"userprofile\".\"usersettings\" /defaultmixcolorreadout=cmysaturate:CodeAttribute \"COLORRGB*\" At *1.1desaturate:CodeAttribute \"COLORRGB*\" At *0.9"
+    },
+    {
+      "author": "ghosty",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "September 19, 2015 at 1:36 PM#5Amazing thats great,so what would it be to tweak hue?or could you explain how that works so i can build some other macro's to do colour tweeks.m"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "September 23, 2015 at 11:11 PM#6I believe calculating the hue would require a much more complex formula that is not possible to do with the commandline"
+    }
+  ],
   "replies": 0,
   "thread_id": "48826",
   "title": "Saturation +5",

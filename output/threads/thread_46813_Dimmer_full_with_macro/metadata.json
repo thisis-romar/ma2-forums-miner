@@ -3,6 +3,68 @@
   "author": "Duplicate Gould",
   "post_date": null,
   "post_text": "May 23, 2015 at 8:46 AM#1Hi everybody!I'm a beginner operator with Grand MA2 light.Can you help me, how can I make, that some channels ON or OFF be? I want to swith this two status with a macro.Thanks a lot, and sorry for the language problems...",
+  "posts": [
+    {
+      "author": "Duplicate Gould",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 23, 2015 at 8:46 AM#1Hi everybody!I'm a beginner operator with Grand MA2 light.Can you help me, how can I make, that some channels ON or OFF be? I want to swith this two status with a macro.Thanks a lot, and sorry for the language problems..."
+    },
+    {
+      "author": "Duplicate Gould",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 23, 2015 at 8:56 AM#2Sorry! The most important! The macro, what i will make, must be resistent for the 'Clear' button..."
+    },
+    {
+      "author": "Go-Button",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 23, 2015 at 8:56 PM#3What is the goal you like to get?It would certainly help if you could explain it a bit more."
+    },
+    {
+      "author": "Duplicate Gould",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 23, 2015 at 11:33 PM#4Hi!We have dimmers, and some of this will be the electric power supply for our moving heads. So I want write a macro, witch make an 'On' and an 'Off' command..."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 23, 2015 at 11:52 PM#5Select your dimmers:macro ON:1 Unpark selection2 at full                          0.1  (wait time)3 park selection               0.14 clearallmacro OFF1 unpark selection        0.12 at 0                          0.13 park selection4 clearallBut you should not use dimmers as power supply for moving head. Electronic system and ballast won't appreciate that !"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "May 24, 2015 at 12:04 AM#6this may be done within a single command:On:Park Selection At 100OffPark Selection At 0"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "May 24, 2015 at 12:11 AM#7of course, thank you GladI didn't know we can direct overwrite parkand one macro:park selection at (value ?)"
+    },
+    {
+      "author": "Duplicate Gould",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "May 24, 2015 at 7:52 AM#8Thanks for the help!"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "May 28, 2015 at 10:07 PM#9you should not use dimmers as power supply for moving head. Electronic system and ballast won't appreciate that !"
+    },
+    {
+      "author": "Go-Button",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "May 28, 2015 at 10:17 PM#10Many of the new dimmers can handle electronical ballast. But it is recommend to use a relay or switch dimmer curve."
+    }
+  ],
   "replies": 0,
   "thread_id": "46813",
   "title": "Dimmer full with macro",

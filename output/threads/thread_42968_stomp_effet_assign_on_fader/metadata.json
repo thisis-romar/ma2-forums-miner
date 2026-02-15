@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:ac949eb372570d467cc9d6ac6e798dd535e5cfbc5fdd823288fd2cae2689f4bb",
-      "download_count": 414,
+      "download_count": 423,
       "filename": "off_effects.show.gz.zip",
+      "post_number": 2,
       "size": 125827,
       "url": "https://forum.malighting.com/file-download/3516/"
     }
@@ -11,6 +12,20 @@
   "author": "nikkoR",
   "post_date": null,
   "post_text": "August 13, 2014 at 10:22 AM#1Hy,i'm using 3.0.0.4 and i would like create a macro for off directly differents effect assign on different faders on different pages.Before with the GM1 we do it like that: \" off effet 1 thru at 0\"But now this syntaxe doesn't work on GM2!!!!I try the macro stomp but this one stomp only the effet on programmator but not on fader.I try to find a solution and i find this one: build an effet with all fixture and all parameters and take release like form. it's work but i think we can find better (or not!!!!)thx a lot.Nikko",
+  "posts": [
+    {
+      "author": "nikkoR",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 13, 2014 at 10:22 AM#1Hy,i'm using 3.0.0.4 and i would like create a macro for off directly differents effect assign on different faders on different pages.Before with the GM1 we do it like that: \" off effet 1 thru at 0\"But now this syntaxe doesn't work on GM2!!!!I try the macro stomp but this one stomp only the effet on programmator but not on fader.I try to find a solution and i find this one: build an effet with all fixture and all parameters and take release like form. it's work but i think we can find better (or not!!!!)thx a lot.Nikko"
+    },
+    {
+      "author": "Haytech",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 1, 2014 at 2:28 PM#2Hi Nikko,as quick solution you can name your exec´s with effects like \"eff_moving\" \"eff_dimmer\"to off them all at once you can use a macro off *.\"eff_*\"Filesoff_effects.show.gz.zip125.83 kB – 423 Downloads"
+    }
+  ],
   "replies": 0,
   "thread_id": "42968",
   "title": "stomp effet assign on fader",

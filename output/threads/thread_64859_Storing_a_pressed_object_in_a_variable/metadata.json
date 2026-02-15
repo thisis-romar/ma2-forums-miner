@@ -3,6 +3,50 @@
   "author": "hoss",
   "post_date": null,
   "post_text": "October 27, 2019 at 2:46 PM#1Hello all,Probably a simple question but how do you use the @ command to store an object into a variable? There is likely an easier way to do what I'm looking to do but just seeing if this is possible.For example:CodeSetVar $FROMOBJECT = \"Macro 999\"SetVar $TOOBJECT = @Apperance $TOOBJECT At $FROMOBJECTObviously storing $TOOBJECT like this wont work since i need to store a string (\"\"). I could do this with a (From?) and enter a number but I was just playing around and wounding if just pressing the object is a viable option.Thanks.",
+  "posts": [
+    {
+      "author": "hoss",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 27, 2019 at 2:46 PM#1Hello all,Probably a simple question but how do you use the @ command to store an object into a variable? There is likely an easier way to do what I'm looking to do but just seeing if this is possible.For example:CodeSetVar $FROMOBJECT = \"Macro 999\"SetVar $TOOBJECT = @Apperance $TOOBJECT At $FROMOBJECTObviously storing $TOOBJECT like this wont work since i need to store a string (\"\"). I could do this with a (From?) and enter a number but I was just playing around and wounding if just pressing the object is a viable option.Thanks."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 27, 2019 at 3:16 PM#2there is no easy way to do exactly this.if you merely want a macro that sets a specific appearance to an object by poolpressing you could use the appearance keyword with /options and @:Appearance /r=100 /g=50 /b=0 @as the commandline preprocessor will sort your syntax and move the /options to the end as requiredAppearance /r=100 /g=50 /b=0 @[Group 1]--->Appearance Group 1 /r=100 /g=50 /b=0----populating a variable based on a poolpress is not possible via conventional commandline, but could be done with Lua or my IntelliVars:http://www.ma-share.net/forum/read.php?8,61174"
+    },
+    {
+      "author": "hoss",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 27, 2019 at 5:20 PM#3Thanks so much for the reply, I did not realize that it would get reorganized that way, that's a great help!I was just looking at lua now, I created a Plugin that takes a string as an input object and now I just need to workout the details of the API and the and how to pass a command and ideally use the returned object from gma.show.getobj in some way.For example I see compare, label, name, parent, handle, index, verify, child, number, class and amount functions(?) returned. I \"just\" need to see if there is any helpful information in there.Thanks very much again for the information though. I'll put that in for the moment then keep messing around with lua to see what I can make it do."
+    },
+    {
+      "author": "hoss",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 27, 2019 at 7:12 PM#4Ok I kind of got it using both Lua and a macro, not as nice and simple as simply adding an @ to the end of a command but it works and might be useful for other things in the future.The start function on my script looks like so (no error checking):Codefunction Start(fromObj)toObj = gma.show.getobj.name(gma.user.getcmddest());  -- save our current destinationgma.cmd(\"ChangeDest /\");  -- reset the destination to the rootgma.cmd(\"Appearance \" .. toObj .. \" At \" .. fromObj);  -- run the commandendThen from my Macro:CodeChangeDest @Plugin \"Change Appearance\" \"Macro 9988\"Here in the macro 9988 is the calling macro with the Appearance that I want to copy from.It would be really handy if there was a way to refer to the object that called the plugin, perhaps parent but that seems to refer to the object hierarchy."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "October 27, 2019 at 8:58 PM#5be aware that the syntax\"Appearance \" .. toObjwill only work if the object has not been given a label, and getobj.name returns the default name (that coincides with the commandline token)"
+    },
+    {
+      "author": "hoss",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "October 28, 2019 at 1:29 AM#6Copy that, I see the issue.And in order to concat that with the class I need to switch out the Object Class to its normal name (CMD_MACRO -> Macro)I'm sure I can get it but it will be more work then it's worth especially since what you suggested works perfectly.Was worth a try and I learned a little how the scripting system works.Thanks again for the insights."
+    },
+    {
+      "author": "SteweeCee",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "January 5, 2020 at 6:26 AM#7hoss,VERY GOOD POINT!Has anyone written a function to correct Object Class definitions to its GMA commandline equiv?Cheers,Stewy Cee"
+    }
+  ],
   "replies": 0,
   "thread_id": "64859",
   "title": "Storing a pressed object in a variable",

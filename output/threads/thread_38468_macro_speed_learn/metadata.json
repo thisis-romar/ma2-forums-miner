@@ -3,6 +3,32 @@
   "author": "woodforth",
   "post_date": null,
   "post_text": "September 17, 2013 at 5:55 AM#1hey allI've been learning how to use the layout view and would like to now how to make a macro that does the learn on a special masterhope you guys can helpnick",
+  "posts": [
+    {
+      "author": "woodforth",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 17, 2013 at 5:55 AM#1hey allI've been learning how to use the layout view and would like to now how to make a macro that does the learn on a special masterhope you guys can helpnick"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 17, 2013 at 7:06 AM#2unfortunately \"Learn\" is not possible to use from a macro.the Learn command needs to be processed as a real-time action to be able to measure the time and calculate a speed"
+    },
+    {
+      "author": "woodforth",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 17, 2013 at 11:30 AM#3damn that sucksanywaysthanks for the quick replynick"
+    },
+    {
+      "author": "Givskov",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "June 4, 2014 at 10:14 PM#4Hey Woodforthit might be a bit late, but I was fidling with the same macro just today, and by chance came by your question this evening. Here´s the macros for Learn, HS and DS for speed group 1 -  Works with 2.9.1.1Learn SpecialMaster 3.1DoubleSpeed SpecialMaster 3.1HalfSpeed SpecialMaster 3.1If you want the macro to relate to speed group 2 just type 3.2 (and so forth)"
+    }
+  ],
   "replies": 0,
   "thread_id": "38468",
   "title": "macro speed learn",

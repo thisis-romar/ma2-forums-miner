@@ -3,6 +3,56 @@
   "author": "AISConnor",
   "post_date": null,
   "post_text": "December 9, 2016 at 4:40 AM#1Does anybody know if there is command line syntax to change things like default cue timing and other options in the settings menus?Thanks,Connor",
+  "posts": [
+    {
+      "author": "AISConnor",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 9, 2016 at 4:40 AM#1Does anybody know if there is command line syntax to change things like default cue timing and other options in the settings menus?Thanks,Connor"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 9, 2016 at 1:52 PM#2Check out some of these keywords, from the help manual:ChangeDestRootListAssign Root a.b.c.d.e.f.g.h /option="
+    },
+    {
+      "author": "smeshenberg",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 9, 2016 at 6:45 PM#3This is great but I've always wondered how do you find what the a.b.c.d.e etc numbers should be?  List root?  And what about the options as well?  How do you know what the console is looking for?  It isn't always the exact name of the option in the GUI.  Sometimes its truncated."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "December 9, 2016 at 7:11 PM#4the example listed in this post is for MidiShowControl:http://www.ma-share.net/forum/read.php…45635#msg-45635but the methodology may be used for any setting you want to change via a macro"
+    },
+    {
+      "author": "jowu",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "June 19, 2018 at 9:31 PM#5Trying to disable solo/highlight via macro (as in under \"Grand Master & Misc Keys\")Followed this guide to users but am unable to see a list of options to further manipulate these parameters.Can you give me a lead on how to adjust settings that are user specific?Thanks!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "June 19, 2018 at 9:36 PM#6user-specific settings are contained by theuserprofiletry exploring userprofiles rather than users"
+    },
+    {
+      "author": "jowu",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "June 19, 2018 at 9:49 PM#7Thank-you! I just figured that out and came back here to reply to my threadMakes sense now!"
+    },
+    {
+      "author": "Lockyl",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "November 25, 2018 at 2:56 PM#8Look at macro \"panic\". If you Edit it, you can see many interesting things, for exemple how to Off \"hilight\" and \"Solo\""
+    }
+  ],
   "replies": 0,
   "thread_id": "56223",
   "title": "Settings Syntax",

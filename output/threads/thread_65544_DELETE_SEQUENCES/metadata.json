@@ -3,6 +3,50 @@
   "author": "RUSANMA",
   "post_date": null,
   "post_text": "April 6, 2020 at 3:57 PM#1hi, I want to delete from my \"sequence pool\" the sequences that do not have content.-Is there any macro to execute this option?-Can the number of sequences be ordered to start at number 1? thanks",
+  "posts": [
+    {
+      "author": "RUSANMA",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 6, 2020 at 3:57 PM#1hi, I want to delete from my \"sequence pool\" the sequences that do not have content.-Is there any macro to execute this option?-Can the number of sequences be ordered to start at number 1? thanks"
+    },
+    {
+      "author": "F Dijkers",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 7, 2020 at 11:15 AM#2Hi,A workaround I use to achieve this is to delete them if it's not assigned to an executor. Macro would look like this:CodeDelete Sequence Thru - Sequence Thru If Executor ThruI'm not sure what you mean by order them at number 1? The pool items are always in order?Kind regards,Floris DijkersLighting Director & Designerflorisdijkers.comlighting@florisdijkers.com"
+    },
+    {
+      "author": "RUSANMA",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 8, 2020 at 11:33 AM#3Hi, when I delete the sequences in the sequence pool they remain with the number they are, I want them to be renumbered and start at 1, so that the sequence pool is ordered. thanks"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 8, 2020 at 1:21 PM#4you could remove the gaps, by moving all existing sequence to id 1 and upwards:CodeMove Sequence * At 1"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "April 14, 2020 at 2:45 AM#5Hi DijkersI tried your syntax but it didn't work : Error Delete forbiddenDoes it work for you ?Thx"
+    },
+    {
+      "author": "F Dijkers",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "April 14, 2020 at 3:34 PM#6Hi Benoît,Excuse me, I typed a little to fast. I found some workaround, but you're right, as I described it it wouldn't work. I use this little trick, I wrote it down already before in some document:Macro line 1:CodeOff Sequence ThruMacro line 2:CodeGo Exec ThruMacro line 3:CodeDelete Sequence Thru - IfActive Sequence ThruHopefully this helps you!Kind regards,Floris DijkersLighting Director & Designerflorisdijkers.comlighting@florisdijkers.com"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "April 14, 2020 at 9:15 PM#7HiThis doesn't work for me, as i expected.Ifactive sequence thru means nothing.Ifactive is to select fixtures."
+    }
+  ],
   "replies": 0,
   "thread_id": "65544",
   "title": "DELETE SEQUENCES",

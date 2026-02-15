@@ -3,6 +3,20 @@
   "author": "robk82",
   "post_date": null,
   "post_text": "April 13, 2019 at 3:27 AM#1I know the syntax to change the default mix color readout is...Assign Root 39.2  /defaultmixcolorreadout=cmyAssign Root 39.2  /defaultmixcolorreadout=cmyor the same with RGBBut I do not really understand why this works. Can anyone explain it in a short easy way?",
+  "posts": [
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 13, 2019 at 3:27 AM#1I know the syntax to change the default mix color readout is...Assign Root 39.2  /defaultmixcolorreadout=cmyAssign Root 39.2  /defaultmixcolorreadout=cmyor the same with RGBBut I do not really understand why this works. Can anyone explain it in a short easy way?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 14, 2019 at 2:42 AM#2Open link in new tab"
+    }
+  ],
   "replies": 0,
   "thread_id": "63757",
   "title": "Default mix color readout",

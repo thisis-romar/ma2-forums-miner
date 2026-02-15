@@ -3,6 +3,62 @@
   "author": "mflte_mflight",
   "post_date": null,
   "post_text": "September 22, 2020 at 3:06 PM#1Hello enlightened friends !!!I would like to know how I can update the cues that contain delay after a partial show read, after cloning.I even created a macro, it is attached!But after cloning the fixtutes that were cloned it doesn't come the same it was for what I came / was for you programmed.can someone help me ... to say what is wrong in the macro, or if anyone has any better suggestions as to how this macro can be written?Thank you very much in advance.My cellphone / Whatsapp for contact: +55 15998484048.Maikon Francisco.Imagesmacro update delay.jpg91.02 kB1,111 × 555",
+  "posts": [
+    {
+      "author": "mflte_mflight",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 22, 2020 at 3:06 PM#1Hello enlightened friends !!!I would like to know how I can update the cues that contain delay after a partial show read, after cloning.I even created a macro, it is attached!But after cloning the fixtutes that were cloned it doesn't come the same it was for what I came / was for you programmed.can someone help me ... to say what is wrong in the macro, or if anyone has any better suggestions as to how this macro can be written?Thank you very much in advance.My cellphone / Whatsapp for contact: +55 15998484048.Maikon Francisco.Imagesmacro update delay.jpg91.02 kB1,111 × 555"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 22, 2020 at 8:15 PM#2My guess is that the preset you are referring to is incorrect. Due to the cloning proces the newly cloned fixtures information will take the exact same information as the source fixtures and the corresponding presets will take this info as well, so you need to update the presets at first and than run your macro."
+    },
+    {
+      "author": "mflte_mflight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 24, 2020 at 8:10 PM#3Hello, thanks for answering me !!!Could you tell me which way it would be better for me to do or the correct way to do this macro to correct the cues that quote delay after a partial and clone."
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 24, 2020 at 8:36 PM#4well, it depends how you have things set up.If, for example, you have 8 fixtures and your preset is those 8 fixtures with a delay of 0 thru 1, cloning that same thing to 16 fixtures, for example, would do the following:fixture 1,2:      delay 0fixture 3,4:      delay .125sfixture 5,6:      delay .25sfixture 6,7:      delay .375sfixture 7,8:      delay .5sfixture 9,10:    delay .625sfixture 11,12:  delay .75sfixture 13,14:  delay .875sfixture 15,16:  delay 1swhich is not really what you want. You want:fixture 1: delay 0sfixture 2: delay .065sfixture 3: delay .125sfixture 4: delay .1875s, and so on.But these delay values don't exist in your preset since you only started with 8 fixtures.there are several ways to solve this while cloning.The way I do it is to write a macro that actually creates the preset before storing it to the places you need it to store to.In this case, select your fixtures, use the correct syntax for the attribute you are trying to use- something like \"attribute 'dim' at delay 0 thru 1,\" then store the preset, then store your cue.I can't remember if this is the correct syntax but something of this nature."
+    },
+    {
+      "author": "mflte_mflight",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "September 24, 2020 at 9:10 PM#5I do the PSR, clone my fixtures for the festival's fixtures, then update the groups with the festival's fixtures, so I would use a macro to correct all my delays that are inside the cues in the sequences.Generally festivals always have a lot more fixtures than in our tour show there, the delays are never as beautiful as they would be, they get ugly messy without symmetry or beginning and end ...This macro that I would like to have is almost the same as the result of the syntax below:Example:ClearAll; BlindEditGroup 2 + 3 + 4Store effect 1. \"Dimmer FX Solo\" .1 / oCleall AllGroup 51 + 53 + 4Store effect 1. \"Position FX\" .1 / oCleall AllGroup 51 + 53 + 4Store effect 1. \"Dimmer + Position FX\" .1 thru 2 / oCleall All; BlindEditonly to update and correct delays."
+    },
+    {
+      "author": "mflte_mflight",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "September 24, 2020 at 9:11 PM#6I do the PSR, clone my fixtures for the festival's fixtures, then update the groups with the festival's fixtures, so I would use a macro to correct all my delays that are inside the cues in the sequences.Generally festivals always have a lot more fixtures than in our tour show there, the delays are never as beautiful as they would be, they get ugly messy without symmetry or beginning and end ...This macro that I would like to have is almost the same as the result of the syntax below:Example:ClearAll; BlindEditGroup 2 + 3 + 4Store effect 1. \"Dimmer FX Solo\" .1 / oCleall AllGroup 51 + 53 + 4Store effect 1. \"Position FX\" .1 / oCleall AllGroup 51 + 53 + 4Store effect 1. \"Dimmer + Position FX\" .1 thru 2 / oCleall All; BlindEditonly to update and correct delays."
+    },
+    {
+      "author": "mflte_mflight",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "September 24, 2020 at 9:12 PM#7I do the PSR, clone my fixtures for the festival's fixtures, then update the groups with the festival's fixtures, so I would use a macro to correct all my delays that are inside the cues in the sequences.Generally festivals always have a lot more fixtures than in our tour show there, the delays are never as beautiful as they would be, they get ugly messy without symmetry or beginning and end ...This macro that I would like to have is almost the same as the result of the syntax below:Example:ClearAll; BlindEditGroup 2 + 3 + 4Store effect 1. \"Dimmer FX Solo\" .1 / oCleall AllGroup 51 + 53 + 4Store effect 1. \"Position FX\" .1 / oCleall AllGroup 51 + 53 + 4Store effect 1. \"Dimmer + Position FX\" .1 thru 2 / oCleall All; BlindEditonly to update and correct delays.mflte_mflight Wrote:-------------------------------------------------------> Hello enlightened friends !!!>> I would like to know how I can update the cues> that contain delay after a partial show read,> after cloning.>> I even created a macro, it is attached!> But after cloning the fixtutes that were cloned it> doesn't come the same it was for what I came / was> for you programmed.> can someone help me ... to say what is wrong in> the macro, or if anyone has any better suggestions> as to how this macro can be written?>> Thank you very much in advance.>> My cellphone / Whatsapp for contact: +55> 15998484048.> Maikon Francisco."
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "September 25, 2020 at 1:31 PM#8right. so I would basically set up macros to create presets that contain all the delay times that you need.so take your fixtures.store a preset with delay 0 thru .1clearstore a preset with delay 0 thru .25clearstore a preset with delay 0 thru .5clearstore a preset with delay 0 thru .1etc.then, if you are using those delays in executors, store them with that preset in those execs.take your fixturesat preset 0.\"0 thru .1\"store exec x.y cue zclearat preset 0.\"0 thru .25\"store exec x.y cue zclearetc."
+    },
+    {
+      "author": "mflte_mflight",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "October 13, 2020 at 10:25 PM#9Thanks friend for answering me, sorry for the delay to get in touch.Friend without wanting to abuse your goodwill, it would be like you could show me or write the syntax to resolve this issue.I thank you for your attention. thanks to disposition !!"
+    }
+  ],
   "replies": 0,
   "thread_id": "66092",
   "title": "Update Delays in the list cues after PSR and / or Clone",

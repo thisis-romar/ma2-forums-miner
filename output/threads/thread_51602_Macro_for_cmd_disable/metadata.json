@@ -3,6 +3,32 @@
   "author": "victorgoransson",
   "post_date": null,
   "post_text": "March 1, 2016 at 6:40 PM#1Hi!I am looking for a way to turn on and off \"cmd disable\" in an executor with a macro.Sometimes i want to use the cmd in my sequence and sometimes i dont..If theres a macro that can turn the \"cmd disable\" button on and off, i would be happy!Anyone got an ideas?",
+  "posts": [
+    {
+      "author": "victorgoransson",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 1, 2016 at 6:40 PM#1Hi!I am looking for a way to turn on and off \"cmd disable\" in an executor with a macro.Sometimes i want to use the cmd in my sequence and sometimes i dont..If theres a macro that can turn the \"cmd disable\" button on and off, i would be happy!Anyone got an ideas?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 1, 2016 at 7:36 PM#2Assign Exec x /cmddisable=(\"on or off\")"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 2, 2016 at 9:38 PM#3HiWrite \"list exec\" in your command line, you'll get all options and their commands and syntaxes"
+    },
+    {
+      "author": "victorgoransson",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 3, 2016 at 11:10 AM#4Thanks guys!Worked like a charm!"
+    }
+  ],
   "replies": 0,
   "thread_id": "51602",
   "title": "Macro for cmd disable",

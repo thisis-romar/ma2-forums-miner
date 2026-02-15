@@ -3,6 +3,32 @@
   "author": "glad",
   "post_date": null,
   "post_text": "February 17, 2022 at 5:02 PM#1This workflow can be used to find the correct syntax for changing settings/options usually operated by the GUI.Example: turn off/on webremote:open a commandline feedback window and type list to see the Root of the database,look for something that could hold web-remote settingse.g. #3 \"Settings\"type CD 3 to change commandline destination to Settingstype Listcheck for something that could hold web-remote settingse.g. #1 \"Global\"scroll sideways to see all properties of Globale.g.Remotes: Login Disabledenable web-remotes via GUIListe.g.Remotes: Login Enabledtry to change property via commandlineAssign 1 /Remotes=\"Login Disabled\"List to check that it worksAssign 1 /Remotes=\"Login Enabled\"List to check that it workswhen you know the Rootpath (Settings>Global), propertyname (Remotes) and values (\"Login Disabled\"/\"Login Enabled\")exit to Root with CD /doublecheck the pathList Root \"Settings\".\"Global\"create macros containingAssign Root \"Settings\".\"Global\" /Remotes=\"Login Disabled\"Assign Root \"Settings\".\"Global\" /Remotes=\"Login Enabled\"",
+  "posts": [
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 17, 2022 at 5:02 PM#1This workflow can be used to find the correct syntax for changing settings/options usually operated by the GUI.Example: turn off/on webremote:open a commandline feedback window and type list to see the Root of the database,look for something that could hold web-remote settingse.g. #3 \"Settings\"type CD 3 to change commandline destination to Settingstype Listcheck for something that could hold web-remote settingse.g. #1 \"Global\"scroll sideways to see all properties of Globale.g.Remotes: Login Disabledenable web-remotes via GUIListe.g.Remotes: Login Enabledtry to change property via commandlineAssign 1 /Remotes=\"Login Disabled\"List to check that it worksAssign 1 /Remotes=\"Login Enabled\"List to check that it workswhen you know the Rootpath (Settings>Global), propertyname (Remotes) and values (\"Login Disabled\"/\"Login Enabled\")exit to Root with CD /doublecheck the pathList Root \"Settings\".\"Global\"create macros containingAssign Root \"Settings\".\"Global\" /Remotes=\"Login Disabled\"Assign Root \"Settings\".\"Global\" /Remotes=\"Login Enabled\""
+    },
+    {
+      "author": "dahinn",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 23, 2022 at 5:29 PM#2Hi, Glad.Do you know the way to select Absolute or Universe Address in Patch Readout in the Setup?I can't figure out how to do it.Thanks."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 25, 2022 at 9:37 AM#3this is a user-dependent setting.if you dig into the userprofile, you should find this"
+    },
+    {
+      "author": "dahinn",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 27, 2022 at 8:42 AM#4Got it, thanks!"
+    }
+  ],
   "replies": 0,
   "thread_id": "67086",
   "title": "How to create a Macro that changes ......",

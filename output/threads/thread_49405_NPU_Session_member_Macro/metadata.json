@@ -3,6 +3,26 @@
   "author": "Jeffm436",
   "post_date": null,
   "post_text": "October 23, 2015 at 11:02 PM#1Looking for help to write a macro that turns on and off a NPU as a session member.  Any advice would be a great help.Thanks",
+  "posts": [
+    {
+      "author": "Jeffm436",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 23, 2015 at 11:02 PM#1Looking for help to write a macro that turns on and off a NPU as a session member.  Any advice would be a great help.Thanks"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 23, 2015 at 11:25 PM#2check out this post:http://ma-share.net/forum/read.php?8,45634,45635#msg-45635allthough the example given is for MSC, the described procedure applies for NPU sessionmembership or any other settings you want to change with a macro"
+    },
+    {
+      "author": "Jeffm436",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 24, 2015 at 1:25 AM#3Thanks worked through it.To make NPU an active session member code is: Assign Root 5.3.NPU /sessionmember=yesTo make NPU not an active session member code is: Assign Root 5.3.NPU /sessionmember=noIn the code change NPU to the name of the NPU you want in or out of the session."
+    }
+  ],
   "replies": 0,
   "thread_id": "49405",
   "title": "NPU Session member Macro",

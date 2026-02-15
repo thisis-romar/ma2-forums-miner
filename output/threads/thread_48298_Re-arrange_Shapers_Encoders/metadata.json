@@ -2,15 +2,30 @@
   "assets": [
     {
       "checksum": "sha256:75748c683abc37d6e71908579edf4e6352911dba6e573bda15219d1274e7c92f",
-      "download_count": 38,
+      "download_count": 47,
       "filename": "Arrange Shapers.xml",
+      "post_number": 1,
       "size": 1563,
       "url": "https://forum.malighting.com/file-download/3739/"
     }
   ],
   "author": "Duplicate Ryan Kanarek",
   "post_date": null,
-  "post_text": "August 17, 2015 at 7:14 PM#1New shows in v3.1 arrange the Shapers encoders as 1-4a, 1-4b. For those who would prefer the old arrangement (1a/b, 2a/b, 3a/b, 4a/b), you can use the attached macro to rearrange.Made in v3.1.1.1FilesArrange Shapers.xml1.56 kB – 38 Downloads",
+  "post_text": "August 17, 2015 at 7:14 PM#1New shows in v3.1 arrange the Shapers encoders as 1-4a, 1-4b. For those who would prefer the old arrangement (1a/b, 2a/b, 3a/b, 4a/b), you can use the attached macro to rearrange.Made in v3.1.1.1FilesArrange Shapers.xml1.56 kB – 47 Downloads",
+  "posts": [
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 17, 2015 at 7:14 PM#1New shows in v3.1 arrange the Shapers encoders as 1-4a, 1-4b. For those who would prefer the old arrangement (1a/b, 2a/b, 3a/b, 4a/b), you can use the attached macro to rearrange.Made in v3.1.1.1FilesArrange Shapers.xml1.56 kB – 47 Downloads"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 21, 2015 at 4:34 PM#2Thats a nice macro, thanks a lot!"
+    }
+  ],
   "replies": 0,
   "thread_id": "48298",
   "title": "Re-arrange Shapers Encoders",

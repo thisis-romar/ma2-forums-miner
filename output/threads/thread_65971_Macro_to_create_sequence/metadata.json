@@ -3,6 +3,38 @@
   "author": "Galactica",
   "post_date": null,
   "post_text": "August 14, 2020 at 10:35 AM#1Hello all,I was looking for help with a macro to create a sequence, ideally with pop ups asking ie:\"What seq number?\"\"What ch?\"\"What cue number?\"\"Label cue number xyz\"Thanks in advance",
+  "posts": [
+    {
+      "author": "Galactica",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 14, 2020 at 10:35 AM#1Hello all,I was looking for help with a macro to create a sequence, ideally with pop ups asking ie:\"What seq number?\"\"What ch?\"\"What cue number?\"\"Label cue number xyz\"Thanks in advance"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 14, 2020 at 3:07 PM#2setvar $seqnumber = (seq number?)store seq $seqnumber==not sure what you mean by ch? channel?==setvar $cuenumber = (cue number?)store seq $seqnumber cue $cuenumbersetvar $cuename = (\"cue name?\")label seq $seqnumber $\"cuename\"setvar $seqnumber = \"\"setvar $cuenumber = \"\"setvar $cuename = \"\"haven't checked this but it'll be something like this."
+    },
+    {
+      "author": "Galactica",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 14, 2020 at 3:13 PM#3i'll give it a try. Thanks Kai"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "August 17, 2020 at 7:35 PM#4Or without variables:- Store Sequence (what sequence number?) Cue (what cue number?) (\"label for cue?\")"
+    },
+    {
+      "author": "Galactica",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "August 18, 2020 at 4:19 PM#5Great thanks Ryan"
+    }
+  ],
   "replies": 0,
   "thread_id": "65971",
   "title": "Macro to create sequence",

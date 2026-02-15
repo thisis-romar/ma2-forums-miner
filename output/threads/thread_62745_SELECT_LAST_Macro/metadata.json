@@ -3,6 +3,26 @@
   "author": "cglx2021",
   "post_date": null,
   "post_text": "November 15, 2018 at 6:47 PM#1Hi everyone,Recent Eos to MA2 convert here, looking for help to create a Select Last macro. It's for those times I clear a selection or clear all, but want to re-select the previously cleared fixture/group/channel (but NOT the attributes I had in the programmer). It's like Oops but only for selection. So if I reconsider a color or gobo choice, I don't have to think \"oh which group was this?\" or have to search for the right fixture, I can just fire this macro and change what I want. And preferably, like Oops, it goes back a little in ways in command history. A little knitpicky I know.If anyone has any insight into this, I'd appreciate it, thanks!-Chris",
+  "posts": [
+    {
+      "author": "cglx2021",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 15, 2018 at 6:47 PM#1Hi everyone,Recent Eos to MA2 convert here, looking for help to create a Select Last macro. It's for those times I clear a selection or clear all, but want to re-select the previously cleared fixture/group/channel (but NOT the attributes I had in the programmer). It's like Oops but only for selection. So if I reconsider a color or gobo choice, I don't have to think \"oh which group was this?\" or have to search for the right fixture, I can just fire this macro and change what I want. And preferably, like Oops, it goes back a little in ways in command history. A little knitpicky I know.If anyone has any insight into this, I'd appreciate it, thanks!-Chris"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 15, 2018 at 7:19 PM#2You would need to have a macro that stores to a dummy group andthenclears. Then you could recall the dummy group. If you wanted to be able to go backwards a few, you'd need to use a few dummy groups and have the macro keep track of which it was storing to.Alternatively, you could keep MA 3D in session on a laptop next to you, logged into the same user as you, with Keep Selection enabled in 3D. Then you could use the <left arrow> button on the left side of the top toolbar to step backwards through your selections."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 27, 2018 at 9:57 PM#3HiIf you did Group 1, or Fixture x thru y, just use the up arrow to go back in what you wrote in the command line, till your selection command.it doesn't work with layout view."
+    }
+  ],
   "replies": 0,
   "thread_id": "62745",
   "title": "SELECT LAST Macro",

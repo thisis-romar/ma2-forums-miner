@@ -3,6 +3,26 @@
   "author": "wburnss",
   "post_date": null,
   "post_text": "October 15, 2018 at 8:20 AM#1Hello,how can I assign a command to a macro line like this one :as ma 1.\"macro_name\".1 /cmd=\"of ex \"executor_name\" \"the problem is the double quote.thanks.",
+  "posts": [
+    {
+      "author": "wburnss",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 15, 2018 at 8:20 AM#1Hello,how can I assign a command to a macro line like this one :as ma 1.\"macro_name\".1 /cmd=\"of ex \"executor_name\" \"the problem is the double quote.thanks."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 15, 2018 at 5:01 PM#2you cannot...consider using a naming scheme for your execs which doesn't require quotes (no spaces, and no keyword abbreviations in name)as ma 1.\"macro_name\".1 /cmd=\"of ex executor_name\""
+    },
+    {
+      "author": "wburnss",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 16, 2018 at 8:02 AM#3Thanks Glad,You give me a clue to make the job (replace space by underscore)."
+    }
+  ],
   "replies": 0,
   "thread_id": "62523",
   "title": "assign cmd",

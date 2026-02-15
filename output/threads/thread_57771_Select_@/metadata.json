@@ -3,6 +3,26 @@
   "author": "jfguedes",
   "post_date": null,
   "post_text": "March 23, 2017 at 12:23 PM#1Hi,I'm trying to do a macro for the selected executor starting with the line:Select @If I do a single line macro it works perfectly (it works if I press any off the executor buttons) but if I add a line more it only works if, after executing the macro, I press the \"Mini Executor Dialog\".Am I missing something? Is there a workarround for this?Thank you in advance,J.",
+  "posts": [
+    {
+      "author": "jfguedes",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 23, 2017 at 12:23 PM#1Hi,I'm trying to do a macro for the selected executor starting with the line:Select @If I do a single line macro it works perfectly (it works if I press any off the executor buttons) but if I add a line more it only works if, after executing the macro, I press the \"Mini Executor Dialog\".Am I missing something? Is there a workarround for this?Thank you in advance,J."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 23, 2017 at 4:37 PM#2please post the other lines, and let us know what you expect to happen.."
+    },
+    {
+      "author": "jfguedes",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 24, 2017 at 10:16 AM#3Thank you Glad for your answer.I'll try to explain it better:Option 1MacroLine 1: [color=#33CC00]select[/color] @Action: execute macro then [color=#33CC00]ExecButton1[/color] or 2 or 3 of new executor to select.Behavior:Executor is selectedOption 2MacroLine 1: [color=#33CC00]select[/color] @MacroLine 2: [color=#33CC00]DefGoForward[/color] (for example, it happens with any command or empty line)Action: execute macro then [color=#33CC00]ExecButton1[/color] or 2 or 3 of new executor to select.Behavior: Newexecutor is not selected. Second line is executed on selected executor.Workarround: execute macro then press the \"Mini Executor Dialog\" of new executor to select.Behavior with workarround:Executor is selectedI've just tried it on a console (Light) and it works fine. This seems to happen only on OnPC (tested on 2 different computers).Thank you in advance,J."
+    }
+  ],
   "replies": 0,
   "thread_id": "57771",
   "title": "Select @",

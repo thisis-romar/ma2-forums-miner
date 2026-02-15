@@ -3,6 +3,20 @@
   "author": "mattehalen",
   "post_date": null,
   "post_text": "March 22, 2018 at 12:07 AM#1Is it possible to have Macros that chose the different Camera modes ( Select, Move, Orbit, Panning, Zoom )??ImagesStage View alt.jpg131.73 kB1,198 × 654",
+  "posts": [
+    {
+      "author": "mattehalen",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 22, 2018 at 12:07 AM#1Is it possible to have Macros that chose the different Camera modes ( Select, Move, Orbit, Panning, Zoom )??ImagesStage View alt.jpg131.73 kB1,198 × 654"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 23, 2018 at 9:28 PM#2The camera mode is stored in the view. Have different views with the different camera modes selected, and then use the macro to change between them."
+    }
+  ],
   "replies": 0,
   "thread_id": "60942",
   "title": "Stage View - Select, Move, Orbit, Panning, Zoom,",

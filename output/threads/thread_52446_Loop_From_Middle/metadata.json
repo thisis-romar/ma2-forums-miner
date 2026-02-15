@@ -3,6 +3,32 @@
   "author": "Buzz313th",
   "post_date": null,
   "post_text": "April 13, 2016 at 3:51 PM#1These command lines work to loop a macro from the first macro linefixture 1 at 10         2.0fixture 1 at 20         2.0fixture 1 at 30         2.0top macro 1            2.0But when I try to loop a macro from any line below the top, skipping the first line it does not continue the loop, such as.fixture 1 at 10         2.0fixture 1 at 20         2.0fixture 1 at 30         2.0goto macro 1.1.2     2.0Thanks",
+  "posts": [
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 13, 2016 at 3:51 PM#1These command lines work to loop a macro from the first macro linefixture 1 at 10         2.0fixture 1 at 20         2.0fixture 1 at 30         2.0top macro 1            2.0But when I try to loop a macro from any line below the top, skipping the first line it does not continue the loop, such as.fixture 1 at 10         2.0fixture 1 at 20         2.0fixture 1 at 30         2.0goto macro 1.1.2     2.0Thanks"
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 13, 2016 at 5:07 PM#2Hi!Exactly! What is the question?If I want to jump to any other line inside a macro I just set a condition inside a user-variable and make conditional statements into the lines to be skipped, just like:--------------setvar $loop = -1[$loop==-1] fixture 1[$loop==-1] fixture 2fixture 3setuservar $loop = 3top macro 1--------------This works because the macro looks for a uservar with the given name. If none is specified the macro looks after a global variable with the given name. Thus resulting for the first run from line 1 in $loop as a global var with value == -1 in executing fixture 1 and fixture 2 (condition in bracket is true). After setting a uservar with the same name $loop and jumping to top of the macro the macro sees the value $loop == 3 and therefor skips the two lines fixture 1 and 2.A very ugly workaround but I don't see any better way until MA will offer some more commands like goto inside macros.Or any other ideas?RegardsGralf"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 13, 2016 at 10:44 PM#3to make a loop in macro:1.my first line2.my 2d line3.my 3rd line4.[my condition==true] go macro 1.1.2 thru 4 [my condition==false] go macro 1.1.55.my 5th line (skip the loop and continue macro)"
+    },
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 22, 2016 at 5:52 PM#4Thanks..Will give this a try"
+    }
+  ],
   "replies": 0,
   "thread_id": "52446",
   "title": "Loop From Middle",

@@ -3,6 +3,26 @@
   "author": "MetalMaarten",
   "post_date": null,
   "post_text": "March 6, 2015 at 7:15 PM#1Hi all,I would like to use the name text from a que in my macro. What is the syntax for this? So for example, I would like to fill a variable with the name text of cue 100 of the selected executor. Been searching here in the forum, but couldn't find an aswer so far.Thanks!Maarten",
+  "posts": [
+    {
+      "author": "MetalMaarten",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 6, 2015 at 7:15 PM#1Hi all,I would like to use the name text from a que in my macro. What is the syntax for this? So for example, I would like to fill a variable with the name text of cue 100 of the selected executor. Been searching here in the forum, but couldn't find an aswer so far.Thanks!Maarten"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 6, 2015 at 11:53 PM#2this is not possible.there is no commandlinesyntax for extracting data into variables."
+    },
+    {
+      "author": "MetalMaarten",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 11, 2015 at 10:10 PM#3Thanks Glad. Too bad this is not possible."
+    }
+  ],
   "replies": 0,
   "thread_id": "45636",
   "title": "Extract text",

@@ -3,6 +3,20 @@
   "author": "Vonder",
   "post_date": null,
   "post_text": "April 28, 2020 at 2:38 AM#1Hello, I'm trying to create a macro that will change fader pages on two different desks using different users and user profiles. Is this possible?",
+  "posts": [
+    {
+      "author": "Vonder",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 28, 2020 at 2:38 AM#1Hello, I'm trying to create a macro that will change fader pages on two different desks using different users and user profiles. Is this possible?"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 28, 2020 at 2:48 PM#2presumably the easiest way to do it is to send a remotecommand to the other desk.so set your fader page on your current user/deskfaderpage xthen send the other station a command for the different faderpageremotecommand 192.168.0.x faderpage y"
+    }
+  ],
   "replies": 0,
   "thread_id": "65605",
   "title": "Switching fader pages across different users",

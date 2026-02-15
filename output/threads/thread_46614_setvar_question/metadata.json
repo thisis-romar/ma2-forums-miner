@@ -3,6 +3,20 @@
   "author": "NiceG2000",
   "post_date": null,
   "post_text": "May 12, 2015 at 9:20 PM#1I have been pondering for awhile a way to make an effective macro to turn everything else off except for the page I am on. Right now I have a 40+ line macro that turns everything off by name. I have been told you can use SetVar to make the line shorter. How would your write,\" set the variable to \"johnny be good\" if not \"johnny be good\" turn off\" ? When I add new pages I don't want to have to write  40+ line macro. Thanks.",
+  "posts": [
+    {
+      "author": "NiceG2000",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 12, 2015 at 9:20 PM#1I have been pondering for awhile a way to make an effective macro to turn everything else off except for the page I am on. Right now I have a 40+ line macro that turns everything off by name. I have been told you can use SetVar to make the line shorter. How would your write,\" set the variable to \"johnny be good\" if not \"johnny be good\" turn off\" ? When I add new pages I don't want to have to write  40+ line macro. Thanks."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 12, 2015 at 10:57 PM#2there are several ways to approach this.turning off executors, rather than pages, using wildcard (*)turn off executors with any page-name and any executor-name (Executor *.* ) but not executor with any name on current page (Executor *)CodeOff Executor *.* - Executor *or you could use one of the inbuilt variables $faderpage or $buttonpage which reflects your current page(s)e.gCodeOff Page 1 Thru 100 - $faderpage"
+    }
+  ],
   "replies": 0,
   "thread_id": "46614",
   "title": "setvar question",

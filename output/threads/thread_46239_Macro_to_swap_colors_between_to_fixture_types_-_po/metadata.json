@@ -3,6 +3,20 @@
   "author": "kicksled",
   "post_date": null,
   "post_text": "April 16, 2015 at 2:53 AM#1Hi guys!I'm very new to MA and lighting in general, and I have a question that may sound strange. At the venue I'm working at we have 2 types of wash lights (MAC 301 and LED PAR cans), both RGB LED with MixColor as preferred colormode.I find that in some cases when I busk shows I would liked to have the color swap, so the color scheme is the same, but the colors changes fixture. And instead of setting up a bunch of pallets for this, or have to select each group and color, I was wondering if it possible to program a macro that can do this with one click? Indepentend of which color presets that are selected for each fixture type.It well may be that it is a stupid newbie question, but hey, I'm a newbieThanks in advance!",
+  "posts": [
+    {
+      "author": "kicksled",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 16, 2015 at 2:53 AM#1Hi guys!I'm very new to MA and lighting in general, and I have a question that may sound strange. At the venue I'm working at we have 2 types of wash lights (MAC 301 and LED PAR cans), both RGB LED with MixColor as preferred colormode.I find that in some cases when I busk shows I would liked to have the color swap, so the color scheme is the same, but the colors changes fixture. And instead of setting up a bunch of pallets for this, or have to select each group and color, I was wondering if it possible to program a macro that can do this with one click? Indepentend of which color presets that are selected for each fixture type.It well may be that it is a stupid newbie question, but hey, I'm a newbieThanks in advance!"
+    },
+    {
+      "author": "Rivieroscope",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 23, 2015 at 4:25 AM#2Hi ,, not really sure to understand what you want but :Open a Window in Ma2 selected other and choose color picker , with this preset when you choose different type of fixtures it attribute the same color for all . You have to choose predefined colors or hsb etc ... on the top-right window .Hope it will help you."
+    }
+  ],
   "replies": 0,
   "thread_id": "46239",
   "title": "Macro to swap colors between to fixture types - possible?",

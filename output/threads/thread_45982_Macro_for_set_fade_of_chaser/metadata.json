@@ -3,6 +3,38 @@
   "author": "bartr",
   "post_date": null,
   "post_text": "March 25, 2015 at 7:21 PM#1Hello everyone,I'm searching for a macro to set all my fade (%) of all chasers.What i tried but didn't worked:- setuservar$ fade execbutton1 (buttons begin) thru exexbutton1 (buttons end) at (fadetime?)Anyone a solution?Thanks for reading.Greets",
+  "posts": [
+    {
+      "author": "bartr",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 25, 2015 at 7:21 PM#1Hello everyone,I'm searching for a macro to set all my fade (%) of all chasers.What i tried but didn't worked:- setuservar$ fade execbutton1 (buttons begin) thru exexbutton1 (buttons end) at (fadetime?)Anyone a solution?Thanks for reading.Greets"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 26, 2015 at 7:50 PM#2stepfade is a playbackproperty of a chase. it may be adjusted with a stepfade fader.a commandline solution could go like this:CodeSetvar $fromexec = (\"from Executor\")Setvar $toexec = (\"to Executor\")Setvar $sfade = (\"stepfade percent\")Assign StepFade At Executor $fromexec Thru $toexecExecutor $fromexec Thru $toexec At $sfadeOops /ncinput from,to, fadeassign a stepfade master to the given executorsadjust the master to the given faderevert the faderfunction back to whatever it was, via oops.(the actual adjusment of the stepfade is a playbackaction an is not part of the oops/undo-stack)"
+    },
+    {
+      "author": "bartr",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 29, 2015 at 3:21 PM#3Thanks.But if I do it like that and store it on a fader, the fader goes to 100.But I only need the stepfade to change and not the masterfader."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "November 29, 2015 at 9:34 PM#4works for me - no need to store it on a physical fader, both buttonexecutors and fader-executors.Nevertheless, this is an old thread, with the latest version, playbackproperties like stepfade may be directly adjusted with the commandline, no need to change the function of the fader and then adjust the faderCodeStepfade x Executor y thru z"
+    },
+    {
+      "author": "Sander de Graaf",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "December 22, 2015 at 7:02 PM#5Select Fader 14.104SpecialMaster At 0gives you 0% crossfade.SpecialMaster At 10gives you 100% crossfade"
+    }
+  ],
   "replies": 0,
   "thread_id": "45982",
   "title": "Macro for set fade of chaser",

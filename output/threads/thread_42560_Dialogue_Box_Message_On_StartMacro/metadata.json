@@ -3,6 +3,26 @@
   "author": "stevenmorgan94",
   "post_date": null,
   "post_text": "July 17, 2014 at 10:55 PM#1Random request, but I'm looking for a pop up window displaying information (custom written info) to pop up either when the console starts, or if that isn't an option, when a Macro is hit.We have occasional volunteers running the board, so when they start it I'd like them to see a quick checklist of things to do.",
+  "posts": [
+    {
+      "author": "stevenmorgan94",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 17, 2014 at 10:55 PM#1Random request, but I'm looking for a pop up window displaying information (custom written info) to pop up either when the console starts, or if that isn't an option, when a Macro is hit.We have occasional volunteers running the board, so when they start it I'd like them to see a quick checklist of things to do."
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 17, 2014 at 11:21 PM#2I dont think there is an option to do this, what you could do is to make a layout view with a custom written text in it, save your show with that layout on screen, shut down console and when restarting the console the latest state of the console will be loaded, so your message should be seen, other option is to put a handwritten note at the desk"
+    },
+    {
+      "author": "Duplicate pyroaxel",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 18, 2014 at 9:53 AM#3For a short notice you can do this:Put a macro in start up (you find it in Setup, Playback+MIBtiming)Just make a pop up macro line like (\"good morning\")"
+    }
+  ],
   "replies": 0,
   "thread_id": "42560",
   "title": "Dialogue Box Message On Start/Macro",

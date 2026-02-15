@@ -3,6 +3,44 @@
   "author": "SaraW.LGN",
   "post_date": null,
   "post_text": "August 1, 2017 at 4:01 AM#1hi all,I've made a macro to change forms for effects through macros :assign form 5 @and then i select the effect.problem is, it shows up in cmd line and i have to enter \"please\" manually for changes to take effect.i would like to use this macro during busk shows where i can change forms on the fly, along with grps,blocks, etc.my cues will be stored with selective effects, so i just have to change the variables.if anyone knows how to workaround the cmd line or a better solution, do reply.. it seems like a simple solution though i just cant figure it out right now. thanks alot in advance for any advise!",
+  "posts": [
+    {
+      "author": "SaraW.LGN",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 1, 2017 at 4:01 AM#1hi all,I've made a macro to change forms for effects through macros :assign form 5 @and then i select the effect.problem is, it shows up in cmd line and i have to enter \"please\" manually for changes to take effect.i would like to use this macro during busk shows where i can change forms on the fly, along with grps,blocks, etc.my cues will be stored with selective effects, so i just have to change the variables.if anyone knows how to workaround the cmd line or a better solution, do reply.. it seems like a simple solution though i just cant figure it out right now. thanks alot in advance for any advise!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 2, 2017 at 1:27 AM#2this should do the job:CodeCD @Assign Form 5 At *Assign * /blocks=2CD /"
+    },
+    {
+      "author": "SaraW.LGN",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 2, 2017 at 1:12 PM#3yes, that worked beautiful. thank you very much!"
+    },
+    {
+      "author": "SaraW.LGN",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "August 2, 2017 at 4:14 PM#4hi, so i have one more question.once the effect has been assign to an exec, or execbutton, the macro line will not work for it.my example is this :i have made dimmer stacks for diff fixtures with dimmer cues for rig, floor etc. that will trigger macros, only selecting ifoutput fix in that cue and storing in the respective fixture dim fxs. the cd @ macro works very well with this since i ony have 6 diff fixtypes, and only need to open a small fx window for it, along with my execbuttons window.however, pos fx has pan/tilt/circ/fly, then with the cd @ macro i can assign forms/grps etc, but i need to open up the fx window, and lose out not having big execbutton window.my question is this.. is there a way to assign form etc on fxs assigned to execbuttons? like selfix, but for fx?or rather, in a more broad spectrum, how do i pull out fx from assigned fx execbuttons or even sequence and cues, and proceed to assign the variables?thank you for your time and knowledge!"
+    },
+    {
+      "author": "nrgsille",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "October 2, 2017 at 9:00 PM#5CodeAssign Form * At Effect *.*That worked for me. I Made a macro for each Effect that I wanted to change the Form and severe lines in the macro for different formsVisit my website to get nice 3D fixture profiles for grandMA2 and dot2NRGSille Lighting Design"
+    },
+    {
+      "author": "jfarrow",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "October 20, 2017 at 3:39 PM#6This may be related to selective effects versus template effects.If you use a template effect to create playback data in an executor, the effect data becomes absolute (no reference to the original template). So if you use a macro to change the template, your executor doesn't contain a reference to the newly updated form in your template.If instead you use a selective effect, the executor references the effect pool each time the effect is called; so modifications by your macro to the effects pool will be reflected in playback."
+    }
+  ],
   "replies": 0,
   "thread_id": "59155",
   "title": "assign effect forms through macro for live shows",

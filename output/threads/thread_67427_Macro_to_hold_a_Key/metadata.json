@@ -3,6 +3,26 @@
   "author": "Teani Filippo",
   "post_date": null,
   "post_text": "November 5, 2022 at 1:52 PM#1Hello everybodyI would need a macro that holds down a key (in this case Select).How can I do?",
+  "posts": [
+    {
+      "author": "Teani Filippo",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 5, 2022 at 1:52 PM#1Hello everybodyI would need a macro that holds down a key (in this case Select).How can I do?"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 20, 2022 at 2:14 PM#2You can't."
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 5, 2022 at 12:53 PM#3you use canbus for thisexample:macro line 1lua 'gma.canbus.hardkey(\"42\", true, false)'macro line 2lua 'gma.canbus.hardkey(\"42\", false, false)'and it will act as a toggle for holding the select key."
+    }
+  ],
   "replies": 0,
   "thread_id": "67427",
   "title": "Macro to hold a Key",

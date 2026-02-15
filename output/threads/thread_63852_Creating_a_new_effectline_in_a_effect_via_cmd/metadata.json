@@ -3,6 +3,26 @@
   "author": "Jemx",
   "post_date": null,
   "post_text": "May 2, 2019 at 8:37 PM#1Hey guys,does anyone know, how to create a new effectline inside a effect and how to assign a attribute to it purely via the cmd?I know that i can access a existing line by using e.g.CodeAssign Effect 1.1.1 /rate=0.25but i cant figure out, how to crate a new one and how to assign/change the attribute of a line.Thanks in advance!",
+  "posts": [
+    {
+      "author": "Jemx",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 2, 2019 at 8:37 PM#1Hey guys,does anyone know, how to create a new effectline inside a effect and how to assign a attribute to it purely via the cmd?I know that i can access a existing line by using e.g.CodeAssign Effect 1.1.1 /rate=0.25but i cant figure out, how to crate a new one and how to assign/change the attribute of a line.Thanks in advance!"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 3, 2019 at 10:04 PM#2HiStore Effect 15Store Effect 1.15.1Assign Attribute \"dim\" Effect 1.15.1Assign Form \"Cos\" Effect 1.15.1Assign SM 3.1 Effect 15Assign Effect 15 /phase=0..360 /groups=2"
+    },
+    {
+      "author": "Jemx",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 4, 2019 at 3:53 PM#3Thank you very much!"
+    }
+  ],
   "replies": 0,
   "thread_id": "63852",
   "title": "Creating a new effectline in a effect via cmd",

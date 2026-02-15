@@ -3,6 +3,56 @@
   "author": "luc@actld",
   "post_date": null,
   "post_text": "September 28, 2018 at 11:11 AM#1Hi allquick question:someone have ever build a macro for mirroring a position of one fixture to an other one?? (or from one to an other one)flip is not really useful.kind regards",
+  "posts": [
+    {
+      "author": "luc@actld",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 28, 2018 at 11:11 AM#1Hi allquick question:someone have ever build a macro for mirroring a position of one fixture to an other one?? (or from one to an other one)flip is not really useful.kind regards"
+    },
+    {
+      "author": "Duplicate christof",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 28, 2018 at 2:23 PM#2TrySelect fixturesAttribute \"pan\" At * -1Christof"
+    },
+    {
+      "author": "luc@actld",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 28, 2018 at 6:06 PM#3Graziework fine"
+    },
+    {
+      "author": "pan_ilford",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "December 30, 2018 at 12:12 PM#4I need just the same. Mirror PAN of fixture 1 to fixture 2 and I just can't get the result. Maybe that's a syntax error or other glitch on my side. I'd like to know what exactly should I put to command line to mirror PAN of fixture 1 to fixture 2. Tanks"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "December 31, 2018 at 4:23 PM#5You have to have fixture 2 selected first. Then say:At Fixture 1 If Attribute \"Pan\"Then say:Attribute \"Pan\" At * -1"
+    },
+    {
+      "author": "pan_ilford",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "January 8, 2019 at 3:21 PM#6thank you for clarifying this to me"
+    },
+    {
+      "author": "Ronnie Hulshof",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "May 4, 2019 at 10:11 PM#7if i try this my fixtures go to Centre instead of the mirror position"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "May 5, 2019 at 1:03 AM#8HiBe sure your pan value is between -270 and 270, not 0 thru 100.ReadOut Natural or Physical"
+    }
+  ],
   "replies": 0,
   "thread_id": "62413",
   "title": "Mirror position of a fixture",

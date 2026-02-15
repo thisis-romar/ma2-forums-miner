@@ -3,6 +3,32 @@
   "author": "ressi",
   "post_date": null,
   "post_text": "June 27, 2014 at 5:35 PM#1Hi everyone,since version 3.0  i have a problem with a macro i'm using.The macro stores several color sequences with the following syntax:Group $ColSeqFixture At Preset \"Cyan\"When executing the command line says \"Error #14: Object does not exist\". But indeed the color preset does exists.I did not find anything in the release notes.Anyone has an idea?Actually i don't want to use preset numbers for this macro because i don't always use the same numbers for my colors.Thanks a lotressi",
+  "posts": [
+    {
+      "author": "ressi",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 27, 2014 at 5:35 PM#1Hi everyone,since version 3.0  i have a problem with a macro i'm using.The macro stores several color sequences with the following syntax:Group $ColSeqFixture At Preset \"Cyan\"When executing the command line says \"Error #14: Object does not exist\". But indeed the color preset does exists.I did not find anything in the release notes.Anyone has an idea?Actually i don't want to use preset numbers for this macro because i don't always use the same numbers for my colors.Thanks a lotressi"
+    },
+    {
+      "author": "ressi",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 27, 2014 at 6:36 PM#2Hi again,i don't know why but i tried again and it works.The only thing that has changed is that i added two extra lines to turn BlindEdit on and off.As far as i look at my cmd history i tried to assign a preset by using a name. After i saw that it is working i tried out the macro again and it worked."
+    },
+    {
+      "author": "RomanP",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "June 28, 2014 at 7:53 AM#3Hi,we had also problems with some macros that uses Presets by Name.i think you must use a *try thisGroup $ColSeqFixture At Preset *.\"Cyan\"for us it worked soSorry for my bad english"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "July 1, 2014 at 12:29 AM#4Roman is right, with version 3:CodePreset \"Cyan\"will search the pool of the current/selected presettype for a preset labeled \"Cyan\"CodePreset *.\"Cyan\"will search all preset pools for a preset labeled \"Cyan\"CodePreset 4.\"Cyan\"orCodePreset \"Color\".\"Cyan\"will search the color preset pool for a preset labeled \"Cyan\""
+    }
+  ],
   "replies": 0,
   "thread_id": "42275",
   "title": "Store Preset Macro with Name",

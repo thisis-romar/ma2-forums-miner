@@ -3,6 +3,20 @@
   "author": "da960572",
   "post_date": null,
   "post_text": "January 12, 2018 at 7:37 AM#1Hi,I set the Clock at timecode mode.Is it possible possible to make a macro to enable play the timecode clock?Vincent2018.1.12",
+  "posts": [
+    {
+      "author": "da960572",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 12, 2018 at 7:37 AM#1Hi,I set the Clock at timecode mode.Is it possible possible to make a macro to enable play the timecode clock?Vincent2018.1.12"
+    },
+    {
+      "author": "da960572",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 13, 2018 at 2:09 PM#2I seem find out the way.Not sure 100% sure.It should enable TC slot X and Timecode which respose to TC Slot X.So far what I  did is Select Tomecode and play first.Then press the macro:a. Go TimecodeSlot (TC Slot ?)b. Midinote 1.1 127 --->trigger Qlab sound trackIt should be more efficiency to combine:Select Timecode  and Play.If any efficiency way will appreciate.Vincent"
+    }
+  ],
   "replies": 0,
   "thread_id": "60441",
   "title": "How to enable clock play in timecode mode",

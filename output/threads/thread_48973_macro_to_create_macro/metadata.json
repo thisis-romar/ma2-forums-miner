@@ -3,6 +3,26 @@
   "author": "Luminate",
   "post_date": null,
   "post_text": "September 28, 2015 at 5:45 PM#1Hello,I want to create a macro that creates a set of other macros to edit groups of blocks for effects. I've got the uservar part but now i need the part to write the different lines of the macro. I know the code for the different lines but I don't know how to write is to the different lines. Does anyone know how this works?",
+  "posts": [
+    {
+      "author": "Luminate",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 28, 2015 at 5:45 PM#1Hello,I want to create a macro that creates a set of other macros to edit groups of blocks for effects. I've got the uservar part but now i need the part to write the different lines of the macro. I know the code for the different lines but I don't know how to write is to the different lines. Does anyone know how this works?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 28, 2015 at 6:09 PM#2this is only possible if your macrolines does not need to contain quotesStore 1.macro.macrolineAssign 1.macro.macroline /cmd=\"macro line content\"e.g. possible:Channel 1 at 50CodeStore Macro 1.2.1Assign Macro 1.2.1 /cmd=\"Channel 1 at 50\"e.g. not possible:Label Group 1 \"Blue Pars\"CodeStore Macro 1.2.1Assign Macro 1.2.1 /cmd=\"Label Group 1 \"[color=#FF0000]Blue Pars\"\"[/color]"
+    },
+    {
+      "author": "Luminate",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 28, 2015 at 6:17 PM#3Thank you the command works for this case!"
+    }
+  ],
   "replies": 0,
   "thread_id": "48973",
   "title": "macro to create macro",

@@ -3,6 +3,26 @@
   "author": "robk82",
   "post_date": null,
   "post_text": "January 28, 2019 at 3:54 PM#1I'm attempting to store a cue on an executor with a macro. I know how to make it do everything I want except to change the buttons. I've tried /button1=emptyAm I on the right track?",
+  "posts": [
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 28, 2019 at 3:54 PM#1I'm attempting to store a cue on an executor with a macro. I know how to make it do everything I want except to change the buttons. I've tried /button1=emptyAm I on the right track?"
+    },
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 28, 2019 at 5:55 PM#2Got it..It'sAssign [function] At Execbutton1 [executor]"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 28, 2019 at 6:00 PM#3http://help2.malighting.com/Page/grandMA2/…header_anchor_6"
+    }
+  ],
   "replies": 0,
   "thread_id": "63263",
   "title": "Assign / change exec buttons",

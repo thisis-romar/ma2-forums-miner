@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:c6dcead5d161b04715f4163be64bb67442898acce29f42a0e7ccce832821475e",
-      "download_count": 613,
+      "download_count": 626,
       "filename": "Desktop.zip",
+      "post_number": 2,
       "size": 230022,
       "url": "https://forum.malighting.com/file-download/3745/"
     }
@@ -11,6 +12,32 @@
   "author": "waiwai8890",
   "post_date": null,
   "post_text": "August 19, 2015 at 6:22 AM#1i want to set the touchosc with MA2 in my ipadAll hardkey can setup and controlbut the Encoder for pan / tilt  can't to sethow can i do?thx all",
+  "posts": [
+    {
+      "author": "waiwai8890",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 19, 2015 at 6:22 AM#1i want to set the touchosc with MA2 in my ipadAll hardkey can setup and controlbut the Encoder for pan / tilt  can't to sethow can i do?thx all"
+    },
+    {
+      "author": "anlighting",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 21, 2015 at 11:54 AM#2http://ma-share.net/forum/read.php?8,30983FilesDesktop.zip230.02 kB – 626 Downloads"
+    },
+    {
+      "author": "waiwai8890",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 27, 2015 at 4:37 AM#3yesi want to do thisin picture have encoders funtionbut in my ma2onpc part of midiremotecmd part how to set?"
+    },
+    {
+      "author": "skear",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 16, 2015 at 9:36 PM#4You can write in google touchosc for ma-light and watch first link on youtube."
+    }
+  ],
   "replies": 0,
   "thread_id": "48326",
   "title": "How to set Encoders control with touchosc?",

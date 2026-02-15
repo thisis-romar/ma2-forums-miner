@@ -3,6 +3,26 @@
   "author": "Duplicate bentoylight",
   "post_date": null,
   "post_text": "April 21, 2017 at 1:18 PM#1HiI've noticed a strange behavior.I can do assign fixture 1.1 /posx=10, then it changes in setup my position x for fixture 1 (and its subfixture 1), but it doesn't change in stage view nore in fixture properties (list fixture 1) until i reload my show.Is there an explanation ?Thanks.",
+  "posts": [
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 21, 2017 at 1:18 PM#1HiI've noticed a strange behavior.I can do assign fixture 1.1 /posx=10, then it changes in setup my position x for fixture 1 (and its subfixture 1), but it doesn't change in stage view nore in fixture properties (list fixture 1) until i reload my show.Is there an explanation ?Thanks."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 21, 2017 at 1:30 PM#2http://www.ma-share.net/forum/read.php…56341#msg-56341"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 21, 2017 at 1:51 PM#3Thank you Glad.It's a strange way..."
+    }
+  ],
   "replies": 0,
   "thread_id": "58206",
   "title": "Assign fixture 1.1 /posx= weird behavior",

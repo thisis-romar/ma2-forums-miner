@@ -3,6 +3,26 @@
   "author": "robk82",
   "post_date": null,
   "post_text": "October 27, 2018 at 7:51 PM#1I'm having trouble remembering how to run individual lines of a macro. I want to fire line 2 of a macro I created within a sequence. Can someone help me?Cheers!",
+  "posts": [
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 27, 2018 at 7:51 PM#1I'm having trouble remembering how to run individual lines of a macro. I want to fire line 2 of a macro I created within a sequence. Can someone help me?Cheers!"
+    },
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 27, 2018 at 9:32 PM#2I remembered!it'sGo Macro 1.\"MacroName\". whatever line you want."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 5, 2018 at 3:42 PM#3HiYou don't need Go, as it is the default keyword for macromacro 1.\"macro\".line"
+    }
+  ],
   "replies": 0,
   "thread_id": "62585",
   "title": "Run individual lines of a single macro",

@@ -3,6 +3,20 @@
   "author": "francoisvdm2000",
   "post_date": null,
   "post_text": "March 7, 2017 at 2:25 PM#1Hello,I have a macro with different variable and condition.When i play the first time the macro it's run perfect.My problem, after the second time, the desk have in memory some variable. And use it, also if the condition is not good this time because, the desk have a condition in memory.So question, how can i remove the variable in memoryThank's in avdvance.",
+  "posts": [
+    {
+      "author": "francoisvdm2000",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 7, 2017 at 2:25 PM#1Hello,I have a macro with different variable and condition.When i play the first time the macro it's run perfect.My problem, after the second time, the desk have in memory some variable. And use it, also if the condition is not good this time because, the desk have a condition in memory.So question, how can i remove the variable in memoryThank's in avdvance."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 7, 2017 at 2:42 PM#2http://help.malighting.com/view/ihelp/#S_…word_SetUserVar"
+    }
+  ],
   "replies": 0,
   "thread_id": "57471",
   "title": "Reset of the user variable",

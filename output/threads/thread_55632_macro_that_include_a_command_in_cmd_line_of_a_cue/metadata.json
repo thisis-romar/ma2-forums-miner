@@ -3,6 +3,38 @@
   "author": "Alejandro Sayavera Solis",
   "post_date": null,
   "post_text": "October 26, 2016 at 6:28 PM#1Hi guys im working in a macro who generate a executor with 3 cues, i need writte a line in my macro that generate in the cmd of my cue 3 this order \"off executor\" somebody have any idea how can i make it ? thanks to everyone",
+  "posts": [
+    {
+      "author": "Alejandro Sayavera Solis",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 26, 2016 at 6:28 PM#1Hi guys im working in a macro who generate a executor with 3 cues, i need writte a line in my macro that generate in the cmd of my cue 3 this order \"off executor\" somebody have any idea how can i make it ? thanks to everyone"
+    },
+    {
+      "author": "Alejandro Sayavera Solis",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 26, 2016 at 6:47 PM#2Sorry i found the answe some post later, the answer is not"
+    },
+    {
+      "author": "Duplicate dherderich",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 27, 2016 at 7:25 AM#3Cue-Mode Release will switch off the executor, when all times(delay, fade, etc.) of the cue are finished.No need to add a command to for especially turning it off."
+    },
+    {
+      "author": "Alejandro Sayavera Solis",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "November 16, 2016 at 7:52 PM#4thanks for your answer"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "November 18, 2016 at 4:53 PM#5assign exec 101 cue 3 /cmd=\"off exec 101\""
+    }
+  ],
   "replies": 0,
   "thread_id": "55632",
   "title": "macro that include a command in cmd line of a cue",

@@ -3,6 +3,38 @@
   "author": "marlonpdm",
   "post_date": null,
   "post_text": "September 29, 2018 at 9:00 AM#1Hello!help please! I need a macro that can add same type of fixture on a sequence and do all the parameters on that sequence with the other same type fixtures.e.g    Fixture 1 and Fixture 2 = same fixture typeFixture 1 is in all cues 1 thru 5 only.what syntax in the macro can add fixture 2 and do all the same parameters of fixture 1 in all cues?Thank you!Marlon",
+  "posts": [
+    {
+      "author": "marlonpdm",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 29, 2018 at 9:00 AM#1Hello!help please! I need a macro that can add same type of fixture on a sequence and do all the parameters on that sequence with the other same type fixtures.e.g    Fixture 1 and Fixture 2 = same fixture typeFixture 1 is in all cues 1 thru 5 only.what syntax in the macro can add fixture 2 and do all the same parameters of fixture 1 in all cues?Thank you!Marlon"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 29, 2018 at 3:45 PM#2HiYou van do something like :goto cue 1; fixture 2 at fixture 1; update cue 1"
+    },
+    {
+      "author": "marlonpdm",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 30, 2018 at 8:59 AM#3Thank you!Is there a way I can do it with all the cues at the same time not per cue?I program only 2 fixtures with same type and has 90 cues on the sequence. I want to add another same type of fixture but it will take time for me to copy each fixture from another fixture then update the per cue."
+    },
+    {
+      "author": "Moe696",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 30, 2018 at 9:21 AM#4Clone Fix a at Fix b if Seq x Cue y thru zFix a is the source.If you are using presets you should clone them first.Or you could use the cloning menu under setup/show/cloningCloning is explained in the MA online manual.Click here."
+    },
+    {
+      "author": "marlonpdm",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "October 1, 2018 at 11:29 AM#5thank you! I will try this."
+    }
+  ],
   "replies": 0,
   "thread_id": "62421",
   "title": "Add same fixture type in sequence",

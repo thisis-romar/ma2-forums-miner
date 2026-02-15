@@ -3,6 +3,44 @@
   "author": "juju512",
   "post_date": null,
   "post_text": "March 4, 2020 at 7:23 AM#1I want a macro command. After I select the light, click this macro command, and then click any material or effect I want. The material and effect will run once at the time set by my macro command.  After running once, it will automatically release and return to the initial state! thinks!!!email:happy8day@126.comImages1.jpg319.63 kB1,920 × 1,080",
+  "posts": [
+    {
+      "author": "juju512",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 4, 2020 at 7:23 AM#1I want a macro command. After I select the light, click this macro command, and then click any material or effect I want. The material and effect will run once at the time set by my macro command.  After running once, it will automatically release and return to the initial state! thinks!!!email:happy8day@126.comImages1.jpg319.63 kB1,920 × 1,080"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 5, 2020 at 2:41 PM#2not sure how you want a material to 'run'. if you mean a general preset, you can put them in the preset, then release in the macro.soselect your fixtureat preset @ [[this will put this line into the programmer and wait for you to select a preset]]off presettype \"beam\" [[or whichever preset you're trying to use, and the fixture will return to initial state before programmer interaction.]]"
+    },
+    {
+      "author": "juju512",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 6, 2020 at 12:54 PM#3I need a macro that after I selected some fixtures, then tap on this macro, finally tap on a preset or effect. This macro should run the preset or effect on these fixtures for one time with a given duration, then release the effect or preset from it. thinks！！！"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 6, 2020 at 11:58 PM#4Again, if I'm understanding correctly.the cleanest way to do this in my opinion is to begin by storing execs.store all the effects you want to use into separate execs, same with presets.then you can use'go @' which will wait for you to select the executor with the desired preset or effect in it. set the cue(s) in those execs to release. set your effects to single shot.so it will wait for your input for which executor to trigger, then release as soon as it is done with the effect or preset that is stored in the individual execs."
+    },
+    {
+      "author": "juju512",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "March 7, 2020 at 1:32 PM#5I express my thoughts in pictures.I want to write a macro like thisImagesScreen 2 2020_3_7 21_16_36.jpg501.03 kB1,920 × 1,017"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "March 9, 2020 at 6:46 PM#6Again, I recommend using executors for this, not color presets."
+    }
+  ],
   "replies": 0,
   "thread_id": "65373",
   "title": "fade macro",

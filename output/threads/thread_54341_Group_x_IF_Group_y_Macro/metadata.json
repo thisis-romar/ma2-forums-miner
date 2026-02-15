@@ -3,6 +3,38 @@
   "author": "MGutowski",
   "post_date": null,
   "post_text": "August 4, 2016 at 4:10 PM#1Hello All,Just got a lite, loving it!Trying to make a macro that does the same thing as if I typed in Group x If If If If Group y, which would normally result in only fixtures existing in both groups being selected.  Trying to make a button for a layout view.Tap Group xHit MacroTap Group yI'm confused, any help appreciated!",
+  "posts": [
+    {
+      "author": "MGutowski",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 4, 2016 at 4:10 PM#1Hello All,Just got a lite, loving it!Trying to make a macro that does the same thing as if I typed in Group x If If If If Group y, which would normally result in only fixtures existing in both groups being selected.  Trying to make a button for a layout view.Tap Group xHit MacroTap Group yI'm confused, any help appreciated!"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 4, 2016 at 4:51 PM#2Have a look at the\"Command Line Interaction\" sectionof the help manual, and also the[at-sign]. (open links in new tab)"
+    },
+    {
+      "author": "MGutowski",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 4, 2016 at 6:29 PM#3Going to be honest, I have looked through this part of the documentation about 20 times now.  I've tried combinations of Selection, If, At, Pop Ups, and turning CLI on and off, and I'm still no where.  Command like works like a dream, I feel like I am missing a keyword, or possibly assigning the selection to a setvariable, I'm not sure.I have seen touring LD's come in with this before, I'm just not there yet unfortunately."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "August 4, 2016 at 7:35 PM#4I think the macro you want is: [color=#66FF00]If[/color] @Your workflow as you described it would be:Tap the first groupTap the macro (puts [color=#66FF00]If[/color] into the command line)Tap the second group"
+    },
+    {
+      "author": "MGutowski",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "August 4, 2016 at 8:14 PM#5Duh Doy..I kept writing If At not If @.  100% my fault, I went back to the manual and it clearly states that in the At-Sign link you sent me, I was reading it incorrectly inside my mind-brain.  THANK RYAN!Correct Macro:Line 1: If @Now it works!"
+    }
+  ],
   "replies": 0,
   "thread_id": "54341",
   "title": "Group x IF Group y Macro",

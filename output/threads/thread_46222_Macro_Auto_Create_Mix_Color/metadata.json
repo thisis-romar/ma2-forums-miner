@@ -2,15 +2,17 @@
   "assets": [
     {
       "checksum": "sha256:15442468967ce8349256a53684814a3319fe0d53fad8045881aa221b3e13efee",
-      "download_count": 125,
+      "download_count": 135,
       "filename": "Colour Create and Label.xml",
+      "post_number": 3,
       "size": 28517,
       "url": "https://forum.malighting.com/file-download/3637/"
     },
     {
       "checksum": "sha256:2f4d704d6b4ed81cfa27cd7fd7e9bafcfb08d1fb30f2545ca1fa78bc2c6f87d0",
-      "download_count": 110,
+      "download_count": 119,
       "filename": "Create Color Sequence.xml",
+      "post_number": 3,
       "size": 6403,
       "url": "https://forum.malighting.com/file-download/3638/"
     }
@@ -18,6 +20,26 @@
   "author": "Dennilight",
   "post_date": null,
   "post_text": "April 15, 2015 at 8:25 AM#1Hi,I need a macro to auto-create mixcolor presets for Red, Green, Blue, Cyan, Magenta, Yellow and White. I want to use this to auto-create a kind of \"test-pattern\", running during the \"construction-phase\" without spending time to build it new every time i have different fixtures.---update: I think I found a way to do that, thanks.",
+  "posts": [
+    {
+      "author": "Dennilight",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 15, 2015 at 8:25 AM#1Hi,I need a macro to auto-create mixcolor presets for Red, Green, Blue, Cyan, Magenta, Yellow and White. I want to use this to auto-create a kind of \"test-pattern\", running during the \"construction-phase\" without spending time to build it new every time i have different fixtures.---update: I think I found a way to do that, thanks."
+    },
+    {
+      "author": "Wanghongliang",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 22, 2015 at 3:39 PM#2Code"
+    },
+    {
+      "author": "Bjoern",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 13, 2015 at 8:54 PM#3Try \"Colour create and Label\" and here is another one that saves time for me \"Color Sequence\"FilesColour Create and Label.xml28.52 kB – 135 DownloadsCreate Color Sequence.xml6.4 kB – 119 Downloads"
+    }
+  ],
   "replies": 0,
   "thread_id": "46222",
   "title": "Macro Auto Create Mix Color",

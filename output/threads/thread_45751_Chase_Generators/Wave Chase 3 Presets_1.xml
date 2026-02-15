@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.0.0/MA.xsd" major_vers="3" minor_vers="0" stream_vers="0">
+	<Info datetime="2015-02-20T16:02:36" showfile="my macros" />
+	<Macro index="2" name="Wave Chase 3 Presets">
+		<InfoItems>
+			<Info date="2015-02-20T16:01:16">This Macro store and delete the Sequence 999, the Macro 997, 998 and 999!
+First step, select the Fixtures you want to have in the Chase.
+Next step, choose an empty Executor with the Select key.
+Next step, start the Macro.
+- Type in the amount of Fixtures you have selected.
+- Type in the Preset numbers you want to use
+- for example: 4.2, 4.3 and 4.4 for MixColor Red, Green and Blue.
+
+Let the Macro do your work :-)
+
+PS.: combine your selection with MATricks Groups, Blocks and Wings
+     before you start the Macro.</Info>
+		</InfoItems>
+		<Macroline index="0">
+			<text>SetUserVar $Loops=(How many Fixtures you have selected?)</text>
+			<info>Create the Amount Of Loops</info>
+		</Macroline>
+		<Macroline index="1">
+			<text>AddUserVar $Loops=-1</text>
+			<info>Minus the first cues without the Loop</info>
+		</Macroline>
+		<Macroline index="2">
+			<text>SetUserVar $Preset1=(first-Preset-number?)</text>
+			<info>First variable for the first Preset Number e.g.: 4.1</info>
+		</Macroline>
+		<Macroline index="3">
+			<text>SetUserVar $Preset2=(second-Preset-number?)</text>
+			<info>Second variable for the second Preset Number e.g.: 4.2</info>
+		</Macroline>
+		<Macroline index="4">
+			<text>SetUserVar $Preset3=(third-Preset-number?)</text>
+			<info>Third variable for the third Preset Number e.g.: 4.3</info>
+		</Macroline>
+		<Macroline index="5" delay="0.05">
+			<text>Store Root 12.1.997 &quot;Preset1&quot; /o</text>
+			<info>Store a Macro named &quot;Preset1&quot;</info>
+		</Macroline>
+		<Macroline index="6" delay="0.05">
+			<text>Store Root 12.1.997.1</text>
+			<info>Store a Line 1 in the Macro</info>
+		</Macroline>
+		<Macroline index="7" delay="0.05">
+			<text>Assign Macro *.Preset1 /cmd=&quot;At Preset $Preset1&quot;</text>
+			<info>Assign the first variable in the Macro Line</info>
+		</Macroline>
+		<Macroline index="8" delay="0.05">
+			<text>Store Root 12.1.998 &quot;Preset2&quot; /o</text>
+			<info>Store a Macro named &quot;Preset2&quot;</info>
+		</Macroline>
+		<Macroline index="9" delay="0.05">
+			<text>Store Root 12.1.998.1</text>
+			<info>Store a Line 1 in the Macro</info>
+		</Macroline>
+		<Macroline index="10" delay="0.05">
+			<text>Assign Macro *.Preset2 /cmd=&quot;At Preset $Preset2&quot;</text>
+			<info>Assign the second variable in the Macro Line</info>
+		</Macroline>
+		<Macroline index="11" delay="0.05">
+			<text>Store Root 12.1.999 &quot;Preset3&quot; /o</text>
+			<info>Store a Macro named &quot;Preset3&quot;</info>
+		</Macroline>
+		<Macroline index="12" delay="0.05">
+			<text>Store Root 12.1.999.1</text>
+			<info>Store a Line 1 in the Macro</info>
+		</Macroline>
+		<Macroline index="13" delay="0.05">
+			<text>Assign Macro *.Preset3 /cmd=&quot;At Preset $Preset3&quot;</text>
+			<info>Assign the third variable in the Macro Line</info>
+		</Macroline>
+		<Macroline index="14" delay="0.05">
+			<text>Store Sequence 999 Cue 1 Thru 14 /o</text>
+			<info>Store a Sequence with Cue links to program the Chaser</info>
+		</Macroline>
+		<Macroline index="15" delay="0.05">
+			<text>Assign Sequence 999 Cue 1 Thru 14 /TrigTime=0.05</text>
+			<info>Assign the TrigTime</info>
+		</Macroline>
+		<Macroline index="16" delay="0.05">
+			<text>Assign Sequence 999 Cue 1 /cmd=next</text>
+			<info>Next Fixture of the actual Selection</info>
+		</Macroline>
+		<Macroline index="17" delay="0.05">
+			<text>Assign Sequence 999 Cue 2 /cmd=&quot;Macro *.Preset1&quot;</text>
+			<info>The selected Fixture at the first Preset</info>
+		</Macroline>
+		<Macroline index="18" delay="0.05">
+			<text>Assign Sequence 999 Cue 3 /cmd=Store/nc</text>
+			<info>Store a Cue on the selected Executor</info>
+		</Macroline>
+		<Macroline index="19" delay="0.05">
+			<text>Assign Sequence 999 Cue 4 /Loop=1 /Lcount=$Loops</text>
+			<info>Set the amout of Loops to Cue 1</info>
+		</Macroline>
+		<Macroline index="20" delay="0.05">
+			<text>Assign Sequence 999 Cue 5 /cmd=next</text>
+			<info>Next Fixture of the actual Selection</info>
+		</Macroline>
+		<Macroline index="21" delay="0.05">
+			<text>Assign Sequence 999 Cue 6 /cmd=&quot;Macro *.Preset2&quot;</text>
+			<info>The selected Fixture at the second Preset</info>
+		</Macroline>
+		<Macroline index="22" delay="0.05">
+			<text>Assign Sequence 999 Cue 7 /cmd=Store/nc</text>
+			<info>Store a Cue on the selected Executor</info>
+		</Macroline>
+		<Macroline index="23" delay="0.05">
+			<text>Assign Sequence 999 Cue 8 /Loop=5 /Lcount=$Loops</text>
+			<info>Set the amout of Loops to Cue 5</info>
+		</Macroline>
+		<Macroline index="24" delay="0.05">
+			<text>Assign Sequence 999 Cue 9 /cmd=next</text>
+			<info>Next Fixture of the actual Selection</info>
+		</Macroline>
+		<Macroline index="25" delay="0.05">
+			<text>Assign Sequence 999 Cue 10 /cmd=&quot;Macro *.Preset3&quot;</text>
+			<info>The selected Fixture at the third Preset</info>
+		</Macroline>
+		<Macroline index="26" delay="0.05">
+			<text>Assign Sequence 999 Cue 11 /cmd=Store/nc</text>
+			<info>Store a Cue on the selected Executor</info>
+		</Macroline>
+		<Macroline index="27" delay="0.05">
+			<text>Assign Sequence 999 Cue 12 /Loop=9 /Lcount=$Loops</text>
+			<info>Set the amout of Loops to Cue 5</info>
+		</Macroline>
+		<Macroline index="28" delay="0.05">
+			<text>Assign Sequence 999 Cue 13 /cmd=&quot;ClearAll ;  Assign Executor /Chaser=on ;  Assign Sequence /Releasefirststep=off&quot;</text>
+			<info>After the Loops ClearAll and Assign the selected Executor to Chaser</info>
+		</Macroline>
+		<Macroline index="29" delay="0.05">
+			<text>Assign Sequence 999 Cue 14 /cmd=&quot;Delete  Sequence 999 /nc ;  Delete Macro *.Preset1  + Macro *.Preset2&quot;</text>
+			<info>Delete the Sequence and the Macros</info>
+		</Macroline>
+		<Macroline index="30">
+			<text>Go Sequence 999</text>
+			<info>Start the Sequence to store a Chaser</info>
+		</Macroline>
+	</Macro>
+</MA>

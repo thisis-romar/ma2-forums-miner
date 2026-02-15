@@ -3,6 +3,20 @@
   "author": "TimBoland",
   "post_date": null,
   "post_text": "January 19, 2016 at 5:11 AM#1I'm trying to have a macro define a set of executors so that I can apply a command to multiple cue stacks.I feel like this should work but its not happening.[Pause] [Macro] [1] , where macro 1 = \"@ Executor 2.101 + 2.102 + 2.103\"",
+  "posts": [
+    {
+      "author": "TimBoland",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 19, 2016 at 5:11 AM#1I'm trying to have a macro define a set of executors so that I can apply a command to multiple cue stacks.I feel like this should work but its not happening.[Pause] [Macro] [1] , where macro 1 = \"@ Executor 2.101 + 2.102 + 2.103\""
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 19, 2016 at 9:07 AM#2disable CLI for the Macro 1, so that a press of the macro in the macropool does not interact with the commandline.you need to use the macro via the pool for this to work:[Pause] [onscreen macro-pool item 1]"
+    }
+  ],
   "replies": 0,
   "thread_id": "50639",
   "title": "Whats wrong with this macro?",

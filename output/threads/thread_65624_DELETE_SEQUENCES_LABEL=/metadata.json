@@ -3,6 +3,38 @@
   "author": "RUSANMA",
   "post_date": null,
   "post_text": "May 5, 2020 at 5:35 PM#1Hi. the case is that I have a plugin that when executing orders creates sequences with name (*). any macro suggestion to remove all sequences with this name?Thank youRuben S.",
+  "posts": [
+    {
+      "author": "RUSANMA",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 5, 2020 at 5:35 PM#1Hi. the case is that I have a plugin that when executing orders creates sequences with name (*). any macro suggestion to remove all sequences with this name?Thank youRuben S."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 5, 2020 at 6:04 PM#2that is a bad choice for sequence name.I would strongly suggest to rewrite your plugin.--you will need to use plugin or commandline embedded Lua, and examine the label of every sequence, to do this, e.gCodeLUA \"local g=gma.show.getobj; for i=1,9999 do if g.label(g.handle('seq '..i))=='*' then gma.cmd('del seq '..i..' /nc') end ; end\""
+    },
+    {
+      "author": "RUSANMA",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 6, 2020 at 12:14 PM#3I have copied the command line that you have described inmy LUA plugin but still doesn't work. keeps generating sequences (*) every time I run a macro"
+    },
+    {
+      "author": "F Dijkers",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 6, 2020 at 12:37 PM#4Hi,Then I guess the syntax of your macro is wrong. As glad already mentioned, * is a very bad name for basically everything in MA, since it used to be a wildcard for strings.Kind regards,Floris DijkersLighting Director & Designerflorisdijkers.comlighting@florisdijkers.com"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 6, 2020 at 12:51 PM#5My example would not fix your plugin.it was intended to be pasted into the commandline to tidy the mess you plugin had created."
+    }
+  ],
   "replies": 0,
   "thread_id": "65624",
   "title": "DELETE SEQUENCES LABEL= *",

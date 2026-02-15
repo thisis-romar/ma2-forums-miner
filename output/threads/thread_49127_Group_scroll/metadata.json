@@ -3,6 +3,32 @@
   "author": "SkäggPetter",
   "post_date": null,
   "post_text": "October 7, 2015 at 9:39 PM#1Hi I'm wondering if its possible to create a macro that can scroll down in my group poollike macro one scrolls to grope 1-50 macro 2 scrolls down to 51-100Best Regards",
+  "posts": [
+    {
+      "author": "SkäggPetter",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 7, 2015 at 9:39 PM#1Hi I'm wondering if its possible to create a macro that can scroll down in my group poollike macro one scrolls to grope 1-50 macro 2 scrolls down to 51-100Best Regards"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 7, 2015 at 9:52 PM#2As far as I know, scrolling in windows is not doable via command line. However, do it manually once, storing views at strategic points, and then the views will be recallable via macro."
+    },
+    {
+      "author": "SkäggPetter",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 7, 2015 at 10:04 PM#3alright  thank you for your quick  response/Petter"
+    },
+    {
+      "author": "Duplicate cedric-e",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 21, 2015 at 7:39 AM#4Hello,I think you can use a command like pagedown.By using 1 command as pagedown your screen will scroll 1/2 down. To scroll 1 screen down you need 2 pagedown commands following each other.For the correct CMD try some different combinations.I don't have a desk/pc with me."
+    }
+  ],
   "replies": 0,
   "thread_id": "49127",
   "title": "Group scroll",

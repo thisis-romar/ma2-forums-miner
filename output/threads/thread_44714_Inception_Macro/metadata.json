@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:9487809894cc8acd47ba288a1e476512245f25993fa88add187022f70d100a0f",
-      "download_count": 87,
+      "download_count": 99,
       "filename": "macro_225_test_ayrton.xml",
+      "post_number": 2,
       "size": 1096,
       "url": "https://forum.malighting.com/file-download/3559/"
     }
@@ -11,6 +12,50 @@
   "author": "JCostello",
   "post_date": null,
   "post_text": "December 19, 2014 at 2:22 AM#1Trying to make what I am referring to as an Inception Macro (best way I could think of to describe it).  Here is what I am trying to accomplish:I am doing a lot of work with Ayrton Magic Panel 602's which have individual pixel control (each LED is an individual sub fixture).  In order to speed up programming of specific patterns, I am using the following macro:SetUserVar $myFixId=(Fixture #?)Fixture $myFixId.2Fixture $myFixId.5Fixture $myFixId.8And so on to select the specific LED pixels I want to form the pattern.  I write one of these macros for each shape I am trying to accomplish to save for future use.The problem with this macro is that you can only select one Fixture at a time (very time consuming when you are trying to apply the macro to 25+ fixtures over and over).  What I am trying to do is either modify this macro to allow for multiple fixture selection, or write a separate macro that allows me to apply this macro to multiple fixtures at once.  Any ideas on how to best accomplish this?  Thank youJim",
+  "posts": [
+    {
+      "author": "JCostello",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 19, 2014 at 2:22 AM#1Trying to make what I am referring to as an Inception Macro (best way I could think of to describe it).  Here is what I am trying to accomplish:I am doing a lot of work with Ayrton Magic Panel 602's which have individual pixel control (each LED is an individual sub fixture).  In order to speed up programming of specific patterns, I am using the following macro:SetUserVar $myFixId=(Fixture #?)Fixture $myFixId.2Fixture $myFixId.5Fixture $myFixId.8And so on to select the specific LED pixels I want to form the pattern.  I write one of these macros for each shape I am trying to accomplish to save for future use.The problem with this macro is that you can only select one Fixture at a time (very time consuming when you are trying to apply the macro to 25+ fixtures over and over).  What I am trying to do is either modify this macro to allow for multiple fixture selection, or write a separate macro that allows me to apply this macro to multiple fixtures at once.  Any ideas on how to best accomplish this?  Thank youJim"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 26, 2014 at 9:10 PM#2Hi Jim,There are a few options that could work in your situation:1: use MATricksInterleave to select the pixels in all your fixtures at the same time: select all your fixtures, use an Interleave of 37 to in and than use next and previous to navigate thru your pixels, but I guess you would like to automate the selection and programming of the fixtures without pressing buttons, you want to run the macro and the look appears?2: make the look by macro and let the macro copy the status of the first fixture to all the other fixtures.the command you suggested works perfect when multiply it, for example: Fixture $myFixId.2 + Fixture $myFixId.5 + Fixture $myFixId.8 and so on all in the same line could lead to a selection of the pattern you would like. If you copy the status of the first fixture to all the other fixtures you could be at the point you likeYou could add the commands:setvar $otherFixID= (\"fixtures that need the same pattern?\")fixture $otherFixID at fixture $myFixID and you should be good to goI have attached the test macro I have used to test the behaviour of my second suggestion, so you could have a look what I meanLet me know what you thinkFilesmacro_225_test_ayrton.xml1.1 kB – 99 Downloads"
+    },
+    {
+      "author": "jabadger",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 9, 2015 at 9:53 PM#3The method/macro I used was first I set a whole fixture how I liked it then I had a bunch of groups made up of each fixture (the 36 pixels or whatever), then ran this[Blocked Image:http://i33.photobucket.com/albums/d62/badgersan/ScreenShot2015-01-09at41135PM.png]"
+    },
+    {
+      "author": "JCostello",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "January 16, 2015 at 4:14 PM#4Mark,The macro you wrote is close to what I would like to do, but still has a couple issues.  After the macro is executed,the original fixture selected has the correct pixels on at full, but are no longer selected in the programmer.  The pixels that the design is copied to, all of the pixels are selected in the programmer, with the correct pattern being the only pixels turned on.Now I could use an If command to select the just the pixels I want after the fact, just trying to streamline the process as much as possible.  I am creating a library of macros with various pixel shapes to save on programming time, and would like to reduce the number of keystrokes to apply these patterns to the fixtures (gets very tedious over time, especially with a larger rig).I guess a better way to word my original request is I am trying to write a macro where I can select X Fixtures and apply Macro Y to each of them."
+    },
+    {
+      "author": "JCostello",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "January 16, 2015 at 6:24 PM#5Upon further testing, I found a way to make it work the way I would like it to, using a good chunk of your macro.  After my existing macros, I added the following lines:At FullSetVar $otherFixID = (\"Copy To?\")Fixture $otherFixID AT Fixture $myFixIDIfProgThis will allow me to select multiple fixtures using thru, +, -, etc. and only select the pixels of the shape I would like.  Even better, I can just add these lines to the existing macros I have built and do not have to start from scratch.Thank you for the help"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "January 17, 2015 at 5:40 PM#6Another idea, not shure if it works: fixture *.1 + fixture *.5 and so on at full should select all fixtures with a dotted numberHave a look at it and let me know"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "January 27, 2015 at 12:30 PM#7Hi JCostelloThe method as described above does work. To create the patterns you want and to keep the selection active you could use the following macro line:Fixture *.2 + fixture *.4 + fixture *.6 (and so on) at full. The only thing than is that it will create the pattern for all fixtures with a .x (dotted) number"
+    }
+  ],
   "replies": 0,
   "thread_id": "44714",
   "title": "Inception Macro",

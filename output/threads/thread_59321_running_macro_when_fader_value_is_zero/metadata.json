@@ -3,6 +3,20 @@
   "author": "floran",
   "post_date": null,
   "post_text": "August 21, 2017 at 9:03 PM#1hello.i'm trying to find a command that when my fader value is zero,the running macro goes off.",
+  "posts": [
+    {
+      "author": "floran",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 21, 2017 at 9:03 PM#1hello.i'm trying to find a command that when my fader value is zero,the running macro goes off."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 23, 2017 at 11:07 PM#2HiYou have to use a dummy channel with invert dmx profile as a dmx remote."
+    }
+  ],
   "replies": 0,
   "thread_id": "59321",
   "title": "running macro when fader value is zero",

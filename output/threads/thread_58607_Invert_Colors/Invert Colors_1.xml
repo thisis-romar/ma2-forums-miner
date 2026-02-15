@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2017-05-24T00:40:05" showfile="macrotricks" />
+	<Macro index="0" name="Invert Colors">
+		<Macroline index="0">
+			<text>Store Profile &quot;myRGBattributes&quot; /nc; Assign Profile &quot;myRGBattributes&quot; Fixture *.*.&quot;COLORRGB*&quot; ; Assign Macro 1.&quot;Invert Colors&quot;.1 /disabled=1</text>
+			<info>enable this line to reinitialize</info>
+		</Macroline>
+		<Macroline index="1" delay="-1">
+			<text>Assign Profile &quot;myRGBattributes&quot;.1 /y=1 ; Assign Profile &quot;myRGBattributes&quot;.2 /y=0</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Assign Profile &quot;myRGBattributes&quot;.1 /y=0 ; Assign Profile &quot;myRGBattributes&quot;.2 /y=1</text>
+		</Macroline>
+	</Macro>
+</MA>

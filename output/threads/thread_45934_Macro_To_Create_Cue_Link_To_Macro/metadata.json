@@ -3,6 +3,32 @@
   "author": "Buzz313th",
   "post_date": null,
   "post_text": "March 21, 2015 at 8:41 PM#1Is it possible to write a macro that would input text into popups so that the CMD column or cell of the sequence list can be automatically populated with text (Like a link to a macro)?JB",
+  "posts": [
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 21, 2015 at 8:41 PM#1Is it possible to write a macro that would input text into popups so that the CMD column or cell of the sequence list can be automatically populated with text (Like a link to a macro)?JB"
+    },
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 21, 2015 at 9:30 PM#2I found this and it works...assign executor 1 cue 1/cmd=\"macro 23\"But I would like to call the macro by text like this and the second set of parenthesis makes the macro fail.assign executor 1 cue 1/cmd=\"macro \"macroname\"\""
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 21, 2015 at 10:14 PM#3unfortunately it is not possible to have quotes inside quotes....you may workaround this by using carefully chosen macronames, as the quotes are only necessary if the text starts with a number, contain spaces, or can be confused with a keyword or the abbrevation of a keyword.e.g.\"My_nice_macro\"assign executor 1 cue 1/cmd=\"macro My_nice_macro\"\"Fun Facts\"assign executor 1 cue 1/cmd=\"macro fun*facts\"(be aware that replacing the space with wildcard would also call e.g. macro \"funny artifacts\")"
+    },
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 24, 2015 at 3:15 PM#4Thank you for the info."
+    }
+  ],
   "replies": 0,
   "thread_id": "45934",
   "title": "Macro To Create Cue Link To Macro",

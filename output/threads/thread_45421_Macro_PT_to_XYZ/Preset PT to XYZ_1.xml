@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.0.0/MA.xsd" major_vers="3" minor_vers="0" stream_vers="0">
+	<Info datetime="2015-02-18T15:56:14" showfile="im deafult 3.1" />
+	<Macro index="127" name="Preset PT to XYZ">
+		<Macroline index="0">
+			<text>SetUserVar $poolnr (Enter attribute number, 0 or 2)</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>SetUserVar $cnt (Enter first presetnumber to change)</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>SetUserVar $end (Enter last presetnumber to change)</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>SetUserVar $newcnt &quot;200&quot;</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>[$poolnr == 2] Go Macro 1.&quot;Preset PT to XYZ&quot;.14</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>SetUserVar $mov (Enter groupnumber of all movingheads)</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>Group $mov</text>
+		</Macroline>
+		<Macroline index="7">
+			<text>PresetType 2.2</text>
+		</Macroline>
+		<Macroline index="8">
+			<text>PresetType 2.2</text>
+		</Macroline>
+		<Macroline index="9">
+			<text>Store World 990 &quot;Position&quot; /o</text>
+		</Macroline>
+		<Macroline index="10">
+			<text>PresetType 2.1</text>
+		</Macroline>
+		<Macroline index="11">
+			<text>PresetType 2.1</text>
+		</Macroline>
+		<Macroline index="12">
+			<text>Store World 990 /m</text>
+		</Macroline>
+		<Macroline index="13">
+			<text>Clear All</text>
+		</Macroline>
+		<Macroline index="14">
+			<text>Clear All</text>
+		</Macroline>
+		<Macroline index="15">
+			<text>Copy Preset $poolnr.$cnt At Preset $poolnr.$newcnt</text>
+		</Macroline>
+		<Macroline index="16">
+			<text>World 990</text>
+		</Macroline>
+		<Macroline index="17" delay="0.05">
+			<text>Preset $poolnr.$newcnt</text>
+		</Macroline>
+		<Macroline index="18" delay="0.05">
+			<text>At Preset $poolnr.$newcnt</text>
+		</Macroline>
+		<Macroline index="19" delay="0.05">
+			<text>PresetType 2.2.1</text>
+		</Macroline>
+		<Macroline index="20" delay="0.05">
+			<text>PresetType 2.2.1</text>
+		</Macroline>
+		<Macroline index="21" delay="0.05">
+			<text>Store Preset $poolnr.$newcnt /o</text>
+		</Macroline>
+		<Macroline index="22">
+			<text>World 1</text>
+		</Macroline>
+		<Macroline index="23">
+			<text>Replace Preset $poolnr.$cnt With Preset $poolnr.$newcnt If Sequence 1 Thru</text>
+		</Macroline>
+		<Macroline index="24">
+			<text>Delete Preset $poolnr.$cnt /o</text>
+		</Macroline>
+		<Macroline index="25">
+			<text>Move Preset $poolnr.$newcnt At Preset $poolnr.$cnt /o</text>
+		</Macroline>
+		<Macroline index="26" delay="0.05">
+			<text>AddUserVar $cnt 1</text>
+		</Macroline>
+		<Macroline index="27" delay="0.05">
+			<text>[$cnt &lt;= $end] Go Macro 1.&quot;Preset PT to XYZ&quot;.13</text>
+		</Macroline>
+		<Macroline index="28" delay="0.05">
+			<text>[$cnt &gt; $end] SetUserVar $cnt &quot;&quot;; SetUserVar $end &quot;&quot;; SetUserVar $poolnr &quot;&quot;; SetUserVar $mov &quot;&quot;</text>
+		</Macroline>
+		<Macroline index="29">
+			<text>World 1; Delete World 990</text>
+		</Macroline>
+		<Macroline index="30">
+			<text>[$cnt &gt; $end] Off Macro &quot;Preset PT to XYZ&quot;</text>
+		</Macroline>
+	</Macro>
+</MA>

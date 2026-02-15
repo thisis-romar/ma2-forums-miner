@@ -3,6 +3,26 @@
   "author": "The11S",
   "post_date": null,
   "post_text": "August 29, 2018 at 12:23 AM#1So I have multiple macros that help with pre programming and I'm trying to develop one that when the name of the cue is[color=#FF0000]Follow[/color]the macro will change the trig type to follow and ask for a trig time.I tried a few things like [color=#FF33CC][$selectedexeccue /name==\"Follow\"][/color] but that didn't work.Any ideas?Peyton",
+  "posts": [
+    {
+      "author": "The11S",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 29, 2018 at 12:23 AM#1So I have multiple macros that help with pre programming and I'm trying to develop one that when the name of the cue is[color=#FF0000]Follow[/color]the macro will change the trig type to follow and ask for a trig time.I tried a few things like [color=#FF33CC][$selectedexeccue /name==\"Follow\"][/color] but that didn't work.Any ideas?Peyton"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 29, 2018 at 12:48 AM#2this is not possible with regular commandline.to extract the name of a cue [for comparison] you need to use Lua.if you are not into Lua, you could try installing \"Glad's IntelliVars\":http://www.ma-share.net/forum/read.php?8,61174be aware that the name of the cue resides in the primary cuepart (Part 0)so after installing IntelliVars you need to do something like this in you macro:CodeCD Part 0selectedexeccue is implicit when just referencing the partCode$CAPTUREadd a small wait 0.1s to allow time to capture data about the cuepartCodeCD /thenCodeSetvar $mycuename=$\"C_NAME\"[$mycuename==\"Follow\"] do whatever"
+    },
+    {
+      "author": "The11S",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 29, 2018 at 9:00 PM#3You are the best,Thank you so much!!!On a sidenote tips for learning Lua in MA2?"
+    }
+  ],
   "replies": 0,
   "thread_id": "62175",
   "title": "Weird Macro Conditional Expression",

@@ -3,6 +3,20 @@
   "author": "Sergei",
   "post_date": null,
   "post_text": "December 6, 2017 at 8:29 PM#1Hello everyone, can anyone tell me command for cmd to select all running effects.",
+  "posts": [
+    {
+      "author": "Sergei",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 6, 2017 at 8:29 PM#1Hello everyone, can anyone tell me command for cmd to select all running effects."
+    },
+    {
+      "author": "Moe696",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 6, 2017 at 9:00 PM#2You can select the fixtures, that are currently running in an effect, by typingIfOutput Effect Please.IfOutputis the first click on theifkey."
+    }
+  ],
   "replies": 0,
   "thread_id": "60188",
   "title": "Macro Effect Select",

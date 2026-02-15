@@ -3,6 +3,14 @@
   "author": "RUSANMA",
   "post_date": null,
   "post_text": "March 4, 2020 at 5:49 PM#1Hi, I have a problem with a macro. I want the selected timecode to set the autostart to `` on '' and the others to off. I have got everyone on with this syntax. assign timecode thru / autostart = on. Thanks",
+  "posts": [
+    {
+      "author": "RUSANMA",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 4, 2020 at 5:49 PM#1Hi, I have a problem with a macro. I want the selected timecode to set the autostart to `` on '' and the others to off. I have got everyone on with this syntax. assign timecode thru / autostart = on. Thanks"
+    }
+  ],
   "replies": 0,
   "thread_id": "65375",
   "title": "Timecode autostart on",

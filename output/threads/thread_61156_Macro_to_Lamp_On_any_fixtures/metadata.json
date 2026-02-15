@@ -3,6 +3,26 @@
   "author": "marlonpdm",
   "post_date": null,
   "post_text": "April 14, 2018 at 3:49 PM#1Hello!Can someone help me the macro for pop up \"enter fixture no.\" then lamp on. please!Thank you!",
+  "posts": [
+    {
+      "author": "marlonpdm",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 14, 2018 at 3:49 PM#1Hello!Can someone help me the macro for pop up \"enter fixture no.\" then lamp on. please!Thank you!"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 23, 2018 at 12:21 PM#2HiCreate a control preset : \"lamp On\"Thenfixture (what fixture?) at preset Control.\"lamp On\""
+    },
+    {
+      "author": "jblakk",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 28, 2018 at 5:41 PM#3Create a lamp on/off/reset pallet.Selection at preset 7.\"lamp on\". Wait 10Off preset 7.\"lamp on\"This will lamp on any selected fixtures. Useful in conjunction with layout views."
+    }
+  ],
   "replies": 0,
   "thread_id": "61156",
   "title": "Macro to Lamp On any fixtures",

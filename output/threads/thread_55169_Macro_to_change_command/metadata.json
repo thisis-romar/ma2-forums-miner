@@ -3,6 +3,26 @@
   "author": "justinpma",
   "post_date": null,
   "post_text": "September 27, 2016 at 10:27 AM#1Hi,I would like to create a macro to assign the cmd of a cue.Example like assign cmd \"goto cue 10\" cue 9 sequence 1How can I do that?And also the macro to assign loop to a specific cue,I've found the assign cue x/loop=x is workshowever, I can't find the right key to turn it off, 'assign cue x/loop=off' ??Thank you",
+  "posts": [
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 27, 2016 at 10:27 AM#1Hi,I would like to create a macro to assign the cmd of a cue.Example like assign cmd \"goto cue 10\" cue 9 sequence 1How can I do that?And also the macro to assign loop to a specific cue,I've found the assign cue x/loop=x is workshowever, I can't find the right key to turn it off, 'assign cue x/loop=off' ??Thank you"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 27, 2016 at 2:58 PM#2Relevant(open link in new tab)"
+    },
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 28, 2016 at 11:28 AM#3That's very helpfulThank you"
+    }
+  ],
   "replies": 0,
   "thread_id": "55169",
   "title": "Macro to change command",

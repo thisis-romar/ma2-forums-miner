@@ -3,6 +3,26 @@
   "author": "ninjaxy",
   "post_date": null,
   "post_text": "August 29, 2016 at 9:47 AM#1Hi Everyone,Is it possible to write a macro which could assign a fade time, lets said \"5s\", to the current running next cue in the selected sequence ?Appreciate if anyone could help!",
+  "posts": [
+    {
+      "author": "ninjaxy",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 29, 2016 at 9:47 AM#1Hi Everyone,Is it possible to write a macro which could assign a fade time, lets said \"5s\", to the current running next cue in the selected sequence ?Appreciate if anyone could help!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 29, 2016 at 10:06 AM#2something like this might do the job:CodePreview NextAssign PreviewExecutor Fade 5PreviewEdit Off"
+    },
+    {
+      "author": "ninjaxy",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 29, 2016 at 12:20 PM#3Thank you ! It works"
+    }
+  ],
   "replies": 0,
   "thread_id": "54674",
   "title": "Assign fade time to current next cue",

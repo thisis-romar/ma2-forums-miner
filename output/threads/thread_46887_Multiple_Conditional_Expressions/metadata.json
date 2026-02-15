@@ -3,6 +3,56 @@
   "author": "rcarmichael",
   "post_date": null,
   "post_text": "May 30, 2015 at 10:57 PM#1Hello Everyone,I am currently trying to make a macro to label another macro (100) if multiple variables are true.Currently, the macro reads like this:[$T1==1] [$T2==1] [$T3==1] [$T4==1] Label Macro 100 \"TRUE\"However, it labels as long as the first condition is true, and ignores the other three conditions.Is there any way to make this work, else any other way to achieve the same result?Sincere regards,Ryan",
+  "posts": [
+    {
+      "author": "rcarmichael",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 30, 2015 at 10:57 PM#1Hello Everyone,I am currently trying to make a macro to label another macro (100) if multiple variables are true.Currently, the macro reads like this:[$T1==1] [$T2==1] [$T3==1] [$T4==1] Label Macro 100 \"TRUE\"However, it labels as long as the first condition is true, and ignores the other three conditions.Is there any way to make this work, else any other way to achieve the same result?Sincere regards,Ryan"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 31, 2015 at 12:17 AM#2which version are you running?my experience with 3.0.0.x is that thelastcondition takes precedence($T4==1 in your example)---I believe you could use the addvar command to achieve a logical AND for multiple conditions[$T1==1] setvar $result=t[$T2==1] addvar $result=r[$T3==1] addvar $result=u[$T4==1] addvar $result=e[$result==true]Label Macro 100 \"TRUE\""
+    },
+    {
+      "author": "rcarmichael",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 31, 2015 at 4:12 AM#3I am using v2.8.3.4 (unfortunatelly the connected devices can not work with newer versions).Thanks for your reply. I have not read about the addvar command, so I'll give it a try - hopefully it works in this earlier version! I'll let you know"
+    },
+    {
+      "author": "rcarmichael",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 31, 2015 at 4:21 AM#4Unfortunately it seems my version does not have that command... does anyone know of another \"workaround\" I can use?"
+    },
+    {
+      "author": "Go-Button",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 31, 2015 at 2:02 PM#5Just a simple consideration.If your connected devices don't allow MA-Net higher than 2.8.3 maybe you can run it with artnet or another ethernet protocol. This way you can use the current version and the full macro syntax."
+    },
+    {
+      "author": "rcarmichael",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "May 31, 2015 at 11:20 PM#6Yes, I have considered that, but unfortunately the supplying company does not allow any other protocols.Any other ideas to allow multiple conditions?"
+    },
+    {
+      "author": "rcarmichael",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "June 2, 2015 at 2:12 AM#7So I tried something else:SetVar $TRUE = $T1$T2$T3$T4[$TRUE==$(SOMETHING ELSE)] Label Macro...Where \"Something Else\" should be equal to $T1$T2$T3$T4ie: $TRUE=\"T\"\"R\"\"U\"\"E\"However, it still only recognises the first value in this sequence, and as long as $T1 is selected, it Labels the Macro.Any ideas about how to make this work?"
+    },
+    {
+      "author": "rcarmichael",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "June 5, 2015 at 4:11 AM#8What I ended up doing (to help any others) was creating an individual Macro for each condition.It meant that I had to use 80 different Macros, which is what I was trying to avoid, but at least this gives the desired result.Eg:1\t[$T1==1] Go Macro 22\t[$T2==1] Go Macro 33\t[$T3==1] Go Macro 44\t[$T4==1] Label Macro 332 \"TRUE\" ; Off Macro 1 Thru 80"
+    }
+  ],
   "replies": 0,
   "thread_id": "46887",
   "title": "Multiple Conditional Expressions",

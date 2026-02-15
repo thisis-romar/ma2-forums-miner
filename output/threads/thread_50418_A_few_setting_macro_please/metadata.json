@@ -3,6 +3,26 @@
   "author": "justinpma",
   "post_date": null,
   "post_text": "December 29, 2015 at 4:29 AM#1Hi,I'm looking for a few macro that I have no idea where to find,*enable/disable DMXremote/Midiremote*Enable/disable Artnet in/Out*Set Universe Dmx In Merge option - Off/HTP/LoTP",
+  "posts": [
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 29, 2015 at 4:29 AM#1Hi,I'm looking for a few macro that I have no idea where to find,*enable/disable DMXremote/Midiremote*Enable/disable Artnet in/Out*Set Universe Dmx In Merge option - Off/HTP/LoTP"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 29, 2015 at 1:36 PM#2[color=#66FF00]Assign Remote[/color] (Which remotes - 1=analog, 2=midi, 3=dmx?) /enabled=(\"Enabled - on or off?\")[color=#66FF00]Assign Root[/color] \"dmx_protocols\".\"art-net\" /outactive=(Artnet OUT - on or off?)[color=#66FF00]Assign Root[/color] \"dmx_protocols\".\"art-net\" /inactive=(Artnet IN - on or off?)[color=#66FF00]Assign DMXUniverse[/color] (what universe?) /dmxinmerge=(\"Merge - htp or lotp or off?\")"
+    },
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 30, 2015 at 8:20 AM#3thank you"
+    }
+  ],
   "replies": 0,
   "thread_id": "50418",
   "title": "A few setting macro please",

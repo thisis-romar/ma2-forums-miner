@@ -2,15 +2,138 @@
   "assets": [
     {
       "checksum": "sha256:93dee31d9d28e953c22519cf190011c63132d2307bbd44574fc2b63cebcd4b75",
-      "download_count": 855,
+      "download_count": 866,
       "filename": "MA2 Virtual Object Model REV A Blocks.zip",
+      "post_number": 1,
       "size": 75814,
       "url": "https://forum.malighting.com/file-download/3627/"
     }
   ],
   "author": "kdoemelt",
   "post_date": null,
-  "post_text": "April 27, 2015 at 9:53 PM#1Hello,If anyone is interested, I have started to diagram the MA2 Object Model. That is to say the directories and subdirectories of the command line interface.I have most of the 1st 8 folders fully mapped. I stopped to work out formatting standards and block creation before moving forward again.I was working on color coding the information for ease of understanding.[color=#A9A9A9]Grey = Directory Name[/color][color=#FF9900]Orange = Collection of Objects of specified type[/color][color=#00FF00]Green = Variable values that can be changed at the current directory level[/color][color=#FF0000]Red= Read Only variable values for the current directory level [/color][color=#33FFFF]Cyan= Valid values for each variable [/color][color=#0000FF]Blue=Example syntax for changing values of variables [/color][color=#FF00FF]Magenta=Directory End Point [/color]This is meant as a visual guide for understanding where objects and settings reside and how to make changes to them via macros.I would welcome any feedback and help on the progress so far.The file is a DWG, AutoCAD seemed the easiest way to lay this out, after all, I have no idea how big the system really is. There are 42 main directories, with an unknown amount of child folders. I’ve gotten as far as the live patch menu directoy.Thank you,KurtFilesMA2 Virtual Object Model REV A Blocks.zip75.81 kB – 855 Downloads",
+  "post_text": "April 27, 2015 at 9:53 PM#1Hello,If anyone is interested, I have started to diagram the MA2 Object Model. That is to say the directories and subdirectories of the command line interface.I have most of the 1st 8 folders fully mapped. I stopped to work out formatting standards and block creation before moving forward again.I was working on color coding the information for ease of understanding.[color=#A9A9A9]Grey = Directory Name[/color][color=#FF9900]Orange = Collection of Objects of specified type[/color][color=#00FF00]Green = Variable values that can be changed at the current directory level[/color][color=#FF0000]Red= Read Only variable values for the current directory level [/color][color=#33FFFF]Cyan= Valid values for each variable [/color][color=#0000FF]Blue=Example syntax for changing values of variables [/color][color=#FF00FF]Magenta=Directory End Point [/color]This is meant as a visual guide for understanding where objects and settings reside and how to make changes to them via macros.I would welcome any feedback and help on the progress so far.The file is a DWG, AutoCAD seemed the easiest way to lay this out, after all, I have no idea how big the system really is. There are 42 main directories, with an unknown amount of child folders. I’ve gotten as far as the live patch menu directoy.Thank you,KurtFilesMA2 Virtual Object Model REV A Blocks.zip75.81 kB – 866 Downloads",
+  "posts": [
+    {
+      "author": "kdoemelt",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 27, 2015 at 9:53 PM#1Hello,If anyone is interested, I have started to diagram the MA2 Object Model. That is to say the directories and subdirectories of the command line interface.I have most of the 1st 8 folders fully mapped. I stopped to work out formatting standards and block creation before moving forward again.I was working on color coding the information for ease of understanding.[color=#A9A9A9]Grey = Directory Name[/color][color=#FF9900]Orange = Collection of Objects of specified type[/color][color=#00FF00]Green = Variable values that can be changed at the current directory level[/color][color=#FF0000]Red= Read Only variable values for the current directory level [/color][color=#33FFFF]Cyan= Valid values for each variable [/color][color=#0000FF]Blue=Example syntax for changing values of variables [/color][color=#FF00FF]Magenta=Directory End Point [/color]This is meant as a visual guide for understanding where objects and settings reside and how to make changes to them via macros.I would welcome any feedback and help on the progress so far.The file is a DWG, AutoCAD seemed the easiest way to lay this out, after all, I have no idea how big the system really is. There are 42 main directories, with an unknown amount of child folders. I’ve gotten as far as the live patch menu directoy.Thank you,KurtFilesMA2 Virtual Object Model REV A Blocks.zip75.81 kB – 866 Downloads"
+    },
+    {
+      "author": "smeshenberg",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 11, 2015 at 2:22 PM#2This. Is. Awesome.  I think.  I get how to use it in theory, but maybe you could post an example of a task and the commandline syntax you would use to execute it.  You know, for the other people."
+    },
+    {
+      "author": "kdoemelt",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 11, 2015 at 4:45 PM#3Thank you!I'm glad someone was able see what I was going for.You are right, a few examples would help.I will post a few that hopefully show how to use this map effectively.Really this is just a graphic layout of typing list on command line of each directory.I started this project because I frustrated that although I could see the XYZ position info to each fixture, I could change until I found the correct sub-directory (it is under EditSetup / Objects3D / Items3D, or 10.6.3)I was still mapping directory 9 when I posted this, so the above example is literally 'off the map', but I'll write up a few useful ones and how to find them.Thanks for the feedback,- Kurt"
+    },
+    {
+      "author": "kdoemelt",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 11, 2015 at 6:52 PM#4Ok, here is a recent example that was already solved by another user...Quote from mike.brytedesignHi,I'm trying to write a macro to change the externalstart universe. This macro wants to have a fixedpredetermined value for the universe it is settingit to.Any help would be greatly appreciated.This is basically to allow for console switchingon the artnet input. Each console is on a separate subnet....Worked it out.Assign Root 4.1.2 /externstart=16ThanksDisplay MoreLooking at the map, you can trace this same path. Starting from Root, Directory 4 is DMX Protocols, then 1, for Artnet. The last number is the item number (id) of the ArtnetData collection (Shown in [color=#FF9900]Orange[/color]), in this case it is second item listed. /externstart is the property (shown in [color=#00FF00]Green[/color] on the Map)ASSIGN is the keyword, and depending on where you are in the directory, you will need part of the path.In Mike's solution, the command includes the entire path from Root. I recommend the same, unless you are doing a very involved marco.If you want to include this as part of a larger setup marco and have a need to change directories. CD 4, CD 1, Assign 2 /externstart=16 works as well. I would use this route if I wanted to set several properties of several collections, such as DMX ouput and ip address of consoles and NPUs.The text in the map is searchable so if you know what [color=#00FF00]property[/color] you are looking to change, you can find it and work out the path back to root.Since I brought up DMX, suppose we need a macro to turn on and off a DMX port of a console.The directory names are pretty straight forward, and often are the only clue you need. There is a directory called \"Consoles\" (FYI, you will also notice that IP is a [color=#00FF00]property[/color] here) with a [color=#FF9900]Collection[/color] called console. Each console in the system is represented as a number, and the DMXPorts is the only [color=#FF00FF]object[/color] found in each item (console) in the [color=#FF9900]collection[/color]So if we want to turn off the DMX of port A on console #2, the full string isAssign Root 5.1.2.1 /XLRA=OffOn the map, I've start to put in Valid Values in [color=#00FFFF]Cyan.Integer, IN, Out, Off, and On[/color]are all valid values for [color=#FF00FF] DMXPorts. [/color]I hope this helps. I think more work needs to be done showing examples within the map, but I think you can see how useful this would be if it was complete.Thanks again,- Kurt"
+    },
+    {
+      "author": "smeshenberg",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 11, 2015 at 7:09 PM#5Again, amazing.  I have been waiting for someone to tell us how to access stuff like this in the command line for a long time.  Let me know if there's a way for me to help, I'll be happy to do it in my down time."
+    },
+    {
+      "author": "kdoemelt",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "May 12, 2015 at 12:08 AM#6Thanks, I was starting to wonder if I was just doing this for me...There are basicly two tasks:One is to work on some autocad blocks to represent the different object types (Directories, Collections, end points) and the information within each level (Properties, Read-Only Values, valid values) I started to make a collection block with attributtes and a few tricks to control the number of properties displayed. Currently, most of the info in the drawing is just lines and text, I'd like to change them to various blocks with attributtes.Once we have the required blocks for the various object types, we need to finish mapping the other 33 Main Directories. With an unknown number of sub directories nested in each one, it's hard to know how much is left.I was looking for feedback on the progress and general interest in this project. I'm glad you are interested and willing to help. PM me and we can break down a few specfic tasks."
+    },
+    {
+      "author": "ivers",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "May 12, 2015 at 8:23 AM#7Good work! Will print it and have it on the wall then it is done!"
+    },
+    {
+      "author": "dj_rappa",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "May 12, 2015 at 5:07 PM#8If you can crack how to change layout view objects (position, label, colour, image) from the command line that would be amazing!"
+    },
+    {
+      "author": "kdoemelt",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "May 13, 2015 at 3:55 PM#9dj_rappa Wrote:-------------------------------------------------------> If you can crack how to change layout view objects> (position, label, colour, image) from the command> line that would be amazing!Layouts is directory 38... I am up to #9 so far.I did look around in that directory, but could only find where to change the default settings, not the objects shown in the layout.If we do find them we will post the results.I have a feeling this project is just getting started.Thanks,Kurt"
+    },
+    {
+      "author": "mvo",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "May 14, 2015 at 12:29 PM#10Good work, I like it!How do you find the assignable attributes in a (sub)directory? What is your strategy?"
+    },
+    {
+      "author": "mvo",
+      "post_date": null,
+      "post_number": 11,
+      "post_text": "May 14, 2015 at 12:52 PM#11Ok, to answer my own question:dig deeper in the tree with \"cd\"list attributes with \"list\"set them with assign x /y"
+    },
+    {
+      "author": "kdoemelt",
+      "post_date": null,
+      "post_number": 12,
+      "post_text": "May 14, 2015 at 1:38 PM#12MVO,That's exactly it!Assign is the 'Set' keyword, then object (x) then the variable name (/y=) and lastly the new value. There are other commands that work as well, copy move and delete all work with the contents of the current directory.You can also do this from root, but you need the full path. The numbers for each directory can be used as the path from root ie. Assign Root 5.1.1.1 /xlra=off. This would turn off the DMX port A of the #1 console in the system."
+    },
+    {
+      "author": "mvo",
+      "post_date": null,
+      "post_number": 13,
+      "post_text": "May 17, 2015 at 12:51 PM#13Found that out, too. Thanks for pointing it out and making it clear.By the way: is there a way to get this parameters in a programatic way?If so, how do I assign the current value of say 'Root 5.1.1.1 /xlra' to a variable?This would be nice for toggling values or more complex logic. (Oh this macro language lacks power...)"
+    },
+    {
+      "author": "kdoemelt",
+      "post_date": null,
+      "post_number": 14,
+      "post_text": "May 17, 2015 at 1:16 PM#14MVO,I'm not sure if you can pull the value into a variable, but a setvar $namedvariable=root.5.1.1.1 /Xlra might work...Going the other way, setting the value to a previously defined variable is supported.I belive you need to include quotes around the variable name, but it should work.The macro language does have its drawbacks, but it's still the best of any console I've used.It does lack the power of a true programming language, and really falls under the scripting category, but with just about every aspect of the console accessible thru the command line, there is a lot of funtionality baked in."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 15,
+      "post_text": "May 17, 2015 at 1:26 PM#15It is not possible with the current verion to extract object propertyvalues into variables."
+    },
+    {
+      "author": "kdoemelt",
+      "post_date": null,
+      "post_number": 16,
+      "post_text": "May 17, 2015 at 6:50 PM#16Glad,I thought so, but wasn't sure, thanks for verifying.If this is possible in a future release, may I suggest a '.value' syntax appended to the path name?MVO, I was wrong in my previous post about the use of quotes around the variable name when Assigning a variable to a property. I must have been thinking about the Setvar command and distinguishing between number values and strings."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 17,
+      "post_text": "May 17, 2015 at 9:40 PM#17you should use quotes around the variable name, if the variable-content needs to be quoted when the variable is substituted with its contentsetvar $mylabel=\"Nice Cue\"label Cue 1 $\"mylabel\"Pass-> Label Cue 1 \"Nice Cue\"label Cue 1 $mylabelFail-> Label Cue 1 Nice Cuelabel Cue 1 \"$mylabel\"Fail-> Label Cue 1 \"$mylabel\""
+    },
+    {
+      "author": "RGMdddd",
+      "post_date": null,
+      "post_number": 18,
+      "post_text": "August 19, 2015 at 4:27 PM#18I have to say, this is extremely useful. It would seem that, if this information was available in text format that the process could be automated somewhat. Thanks very much for taking this on. Hope you are able to continue it.Rodd McLaughlin"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 19,
+      "post_text": "August 22, 2015 at 5:11 AM#19Here's a work-in-progress summary of syntax options.(Dunno how to make BBCode force an external link, so Cmd/Ctrl+Click to open in a new tab)"
+    },
+    {
+      "author": "Go-Button",
+      "post_date": null,
+      "post_number": 20,
+      "post_text": "August 22, 2015 at 1:27 PM#20Thanks Ryan! I've missed a list like this since a long time.Normally this should be part of the online manual."
+    }
+  ],
   "replies": 0,
   "thread_id": "46423",
   "title": "MA2 Object Model Map",

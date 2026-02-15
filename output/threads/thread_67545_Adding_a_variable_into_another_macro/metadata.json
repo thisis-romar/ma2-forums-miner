@@ -3,6 +3,26 @@
   "author": "willkinnaird",
   "post_date": null,
   "post_text": "January 26, 2023 at 5:18 PM#1Hello,Looking for advice on adding a user set variable into a line of another macro. For example:setuservar $test=helloAssign Macro 1.1.1 /cmd=\"SetUserVar $Song = $test\"Thus changing the first line of Macro 1 to beSetUserVar $Song = helloBut it doesn't work quite like that. Anyone have any advice?Thanks!",
+  "posts": [
+    {
+      "author": "willkinnaird",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 26, 2023 at 5:18 PM#1Hello,Looking for advice on adding a user set variable into a line of another macro. For example:setuservar $test=helloAssign Macro 1.1.1 /cmd=\"SetUserVar $Song = $test\"Thus changing the first line of Macro 1 to beSetUserVar $Song = helloBut it doesn't work quite like that. Anyone have any advice?Thanks!"
+    },
+    {
+      "author": "innovativeilluminations",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 11, 2023 at 5:56 AM#2I have the same exact question. Did you receive an answer from another source?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "June 11, 2023 at 11:47 AM#3for adding a variable, I suggest using the command AddUservar....SetUservar $test=\"hello\"SetUservar $cmd=\"SetUserVar $Song = \"AddUservar $cmd = $\"test\"Assign Macro 1.1.1 /cmd=$\"cmd\""
+    }
+  ],
   "replies": 0,
   "thread_id": "67545",
   "title": "Adding a variable into another macro",

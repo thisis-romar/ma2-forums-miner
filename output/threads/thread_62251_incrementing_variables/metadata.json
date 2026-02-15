@@ -3,6 +3,32 @@
   "author": "isakwang",
   "post_date": null,
   "post_text": "September 5, 2018 at 2:33 PM#1HiIs it possible to increment a variable in a loop? I would prefer a for or while loop but as far as I can see ma2 doesn't support that. I know lua could do this but i would prefer doing it internally. Im trying to automate the process of updating some cues in several cuelist.",
+  "posts": [
+    {
+      "author": "isakwang",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 5, 2018 at 2:33 PM#1HiIs it possible to increment a variable in a loop? I would prefer a for or while loop but as far as I can see ma2 doesn't support that. I know lua could do this but i would prefer doing it internally. Im trying to automate the process of updating some cues in several cuelist."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 6, 2018 at 11:29 PM#2check out this thread:http://www.ma-share.net/forum/read.php?8,61174"
+    },
+    {
+      "author": "Duplicate vjandrea",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 16, 2018 at 3:56 PM#3MaybeAddVarcan be helpfulCode[b][color=#006600]SetVar[/color][/b] $COUNTER = 0[b][color=#006600]AddVar[/color][/b] $COUNTER = 1[b][color=#006600]AddVar[/color][/b] $COUNTER = 2[b][color=#006600]ListVar[/color][/b] $COUNTER>> $COUNTER = 3"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 22, 2018 at 11:16 AM#4This has been documented here and elsewhere for years...1. setvar $count = 1 ; setvar $end=202. store cue $count3. addvar $count = 14. [$count<=$end] macro 1.\"this macro\".2will loop from $count=1 to $count=20"
+    }
+  ],
   "replies": 0,
   "thread_id": "62251",
   "title": "incrementing variables",

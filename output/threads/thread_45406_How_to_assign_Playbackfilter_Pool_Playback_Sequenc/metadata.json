@@ -3,6 +3,44 @@
   "author": "mschaich",
   "post_date": null,
   "post_text": "February 17, 2015 at 10:29 AM#1I'd like to assign a playbackfilter to pool playback sequence.Line1: assign seq 1 thru 10 world (1st row world)Line2: assign seq 11 thru 20 world (2nd row world)Line3: assign seq 21 thru 30 world (3rd row worl)but it isnt working. why?greets",
+  "posts": [
+    {
+      "author": "mschaich",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 17, 2015 at 10:29 AM#1I'd like to assign a playbackfilter to pool playback sequence.Line1: assign seq 1 thru 10 world (1st row world)Line2: assign seq 11 thru 20 world (2nd row world)Line3: assign seq 21 thru 30 world (3rd row worl)but it isnt working. why?greets"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 17, 2015 at 12:31 PM#2That's pretty easy: the command you are using is not correct :pTry this:Assign world/filter X at sequence YOr to use it on executors:Assign world/filter X at executor Y.ZX,Y,Z are the numbers you need to fill in for world/filter number and executor/sequence number"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 17, 2015 at 1:38 PM#3be aware the difference of assigning worlds to sequences versus executors:assigning worlds to executors, will create an output filter (playback-filter)assigning worlds to sequences, will create an input filter (store-filter)"
+    },
+    {
+      "author": "mschaich",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 17, 2015 at 1:44 PM#4assign filter x at sequence ynothing happens.assign world x at sequence yset a input filter.But id like to have a playback filter.greets"
+    },
+    {
+      "author": "mschaich",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "February 17, 2015 at 1:46 PM#5\"be aware the difference of assigning worlds to sequences versus executors:assigning worlds to executors, will create an output filter (playback-filter)assigning worlds to sequences, will create an input filter (store-filter)\"But in the assignmenu is a possibilty for playbackfilter. Did you know the right command, to get a playbackfilter in sequences?greetings"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "February 17, 2015 at 2:10 PM#6You have to define the filters in the first place before you can assign them (filter pool) I guess playbackfilters can only be applied to executors"
+    }
+  ],
   "replies": 0,
   "thread_id": "45406",
   "title": "How to assign Playbackfilter Pool Playback Sequence per macro",

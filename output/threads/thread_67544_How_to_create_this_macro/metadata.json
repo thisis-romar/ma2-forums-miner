@@ -3,6 +3,14 @@
   "author": "latrix",
   "post_date": null,
   "post_text": "January 25, 2023 at 9:19 AM#1Hello friends,During working，sometimes I have adjusted a fixture's position, color, gobo .etc. Then I find another fixture is better. So I need to choose another fixture in layout to \"at\" current fixture, and \"off\" current fixture.Operations as follow：Choose fixtureB in layoutClick \"at\"Choose fixtureA in layoutClick \"off\"Choose fixtureA in layoutNow i need a macro to make them easier:Choose fixtureB in layoutClick this macroChoose fixtureA in layoutAnyone knows how to create this macro？",
+  "posts": [
+    {
+      "author": "latrix",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 25, 2023 at 9:19 AM#1Hello friends,During working，sometimes I have adjusted a fixture's position, color, gobo .etc. Then I find another fixture is better. So I need to choose another fixture in layout to \"at\" current fixture, and \"off\" current fixture.Operations as follow：Choose fixtureB in layoutClick \"at\"Choose fixtureA in layoutClick \"off\"Choose fixtureA in layoutNow i need a macro to make them easier:Choose fixtureB in layoutClick this macroChoose fixtureA in layoutAnyone knows how to create this macro？"
+    }
+  ],
   "replies": 0,
   "thread_id": "67544",
   "title": "How to create this macro",

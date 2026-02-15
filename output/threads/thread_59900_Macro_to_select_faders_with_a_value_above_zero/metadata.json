@@ -3,6 +3,20 @@
   "author": "rowanbrown",
   "post_date": null,
   "post_text": "October 30, 2017 at 4:33 PM#1Hi all,I need a macro that selects faders with a value above zero.For instance if I have several effects running and I want a macro that increases all the ones that are running by + 20.I want it to leave alone any that are at zero.I tried:[Fader 1.1 thru 1.15>0] at + 20 fade 3Didn't work.Any ideas people?",
+  "posts": [
+    {
+      "author": "rowanbrown",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 30, 2017 at 4:33 PM#1Hi all,I need a macro that selects faders with a value above zero.For instance if I have several effects running and I want a macro that increases all the ones that are running by + 20.I want it to leave alone any that are at zero.I tried:[Fader 1.1 thru 1.15>0] at + 20 fade 3Didn't work.Any ideas people?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 30, 2017 at 4:59 PM#2You can only use $variables inside [conditions]you could try to multiply the existing value:e.g.CodeExecutor 1.1 Thru 1.15 At *1.2 Fade 3"
+    }
+  ],
   "replies": 0,
   "thread_id": "59900",
   "title": "Macro to select faders with a value above zero",

@@ -3,6 +3,38 @@
   "author": "42Lightcrew",
   "post_date": null,
   "post_text": "April 24, 2020 at 12:15 AM#1Hi,I'm looking for a method to clone my effects.What's your method for being fast. For take selection and update the phase to the fixture number....Thank you !",
+  "posts": [
+    {
+      "author": "42Lightcrew",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 24, 2020 at 12:15 AM#1Hi,I'm looking for a method to clone my effects.What's your method for being fast. For take selection and update the phase to the fixture number....Thank you !"
+    },
+    {
+      "author": "moe torola",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 24, 2020 at 12:10 PM#2is the target to clone data in stored sequences or just to change the fixture selection in a effect pool item?"
+    },
+    {
+      "author": "42Lightcrew",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 24, 2020 at 12:52 PM#3To change the selection order of my effects without entering the pool.For example, I program a chaser with 4 fixtures and I add 2 fixtures. How do I clone with my selection order?Thanks for your help."
+    },
+    {
+      "author": "moe torola",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 24, 2020 at 3:37 PM#4ok , so to add another fixtures to a attribute line in a effect pool item is not really a clone process.now lets call it add fixtures to the existing info by mergingyou're able to use the effect number or label,in this demonstration effect 10, labeled dim-chsto merge the new information in the pool item, you need to adress the attribute line itself in the internal directory structure and add a command option.take a look at the command options by writing store /?  in the command line.for this task we need the merge option /myou know that fixture 1 thru 4 are already in line one of the effect, now lets add fixt 10 thru 13.select them by keyboard or group pool, now they are active in the programmer.store the new info, use the abbreviations to keep it quicks ef 1.dim-chs.1 /mors ef 1.10.1 /morcreate a macro with that lineor create a macro thats asking you for the target bys ef  1.(\"effect name\").1 /mnow there are 8 fixtures in the attribute line"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "April 24, 2020 at 6:34 PM#5I would avoid using 'merge' in this case.most people use 'overwrite' for storing a new effect selection, since normally you're going to take your new selection and store it as the new selection, rather than just adding two more fixture onto the end of it.I also hate these shortcuts.if you are trying to copy an effect line with a new selection to a new effect line, you cancopy effect 1.effect.line at 1.effect.linethen take selection andstore effect 1.effect.line /oif you are trying to just clone two fixture to two other fixtures already in the effect, use clone.clone fixture x at fixture y if effect z"
+    }
+  ],
   "replies": 0,
   "thread_id": "65595",
   "title": "Clone effect",

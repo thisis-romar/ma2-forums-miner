@@ -3,6 +3,128 @@
   "author": "A319",
   "post_date": null,
   "post_text": "July 5, 2015 at 9:26 PM#1Is it possible to have an effect running in a sequence, and execute a macro which would change the \"low\" and/or \"high preset for a specific group of fixtures, in the effect which is currently being run?",
+  "posts": [
+    {
+      "author": "A319",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 5, 2015 at 9:26 PM#1Is it possible to have an effect running in a sequence, and execute a macro which would change the \"low\" and/or \"high preset for a specific group of fixtures, in the effect which is currently being run?"
+    },
+    {
+      "author": "Go-Button",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 6, 2015 at 3:50 PM#2The  syntax should be:Assign effect x/highlevel=aAssign effect x/lowlevel=bI haven't tested it in a running sequence, but this is the way I would try it first."
+    },
+    {
+      "author": "A319",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 7, 2015 at 6:44 PM#3I tried it, it doesn't work..."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "July 10, 2015 at 10:31 AM#4Have look at the topic :Fader that changes effectHblightguy [ PM ]May 10, 2015 08:39AMi can't find a way to get a link !"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "July 10, 2015 at 10:39 AM#5assign effect (?)/ highvalue = (?)"
+    },
+    {
+      "author": "funkyFluffy",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "August 13, 2015 at 12:34 AM#6'level' won't work...the right syntax is 'value':Assign Effect x.y.z/highvalue=aAssign Effect x.y.z/lowvalue=btested in 3.1.1.1..."
+    },
+    {
+      "author": "Go-Button",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "August 13, 2015 at 7:25 PM#7Sorry for the wrong syntax. I'm wondering why I got this in one of my user macros. Not sure if this was ever changed in a past version or if I just copied a wrong syntax."
+    },
+    {
+      "author": "Duplicate MTRobin",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "October 15, 2015 at 1:35 AM#8I am running version 3.1.2.5. This macro doesn't seem to be working for me. Any suggestions? Also, what are you 'x.y.z' values representing?Thank youMax"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "October 15, 2015 at 1:48 AM#9x = 1y = Effect Number or \"Name\"z = Effect Line1.num/\"name\".line"
+    },
+    {
+      "author": "Duplicate MTRobin",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "October 16, 2015 at 5:45 PM#10I'm still having some trouble with this one. I used the macro below.Assign Effect 1.305.1/ EffectHigh = Preset 4.1.I am trying to create a macro that changes my high and lo values to color presets for my color FX. This way I can select two colors while busking and the effect will run those two color presets.Any thoughts or suggestions?Thanks!Max"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 11,
+      "post_text": "October 17, 2015 at 12:43 AM#11create general PresetIDs for High and Low, that the effect is linked to.Copy /merge your other colorpresets into the High/low presets, to change the colors of your effect"
+    },
+    {
+      "author": "danielprichardson",
+      "post_date": null,
+      "post_number": 12,
+      "post_text": "February 12, 2016 at 10:26 PM#12Is there a way to set an absolute effect line's high/low values to a preset via the command line?The examples above with a colour effect where you have already linked the high and low values to presets then create a macro that asks you for the two colours you want and updates the linked preset is really cool. However, if I am creating a show via macros and want to avoid opening the effect editor and assigning high/low presets, is there a way?Thanks."
+    },
+    {
+      "author": "waz190",
+      "post_date": null,
+      "post_number": 13,
+      "post_text": "March 31, 2016 at 6:40 PM#13Im still having trouble with this macro, can somebody help?example my fx 500 contains shutter and colour wheelI'm writing:assign effect 500.1/ effecthigh = preset 4.36"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 14,
+      "post_text": "March 31, 2016 at 10:05 PM#14hiit doesn't workbest way, for me, is to have an effect with highpreset and lowpreset then to update these presets live"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 15,
+      "post_text": "April 1, 2016 at 3:41 AM#15Yeah, no this doesn't work. BentoyLight suggested one solution. Another possibility would be to do something like:- At Preset 4.(low preset?) /layer=effectlow- At Preset 4.(high preset?) /layer=effecthigh- Store Effect 1.a.b Thru 1.a.c /m"
+    },
+    {
+      "author": "waz190",
+      "post_date": null,
+      "post_number": 16,
+      "post_text": "April 5, 2016 at 8:14 PM#16So how would i build that macro? (what would abc be)"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 17,
+      "post_text": "April 5, 2016 at 8:35 PM#17A is the effect number, and B/C are lines in that effect."
+    },
+    {
+      "author": "waz190",
+      "post_date": null,
+      "post_number": 18,
+      "post_text": "April 5, 2016 at 8:39 PM#18Ok all it seems to do is take the selection away from the effect. which is more than it was doing before! going to have a play! thanks for your help."
+    },
+    {
+      "author": "Duplicate vcovca",
+      "post_date": null,
+      "post_number": 19,
+      "post_text": "April 25, 2016 at 7:52 PM#19You first have to find out where your effect is..lets do this for your effect 500.... the macro below will change your low value to 50.cd effect 500; assign 1 /lowvalue=50; cd/I'll explain what you just did. You can type this in your commandline. Use the commandline feedback to check what you do.First you have to go to the directory of your effect in the desk:cd effect 500Then, you want to see what is in your effect, and in which line the value is you want to edit.listSo now, you have your effect in your commandline screen. You can see all the values of your effect. All the stuff you see there, can be changed through commandline. You just have to figure out howThe line I first wrote is the one to change your low value. Go have funDon't forget to change your diractory to the desk withcd/"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 20,
+      "post_text": "April 26, 2016 at 3:57 PM#20no need of cdassign effect 1.500.1 /lowvalue=501(effect pool).500(your effect).1(your line)"
+    }
+  ],
   "replies": 0,
   "thread_id": "47615",
   "title": "Macro for Low and High Presets in FX?",

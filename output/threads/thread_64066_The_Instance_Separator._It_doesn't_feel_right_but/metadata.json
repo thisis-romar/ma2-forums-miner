@@ -3,6 +3,32 @@
   "author": "DLion",
   "post_date": null,
   "post_text": "June 9, 2019 at 10:28 PM#1I made this Macro set that separates each instance into it's own group.\"Start Unfold\" Sets Variables For start group. I should use a variable for the first line, but I normally start at 600 for the Original group \"The Whole thing\"CodeSetUserVar $unfold = (First Group with plenty of empty Cells)Store Group $unfold /o;  Label Group $unfold \"The Whole thing\"SetUserVar $unfold = 601SetUserVar $ints =1Macro Unfold\"Unfold\"CodeGroup \"The Whole Thing\"Store Group $unfoldOff Fixture *. $intsStore Group $unfold /r;ClearMacro \"Check unfold\"\"Check unfold\" I would prefer the fixture name followed by the instance rather than the \"Instance.1\"CodeGroup $unfold[$selectedfixturescount >= 1]  AddUserVar $Unfold =1;  AddUserVar $ints =1;  Macro Unfold[$selectedfixturescount == 0]  Label Group 601  Thru $Unfold Instance.1;  Delete Group $unfold;  SetUserVar $unfold =;  SetUserVar $ints =My head was exploding trying to think of how this was going to work but I it does? The thing throwing me off is \"Off Fixture\" \"Store /r\" Stores the fixture that I offed.Written on MA2OnPC 3.3.4.3",
+  "posts": [
+    {
+      "author": "DLion",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 9, 2019 at 10:28 PM#1I made this Macro set that separates each instance into it's own group.\"Start Unfold\" Sets Variables For start group. I should use a variable for the first line, but I normally start at 600 for the Original group \"The Whole thing\"CodeSetUserVar $unfold = (First Group with plenty of empty Cells)Store Group $unfold /o;  Label Group $unfold \"The Whole thing\"SetUserVar $unfold = 601SetUserVar $ints =1Macro Unfold\"Unfold\"CodeGroup \"The Whole Thing\"Store Group $unfoldOff Fixture *. $intsStore Group $unfold /r;ClearMacro \"Check unfold\"\"Check unfold\" I would prefer the fixture name followed by the instance rather than the \"Instance.1\"CodeGroup $unfold[$selectedfixturescount >= 1]  AddUserVar $Unfold =1;  AddUserVar $ints =1;  Macro Unfold[$selectedfixturescount == 0]  Label Group 601  Thru $Unfold Instance.1;  Delete Group $unfold;  SetUserVar $unfold =;  SetUserVar $ints =My head was exploding trying to think of how this was going to work but I it does? The thing throwing me off is \"Off Fixture\" \"Store /r\" Stores the fixture that I offed.Written on MA2OnPC 3.3.4.3"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 9, 2019 at 10:37 PM#2HiI'm  not sure of what you want to do.Do you want to store groups for each instance ?"
+    },
+    {
+      "author": "DLion",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "June 9, 2019 at 10:39 PM#3Yeah.  The Macro works, I just didn't expect it to do what I wanted to do.Is there another way that's less complicated? Maybe have it run off of 1 Macro vs 3?EDIT: Ok doing that was easy, just copied each line from the 2nd and 3rd macro into the \"Unfold\" and it loops the Line 6 thru 12CodeSetUserVar $unfold = (First Group with plenty of empty Cells)Store Group $unfold /o;  Label Group $unfold \"The Whole thing\"SetUserVar $unfold = 601SetUserVar $ints =1\"Unfold\"Group \"The Whole Thing\"Store Group $unfoldOff Fixture *. $intsStore Group $unfold /r;Clear\"Check unfold\"Group $unfold[$selectedfixturescount >= 1]  AddUserVar $Unfold =1;  AddUserVar $ints =1;  Macro 1.\"Unfold\".6[$selectedfixturescount == 0]  Label Group 601  Thru $Unfold Instance.1;  Delete Group $unfold;  SetUserVar $unfold =;  SetUserVar $ints =Display More"
+    },
+    {
+      "author": "captainflo22",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "August 17, 2019 at 9:35 PM#4Hello, simple way is to use command « if *.(Instance?) » after group selection"
+    }
+  ],
   "replies": 0,
   "thread_id": "64066",
   "title": "The Instance Separator. It doesn't feel  right but it works?",

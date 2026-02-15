@@ -3,6 +3,26 @@
   "author": "MassimoSt",
   "post_date": null,
   "post_text": "March 21, 2020 at 11:04 AM#1Hello everybody,Is it possible to copy a macro in another macro?now I have to write all the lines from macro 1 in macro 2.maybe someone can help me?Thank you!",
+  "posts": [
+    {
+      "author": "MassimoSt",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 21, 2020 at 11:04 AM#1Hello everybody,Is it possible to copy a macro in another macro?now I have to write all the lines from macro 1 in macro 2.maybe someone can help me?Thank you!"
+    },
+    {
+      "author": "F Dijkers",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 21, 2020 at 12:03 PM#2Hi,This works a bit different then you're explaining right now. You just can refer to another macro within your macro. Just put in \"Macro x.y\", where y can be the line if you want to.Kind regards,Floris DijkersLighting Director & Designerflorisdijkers.comlighting@florisdijkers.com"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 21, 2020 at 5:59 PM#3Just copy the macro: copy macro 1 at macro 2, when you need the complete macro in the new macroOr some specific lines: copy 1.x.macroline thru 1.x.macroline at macro 1.y.macroline/mergeWhere x and y are the macro numbers (keep in mind that the new macrolines in the destination macro need to exist before you copy the source lines) ( those lines can be created by commandline as wel ( store macro 1.x. Macroline thru 1.x. Macroline"
+    }
+  ],
   "replies": 0,
   "thread_id": "65450",
   "title": "copy macro in a macro?",

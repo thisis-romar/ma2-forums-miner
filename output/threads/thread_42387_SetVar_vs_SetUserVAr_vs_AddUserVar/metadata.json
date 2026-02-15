@@ -3,6 +3,56 @@
   "author": "McDy00",
   "post_date": null,
   "post_text": "July 7, 2014 at 7:49 PM#1can someone give me a quick explanation of differences between those ?And, other great not much known command you guys using for macros?thanks",
+  "posts": [
+    {
+      "author": "McDy00",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 7, 2014 at 7:49 PM#1can someone give me a quick explanation of differences between those ?And, other great not much known command you guys using for macros?thanks"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 7, 2014 at 9:19 PM#2setvar versus setuservar only makes a difference if there is multiple usersuse \"Add/SetVar\" if the variable should be available (and the same) for all usersuse \"Add/SetUserVar\" if the variable should be individual per userSetVar deletes any old value and assigns a new value, while Addvar combines the old and the new value--SetVar $text=\"Andreas\"SetVar $text=\"Glad\"->$text=GladSetVar $text=\"Andreas\"AddVar $text=\"Glad\"->$text=AndreasGladSetVar $number=5SetVar $number=6->$number=6SetVar $number=5AddVar $number=6->$number=11"
+    },
+    {
+      "author": "McDy00",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 7, 2014 at 9:42 PM#3Thank you very much !"
+    },
+    {
+      "author": "ivers",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "July 9, 2014 at 8:04 AM#4I saw the syntax setvar $\"something\" used in a macro. Whats the difference between quotes or not in a variable name?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "July 9, 2014 at 10:29 AM#5the difference is the quotes ;-).embrace thenameof the variable in quotes when it is recalled, if thecontentneed to be embraced in quotes for correct interpretationSetvar $myname=\"Andreas Glad\"Login $myname-> Login Andreas Glad ->[color=#FF0000]FAIL[/color]Login $\"myname\"-> Login \"Andreas Glad\" ->[color=#00FF00]PASS[/color]Setvar $mytarget=\"Executor 5\"Go $mytarget->Go Executor 5 ->[color=#66CC33]PASS[/color]Go $\"mytarget\"->Go \"Executor 5\" ->[color=#FF0000]FAIL[/color]"
+    },
+    {
+      "author": "ivers",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "July 9, 2014 at 9:02 PM#6That makes sense."
+    },
+    {
+      "author": "McDy00",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "July 11, 2014 at 2:15 PM#7And how do we delete a Variable?thanks"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "July 12, 2014 at 12:34 PM#8Setuservar $Vartobedelete \"\"   Or:Setvar $Vartobedelete \"\""
+    }
+  ],
   "replies": 0,
   "thread_id": "42387",
   "title": "SetVar vs SetUserVAr vs AddUserVar",

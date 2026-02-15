@@ -3,6 +3,20 @@
   "author": "floriandimsky",
   "post_date": null,
   "post_text": "February 17, 2016 at 4:25 PM#1Hi,is it possible to create a Macro that search For a preset of one fixture in a sequence and Replace that Preset with a new one?And how it Works?Thanks",
+  "posts": [
+    {
+      "author": "floriandimsky",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 17, 2016 at 4:25 PM#1Hi,is it possible to create a Macro that search For a preset of one fixture in a sequence and Replace that Preset with a new one?And how it Works?Thanks"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 17, 2016 at 8:44 PM#2There is a macro for that in the auto create macro pool.syntax is :Replace Preset (old preset number x.y)  With Preset (New preset number x.y)  If Sequence (Sequence number?)"
+    }
+  ],
   "replies": 0,
   "thread_id": "51325",
   "title": "Search and replace",

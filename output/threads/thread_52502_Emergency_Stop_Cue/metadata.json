@@ -3,6 +3,20 @@
   "author": "lbribiesca",
   "post_date": null,
   "post_text": "April 16, 2016 at 6:56 AM#1HiI'm currently working with small motors and rotators controlled thru DMX and I'm using an executor as an emergency stop, this cue can be fired locally on the console or with a switch thru AnalogRemote, does any one know if it is possible to program this CUE in order that when fired it brings up to all console screens a POP-UP message to let the operator someone has fired the cue?Thanks in advance",
+  "posts": [
+    {
+      "author": "lbribiesca",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 16, 2016 at 6:56 AM#1HiI'm currently working with small motors and rotators controlled thru DMX and I'm using an executor as an emergency stop, this cue can be fired locally on the console or with a switch thru AnalogRemote, does any one know if it is possible to program this CUE in order that when fired it brings up to all console screens a POP-UP message to let the operator someone has fired the cue?Thanks in advance"
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 16, 2016 at 8:22 AM#2Hi!First of all, if you need an emergency-stop, it's not allowed to control movements only by DMX! Emergency-stop should be better done on hardware, not by showcontrol from the desk. What, if the desk crashes during movement? How to stop movement then? Think about that. Safety first!But to help you with your problem of a popup-message, try using a timer which holds the alarm-text and creates the popup. Have a look at this post:http://www.ma-share.net/forum/read.php…42889#msg-42889Creating popups on all desks for all users is dificult, 'cause most of the commands by links/macros are executed on the master-console.Gralf"
+    }
+  ],
   "replies": 0,
   "thread_id": "52502",
   "title": "Emergency Stop Cue",

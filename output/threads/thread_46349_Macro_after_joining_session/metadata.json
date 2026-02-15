@@ -3,6 +3,26 @@
   "author": "dj_rappa",
   "post_date": null,
   "post_text": "April 24, 2015 at 1:15 AM#1So in my system I have a startup Macro which puts the station in the correct user login and so forth and also recalls the correct view.Now part way through running this Macro the station will join the session. Now downloading the show file seems to interrupt and stop this macro so it never recalls the view, even if I add a delay time to that part of the macro.Is there any way to have a station execute a macro after it joins the session?Problem is the station needs to recall the views because they pertain to an external monitor and another station uses different resolution monitors which in cause the views for that user profile to display incorrectly at first.",
+  "posts": [
+    {
+      "author": "dj_rappa",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 24, 2015 at 1:15 AM#1So in my system I have a startup Macro which puts the station in the correct user login and so forth and also recalls the correct view.Now part way through running this Macro the station will join the session. Now downloading the show file seems to interrupt and stop this macro so it never recalls the view, even if I add a delay time to that part of the macro.Is there any way to have a station execute a macro after it joins the session?Problem is the station needs to recall the views because they pertain to an external monitor and another station uses different resolution monitors which in cause the views for that user profile to display incorrectly at first."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 28, 2015 at 8:13 AM#2mabye a solution could be to disable autojoin, and have the macro, (when it has done whatever you need) to manually join the session?"
+    },
+    {
+      "author": "dj_rappa",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 29, 2015 at 5:24 AM#3Interesting. I'll give that a try, however I think the problem is that when it gets the show file pushed to it that the user profiles contain the funky views. So I need to call the views AFTER the show is downloaded..."
+    }
+  ],
   "replies": 0,
   "thread_id": "46349",
   "title": "Macro after joining session",

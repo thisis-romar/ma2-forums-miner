@@ -3,6 +3,20 @@
   "author": "freakstar50",
   "post_date": null,
   "post_text": "June 12, 2015 at 4:12 PM#1i've got this macro for making a seq with just an dimmer and a shutter in a diffrent cuecan someone help me with making this macro run better and cleaner1. Group @2. Matricks 23. at 1004. store (page.exec)5. presetType beam at (shutter 0/100)6. store cue 2 @  ///// i want this to be at the same place as i stored the number 47. label @ ///// i want this to select it automaticly to the seq abovethan its all the same but than with matrick 3 Odd",
+  "posts": [
+    {
+      "author": "freakstar50",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 12, 2015 at 4:12 PM#1i've got this macro for making a seq with just an dimmer and a shutter in a diffrent cuecan someone help me with making this macro run better and cleaner1. Group @2. Matricks 23. at 1004. store (page.exec)5. presetType beam at (shutter 0/100)6. store cue 2 @  ///// i want this to be at the same place as i stored the number 47. label @ ///// i want this to select it automaticly to the seq abovethan its all the same but than with matrick 3 Odd"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 12, 2015 at 7:23 PM#2try using $variablesCodeGroup @Matricks 2At 100SetUservar $myexec=(page.exec)Store Executor $myexecPresetType \"beam\" At (shutter 0/100)Store Executor $myexec cue 2Label Executor $myexec"
+    }
+  ],
   "replies": 0,
   "thread_id": "47214",
   "title": "Help with a macro",

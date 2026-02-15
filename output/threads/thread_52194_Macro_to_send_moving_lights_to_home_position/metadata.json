@@ -3,6 +3,26 @@
   "author": "Dimitri Grant",
   "post_date": null,
   "post_text": "March 31, 2016 at 2:42 PM#1Hi,New to gMA2.  Was wondering if anyone could help me with a Macro that sends selected fixtures to their home position.",
+  "posts": [
+    {
+      "author": "Dimitri Grant",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 31, 2016 at 2:42 PM#1Hi,New to gMA2.  Was wondering if anyone could help me with a Macro that sends selected fixtures to their home position."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 31, 2016 at 2:52 PM#2feature position at centerorfeature position at defaultposition"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 31, 2016 at 3:03 PM#3[color=#66FF00]Default[/color] is an action. So [color=#66FF00]Default Feature[/color] \"Position\" or [color=#66FF00]Default Presettype[/color] 2."
+    }
+  ],
   "replies": 0,
   "thread_id": "52194",
   "title": "Macro to send moving lights to home position",

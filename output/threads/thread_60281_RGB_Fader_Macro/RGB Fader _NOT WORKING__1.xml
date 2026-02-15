@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.4/MA.xsd" major_vers="3" minor_vers="3" stream_vers="4">
+	<Info datetime="2017-12-16T17:46:37" showfile="pg_timz_dbkledsetup_v17" />
+	<Macro index="68" name="FIX_ID_COL2">
+		<Macroline index="0">
+			<text>SetVar $fixid =(&quot;Fix ID?&quot;)</text>
+			<info>Set FIX ID</info>
+		</Macroline>
+		<Macroline index="1">
+			<text>[$fixid==999] Off Macro 1 Thru</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>[$fixid &lt;=100] Macro 1.&quot;Fix_ID_COL2&quot;.9</text>
+			<info>If Fixture id is no fixture, you have to pick a new one</info>
+		</Macroline>
+		<Macroline index="3">
+			<text>[$fixid &lt;=200] Macro 1.&quot;Fix_ID_COL2&quot;.23</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>[$fixid &lt;=300] Macro 1.&quot;Fix_ID_COL2&quot;.25</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>[$fixid &lt;=400] Macro 1.&quot;Fix_ID_COL2&quot;.27</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>[$fixid &gt;=$maxfixnr4] Macro 1.&quot;FIX_ID_COL2&quot;.29</text>
+		</Macroline>
+		<Macroline index="7">
+			<text>Macro 1.&quot;FIX_ID_COL2&quot;.32</text>
+		</Macroline>
+		<Macroline index="8">
+			<text>[$fixid ==47] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="9">
+			<text>[$fixid ==48] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="10">
+			<text>[$fixid ==49] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="11">
+			<text>[$fixid ==50] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="12">
+			<text>[$fixid ==55] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="13">
+			<text>[$fixid ==56] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="14">
+			<text>[$fixid ==57] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="15">
+			<text>[$fixid ==58] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="16">
+			<text>[$fixid ==59] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="17">
+			<text>[$fixid ==60] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="18">
+			<text>[$fixid ==85] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="19">
+			<text>[$fixid ==90] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="20">
+			<text>[$fixid &gt;=$Maxfixnr1] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="21">
+			<text>Macro 1.&quot;FIX_ID_COL2&quot;.32</text>
+		</Macroline>
+		<Macroline index="22">
+			<text>[$fixid &gt;=$Maxfixnr2] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="23">
+			<text>Macro 1.&quot;FIX_ID_COL2&quot;.32</text>
+		</Macroline>
+		<Macroline index="24">
+			<text>[$fixid &gt;=$Maxfixnr3] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="25">
+			<text>Macro 1.&quot;FIX_ID_COL2&quot;.32</text>
+		</Macroline>
+		<Macroline index="26">
+			<text>[$fixid &gt;=$Maxfixnr4] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="27">
+			<text>Macro 1.&quot;FIX_ID_COL2&quot;.32</text>
+		</Macroline>
+		<Macroline index="28">
+			<text>[$fixid &lt;1001] SetVar $fixid=(&quot;This Fixture Doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="29">
+			<text>[$fixid &gt;1072] SetVar $fixid=(&quot;This Fixture doesn&apos;t exist, try another one&quot;) ; Macro 1.&quot;Fix_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="30">
+			<text>Macro 1.&quot;FIX_ID_COL2&quot;.32</text>
+		</Macroline>
+		<Macroline index="31">
+			<text>[$fixid &lt;=20] SetVar $fixid =(Fixture can&apos;t be colored, try another one) ; Macro 1.&quot;FIX_ID_COL2&quot;.2</text>
+			<info>Profiel WW</info>
+		</Macroline>
+		<Macroline index="32">
+			<text>[$Fixid &lt;61] Macro 1.&quot;FIX_ID_COL2&quot;.38</text>
+			<info>Fresnel WW</info>
+		</Macroline>
+		<Macroline index="33">
+			<text>[$Fixid &lt;85] Macro 1.&quot;FIX_ID_COL2&quot;.40</text>
+			<info>Arthea Profiel WW</info>
+		</Macroline>
+		<Macroline index="34">
+			<text>[$Fixid &lt;=101] Macro 1.&quot;FIX_ID_COL2&quot;.42</text>
+			<info>CorePar UV USB</info>
+		</Macroline>
+		<Macroline index="35">
+			<text>[$fixid &gt;=591] SetVar $fixid =(Fixture can&apos;t be colored, try another one) ; Macro 1.&quot;FIX_ID_COL2&quot;.2</text>
+			<info>Vaste Installatie</info>
+		</Macroline>
+		<Macroline index="36">
+			<text>Off Macro &quot;FIX_ID_COL2&quot;</text>
+		</Macroline>
+		<Macroline index="37">
+			<text>[$fixid &gt;=51] SetVar $fixid =(Fixture can&apos;t be colored, try another one) ; Macro 1.&quot;FIX_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="38">
+			<text>Off Macro &quot;FIX_ID_COL2&quot;</text>
+		</Macroline>
+		<Macroline index="39">
+			<text>[$fixid &gt;=81] SetVar $fixid =(Fixture can&apos;t be colored, try another one) ; Macro 1.&quot;FIX_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="40">
+			<text>Off Macro &quot;FIX_ID_COL2&quot;</text>
+		</Macroline>
+		<Macroline index="41">
+			<text>[$fixid &gt;96] SetVar $fixid =(Fixture can&apos;t be colored, try another one) ; Macro 1.&quot;FIX_ID_COL2&quot;.2</text>
+		</Macroline>
+		<Macroline index="42">
+			<text>Off Macro &quot;FIX_ID_COL2&quot;</text>
+		</Macroline>
+	</Macro>
+	<Macro index="69" name="IRGBW_Faders">
+		<Macroline index="0" delay="0.01">
+			<text>Macro &quot;fix_ID_COL2&quot;</text>
+		</Macroline>
+		<Macroline index="1" delay="0.01">
+			<text>Fixture $fixid ; At Full ; Store Sequence $RGB_faderseq ; Label Sequence $RGB_faderseq &quot;Intensity&quot;</text>
+		</Macroline>
+		<Macroline index="2" delay="0.01">
+			<text>AddVar $RGB_Faderseq = 1</text>
+		</Macroline>
+		<Macroline index="3" delay="0.01">
+			<text>At Preset &quot;color&quot;.&quot;red&quot; ; Store Sequence $RGB_faderseq ; Label Sequence $RGB_faderseq &quot;Red&quot;</text>
+		</Macroline>
+		<Macroline index="4" delay="0.01">
+			<text>AddVar $RGB_Faderseq = 1</text>
+		</Macroline>
+		<Macroline index="5" delay="0.01">
+			<text>At Preset &quot;color&quot;.&quot;Green&quot; ; Store Sequence $RGB_faderseq ; Label Sequence $RGB_faderseq &quot;Green&quot;</text>
+		</Macroline>
+		<Macroline index="6" delay="0.01">
+			<text>AddVar $RGB_Faderseq = 1</text>
+		</Macroline>
+		<Macroline index="7" delay="0.01">
+			<text>At Preset &quot;color&quot;.&quot;Blue&quot; ; Store Sequence $RGB_faderseq ; Label Sequence $RGB_faderseq &quot;Blue&quot;</text>
+		</Macroline>
+		<Macroline index="8" delay="0.01">
+			<text>AddVar $RGB_Faderseq = 1</text>
+		</Macroline>
+		<Macroline index="9" delay="0.01">
+			<text>At Preset &quot;color&quot;.&quot;White&quot; ; Store Sequence $RGB_faderseq ; Label Sequence $RGB_faderseq &quot;White&quot; ; ClearAll</text>
+		</Macroline>
+		<Macroline index="10" delay="0.01">
+			<text>AddVar $RGB_Faderseq = -4</text>
+		</Macroline>
+		<Macroline index="11" delay="0.01">
+			<text>Macro &quot;set_guest_Ch_RGB&quot;</text>
+		</Macroline>
+		<Macroline index="12" delay="0.01">
+			<text>AddVar $Guestch =1</text>
+		</Macroline>
+		<Macroline index="13" delay="0.01">
+			<text>Macro &quot;set_guest_Ch_RGB2&quot;</text>
+		</Macroline>
+		<Macroline index="14" delay="0.01">
+			<text>AddVar $Guestch =1</text>
+		</Macroline>
+		<Macroline index="15" delay="0.01">
+			<text>Macro &quot;set_guest_Ch_RGB2&quot;</text>
+		</Macroline>
+		<Macroline index="16" delay="0.01">
+			<text>AddVar $Guestch =1</text>
+		</Macroline>
+		<Macroline index="17" delay="0.01">
+			<text>Macro &quot;set_guest_Ch_RGB2&quot;</text>
+		</Macroline>
+		<Macroline index="18" delay="0.01">
+			<text>AddVar $Guestch =1</text>
+		</Macroline>
+		<Macroline index="19" delay="0.01">
+			<text>Macro &quot;set_guest_Ch_RGB2&quot;</text>
+		</Macroline>
+		<Macroline index="20" delay="0.01">
+			<text>[$guestchnummer==1] Macro 1.&quot;IRGBW_Faders&quot;.12</text>
+		</Macroline>
+		<Macroline index="21" delay="0.01">
+			<text>[$guestchnummer==2] Macro 1.&quot;IRGBW_Faders&quot;.12</text>
+		</Macroline>
+		<Macroline index="22" delay="0.01">
+			<text>[$guestchnummer==0] Macro 1.&quot;IRGBW_Faders&quot;.27</text>
+		</Macroline>
+		<Macroline index="23" delay="0.01">
+			<text>[$fixid&gt;=1] Macro 1.&quot;IRGBW_Faders&quot;.27</text>
+		</Macroline>
+		<Macroline index="24" delay="0.01">
+			<text>[$guestch&gt;=1] Macro 1.&quot;IRGBW_Faders&quot;.27</text>
+		</Macroline>
+		<Macroline index="25" delay="0.01">
+			<text>Off Macro 1 Thru</text>
+		</Macroline>
+		<Macroline index="26" delay="0.01">
+			<text>Assign Executor *.&quot;Guest_ch_Nummer&quot; Cue $Guestch /cmd=&quot;setvar $guestchnummer = 1&quot; ; AddVar $Guestch =-1</text>
+		</Macroline>
+		<Macroline index="27" delay="0.01">
+			<text>Assign Executor *.&quot;Guest_ch_Nummer&quot; Cue $Guestch /cmd=&quot;setvar $guestchnummer = 1&quot; ; AddVar $Guestch =-1</text>
+		</Macroline>
+		<Macroline index="28" delay="0.01">
+			<text>Assign Executor *.&quot;Guest_ch_Nummer&quot; Cue $Guestch /cmd=&quot;setvar $guestchnummer = 1&quot; ; AddVar $Guestch =-1</text>
+		</Macroline>
+		<Macroline index="29" delay="0.01">
+			<text>Assign Executor *.&quot;Guest_ch_Nummer&quot; Cue $Guestch /cmd=&quot;setvar $guestchnummer = 1&quot; ; AddVar $Guestch =-1</text>
+		</Macroline>
+		<Macroline index="30" delay="0.01">
+			<text>Assign Executor *.&quot;Guest_ch_Nummer&quot; Cue $Guestch /cmd=&quot;setvar $guestchnummer = 1&quot;</text>
+		</Macroline>
+		<Macroline index="31" delay="0.01">
+			<text>Macro &quot;guestch_exec_nr&quot;</text>
+		</Macroline>
+		<Macroline index="32" delay="0.01">
+			<text>Assign Sequence $rgb_faderseq Executor $guestexecpage.$guestexecnr ; Assign Executor $guestexecpage.$guestexecnr /priority=htp</text>
+		</Macroline>
+		<Macroline index="33" delay="0.01">
+			<text>Assign TempFader Executor $guestexecpage.$guestexecnr ; Executor $guestexecpage.$guestexecnr At 0</text>
+		</Macroline>
+		<Macroline index="34" delay="0.01">
+			<text>AddVar $RGB_Faderseq = 1 ; AddVar $guestch =1</text>
+		</Macroline>
+		<Macroline index="35" delay="0.01">
+			<text>Macro &quot;guestch_exec_nr&quot;</text>
+		</Macroline>
+		<Macroline index="36" delay="0.01">
+			<text>Assign Sequence $rgb_faderseq Executor $guestexecpage.$guestexecnr ; Assign Executor $guestexecpage.$guestexecnr /priority=htp</text>
+		</Macroline>
+		<Macroline index="37" delay="0.01">
+			<text>Assign TempFader Executor $guestexecpage.$guestexecnr ; Executor $guestexecpage.$guestexecnr At 0</text>
+		</Macroline>
+		<Macroline index="38" delay="0.01">
+			<text>AddVar $RGB_Faderseq = 1 ; AddVar $guestch =1</text>
+		</Macroline>
+		<Macroline index="39" delay="0.01">
+			<text>Macro &quot;guestch_exec_nr&quot;</text>
+		</Macroline>
+		<Macroline index="40" delay="0.01">
+			<text>Assign Sequence $rgb_faderseq Executor $guestexecpage.$guestexecnr ; Assign Executor $guestexecpage.$guestexecnr /priority=htp</text>
+		</Macroline>
+		<Macroline index="41" delay="0.01">
+			<text>Assign TempFader Executor $guestexecpage.$guestexecnr ; Executor $guestexecpage.$guestexecnr At 0</text>
+		</Macroline>
+		<Macroline index="42" delay="0.01">
+			<text>AddVar $RGB_Faderseq = 1 ; AddVar $guestch =1</text>
+		</Macroline>
+		<Macroline index="43" delay="0.01">
+			<text>Macro &quot;guestch_exec_nr&quot;</text>
+		</Macroline>
+		<Macroline index="44" delay="0.01">
+			<text>Assign Sequence $rgb_faderseq Executor $guestexecpage.$guestexecnr ; Assign Executor $guestexecpage.$guestexecnr /priority=htp</text>
+		</Macroline>
+		<Macroline index="45" delay="0.01">
+			<text>Assign TempFader Executor $guestexecpage.$guestexecnr ; Executor $guestexecpage.$guestexecnr At 0</text>
+		</Macroline>
+		<Macroline index="46" delay="0.01">
+			<text>AddVar $RGB_Faderseq = 1 ; AddVar $guestch =1</text>
+		</Macroline>
+		<Macroline index="47" delay="0.01">
+			<text>Macro &quot;guestch_exec_nr&quot;</text>
+		</Macroline>
+		<Macroline index="48" delay="0.01">
+			<text>Assign Sequence $rgb_faderseq Executor $guestexecpage.$guestexecnr ; Assign Executor $guestexecpage.$guestexecnr /priority=htp</text>
+		</Macroline>
+		<Macroline index="49" delay="0.01">
+			<text>Assign TempFader Executor $guestexecpage.$guestexecnr ; Executor $guestexecpage.$guestexecnr At 0</text>
+		</Macroline>
+		<Macroline index="50" delay="0.01">
+			<text>AddVar $RGB_Faderseq = 1 ; AddVar $guestch =1</text>
+		</Macroline>
+	</Macro>
+	<Macro index="70" name="Set_Guest_CH_RGB">
+		<Macroline index="0">
+			<text>SetVar $guestch =(Guest ch?)</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>[$guestch==999] Off Macro 1 Thru</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>[$guestch&gt;=513] SetVar $guestch =(&quot;Channel is out of DMX range&quot;) ; Macro 1.&quot;Set_Guest_CH_RGB&quot;.2</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>[$guestch&gt;=351] SetVar $guestch =(&quot;Channel is already in use&quot;) ; Macro 1.&quot;Set_Guest_CH_RGB&quot;.2</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>[$guestch&lt;$maxfixnr2] SetVar $guestch =(&quot;Channel is already in use&quot;) ; Macro 1.&quot;Set_Guest_CH_RGB&quot;.2</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>Go Executor *.&quot;Guest_CH_Nummer&quot; Cue $guestch</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>[$guestchnummer==2] Macro 1.&quot;Set_guest_CH_RGB&quot;.18</text>
+		</Macroline>
+		<Macroline index="7">
+			<text>[$guestchnummer==1] SetVar $guestch = (&quot;already in use, try another&quot;) ; Macro 1.&quot;set_Guest_Ch_rgb&quot;.2</text>
+		</Macroline>
+		<Macroline index="8">
+			<text>[$guestchnummer==0] Macro 1.&quot;set_guest_ch_rgb&quot;.11</text>
+		</Macroline>
+		<Macroline index="9">
+			<text>Off Macro 1 Thru</text>
+		</Macroline>
+		<Macroline index="10">
+			<text>[$guestch&lt;$maxfixnr3] Macro 1.&quot;set_guest_Ch_RGB&quot;.14</text>
+		</Macroline>
+		<Macroline index="11">
+			<text>[$guestch&lt;$maxfixnr4] Macro 1.&quot;set_guest_Ch_RGB&quot;.16</text>
+		</Macroline>
+		<Macroline index="12">
+			<text>Off Macro &quot;set_guest_Ch_RGB&quot;</text>
+		</Macroline>
+		<Macroline index="13">
+			<text>[$guestch&gt;=201] SetVar $guestch =(&quot;Channel is already in use&quot;) ; Macro 1.&quot;Set_Guest_CH_RGB&quot;.2</text>
+		</Macroline>
+		<Macroline index="14">
+			<text>Off Macro &quot;set_guest_Ch_RGB&quot;</text>
+		</Macroline>
+		<Macroline index="15">
+			<text>[$guestch&gt;=301] SetVar $guestch =(&quot;Channel is already in use&quot;) ; Macro 1.&quot;Set_Guest_CH_RGB&quot;.2</text>
+		</Macroline>
+		<Macroline index="16">
+			<text>Off Macro &quot;set_guest_Ch_RGB&quot;</text>
+		</Macroline>
+		<Macroline index="17">
+			<text>[$guestchnummer==2] SetVar $guestch =(&quot;Channel is already in use&quot;) ; Macro 1.&quot;Set_Guest_CH_RGB&quot;.2</text>
+		</Macroline>
+	</Macro>
+	<Macro index="71" name="Set_Guest_CH_RGB2">
+		<Macroline index="0">
+			<text>[$guestch&gt;=513] SetVar $guestch = (&quot;Dmx is going on other channel try new one&quot;) ; Macro 1.&quot;IRGBW_faders&quot;.12</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>[$guestch&gt;=351] SetVar $guestch = (&quot;Dmx is going on other channel try new one&quot;) ; Macro 1.&quot;IRGBW_faders&quot;.12</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>[$guestch&lt;$maxfixnr2] SetVar $guestch = (&quot;Dmx is going on other channel try new one&quot;) ; Macro 1.&quot;IRGBW_faders&quot;.12</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>Go Executor *.&quot;Guest_CH_Nummer&quot; Cue $guestch</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>[$guestchnummer==2] SetVar $guestch = (&quot;Dmx is going on other channel try new one&quot;) ; Macro 1.&quot;IRGBW_faders&quot;.12</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>[$guestchnummer==1] SetVar $guestch = (&quot;Dmx is going on other channel try new one&quot;) ; Macro 1.&quot;IRGBW_faders&quot;.12</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>[$guestch&lt;$maxfixnr3] Macro 1.&quot;set_guest_Ch_RGB2&quot;.10</text>
+		</Macroline>
+		<Macroline index="7">
+			<text>[$guestch&lt;$maxfixnr4] Macro 1.&quot;set_guest_Ch_RGB2&quot;.12</text>
+		</Macroline>
+		<Macroline index="8">
+			<text>Off Macro &quot;set_guest_Ch_RGB2&quot;</text>
+		</Macroline>
+		<Macroline index="9">
+			<text>[$guestch&gt;=201] SetVar $guestch = (&quot;Dmx is going on other channel try new one&quot;) ; Macro 1.&quot;IRGBW_faders&quot;.12</text>
+		</Macroline>
+		<Macroline index="10">
+			<text>Off Macro &quot;set_guest_Ch_RGB2&quot;</text>
+		</Macroline>
+		<Macroline index="11">
+			<text>[$guestch&gt;=301] SetVar $guestch = (&quot;Dmx is going on other channel try new one&quot;) ; Macro 1.&quot;IRGBW_faders&quot;.12</text>
+		</Macroline>
+		<Macroline index="12">
+			<text>Off Macro &quot;set_guest_Ch_RGB2&quot;</text>
+		</Macroline>
+	</Macro>
+	<Macro index="72" name="GuestCH_Exec_Nr">
+		<Macroline index="0">
+			<text>[$guestch &lt;=90] Go Macro 1.&quot;guestch_exec_Nr&quot;.19</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>[$guestch &lt;=180] Go Macro 1.&quot;guestch_exec_Nr&quot;.7</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>[$guestch &lt;=270] Go Macro 1.&quot;guestch_exec_nr&quot;.10</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>[$guestch &lt;=360] Go Macro 1.&quot;guestch_exec_nr&quot;.13</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>[$guestch &lt;=375] Go Macro 1.&quot;guestch_exec_nr&quot;.17</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>Off Macro &quot;guestCH_Exec_Nr&quot;</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>SetVar $Guestexecnr = $guestch</text>
+		</Macroline>
+		<Macroline index="7">
+			<text>AddVar $guestexecnr =-90 ; SetVar $guestexecpage =2</text>
+		</Macroline>
+		<Macroline index="8">
+			<text>Off Macro &quot;guestch_exec_nr&quot;</text>
+		</Macroline>
+		<Macroline index="9">
+			<text>SetVar $Guestexecnr = $guestch</text>
+		</Macroline>
+		<Macroline index="10">
+			<text>AddVar $guestexecnr =-180 ; SetVar $guestexecpage =3</text>
+		</Macroline>
+		<Macroline index="11">
+			<text>Off Macro &quot;guestCH_Exec_Nr&quot;</text>
+		</Macroline>
+		<Macroline index="12">
+			<text>SetVar $Guestexecnr = $guestch</text>
+		</Macroline>
+		<Macroline index="13">
+			<text>AddVar $guestexecnr =-270 ; SetVar $guestexecpage =4</text>
+		</Macroline>
+		<Macroline index="14">
+			<text>Off Macro &quot;guestCH_Exec_Nr&quot;</text>
+		</Macroline>
+		<Macroline index="15">
+			<text>SetVar $Guestexecnr = $guestch</text>
+		</Macroline>
+		<Macroline index="16">
+			<text>AddVar $guestexecnr =-360 ; SetVar $guestexecpage =5</text>
+		</Macroline>
+		<Macroline index="17">
+			<text>Off Macro &quot;guestCH_Exec_Nr&quot;</text>
+		</Macroline>
+		<Macroline index="18">
+			<text>SetVar $Guestexecnr = $guestch ; SetVar $guestexecpage =1</text>
+		</Macroline>
+		<Macroline index="19">
+			<text>Off Macro &quot;guestCH_Exec_Nr&quot;</text>
+		</Macroline>
+	</Macro>
+	<Macro index="73" name="Setvar RGB Faderseq">
+		<Macroline index="0">
+			<text>SetVar $rgb_faderseq =3001</text>
+		</Macroline>
+	</Macro>
+	<Macro index="74" name="Reset cue guest ch nummer">
+		<Macroline index="0">
+			<text>Store Cue 1 Thru 512 &quot;Guest_CH_Nummer&quot;</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>Assign Executor *.&quot;Guest_CH_Nummer&quot; Cue 1 Thru 110 /cmd=&quot;SetVar $guestchnummer = 2&quot;</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Assign Executor *.&quot;Guest_CH_Nummer&quot; Cue 111 Thru 200 /cmd=&quot;SetVar $guestchnummer = 0&quot;</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>Assign Executor *.&quot;Guest_CH_Nummer&quot; Cue 201 Thru 220 /cmd=&quot;SetVar $guestchnummer = 2&quot;</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>Assign Executor *.&quot;Guest_CH_Nummer&quot; Cue 221 Thru 250 /cmd=&quot;SetVar $guestchnummer = 0&quot;</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>Assign Executor *.&quot;Guest_CH_Nummer&quot; Cue 265 Thru 300 /cmd=&quot;SetVar $guestchnummer = 2&quot;</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>Assign Executor *.&quot;Guest_CH_Nummer&quot; Cue 301 Thru 316 /cmd=&quot;SetVar $guestchnummer = 2&quot;</text>
+		</Macroline>
+		<Macroline index="7">
+			<text>Assign Executor *.&quot;Guest_CH_Nummer&quot; Cue 317 Thru 350 /cmd=&quot;SetVar $guestchnummer = 0&quot;</text>
+		</Macroline>
+		<Macroline index="8">
+			<text>Assign Executor *.&quot;Guest_CH_Nummer&quot; Cue 351 Thru 512 /cmd=&quot;SetVar $guestchnummer = 2&quot;</text>
+		</Macroline>
+	</Macro>
+</MA>

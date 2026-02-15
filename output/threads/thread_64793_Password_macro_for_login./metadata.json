@@ -3,6 +3,50 @@
   "author": "GlobalShame",
   "post_date": null,
   "post_text": "October 12, 2019 at 9:48 AM#1Hi, I'm wanting to make a macro that, when the showfile is loaded will ask for a password to be entered. If the password is correct the file opens, if it is incorrect it asks again for the password and if the user presses the [X] button it loads a new blank showfile. I know it can be done as i came across it on festival LD's showfile but obviously couldn't open the file to view the macro.Cheers.",
+  "posts": [
+    {
+      "author": "GlobalShame",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 12, 2019 at 9:48 AM#1Hi, I'm wanting to make a macro that, when the showfile is loaded will ask for a password to be entered. If the password is correct the file opens, if it is incorrect it asks again for the password and if the user presses the [X] button it loads a new blank showfile. I know it can be done as i came across it on festival LD's showfile but obviously couldn't open the file to view the macro.Cheers."
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 13, 2019 at 5:23 AM#2you can assign a macro to run on startup that does something like'logout''login user x' (user x with a password)there are more complicated ways to do something similar but i'm not sure any way I know would get a new showfile to start if the user input is aborted (not sure there is syntax for opening a new blank showfile, but as usual I could always be wrong)"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 14, 2019 at 2:38 PM#3How about just enabling \"Force Login\" in Global Settings?"
+    },
+    {
+      "author": "mflte_mflight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "January 17, 2022 at 3:27 AM#4hello enlightened friends, I would also like to know how to do it !!Does anyone know how to do it??"
+    },
+    {
+      "author": "dahinn",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "February 8, 2022 at 8:06 AM#5Hi, collegues. I suppose this macro loaded in the StartUp should do the job:>>> SetUserVar $inequal = \"yes\">>> SetUserVar $pass = (\"Enter the password, please\")>>> [$pass == \"truselya\"]  SetUserVar $inequal = \"no\">>> [$inequal == \"yes\"]  NewShow \"new\" /nc>>> SetUserVar $inequal = \"\">>> SetUserVar $pass = \"\"\"truselya\" is the correct password.If you want to ask the user one more time you should modify this code a liitle bit.P.S. A long ago I understood the idea is bad. Don't use it :))"
+    },
+    {
+      "author": "dahinn",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "June 3, 2022 at 6:52 PM#6It seems weird, but only this stack of macros works:[macro 1]1. Macro 2=====================================================[macro 2]1. LUA 'gma.feedback(\"Wait a second!\")'   <wait = 1>2. Plugin 1   <wait = 1>=====================================================[plugin 1]function password ()local pass = gma.textinput('Type the password, please!',  'Just a few words')if pass ~= 'truselya' thengma.cmd('NewShow \"new\" /nc')endendreturn passwordDoes somebody know a more pretty solution?"
+    },
+    {
+      "author": "mflte_mflight",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "January 17, 2023 at 3:48 PM#7thank you !it worked, but it doesn't activate as soon as you log into the showfile, I already put the macro to start 1"
+    }
+  ],
   "replies": 0,
   "thread_id": "64793",
   "title": "Password macro for login.",

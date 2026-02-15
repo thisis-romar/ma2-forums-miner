@@ -3,6 +3,26 @@
   "author": "tor",
   "post_date": null,
   "post_text": "October 30, 2017 at 3:01 PM#1Hi.Is there a macro to remove all fixtures from all effects?",
+  "posts": [
+    {
+      "author": "tor",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 30, 2017 at 3:01 PM#1Hi.Is there a macro to remove all fixtures from all effects?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 30, 2017 at 3:43 PM#2this should do the job:CodeClearSelectionStore Effect 1.*.*"
+    },
+    {
+      "author": "tor",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 30, 2017 at 5:15 PM#3Many thanks"
+    }
+  ],
   "replies": 0,
   "thread_id": "59896",
   "title": "Remove selection",

@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:2d7925f505484e9124d4788aae46478a360cbe79fcb148e3fd93030eaf781538",
-      "download_count": 117,
+      "download_count": 127,
       "filename": "worlds.show.gz",
+      "post_number": 2,
       "size": 358932,
       "url": "https://forum.malighting.com/file-download/4700/"
     }
@@ -11,6 +12,20 @@
   "author": "Serge",
   "post_date": null,
   "post_text": "November 24, 2021 at 7:24 PM#1Hi EveryoneI have 3 different fixtures in my show and I want to control quick the movement.How can I create an macro to put ON of or OFF the movement for 1,2 or all thefixtures?Thanks for your replySerge",
+  "posts": [
+    {
+      "author": "Serge",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 24, 2021 at 7:24 PM#1Hi EveryoneI have 3 different fixtures in my show and I want to control quick the movement.How can I create an macro to put ON of or OFF the movement for 1,2 or all thefixtures?Thanks for your replySerge"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 22, 2022 at 2:46 PM#2Have a look at attached file.In this file i have setup 3 fixture types in one effect, played back from executor 101. I have used groups to define which fixtures are included in World 2. World 2 is used as a playbackfilter on executor 101. Unfortunatly MA2 requires to restart the executor to take over the changes in the worldFilesworlds.show.gz358.93 kB – 127 Downloads"
+    }
+  ],
   "replies": 0,
   "thread_id": "66922",
   "title": "Move On/Off selected fixtures",

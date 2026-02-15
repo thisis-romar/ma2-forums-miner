@@ -3,6 +3,26 @@
   "author": "marlonpdm",
   "post_date": null,
   "post_text": "March 31, 2018 at 3:36 PM#1Hello!Can I ask for assistance please. How can I make macro to export or import my patch from version 3.0.0.5 to 3.3.4.3?I have an old file that both works on PC and 3d but if I open the old file after upgrading to 3.3.4.3 the the fixtures are unresponsive when I open 3d version of 3.3.4.3. I just don't want to go thru the patching of every single fixture.Best,Marlon",
+  "posts": [
+    {
+      "author": "marlonpdm",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 31, 2018 at 3:36 PM#1Hello!Can I ask for assistance please. How can I make macro to export or import my patch from version 3.0.0.5 to 3.3.4.3?I have an old file that both works on PC and 3d but if I open the old file after upgrading to 3.3.4.3 the the fixtures are unresponsive when I open 3d version of 3.3.4.3. I just don't want to go thru the patching of every single fixture.Best,Marlon"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 31, 2018 at 6:34 PM#2Did you jump directly from v3.0.0.5 to v3.3.4.3? Try instead migrating from v3.0.0.5 -> v3.1.2.5 -> v3.2.2.16 -> v3.3.4.3. You'll likely have better luck that way."
+    },
+    {
+      "author": "marlonpdm",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 1, 2018 at 11:40 AM#3Hi Ryan,Thank you for your input. My file works straight to 3.3.4.3 only some of the fixtures like Claypacky Wash is not responding e.g the dimmer on Ma3d ver 3.3.4.3 but when use old ver it works.Best,Marlon"
+    }
+  ],
   "replies": 0,
   "thread_id": "61039",
   "title": "macro to Export/Import Patch and Fixture Schedule",

@@ -3,6 +3,26 @@
   "author": "sylvavio",
   "post_date": null,
   "post_text": "August 23, 2019 at 3:17 PM#1Hi all.I'd like to build a a macro that assigns Mul2 / Normal or Div2 depending on what was already assigned to it.I'm facing an issue regarding the fact that i cannot insert comas in the variableCodeAssign /speed=\"Normal\" @Works finesButCodeassign /speed=$variable @Doesn't work.Any idea?Thanks.",
+  "posts": [
+    {
+      "author": "sylvavio",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 23, 2019 at 3:17 PM#1Hi all.I'd like to build a a macro that assigns Mul2 / Normal or Div2 depending on what was already assigned to it.I'm facing an issue regarding the fact that i cannot insert comas in the variableCodeAssign /speed=\"Normal\" @Works finesButCodeassign /speed=$variable @Doesn't work.Any idea?Thanks."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 23, 2019 at 6:13 PM#2tryCodeAssign /speed=$\"variable\" @"
+    },
+    {
+      "author": "sylvavio",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 13, 2020 at 7:36 AM#3It Works !Thanks"
+    }
+  ],
   "replies": 0,
   "thread_id": "64466",
   "title": "Effet /speed as a variable",

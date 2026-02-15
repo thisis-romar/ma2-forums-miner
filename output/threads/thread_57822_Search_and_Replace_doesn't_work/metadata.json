@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:2a070d0a99e17559a7c636895c322ef0eb885b92f35a8b6227b9f844797ff04d",
-      "download_count": 708,
+      "download_count": 717,
       "filename": "ScreenshotCmdLine.zip",
+      "post_number": 5,
       "size": 220898,
       "url": "https://forum.malighting.com/file-download/4208/"
     }
@@ -11,6 +12,68 @@
   "author": "Topsen",
   "post_date": null,
   "post_text": "March 27, 2017 at 12:56 PM#1Good morning,i got a question aboute Search and Replace macro:I got the Syntax from the MA Help side and made a Macro:Line 1: Search Selection /ncLine 2: Replace Attribute \"Pan\"  At -270  Thru 270  With -265  Thru 275  If SearchResult /nc(Line 1+2 is a direct copy from the macro line in MA)But if i select a Fixture and push the macro, the Fixture turns around and goes into max. position instead of doing a 10 degree rotation.If i doubletap the Fixture to activate the position attribute it works, but i can't update it via \"Update\" nor it changes every preset/cue. I have to merge it into the preset.",
+  "posts": [
+    {
+      "author": "Topsen",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 27, 2017 at 12:56 PM#1Good morning,i got a question aboute Search and Replace macro:I got the Syntax from the MA Help side and made a Macro:Line 1: Search Selection /ncLine 2: Replace Attribute \"Pan\"  At -270  Thru 270  With -265  Thru 275  If SearchResult /nc(Line 1+2 is a direct copy from the macro line in MA)But if i select a Fixture and push the macro, the Fixture turns around and goes into max. position instead of doing a 10 degree rotation.If i doubletap the Fixture to activate the position attribute it works, but i can't update it via \"Update\" nor it changes every preset/cue. I have to merge it into the preset."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 27, 2017 at 1:59 PM#2Try this:[color=#66FF33]Replace Fixture[/color] x [color=#66FF33]Thru[/color] y [color=#66FF33]Attribute[/color] \"Pan\" [color=#66FF33]At[/color] -270 [color=#66FF33]Thru[/color] 270 [color=#66FF33]With[/color] -265 [color=#66FF33]Thru[/color] 275Also, this will only do a 5deg. rotation. If you wanted 10, you'd need to do \"...With -260 Thru 280\""
+    },
+    {
+      "author": "Topsen",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 27, 2017 at 3:23 PM#3Hey,thanks for your respons!It's not working either. Only if I doubletap the fixture and then fire the macro it changes my programmer value, but it doesnt replace any values in other Presets."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 27, 2017 at 3:48 PM#4What software version are you using?Are your presets locked?Can you upload a screenshot of your command line feedback after executing this syntax?"
+    },
+    {
+      "author": "Topsen",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "March 27, 2017 at 9:56 PM#5I am using onPC v 3.2.2.16 and started a whole new Show (Checked all options at New Show pop up). I tried it at my PC at home and my Macbook with parallels.Attached you have a screenshot after firering the macro. In this testshow i got 2 Executor and 2 position Presets (Exec. were made with this presets). I didnt lock anything on purpose. I can update them, if i correct the position of the fixture via hand.Thanks a lot for your help!FilesScreenshotCmdLine.zip220.9 kB – 717 Downloads"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "March 28, 2017 at 1:50 AM#6Yeah, so both your syntax, and the syntax I wrote in the second post work exactly as expected for me, as tested in v3.2.2.16. And it looks like the replace did do something, based on the Command Line Feedback.How are you confirming whether or not this is working? For example, if you make a position preset that is \"0 Pan / 0 Tilt\", and then do the replace, you should see the Pan value adjusted."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "March 28, 2017 at 7:50 AM#7make sure that your presets are Selective.I don't believe Search Selection would find your presets if they are Universal or Global, and you have selected a Fixture, and not a fixturetype"
+    },
+    {
+      "author": "Topsen",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "March 28, 2017 at 9:08 AM#8Thanks to both of you!ryan: It doesnt affect anything, just if i activate the preset, so that it appears in the programmer the macro works right. If I just select the fixture and fire the macro it doesn't work, except it apears in the command line, but the sequences and the preset don't change. Yeah my goal is if i press the macro every preset/scene changes at once, so i can preprogramm in 3D and then just have to adjust one preset in the vanue.glad: I tried both, selective and global.Maybe it is something in my global/local settings? I don't know any other way because it works on your show, but not on mine. Next i would try it on a fullistalled console. If this is not working either, I'm going to let it be ;D"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "March 28, 2017 at 9:22 AM#9there was a bug in an earlier version regarding using SearchResult keyword, maybe there still is some obscure problem with it, that only appears with your show/console.try to do the Search first, then in the result dialog select \"World Searchresult\"then do (a world limited) replace on the objects you want:CodeReplace Attribute \"Pan\" At -270 Thru 270 With -265 Thru 275 if Preset 2.1 thru(assuming it is the position presets you want to change)finally go back to full world (World 1 please)"
+    },
+    {
+      "author": "Topsen",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "March 28, 2017 at 12:54 PM#10I installed 3.1.2.5 and reinstalled 3.2.2.16. Stardet a show with the \"Cleanstart\" Desktop icon.Under 3.1.2.5 it works very well (both: with the world and with \"if Searchresult\"). Under 3.2.2.16 (exact same Macro, Cues and Presets) it snaps in its maximum position. E.G. Macro says:CodeReplace Attribute \"Pan\" At -270 Thru 270 With -265 Thru 275 if searchresultthe fixture goes into 225 as its maximum position.If I use:CodeReplace Attribute \"Pan\" At -270 Thru 270 With -265 Thru 270 if preset 2.1 thruIt says: 0 changesI'm close to give up and correct the position the traditional way....^^ It would be a nice macro but if it doesn't work for me...hm...I will try it with a Desk later this week and hope it's just my onPC/Mac with parallels who doens't work:/"
+    }
+  ],
   "replies": 0,
   "thread_id": "57822",
   "title": "Search and Replace doesn't work",

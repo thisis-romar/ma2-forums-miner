@@ -3,6 +3,26 @@
   "author": "Michael060389",
   "post_date": null,
   "post_text": "January 26, 2018 at 12:31 PM#1Hello Guys.I have a question about  a macro.I have many template effects in my startshow file and when i come to a new location with some lights, i select the group and do the macro :\"store 1.(effectnumber).1/o\"to take selectionFor Pan/tilt values i have a second macro :\"store 1.(effectnumber).1 thru 2/o\"to take both rows for selection.Is there a way to do automaticly find out, how many rows the selected effectnumber have to take the selection for all rows?Because when i only write a macro: \"store 1.(effectnumber). 1 thru/o\" then every effect would have 1000 rows and not just the single row for dimmer, what it has as a template effect.I hope you understand my problem. Thank you for helping me",
+  "posts": [
+    {
+      "author": "Michael060389",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 26, 2018 at 12:31 PM#1Hello Guys.I have a question about  a macro.I have many template effects in my startshow file and when i come to a new location with some lights, i select the group and do the macro :\"store 1.(effectnumber).1/o\"to take selectionFor Pan/tilt values i have a second macro :\"store 1.(effectnumber).1 thru 2/o\"to take both rows for selection.Is there a way to do automaticly find out, how many rows the selected effectnumber have to take the selection for all rows?Because when i only write a macro: \"store 1.(effectnumber). 1 thru/o\" then every effect would have 1000 rows and not just the single row for dimmer, what it has as a template effect.I hope you understand my problem. Thank you for helping me"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 26, 2018 at 10:16 PM#2store effect 1.1.*"
+    },
+    {
+      "author": "dastunddasg",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 24, 2019 at 9:20 AM#3Edit : worked!"
+    }
+  ],
   "replies": 0,
   "thread_id": "60544",
   "title": "Effect Take Selection on any rows",

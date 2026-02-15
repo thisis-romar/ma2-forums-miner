@@ -3,6 +3,26 @@
   "author": "Buzz313th",
   "post_date": null,
   "post_text": "March 21, 2015 at 9:41 PM#1The goal is to write a macro that calls the BPM of a Speedmaster and stores it as a UserVariable..Is it possible?",
+  "posts": [
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 21, 2015 at 9:41 PM#1The goal is to write a macro that calls the BPM of a Speedmaster and stores it as a UserVariable..Is it possible?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 21, 2015 at 10:17 PM#2No, it is not possible to extract data into variables"
+    },
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 24, 2015 at 3:15 PM#3Thanks Glad."
+    }
+  ],
   "replies": 0,
   "thread_id": "45936",
   "title": "Store Speedmaster BPM Value As Uservariable",

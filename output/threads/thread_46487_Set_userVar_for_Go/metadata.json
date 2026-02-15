@@ -3,6 +3,26 @@
   "author": "Rick",
   "post_date": null,
   "post_text": "May 4, 2015 at 9:38 PM#1Hi thereI am building a lamp off macro. And I want to make the popup question ''are you sure?'' and then the only way i can continue is by typing in yes. but i can't find out how to make that work does anyone know how to do that.Thank you very much already",
+  "posts": [
+    {
+      "author": "Rick",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 4, 2015 at 9:38 PM#1Hi thereI am building a lamp off macro. And I want to make the popup question ''are you sure?'' and then the only way i can continue is by typing in yes. but i can't find out how to make that work does anyone know how to do that.Thank you very much already"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 4, 2015 at 11:09 PM#2something like this might do the jobsetuservar $confirm=\"no\"setuservar $confirm=(\"type in yes to confirm\")[$confirm==\"yes\"] do_something[$confirm==\"yes\"] do_something_moresetuservar $confirm=\"no\""
+    },
+    {
+      "author": "dj_rappa",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 12, 2015 at 5:09 PM#3Ouse a lot of these but simply break the macro with a dialogue box and PLEASE gives you YES and ESC give you NO.Very quick and you don't need to type text."
+    }
+  ],
   "replies": 0,
   "thread_id": "46487",
   "title": "Set userVar for Go",

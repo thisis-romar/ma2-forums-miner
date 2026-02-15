@@ -3,6 +3,20 @@
   "author": "marlonpdm",
   "post_date": null,
   "post_text": "July 29, 2014 at 12:39 PM#1how can i make a macro that will copy what is active or live?thank you!",
+  "posts": [
+    {
+      "author": "marlonpdm",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 29, 2014 at 12:39 PM#1how can i make a macro that will copy what is active or live?thank you!"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 29, 2014 at 6:11 PM#2Since v3.0.0.2 theres a new store option called \"look\". Press Store and keep it pressed untill the store option menu pops upMaybe that might already the trick you are looking for"
+    }
+  ],
   "replies": 0,
   "thread_id": "42730",
   "title": "macro for whats active",

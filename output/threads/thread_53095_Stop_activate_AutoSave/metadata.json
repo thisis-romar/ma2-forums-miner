@@ -3,6 +3,32 @@
   "author": "abc",
   "post_date": null,
   "post_text": "May 18, 2016 at 3:56 PM#1Hello every bodyDo you know if it is possible to stop or activateAutoSave , by macro ?Have a nice day !",
+  "posts": [
+    {
+      "author": "abc",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 18, 2016 at 3:56 PM#1Hello every bodyDo you know if it is possible to stop or activateAutoSave , by macro ?Have a nice day !"
+    },
+    {
+      "author": "aerian",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 20, 2021 at 7:27 PM#2Hello Everyone !Up ?"
+    },
+    {
+      "author": "MrRump",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 25, 2021 at 2:48 PM#3Hello,it's not possible."
+    },
+    {
+      "author": "aerian",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "January 26, 2021 at 7:23 PM#4Too bad ! Thanks Oliver !"
+    }
+  ],
   "replies": 0,
   "thread_id": "53095",
   "title": "Stop / activate AutoSave",

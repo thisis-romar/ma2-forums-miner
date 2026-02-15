@@ -3,6 +3,20 @@
   "author": "Mr.jiang",
   "post_date": null,
   "post_text": "February 20, 2020 at 8:57 AM#1cue/Trigtime=(time)How to assign variables? Click to assign a time to sequence cue, and then click to assign corresponding values according to time changes",
+  "posts": [
+    {
+      "author": "Mr.jiang",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 20, 2020 at 8:57 AM#1cue/Trigtime=(time)How to assign variables? Click to assign a time to sequence cue, and then click to assign corresponding values according to time changes"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 24, 2020 at 3:21 PM#2i'm not sure what the second part of this is looking for,but to use a variable in this scenario you can dosetvar $trigtime = xstore cue y /trigtime = $trigtime"
+    }
+  ],
   "replies": 0,
   "thread_id": "65305",
   "title": "cue/Trigtime",

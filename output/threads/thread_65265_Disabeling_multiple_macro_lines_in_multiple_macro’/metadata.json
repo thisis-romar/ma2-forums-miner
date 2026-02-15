@@ -3,6 +3,26 @@
   "author": "Pulselight",
   "post_date": null,
   "post_text": "February 10, 2020 at 8:36 PM#1HiI want to disable/enable multiple lines in multiple macro’sI know ;Assign macro 1.1601.12 thru 21 /Disable=yes (or no)Now I want to repeat this thru macro 1647So is there a way to ;Assign macro 1.1601.12 thru 21 thru macro 1.1647.12 thru 21 /Disable=yesOr do i have to make 47 lines to create this ?",
+  "posts": [
+    {
+      "author": "Pulselight",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 10, 2020 at 8:36 PM#1HiI want to disable/enable multiple lines in multiple macro’sI know ;Assign macro 1.1601.12 thru 21 /Disable=yes (or no)Now I want to repeat this thru macro 1647So is there a way to ;Assign macro 1.1601.12 thru 21 thru macro 1.1647.12 thru 21 /Disable=yesOr do i have to make 47 lines to create this ?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 10, 2020 at 9:37 PM#2It is not possible to use the Thru command in two dimension.your best bet would be to make sure the macros have consistent naming, like mymacro 1, mymacro 2 etc, then address the macros via partial namematch using the wildcard (*) and do the lines with +Assign Macro 1.myname*.12 + 1.myname*.13 + 1.myname*.14 etc /disabled=yesdepending on the content of your lines 12 thru 21 you could consider to combine their syntax into fewer lines via the semicolonhttp://help2.malighting.com/Page/grandMA2/…emicolon/en/3.8"
+    },
+    {
+      "author": "Pulselight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 10, 2020 at 10:01 PM#3Ok thanks that would work perfectly!"
+    }
+  ],
   "replies": 0,
   "thread_id": "65265",
   "title": "Disabeling multiple macro lines in multiple macro’s",

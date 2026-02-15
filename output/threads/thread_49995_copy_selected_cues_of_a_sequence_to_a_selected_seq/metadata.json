@@ -3,6 +3,26 @@
   "author": "thechekov",
   "post_date": null,
   "post_text": "November 23, 2015 at 7:39 PM#1Hi,i wonder if there is the possibility to create a macro  which copies selected cues of a sequence to another sequence.maybe like this:copy cue 0.5 thru 0.7 of sequence 1 to selected sequenceany ideas?Chris",
+  "posts": [
+    {
+      "author": "thechekov",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 23, 2015 at 7:39 PM#1Hi,i wonder if there is the possibility to create a macro  which copies selected cues of a sequence to another sequence.maybe like this:copy cue 0.5 thru 0.7 of sequence 1 to selected sequenceany ideas?Chris"
+    },
+    {
+      "author": "Duplicate dherderich",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 25, 2015 at 12:15 PM#2Copy Sequence 1 Cue 0.5 Thru 0.7 At Cue X.You have to specify a target cue of the selected sequence.with at Cue X, the selected sequence will be addressed."
+    },
+    {
+      "author": "alenokia",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 9, 2015 at 4:07 PM#3catch for seq n° with LUA of  exec $\"SELECTEDEXEC\"put seq n° in a uservar such as $selectseqthen..copy cue $\"SELECTEDEXECCUE\" seq $selectseq at cue X seq YLUA:http://ma-share.net/forum/read.php?14,47165,47169#msg-47169"
+    }
+  ],
   "replies": 0,
   "thread_id": "49995",
   "title": "copy selected cues of a sequence to a selected sequence",

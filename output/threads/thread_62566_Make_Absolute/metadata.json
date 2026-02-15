@@ -3,6 +3,20 @@
   "author": "wildbill5724",
   "post_date": null,
   "post_text": "October 23, 2018 at 4:48 PM#1Hello,I can't believe I've never encountered this before.Basically I want the fixture to show the raw values and not reference the preset. Like Make Absolute on the Ion. Thoughts?",
+  "posts": [
+    {
+      "author": "wildbill5724",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 23, 2018 at 4:48 PM#1Hello,I can't believe I've never encountered this before.Basically I want the fixture to show the raw values and not reference the preset. Like Make Absolute on the Ion. Thoughts?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 23, 2018 at 6:18 PM#2Do you just want toseethe actual values, or do you actually not want the preset reference at all?If you want to see the actual values but maintain the reference, use the buttons at the bottom of the sheet you're looking at to change to {Value Only}.If you don't want the preset reference at all, have a look at the \"Extract\" keyword."
+    }
+  ],
   "replies": 0,
   "thread_id": "62566",
   "title": "Make Absolute",

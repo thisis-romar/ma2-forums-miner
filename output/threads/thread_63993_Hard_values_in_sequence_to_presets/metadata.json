@@ -3,6 +3,20 @@
   "author": "robk82",
   "post_date": null,
   "post_text": "May 24, 2019 at 4:44 PM#1I'm trying to clean up a show file. Looking through the sequence tracking sheet, there are lots of hard values where presets should be. Is there a macro out there that can make my life easier?As of right now if going through and taking the fixtures in each cue, activating the presettype storing it in each preset pool, then clearing it out, followed by selecting the preset I just stored and updating the cue.There may even be a lua script that can search the sequence for hard values and store them in their perspective preset pools.My way is taking forever, any suggestions?",
+  "posts": [
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 24, 2019 at 4:44 PM#1I'm trying to clean up a show file. Looking through the sequence tracking sheet, there are lots of hard values where presets should be. Is there a macro out there that can make my life easier?As of right now if going through and taking the fixtures in each cue, activating the presettype storing it in each preset pool, then clearing it out, followed by selecting the preset I just stored and updating the cue.There may even be a lua script that can search the sequence for hard values and store them in their perspective preset pools.My way is taking forever, any suggestions?"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 25, 2019 at 4:57 AM#2you can use replace here:search fixture x attribute \"presettype\" at y if sequence zreplace attribute \"presettype\" with preset x.y if searchresult"
+    }
+  ],
   "replies": 0,
   "thread_id": "63993",
   "title": "Hard values in sequence to presets",

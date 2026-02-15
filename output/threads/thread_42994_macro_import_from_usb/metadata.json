@@ -3,6 +3,26 @@
   "author": "marlonpdm",
   "post_date": null,
   "post_text": "August 14, 2014 at 2:48 PM#1Hello!pls need help! How can I import macro from usb.I can export but import is not working.thank you!",
+  "posts": [
+    {
+      "author": "marlonpdm",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 14, 2014 at 2:48 PM#1Hello!pls need help! How can I import macro from usb.I can export but import is not working.thank you!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 14, 2014 at 3:12 PM#2make sure that the Macros you want to import is placed in the same folder on the USB that the console exports to/gma2/macros/are you trying to import via menu (Setup>Show>Import/Export>Import>Macros) or via commandline?"
+    },
+    {
+      "author": "marlonpdm",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 22, 2014 at 9:15 PM#3im trying to import via commandline. thank you so much"
+    }
+  ],
   "replies": 0,
   "thread_id": "42994",
   "title": "macro import from usb",

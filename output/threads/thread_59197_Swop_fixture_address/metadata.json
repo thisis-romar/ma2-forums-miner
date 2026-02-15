@@ -3,6 +3,20 @@
   "author": "George12",
   "post_date": null,
   "post_text": "August 7, 2017 at 8:30 AM#1Hi, would it be possible to swop the addresses of two fixtures with a macro. Scenario would be just having a few minutes at the desk during a festival changeover where you don't want to go into the patch window. user variable asking source and destination fixture numbers? Thanks",
+  "posts": [
+    {
+      "author": "George12",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 7, 2017 at 8:30 AM#1Hi, would it be possible to swop the addresses of two fixtures with a macro. Scenario would be just having a few minutes at the desk during a festival changeover where you don't want to go into the patch window. user variable asking source and destination fixture numbers? Thanks"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 7, 2017 at 9:10 AM#2HiAssign fixture (what fixture ?)  dmx (univ.adress ?)"
+    }
+  ],
   "replies": 0,
   "thread_id": "59197",
   "title": "Swop fixture address",

@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:a571f2d60e500257ea762a21746532e150b58facc67c6843bad4ea6b2491ec89",
-      "download_count": 95,
+      "download_count": 103,
       "filename": "User 1.xml",
+      "post_number": 4,
       "size": 985,
       "url": "https://forum.malighting.com/file-download/3983/"
     }
@@ -11,6 +12,32 @@
   "author": "George12",
   "post_date": null,
   "post_text": "January 15, 2016 at 12:03 PM#1Hi, anyone know the macro command to select the USER 1, USER 2 or LIST buttons next to the executer buttons below the multi touch and the store key. Thanks",
+  "posts": [
+    {
+      "author": "George12",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 15, 2016 at 12:03 PM#1Hi, anyone know the macro command to select the USER 1, USER 2 or LIST buttons next to the executer buttons below the multi touch and the store key. Thanks"
+    },
+    {
+      "author": "lukestratton",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 26, 2016 at 11:20 PM#2Bump. Wondering the same thing..."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 26, 2016 at 11:40 PM#3As far as I know, this isn't possible. What were you hoping to accomplish?"
+    },
+    {
+      "author": "ttl",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 28, 2016 at 6:26 AM#4This is a little tricky.If you dose not use DMX Remote.FilesUser 1.xml985 Byte – 103 Downloads"
+    }
+  ],
   "replies": 0,
   "thread_id": "50604",
   "title": "Select list button",

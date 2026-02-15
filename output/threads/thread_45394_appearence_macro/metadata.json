@@ -2,36 +2,41 @@
   "assets": [
     {
       "checksum": "sha256:f86967aef990a442d5b03a1bf8129c2c3427ea786f4678c4e50a101c57a9c7f5",
-      "download_count": 111,
+      "download_count": 120,
       "filename": "Appear Groups.xml",
+      "post_number": 5,
       "size": 568,
       "url": "https://forum.malighting.com/file-download/3640/"
     },
     {
       "checksum": "sha256:8bc28437abb4cd8b0218069165a610c96d3b4c2501faa674bc006df9a34cfc6d",
-      "download_count": 94,
+      "download_count": 102,
       "filename": "Appear Macros.xml",
+      "post_number": 5,
       "size": 559,
       "url": "https://forum.malighting.com/file-download/3641/"
     },
     {
       "checksum": "sha256:a04460d56c152b3c2ad94071b9013dc47a5ec98d22958bb9c9a5df418ade47dd",
-      "download_count": 115,
+      "download_count": 123,
       "filename": "Appear Presets.xml",
+      "post_number": 5,
       "size": 573,
       "url": "https://forum.malighting.com/file-download/3642/"
     },
     {
       "checksum": "sha256:6d11254363f70f673f5edc6e645e15d376bbb509cb53fb487a2e09c5b63e2a2a",
-      "download_count": 96,
+      "download_count": 105,
       "filename": "Appear sel. Cue.xml",
+      "post_number": 5,
       "size": 549,
       "url": "https://forum.malighting.com/file-download/3643/"
     },
     {
       "checksum": "sha256:1539682106799821fa3d951b6372e8d99cbc394f050da0964631dce23f2abbc2",
-      "download_count": 103,
+      "download_count": 111,
       "filename": "Appearance.xml",
+      "post_number": 5,
       "size": 542,
       "url": "https://forum.malighting.com/file-download/3644/"
     }
@@ -39,6 +44,38 @@
   "author": "mschaich",
   "post_date": null,
   "post_text": "February 16, 2015 at 8:21 PM#1HelloId like to write a macro. The macro should color my groups in the grouppool.appearence group 1 thru 10 \"color1\"appearence group 11 thru 20 \"color2\"and so onWhats teh right command for \"color1\"?thanks michi",
+  "posts": [
+    {
+      "author": "mschaich",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 16, 2015 at 8:21 PM#1HelloId like to write a macro. The macro should color my groups in the grouppool.appearence group 1 thru 10 \"color1\"appearence group 11 thru 20 \"color2\"and so onWhats teh right command for \"color1\"?thanks michi"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 16, 2015 at 9:59 PM#2Hi Michi,I don't think it is possible to use some kind of presets as you described but you can make something like a preset within your macroTry this:Appearance Group 1 /h=180 /s=95 /br=100Values are in Hue Saturation and Brightness from 0 thru 255"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 16, 2015 at 10:06 PM#3appearence group 1 thru 10 /r=100 /g=30 /b=70"
+    },
+    {
+      "author": "mschaich",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 17, 2015 at 8:26 AM#4Thank you guys!greetings from switzerland"
+    },
+    {
+      "author": "Bjoern",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 13, 2015 at 9:13 PM#5to Appearence i use this Macros. it saves me more as two clicks and you can use this for label as well.you can change the command in what you want.FilesAppear Groups.xml568 Byte – 120 DownloadsAppear Macros.xml559 Byte – 102 DownloadsAppear Presets.xml573 Byte – 123 DownloadsAppear sel. Cue.xml549 Byte – 105 DownloadsAppearance.xml542 Byte – 111 Downloads"
+    }
+  ],
   "replies": 0,
   "thread_id": "45394",
   "title": "appearence macro",

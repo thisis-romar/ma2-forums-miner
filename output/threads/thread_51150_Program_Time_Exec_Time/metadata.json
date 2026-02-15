@@ -3,6 +3,32 @@
   "author": "foolstar",
   "post_date": null,
   "post_text": "February 8, 2016 at 4:10 PM#1I know its got to be simple, but what is the syntax for changing the Program Time with a macro?",
+  "posts": [
+    {
+      "author": "foolstar",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 8, 2016 at 4:10 PM#1I know its got to be simple, but what is the syntax for changing the Program Time with a macro?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 8, 2016 at 4:16 PM#2ProgTime is SpecialMaster 2.2SpecialMaster 2.2 At xSM 2.2 At x"
+    },
+    {
+      "author": "foolstar",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 8, 2016 at 6:46 PM#3Thanks! What about exec time?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 8, 2016 at 7:15 PM#4SpecialMaster 2.3Lol. I contemplated putting it in my first reply, since the thread had both. But then your first post only said ProgTime, so I took it out."
+    }
+  ],
   "replies": 0,
   "thread_id": "51150",
   "title": "Program Time / Exec Time",

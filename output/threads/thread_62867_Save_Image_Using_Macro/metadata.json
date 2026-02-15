@@ -3,6 +3,44 @@
   "author": "andre lima",
   "post_date": null,
   "post_text": "December 4, 2018 at 1:45 AM#1Hello friends ..... I wonder if there is any way to save Image from a show file to my list of images? I've done the following macro more did not work:Export Image 55 for exampleThe image is saved on my USB stick, but when I try to use it in another error show and the image does not appear!If someone knows in any way and can help from now thank you.",
+  "posts": [
+    {
+      "author": "andre lima",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 4, 2018 at 1:45 AM#1Hello friends ..... I wonder if there is any way to save Image from a show file to my list of images? I've done the following macro more did not work:Export Image 55 for exampleThe image is saved on my USB stick, but when I try to use it in another error show and the image does not appear!If someone knows in any way and can help from now thank you."
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 19, 2018 at 12:11 PM#2What is the command you use to import the image into your showfile?I think something like this should do the job:[color=#00FF00]SelectDrive[/color] 4                                                                   (or other number for the correct usb disk)[color=#00FF00]Import[/color] \"ExactNameOfTheImage.extention\" [color=#00FF00]at Image[/color] x        (where x represent the image number where you want to import the image)"
+    },
+    {
+      "author": "andre lima",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 8, 2019 at 8:06 PM#3Hello friend unfortunately the syntax did not work .... I did the command exactly as described but I could not import the image. I made some adaptations but until the moment I did not find the correct syntax."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "January 8, 2019 at 8:51 PM#4CodeExport Image 55 \"myimage\"Import \"myimage\" At Image 56"
+    },
+    {
+      "author": "andre lima",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "January 8, 2019 at 9:31 PM#5This way you can Export the image but can not import"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "January 8, 2019 at 10:04 PM#6You can't import images via cmd line syntax if the image isn't already an XML file. BMPs, JPEGs, PNGs, all have to be imported into your Image Pool manually first. Once they've been imported, you can then export them as an XML and import the XML file via cmd line syntax."
+    }
+  ],
   "replies": 0,
   "thread_id": "62867",
   "title": "Save Image Using Macro",

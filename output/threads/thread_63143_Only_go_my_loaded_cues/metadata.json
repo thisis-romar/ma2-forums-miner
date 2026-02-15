@@ -3,6 +3,50 @@
   "author": "TimonTerWijlen96",
   "post_date": null,
   "post_text": "January 16, 2019 at 2:07 AM#1Hi all!How to give a selection of loaded cues a go, without a go for the non-loaded cues. For example: i've my color sequences and want to load the colors for my spot-group and wash-group but won't change the color of my other groups. When i press a go button, only the loaded cues will get a go and the other groups dont change there color.I hope someone can help me!Cheers",
+  "posts": [
+    {
+      "author": "TimonTerWijlen96",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 16, 2019 at 2:07 AM#1Hi all!How to give a selection of loaded cues a go, without a go for the non-loaded cues. For example: i've my color sequences and want to load the colors for my spot-group and wash-group but won't change the color of my other groups. When i press a go button, only the loaded cues will get a go and the other groups dont change there color.I hope someone can help me!Cheers"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 16, 2019 at 6:58 AM#2Hold Select button then select the exec you need to Go and press DefGoForward."
+    },
+    {
+      "author": "elmo1",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 18, 2019 at 6:40 PM#3but this method works only with one executor at the time. Is there also a method for multiple pre loaded executers? I want to press one Macro and all my loaded Cues should start.Greetings from Germany"
+    },
+    {
+      "author": "Moe696",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "January 18, 2019 at 10:37 PM#4You can select multiple executors by HOLDING the select button and then pressing the executors you want to fire simultaneously.Another option would be to assign a ratemaster (e.g. Ratemaster 1) to all your executors in the assign menu.Assign the ratemaster to an executor.Then you set the ratemaster at zero and go (not load) all the executors you want.By raising up the ratemaster the cues start at the same time.All cues have to have a fadetime and (if you have snapped attributes) a snap percent value above zero for this to work."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "January 21, 2019 at 5:19 PM#5\"Hold Select button\" was my first words. Just read them..."
+    },
+    {
+      "author": "zakkbeard",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "March 15, 2019 at 4:06 AM#6Is there a way to lock that select button, the same way I could use caps lock? Been looking at this idea for a while, but I don't want to lose that hand stuck on the select button"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "March 15, 2019 at 2:55 PM#7something like this could do the job...CodeCD Remote \"DMXRemotes\"Store \"MySelectToggle\"Assign \"MySelectToggle\" /dmx=99.1 /type=Hardkey /keycode=SELECTCD /Store Macro \"SelectToggle\"Store Macro 1.\"SelectToggle\".1 + 2Assign Macro 1.\"SelectToggle\".1 /cmd=\"DMX 99.1 At 100\" /wait=GoAssign Macro 1.\"SelectToggle\".2 /cmd=\"Off DMX 99.1\"Assign Macro \"SelectToggle\" /cli=off"
+    }
+  ],
   "replies": 0,
   "thread_id": "63143",
   "title": "Only go my loaded cues",

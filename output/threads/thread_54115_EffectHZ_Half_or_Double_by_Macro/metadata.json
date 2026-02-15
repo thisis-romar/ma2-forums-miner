@@ -3,6 +3,20 @@
   "author": "haich",
   "post_date": null,
   "post_text": "July 18, 2016 at 8:43 PM#1Is there a way to execute the \"half\" or \"double\" command when using theEffectHZkeyword?Thanks!",
+  "posts": [
+    {
+      "author": "haich",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 18, 2016 at 8:43 PM#1Is there a way to execute the \"half\" or \"double\" command when using theEffectHZkeyword?Thanks!"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 21, 2016 at 11:22 AM#2You can do :effecthz *2 for double and effecthz *0.5 for half"
+    }
+  ],
   "replies": 0,
   "thread_id": "54115",
   "title": "EffectHZ \"Half\" or \"Double\" by Macro",

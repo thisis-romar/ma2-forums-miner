@@ -2,15 +2,17 @@
   "assets": [
     {
       "checksum": "sha256:509b8ed279029bcaed7a167a4ecf0682342090547aceedbfc49c6b16133f2313",
-      "download_count": 66,
+      "download_count": 74,
       "filename": "preset cue executor 900.xml",
+      "post_number": 3,
       "size": 1690,
       "url": "https://forum.malighting.com/file-download/3505/"
     },
     {
       "checksum": "sha256:c7b8522b837c818a444d12f76aaba0bebe7c50b3719e9094e3fa8162dbaa0b8c",
-      "download_count": 64,
+      "download_count": 72,
       "filename": "preset cue list 901.xml",
+      "post_number": 3,
       "size": 1392,
       "url": "https://forum.malighting.com/file-download/3506/"
     }
@@ -18,6 +20,26 @@
   "author": "emanueltilly",
   "post_date": null,
   "post_text": "July 30, 2014 at 1:58 PM#1Hi!I usually have a exec for a certain fixture group with one cue for every col preset I have. At the moment I do I all manual, but is there a way to create a macro that stores preset 1.4.1 thru 1.4.20 for a specific group of lights to cues?Tried some things but they really never worked out that great.",
+  "posts": [
+    {
+      "author": "emanueltilly",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 30, 2014 at 1:58 PM#1Hi!I usually have a exec for a certain fixture group with one cue for every col preset I have. At the moment I do I all manual, but is there a way to create a macro that stores preset 1.4.1 thru 1.4.20 for a specific group of lights to cues?Tried some things but they really never worked out that great."
+    },
+    {
+      "author": "TonyVision",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 31, 2014 at 6:31 AM#2I have something for that.  I'll look around.Its something like...Select Sequence (What seq #?)Group (Which group #?)Preset 1.4.1 Store Cue 1Preset 1.4.2 Store Cue 2etc....You can add a -- Label Cue 1 White -- etc... line in between the store commands the name the cues."
+    },
+    {
+      "author": "wburnss",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 13, 2014 at 8:37 PM#3Hi,Two macros which I hope will help you.Please respect their ID.900 is made to create a range of executors with single cue (based on given presets).901 is made to create a stack within a list of presets.You have to use release 3.0.0.2 or higher.Filespreset cue executor 900.xml1.69 kB – 74 Downloadspreset cue list 901.xml1.39 kB – 72 Downloads"
+    }
+  ],
   "replies": 0,
   "thread_id": "42755",
   "title": "Store range of presets to cuelist?",

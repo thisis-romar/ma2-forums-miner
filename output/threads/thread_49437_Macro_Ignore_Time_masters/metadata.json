@@ -3,6 +3,20 @@
   "author": "ambulance2314",
   "post_date": null,
   "post_text": "October 25, 2015 at 9:10 PM#1I have made a Macro that change the color of my color bump.When I run the macro, it changes the color immediately.The execute- and the program- masters has a time of 1 sec.Is there a way to change the color with a macro and a fade time that is set by one of the time masters?My Macro for the first color.Color 20 and 21 are in a chase that bumps the colors.Code1: Blind2: Group 8 At Preset 4.13: Store Preset 4.20 /m4: Clear5: Clear6: Blind",
+  "posts": [
+    {
+      "author": "ambulance2314",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 25, 2015 at 9:10 PM#1I have made a Macro that change the color of my color bump.When I run the macro, it changes the color immediately.The execute- and the program- masters has a time of 1 sec.Is there a way to change the color with a macro and a fade time that is set by one of the time masters?My Macro for the first color.Color 20 and 21 are in a chase that bumps the colors.Code1: Blind2: Group 8 At Preset 4.13: Store Preset 4.20 /m4: Clear5: Clear6: Blind"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 26, 2015 at 12:53 PM#2it is not the macro by itself that ignores timing.Your macro is operating in Blind, and updating the preset via Store-merge.It is not possible to make the Store command obeying the time-fader"
+    }
+  ],
   "replies": 0,
   "thread_id": "49437",
   "title": "Macro Ignore Time masters",

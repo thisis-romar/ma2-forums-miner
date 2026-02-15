@@ -3,6 +3,38 @@
   "author": "F Dijkers",
   "post_date": null,
   "post_text": "October 7, 2019 at 8:08 PM#1Hi guys,I just finished the cloning-part of my clone/PSR page in my showfile. I writed my macros to clone all my presets and stuff to the PSR-imported groups. But to make sure my effects will take the new groups (I just cloned my information to), I will have to do the following:- Open the effects I want to update (for example spot dim saw).- Select my PSR-imported group with the cloned information- Click \"take selection\" in the effect editor- Clear twiceIs there a way to do this by a macro? But like, for al my main groups apart. So spots, beams, wash, LED1, LED2, Strobes and blinders.I will have to make a macro for all those groups apart, but I just aren't experienced enough in advanced macro-writing to know exactly what syntax I need here.If you have any questions please reply, I'd love to solve this and fasten my cloning-process.Kind regards,Floris DijkersLighting Director & Designerflorisdijkers.comlighting@florisdijkers.com",
+  "posts": [
+    {
+      "author": "F Dijkers",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 7, 2019 at 8:08 PM#1Hi guys,I just finished the cloning-part of my clone/PSR page in my showfile. I writed my macros to clone all my presets and stuff to the PSR-imported groups. But to make sure my effects will take the new groups (I just cloned my information to), I will have to do the following:- Open the effects I want to update (for example spot dim saw).- Select my PSR-imported group with the cloned information- Click \"take selection\" in the effect editor- Clear twiceIs there a way to do this by a macro? But like, for al my main groups apart. So spots, beams, wash, LED1, LED2, Strobes and blinders.I will have to make a macro for all those groups apart, but I just aren't experienced enough in advanced macro-writing to know exactly what syntax I need here.If you have any questions please reply, I'd love to solve this and fasten my cloning-process.Kind regards,Floris DijkersLighting Director & Designerflorisdijkers.comlighting@florisdijkers.com"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 7, 2019 at 9:23 PM#2\"store effect 1.\"name\".line /o\" is the syntax you're looking for. then you'll likely want to 'removeindividuals' from that same effect.if you name your effects well you can do things like:group xstore effect 1.\"us_wash\"*.1 /oclear cleargroup ystore effect 1.\"ms_wash\"*.2 /o"
+    },
+    {
+      "author": "F Dijkers",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 8, 2019 at 6:19 AM#3Thanks Kai, this was indeed the syntax I was looking for!Though, will this work with effectnumber.line too? 'Cause I think that's saving me a lot of work with debugging al the syntaxes when using names.Kind regards,Floris Dijkers"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 9, 2019 at 7:56 PM#4yep. 1.effect.line"
+    },
+    {
+      "author": "F Dijkers",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "October 17, 2019 at 4:10 PM#5Yeah I figured this out! Since I'm not using different worlds (I'm working on it), the beginning number isn't necessary. But thanks for your help!"
+    }
+  ],
   "replies": 0,
   "thread_id": "64769",
   "title": "Macro or syntax to update effects after cloning",

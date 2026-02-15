@@ -3,6 +3,38 @@
   "author": "Jonasbauters",
   "post_date": null,
   "post_text": "April 13, 2017 at 7:39 PM#1Hi,I want to assign a speedmaster to a executor effect! (purple fader)! I assigned a speedmaster to the effect, but he isn't reacting.....I alsow want to know the syntaxrules to adjust group/wing/.... to effects by macro!Jonas",
+  "posts": [
+    {
+      "author": "Jonasbauters",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 13, 2017 at 7:39 PM#1Hi,I want to assign a speedmaster to a executor effect! (purple fader)! I assigned a speedmaster to the effect, but he isn't reacting.....I alsow want to know the syntaxrules to adjust group/wing/.... to effects by macro!Jonas"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 13, 2017 at 7:53 PM#2https://support.actlighting.com/knowledgeBase/11662803As for assigning SpeedMaster via command line, there is a bug in 3.2 that makes this not work properly. You should be able to assign it to the effect though (rather than the exec itself), using the syntax listed in the bulletin above."
+    },
+    {
+      "author": "Jonasbauters",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 13, 2017 at 8:19 PM#3in the effect i can adjust by macro, but when the effect is assigned, it doenst react"
+    },
+    {
+      "author": "Jonasbauters",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 13, 2017 at 8:45 PM#4Great help by the way! Can i select multiple effects AND set groups/wings/.... by variable?THX Jonas"
+    },
+    {
+      "author": "a9965",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "June 24, 2017 at 10:09 AM#5Assign fx x sm x?"
+    }
+  ],
   "replies": 0,
   "thread_id": "58104",
   "title": "Assign Speedmaster to Effect Excecutor",

@@ -3,6 +3,20 @@
   "author": "LoudAndBright",
   "post_date": null,
   "post_text": "December 19, 2017 at 7:03 PM#1Hi,is it possible to read out the number of the last cue of a sequence?I want to write a macro, which stores a cue into the selected sequence.Afterwards I want it to label and color the cue.One possibility would be to Top the sequence and going back one step.But if it's possible I want to use the macro without going to that cue.Christoph",
+  "posts": [
+    {
+      "author": "LoudAndBright",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 19, 2017 at 7:03 PM#1Hi,is it possible to read out the number of the last cue of a sequence?I want to write a macro, which stores a cue into the selected sequence.Afterwards I want it to label and color the cue.One possibility would be to Top the sequence and going back one step.But if it's possible I want to use the macro without going to that cue.Christoph"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 19, 2017 at 10:56 PM#2Assuming that you have already labeled your existing cues, one solution could be to address the newly created cue via its name:Store /appendAppearance Cue \"Cue*\" /r=100Label Cue \"Cue*\" \"myname\""
+    }
+  ],
   "replies": 0,
   "thread_id": "60306",
   "title": "Cue number last cue",

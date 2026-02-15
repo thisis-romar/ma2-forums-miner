@@ -3,6 +3,20 @@
   "author": "Babyrave",
   "post_date": null,
   "post_text": "November 30, 2017 at 8:46 PM#1Hido you know if its possible to make a macro thats trigger another macro but with a fade out time?and also, how do i make a macro that turns off an exec with a specific name? or a couple of exec with a \"LED*\"",
+  "posts": [
+    {
+      "author": "Babyrave",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 30, 2017 at 8:46 PM#1Hido you know if its possible to make a macro thats trigger another macro but with a fade out time?and also, how do i make a macro that turns off an exec with a specific name? or a couple of exec with a \"LED*\""
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 30, 2017 at 9:12 PM#2HiThere is no fade time for a macro trig.off exec page.\"my name\" fade xoff exec page.*led* fade x delay y"
+    }
+  ],
   "replies": 0,
   "thread_id": "60149",
   "title": "fade Out time on a macro and",

@@ -3,6 +3,26 @@
   "author": "Duplicate bentoylight",
   "post_date": null,
   "post_text": "December 22, 2016 at 11:55 PM#1HiThis doesn't work.I can change any other values as Default, Highlight, Snap etc... but not Profile.Does any one kow why ?Thanks",
+  "posts": [
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 22, 2016 at 11:55 PM#1HiThis doesn't work.I can change any other values as Default, Highlight, Snap etc... but not Profile.Does any one kow why ?Thanks"
+    },
+    {
+      "author": "willybsm",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 23, 2016 at 11:19 AM#2Salut BenoitEssai ceci :Assign Profile \"Mon Profil\" At Fixture X Attribute X.Exemple :Assign Profile \"Courbe Inverse\" At Fixture 301 Attribute 1Assign Profile 6 At Fixture 301 Attribute 1"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 23, 2016 at 2:03 PM#3Thx WillyMerci WillyI'm so stupid to didn't try this one ! And i tried a lot...But the strange thing is that profile is green in list fixture, not yellow.So supposed to be changed by /option= if i know well gma's colors."
+    }
+  ],
   "replies": 0,
   "thread_id": "56410",
   "title": "Assign Fixture 1  Attribute dim /profile=\"my profile\"",

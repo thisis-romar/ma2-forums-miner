@@ -3,6 +3,20 @@
   "author": "marlonpdm",
   "post_date": null,
   "post_text": "February 20, 2015 at 4:15 PM#1Hello!What is the proper syntax to import macro on 2.8.3 version? Thank you!",
+  "posts": [
+    {
+      "author": "marlonpdm",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 20, 2015 at 4:15 PM#1Hello!What is the proper syntax to import macro on 2.8.3 version? Thank you!"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 25, 2015 at 8:54 AM#2Import \"filename\" at macro X"
+    }
+  ],
   "replies": 0,
   "thread_id": "45452",
   "title": "macro import on version 2.8.3",

@@ -3,6 +3,38 @@
   "author": "justinpma",
   "post_date": null,
   "post_text": "April 23, 2016 at 4:43 AM#1I'm looking for the command to remove fade for pressettype,can't get it thrutried remove fade presettype 1didn't work.please advice",
+  "posts": [
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 23, 2016 at 4:43 AM#1I'm looking for the command to remove fade for pressettype,can't get it thrutried remove fade presettype 1didn't work.please advice"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 23, 2016 at 4:55 AM#2PresetType Timing (the columns you see at the end of the Sequence Exec sheet) is not available via the Command Line at the moment.Or are you talking about iTime?"
+    },
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 23, 2016 at 9:58 AM#3i'm talking about fade and delay.like remove fade presettype 4 please."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 23, 2016 at 10:26 AM#4make sure to already have a created a filter that only allow valuetimes to pass. e.g. Filter 3Remove Presettype 1 If Filter 3"
+    },
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "April 24, 2016 at 4:29 AM#5ok thank you"
+    }
+  ],
   "replies": 0,
   "thread_id": "52603",
   "title": "macro to remove fade",

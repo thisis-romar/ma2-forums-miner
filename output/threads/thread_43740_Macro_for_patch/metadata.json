@@ -3,6 +3,32 @@
   "author": "Taiwan-Jimmy",
   "post_date": null,
   "post_text": "October 6, 2014 at 5:55 PM#1helloHow should I edit macro for patch dimmer??Patch always spend times....thanks",
+  "posts": [
+    {
+      "author": "Taiwan-Jimmy",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 6, 2014 at 5:55 PM#1helloHow should I edit macro for patch dimmer??Patch always spend times....thanks"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 6, 2014 at 6:40 PM#2For an already made patch, where you only have to re-address your channels you could use this one:Assign Channel (Channel?)  At Dmx (Universe.Dmx?)"
+    },
+    {
+      "author": "Taiwan-Jimmy",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 7, 2014 at 5:21 PM#3Thank you, markIt is usefulThanks, again"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 8, 2014 at 5:57 PM#4your welcome,for fixturepatch you could replace channel in to fixture in this macro"
+    }
+  ],
   "replies": 0,
   "thread_id": "43740",
   "title": "Macro for patch",

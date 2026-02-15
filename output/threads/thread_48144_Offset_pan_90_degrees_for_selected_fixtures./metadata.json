@@ -2,22 +2,38 @@
   "assets": [
     {
       "checksum": "sha256:e171bb1153cdb2669a40a35a41aaf4636a562269cfe64ce3be57a8bf8154076c",
-      "download_count": 544,
+      "download_count": 557,
       "filename": "90 degrees pan.xml",
+      "post_number": 1,
       "size": 1197,
       "url": "https://forum.malighting.com/file-download/3732/"
     },
     {
       "checksum": "sha256:5607c517018bda770e7115b7c9ac28671310a7c1f8ad46fab4d628648601c781",
-      "download_count": 118,
+      "download_count": 129,
       "filename": "Pan Offset.xml",
+      "post_number": 2,
       "size": 1990,
       "url": "https://forum.malighting.com/file-download/3865/"
     }
   ],
   "author": "Brock",
   "post_date": null,
-  "post_text": "August 8, 2015 at 11:20 AM#1I Often meet a rig where some fixtures are hung 90 degrees of from the plan.These two macros change the stored pan values for the selection THROUGH THE ENTIRE SHOW! both in presets and cues.Have fun, but remember to make a backup before you run itFiles90 degrees pan.xml1.2 kB – 544 Downloads",
+  "post_text": "August 8, 2015 at 11:20 AM#1I Often meet a rig where some fixtures are hung 90 degrees of from the plan.These two macros change the stored pan values for the selection THROUGH THE ENTIRE SHOW! both in presets and cues.Have fun, but remember to make a backup before you run itFiles90 degrees pan.xml1.2 kB – 557 Downloads",
+  "posts": [
+    {
+      "author": "Brock",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 8, 2015 at 11:20 AM#1I Often meet a rig where some fixtures are hung 90 degrees of from the plan.These two macros change the stored pan values for the selection THROUGH THE ENTIRE SHOW! both in presets and cues.Have fun, but remember to make a backup before you run itFiles90 degrees pan.xml1.2 kB – 557 Downloads"
+    },
+    {
+      "author": "MrRump",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 10, 2015 at 9:14 AM#2Here are some more Macros to make a Pan Offset with:+45°, +90°, -90°, -45°Have funMA SupportFilesPan Offset.xml1.99 kB – 129 Downloads"
+    }
+  ],
   "replies": 0,
   "thread_id": "48144",
   "title": "Offset pan 90 degrees for selected fixtures.",

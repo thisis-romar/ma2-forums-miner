@@ -3,6 +3,44 @@
   "author": "Psychoinmyhouse",
   "post_date": null,
   "post_text": "May 3, 2017 at 8:30 PM#1Hi guys.Looking at expanding the predifined \"Black All Screens\" macro.I want to add the desk lights into this. So desk lights at 0.Have tried to find out how. With no luck.Many thanks.",
+  "posts": [
+    {
+      "author": "Psychoinmyhouse",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 3, 2017 at 8:30 PM#1Hi guys.Looking at expanding the predifined \"Black All Screens\" macro.I want to add the desk lights into this. So desk lights at 0.Have tried to find out how. With no luck.Many thanks."
+    },
+    {
+      "author": "Duplicate dherderich",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 3, 2017 at 9:14 PM#2Assign Root \"Settings\".\"UserSettings\" /DesklampIntensity=0(I hope I remembered the names correctly. Don't have a desk with me at the moment)"
+    },
+    {
+      "author": "Psychoinmyhouse",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 5, 2017 at 5:36 PM#3Tried that but comes back with unknown command."
+    },
+    {
+      "author": "wburnss",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 5, 2017 at 8:20 PM#4hi,perhapsAssign Root 3.2/intensitylittlight=0"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 5, 2017 at 8:25 PM#5Check under \"Local\":https://support.actlighting.com/knowledgeBase/11943766(open link in new tab)"
+    },
+    {
+      "author": "Duplicate dherderich",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "May 10, 2017 at 4:08 PM#6Had now the time to look it up:Assign Root \"Settings\".\"Local\" /IntensityDesklampy=0Assign Root \"Settings\".\"Local\" /IntensityDesklampy=255"
+    }
+  ],
   "replies": 0,
   "thread_id": "58391",
   "title": "Black All Screens macro expanded",

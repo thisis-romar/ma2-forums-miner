@@ -3,6 +3,26 @@
   "author": "HSL_VB",
   "post_date": null,
   "post_text": "November 4, 2019 at 1:09 PM#1Hi everyone!Is there a possibility to have a Macro, that starts a session?I tryed the \"AssignRoot\" thing, but didn't got the result I wanted...Thank you!",
+  "posts": [
+    {
+      "author": "HSL_VB",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 4, 2019 at 1:09 PM#1Hi everyone!Is there a possibility to have a Macro, that starts a session?I tryed the \"AssignRoot\" thing, but didn't got the result I wanted...Thank you!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 4, 2019 at 1:39 PM#2check out the JoinSession keyword:http://help2.malighting.com/Page/grandMA2/…session/en/3.7/"
+    },
+    {
+      "author": "HSL_VB",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 4, 2019 at 10:38 PM#3Thank you Glad!"
+    }
+  ],
   "replies": 0,
   "thread_id": "64898",
   "title": "Create Session via Macro/LUA",

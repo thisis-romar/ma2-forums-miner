@@ -3,6 +3,26 @@
   "author": "litesauce",
   "post_date": null,
   "post_text": "February 16, 2016 at 5:16 AM#1I wanted to know how to make a macro that asks for a group or sequence range.For example.... Appearance from group ? to group ?.or              Appearance from sequence ? to sequence ?.I have been looking for something similar in the forums with no luck.Any assistance would be appreciated.",
+  "posts": [
+    {
+      "author": "litesauce",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 16, 2016 at 5:16 AM#1I wanted to know how to make a macro that asks for a group or sequence range.For example.... Appearance from group ? to group ?.or              Appearance from sequence ? to sequence ?.I have been looking for something similar in the forums with no luck.Any assistance would be appreciated."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 16, 2016 at 7:07 PM#2TypeHelp Appearanceto learn the syntax for this keywordfrom example 2:Appearance Group 1 Thru 5replace the text you want to enter via popup with paranthesesAppearance Group (from) Thru (to)"
+    },
+    {
+      "author": "litesauce",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 22, 2016 at 9:41 AM#3Thanks GladYou're the man"
+    }
+  ],
   "replies": 0,
   "thread_id": "51295",
   "title": "macro with selection range",

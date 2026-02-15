@@ -2,29 +2,33 @@
   "assets": [
     {
       "checksum": "sha256:d57f35f5ba5701126d1d33dee837a22cd6d71674d5e313ab72336a2a3619c3fe",
-      "download_count": 85,
+      "download_count": 94,
       "filename": "BuildSeq.xml",
+      "post_number": 6,
       "size": 48366,
       "url": "https://forum.malighting.com/file-download/3197/"
     },
     {
       "checksum": "sha256:e78065d23ad5c9da26f7f8e4b287c48576f68a9135954fddd31f3680b6c7d5ad",
-      "download_count": 77,
+      "download_count": 86,
       "filename": "BuildSeq2.xml",
+      "post_number": 8,
       "size": 96230,
       "url": "https://forum.malighting.com/file-download/3198/"
     },
     {
       "checksum": "sha256:15442468967ce8349256a53684814a3319fe0d53fad8045881aa221b3e13efee",
-      "download_count": 98,
+      "download_count": 106,
       "filename": "Colour Create and Label.xml",
+      "post_number": 11,
       "size": 28517,
       "url": "https://forum.malighting.com/file-download/3635/"
     },
     {
       "checksum": "sha256:2f4d704d6b4ed81cfa27cd7fd7e9bafcfb08d1fb30f2545ca1fa78bc2c6f87d0",
-      "download_count": 111,
+      "download_count": 119,
       "filename": "Create Color Sequence.xml",
+      "post_number": 11,
       "size": 6403,
       "url": "https://forum.malighting.com/file-download/3636/"
     }
@@ -32,6 +36,74 @@
   "author": "Florian Schimsky",
   "post_date": null,
   "post_text": "March 6, 2012 at 1:39 PM#1Hi I search for a Macro wich make a Sequence with my for Example Color presets with selectet Fixtures...1i make a Selection2 i assign a executer where the list should be3 please and now it buld me automatic a Cuelist with colorsThanks and sorry for my bad English",
+  "posts": [
+    {
+      "author": "Florian Schimsky",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 6, 2012 at 1:39 PM#1Hi I search for a Macro wich make a Sequence with my for Example Color presets with selectet Fixtures...1i make a Selection2 i assign a executer where the list should be3 please and now it buld me automatic a Cuelist with colorsThanks and sorry for my bad English"
+    },
+    {
+      "author": "Matt71",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 6, 2012 at 2:57 PM#2This might help:http://ma-share.net/forum/read.php?8,18293,25106#msg-25106"
+    },
+    {
+      "author": "Florian Schimsky",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 6, 2012 at 3:56 PM#3But i mean that i have for example color Presets... an i would like to have a macro wich build me a list for example cue 1 red cue 2 green cue 3 mauve..... etc. with choses Group of lights in a executer"
+    },
+    {
+      "author": "Aart24",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 6, 2012 at 4:50 PM#4To do that a macro will need more information from the user like what color presets you want to use, or (if you want to use all) at least how many preset you want to use. Then it would probably be possible to write a macro that sets the colo of the selection to the first prest, stores it as a cue sets the next color and so on.What I am wondering abouth is tha use of such a macro. Can you explain me how you want to use it? Maybe then I can help you to better."
+    },
+    {
+      "author": "Florian Schimsky",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "March 6, 2012 at 5:10 PM#5Thank you Art;i would like to use it to make very fast different Cuelist like ColorCuelist with diffrent combinations of Lamp Groups... like all Oo or all even or backtruss and fronttruss....."
+    },
+    {
+      "author": "Aart24",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "March 10, 2012 at 6:03 PM#6Hi Florian,Correct me if I`m wrong, but I understand that you want a macro that is able to:- set the current selection to color preset 1- store this as cue 1 in the selected executer- repeat this process for all the color presetsTo do this you need some kind of loop with a counter. I created a counter macro for this purpose that is able to increase a number (up to 512) by 1. The main macro needs to know the number of the counter and its own macronumber. Therfore the main macro starts with two variable declarations that you have to edit if you don´t load the macros at position 1 and 2.As far as I know there is no way that a macro can know how many color presets you have unless you enter this date. To make it a little more flexible you also have the option to enter a start preset, so that you can use the macro with any group of succeding presets.I didn´t experiment to much with it, but it seems to workGood luck,AartFilesBuildSeq.xml48.37 kB – 94 Downloads"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "March 10, 2012 at 6:33 PM#7Hi Aart,I am afraid that you count macro may fail with larger numbers (>9), as variables on the grandMA are strings, not numbers, and comparisons [$a>$b] are performed character by charactere.g. \"234\" is considered to be less than \"56\" as 2 is less than 5.I believe you may workaround this isssue if your counter-lines are changed toe.g<text>SetUserVar $cnt=002</text>instead of<text>SetUserVar $cnt=2</text>"
+    },
+    {
+      "author": "Aart24",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "March 11, 2012 at 8:35 AM#8Thanks Glad, you´re so right. I created this in a hurry (still working on my own little project) and the counter wasn´t build initially with the idea to use it´s results in a comparation.To get the comparation right I´ll also need to add leading zeros to $preEnd, so I adapted the count macro to create a prefix macro as well that does just that.Furthermore I forgot to use the $preStart variable as the stating point (the macro started always with preset 4.1). Now it is fixed.Finaly I introduced $loolLine (think I got this from one of your macros) to be able to adapt the macro mor flexible and relyable.Here´s the result,AartFilesBuildSeq2.xml96.23 kB – 86 Downloads"
+    },
+    {
+      "author": "Florian Schimsky",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "March 11, 2012 at 10:46 PM#9Thanks very Much!!!! YOU are Crazy peoples!! thanks!"
+    },
+    {
+      "author": "c.meinke",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "February 3, 2015 at 11:40 PM#10Is it possible to improve this Macro by labeling the Cues as the presets are labeled?I tried but come along with two problems:1) what's the correct cmd to get the name of an preset?I triedlist preset 4.1to get the name of the first Color-Preset.But what suffix do I need to just get the Name?In a second Step I wanted to put this into a UserVar that updates with every loop the macro does.2) But it seems that it's not possible to use UserVar within a Uservar.For Example: the Macro creates$PT (user types in the number for the Presetpool)$PresetStart (user types in the first Poolentry. will increese with every loop)so my cmd for a name so far would be:SetUserVar $preName=\"list preset $PT.$preStart\"but looking up the variables (listUserVar) it turns out:$PT = 4$PresetStart = 1$preName = list preset $PT.$preStartAny suggestions?"
+    },
+    {
+      "author": "Bjoern",
+      "post_date": null,
+      "post_number": 11,
+      "post_text": "May 13, 2015 at 8:44 PM#11Here r two Macros they could be interesting for You.First you use \"Color create and Label\" and then \"create Color Sequence\"The Color create Macros saves a lot of Time and i use it often.The Create a Color Sequence Macro u can copy and Paste lines how often you want and make more and new color Cues in this Sequence.EnjoyFilesColour Create and Label.xml28.52 kB – 106 DownloadsCreate Color Sequence.xml6.4 kB – 119 Downloads"
+    }
+  ],
   "replies": 0,
   "thread_id": "29739",
   "title": "Macro wich automatic dreate cuelist with preset",

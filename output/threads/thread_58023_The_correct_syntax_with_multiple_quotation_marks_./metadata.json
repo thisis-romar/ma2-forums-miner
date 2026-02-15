@@ -3,6 +3,38 @@
   "author": "abc",
   "post_date": null,
   "post_text": "April 10, 2017 at 12:25 PM#1HelloI would like to create a macro that will create a macro lineIt is quite easy to do, but I can not integrate the quotation marks in the right placeStore macro 1.1Store macro 1.1.1Assign Macro 1.1.1 / cmd = \"Group 2 At Preset 2.\" Blind Up \"\"I need quotation marks on each side of \"Blind Up\", to call the preset, because there is a space between the two wordsBut since there are 4 quotation marks, the GrandMa does not includeIf you have an idea of the correct syntax, it will be greatThank you in advance",
+  "posts": [
+    {
+      "author": "abc",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 10, 2017 at 12:25 PM#1HelloI would like to create a macro that will create a macro lineIt is quite easy to do, but I can not integrate the quotation marks in the right placeStore macro 1.1Store macro 1.1.1Assign Macro 1.1.1 / cmd = \"Group 2 At Preset 2.\" Blind Up \"\"I need quotation marks on each side of \"Blind Up\", to call the preset, because there is a space between the two wordsBut since there are 4 quotation marks, the GrandMa does not includeIf you have an idea of the correct syntax, it will be greatThank you in advance"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 10, 2017 at 1:47 PM#2to my knowledge this is not possible...."
+    },
+    {
+      "author": "abc",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 10, 2017 at 3:19 PM#3Thanks Glad for your answerThis allowed me to stop looking in this directionSo I use the variables of the consoleStore macro 1.1Store macro 1.1.1Setuservar $Pos1 = ' \"Blind Up\" 'Assign Macro 1.1.1 / cmd = \"Group 2 At Preset 2. $Pos1\"Thank youHave a good day"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 12, 2017 at 5:59 PM#4HiJust avoid space in names. Use Blind_up for exemple."
+    },
+    {
+      "author": "gabrielhowat",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 26, 2017 at 6:37 PM#5I don't know if that will help but... You can put quotes in a var by putting them inside it, for example:Code$\"YourVar\""
+    }
+  ],
   "replies": 0,
   "thread_id": "58023",
   "title": "The correct syntax with multiple quotation marks \"...\"",

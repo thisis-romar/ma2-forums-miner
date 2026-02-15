@@ -3,6 +3,26 @@
   "author": "Redzye",
   "post_date": null,
   "post_text": "April 1, 2017 at 8:54 PM#1Deleting one show, works perfectly fine.Now I read in the helpfile, using wildcards to delete multiple shows is possible. With (*)Sadly I can't get it to workFor my understanding, it should be..Deleteshow show_xyz.*Or am I getting it wrong?I want to delete the backups as well as the shows with one macro..",
+  "posts": [
+    {
+      "author": "Redzye",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 1, 2017 at 8:54 PM#1Deleting one show, works perfectly fine.Now I read in the helpfile, using wildcards to delete multiple shows is possible. With (*)Sadly I can't get it to workFor my understanding, it should be..Deleteshow show_xyz.*Or am I getting it wrong?I want to delete the backups as well as the shows with one macro.."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 1, 2017 at 9:24 PM#2you can use wildcard to delete multiple showfiles- as of shows with different namesDeleteshow ca*will delete both show \"car\" and show \"castle\"use the /b and /s options as described in the manual, to delete showfiles of different type/extensionDeleteshow show_xyz /show /backup /noconfirmhttp://help.malighting.com/view/reference…DeleteShow.html"
+    },
+    {
+      "author": "Redzye",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 3, 2017 at 8:59 AM#3Oh, thanks alot.Didn't find it on the manual, seems like I am blind."
+    }
+  ],
   "replies": 0,
   "thread_id": "57936",
   "title": "Deleting multiple shows via macros",

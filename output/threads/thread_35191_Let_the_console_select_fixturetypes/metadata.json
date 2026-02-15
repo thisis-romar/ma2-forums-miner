@@ -3,6 +3,50 @@
   "author": "Duplicate MarkvanderMeulen",
   "post_date": null,
   "post_text": "February 17, 2013 at 3:26 PM#1Is it possible to let the console search for specific fixturesExample:I got a rig with a couple of Vl2500 spots and Vl2500 wash, would it be possible to select the Vl2500 spots without \"knowing\" the exact fixture id's.With other words, is there a commandline function to select a specific fixturetype in the patch??Thanks in advanceMark",
+  "posts": [
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 17, 2013 at 3:26 PM#1Is it possible to let the console search for specific fixturesExample:I got a rig with a couple of Vl2500 spots and Vl2500 wash, would it be possible to select the Vl2500 spots without \"knowing\" the exact fixture id's.With other words, is there a commandline function to select a specific fixturetype in the patch??Thanks in advanceMark"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 17, 2013 at 11:14 PM#2you may select fixtures by name (with wildcard *)assuming than you have not renamed your fixtures your washes will be labeledVL2500Wa 1VL2500Wa 2etcand your spotsVL2500Sp 1VL2500Sp 2etcso to select the washes you could doFixture \"VL2500Wa*and for spotsFixture \"VL2500Sp*"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 17, 2013 at 11:42 PM#3Thanks Glad,It works for now but, i do rename the spots so thats why i asked for the possibility of selecting fixtures by fixturetype. Do you know a solution/workaround for this?Thans for your answer"
+    },
+    {
+      "author": "Duplicate dherderich",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 29, 2013 at 6:35 PM#4There exists the FixtureType keyword for the commandline.But it can only handle the IDs of the Fixturetypes.With the command List FixtureType you can get a list of the IDs and the associated FixtureTypes in your Showfile.Maybe you can work with it?"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "March 31, 2013 at 4:20 PM#5I used the method explained bij Glad, it works also if you use the just the name, for example: if you use CP Sharpy's, you can use the keywords; Fixture Sharpy*, the console will select all the patched Sharpy's, whenever you are using te vector lamp on/of or standard lamp on/off fixture filesThis works also for VL2500 when using the command: Fixture VL2500*, but then it will also select the VL2500 WashesSo what i do now is, i make the correct patch, use a few macro's to create gobo, shutter, color and effectwheel presets and after that i change the names of the fixtures when nessesary, with this method i have my presets ready in a mather of seconds and start being creativeSo it is not exactly what i wanted to do, but for now it works pretty wellThanks for your input!!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "April 1, 2013 at 1:35 AM#6a possible workaround to select fixtures of a specific fixturetype could be to go via a sheet and its masking featuree.g. a Fixturesheet is first window of second screenAssign Fixturetype 4 At Screen 2.1-> Sheet gets masked showing only fixtures of type 4Selfix Screen 2.1-> Select fixtures displayed by the masked sheet."
+    },
+    {
+      "author": "mvo",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "May 17, 2015 at 2:13 PM#7Why not autocreate a group of that fixture type and select that one?"
+    }
+  ],
   "replies": 0,
   "thread_id": "35191",
   "title": "Let the console select fixturetypes",

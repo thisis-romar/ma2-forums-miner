@@ -3,6 +3,32 @@
   "author": "Viktor Lyskaster",
   "post_date": null,
   "post_text": "November 24, 2017 at 6:57 PM#1Hi!I am not sure if this is possible, but I want to make a temp fader that can edit/assign the value of pan/tilt in an effect. I DONT want to fire the effect when i pull the fader up i just want to edit/assign the value. I also want to do it to more than one effect per fader, so I dont want to just assign the effect to a fader and then \"flip\" the fader.I have already made some cuelists so i can change for example the wings, and that works fine. I just use the command: assign effect 1.(the effect i want to edit) /wings=2. I have also done the same to the direction, blocks and groups. I my head i have to do something similar, just with a fader that fades from high value 0 to 25 and low value 0 to -25, but I cant figure out how i can fade between the values.If there is a better way to do it, please tell me.Thank you.",
+  "posts": [
+    {
+      "author": "Viktor Lyskaster",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 24, 2017 at 6:57 PM#1Hi!I am not sure if this is possible, but I want to make a temp fader that can edit/assign the value of pan/tilt in an effect. I DONT want to fire the effect when i pull the fader up i just want to edit/assign the value. I also want to do it to more than one effect per fader, so I dont want to just assign the effect to a fader and then \"flip\" the fader.I have already made some cuelists so i can change for example the wings, and that works fine. I just use the command: assign effect 1.(the effect i want to edit) /wings=2. I have also done the same to the direction, blocks and groups. I my head i have to do something similar, just with a fader that fades from high value 0 to 25 and low value 0 to -25, but I cant figure out how i can fade between the values.If there is a better way to do it, please tell me.Thank you."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 24, 2017 at 9:33 PM#2Assign all your effects to executors on an unused page.create a single channel DMX remote for all the faders of these executors.you may then adjust the size of all your effects with one fader containing the DMX remote"
+    },
+    {
+      "author": "Viktor Lyskaster",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 25, 2017 at 6:16 PM#3Yes i could have done that, but if i do so i fire the effects and thats not what i want. I just want to \"edit\" the effect live without going into the effect generator.I use the command: Assign effect 1.32 /highvalue=25 ; assign effect 1.32 /lowvalue=-25 to \"edit\" the effect live, but i want to fade between 25 and 0 with the fader. So if i am at 50% on the fader, the value of the effect will be at 12.5 for the high values and -12.5 for the low values."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "November 25, 2017 at 6:41 PM#4disable autostart/stop to prevent effects from being fired by the fader adjustment."
+    }
+  ],
   "replies": 0,
   "thread_id": "60093",
   "title": "Temp fader that assigns an effect",

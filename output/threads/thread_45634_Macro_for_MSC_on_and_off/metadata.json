@@ -3,6 +3,26 @@
   "author": "All Jonny Services",
   "post_date": null,
   "post_text": "March 5, 2015 at 9:20 PM#1Hey guys,Just wondering what the command would be for making a macro that would turn MSC on and off.I'm not to sure on how the menu structure commands work.thanks heaps",
+  "posts": [
+    {
+      "author": "All Jonny Services",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 5, 2015 at 9:20 PM#1Hey guys,Just wondering what the command would be for making a macro that would turn MSC on and off.I'm not to sure on how the menu structure commands work.thanks heaps"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 5, 2015 at 11:13 PM#2open a commandline feedback window and typelistto see the Root of the database,check for something that could hold MSC settingse.g. #3 \"Settings\"typeCD 3to change commandline destination to SettingstypeListcheck for something that could hold MSC settingse.g. #5 \"MidiConfig\"scroll sideways to see all properties of Midiconfige.g.MSCInMode: Disabledenable MSC with Midi or Ethernet via GUIListe.g.MSCInMode: Miditry to change inmode back via commandlineAssign 5 /MSCInMode=DisabledAssign 5 /MSCInMode=Midiwhen you know the Rootpath (Settings>Midiconfig), property (MSCInMode) and values (Disabled/Midi)exit to Root withCD /doublecheck the pathList Root \"Settings\".\"Midiconfig\"create macros containingAssign Root \"Settings\".\"Midiconfig\" /MSCInMode=DisabledAssign Root \"Settings\".\"Midiconfig\" /MSCInMode=Midi"
+    },
+    {
+      "author": "All Jonny Services",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 6, 2015 at 7:25 PM#3Thanks Glad,You rock"
+    }
+  ],
   "replies": 0,
   "thread_id": "45634",
   "title": "Macro for MSC on and off",

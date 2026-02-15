@@ -3,6 +3,20 @@
   "author": "mflte_mflight",
   "post_date": null,
   "post_text": "May 16, 2019 at 3:30 AM#1Could any friend please explain to me how macro works and BUILDS FX works please?My whatsapp +5515998484048",
+  "posts": [
+    {
+      "author": "mflte_mflight",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 16, 2019 at 3:30 AM#1Could any friend please explain to me how macro works and BUILDS FX works please?My whatsapp +5515998484048"
+    },
+    {
+      "author": "F Dijkers",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 27, 2019 at 4:41 PM#2So that's totally a world of difference. An FX is just something you apply to a value like colors, dimmers and movements. Or basically anything you want. A macro is just a line of command or more lines of commands executed after eachother. Some knowledge of using the syntax and commandline of GMA2 is required if you really want to achieve something, eventhough there are some great easy examples downloadable online.Just start with checking basic effects out at youtube or the manual.Check these pages out:Manual - MacrosManual - Effects"
+    }
+  ],
   "replies": 0,
   "thread_id": "63955",
   "title": "BUILDS FX how to make ??",

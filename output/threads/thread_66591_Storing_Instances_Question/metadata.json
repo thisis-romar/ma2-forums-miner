@@ -3,6 +3,26 @@
   "author": "Jbmckenzie",
   "post_date": null,
   "post_text": "May 14, 2021 at 6:15 AM#1If I want to store fixture instances through a macro I could do the following...> Group 1 ; If Fixture *.1 ;  Store Group @But lets say I want to store multiple instance into one group for a fixture like a JDC1, only wanting the color channels, the following will not work...> Group 1 ; If Fixture *.2 thru *14 ;  Store Group @Is there a work around so I do not have to have a new line for each instance?Thanks.",
+  "posts": [
+    {
+      "author": "Jbmckenzie",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 14, 2021 at 6:15 AM#1If I want to store fixture instances through a macro I could do the following...> Group 1 ; If Fixture *.1 ;  Store Group @But lets say I want to store multiple instance into one group for a fixture like a JDC1, only wanting the color channels, the following will not work...> Group 1 ; If Fixture *.2 thru *14 ;  Store Group @Is there a work around so I do not have to have a new line for each instance?Thanks."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 14, 2021 at 11:56 AM#2HiTry : Group 1 - fixture *.1; store @"
+    },
+    {
+      "author": "zakkbeard",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 28, 2022 at 5:33 AM#3Honestly the best thing you could do is set up a bunch of MAtricks for the desired purpose.Ex: with X4 Bar 20 in full res mode. Start by selecting the fixture as a whole, and click the MAtricks as desired:MAtricks 1: Interleave 21, Single X 1 (selects just the main module - master dim, tilt, zoom, beam, etc)MAtricks 2: Interleave 21, Single X 2, Blocks 20 (selects the individual pixels)you don't need to click the Reset MAtricks button to restore the original selection, it's still there for you. The selecting and storing can easily be done via macro. I have LOTS of MAtricks' saved in my show, and export/import as needed.Hope this helps!"
+    }
+  ],
   "replies": 0,
   "thread_id": "66591",
   "title": "Storing Instances Question",

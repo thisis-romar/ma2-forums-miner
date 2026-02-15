@@ -3,6 +3,20 @@
   "author": "r-young",
   "post_date": null,
   "post_text": "September 13, 2014 at 8:06 PM#1Hi Everyone. I'm working on a auto palletizing macro, Basically want to extract the hard values out of a preset, then use those values to replace the hard values in a sequence with the preset. I can extract the preset values to the programmer, but I can't seem to figure out how to use the values in the programmer as my source for the replace. Anyone have any suggestions??Thanks,Ryan",
+  "posts": [
+    {
+      "author": "r-young",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 13, 2014 at 8:06 PM#1Hi Everyone. I'm working on a auto palletizing macro, Basically want to extract the hard values out of a preset, then use those values to replace the hard values in a sequence with the preset. I can extract the preset values to the programmer, but I can't seem to figure out how to use the values in the programmer as my source for the replace. Anyone have any suggestions??Thanks,Ryan"
+    },
+    {
+      "author": "r-young",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 13, 2014 at 8:54 PM#2In Fact upon further testing I don't seem to be able to replace any hard values with presets.If I hold fixture 1 at 10 percent in the programmer and search value 10 if programmer then get 1 result.If I replace value 10 with value 20 if programmer fixture 1 gets a value of 20 in the programmerIf I replace value 10 with preset 1.1 if programmer nothing happens."
+    }
+  ],
   "replies": 0,
   "thread_id": "43391",
   "title": "Extract Replace",

@@ -3,6 +3,14 @@
   "author": "kylebjordahl",
   "post_date": null,
   "post_text": "June 1, 2014 at 1:42 AM#1I've got a pair of sequences that need to change which cue they loop on based on value of a variable, which is set in the cmd of a third sequence. Currently it looks like:Codesetvar $loop = 7That third cue list is going to be long, so I'm automating the build with a macro, but can't come up with a way to create the cmd value of the cue from within another macro. Ideally, I would also be able to change the value of a given cue's loop with another macro, something like:Codesetvar $thisloop = (\"Where to loop?\")setvar $cue = (\"Cue?\")Assign Sequence 3 Cue $cue /Cmd=\"setvar $loop = \"$thisloop",
+  "posts": [
+    {
+      "author": "kylebjordahl",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 1, 2014 at 1:42 AM#1I've got a pair of sequences that need to change which cue they loop on based on value of a variable, which is set in the cmd of a third sequence. Currently it looks like:Codesetvar $loop = 7That third cue list is going to be long, so I'm automating the build with a macro, but can't come up with a way to create the cmd value of the cue from within another macro. Ideally, I would also be able to change the value of a given cue's loop with another macro, something like:Codesetvar $thisloop = (\"Where to loop?\")setvar $cue = (\"Cue?\")Assign Sequence 3 Cue $cue /Cmd=\"setvar $loop = \"$thisloop"
+    }
+  ],
   "replies": 0,
   "thread_id": "41909",
   "title": "Macro to use Cue CMD to setvar",

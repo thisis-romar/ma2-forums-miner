@@ -3,6 +3,44 @@
   "author": "Duplicate bentoylight",
   "post_date": null,
   "post_text": "January 23, 2016 at 1:36 PM#1HiI'd like to assign form in effect by command line.I tried assign effect 1.x.y /form = z   but it doesn't workany one  gets some idea ?Thanks",
+  "posts": [
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 23, 2016 at 1:36 PM#1HiI'd like to assign form in effect by command line.I tried assign effect 1.x.y /form = z   but it doesn't workany one  gets some idea ?Thanks"
+    },
+    {
+      "author": "willybsm",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 23, 2016 at 6:48 PM#2Hi BenoitChangeDest EffectChangeDest \"MonEffet\"Assign Form \"MaForm\".1  At 1Assign Form \"MaForm\".2  At 2etc...ChangeDest /you can also assign eg the graph 1 to several lines:Assign Form \"MaForm\".1  At 1 + 5 + 8a+"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 23, 2016 at 8:39 PM#3Salut WillyMerci de ta réponsei've already tried cd effect etc... but i was missing the .1 !What is .2 ?  assign form 9.2 at 4 doesn't work, assign form 9.1 at 4, yes.why do it simple when you can do it with complicationbien cordialement"
+    },
+    {
+      "author": "willybsm",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "January 23, 2016 at 9:02 PM#4.1, .2 Représente le ou les graph présent dans ta formsi tu as bien sur qu'un graph dans ta form ce sera \"MaForm\".1si tu as 3 graph et que tu souhaites assigner le graph 3 alors : \"MaForm\".3--> Represents the graph or present in your formif you did well on a graph in your form it will be \"MaForm\" .1if you have 3 graph and you want to assign the graph 3 then: \"MaForm\" .3"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "January 23, 2016 at 9:02 PM#5direct in command line without cd...assign form myform.mygraph at effect 1.myeffect.myline is ok !F***ng .1 ! Turning around for 3 days !"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "January 23, 2016 at 9:04 PM#6ok okthx Willy, merci Willycocorico"
+    }
+  ],
   "replies": 0,
   "thread_id": "50721",
   "title": "assign form to effect",

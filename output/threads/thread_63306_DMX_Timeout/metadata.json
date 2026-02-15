@@ -3,6 +3,20 @@
   "author": "nathandkdesign",
   "post_date": null,
   "post_text": "February 5, 2019 at 3:34 PM#1I have a macro that uses the command line to change my DMX Input off which looks like this...Assign Root \"NetConfig\".\"Console\".\"FOH\" /XLRG=\"In Off\"The problem is that it takes 10 seconds to actually take effect, I'm guessing because of some delay or time setting holding the dmx values until it times out.  Is there a way to override this time so that it is instantaneous?Even when I change from universe 50 to 49 it takes 10 seconds to actually take effect.",
+  "posts": [
+    {
+      "author": "nathandkdesign",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 5, 2019 at 3:34 PM#1I have a macro that uses the command line to change my DMX Input off which looks like this...Assign Root \"NetConfig\".\"Console\".\"FOH\" /XLRG=\"In Off\"The problem is that it takes 10 seconds to actually take effect, I'm guessing because of some delay or time setting holding the dmx values until it times out.  Is there a way to override this time so that it is instantaneous?Even when I change from universe 50 to 49 it takes 10 seconds to actually take effect."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 6, 2019 at 2:23 PM#2Have you tried to switch the input merging off instead, for universe in question?e.g.CodeAssign DmxUniverse 50 /DMXInMerge=Off"
+    }
+  ],
   "replies": 0,
   "thread_id": "63306",
   "title": "DMX Timeout",

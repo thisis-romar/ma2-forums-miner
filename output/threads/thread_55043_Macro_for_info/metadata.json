@@ -3,6 +3,56 @@
   "author": "justinpma",
   "post_date": null,
   "post_text": "September 20, 2016 at 3:37 PM#1Hi,What is the Macro for adding text into the info section on the cue list?",
+  "posts": [
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 20, 2016 at 3:37 PM#1Hi,What is the Macro for adding text into the info section on the cue list?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 20, 2016 at 3:42 PM#2CodeInfo Cue 42 \"this is the Answer\""
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 20, 2016 at 4:45 PM#3Lol. That response is amazing! So many layers..."
+    },
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 21, 2016 at 10:22 AM#4Ah thank you"
+    },
+    {
+      "author": "BlinkyFlashy",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "September 25, 2016 at 2:50 AM#5This forum needs a like button, if only for this response."
+    },
+    {
+      "author": "redfresnel",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "November 2, 2016 at 9:08 AM#6How about command for adding info to the current cue on selected executor? I tried Assign Info and storing cue again with some options but no luck.Thank you in advance!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "November 2, 2016 at 11:16 AM#7same syntax, but replace the cuenumber with the systemvariable for current cue(and infotext with a popup, if needed)CodeInfo Cue $SELECTEDEXECCUE (\"Enter info for cue\")"
+    },
+    {
+      "author": "redfresnel",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "November 2, 2016 at 12:30 PM#8Thank you!"
+    }
+  ],
   "replies": 0,
   "thread_id": "55043",
   "title": "Macro for info",

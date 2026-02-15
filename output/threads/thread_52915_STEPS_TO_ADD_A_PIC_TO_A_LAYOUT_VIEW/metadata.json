@@ -3,6 +3,20 @@
   "author": "pumbah01",
   "post_date": null,
   "post_text": "May 8, 2016 at 12:42 AM#1WAT ARE THE STEPS TO ADD A PIC TO YOUR LAYOUT VIEWS",
+  "posts": [
+    {
+      "author": "pumbah01",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 8, 2016 at 12:42 AM#1WAT ARE THE STEPS TO ADD A PIC TO YOUR LAYOUT VIEWS"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 8, 2016 at 1:35 AM#2First kill your capslock key, than you import your image to the image pool, this can be done inside the imagepool or by commandline; import \"filename\" at image xThan you assign the image to an layout item by pressing setup in the layout, rightclick or edit on the layout object and there you can choose a image from the imagepool"
+    }
+  ],
   "replies": 0,
   "thread_id": "52915",
   "title": "STEPS TO ADD A PIC TO A LAYOUT VIEW",

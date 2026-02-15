@@ -3,6 +3,20 @@
   "author": "StuntMUSTARD",
   "post_date": null,
   "post_text": "May 24, 2016 at 8:55 AM#1I'm working on a color layout view and I'm a little confused on bouncing between two images that a macro sees on the layout page.I've referenced the image the macro sees at Image 101. The Command I'm using is: \"Goto Cue 1 Sequence 8; Copy Image 28 at Image 101 /o\"How do I get it to revert back to the inactive image I want it to use once I click on another macro referencing a different cue on the same sequence?",
+  "posts": [
+    {
+      "author": "StuntMUSTARD",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 24, 2016 at 8:55 AM#1I'm working on a color layout view and I'm a little confused on bouncing between two images that a macro sees on the layout page.I've referenced the image the macro sees at Image 101. The Command I'm using is: \"Goto Cue 1 Sequence 8; Copy Image 28 at Image 101 /o\"How do I get it to revert back to the inactive image I want it to use once I click on another macro referencing a different cue on the same sequence?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 24, 2016 at 9:21 AM#2your macros needs to copy the active image at its own placeholder, AND copy inactive images to all others placeholder images of that sequence"
+    }
+  ],
   "replies": 0,
   "thread_id": "53186",
   "title": "Changing Macro Images?",

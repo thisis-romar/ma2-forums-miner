@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:23c8df60439864fc55047a6b643cdc5876412f05e2d36ae510e7d719b21d7c40",
-      "download_count": 674,
+      "download_count": 683,
       "filename": "midiremotes.zip",
+      "post_number": 2,
       "size": 123023,
       "url": "https://forum.malighting.com/file-download/3615/"
     }
@@ -11,6 +12,26 @@
   "author": "waldi1888",
   "post_date": null,
   "post_text": "April 16, 2015 at 8:48 PM#1How to assign the faders and buttons from midicon elation to grandMA2? Please for detailed information (printScreen).[Blocked Image:http://www.elationlighting.com/images/products/midicon_large1.jpg]",
+  "posts": [
+    {
+      "author": "waldi1888",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 16, 2015 at 8:48 PM#1How to assign the faders and buttons from midicon elation to grandMA2? Please for detailed information (printScreen).[Blocked Image:http://www.elationlighting.com/images/products/midicon_large1.jpg]"
+    },
+    {
+      "author": "Rivieroscope",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 21, 2015 at 4:35 PM#2Hi Waldi, you have to open first the setup on Grandma2 then  open Remote inputs setup and select midiremotes as you can see on attached file. Follow by open a commandline window and when you press a key on the Elation the programmer said to you the number of the key , follow to write the command you want in the midiremotes and select the good number to have what you expect for.Filesmidiremotes.zip123.02 kB – 683 Downloads"
+    },
+    {
+      "author": "swiatlosfera",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 15, 2016 at 4:14 PM#3Cześć Waldi, udało Ci się rozgryźć temat? Mam problem z faderami i midi cc. Pomożesz?"
+    }
+  ],
   "replies": 0,
   "thread_id": "46251",
   "title": "faders and buttons Elation Midicon to grandma2",

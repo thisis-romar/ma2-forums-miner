@@ -3,6 +3,56 @@
   "author": "kinglevel",
   "post_date": null,
   "post_text": "July 20, 2013 at 2:01 AM#1HiMaybe it is time for macros to retrive info and change it..I would love to have a maco for +/- Some frames for my timecode offsets..?Or is it possible to do on the wheels??meow",
+  "posts": [
+    {
+      "author": "kinglevel",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 20, 2013 at 2:01 AM#1HiMaybe it is time for macros to retrive info and change it..I would love to have a maco for +/- Some frames for my timecode offsets..?Or is it possible to do on the wheels??meow"
+    },
+    {
+      "author": "kinglevel",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 31, 2013 at 8:58 AM#2hmm.. weird that no one seems to have interest in this..meow"
+    },
+    {
+      "author": "bundao",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 31, 2013 at 9:32 PM#3I'm interested in it! Not your specific request particularly but there is a definite need for show specific global variables.I've been led to believe that development in the macro area is on the cards......You probably know this butCodeAssign Timecode \"My Timecode\" /offset=xxwhere xx is the number of framesI can picture a really convoluted macro using this if you have a sepearte macro for entering the existing number of offset frames - SetUserVar $Currentframes=( \"Enter current offset in number of frames\" )and then two separate macros for increasing and decreasing the offset ieCode[$Currentframes==\"1\"] SetUserVar $Currentframes=\"2\"[$Currentframes==\"0\"] SetUserVar $Currentframes=\"1\"etc"
+    },
+    {
+      "author": "kinglevel",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "August 6, 2013 at 9:53 PM#4ah yes that is a solution!But it wont be very on the fly friendly.. Maybe this feature should just be implemented on the encoders?meow"
+    },
+    {
+      "author": "jabadger",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "August 10, 2013 at 4:35 PM#5Just out of curiosity - why would you need to change the offset of a whole timecode script on the fly?"
+    },
+    {
+      "author": "kinglevel",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "March 8, 2014 at 12:54 AM#6for example a show tomorrow, they play a song from a tv show, no timecode, but i timecode with myself anyways because it is easier to rewind and make changes in a cuelist.meow"
+    },
+    {
+      "author": "XedMada",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "August 2, 2015 at 12:00 PM#7Anyone have a better suggestion for this? Would be nice to nudge each TC object +/- 0.1,0.5,1.0s when first syncing to the production source."
+    },
+    {
+      "author": "Maxweisen",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "April 21, 2017 at 1:50 PM#8I am interested in this as well. I am noticing on the most recent version of the software to date, it only allows offset by a minimum of a whole second. I currently need an offset of my entire Timecoded show by 0.25 second.Does anyone already have a solution to this??"
+    }
+  ],
   "replies": 0,
   "thread_id": "37484",
   "title": "Change timecode offset by increment?",

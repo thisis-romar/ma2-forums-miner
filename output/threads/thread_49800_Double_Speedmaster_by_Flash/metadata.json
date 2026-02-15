@@ -3,6 +3,44 @@
   "author": "eKon",
   "post_date": null,
   "post_text": "November 12, 2015 at 4:46 AM#1Hi,Is it possible to make a Flash Button and then a Speedmaster Doubles the speed? and when you release it goes back to normal again?Graz",
+  "posts": [
+    {
+      "author": "eKon",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 12, 2015 at 4:46 AM#1Hi,Is it possible to make a Flash Button and then a Speedmaster Doubles the speed? and when you release it goes back to normal again?Graz"
+    },
+    {
+      "author": "sjorse1996",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 10, 2017 at 7:44 PM#2I have seen it so it is posible. But dont Ask me how, juist no clue..."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 17, 2017 at 12:18 AM#3HiWhy don't you use DoubleSpeed and halfSpeed Buttons ? It's more like a toggle but that's a way.Press DS, then press HS"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "November 17, 2017 at 12:31 AM#4You can use 2 dummy channels as dmx remotes.1 : Normal DMX profile ; remote : cmd doublespeed sm 3.x2 : Invert dmx profile ; remote : cmd halfspeed sm 3.xStore these 2 channels at full on an exec and flash it.Invert dmx profile is : at 0 > 255, at 100 > 0Enjoy"
+    },
+    {
+      "author": "sjorse1996",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "November 17, 2017 at 1:32 PM#5Hello Bentoy,i'm gonna use it as a flashbutton to make an easy break in my live shows. when you are doing a hardstyle event with beats around 150 bpm it is one of the most effective ways to pick up a buildup or a break with a current running chaser.its like a flash button but instead breaking with strobes or dim effects i just flash the doublespeed;)a seq with 2 cue's: doublespeed and halfspeed. is  not 'fast' enough to reach, also, there is a big risk of messing up when restarting your chaser's or bumpers.thank you for the info!"
+    },
+    {
+      "author": "sjorse1996",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "November 21, 2017 at 11:21 AM#6Hello Bentoy,at last, It Works!Thank you so much!"
+    }
+  ],
   "replies": 0,
   "thread_id": "49800",
   "title": "Double Speedmaster by Flash?",

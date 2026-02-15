@@ -3,6 +3,26 @@
   "author": "HelenDeneb",
   "post_date": null,
   "post_text": "February 24, 2016 at 3:34 AM#1Hello all-Programming a show for a theatre, how do we change the back time so that it is not zero without affecting cue time? A little new to this",
+  "posts": [
+    {
+      "author": "HelenDeneb",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 24, 2016 at 3:34 AM#1Hello all-Programming a show for a theatre, how do we change the back time so that it is not zero without affecting cue time? A little new to this"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 24, 2016 at 1:38 PM#2Setup -> Show tab -> Playback & MIB Timing.You can also always temporarily use custom timing by saying [color=#66FF00]Go- Fade[/color] x, and then tapping an exec button. Note that you'd be pressing the Go- in your programming section, NOT the big Go- button below the 100mm faders. Also, Fade is inserted via the [Time] key."
+    },
+    {
+      "author": "MKay",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 5, 2017 at 10:40 PM#3Ryan Kanarek Wrote:-------------------------------------------------------> You can also always temporarily use custom timing> by saying Go- Fade x, and then tapping an exec> button. Note that you'd be pressing the Go- in> your programming section, NOT the big Go- button> below the 100mm faders. Also, Fade is inserted via> the  key.here is a scenario:You are in theatre, show is running, but in one crucial cue  you hit the go button twice accidentially.ok, you can stop fading into the next cue by pressing \"pause\" but what if you are 2 secs in the next cue and you want to correct that?bad things happen if you try  f. ex.: \"go- fade 20\"  to fix it and slowly sneak back in the right cue, becausethe fadetime that just started and your correction fadetime fight against each other. you go further into the false cue and then it will slowly revert to your old cue.is there any way to bypass the \"fighting\" issue and go slowly back to the correct cue from the point the fade was paused?"
+    }
+  ],
   "replies": 0,
   "thread_id": "51449",
   "title": "Changing Go+ Go- time",

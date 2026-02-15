@@ -3,6 +3,68 @@
   "author": "justinpma",
   "post_date": null,
   "post_text": "February 25, 2016 at 2:58 PM#1Hi,what is the macro for changing readout on fixture sheet?the one set for natural, percent, decimal, etc",
+  "posts": [
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 25, 2016 at 2:58 PM#1Hi,what is the macro for changing readout on fixture sheet?the one set for natural, percent, decimal, etc"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 25, 2016 at 4:19 PM#2Well... you can do it, but it'sreallymessy, and is going to change depending on your screens. TBH, probably not worth it, unless you're going to use it in the exact same scenario every time.You're looking at something like this: [color=#66FF00]Assign Root[/color] userprofiles.x.displays.y.z.1.3 /readout=natural (or decimal or percent or whatever)-  x is the name/number of your user profile-  y is the display which the sheet is on-  z is the line number of that sheet in the display directory"
+    },
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 26, 2016 at 12:54 AM#3I see,then is there any quicker way for me to see and edit on fixture sheet as well as encoder for natural and decimal readout?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 26, 2016 at 1:56 AM#4Encoder Readout is based on the readout of the sheet with the most recent focus. Check the Window Options (yellow ball) for your sheets, and make sure the \"Readout\" button is enabled to show up in your Toolbar."
+    },
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "February 26, 2016 at 4:12 AM#5It is.That's what I'm currently use to change between read out.But I'm still looking for faster way like a press of a button"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "February 26, 2016 at 4:33 AM#6Is there a specific fixture for which you're needing to toggle this? Because if so, maybe you could adjust the natural range in the fixture profile, so that it shows up on the Natural Readout as desired?"
+    },
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "February 26, 2016 at 8:11 AM#7Yes, majorly all color mixing cmy,rgbI would prefer to see 0-255 instead of percent.But today I tried changing the numbers on the profile to 255 and default also 255.After save the fixture show still show value 100 on default"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "February 26, 2016 at 10:23 AM#8store a view with readout you want. You'll just have to recall it"
+    },
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "February 26, 2016 at 3:15 PM#9Yeah,  think I'll just do both view with natural and decimal readout and have it toggle with macro.Thank you"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "February 26, 2016 at 5:22 PM#10that's the wayenjoy"
+    }
+  ],
   "replies": 0,
   "thread_id": "51477",
   "title": "macro for changing readout view",

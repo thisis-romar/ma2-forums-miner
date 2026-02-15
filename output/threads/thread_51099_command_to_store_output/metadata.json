@@ -3,6 +3,32 @@
   "author": "Duplicate bentoylight",
   "post_date": null,
   "post_text": "February 6, 2016 at 10:06 PM#1Hi everyoneI recently learned command store /use=allforselected etc ...which are option for store \"use selection\".I'm looking for command for data source (output, prog, dmx in) . i tried:  /data=, /source= but none is working.Do you know it ?Thanks",
+  "posts": [
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 6, 2016 at 10:06 PM#1Hi everyoneI recently learned command store /use=allforselected etc ...which are option for store \"use selection\".I'm looking for command for data source (output, prog, dmx in) . i tried:  /data=, /source= but none is working.Do you know it ?Thanks"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 6, 2016 at 10:23 PM#2try typingStore /?then check your commandline feedback"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 6, 2016 at 10:57 PM#3many thanksIt's /source ...i've already tried but i'll try again"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 7, 2016 at 1:36 AM#4Open link in new tab"
+    }
+  ],
   "replies": 0,
   "thread_id": "51099",
   "title": "command to store output",

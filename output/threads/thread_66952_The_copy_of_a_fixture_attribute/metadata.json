@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:afb4f8d7d04e38e0fd451221b3568d8e7537f41939541289c07fcbea703fc862",
-      "download_count": 164,
+      "download_count": 174,
       "filename": "shaper test.show.gz",
+      "post_number": 2,
       "size": 1030671,
       "url": "https://forum.malighting.com/file-download/4696/"
     }
@@ -11,6 +12,32 @@
   "author": "dahinn",
   "post_date": null,
   "post_text": "December 6, 2021 at 1:14 PM#1Hi, collegues. I want to create a simple macro, but I am missing one final screw. Could somebody help me?From time to time, I light up banners or parts of the architecture. I use symmetrically situated profiles. I focus one of them and then try to make symmetrical copy to another. The value of the left profile attribute \"Blade1a\" must become the right profile attribute \"Blade3a\" etc.Filters or commands like [Attribute \"Blade3a\" if Fixture 2 at Attribute \"Blade1a\" if Fixture 1] don't work.My idea is something like this:1. SetUserVar $qwe = {Value of Fixture 1 Attribute \"Blade1a\"}2. Fixture 2 Attribute \"Blade3a\" at $qweThe question: how can I extract the value of an attribute?",
+  "posts": [
+    {
+      "author": "dahinn",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 6, 2021 at 1:14 PM#1Hi, collegues. I want to create a simple macro, but I am missing one final screw. Could somebody help me?From time to time, I light up banners or parts of the architecture. I use symmetrically situated profiles. I focus one of them and then try to make symmetrical copy to another. The value of the left profile attribute \"Blade1a\" must become the right profile attribute \"Blade3a\" etc.Filters or commands like [Attribute \"Blade3a\" if Fixture 2 at Attribute \"Blade1a\" if Fixture 1] don't work.My idea is something like this:1. SetUserVar $qwe = {Value of Fixture 1 Attribute \"Blade1a\"}2. Fixture 2 Attribute \"Blade3a\" at $qweThe question: how can I extract the value of an attribute?"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 7, 2021 at 8:10 PM#2I think this might be something for a LUA plugin, however i don't know LUA at all so i have tried a little detour and might have found a way which includes some DMX remotes and a dummy fixtureMy experiment leads me to this (see attached showfile):I have made a small patch containing two VL3500 spot (fixture ID 1&2)Created a filter containing just the shaper attributesI have made a little fixture called Shaperkit (fixture ID 11) and patched it to a universe i don't use; in this case universe 2. This fixture is nothing more than just a copy of a VL3500 spot where i have removed all attributes exept the shaperset.Than i made 9 DMX remotes to control the first 9 executors of executorpage 2. These are controlled by dmx 1.18 thru 1.26 (where i have patched a regular VL3500 spot (fixture ID 1). These channels are the dmx channels used for the shapers of fixture ID 1)I have programmed the Shaperkit fixture to separate the shaper attributes to the first 9 faders of executorpage 9 (faders are set to Tempfader) However i have swapped the opposite blades (so blade 1 is blade 3 and blade 2 is blade 4)When adjusting the shapers of fixture 1 the faders respond to that (they take over the values set for the shapers of fixture 1)Now when using command:[color=#00FF00]On fixture 11Filter \"SHAPERS\"Fixture 2 at Fixture 11[/color] (macro 5)The shapers are taken over from my shaperkit fixture and \"flipped\"This way you might be able to do something like this, however its a pretty long way for such a job. I think its way faster to just use command [color=#00FF00]Fixture 2 at Fixture 1[/color](which gives an exact copy of the programmer state of fixture 1) and than do some changes if neededFilesshaper test.show.gz1.03 MB – 174 Downloads"
+    },
+    {
+      "author": "dahinn",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 8, 2021 at 12:44 PM#3Hi, Mark. Thank you for your reply. Your idea is pretty soficticated and tricky.While reading your post, I figured out another solution:1. to create a new fixture type where some attributes are swapped (1A --> 3A, 1B --> 3B or whatever);2. to patch the destination fixture as this new fixture type;3. and then to use filter.I think it should work.The professional societies like this, it's so cool. Without your post I wouldn't come to this idea.Thank you one more time."
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "December 8, 2021 at 3:51 PM#4Swapping the blades in the fixture is indeed a better option i think"
+    }
+  ],
   "replies": 0,
   "thread_id": "66952",
   "title": "The copy of a fixture attribute",

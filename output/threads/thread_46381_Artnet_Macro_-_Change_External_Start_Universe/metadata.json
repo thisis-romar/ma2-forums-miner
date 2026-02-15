@@ -3,6 +3,20 @@
   "author": "mike.brytedesign",
   "post_date": null,
   "post_text": "April 26, 2015 at 10:30 AM#1Hi,I'm trying to write a macro to change the external start universe. This macro wants to have a fixed predetermined value for the universe it is setting it to.Any help would be greatly appreciated.This is basically to allow for console switching on the artnet input. Each console is on a separate subnet.Many ThanksMike",
+  "posts": [
+    {
+      "author": "mike.brytedesign",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 26, 2015 at 10:30 AM#1Hi,I'm trying to write a macro to change the external start universe. This macro wants to have a fixed predetermined value for the universe it is setting it to.Any help would be greatly appreciated.This is basically to allow for console switching on the artnet input. Each console is on a separate subnet.Many ThanksMike"
+    },
+    {
+      "author": "mike.brytedesign",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 26, 2015 at 1:09 PM#2Worked it out.Assign Root 4.1.2 /externstart=16Thanks"
+    }
+  ],
   "replies": 0,
   "thread_id": "46381",
   "title": "Artnet Macro - Change External Start Universe",

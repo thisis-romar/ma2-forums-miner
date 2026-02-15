@@ -3,6 +3,20 @@
   "author": "XIaoLe",
   "post_date": null,
   "post_text": "December 13, 2020 at 8:34 AM#1Assign Effect $currentfxslot /wings=2 did not succeed. How to use it thanks",
+  "posts": [
+    {
+      "author": "XIaoLe",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 13, 2020 at 8:34 AM#1Assign Effect $currentfxslot /wings=2 did not succeed. How to use it thanks"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 15, 2020 at 12:37 PM#2well what is your variable in this situation? is it a number? this syntax will work if the variable is a number.is it \"effect #?\"if the variable is \"effect 5\" for example, you will need to use:\"assign effect $'currentfxslot' /wings =2"
+    }
+  ],
   "replies": 0,
   "thread_id": "66267",
   "title": "Effect",

@@ -3,6 +3,38 @@
   "author": "Duplicate bentoylight",
   "post_date": null,
   "post_text": "September 7, 2015 at 11:51 AM#1HiI'd like to see a uservariable in a pop up.Is there any command to do that ?something like :setvar $myvar = \"var1\"show $myvarI want to run a show by calling  it by his name in a pop up and then, show this name and ask to confirm choice : $myvar are you sure ? 1 or 2I think it's impossible but ?Thanks",
+  "posts": [
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 7, 2015 at 11:51 AM#1HiI'd like to see a uservariable in a pop up.Is there any command to do that ?something like :setvar $myvar = \"var1\"show $myvarI want to run a show by calling  it by his name in a pop up and then, show this name and ask to confirm choice : $myvar are you sure ? 1 or 2I think it's impossible but ?Thanks"
+    },
+    {
+      "author": "sebmdp",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 10, 2015 at 6:14 PM#2Hi,have you tried this : (\"$myvar\")Regards."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 10, 2015 at 7:16 PM#3yes, it doesn't workalso ($\"myvar\") nonei think it's quite impossible but... i askthanks"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 10, 2015 at 8:39 PM#4works for me (3.1.2.5)Setvar $myvar=\"Hello World\"(\"$myvar\")"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "September 11, 2015 at 9:25 AM#5thanks Glad and Sebhere is what i've done:Macro ChoiceSetvar $show= (what show ?)Setvar $text= $showAddvar $text = \" ?  Are you sure ? 1/yes  2/no\"Setvar $Confirm= (\"$text\")[$Confirm==1] macro $show[$Confirm==2] macro Choicefirst popup : what show ?                >> gogo2d popup : gogo ?  Are you sure ? 1/yes  2/no"
+    }
+  ],
   "replies": 0,
   "thread_id": "48669",
   "title": "show variable in pop up to confirm variable",

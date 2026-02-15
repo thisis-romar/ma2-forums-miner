@@ -3,6 +3,14 @@
   "author": "gralf",
   "post_date": null,
   "post_text": "October 8, 2017 at 9:10 AM#1Hi!I need to add a specific device (e.g. console, 3D, VPU etc.) to netconfig by commandline/macro.I've done:Codecd netconfigcd consolestore \"myConsole\"The console \"myConsole\" is added to the list of consoles with IP 0.0.0.0.Now I'm stuck changing the IP by command.I've triedCodeassign \"myConsole\" /IPETHERCON1(ETH0)=\"192.168.0.1\"This does not report any error but does not change the IP, too.I can change any other option with assign, but how to change the IP?Any ideas?ThanksGralf",
+  "posts": [
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 8, 2017 at 9:10 AM#1Hi!I need to add a specific device (e.g. console, 3D, VPU etc.) to netconfig by commandline/macro.I've done:Codecd netconfigcd consolestore \"myConsole\"The console \"myConsole\" is added to the list of consoles with IP 0.0.0.0.Now I'm stuck changing the IP by command.I've triedCodeassign \"myConsole\" /IPETHERCON1(ETH0)=\"192.168.0.1\"This does not report any error but does not change the IP, too.I can change any other option with assign, but how to change the IP?Any ideas?ThanksGralf"
+    }
+  ],
   "replies": 0,
   "thread_id": "59701",
   "title": "Add device to netconfig by macro/commandline",

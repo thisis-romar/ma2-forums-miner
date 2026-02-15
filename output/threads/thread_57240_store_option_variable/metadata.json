@@ -3,6 +3,38 @@
   "author": "b34tn1k",
   "post_date": null,
   "post_text": "February 20, 2017 at 4:54 PM#1Hi,Little question here. I am working on automating my showfile and I am looking for a method to choose whether I want to overwrite or merge the programmer into existing sequences.I was trying to do it like this:1. setvar $option= (\"Overwrite or Merge?\")2. group x at preset y3. store /$option sequence zBut that doesn't seem to work... Any ideas?Thanks!",
+  "posts": [
+    {
+      "author": "b34tn1k",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 20, 2017 at 4:54 PM#1Hi,Little question here. I am working on automating my showfile and I am looking for a method to choose whether I want to overwrite or merge the programmer into existing sequences.I was trying to do it like this:1. setvar $option= (\"Overwrite or Merge?\")2. group x at preset y3. store /$option sequence zBut that doesn't seem to work... Any ideas?Thanks!"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 20, 2017 at 5:20 PM#2Try getting rid of the double-quotes."
+    },
+    {
+      "author": "b34tn1k",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 25, 2017 at 2:24 PM#3Hi Ryan,Thanks for the reply. When I get rid of de quotes and I input \"M\", the desk sees this as Macro.I now use it like this and it kind of works... I still get a popup asking me to overwrite or merge, but only once for all the sequences. Since I can't get store /$option to work, I use \"/m\" or \"/o\" as variable. Still trying to get rid of the popup though. But this is more an esthetical thing...SetVar $option= (\"Overwrite or Merge positions\")Store $option  Sequence x  Cue y  Fade 5"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 25, 2017 at 2:47 PM#4you could try using conditions:CodeSetVar $option= (\"1:Overwrite or 2:Merge positions\")Store Sequence x Cue y Fade 5 [$option==1] /overwrite [$option==2] /merge"
+    },
+    {
+      "author": "b34tn1k",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "February 26, 2017 at 11:11 AM#5Thanks Glad, I think this is the way to go"
+    }
+  ],
   "replies": 0,
   "thread_id": "57240",
   "title": "store option variable",

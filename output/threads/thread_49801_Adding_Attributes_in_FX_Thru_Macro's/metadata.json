@@ -3,6 +3,26 @@
   "author": "eKon",
   "post_date": null,
   "post_text": "November 12, 2015 at 4:51 AM#1Hi,Most of the time i'm creating more then 1 dimmer line in an FX just to get it really smooth.Is there anyway you can write a macro so you get an Popup at firstWhat attribute's you want to add? Should be cool if you could say dimmer & PositionHow many lines you want to add?Wondering if someone can help me out with it.",
+  "posts": [
+    {
+      "author": "eKon",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 12, 2015 at 4:51 AM#1Hi,Most of the time i'm creating more then 1 dimmer line in an FX just to get it really smooth.Is there anyway you can write a macro so you get an Popup at firstWhat attribute's you want to add? Should be cool if you could say dimmer & PositionHow many lines you want to add?Wondering if someone can help me out with it."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 21, 2016 at 11:54 AM#2hisetvar $fx = (which effect ?)setvar $line = (which line ?)setvar $attr = (wich attribute ?)store effect $fx ------------------- to create the effectstore effect 1.$fx.$line /m ------------ to create the lineassign attribute $\"attr\" at effect 1.1.$line ------------------ to assign attributeEnjoy"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 22, 2016 at 7:06 PM#3little correction : assign attribue $\"attr\" at effect 1.$fx.lineEnjoy"
+    }
+  ],
   "replies": 0,
   "thread_id": "49801",
   "title": "Adding Attributes in FX Thru Macro's",

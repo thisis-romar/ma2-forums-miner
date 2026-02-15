@@ -3,6 +3,20 @@
   "author": "Steveax",
   "post_date": null,
   "post_text": "May 17, 2020 at 5:38 PM#1Hello to everyone,I want to write am macro to readout the SpecialMaster3.1 (Speed Master 1) to a variable, increase / decrease it by one bpm and write it back to the SpecialMaster.How do I have to do the readout it into a varialble?GreetingsSteve",
+  "posts": [
+    {
+      "author": "Steveax",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 17, 2020 at 5:38 PM#1Hello to everyone,I want to write am macro to readout the SpecialMaster3.1 (Speed Master 1) to a variable, increase / decrease it by one bpm and write it back to the SpecialMaster.How do I have to do the readout it into a varialble?GreetingsSteve"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 18, 2020 at 2:37 PM#2http://www.ma-share.net/forum/read.php…64584#msg-64584"
+    }
+  ],
   "replies": 0,
   "thread_id": "65682",
   "title": "Readout Speedmaster to variable",

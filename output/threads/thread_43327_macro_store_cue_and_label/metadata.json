@@ -3,6 +3,20 @@
   "author": "s.szczesny",
   "post_date": null,
   "post_text": "September 10, 2014 at 6:27 PM#1What about making a snapshot macro to store cue on selected cuelist, for example on sequence 1\"IfoutputOn attribute 1 thruFixture 1 thru - group 998channel 1 thru - group 998On attribute 1Store sequence 1 cueGoLabel cueclearclearclear\"BUT, MA label not that new cue which has been saved, but previous (for eg. you have 5 cue on cuelist>use snapshot to store cue 6>ma label cue 5 not 6). Where is a bug on this macro? Thanks for help!",
+  "posts": [
+    {
+      "author": "s.szczesny",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 10, 2014 at 6:27 PM#1What about making a snapshot macro to store cue on selected cuelist, for example on sequence 1\"IfoutputOn attribute 1 thruFixture 1 thru - group 998channel 1 thru - group 998On attribute 1Store sequence 1 cueGoLabel cueclearclearclear\"BUT, MA label not that new cue which has been saved, but previous (for eg. you have 5 cue on cuelist>use snapshot to store cue 6>ma label cue 5 not 6). Where is a bug on this macro? Thanks for help!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 10, 2014 at 8:32 PM#2try putting a small macroline wait after the Go command"
+    }
+  ],
   "replies": 0,
   "thread_id": "43327",
   "title": "macro: store cue and label",

@@ -2,15 +2,24 @@
   "assets": [
     {
       "checksum": "sha256:4d60036cc4dcb08b21f963ea396317b2b0a7bc36543a7c884bb8d451d731b261",
-      "download_count": 57,
+      "download_count": 65,
       "filename": "assign buttons en lots.xml",
+      "post_number": 1,
       "size": 1052,
       "url": "https://forum.malighting.com/file-download/3707/"
     }
   ],
   "author": "rwan",
   "post_date": null,
-  "post_text": "June 29, 2015 at 12:30 PM#1a macro to assign button fonction for multiple executors.......Filesassign buttons en lots.xml1.05 kB – 57 Downloads",
+  "post_text": "June 29, 2015 at 12:30 PM#1a macro to assign button fonction for multiple executors.......Filesassign buttons en lots.xml1.05 kB – 65 Downloads",
+  "posts": [
+    {
+      "author": "rwan",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 29, 2015 at 12:30 PM#1a macro to assign button fonction for multiple executors.......Filesassign buttons en lots.xml1.05 kB – 65 Downloads"
+    }
+  ],
   "replies": 0,
   "thread_id": "47507",
   "title": "assign multiple exec button",

@@ -3,6 +3,14 @@
   "author": "youri311",
   "post_date": null,
   "post_text": "November 19, 2015 at 3:22 PM#1Hi,I'd search bwithout success. I want to recover value dmx in a variable.Something like thisAt preset 2.1Setvar $pan=\"pan\"addvar $pan= DMX VALUEI try to mix with LUA plugin but...Thanks",
+  "posts": [
+    {
+      "author": "youri311",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 19, 2015 at 3:22 PM#1Hi,I'd search bwithout success. I want to recover value dmx in a variable.Something like thisAt preset 2.1Setvar $pan=\"pan\"addvar $pan= DMX VALUEI try to mix with LUA plugin but...Thanks"
+    }
+  ],
   "replies": 0,
   "thread_id": "49941",
   "title": "recover value dmx",

@@ -2,15 +2,24 @@
   "assets": [
     {
       "checksum": "sha256:011425b39795802ee11618a6a55ab4298a3a5503be4f6e6c1947544337d2916d",
-      "download_count": 158,
+      "download_count": 168,
       "filename": "Import VWX.xml",
+      "post_number": 1,
       "size": 957,
       "url": "https://forum.malighting.com/file-download/3472/"
     }
   ],
   "author": "Decoye Gheist",
   "post_date": null,
-  "post_text": "July 3, 2014 at 12:51 PM#1Hey!i wrote a macro for the new Vectorworks Importer/Exporter.Its is running in 3.0.0.2EnjoyFilesImport VWX.xml957 Byte – 158 Downloads",
+  "post_text": "July 3, 2014 at 12:51 PM#1Hey!i wrote a macro for the new Vectorworks Importer/Exporter.Its is running in 3.0.0.2EnjoyFilesImport VWX.xml957 Byte – 168 Downloads",
+  "posts": [
+    {
+      "author": "Decoye Gheist",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 3, 2014 at 12:51 PM#1Hey!i wrote a macro for the new Vectorworks Importer/Exporter.Its is running in 3.0.0.2EnjoyFilesImport VWX.xml957 Byte – 168 Downloads"
+    }
+  ],
   "replies": 0,
   "thread_id": "42347",
   "title": "Vextorworks Importer Macros",

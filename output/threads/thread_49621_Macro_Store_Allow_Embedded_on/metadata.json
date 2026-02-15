@@ -3,6 +3,56 @@
   "author": "costalight",
   "post_date": null,
   "post_text": "November 3, 2015 at 2:18 PM#1Hello,I created a macroCopy group 6 + 2 At 161/0But the groups  separate stored  instead of together in one group.In the store options Allow Embedded on.Thanks in advance",
+  "posts": [
+    {
+      "author": "costalight",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 3, 2015 at 2:18 PM#1Hello,I created a macroCopy group 6 + 2 At 161/0But the groups  separate stored  instead of together in one group.In the store options Allow Embedded on.Thanks in advance"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 3, 2015 at 3:16 PM#2Allow embedded is just for presets.[color=#66FF00]ClearSelection[/color][color=#66FF00]Group[/color] 6 [color=#66FF00]+[/color] 2[color=#66FF00]Store Group[/color] 161 /o[color=#66FF00]ClearSelection[/color]"
+    },
+    {
+      "author": "costalight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 3, 2015 at 7:45 PM#3it does not work.Error #72:Command not executed.?Thanks"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "November 3, 2015 at 7:46 PM#4For which command?"
+    },
+    {
+      "author": "costalight",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "November 3, 2015 at 8:06 PM#5ClearSelection"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "November 4, 2015 at 4:27 AM#6Not sure what to tell you. ClearSelection is a valid command. Could try replacing with [color=#66FF00]Clear[/color] instead."
+    },
+    {
+      "author": "Duplicate dherderich",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "November 4, 2015 at 10:24 AM#7ClearSelection will only work, if you have a Slection active at the moment.Try the macro with Clear, or ClearAll. But keep in mind, that ClearAll will clear the whole programmer."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "November 4, 2015 at 2:42 PM#8Wellthatdoesn't make sense. Why should ClearAll work if you have nothing in your programmer, but not ClearSelection or ClearActive? (EDIT: \"be allowed,\" not \"work\")In any case, if you wanted it a bit safer, you could go into BlindEdit:BlindEdit OnClearGroup 6 + 2Store Group 161 /oClearBlindEdit Off"
+    }
+  ],
   "replies": 0,
   "thread_id": "49621",
   "title": "Macro Store Allow Embedded on",

@@ -3,6 +3,80 @@
   "author": "ottel",
   "post_date": null,
   "post_text": "February 2, 2017 at 8:02 PM#1Hello,i´m looking for the code which makes the same as touch the button \"Take Selection\" in the \"edit Effect windows\"i´ve triedassign group x at effect y...............thanks a lotottel",
+  "posts": [
+    {
+      "author": "ottel",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 2, 2017 at 8:02 PM#1Hello,i´m looking for the code which makes the same as touch the button \"Take Selection\" in the \"edit Effect windows\"i´ve triedassign group x at effect y...............thanks a lotottel"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 2, 2017 at 8:31 PM#2http://www.ma-share.net/forum/read.php…52104#msg-52104http://www.ma-share.net/forum/read.php…56525#msg-56525"
+    },
+    {
+      "author": "sludgecaptain",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 4, 2017 at 6:04 PM#3Group (a)Store effect 1.(x).(y or *)a = group numberX = effect numbery = effect line* = all linesBut it works only for one effect,I'd like a macro to take selection to multiple effect.Something like...Group (a)Store effect 1.(x).* thru 1.(x).*But this macro doesn't work !!!So the way the most quick i find is to have many lines and write each effect numbers i want to assignGroup (a)Store effect 1.(x).*Store effect 1.(x).*Store effect 1.(x).*Store effect 1.(x).*.......Is there someone who knows a better way to do that ?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 4, 2017 at 7:00 PM#4http://www.ma-share.net/forum/read.php…55537#msg-55537"
+    },
+    {
+      "author": "sludgecaptain",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "February 4, 2017 at 8:33 PM#5glad Wrote:------------------------------------------------------->http://www.ma-share.net/forum/read.php?14,53925,55> 537#msg-55537Thanks but it's not what i want.I want to choose effect x thru another effect xHow do you'll do if you want to assign one group to all the effect ?Example \"effect 1.1.1 thru\""
+    },
+    {
+      "author": "redfresnel",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "February 6, 2017 at 11:42 AM#6So it seems using THRU brings up ILLEGAL RANGE error message every time. But Effect 1.x.* + 1.y.*... seems to work.What if we wanted to define a range of effects by number different every time to use this Take selection macro for?i tried the following but it brought up the same error message too:Store Effect 1.(?).* thru 1.(?).*"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "February 6, 2017 at 2:48 PM#7If you were gonna do something like that, where you input the start and end of the range, then you could make a looping macro that would run through each effect of that range, one at a time..."
+    },
+    {
+      "author": "redfresnel",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "February 6, 2017 at 4:49 PM#8I see! Could you perhaps advice with the loop syntax please?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "February 6, 2017 at 5:01 PM#9Here are the pieces to know - you should be able to figure it out from there.Conditional ExpressionsAddvar keywordTo jump to a specific macro line: [color=#66FF33]Macro[/color] 1.x.y (x = macro number or \"name\" ; y = macro line)- If you're on v3.2, looping will work fine like that. If you're on v3.1, you'd need to specify the entire range of lines getting looped, or break those into a separate macro that can loop from the last line to the first line."
+    },
+    {
+      "author": "redfresnel",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "February 6, 2017 at 6:08 PM#10And i did!Here's what i came up with:SetVar $from = (Take selection from effect...)SetVar $to = (...to effect?)SetVar $counter = $from[$counter <= $to] Store Effect 1.$counter.*AddVar $counter = 1[$counter <= $to] Macro 1.\"Take selection from/to\".4"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 11,
+      "post_text": "February 6, 2017 at 6:14 PM#11Looks pretty good! A couple suggestions:- Don't really need $counter = $from - you can just use $from as the counter.- Might want to add /overwrite (/o) on the end of your Store line, so that you don't get a popup- Don't really need the conditional on the Store line. You're always going to want it to run the first time, right? After that, it will only get run again based on the second conditional anyway."
+    },
+    {
+      "author": "redfresnel",
+      "post_date": null,
+      "post_number": 12,
+      "post_text": "February 6, 2017 at 6:26 PM#12You're right, i wasn't thinking the easiest way.Thanks!"
+    }
+  ],
   "replies": 0,
   "thread_id": "56961",
   "title": "Take selection at effect",

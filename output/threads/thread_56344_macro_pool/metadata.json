@@ -3,6 +3,26 @@
   "author": "ivaneftimov",
   "post_date": null,
   "post_text": "December 17, 2016 at 8:05 AM#1Hello ,is it possible to save my macro in the macro pool in my user profile ?The idea is when i create a new show and login with my user profile all my macro are in the correct places",
+  "posts": [
+    {
+      "author": "ivaneftimov",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 17, 2016 at 8:05 AM#1Hello ,is it possible to save my macro in the macro pool in my user profile ?The idea is when i create a new show and login with my user profile all my macro are in the correct places"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 17, 2016 at 8:10 PM#2As far as i know macro's are show global, only the assignment of the macro's are defined in a user profileTherefor i work with a basic show containing all my views, macro's and showsettings. Everytime i start a new show i open that basic show and save it as new show and start programming from there"
+    },
+    {
+      "author": "jowu",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 20, 2017 at 7:52 PM#3You are able to import/export macros in the setup menu.Setup -> Show -> Import Export -> Macros"
+    }
+  ],
   "replies": 0,
   "thread_id": "56344",
   "title": "macro pool",

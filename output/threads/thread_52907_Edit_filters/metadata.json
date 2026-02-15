@@ -3,6 +3,26 @@
   "author": "ambulance2314",
   "post_date": null,
   "post_text": "May 7, 2016 at 2:30 PM#1Is there a way to edit a filter by a macro?",
+  "posts": [
+    {
+      "author": "ambulance2314",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 7, 2016 at 2:30 PM#1Is there a way to edit a filter by a macro?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 10, 2016 at 12:42 AM#2Filters are internally of the same class as worlds (they have similar data structure) which means that the may cross import/exportedas Worlds may be created with the programmer, you could try this workaround to create attribute Filters via commandlinee.g. to create a Dim Filter via commandline:CodeClearAllFixture ThruOn attribute \"Dim\"Store World 99 \"Dim\" /overwriteExport World 99 \"myfilter\" /ncImport \"myfilter\" At Filter 2 /ncDelete World 99 /nc"
+    },
+    {
+      "author": "ambulance2314",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 10, 2016 at 4:46 PM#3that's nice. thanks for the solution."
+    }
+  ],
   "replies": 0,
   "thread_id": "52907",
   "title": "Edit filters",

@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:2bf7853ad6a71c0567090d78e572b97f61591bca0bdb620de5e9591e89bebd95",
-      "download_count": 251,
+      "download_count": 263,
       "filename": "pause with ma+fix.show.gz",
+      "post_number": 6,
       "size": 127647,
       "url": "https://forum.malighting.com/file-download/4458/"
     }
@@ -11,6 +12,92 @@
   "author": "slinso1",
   "post_date": null,
   "post_text": "October 10, 2018 at 12:10 PM#1Hello guys,I wan`t to try to make a macro that lock my desk anyone that know that im 100% sure it is possible xDGreets,Stefan",
+  "posts": [
+    {
+      "author": "slinso1",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 10, 2018 at 12:10 PM#1Hello guys,I wan`t to try to make a macro that lock my desk anyone that know that im 100% sure it is possible xDGreets,Stefan"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 10, 2018 at 9:06 PM#2HiJust use MA + Fix buttons."
+    },
+    {
+      "author": "slinso1",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 11, 2018 at 2:32 PM#3Yea thats the shortcut buttons for the pc. I just need to know what cmd line the MA button is so I can put it on my cmd line for a macro."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 12, 2018 at 1:38 PM#4There is not normal cmd syntax to enable the Desk Lock. You could have your macro execute \"Login\" though, which would take you to the user login screen."
+    },
+    {
+      "author": "slinso1",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "October 18, 2018 at 9:31 PM#5Alright thanks for the reply"
+    },
+    {
+      "author": "MrRump",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "November 27, 2018 at 2:41 PM#6Hi,attache is a little show file with Macro 1.Via DMX Remote you press first the Hardkey MA then Fix and final Release all DMX Remote Calls.Desk LockedMA SupportFilespause with ma+fix.show.gz127.65 kB – 263 Downloads"
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "November 27, 2018 at 6:17 PM#7Thanks Oli!Great Workaround. I had the same problem yesterday.Maybe the macro could be added another line likeCodepresettype $PRESETTo switch off the DMX-tester-labeling on the encoders like it is shown when used with onPC. Don't know, how this looks on console when leaving desklock.Gralf"
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "November 27, 2018 at 6:28 PM#8And there is an additional lock if you add a line with login.Two scenarios:1. first the dmx-hardkey-remote-thing, then as last line of the macro a new line with \"login\"> result: the console is locked and then the login appears.If the user logs in then the desk-locked-screen comes up. This might confuse some users.2. Login on first line, then the dmx-hardkey-remote-thing.> result: the console enters the login-screen and then locks in the back.If the user logs in the console is still locked and seams to be frozen, but it's not. It's just locked. Just unlock once with pause.This just has been tested with onPC 3.5.0.2 on Win10 and on console. Very cool, but I guess it's only working on Session-Master.Gralf"
+    },
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "January 19, 2019 at 12:55 PM#9The show file above is empty. I tried to check it out and it didn't work.  I got the general idea to work on pc. I just did a dummy dimmer and used it through DMX remote to press hard key MA,  then same thing for Fix... It does not work on console, am I missing something?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "January 19, 2019 at 1:15 PM#10if a showfile seems empty, you are using software-version that is older than the showfile.Please try again using v3.5.0.6"
+    },
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 11,
+      "post_text": "January 19, 2019 at 5:08 PM#11Can't believe I didn't realize that .. Thanks! Works great now"
+    },
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 12,
+      "post_text": "January 19, 2019 at 6:36 PM#12So I'm having a slight issue with this method. It seems to work, however it only locks my RPU. It works onPC beautifully, but console is not liking it  Any suggestions?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 13,
+      "post_text": "January 19, 2019 at 8:59 PM#13Remotes are handled by (= executed on) the session-master.You would need to set the Station-Priority to High, on the station which you would want this to happen, to make sure that it is the Master, if you have multiple stations."
+    },
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 14,
+      "post_text": "January 20, 2019 at 1:52 PM#14Perfect! Thanks!"
+    }
+  ],
   "replies": 0,
   "thread_id": "62494",
   "title": "Desk lock on macro",

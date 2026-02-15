@@ -3,6 +3,32 @@
   "author": "offirbh",
   "post_date": null,
   "post_text": "October 1, 2019 at 5:49 PM#1does anyone has a macro to invert pan-tilt or encoder p/t invert?thanks",
+  "posts": [
+    {
+      "author": "offirbh",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 1, 2019 at 5:49 PM#1does anyone has a macro to invert pan-tilt or encoder p/t invert?thanks"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 2, 2019 at 1:56 AM#2you can always play around using 'cd' and see if you can find a way to do it!hint: one way to do it is to use worlds, assigning /panenc.invert=on / off or /pandmxinvert=on / off to the fixtures in that world."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 2, 2019 at 10:59 AM#3HiAssign fixture x /panenc.invert=0 or 1 (0 is off, 1 is on)Use List fixture x to see all options."
+    },
+    {
+      "author": "wburnss",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 4, 2019 at 8:44 AM#4Hi,you could use this plugin if you want :http://www.ma-share.net/forum/read.php…55466#msg-55466"
+    }
+  ],
   "replies": 0,
   "thread_id": "64726",
   "title": "pan tilt invert macro for selected fixture",

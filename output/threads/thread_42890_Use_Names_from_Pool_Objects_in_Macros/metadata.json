@@ -3,6 +3,14 @@
   "author": "ressi",
   "post_date": null,
   "post_text": "August 8, 2014 at 12:56 PM#1Hi everyone,i wonder if it's possible to use the name of a pool objects e.g presets or effects to label the executer they are stored in.I wrote a macro which asks for 2 color-preset-numbers and stores them into a sequence. Now i want to label the sequence with a specific name because i don't want to have several \"col2exec\"-Sequences and don't know which color is stored into them.Of course i could use the preset-names instead of the preset-numbers and put them together with \"AddUserVar\"but it would be great if there is a possibility to do it with numbers.In another macro i store several effects in sequences each for each. So i can go like this:Search for effects i like -> Copy them to 1001 an higher -> Run the macro to get these effects stored in sequences and assign them to executor.I would be glad if someone got an idea for this.thanks a lot,ressi",
+  "posts": [
+    {
+      "author": "ressi",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 8, 2014 at 12:56 PM#1Hi everyone,i wonder if it's possible to use the name of a pool objects e.g presets or effects to label the executer they are stored in.I wrote a macro which asks for 2 color-preset-numbers and stores them into a sequence. Now i want to label the sequence with a specific name because i don't want to have several \"col2exec\"-Sequences and don't know which color is stored into them.Of course i could use the preset-names instead of the preset-numbers and put them together with \"AddUserVar\"but it would be great if there is a possibility to do it with numbers.In another macro i store several effects in sequences each for each. So i can go like this:Search for effects i like -> Copy them to 1001 an higher -> Run the macro to get these effects stored in sequences and assign them to executor.I would be glad if someone got an idea for this.thanks a lot,ressi"
+    }
+  ],
   "replies": 0,
   "thread_id": "42890",
   "title": "Use Names from Pool Objects in Macros",

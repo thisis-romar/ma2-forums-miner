@@ -3,6 +3,38 @@
   "author": "Redzye",
   "post_date": null,
   "post_text": "August 30, 2018 at 6:38 PM#1Hello guys,I am trying to change my effects via Macros.So far everything is working except when I try to change the phase of the effect to 0 thru 360..I can easily change it to a single number like 0, 90,180 but as soon as I try to add a 0 thru, it only accepts the 0.Command line :Assign $colorfx /phase=0 thru 180I also tried to put it in \"\" but that also didn't work.Even if I used the pop up window to manually type the phase it didn't work.I would appreciate any help.Thanks in advance.",
+  "posts": [
+    {
+      "author": "Redzye",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 30, 2018 at 6:38 PM#1Hello guys,I am trying to change my effects via Macros.So far everything is working except when I try to change the phase of the effect to 0 thru 360..I can easily change it to a single number like 0, 90,180 but as soon as I try to add a 0 thru, it only accepts the 0.Command line :Assign $colorfx /phase=0 thru 180I also tried to put it in \"\" but that also didn't work.Even if I used the pop up window to manually type the phase it didn't work.I would appreciate any help.Thanks in advance."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 30, 2018 at 6:52 PM#2https://support.actlighting.com/knowledgeBase/11662803"
+    },
+    {
+      "author": "cn.liupei@live.com",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 3, 2018 at 3:59 AM#3hiyou can tryCommand line :Assign $colorfx /phase=0..180"
+    },
+    {
+      "author": "hardstyletoaster",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 5, 2018 at 5:49 AM#4Is there a way that a user can pull the current value of phase as a variable and use that in a macro?For instance, say I have phase 0 thru 180 and I want to increase only the 180 by 10, how could I go about doing that?"
+    },
+    {
+      "author": "Redzye",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "September 5, 2018 at 11:38 AM#5cn.liupei@live.comWrote:-------------------------------------------------------> hi> you can try> Command line :> Assign $colorfx /phase=0..180Thanks a lot, that worked."
+    }
+  ],
   "replies": 0,
   "thread_id": "62188",
   "title": "Changing Effect Phase via Macro",

@@ -3,6 +3,26 @@
   "author": "helleden",
   "post_date": null,
   "post_text": "September 12, 2019 at 7:53 AM#1hyIs it possible calling directly a channelset preset of a fixture attribute with commandline? (preset like in smart or autocreate?)Thanks very muchImagesCapture.JPG71.97 kB847 × 349light is live",
+  "posts": [
+    {
+      "author": "helleden",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 12, 2019 at 7:53 AM#1hyIs it possible calling directly a channelset preset of a fixture attribute with commandline? (preset like in smart or autocreate?)Thanks very muchImagesCapture.JPG71.97 kB847 × 349light is live"
+    },
+    {
+      "author": "Hedsma",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 17, 2019 at 9:22 PM#2You could do; Attribute \"Color1\" At (value)Should do the job."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 18, 2019 at 6:59 PM#3No.You must autocreate your presets from channel set"
+    }
+  ],
   "replies": 0,
   "thread_id": "64570",
   "title": "calling preset from a channelsets fixture type",

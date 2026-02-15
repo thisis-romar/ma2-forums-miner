@@ -3,6 +3,44 @@
   "author": "alex howell",
   "post_date": null,
   "post_text": "June 7, 2018 at 10:43 PM#1hello, I know this can be done because i have seen it in a show file before, unfortunately i cannot contact the programmer of that show file and want to know how to create it. i have a bunch of mac aura xb that when selected pan and tilt are in .1, for example channel 1 would be 1.1. how do i make a macro to select .1 for me, sorry if this has been asked a lot before or is stupidly simple i am relatively knew to grandma. thanks for any help in advancesorry if this is the wrong area to post this just noticed where i posted it",
+  "posts": [
+    {
+      "author": "alex howell",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 7, 2018 at 10:43 PM#1hello, I know this can be done because i have seen it in a show file before, unfortunately i cannot contact the programmer of that show file and want to know how to create it. i have a bunch of mac aura xb that when selected pan and tilt are in .1, for example channel 1 would be 1.1. how do i make a macro to select .1 for me, sorry if this has been asked a lot before or is stupidly simple i am relatively knew to grandma. thanks for any help in advancesorry if this is the wrong area to post this just noticed where i posted it"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 7, 2018 at 11:54 PM#2use the wildcard * to build a selection syntax that represents any fixture that is a .1 subfixture:CodeFixture *.1then apply this selection-syntax via the If keyword, to intersect, rather than expand current selection:CodeIf Fixture *.1"
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 23, 2018 at 5:39 PM#3What about creating a group for the .1-fixtures?Or use the MAtricks with the right Interleave and first fixture.In your case, the Mac Aura has 2 or three instances? For 2 instances just select all Mac Aura and then the even-MAtricks.For three instances select all Mac Aura and then the \"1 of 3\"-MAtricks to select only the first subfixtures.Gralf"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "July 23, 2018 at 11:25 PM#4HiIf your Mac auras are named Aura 1, Aura 2 etc, you can do :fixture aura*.1If you have a group with all Auras (ie group 1)fixture *.1 if group 1If your Auras are ID 101 thru 110fixture *.1 if fixture 101 thru 110Best way is to store a group with only instance 1 and another one with only instance 2"
+    },
+    {
+      "author": "clear_all",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "July 24, 2018 at 2:59 AM#5All of these are great if you're working in groups, but when your LD starts calling out single channels, it's nice to have a macro to get rid of the .2 instances. Beats going back and removing them later for me at least."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "July 24, 2018 at 1:48 PM#6glad mentioned this macro earlier: If Fixture *.1"
+    }
+  ],
   "replies": 0,
   "thread_id": "61493",
   "title": "macro to select .1 fixture",

@@ -3,6 +3,26 @@
   "author": "StigRS",
   "post_date": null,
   "post_text": "April 25, 2017 at 10:04 AM#1Does anyone know a smart way to update all my effects from the fixtures that are in a specific group?For example when I`m out on tour and I get more fixtures than I have in my show and i clone these fixtures. In my pan/tilt effects these fixtures will act as the fixture I have cloned and i need to reselect the fixtures in my effect to get the effect to work as it was suppose.I want to press a macro. Then press my group of spots. And i want all effects that has these spots in them get updated.Edit:Store Effect 1.\"spot*\".* could do what i want... Anything better?",
+  "posts": [
+    {
+      "author": "StigRS",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 25, 2017 at 10:04 AM#1Does anyone know a smart way to update all my effects from the fixtures that are in a specific group?For example when I`m out on tour and I get more fixtures than I have in my show and i clone these fixtures. In my pan/tilt effects these fixtures will act as the fixture I have cloned and i need to reselect the fixtures in my effect to get the effect to work as it was suppose.I want to press a macro. Then press my group of spots. And i want all effects that has these spots in them get updated.Edit:Store Effect 1.\"spot*\".* could do what i want... Anything better?"
+    },
+    {
+      "author": "linus00",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 7, 2017 at 1:19 AM#2Hey!I got my macro that says:Group \"BEAM1 Sym\"At Effect 434 ;  Store Effect 434 /overwrite ;  Clear Clear Clear ;  Group \"BEAM1 Sym\"At Effect 435 ;  Store Effect 435 /overwrite ;  Clear Clear Clear ;  Group \"BEAM1 Sym\"..But my problem is that some times i use the macro, some of the effected effects get added attribts into the effect.Someone that nows how to fix it?"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 20, 2017 at 6:41 PM#3HiWhen you clone with more fixtures, use \"remove for individuals\" to get good phase.In last version (3.3.) there is a new keyword \"removeindividuals\"To take selection, as you said : select fix then store effect 1.\"my effect\".* /o"
+    }
+  ],
   "replies": 0,
   "thread_id": "58291",
   "title": "Macro for updating fixtures in effects.",

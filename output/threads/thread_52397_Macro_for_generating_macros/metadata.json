@@ -3,6 +3,98 @@
   "author": "AISConnor",
   "post_date": null,
   "post_text": "April 10, 2016 at 7:14 PM#1Hey all,So Ive got the basis for my macro down. What im trying to do is write a macro that asks which macro do i want to create and then asks which executor to reference and which cue. So far I have it as:Assign Macro 1.(Which Macro?).1 /cmd= \"Goto Executor 2.103 Cue ($Cue)\"Which doesnt work. I am ok (for now) with having to go back and change the executor number but i want to not have to go back each time and change the cue number or else i might as well just type out each macro anyways. Is there also a way to increase the UserVar integer by one? that way I can just say do this 10 times and then ask me again about wich executor to use.Thanks guysConnor",
+  "posts": [
+    {
+      "author": "AISConnor",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 10, 2016 at 7:14 PM#1Hey all,So Ive got the basis for my macro down. What im trying to do is write a macro that asks which macro do i want to create and then asks which executor to reference and which cue. So far I have it as:Assign Macro 1.(Which Macro?).1 /cmd= \"Goto Executor 2.103 Cue ($Cue)\"Which doesnt work. I am ok (for now) with having to go back and change the executor number but i want to not have to go back each time and change the cue number or else i might as well just type out each macro anyways. Is there also a way to increase the UserVar integer by one? that way I can just say do this 10 times and then ask me again about wich executor to use.Thanks guysConnor"
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 10, 2016 at 7:24 PM#2Hi!I didn't really get your problem, but since release 3 it's possible to add values to variables with AddVar or AddUserVar.Gralf"
+    },
+    {
+      "author": "AISConnor",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 10, 2016 at 7:40 PM#3ok so I have a executor button, say executor 2.101, with 10 cues in it, each with a different color preset stored for all my lights. I want to now make an individual macro for each cue. So each macro would say \"Goto Executor 2.101 Cue x\" Now I have 8 Executors for various groups so i would need to make 80 macros. I dont feel like sitting here for a couple hours and typing out each macro.What Im asking is the syntax for a macro that would create all 80 of those macros. It stores the macro and then inputs \"Goto Executor 2.101 Cue x\" as the command, but I dont want 80 macros that call the same cue, so i was hoping to use a variable for the cue number that would increase by one everytime the macro ran through. And then I can use a condition so long as that variable doesn't go past ten it will keep running then ask me to change the executor number.Thanks,Connor"
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 10, 2016 at 8:21 PM#4Okay, I get it.But 80 macros?! Creating them is one part of the job. Firering the other one. If you do not want to create (e.g. by copy-paste a default-macro and edit afterwords) such a bunch of macros, it will be much less fun to control them in a live-show.How about this? Think in a matrix:1. create 8 macros to select the group of fixtures to controlEach of these macros will set a variable with the executor inside to control.2. create 10 macros to select the cue (i.e. color) and fire the cue in the executor depending on the variable set before.This makes it much more handy and even faster to find the right macro.First group of macro:----------------------setuservar $ex = 2.101----------------------Second group of macro:----------------------Goto cue 1 Executor $ex----------------------To create those macros by another macro called \"wizard\" simply use this snippet:----------------------Setvar $loop = -1[$loop==-1] Setuservar $loop = 1setuservar $exno = 100adduservar $exno = $loopassign macro $loop /cmd= \"setuservar $ex = 2.$exno\"adduservar $loop = 1[$loop<=10] top macro \"wizard\"------------------------This code is created from scratch and not tested but the concept might be clear.Please have a try...Gralf"
+    },
+    {
+      "author": "AISConnor",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "April 10, 2016 at 8:51 PM#5Looks good man thanks. While waiting I ended up sitting here and just copy pasting and editing all 80 macros.... I actaully wanted to make all my macros conditional to fade and no fade macro buttons that decide whether or not the macro calls a no fade cue or a cue with a predetermined fade time.I was going to try to just write a pair of macros that change the fade times for my cues rather than having two separate cues with different fade times, however i dont think i can use a variable to set fade times to be a variable fade between fixtures.... Have to keep experimenting..."
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "April 10, 2016 at 9:07 PM#6On MA1 I had a similar problem and solved it like this:All Cues get a fade-time (e.g. 1sec) and the macro calls \"goto cue 1 fade 1\".To change the fading in speed just set the fader of the executor to rate with fader=rate=0  resulting in no fadetime. This works great.Maybe on MA2 you can combine the executors to a master-rate and assign this to one of the 100mm-fader.Perhaps macros could read the execfadetime and use it to control cuefading, but I don't have a specific code in mind for that.regardsGralf"
+    },
+    {
+      "author": "AISConnor",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "April 10, 2016 at 9:38 PM#7Hm... any idea on how to change the cue's \"I.Fade\" via the command line? Thats what Im looking to change"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "April 10, 2016 at 9:50 PM#8I.Fade isn't exactly a property of the cue - it's telling you that some attributes in the cue have something stored on the Fade layer. If all you have in these cues is color, I'd say that gralf's RateMaster suggestion is probably the way to go, unless you wanted to use Exec Time."
+    },
+    {
+      "author": "AISConnor",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "April 10, 2016 at 10:00 PM#9yeah gralfs is good for if i wanted all fixtures at cue 1 to fade in at the fade time coming from the ratemaster, but what if I want to basically go into the cue and adjust the fade time per fixture, basically sweep the color fade across the stage? thats what Im after with I.fade."
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "April 11, 2016 at 8:03 AM#10'cause ifade is no cue property maybe presets could help.Store the values and i.times into a preset and this preset into the cue.If you want to change i.timing just change the preset.By macro you might just copy another preset into the cue-preset, thus changing your timings and even values inside the executor to several predefined looks.RegardsGralf"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 11,
+      "post_text": "April 11, 2016 at 8:18 AM#11Allthough you may embed fade and delay times into presets, individual timing is not referenced."
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 12,
+      "post_text": "April 11, 2016 at 8:23 AM#12Really? I didn't know and didn't try yet.So \"preset\" might be not the correct word concerning timings. It's more like a \"template\".Well, one more item on the todo-list for MA...Thanks GladGralf"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 13,
+      "post_text": "April 11, 2016 at 5:25 PM#13hito assign command in your macro, you must concatenate your text:assign macro 1.x.1 /cmd=\"goto cue $cue\" won't work: it gives you : cmd=goto cue $cueyou must do:setvar $text = \"goto cue \"addvar $text = $cueassign macro 1.x.1 /cmd=$\"text\"it gives you ($cue=1) cmd=goto cue 1"
+    },
+    {
+      "author": "AISConnor",
+      "post_date": null,
+      "post_number": 14,
+      "post_text": "April 12, 2016 at 5:08 AM#14Looks like I am able to store Fade times as a preset. Doesn't necessarily help with play back since I like to run my shows via cues and not busk with the preset palettes. It will help with programming though."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 15,
+      "post_text": "April 12, 2016 at 7:24 AM#15maybe you can make a macro which : go in blind mode, call cue status in programmer selecting fixtures (at cue 1), then change individuals fade time for selection (in pop up), update your cue, clear programmer, blind off and launch cueblind onselfix exec x.y cue zat exec x.y cue zpresettype color at fade (fade from ?) thru (fade to ?)store exec x.y cue z /merge  --- wait 0.1clearallblind offgoto exec x.y cue z"
+    }
+  ],
   "replies": 0,
   "thread_id": "52397",
   "title": "Macro for generating macros?",

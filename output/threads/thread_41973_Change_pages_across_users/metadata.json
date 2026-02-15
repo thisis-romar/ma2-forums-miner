@@ -3,6 +3,26 @@
   "author": "dj_rappa",
   "post_date": null,
   "post_text": "June 6, 2014 at 11:26 AM#1I have a show where a macro (which is triggered from sequence command) changes pages on the console as the show progresses.I want to have another station with its own user (for separate views and programmer) but to follow the page changes so it's executors are always on the correct same page as the master console.Is this possible?",
+  "posts": [
+    {
+      "author": "dj_rappa",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 6, 2014 at 11:26 AM#1I have a show where a macro (which is triggered from sequence command) changes pages on the console as the show progresses.I want to have another station with its own user (for separate views and programmer) but to follow the page changes so it's executors are always on the correct same page as the master console.Is this possible?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 6, 2014 at 2:48 PM#2try something like this to change page:(e.g. page 2)Assign UserProfile \"*\".\"usersettings\" /currentbuttonpage=2 /currentfaderpage=2Be aware that changing pages via editing userprofile properties, will only work for existing pages (only changing pages via the Page keyword will create new pages if the don't exist)"
+    },
+    {
+      "author": "dj_rappa",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "June 6, 2014 at 6:22 PM#3Will that work with a variable instead of a numerical value as that's currently how the show works?If not I can make a workaround but the variable route would be easier if possible.While I think of it, is there a way to force a given station to log into a particular user remotely?Thanks"
+    }
+  ],
   "replies": 0,
   "thread_id": "41973",
   "title": "Change pages across users",

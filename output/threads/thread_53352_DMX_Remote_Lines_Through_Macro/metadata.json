@@ -3,6 +3,38 @@
   "author": "Buzz313th",
   "post_date": null,
   "post_text": "June 2, 2016 at 10:15 PM#1Goal...To write a macro that takes user input to define the Universe and Address of 10 sequential DMX remote lines.  So far I haven't had any luck getting a variable to place the address into the \"dmx\" column of the remote lines.why does this not work?setuservar $address=10.1                    -->    Results in variable = 10.1adduservar $address=0.1                     -->    Results in variable = 10.2000assign remote 3.1 /dmx=$address         -->    Results in DMX remote line not recognizing 10.2000I have tried numerous combinations to try and get the adduservar to maintain x.x instead of x.xxxx to no avail.And the \"dmx\" column in the remote line syntax only wants to see a x.x value.Any help would be appreciated.JB",
+  "posts": [
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 2, 2016 at 10:15 PM#1Goal...To write a macro that takes user input to define the Universe and Address of 10 sequential DMX remote lines.  So far I haven't had any luck getting a variable to place the address into the \"dmx\" column of the remote lines.why does this not work?setuservar $address=10.1                    -->    Results in variable = 10.1adduservar $address=0.1                     -->    Results in variable = 10.2000assign remote 3.1 /dmx=$address         -->    Results in DMX remote line not recognizing 10.2000I have tried numerous combinations to try and get the adduservar to maintain x.x instead of x.xxxx to no avail.And the \"dmx\" column in the remote line syntax only wants to see a x.x value.Any help would be appreciated.JB"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 3, 2016 at 1:58 AM#2setvar $addr = 1Assign Remote 3.x /dmx=10.$addr"
+    },
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "June 3, 2016 at 3:03 AM#3Hey Ryan, thanks for the reply.I tried your syntax and it doesn't seem to work.  Maybe I'm doing something wrong.setuservar $address = 1     --> results in $address = 1assign remote 3.1 /dmx=10.$address  ----> results in a null value in the dmx column of the remote line.My goal however, is to make the universe a uservar and the starting address of \"1\" a uservar that adds 1 in a loop to address 10 consecutive remote lines.So in a nutshell, I want the user to choose an empty universe in the show file and store it as a uservar..Then have a macro create 10 dmx remote lines using the user chosen universe.."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "June 3, 2016 at 9:29 PM#4look into facebook group gma2 lua plugin, i've posted a plugin to do thiscause command line doesn't understand 10.$add, you have to go through lua and math/number operation"
+    },
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "June 5, 2016 at 7:42 AM#5Thanks..I appreciate the reply.JB"
+    }
+  ],
   "replies": 0,
   "thread_id": "53352",
   "title": "DMX Remote Lines Through Macro",

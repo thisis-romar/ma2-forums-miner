@@ -3,6 +3,26 @@
   "author": "Duplicate jbboutte",
   "post_date": null,
   "post_text": "February 7, 2018 at 11:32 AM#1Hi !Hope you're enjoying your day !I looked into this amazing forum, unfortunately, I didn't found my goal !Let's assume that I've got 2 dimmers.In the programmer the first dimmer is at \"30\" and the second one at \"closed\" because I've tryed it on stage but I dont like it.Only dimmer 1 is selected.Now I want to store only value over \"0\" or \"closed\"... (because I don't want to see these values on content sheet)Does a simple way existing to doing it ?",
+  "posts": [
+    {
+      "author": "Duplicate jbboutte",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 7, 2018 at 11:32 AM#1Hi !Hope you're enjoying your day !I looked into this amazing forum, unfortunately, I didn't found my goal !Let's assume that I've got 2 dimmers.In the programmer the first dimmer is at \"30\" and the second one at \"closed\" because I've tryed it on stage but I dont like it.Only dimmer 1 is selected.Now I want to store only value over \"0\" or \"closed\"... (because I don't want to see these values on content sheet)Does a simple way existing to doing it ?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 7, 2018 at 2:19 PM#2ClearSelectionIfOutputStore /useselection=activeforselected"
+    },
+    {
+      "author": "Duplicate jbboutte",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 8, 2018 at 11:30 AM#3Hey Ryan !Thanks a lot about this !It's working !Have a nice day !"
+    }
+  ],
   "replies": 0,
   "thread_id": "60601",
   "title": "Storing value>0",

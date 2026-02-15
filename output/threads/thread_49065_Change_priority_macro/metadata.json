@@ -3,6 +3,44 @@
   "author": "TimN-aus",
   "post_date": null,
   "post_text": "October 4, 2015 at 5:06 AM#1Is it possible to make a macro that will change the priority of an executer?",
+  "posts": [
+    {
+      "author": "TimN-aus",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 4, 2015 at 5:06 AM#1Is it possible to make a macro that will change the priority of an executer?"
+    },
+    {
+      "author": "ivers",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 4, 2015 at 6:11 AM#2Yep.CodeAssign /priority=X @where X is HTP, LTP or whatever will work for sequences. Just fire the macro and the exec button for the given executor.CodeAssign exec (Which exec?) /priority=Xwill give you a popup where you can specify executor.I can not get this to work with effects though."
+    },
+    {
+      "author": "HillaryKnox",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 5, 2015 at 8:26 PM#3So I got this to work, but only for X=htp, X=low, and X=normal (which is LTP I discovered). What is the fill-in-the-blanks answer for High?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 5, 2015 at 9:41 PM#4Lol. It's \"hight\" - gotta love those typos./priority=swap sets it to Swp. Currently, to set a priority of \"Super\" (v3.1+ only), you have to say /priority=0; =\"super\" doesn't work at the moment."
+    },
+    {
+      "author": "HillaryKnox",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "October 7, 2015 at 7:25 PM#5Thanks for that.Speaking of Assign & command line / macros, is there a comprehensive syntax list of changing Assign menu items from the command line and/or macros? Because I have (& I imagine others have) only about 5 different combinations of Assign menu stuff that covers about 90% of the things I do. It would be handy to be able to make 5 macros that, well, you see where I'm going with this...Come to think of it, in a larger general sense, is there some kind of omnibus command line syntax reference that covers, well, pretty much anything and everything you can do via command line?Edit: and then I found this:https://app.teamsupport.com/wiki/justartic…ArticleID=28154"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "October 7, 2015 at 9:46 PM#6HillaryKnox Wrote:-------------------------------------------------------> Edit: and then I found this:>app.teamsupport.comI'm working on it. Hopefully after LDI I'll have time to add some more stuff."
+    }
+  ],
   "replies": 0,
   "thread_id": "49065",
   "title": "Change priority macro",

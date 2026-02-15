@@ -3,6 +3,32 @@
   "author": "scoobytoobins",
   "post_date": null,
   "post_text": "September 11, 2018 at 4:21 PM#1Hey all,Trying to create a macro to select the cue before my Cue 100 (Scene cue which offs all pages besides the scene page) on each executor. Is this possible?Was trying to create a variable for cue '100 - 1' but because the cue before it may be cue 25 on Executor 1 and cue 39 on Executor 2 it's not seeming to make much sense.Any ideas?",
+  "posts": [
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 11, 2018 at 4:21 PM#1Hey all,Trying to create a macro to select the cue before my Cue 100 (Scene cue which offs all pages besides the scene page) on each executor. Is this possible?Was trying to create a variable for cue '100 - 1' but because the cue before it may be cue 25 on Executor 1 and cue 39 on Executor 2 it's not seeming to make much sense.Any ideas?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 11, 2018 at 5:29 PM#2what do you mean with \"selecting\" a cue?"
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 11, 2018 at 5:33 PM#3What about:Codecue 100 thru 0.001 - 100 pleaseGralf"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 11, 2018 at 8:32 PM#4Sorry, I meant basically \"Go cue one before cue 100\"Go Cue 100 thru .001 - 100 works!Thanks Gralf"
+    }
+  ],
   "replies": 0,
   "thread_id": "62303",
   "title": "Cue 100 - 1 Macro",

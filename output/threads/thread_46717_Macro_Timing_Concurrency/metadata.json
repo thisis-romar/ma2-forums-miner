@@ -3,6 +3,50 @@
   "author": "mvo",
   "post_date": null,
   "post_text": "May 17, 2015 at 2:41 PM#1As I have seen that...MA Lighting: Timing of Macros...I was literally shocked.What this states is, that one cannot be sure a command has terminated before the next one gets executed?! Or in other terms: Commands are non-blocking? If this is really the case that is BAD BAD BAD!This leads me to the following questions:- Is this 'only' true for macros?- If the operations are not executed sequentially, may I assume they get pooled and there are different worker threads executing them?- and therefore: Is at least the execution order preserved? Is the command execution atomic? Variable-assignment??Or to make things worse:- What happens if there is parallel execution happening? (e.g. executing the same macro multiple times in parallel)- What happens if there is a shared session running?Once again, relying on timing is areallybad style to avoid race conditions. Please, that cannot be true?Any hints, background information and workarounds are appreciated!-- mvo",
+  "posts": [
+    {
+      "author": "mvo",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 17, 2015 at 2:41 PM#1As I have seen that...MA Lighting: Timing of Macros...I was literally shocked.What this states is, that one cannot be sure a command has terminated before the next one gets executed?! Or in other terms: Commands are non-blocking? If this is really the case that is BAD BAD BAD!This leads me to the following questions:- Is this 'only' true for macros?- If the operations are not executed sequentially, may I assume they get pooled and there are different worker threads executing them?- and therefore: Is at least the execution order preserved? Is the command execution atomic? Variable-assignment??Or to make things worse:- What happens if there is parallel execution happening? (e.g. executing the same macro multiple times in parallel)- What happens if there is a shared session running?Once again, relying on timing is areallybad style to avoid race conditions. Please, that cannot be true?Any hints, background information and workarounds are appreciated!-- mvo"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 17, 2015 at 5:32 PM#2I am not sure what you expect macros be...macros are merely a list of commands, executed sequentially on your lighting console.- it is not a programming languageexample:CodeExecutor 1 At 100 Fade 5Executor 2 At 70 Fade 5will bring executor 1 to 100 and executor 2 to 70 in five seconds.it will not use 10 seconds, to first pull up fader 1 in 5 second, and when that command is performed, then pull up fader 2 in 5 seconds."
+    },
+    {
+      "author": "mvo",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 18, 2015 at 1:23 AM#3Well, fair enough - your examples may be executed in parallel as they introduce some kind of timing (Fade 5).However, it is not clear to me, why ...- Channel 10 At 50- Park Channel 10... should not be blocking (taken from the example of MA). Or take an assignment of a variable or a selection or something else you have to rely on in the next step. If this is not blocking how would you handle it? Introduce timing?"
+    },
+    {
+      "author": "dj_rappa",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 18, 2015 at 6:52 AM#4Yes add delay times in your macro. Even a time of 0.1sec is usually enough to guarantee the correct execution of the macro."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 18, 2015 at 8:35 AM#5timing is already introduced. it is the column called \"wait\".all command takes some time execute, also channel 1 at 50again this is not a programming language:a commandline sends a requests to the Kernel to perform a task.a macro is a list of tasks, senquentially sendt as requests to the Kernelregarding the example, the first task sent to the console is to select channel 5, set its value to 100. this value will be outputted on the next DMX-frame the desks transmitsthe second task sendt to the Kernel is to park the current output of channel 5.as the gma sends 30 dmx-frames per second, you will have a minimum delay of 33ms before the value requested to be outputted, actuall is there to grab for the park command.you do not want every task you send to the console to be delayed by a dmx-framee.g.Channel 1 At 50Channel 2 At 60should both be executed as soon as possible so they both have the correct value when the next DMX-frame is transmitted.---so you basically have two choisesintroduce a wait to let the channel be outputted before you park by grabbing output valuesor better, include the value to be parked in the parking task, to not be dependant on earlier tasks being fully executed:Park Channel 10 At 50"
+    },
+    {
+      "author": "mvo",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "May 18, 2015 at 11:25 PM#6Thanks glad, for your detailed answer!I guess, this behaviour is ok and pragmatic for cases where you are doing mostly playback related stuff. Allright. I'll then add aready-executing-kernel-callbackto my wishlist. GO / FOLLOW / CALLBACK. Wouldn't that be nice?Ok just to get things clear. So if you are writing an example macro like this ($a = 0)...SetUserVar $a = 1 | FOLLOW | t msAddUserVar $a= 2 | FOLLOW | t msOff Executor $a;... you should insert a delay of t=100ms (like dj_rappa suggests) after the first and second step?(so Executor 1 [if line 3 gets executed before line 2 was ready] or Executor 2 [if line 2 gets executed before line 1 was ready] won't accidentally get turned off instead)Mhh, sorry, I still don't like timing in such a case as it is potentially unstable and introduces lag.-- mvo(And: Yes, of course its no programming language. And things would imho change dramatically if there were some simple data structures, data and mathematical operations and ideally a real API... I've seen many solutions here in the forum, that are - beside beiing really clever - dirty workarounds due to the lack of datastructures, control structures [non interative loops...] and so on. So why not aim for a more powerful interface?)"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "May 19, 2015 at 12:46 AM#7to my understanding the execution order is preserved.With the latest version the order is also preserved if you call macro 2 from macro 1Macro A:1:aaa2:Macro 23:bbbMacro B:1:xxx2:yyyCalling macro A with v3.0 will executeaaaxxxyyybbbas opposed to earlier version where the order of xxx,yyy and bbb was indetermined, and if the order was important, you would need to halt Macro a, then restart A at the end of Macro b----I have never had any timing issues with e.g. setting $variablebut if you tryStore cue 1 Thru 9999Goto cue 9999you will need to add a (quite long) delay.(please try, as you see with the progressbar, creating 10000 objects takes some time)"
+    }
+  ],
   "replies": 0,
   "thread_id": "46717",
   "title": "Macro Timing / Concurrency",

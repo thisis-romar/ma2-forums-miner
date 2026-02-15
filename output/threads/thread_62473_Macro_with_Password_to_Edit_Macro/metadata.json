@@ -3,6 +3,74 @@
   "author": "andre lima",
   "post_date": null,
   "post_text": "October 5, 2018 at 8:47 PM#1Hi everyoneI would like to create a macro to block editing of all the others, every time I type the command eg: Edit Macro 1 .... I opened a popup window asking me for a password, and if that password is wrong the user you will not have access to Macro content.It is possible?",
+  "posts": [
+    {
+      "author": "andre lima",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 5, 2018 at 8:47 PM#1Hi everyoneI would like to create a macro to block editing of all the others, every time I type the command eg: Edit Macro 1 .... I opened a popup window asking me for a password, and if that password is wrong the user you will not have access to Macro content.It is possible?"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 5, 2018 at 11:40 PM#2HiWhat you want is to lock your macros.Create a password in your show or user profile : setvar $PW = abcd.Set a macro as :setvar $confirm = (\"enter password\")[$confirm==$PW] lock macro thru     //wait=go     --lock all your macros and wait for go to unlocksetvar $confirm = (\"enter password\")[$confirm==$PW] unlock macro thru     --unlock if password is correct"
+    },
+    {
+      "author": "andre lima",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 6, 2018 at 2:09 AM#3Hello friend, actually what I need is to protect access to command lines from my Macros. The commands you sent me I was able to execute only the first part, when it locks all the macros and puts the password, but when I go to run the second part to enter the password to release the macro was not successful.Maybe I messed up the Macro assembly .... But anyway it's still not what I imagine, but thanks for your help!"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 6, 2018 at 8:40 PM#4Don't miss the GO on line 2"
+    },
+    {
+      "author": "andre lima",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "October 8, 2018 at 12:31 AM#5Hello, the macro worked, but it still is not what I need. I still have access to the command lines of my macro, I need to have access to the macro command lines need to put a password, without the password that I can not even see the command lines."
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "October 8, 2018 at 5:54 PM#6What you want is to block the edit-macro-command so the user is not able to view the macrolines?This is not possible on MA2. There is no way to absolutely lock or hide any content. Anybody can login als administrator and have access to anything. Locking objects like macros only prevents from deleting or changing the object until it's unlocked.Maybe there might a way with a LUA-plugin to scan the commandline for the command \"edit macro\" and then immediately close the macro editor when it was opened. But I don't think so.There are some tricks to use like disabling the CLI for the macro. This would prevent the command edit with pressing the macro inside the pool. But this only blocks basic users, no advanced users.Please report here if you have found any solution. This is interesting to me, too.Gralf"
+    },
+    {
+      "author": "clear_all",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "October 8, 2018 at 10:03 PM#7Now i've gotta know what this magical ultra-secret macro actually does."
+    },
+    {
+      "author": "andre lima",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "October 9, 2018 at 12:03 AM#8kkkkkk there is nothing too much friend, just wanted to block intruders."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "October 10, 2018 at 9:08 PM#9HiWhich intruders ?Any one who knows the desk will override any protection.Those who don't know won't understand your super secret macro syntax..."
+    },
+    {
+      "author": "Hedsma",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "October 19, 2019 at 1:26 PM#10Hi!So why dont you just make a Destroy Show Macro/Plugin? Like then no one can access your 'secret' stuff when your done.Just load it on the console from an usb next time.Good Luck!//Martin"
+    },
+    {
+      "author": "F Dijkers",
+      "post_date": null,
+      "post_number": 11,
+      "post_text": "October 20, 2019 at 6:33 PM#11Hi guys,It's simply not possible to do this with macros. You have to dive into some really advanced LUA-writing to achieve this.As Martin said, I have a destroy-show plugin too. After running the show on a rented desk, I simply run this plugin and since my file naming always is [FD] 2019 - [venue] - [show], I simply destroy everything that begins with \"[FD]\".Kind regards,Floris DijkersLighting Director & Designerflorisdijkers.comlighting@florisdijkers.com"
+    }
+  ],
   "replies": 0,
   "thread_id": "62473",
   "title": "Macro with Password to Edit Macro",

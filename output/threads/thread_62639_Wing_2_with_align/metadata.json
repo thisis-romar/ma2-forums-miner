@@ -3,6 +3,20 @@
   "author": "Hilton John",
   "post_date": null,
   "post_text": "November 5, 2018 at 6:58 PM#1Hi,I have a row of 12 fixtures and i'm trying to do a macro for select fixtures with a wing of 2 and be able to move the pan with align >< without taping align each time. I saw someone use a macro like that but I can't find the good way to create it.Any ideas?Thx",
+  "posts": [
+    {
+      "author": "Hilton John",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 5, 2018 at 6:58 PM#1Hi,I have a row of 12 fixtures and i'm trying to do a macro for select fixtures with a wing of 2 and be able to move the pan with align >< without taping align each time. I saw someone use a macro like that but I can't find the good way to create it.Any ideas?Thx"
+    },
+    {
+      "author": "Ronnie Hulshof",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 4, 2019 at 10:28 PM#2you can domacro line 1 : MAtricksWings 2macro line 2 : Align \"><\""
+    }
+  ],
   "replies": 0,
   "thread_id": "62639",
   "title": "Wing 2 with align ><",

@@ -3,6 +3,20 @@
   "author": "harrynel",
   "post_date": null,
   "post_text": "August 16, 2017 at 7:45 AM#1Good morning,Hope you are wellI am Harry and would like to know if you could help me perhaps...I need to know:What is the cmd to Fade out a \"Dimmer\" from 100% to 0% in a specific Cue in another Executor?What is the cmd to Fade out a specific Fixture Dimmer from 100% to 0% in a specific Cue?",
+  "posts": [
+    {
+      "author": "harrynel",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 16, 2017 at 7:45 AM#1Good morning,Hope you are wellI am Harry and would like to know if you could help me perhaps...I need to know:What is the cmd to Fade out a \"Dimmer\" from 100% to 0% in a specific Cue in another Executor?What is the cmd to Fade out a specific Fixture Dimmer from 100% to 0% in a specific Cue?"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 23, 2017 at 11:21 PM#2HiSorry but your question doesn't make sense.A cue is a static state of your lights. If you want to fade in from 0 to 100, you need to record a 2nd cue, then fade from cue 1 (0%) to cue 2 (100%)."
+    }
+  ],
   "replies": 0,
   "thread_id": "59277",
   "title": "cmd",

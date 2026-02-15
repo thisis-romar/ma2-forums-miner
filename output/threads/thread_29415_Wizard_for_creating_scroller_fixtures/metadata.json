@@ -2,22 +2,98 @@
   "assets": [
     {
       "checksum": "sha256:8a74de68791386deafecf1355d16e8a3f8083b04debf1ff7b9c621394a7d2c86",
-      "download_count": 155,
+      "download_count": 166,
       "filename": "ScrollerWizard.xml",
+      "post_number": 1,
       "size": 15067,
       "url": "https://forum.malighting.com/file-download/1887/"
     },
     {
       "checksum": "sha256:85df15c090ebf4768e7cfed133b4cba24eebddd733942c5f5155036e51c62538",
-      "download_count": 151,
+      "download_count": 160,
       "filename": "ScrollerWizardV3.xml",
+      "post_number": 7,
       "size": 7032,
       "url": "https://forum.malighting.com/file-download/3531/"
     }
   ],
   "author": "glad",
   "post_date": null,
-  "post_text": "February 12, 2012 at 1:18 PM#1Creating a scroller_dimmer with the correct ranges for each frame, associating wheel-slots etc is a tedious job.This macro will create a 2 channel dimmer/scroller fixture with patchbreak, by entering fixture-name, total number of frames, names for each frame, and the defaultframe/open-position.please note:this macro needs to know its own ID (the macro number)please edit the first macro-line unless you import this Macro as Macro 1.e.g.SetUserVar $myID=15if you have import/moved the macro to Macro 15the created fixture will by default greate a generic range for the scroller attribute, e.g.Attribute \"Scroller\" At 5will set the scroller to the 5th frame, not to 5% of the scroll-length.If you prefer to work in percent (0-100) or decimal (0-255), please edit line 2 or 3e.g.SetUserVar $usepercent= \"true\"After the fixture is created, the GUI fixtureschedule is opened, to let you assign Colors to the slots via the colorpicker in the fixturetype-editor:Fixturetypes (U1) > Edit (X11) > Wheel Manager (U2) > EditRow (X11)Note 2.created/tested with version 2.5.3.uses generic@scroller_dimmer@00.xmlas templateLimitations:frame-names cannot contain spaces, or text that may be interpreted as a keyword or abbreviation of a keyword.if such names are used, the framename will be replaced by _frame_ and you will have to change the names afterwords.FilesScrollerWizard.xml15.07 kB – 155 Downloads",
+  "post_text": "February 12, 2012 at 1:18 PM#1Creating a scroller_dimmer with the correct ranges for each frame, associating wheel-slots etc is a tedious job.This macro will create a 2 channel dimmer/scroller fixture with patchbreak, by entering fixture-name, total number of frames, names for each frame, and the defaultframe/open-position.please note:this macro needs to know its own ID (the macro number)please edit the first macro-line unless you import this Macro as Macro 1.e.g.SetUserVar $myID=15if you have import/moved the macro to Macro 15the created fixture will by default greate a generic range for the scroller attribute, e.g.Attribute \"Scroller\" At 5will set the scroller to the 5th frame, not to 5% of the scroll-length.If you prefer to work in percent (0-100) or decimal (0-255), please edit line 2 or 3e.g.SetUserVar $usepercent= \"true\"After the fixture is created, the GUI fixtureschedule is opened, to let you assign Colors to the slots via the colorpicker in the fixturetype-editor:Fixturetypes (U1) > Edit (X11) > Wheel Manager (U2) > EditRow (X11)Note 2.created/tested with version 2.5.3.uses generic@scroller_dimmer@00.xmlas templateLimitations:frame-names cannot contain spaces, or text that may be interpreted as a keyword or abbreviation of a keyword.if such names are used, the framename will be replaced by _frame_ and you will have to change the names afterwords.FilesScrollerWizard.xml15.07 kB – 166 Downloads",
+  "posts": [
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 12, 2012 at 1:18 PM#1Creating a scroller_dimmer with the correct ranges for each frame, associating wheel-slots etc is a tedious job.This macro will create a 2 channel dimmer/scroller fixture with patchbreak, by entering fixture-name, total number of frames, names for each frame, and the defaultframe/open-position.please note:this macro needs to know its own ID (the macro number)please edit the first macro-line unless you import this Macro as Macro 1.e.g.SetUserVar $myID=15if you have import/moved the macro to Macro 15the created fixture will by default greate a generic range for the scroller attribute, e.g.Attribute \"Scroller\" At 5will set the scroller to the 5th frame, not to 5% of the scroll-length.If you prefer to work in percent (0-100) or decimal (0-255), please edit line 2 or 3e.g.SetUserVar $usepercent= \"true\"After the fixture is created, the GUI fixtureschedule is opened, to let you assign Colors to the slots via the colorpicker in the fixturetype-editor:Fixturetypes (U1) > Edit (X11) > Wheel Manager (U2) > EditRow (X11)Note 2.created/tested with version 2.5.3.uses generic@scroller_dimmer@00.xmlas templateLimitations:frame-names cannot contain spaces, or text that may be interpreted as a keyword or abbreviation of a keyword.if such names are used, the framename will be replaced by _frame_ and you will have to change the names afterwords.FilesScrollerWizard.xml15.07 kB – 166 Downloads"
+    },
+    {
+      "author": "wolle",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 28, 2012 at 9:03 AM#2Fantastic Macro.Very easy to use.Thanx."
+    },
+    {
+      "author": "jfguedes",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 11, 2014 at 8:24 AM#3Even changing the destination of edit and live setup, this macro does not work any more on version 2.9.0.7 (it did in 2.8)...any ideas?Thanks"
+    },
+    {
+      "author": "Duplicate pyroaxel",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 13, 2014 at 6:08 PM#4Have you tried changing root 6 and 7 to root 9 and 10?"
+    },
+    {
+      "author": "jfguedes",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "February 14, 2014 at 10:25 AM#5Yes I have.The first problem seems to be that line 6 is not correctly executed so line 136 is not executed and the warning for the \"IDcheck\" pops up.If we disable the ID check and \"force\" the macro to work, many errors occur. At the end, if working with onpc, console will crash.I've tried to change some lines but gone nowhere..."
+    },
+    {
+      "author": "admiralbasudev",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "September 14, 2014 at 5:18 PM#6Hi,I was just wondering if there was any progress made with this?I love the idea of not having to create a custom scroller from scratch every time I want to use them.Cheers"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "September 25, 2014 at 10:02 PM#7rewritten to be compatible with version 3.0.0.x--------------Creating a scroller_dimmer with the correct ranges for each frame, associating wheel-slots etc is a tedious job.This macro will create a 2 channel dimmer/scroller fixture with patchbreak, by entering fixture-name, total number of frames, names for each frame, and the defaultframe/open-position.please note:this macro needs to know its own name.please edit the second macro-line if you want to rename the macro.e.g.SetUserVar $myname=\"Kreieren Farbenwechsel\"the created fixture will by default use a generic range for the scroller attribute, e.g.Attribute \"Scroller\" At 5will set the scroller to the 5th frame, not to 5% of the scroll-length.If you prefer to work in percent (0-100) or decimal (0-255), please edit line 3 or 4e.g.SetUserVar $usepercent= \"true\"After the fixture is created, the GUI fixtureschedule is opened, to let you assign Colors to the slots via the colorpicker in the fixturetype-editor:Fixturetypes (U1) > Edit (X11) > Wheel Manager (U2) > EditRow (X11)Note 2.created/tested with version 3.0.0.5.uses generic@scroller_dimmer@00.xmlas templateFilesScrollerWizardV3.xml7.03 kB – 160 Downloads"
+    },
+    {
+      "author": "chrisclarke512",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "July 7, 2015 at 6:54 AM#8Hi,I'm not having much luck getting this to work. I'm probably just being thick but I'm not sure where or what to change in the Macro to get it to run properly.I Edit the Macro but where do I edit the name? The Second line of the Macro for me is \"$usepercent= \"false\"I have Imported the Macro into the Console as Macro Number 27 and it is named \"Create Scroller Fixture\"Can you help me please? I'd really like to get this to work. I'm on Console v 3.1.0.8Thanks, Chris"
+    },
+    {
+      "author": "admiralbasudev",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "December 23, 2015 at 9:45 PM#9Hi.I've tried this update using 3.1.2.5 however to no success.I've looked through and it doesn't seem to be looping from line 24Cheers!"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "December 30, 2015 at 6:44 PM#10loop in macro is no more possible from 3.1.2.5have a look to \"loop in macro\" topic in forum thread (i don't know how to insert link...)and then try this :for loop macro in v3.1.2.5 try this:line 22= My first line of the loopline 28= AddUserVar $loopstart=1line 29= [$loopstart>$loopend] Go macro 1.\"mymacro\".31line 30= [$loopstart<=$loopend] Go macro 1.\"mymacro\".22 Thru 30line 31= ClearAll (this is my line after the loop)JP C.French Light Opérator"
+    },
+    {
+      "author": "Niklas Aumüller",
+      "post_date": null,
+      "post_number": 11,
+      "post_text": "January 6, 2016 at 11:23 PM#11Hello i just want to tell you that the fixturebuilder for MA dot2 (small windows programm) is great to build scrollers, you can add gels from a swatchbook to your scroller and all calculations are made automaticly even the names or the gel number are taken to your scroller.best thing is that the fixtures for dot2 work also on ma2 so you can use this fixture builder from dot2 for your ma2link:https://www.ma-dot2.com/en/software-download/"
+    },
+    {
+      "author": "luxit",
+      "post_date": null,
+      "post_number": 12,
+      "post_text": "April 15, 2016 at 7:40 PM#12Hello Niklas,I'm trying to add gels from the swatchbook to my scroller.Could you tell me how it's done I can't figure it out. I'm using the on pc version for the dot2.Thank You"
+    }
+  ],
   "replies": 0,
   "thread_id": "29415",
   "title": "Wizard for creating scroller fixtures",

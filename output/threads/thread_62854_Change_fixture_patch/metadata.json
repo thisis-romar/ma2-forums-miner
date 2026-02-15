@@ -3,6 +3,26 @@
   "author": "robk82",
   "post_date": null,
   "post_text": "December 2, 2018 at 11:59 PM#1Long story for why I want to do this...But is it possible to change the patch of a specific fixture or group of fixtures with a macro? I want to move every fixture forward one place. For example fixture 505 is patched at 1.050 and I want it to move to 1.051I may be in Lua territory, what do you think?",
+  "posts": [
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 2, 2018 at 11:59 PM#1Long story for why I want to do this...But is it possible to change the patch of a specific fixture or group of fixtures with a macro? I want to move every fixture forward one place. For example fixture 505 is patched at 1.050 and I want it to move to 1.051I may be in Lua territory, what do you think?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 3, 2018 at 10:37 PM#2You can reassign the address via normal command line syntax (Assign Fixture x DMX y.z), but you can't analyze the current address via normal command line syntax."
+    },
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 3, 2018 at 11:57 PM#3Ok cool .. This will work then.Thanks!!!"
+    }
+  ],
   "replies": 0,
   "thread_id": "62854",
   "title": "Change fixture patch",

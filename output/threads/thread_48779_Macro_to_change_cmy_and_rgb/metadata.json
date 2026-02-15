@@ -3,6 +3,26 @@
   "author": "justinpma",
   "post_date": null,
   "post_text": "September 14, 2015 at 7:32 AM#1Hi.How can I write a macro to change between rgb and cmy on the settings?",
+  "posts": [
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 14, 2015 at 7:32 AM#1Hi.How can I write a macro to change between rgb and cmy on the settings?"
+    },
+    {
+      "author": "wburnss",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 14, 2015 at 8:47 AM#2Hi,cd UserProfilecd usernameas 1 /DefaultMixColorReadout=cmy or rgbcd/"
+    },
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 14, 2015 at 9:15 AM#3Works great thank you"
+    }
+  ],
   "replies": 0,
   "thread_id": "48779",
   "title": "Macro to change cmy and rgb",

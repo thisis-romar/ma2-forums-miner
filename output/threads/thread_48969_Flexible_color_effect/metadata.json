@@ -3,6 +3,20 @@
   "author": "ambulance2314",
   "post_date": null,
   "post_text": "September 26, 2015 at 11:27 PM#1Is there a way to make a macro that can change the high and low valeu of a coloreffect by selecting the value's?In example:1. make a color effect with as low value color 1(white) and as high value color 2(yellow)2. Assign it to an executor.3. Run the macro4. Click than Color 3(blue)5. Click than Color 4(amber)6. The coloreffect is now blue amber instead of color 1(White) and color 2(yellow)",
+  "posts": [
+    {
+      "author": "ambulance2314",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 26, 2015 at 11:27 PM#1Is there a way to make a macro that can change the high and low valeu of a coloreffect by selecting the value's?In example:1. make a color effect with as low value color 1(white) and as high value color 2(yellow)2. Assign it to an executor.3. Run the macro4. Click than Color 3(blue)5. Click than Color 4(amber)6. The coloreffect is now blue amber instead of color 1(White) and color 2(yellow)"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 27, 2015 at 12:31 PM#2HiTry this, assuming your effect is n°30, using preset 101 for low value and 102 as high value.Blind On   [color=#FFCC00]................... bilnd on is an option[/color]SelFix Effect 30    [color=#FFCC00]................. select fixture used by your effect[/color]At Preset 4.(Low value ?)   [color=#FFCC00].................. ask for low value[/color]Store Preset 4.101/oAt Preset 4.(High value ?)  [color=#FFCC00].................. ask for high value[/color]Store Preset 4.102/oOff Selection  [color=#FFCC00]....................... clear your selection[/color]Blind OffAnd more :you can load your low and high value by their name.Just replace line 3, and 5, (Low value) by (\"Low value\")But you can't use prest number anymoreEnjoy"
+    }
+  ],
   "replies": 0,
   "thread_id": "48969",
   "title": "Flexible color effect",

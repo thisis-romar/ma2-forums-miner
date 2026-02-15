@@ -3,6 +3,20 @@
   "author": "GaryWestcott",
   "post_date": null,
   "post_text": "May 6, 2015 at 6:50 PM#1Hi Forum,Is there a way / macro option to set speed master to multiple fx?Thanks,Gary",
+  "posts": [
+    {
+      "author": "GaryWestcott",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 6, 2015 at 6:50 PM#1Hi Forum,Is there a way / macro option to set speed master to multiple fx?Thanks,Gary"
+    },
+    {
+      "author": "alenokia",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 7, 2015 at 3:36 AM#2Hi!!!Assign SpecialMaster (Special Master  3.xRa 4.xSp)  At Effect (Effect Number or Range)Ex: Assign SpecialMaster 4.2 At Effect 5 thru 10=)"
+    }
+  ],
   "replies": 0,
   "thread_id": "46520",
   "title": "MACRO To assign Speed master for multiple fx",

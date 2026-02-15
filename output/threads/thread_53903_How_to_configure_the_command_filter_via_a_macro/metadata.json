@@ -3,6 +3,20 @@
   "author": "jul poil",
   "post_date": null,
   "post_text": "July 2, 2016 at 6:35 PM#1Hi EverybodyI need help to configure the command filter by a macro.I saw the command \"/pf=true\" which enable the presetfilter, but how can I choose which parameters I enable / disable in my presetfilter?Something to add like : \"pf=presettype 1\" (for exemple for dimmer)?My ideas doesn'works, do you have some?ThanksJul",
+  "posts": [
+    {
+      "author": "jul poil",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 2, 2016 at 6:35 PM#1Hi EverybodyI need help to configure the command filter by a macro.I saw the command \"/pf=true\" which enable the presetfilter, but how can I choose which parameters I enable / disable in my presetfilter?Something to add like : \"pf=presettype 1\" (for exemple for dimmer)?My ideas doesn'works, do you have some?ThanksJul"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 4, 2016 at 12:54 AM#2the presetfilter option is for storing presets only, if the filter isononly attributes normally belonging in the desination preset will be stored, of the presetfilter ifoffany active attribute will be stored in the preset.if you want to do a filtered store to a cue, use the If command to set the filter for the store actionStore Cue 5 If Presetype 1 + 2"
+    }
+  ],
   "replies": 0,
   "thread_id": "53903",
   "title": "How to configure the command filter via a macro?",

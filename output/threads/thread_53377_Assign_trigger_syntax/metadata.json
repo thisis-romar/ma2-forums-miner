@@ -3,6 +3,32 @@
   "author": "tesslights",
   "post_date": null,
   "post_text": "June 4, 2016 at 12:51 AM#1Can anyone tell me the syntax in the command line (or in a macro) to assign a \"follow\" trigger to a cue? Thank you!",
+  "posts": [
+    {
+      "author": "tesslights",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 4, 2016 at 12:51 AM#1Can anyone tell me the syntax in the command line (or in a macro) to assign a \"follow\" trigger to a cue? Thank you!"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 4, 2016 at 4:56 AM#2Generally: Assign Cue x /trig=followIf you want the macro to ask you which cue: Assign Cue (what cue #?) /trig=followIf you want the macro to perform the operation on the current cue: Assign Cue /trig=followThe above all assume the selected exec."
+    },
+    {
+      "author": "tesslights",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "June 5, 2016 at 12:44 AM#3Excellent thank you!- side note, the header says \"Share your knowledge and cool macros with your colleges.\" should be \"colleagues\" =]"
+    },
+    {
+      "author": "Ross.bristo",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 30, 2016 at 10:32 PM#4What would the syntax be to change the trigger time on the next cue without any prompts?"
+    }
+  ],
   "replies": 0,
   "thread_id": "53377",
   "title": "Assign trigger syntax",

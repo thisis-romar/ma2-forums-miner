@@ -3,6 +3,26 @@
   "author": "sebmdp",
   "post_date": null,
   "post_text": "March 9, 2016 at 10:06 PM#1Dear all,What is the right syntax to use a wildcard in variable ? I'm talking about the variable name and not his value.e.g. I've some uservar $spot1, $spot2, $spot3 etc.... and want to search all my groups with a variable name starting with $spotThis may be something like :search group $spot*but it's not !Thanks for your help.Regards.",
+  "posts": [
+    {
+      "author": "sebmdp",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 9, 2016 at 10:06 PM#1Dear all,What is the right syntax to use a wildcard in variable ? I'm talking about the variable name and not his value.e.g. I've some uservar $spot1, $spot2, $spot3 etc.... and want to search all my groups with a variable name starting with $spotThis may be something like :search group $spot*but it's not !Thanks for your help.Regards."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 9, 2016 at 10:25 PM#2variables are merely valuecontainers, which are exchanged with it's content before the syntax is processedSetvar $a=Mac500Search Group $a-> Search Group Mac500you cannot search vaiables, or recall variables via wildcard"
+    },
+    {
+      "author": "sebmdp",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 10, 2016 at 11:17 PM#3Hello,Thanks Andreas for this clarification about the variable.I will think about another way to achieve this kind of search.Regards."
+    }
+  ],
   "replies": 0,
   "thread_id": "51803",
   "title": "Wildcard in variable",

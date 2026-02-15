@@ -3,6 +3,20 @@
   "author": "Tiger",
   "post_date": null,
   "post_text": "October 29, 2022 at 11:06 PM#1Hello,Christian Jackson had a video a couple years ago, where he created a color effect template.External Contentwww.youtube.comContent embedded from external sources will not be displayed without your consent.Display all external contentThrough the activation of external content, you agree that personal data may be transferred to third party platforms. We have provided more information on this in our privacy policy.But he didn't show how he turned the selective effect back into a template effect.How do you do that using a macro?",
+  "posts": [
+    {
+      "author": "Tiger",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 29, 2022 at 11:06 PM#1Hello,Christian Jackson had a video a couple years ago, where he created a color effect template.External Contentwww.youtube.comContent embedded from external sources will not be displayed without your consent.Display all external contentThrough the activation of external content, you agree that personal data may be transferred to third party platforms. We have provided more information on this in our privacy policy.But he didn't show how he turned the selective effect back into a template effect.How do you do that using a macro?"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 5, 2022 at 12:54 PM#2If you 'take selection' with nothing selected, it will turn the effect back to a template effect.so you can use:clearallstore effect 1.effect.line /overwrite"
+    }
+  ],
   "replies": 0,
   "thread_id": "67414",
   "title": "Turn Selective Effect into Template Effect",

@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:bdb10349b5a269fb27a5b694443a351fc0dfee0a4428febe62e6577a200eb32f",
-      "download_count": 274,
+      "download_count": 287,
       "filename": "strange variable.show.gz",
+      "post_number": 3,
       "size": 1354703,
       "url": "https://forum.malighting.com/file-download/4709/"
     }
@@ -11,6 +12,50 @@
   "author": "Duplicate bentoylight",
   "post_date": null,
   "post_text": "May 15, 2022 at 5:02 PM#1Hi allHere is a very strange behavior that i've never seen before.I create a macro with one line :Setvar $group = (what group ?)I answer 3 in the pop-up.The command line feedback shows me Setvar $group = 3But when i do Listvar i get : $ = $groupand no $group = 3.If I rewrite my command, it works as expected.If i copy/paste my \"wrong\" command in another macro or in the command line, i get the same $ = $group, as if my sentence is corrupted.Does anybody has encountered this behavior ?Thanks",
+  "posts": [
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 15, 2022 at 5:02 PM#1Hi allHere is a very strange behavior that i've never seen before.I create a macro with one line :Setvar $group = (what group ?)I answer 3 in the pop-up.The command line feedback shows me Setvar $group = 3But when i do Listvar i get : $ = $groupand no $group = 3.If I rewrite my command, it works as expected.If i copy/paste my \"wrong\" command in another macro or in the command line, i get the same $ = $group, as if my sentence is corrupted.Does anybody has encountered this behavior ?Thanks"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 15, 2022 at 6:19 PM#2Hi BentoyLightWhen i try your exact commandline it gives me the expected result.Running GMA3 Fullsize in mode 2, software V3.9.60.28"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 15, 2022 at 8:51 PM#3Have a look at this.It's very strange.I didn't do this, it's a friend of mine who sent me this show.Filesstrange variable.show.gz1.35 MB – 287 Downloads"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 15, 2022 at 9:23 PM#4Hi BentoyLightI do agree something odd is happening here, however i cannot find anything strange in the used commandline.It seems to be something in this particular file because when creating a new show and do exactly the same i get the expected result: $group=3"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 15, 2022 at 9:58 PM#5Hi MarkThanks to have tried.It's very special and according to the friend who sent me this, it's not the first time it happens to him.That's what i call a MAstery"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "December 5, 2022 at 2:38 PM#6Has anyone sent this to MA or ACT? it's so bizarre. seemingly nothing creates the correct variable unless you just... write it again..."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "December 5, 2022 at 7:30 PM#7on gma2, some characters can be entered, even if they have no visual representation in the gma2 ui.you can check for this boobytrap by using the arrow-keys and step thru the text and look for places where the cursor is stationary for one or more arrowpressesorcopy the text and paste into a text-editororexport to xml and examine the file-contente.g. this is how the macro looks like in the xml file:Code<Macroline index=\"0\"><text>SetVar ££$group = (what group ?)</text></Macroline>"
+    }
+  ],
   "replies": 0,
   "thread_id": "67220",
   "title": "Strange behavior with variable",

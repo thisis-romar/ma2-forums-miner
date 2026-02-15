@@ -3,6 +3,20 @@
   "author": "Ahzi",
   "post_date": null,
   "post_text": "March 4, 2022 at 10:58 PM#1Hey guys, I have a color picker where all my cues are on page 99. So my cues are 99.1 cue 1 so on and so forth.I want to create macros to delay and sweep color when I click on the color picker.For example, I want a macro to delay 0.5s for each type of fixtures but on just one button. Same thing with sweep and fade but I think the mechanic would be the same as the first one.If you have ideas, that would help me, Thank you.",
+  "posts": [
+    {
+      "author": "Ahzi",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 4, 2022 at 10:58 PM#1Hey guys, I have a color picker where all my cues are on page 99. So my cues are 99.1 cue 1 so on and so forth.I want to create macros to delay and sweep color when I click on the color picker.For example, I want a macro to delay 0.5s for each type of fixtures but on just one button. Same thing with sweep and fade but I think the mechanic would be the same as the first one.If you have ideas, that would help me, Thank you."
+    },
+    {
+      "author": "blueshiftdesign",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 9, 2022 at 3:26 PM#2I am not sure you can do this in the programmer. But if I were going to do it was a macro, I would do something like this:CodeBlindEdit OnIfOutput At PageName.SequenceNameMATricksWings 2PresetType \"COLOR\" at Delay 0 Thru 0.5Store Cue 1 Thru SequenceName /mergeClearAllBlindEdit OffAlternatively, you could select a group or whatever lights you wanted in the third line. Then I would create multiple macros that would simply merge the fade / delay times and wing styles that you wanted. You could also have the macro ask you for a value for a variable so it would ask what you wanted the fade time to be every time you called it.Craig RutherfordBlueshift Design"
+    }
+  ],
   "replies": 0,
   "thread_id": "67111",
   "title": "Delay Sweep Fade Macros",

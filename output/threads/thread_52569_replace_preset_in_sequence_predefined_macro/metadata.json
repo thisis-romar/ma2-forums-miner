@@ -3,6 +3,44 @@
   "author": "HillaryKnox",
   "post_date": null,
   "post_text": "April 20, 2016 at 9:20 PM#1Is there a syntax similar to the 'replace preset in sequence' macro, that only limits the operation to selected or specified fixtures? Or should I just use a temporary world?",
+  "posts": [
+    {
+      "author": "HillaryKnox",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 20, 2016 at 9:20 PM#1Is there a syntax similar to the 'replace preset in sequence' macro, that only limits the operation to selected or specified fixtures? Or should I just use a temporary world?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 21, 2016 at 2:45 AM#2Off the top of my head, so not tested, but I think it should work:Setvar $oldpreset = (old preset x.y)Setvar $newpreset = (new preset x.y)Search Selection At Preset $oldpreset If Sequence (sequence #?)Replace Preset $oldpreset With $newpreset If SearchResult"
+    },
+    {
+      "author": "HillaryKnox",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 21, 2016 at 7:11 PM#3The Replace Objects operation would change 0 objects with 0 changes.AKA, didn't quite work..."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 21, 2016 at 10:48 PM#4Aha! Now that I was actually able to play with it:Search Selection If Sequence (sequence #?)Replace Preset (old preset x.y?) With Preset (new preset x.y?) If SearchResultOr just use a dummy world."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "April 21, 2016 at 11:33 PM#5merely calling the searchresult will even act as a temporary/dummy worldSearch Selection /ncSearchresultReplace Preset (old preset x.y?) With Preset (new preset x.y?) If Sequence (sequence?)World 1"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "April 22, 2016 at 1:39 AM#6This is true, but wasn't the idea to not have to use a temporary world? Hillary, why you gots ta be so picky??"
+    }
+  ],
   "replies": 0,
   "thread_id": "52569",
   "title": "replace preset in sequence predefined macro",

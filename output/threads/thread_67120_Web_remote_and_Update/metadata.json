@@ -3,6 +3,26 @@
   "author": "sethrapaport",
   "post_date": null,
   "post_text": "March 12, 2022 at 3:49 PM#1Can anyone tell me the secret to updating a preset while focusing with the web remote?I've been complaining for years that this function was removed when the web-remote was released, but it is a huge flaw that (to me) renders the \"update\" function as useless. How do I know what I am updating?Any secret macro to get this to work?",
+  "posts": [
+    {
+      "author": "sethrapaport",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 12, 2022 at 3:49 PM#1Can anyone tell me the secret to updating a preset while focusing with the web remote?I've been complaining for years that this function was removed when the web-remote was released, but it is a huge flaw that (to me) renders the \"update\" function as useless. How do I know what I am updating?Any secret macro to get this to work?"
+    },
+    {
+      "author": "bullock",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 22, 2022 at 3:09 PM#2hey sethrapaport, it's not a direct solution to your issue, but many people simply connect an onPC station to the session and use WiFi to RDT in from a tablet. This gives full functionality of MA / your views etc"
+    },
+    {
+      "author": "zakkbeard",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 28, 2022 at 5:10 AM#3this isn't going to be an easy answer, and it's not the one you wanted, but for my shows, when I'm on deck focusing its for specific positions onstage (band specials, etc.). Those band specials are all in my 'BAND' position preset, and the lights I use don't change from show to show, so I have a sequence where there's a cue with a command to select the fixture and put it at its intended position, I move it as I see fit, then go that same sequence. The next cue has a command for store merge. next one is clearall, then repeat. tedious to set up, but it does work well. I use a similar method for updating all of my presets in fact, so its one GIGANTIC sequence to pull up each group (fixturetype in my case), and go through each preset in my show, with store merge cues to simulate a live update experience.Hope this helps!"
+    }
+  ],
   "replies": 0,
   "thread_id": "67120",
   "title": "Web remote and \"Update\"",

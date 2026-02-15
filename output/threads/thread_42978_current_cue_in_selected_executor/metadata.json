@@ -3,6 +3,38 @@
   "author": "eric728",
   "post_date": null,
   "post_text": "August 13, 2014 at 9:44 PM#1Is there any way to call up the current cue number in the selected executor in a macro?I want to be able to merge values into the current cue with one button press, which would help me avoid a lot of major errors(still running 2.9.1.1 but will upgrade soon)Thanks in advance!",
+  "posts": [
+    {
+      "author": "eric728",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 13, 2014 at 9:44 PM#1Is there any way to call up the current cue number in the selected executor in a macro?I want to be able to merge values into the current cue with one button press, which would help me avoid a lot of major errors(still running 2.9.1.1 but will upgrade soon)Thanks in advance!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 13, 2014 at 10:32 PM#2tryCodeStore Part 0 /merge"
+    },
+    {
+      "author": "eric728",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 13, 2014 at 10:48 PM#3Perfect! Thank you so much, thats a lifesaver right there haha-Eric"
+    },
+    {
+      "author": "5th Element",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 27, 2015 at 7:19 PM#4I was also looking for a solution to this, I assumed I needed a variable for $currentcue or something like that,  can you explain why this syntax works Glad?Thanks!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "February 27, 2015 at 9:27 PM#5even if you do not use part cues, your normal cue internally has a part (Part 0).so when you say Store Cue 5, the desk internally interprets it as Store Cue 1 Part 0-In general if you specify an object, without its parents, it will use the current/active/default parent to determine the unique objectExecutor 1 Page 2 -> Executor 1 of page 2Executor 1 -> Executor 1 ofcurrentpageCue 5 Sequence 4 -> Cue 5 of Sequence 4Cue 5 -> Cue 5 of selected sequence/executorCue 3 part 0 -> Part 0 of Cue 3Part 0 -> Part 0 ofcurrentcue"
+    }
+  ],
   "replies": 0,
   "thread_id": "42978",
   "title": "current cue in selected executor?",

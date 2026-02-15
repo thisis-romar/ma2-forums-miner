@@ -3,6 +3,32 @@
   "author": "I-allu-I",
   "post_date": null,
   "post_text": "August 7, 2017 at 6:58 PM#1Hi MA-users,Is there way to label multiple objects with same text in one macro line?I.e Label Timecode 5 + Page 5 + Macro 5 + Executor 5.15 (Song name?)I know this example is not working correctly but hope so you get the idea.-Alex",
+  "posts": [
+    {
+      "author": "I-allu-I",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 7, 2017 at 6:58 PM#1Hi MA-users,Is there way to label multiple objects with same text in one macro line?I.e Label Timecode 5 + Page 5 + Macro 5 + Executor 5.15 (Song name?)I know this example is not working correctly but hope so you get the idea.-Alex"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 7, 2017 at 7:02 PM#2Setvar $songname = (\"Enter Song Name\")Label Timecode 5 $\"songname\"Label Page 5 $\"songname\"Label Macro 5 $\"songname\"Label Exec 5.15 $\"songname\""
+    },
+    {
+      "author": "I-allu-I",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 7, 2017 at 7:17 PM#3Thank you Ryan for really fast answer!-Alex"
+    },
+    {
+      "author": "promask",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 20, 2018 at 2:02 PM#4hm..."
+    }
+  ],
   "replies": 0,
   "thread_id": "59206",
   "title": "Multiple label macro",

@@ -3,6 +3,44 @@
   "author": "lupetto1974",
   "post_date": null,
   "post_text": "April 16, 2018 at 11:02 AM#1Ciao a tutti.time ago I saw a video with a trick to make a macro with temp rather than go, go back, off etc. can someone help me?I can’t find it anymore.Thanks",
+  "posts": [
+    {
+      "author": "lupetto1974",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 16, 2018 at 11:02 AM#1Ciao a tutti.time ago I saw a video with a trick to make a macro with temp rather than go, go back, off etc. can someone help me?I can’t find it anymore.Thanks"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 17, 2018 at 9:23 AM#2hello Lupo74This is pretty easy, by command line you can change functions of executor keysin this case a macro could look like thisAssign temp execbutton1 1.1Which will assign a temp function to executor button 1 of executor 1 on page 1"
+    },
+    {
+      "author": "lupetto1974",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 17, 2018 at 12:06 PM#3Ciaoyes I know this, but I would like to assign it to a viewbutton. however I tried also with a normal button it is assigned but it does not work. while in the video I saw the trick worked.Some other suggestion?ThanksSorry for my english"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 17, 2018 at 7:15 PM#4could you post the video? I think I don't understand what you want to achieve"
+    },
+    {
+      "author": "lupetto1974",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "April 19, 2018 at 1:03 AM#5Ciaounfortunately I can’t find it anymore...it is the help I asked for here, I think it was a tutorial on YouTube but I don’t remember the name.for now I did the macro with toggle is not the same thing but it works.nobody knows this trick?Thanks"
+    },
+    {
+      "author": "byriel",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "April 23, 2018 at 8:15 AM#6I am not sure what you mean either...   Is this it?External Contentwww.youtube.comContent embedded from external sources will not be displayed without your consent.Display all external contentThrough the activation of external content, you agree that personal data may be transferred to third party platforms. We have provided more information on this in our privacy policy."
+    }
+  ],
   "replies": 0,
   "thread_id": "61161",
   "title": "Macro with function temp rather than go, goback, off etc etc.",

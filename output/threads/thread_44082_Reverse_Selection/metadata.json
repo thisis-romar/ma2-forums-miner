@@ -2,15 +2,66 @@
   "assets": [
     {
       "checksum": "sha256:017d84a6351b089eb95c0c44f1a42e8e88146e4c75310ae75b49f78b1d95b944",
-      "download_count": 98,
+      "download_count": 108,
       "filename": "Reverse Selection.xml",
+      "post_number": 1,
       "size": 2153,
       "url": "https://forum.malighting.com/file-download/3540/"
     }
   ],
   "author": "glad",
   "post_date": null,
-  "post_text": "November 4, 2014 at 12:17 AM#1reverses the selectionorder of the current selection.intended for smaller groups.if tou use on groups with more than 100 fixtures, edit line1, but be aware that the macro will be slowermacro calls it self (by name), please edit line11 if you want to rename the macroFilesReverse Selection.xml2.15 kB – 98 Downloads",
+  "post_text": "November 4, 2014 at 12:17 AM#1reverses the selectionorder of the current selection.intended for smaller groups.if tou use on groups with more than 100 fixtures, edit line1, but be aware that the macro will be slowermacro calls it self (by name), please edit line11 if you want to rename the macroFilesReverse Selection.xml2.15 kB – 108 Downloads",
+  "posts": [
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 4, 2014 at 12:17 AM#1reverses the selectionorder of the current selection.intended for smaller groups.if tou use on groups with more than 100 fixtures, edit line1, but be aware that the macro will be slowermacro calls it self (by name), please edit line11 if you want to rename the macroFilesReverse Selection.xml2.15 kB – 108 Downloads"
+    },
+    {
+      "author": "Marek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 17, 2014 at 3:10 PM#2A wonderful macro. Thanks."
+    },
+    {
+      "author": "willybsm",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 1, 2015 at 6:00 PM#3Hi GladI wanted to edit your macro with the variable $ SelectedFixturesCount the 3.1.2.5 release.That did not work and oddly your original macro does not work on this version !!!"
+    },
+    {
+      "author": "willybsm",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 3, 2015 at 1:58 PM#4To complete,it seems that the loop is not or no longer taken into account.---> [$loopcount<$maxcount] Macro 1.\"Reverse Selection\".$loopentryA track ?Thank"
+    },
+    {
+      "author": "willybsm",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "September 4, 2015 at 3:15 PM#5After stating the problem to technical support, the answer fell:the Macros makes us headache.Most of the inquiries comes from the TV Game Shows.A lot of input triggers comes parallel into a console and the console works in a session of course.The multiple Midi inputs cause random Playbacks and they ask us for a solution.We make all the changes and they are happy now because we now have a selective processing of Macros.Also parallel Macros can now operate reliable in the background in a Session.They are all happy now (we hope).On the other hand we loose some nice functions with this changed structure.It's not possible anymore to loop inside Macro lines.You only can loop from the end to the start inside a Macro.Means the nice Macro from Andreas Glad will not work anymore.Maybe this 'Reverse Select' Macro can be done now in LUA.Try to contact the LUA Forum on the Share net for this Please.A really good progress"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "September 4, 2015 at 7:52 PM#6Hi William,as my workaroung for macro-loops no longer is valid, you could try to recreate the function of such macros using a sequence with empty cues as host for your command, entering the macroline content in the CMD column, and use Goto, rather than Go Macro x.y.z for the looping"
+    },
+    {
+      "author": "willybsm",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "September 4, 2015 at 8:02 PM#7Hi GladThank you for the tip, but it will be heavier while with new feature such as $ SelectedFixturesCount become simpler and more effective.This choice of development is a huge regression in terms of macro creation with the new version. What a pityInstead, I will turn to the plug LuaThank you"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "September 7, 2015 at 11:58 AM#8What a mess just to reverse a selection order !"
+    }
+  ],
   "replies": 0,
   "thread_id": "44082",
   "title": "Reverse Selection",

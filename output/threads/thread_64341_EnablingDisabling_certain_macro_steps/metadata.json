@@ -3,6 +3,38 @@
   "author": "Lowkeys",
   "post_date": null,
   "post_text": "July 24, 2019 at 10:09 PM#1Hey guys! I have a syntax that reads this:Assign Root .\"Macros\".\"Global\".\"Selection at 0% Exec\".9  Thru .12 /Disabled=\"Yes\"Which works perfectly fine. It disables only steps 9 thru 12 in that macro.However, this syntax:Assign Root .\"Macros\".\"Global\".\"Selection at 0% Exec\".13  Thru .16 /Disabled=\"Yes\"Will disable steps 13 thru 17 (step 17 being the last one in the macro)What am I missing here? I also have lines like the above that enable/disable steps 1 thru 4 and 5 thru 8, and all of those work perfectly fine.",
+  "posts": [
+    {
+      "author": "Lowkeys",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 24, 2019 at 10:09 PM#1Hey guys! I have a syntax that reads this:Assign Root .\"Macros\".\"Global\".\"Selection at 0% Exec\".9  Thru .12 /Disabled=\"Yes\"Which works perfectly fine. It disables only steps 9 thru 12 in that macro.However, this syntax:Assign Root .\"Macros\".\"Global\".\"Selection at 0% Exec\".13  Thru .16 /Disabled=\"Yes\"Will disable steps 13 thru 17 (step 17 being the last one in the macro)What am I missing here? I also have lines like the above that enable/disable steps 1 thru 4 and 5 thru 8, and all of those work perfectly fine."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 25, 2019 at 12:00 AM#2HiTry thisAssign Macro 1.\"your macro\".13 thru 16 /disabled=yes"
+    },
+    {
+      "author": "Lowkeys",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 25, 2019 at 12:48 AM#3Nope, for many reasons. . ."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "July 25, 2019 at 1:16 AM#4What reasons ?"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "July 25, 2019 at 9:06 PM#5ya this syntax will work.I also just tried a macro with 18 lines to test 13 thru 16 that you're having difficulty with and even with your way of assigning root instead of just assigning the macro, I can't recreate the issue."
+    }
+  ],
   "replies": 0,
   "thread_id": "64341",
   "title": "Enabling/Disabling certain macro steps",

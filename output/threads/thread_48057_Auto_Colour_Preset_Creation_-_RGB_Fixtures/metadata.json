@@ -2,22 +2,68 @@
   "assets": [
     {
       "checksum": "sha256:80f1fc9c5df80a721603c26947894a81da151a99207770edbd5b3187de631a44",
-      "download_count": 135,
+      "download_count": 144,
       "filename": "Auto Colour.xml",
+      "post_number": 1,
       "size": 9331,
       "url": "https://forum.malighting.com/file-download/3723/"
     },
     {
       "checksum": "sha256:784a73ac95d0963361dfaf20bc236b43150614ab97927f7857774fad7fa69c99",
-      "download_count": 136,
+      "download_count": 147,
       "filename": "Color generator.xml",
+      "post_number": 2,
       "size": 6822,
       "url": "https://forum.malighting.com/file-download/4185/"
     }
   ],
   "author": "CL",
   "post_date": null,
-  "post_text": "August 1, 2015 at 9:50 AM#1Just a simple macro to search through your fixtures and create a bunch of presets according to RGB colour mixing fixture only.FilesAuto Colour.xml9.33 kB – 135 Downloads",
+  "post_text": "August 1, 2015 at 9:50 AM#1Just a simple macro to search through your fixtures and create a bunch of presets according to RGB colour mixing fixture only.FilesAuto Colour.xml9.33 kB – 144 Downloads",
+  "posts": [
+    {
+      "author": "CL",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 1, 2015 at 9:50 AM#1Just a simple macro to search through your fixtures and create a bunch of presets according to RGB colour mixing fixture only.FilesAuto Colour.xml9.33 kB – 144 Downloads"
+    },
+    {
+      "author": "daynedehaven",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 10, 2017 at 2:02 AM#2Looks good,  But there is a short way to do this with less lines.Here is one that I wrote a few months ago.Let me know what you think.FilesColor generator.xml6.82 kB – 147 Downloads"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 10, 2017 at 3:39 AM#3Seems like a lot of work when you could just go Setup -> AutoCreate -> Additional Presets..."
+    },
+    {
+      "author": "philadou",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 2, 2017 at 5:40 PM#4Both macros are working fine, thanks.But the small preview colors on the presets are not matching with the named presets.See attatchment.What I'm doing wrong?Imagesexample.JPG40.05 kB1,107 × 140"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "October 3, 2017 at 2:06 PM#5your color read out is set to cmy instead or rgb, change it in the setup menu"
+    },
+    {
+      "author": "philadou",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "October 3, 2017 at 2:31 PM#6Oh....you are totally right. Thanks a lot for quick help"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "October 13, 2017 at 11:18 PM#7Why don't you use universal preset that you store once for all in your base show ?And use autocreate as Ryan said ?"
+    }
+  ],
   "replies": 0,
   "thread_id": "48057",
   "title": "Auto Colour Preset Creation - RGB Fixtures",

@@ -3,6 +3,26 @@
   "author": "faderman",
   "post_date": null,
   "post_text": "March 13, 2020 at 11:41 AM#1Hey All,Anyone knows how to skip to a macro line?Something like : goto line 8 macro 1001Many thanks",
+  "posts": [
+    {
+      "author": "faderman",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 13, 2020 at 11:41 AM#1Hey All,Anyone knows how to skip to a macro line?Something like : goto line 8 macro 1001Many thanks"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 13, 2020 at 1:03 PM#2macro 1.macronumber.lineormacro 1.\"macro name\".line"
+    },
+    {
+      "author": "faderman",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 13, 2020 at 3:48 PM#3Works, Thanks!"
+    }
+  ],
   "replies": 0,
   "thread_id": "65426",
   "title": "Macro lines",

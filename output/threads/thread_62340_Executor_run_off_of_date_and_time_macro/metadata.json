@@ -3,6 +3,26 @@
   "author": "sallen60",
   "post_date": null,
   "post_text": "September 14, 2018 at 8:22 PM#1I am using a MA2 on PC to run some architectural lighting that only happens once a week. How would I go about writing a macro for it? Is it even possible?",
+  "posts": [
+    {
+      "author": "sallen60",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 14, 2018 at 8:22 PM#1I am using a MA2 on PC to run some architectural lighting that only happens once a week. How would I go about writing a macro for it? Is it even possible?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 14, 2018 at 8:29 PM#2search the manual for \"Agenda\""
+    },
+    {
+      "author": "sallen60",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 14, 2018 at 7:10 PM#3Perfect thank you"
+    }
+  ],
   "replies": 0,
   "thread_id": "62340",
   "title": "Executor run off of date and time macro",

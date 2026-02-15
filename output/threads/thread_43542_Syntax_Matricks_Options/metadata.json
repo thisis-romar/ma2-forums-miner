@@ -3,6 +3,50 @@
   "author": "GertvanElderen",
   "post_date": null,
   "post_text": "September 23, 2014 at 11:08 AM#1Hi there,does somebody know the syntax commands for the MAtricks Options.I making a macro witch selects inside variable interleaves a kind of random fixtures and at presets or dimmer values.Im using so far al lot of Next/Prev commands to set the rigt single x.but it there a fast way, tried singlex or matricksx or matrickssinglex but they dont work.let me knowusing 3.0.0.5",
+  "posts": [
+    {
+      "author": "GertvanElderen",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 23, 2014 at 11:08 AM#1Hi there,does somebody know the syntax commands for the MAtricks Options.I making a macro witch selects inside variable interleaves a kind of random fixtures and at presets or dimmer values.Im using so far al lot of Next/Prev commands to set the rigt single x.but it there a fast way, tried singlex or matricksx or matrickssinglex but they dont work.let me knowusing 3.0.0.5"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 23, 2014 at 11:33 AM#2the singlex malue may be selected with the MatricksInterleave commande.g.MatricksInterleave 4.10should set Interleave to 10 and singlex to 4MatricksInterleave 15.0should set Interleave to Off and singlex to 15"
+    },
+    {
+      "author": "thruvik",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 24, 2014 at 5:11 PM#3Can also be called as mi though the command line, to save you some typing."
+    },
+    {
+      "author": "GertvanElderen",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 24, 2014 at 10:03 PM#4ah thanks. thats helping a lot!"
+    },
+    {
+      "author": "DannyCaine",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "March 8, 2015 at 2:05 AM#5What is the syntax for Wingstyle?Im trying to create a Macro for focusing positions which puts \"Wings\" at 2 and \"Wingstyle\" at Pan.The first half works fine..... MAtrickswings 2.Thanks"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "March 8, 2015 at 11:53 AM#6the intended way to do this is via the MAtricks pool,Store your desired Matricks combination in the Pool.the MAtrick may be assigned directly to a userbutton, or be called via commandline from a macro"
+    },
+    {
+      "author": "DannyCaine",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "March 9, 2015 at 1:18 AM#7Thanks Glad! Might you have any input on my post under \"midi knobs control encoder using bomes pro\""
+    }
+  ],
   "replies": 0,
   "thread_id": "43542",
   "title": "Syntax Matricks Options",

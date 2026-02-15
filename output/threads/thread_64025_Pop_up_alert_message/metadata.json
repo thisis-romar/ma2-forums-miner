@@ -3,6 +3,68 @@
   "author": "robk82",
   "post_date": null,
   "post_text": "May 31, 2019 at 3:07 PM#1Hello all,I have a certain macro that when an operator triggers it, I'd like an alert message to pop up for them to select ok button.Right now I have dialog box pop up and there's not enough room for the description of what to do.I think this is possible without Lua, but I'm not sure.Any ideas?",
+  "posts": [
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 31, 2019 at 3:07 PM#1Hello all,I have a certain macro that when an operator triggers it, I'd like an alert message to pop up for them to select ok button.Right now I have dialog box pop up and there's not enough room for the description of what to do.I think this is possible without Lua, but I'm not sure.Any ideas?"
+    },
+    {
+      "author": "MTH",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 30, 2019 at 7:35 AM#2The easiest way would be to have the macro trigger a timer. The timer can have message attached to it when the timer end."
+    },
+    {
+      "author": "jfguedes",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 7, 2019 at 10:09 PM#3You can also use a simple LUA line in your macro:LUA \"gma.gui.msgbox('Your title','Your text')\""
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "August 8, 2019 at 3:42 AM#4HiThe lua message box won't pause the macro."
+    },
+    {
+      "author": "Hedsma",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "September 17, 2019 at 10:23 AM#5Hello!Set the line after the lua to \"GO\" and have the lua trigger the next macro line.You need to make a \"plugin\" and trigger it instead of having the lua in the macro.It would looks omething like this;return function()if gma.gui.confirm('title','description') thengma.cmd('go macro (ID)')endHope it helps!//Martin"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "September 17, 2019 at 9:22 PM#6can't seem to get this lua to execute. works without the if statement but as soon as that's added you'll get no result.any idea why?"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "September 17, 2019 at 9:26 PM#7I wrote a macro like this. You can find it in fb group ma-lighting.fb linkYou can use lua command in macro.As an example :macro 111. lua\"local txt = gma.textinput('your pop up title','your filled answer'); if txt=='your filled answer' then gma.cmd('macro 1.11.2') else gma.cmd('off macro 11') end\"                //wait=go2. your next command"
+    },
+    {
+      "author": "Hedsma",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "September 17, 2019 at 9:36 PM#8Make the lua a plugin and execute it via the command line.Hope it helps!//Martin"
+    },
+    {
+      "author": "rcarmichael",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "December 5, 2019 at 11:46 PM#9Hello,I placedMartin's code into a new plugin, but trying to run it (Go+ Plugin 10) doesn't even bring up the Pop-Up; is there a resource where I can learn how to recall plugins via a macro?I also looked atBenoît's \"Macro\", but I was hoping to use a \"confirm\" instead of \"textinput\"; is this possible?Thank you!"
+    },
+    {
+      "author": "Migs",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "May 28, 2023 at 9:33 PM#10Here's the confirm version:CodeLUA \"local accept=gma.gui.confirm('Confirmation', 'Are you sure?'); if accept then gma.cmd('macro 1.11.2') else gma.cmd('off macro 11') end\"Without forgetting to set wait mode of line 1 on \"Go\" otherwise the macro will continue without waiting for the confirmation."
+    }
+  ],
   "replies": 0,
   "thread_id": "64025",
   "title": "Pop up alert message",

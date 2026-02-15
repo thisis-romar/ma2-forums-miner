@@ -1,0 +1,2338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.3/MA.xsd" major_vers="2" minor_vers="8" stream_vers="3">
+	<Info datetime="2013-11-09T14:40:41" showfile="macro" />
+	<Macro index="1" name="Invert SelOrder">
+		<Macroline index="0">
+			<text>Store Group 999 /overwrite</text>
+			<info>Original Selection</info>
+		</Macroline>
+		<Macroline index="1">
+			<text>MAtricksReset</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>Store Group 998 /overwrite ; Store Group 999 /remove</text>
+			<info>The New Seløection Group</info>
+		</Macroline>
+		<Macroline index="4">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="7">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="8">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="9">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="10">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="11">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="12">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="13">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="14">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="15">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="16">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="17">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="18">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="19">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="20">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="21">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="22">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="23">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="24">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="25">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="26">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="27">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="28">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="29">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="30">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="31">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="32">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="33">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="34">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="35">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="36">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="37">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="38">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="39">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="40">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="41">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="42">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="43">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="44">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="45">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="46">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="47">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="48">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="49">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="50">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="51">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="52">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="53">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="54">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="55">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="56">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="57">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="58">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="59">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="60">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="61">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="62">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="63">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="64">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="65">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="66">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="67">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="68">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="69">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="70">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="71">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="72">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="73">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="74">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="75">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="76">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="77">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="78">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="79">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="80">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="81">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="82">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="83">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="84">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="85">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="86">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="87">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="88">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="89">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="90">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="91">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="92">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="93">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="94">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="95">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="96">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="97">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="98">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="99">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="100">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="101">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="102">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="103">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="104">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="105">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="106">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="107">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="108">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="109">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="110">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="111">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="112">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="113">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="114">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="115">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="116">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="117">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="118">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="119">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="120">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="121">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="122">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="123">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="124">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="125">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="126">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="127">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="128">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="129">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="130">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="131">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="132">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="133">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="134">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="135">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="136">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="137">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="138">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="139">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="140">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="141">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="142">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="143">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="144">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="145">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="146">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="147">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="148">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="149">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="150">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="151">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="152">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="153">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="154">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="155">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="156">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="157">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="158">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="159">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="160">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="161">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="162">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="163">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="164">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="165">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="166">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="167">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="168">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="169">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="170">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="171">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="172">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="173">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="174">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="175">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="176">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="177">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="178">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="179">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="180">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="181">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="182">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="183">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="184">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="185">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="186">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="187">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="188">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="189">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="190">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="191">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="192">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="193">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="194">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="195">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="196">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="197">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="198">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="199">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="200">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="201">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="202">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="203">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="204">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="205">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="206">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="207">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="208">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="209">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="210">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="211">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="212">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="213">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="214">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="215">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="216">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="217">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="218">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="219">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="220">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="221">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="222">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="223">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="224">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="225">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="226">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="227">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="228">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="229">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="230">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="231">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="232">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="233">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="234">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="235">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="236">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="237">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="238">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="239">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="240">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="241">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="242">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="243">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="244">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="245">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="246">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="247">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="248">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="249">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="250">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="251">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="252">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="253">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="254">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="255">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="256">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="257">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="258">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="259">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="260">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="261">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="262">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="263">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="264">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="265">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="266">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="267">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="268">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="269">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="270">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="271">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="272">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="273">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="274">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="275">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="276">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="277">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="278">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="279">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="280">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="281">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="282">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="283">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="284">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="285">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="286">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="287">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="288">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="289">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="290">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="291">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="292">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="293">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="294">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="295">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="296">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="297">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="298">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="299">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="300">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="301">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="302">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="303">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="304">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="305">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="306">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="307">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="308">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="309">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="310">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="311">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="312">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="313">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="314">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="315">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="316">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="317">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="318">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="319">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="320">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="321">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="322">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="323">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="324">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="325">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="326">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="327">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="328">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="329">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="330">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="331">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="332">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="333">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="334">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="335">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="336">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="337">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="338">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="339">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="340">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="341">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="342">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="343">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="344">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="345">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="346">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="347">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="348">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="349">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="350">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="351">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="352">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="353">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="354">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="355">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="356">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="357">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="358">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="359">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="360">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="361">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="362">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="363">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="364">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="365">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="366">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="367">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="368">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="369">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="370">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="371">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="372">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="373">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="374">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="375">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="376">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="377">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="378">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="379">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="380">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="381">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="382">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="383">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="384">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="385">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="386">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="387">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="388">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="389">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="390">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="391">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="392">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="393">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="394">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="395">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="396">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="397">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="398">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="399">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="400">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="401">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="402">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="403">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="404">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="405">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="406">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="407">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="408">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="409">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="410">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="411">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="412">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="413">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="414">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="415">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="416">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="417">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="418">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="419">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="420">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="421">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="422">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="423">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="424">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="425">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="426">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="427">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="428">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="429">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="430">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="431">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="432">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="433">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="434">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="435">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="436">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="437">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="438">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="439">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="440">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="441">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="442">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="443">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="444">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="445">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="446">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="447">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="448">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="449">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="450">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="451">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="452">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="453">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="454">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="455">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="456">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="457">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="458">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="459">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="460">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="461">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="462">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="463">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="464">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="465">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="466">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="467">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="468">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="469">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="470">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="471">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="472">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="473">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="474">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="475">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="476">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="477">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="478">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="479">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="480">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="481">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="482">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="483">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="484">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="485">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="486">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="487">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="488">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="489">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="490">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="491">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="492">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="493">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="494">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="495">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="496">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="497">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="498">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="499">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="500">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="501">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="502">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="503">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="504">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="505">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="506">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="507">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="508">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="509">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="510">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="511">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="512">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="513">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="514">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="515">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="516">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="517">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="518">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="519">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="520">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="521">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="522">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="523">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="524">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="525">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="526">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="527">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="528">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="529">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="530">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="531">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="532">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="533">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="534">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="535">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="536">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="537">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="538">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="539">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="540">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="541">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="542">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="543">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="544">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="545">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="546">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="547">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="548">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="549">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="550">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="551">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="552">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="553">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="554">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="555">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="556">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="557">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="558">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="559">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="560">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="561">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="562">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="563">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="564">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="565">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="566">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="567">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="568">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="569">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="570">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="571">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="572">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="573">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="574">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="575">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="576">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="577">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="578">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="579">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="580">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="581">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="582">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="583">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="584">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="585">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="586">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="587">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="588">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="589">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="590">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="591">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="592">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="593">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="594">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="595">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="596">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="597">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="598">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="599">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="600">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="601">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="602">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="603">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="604">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="605">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="606">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="607">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="608">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="609">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="610">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="611">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="612">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="613">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="614">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="615">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="616">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="617">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="618">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="619">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="620">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="621">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="622">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="623">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="624">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="625">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="626">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="627">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="628">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="629">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="630">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="631">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="632">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="633">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="634">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="635">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="636">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="637">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="638">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="639">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="640">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="641">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="642">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="643">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="644">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="645">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="646">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="647">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="648">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="649">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="650">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="651">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="652">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="653">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="654">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="655">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="656">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="657">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="658">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="659">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="660">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="661">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="662">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="663">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="664">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="665">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="666">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="667">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="668">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="669">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="670">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="671">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="672">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="673">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="674">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="675">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="676">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="677">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="678">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="679">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="680">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="681">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="682">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="683">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="684">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="685">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="686">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="687">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="688">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="689">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="690">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="691">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="692">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="693">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="694">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="695">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="696">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="697">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="698">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="699">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="700">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="701">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="702">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="703">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="704">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="705">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="706">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="707">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="708">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="709">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="710">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="711">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="712">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="713">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="714">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="715">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="716">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="717">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="718">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="719">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="720">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="721">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="722">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="723">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="724">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="725">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="726">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="727">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="728">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="729">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="730">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="731">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="732">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="733">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="734">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="735">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="736">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="737">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="738">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="739">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="740">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="741">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="742">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="743">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="744">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="745">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="746">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="747">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="748">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="749">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="750">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="751">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="752">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="753">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="754">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="755">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="756">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="757">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="758">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="759">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="760">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="761">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="762">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="763">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="764">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="765">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="766">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="767">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="768">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="769">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="770">
+			<text>Previous</text>
+		</Macroline>
+		<Macroline index="771">
+			<text>Store Group 998 /merge ; Store Group 999 /remove</text>
+		</Macroline>
+		<Macroline index="772">
+			<text>MAtricksReset</text>
+		</Macroline>
+		<Macroline index="773">
+			<text>ClearSelection</text>
+		</Macroline>
+		<Macroline index="774">
+			<text>Group 998</text>
+			<info>Get The New Selection</info>
+		</Macroline>
+		<Macroline index="775">
+			<text>Delete Group 998 + 999 /noconfirm</text>
+			<info>CleanUp</info>
+		</Macroline>
+	</Macro>
+</MA>

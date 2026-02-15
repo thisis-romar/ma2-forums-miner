@@ -3,6 +3,20 @@
   "author": "Duplicate ttjm1997",
   "post_date": null,
   "post_text": "March 15, 2016 at 7:16 PM#1Hello all,I'm looking for a macro that can change how many parts my color and dim bumps are.So if i press 2part it would make my color bumps a 2part bump and if i press 3part it would make my bumps 3parts.is this possible, and how would this be?thank you in advance.TimThe Netherlands",
+  "posts": [
+    {
+      "author": "Duplicate ttjm1997",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 15, 2016 at 7:16 PM#1Hello all,I'm looking for a macro that can change how many parts my color and dim bumps are.So if i press 2part it would make my color bumps a 2part bump and if i press 3part it would make my bumps 3parts.is this possible, and how would this be?thank you in advance.TimThe Netherlands"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 15, 2016 at 7:59 PM#2Unfortunately macros cannot perform real magic.Macros may however be used to create an illusion, which is most likely what you may have seen...here's one way...create 2parts on one pagecreate 3parts on the same execs on another pagelabel your executors with names that includes 2part or 3parte.g.Red 2partRed 3partBlue 2partBlue 3partetcCreate macros that Fix'es any executor with either 2part or 3part in their name2part macro:Fix On Executor *.*2part3part macro:Fix On Executor *.*3part"
+    }
+  ],
   "replies": 0,
   "thread_id": "51900",
   "title": "Macro to change cue parts",

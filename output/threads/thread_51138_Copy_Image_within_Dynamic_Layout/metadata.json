@@ -3,6 +3,32 @@
   "author": "00enter",
   "post_date": null,
   "post_text": "February 8, 2016 at 10:11 AM#1So, I use layouts when I punt. What I'm trying to do (and have seen done successfully) is to have an image copied to whichever object I have currently selected in my layout, e.g. a color, position, gobo, etc.I have my image chosen that I would like to use, but I can't figure out how to get it to only be copied to one object within a layout, and then when I select another object, have the first return to it's original image.Thoughts?",
+  "posts": [
+    {
+      "author": "00enter",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 8, 2016 at 10:11 AM#1So, I use layouts when I punt. What I'm trying to do (and have seen done successfully) is to have an image copied to whichever object I have currently selected in my layout, e.g. a color, position, gobo, etc.I have my image chosen that I would like to use, but I can't figure out how to get it to only be copied to one object within a layout, and then when I select another object, have the first return to it's original image.Thoughts?"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 8, 2016 at 1:16 PM#2copy image x to image y /oie : button 1 ,assign image is 1, green image is 2 , red image is 3 : copy image 2 at 1 will turn your button green, copy image 3 at 1 turn it red.in other button you'll have to insert these commands : button 2 : copy image 3 at 1 to turn your button 1 red"
+    },
+    {
+      "author": "00enter",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 8, 2016 at 2:08 PM#3I see the error I've been making. I've been using \"empty\" images and then simply filling the background color to make my buttons, instead of having images of colors. I'll have a go at this and see what happens.Thank you!"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 8, 2016 at 2:40 PM#4assignedd image at layout object is linked by number or name. If you change one of these, you loose the link"
+    }
+  ],
   "replies": 0,
   "thread_id": "51138",
   "title": "Copy Image within Dynamic Layout",

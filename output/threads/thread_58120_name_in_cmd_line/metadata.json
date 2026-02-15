@@ -3,6 +3,44 @@
   "author": "Martijnsummer",
   "post_date": null,
   "post_text": "April 14, 2017 at 12:31 PM#1Hi,it is a bug or a feature?this commandline does not work. Does anyone have some suggestions?Setuservar $Name (\"Set name\")Assign Executor $Selectedexec cue 1 /cmd=\"off exec $\"Name[color=#FF0000]\"\"[/color]thanks a lotwith kind regards,Martijn",
+  "posts": [
+    {
+      "author": "Martijnsummer",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 14, 2017 at 12:31 PM#1Hi,it is a bug or a feature?this commandline does not work. Does anyone have some suggestions?Setuservar $Name (\"Set name\")Assign Executor $Selectedexec cue 1 /cmd=\"off exec $\"Name[color=#FF0000]\"\"[/color]thanks a lotwith kind regards,Martijn"
+    },
+    {
+      "author": "PinceDeCrabe",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 14, 2017 at 4:07 PM#2Setuservar $NameAssign Executor $Selectedexec cue 1 /cmd=\"off exec $Name\"work fine"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 15, 2017 at 4:38 PM#3you cannot use quotes inside quotes.Assign Executor $Selectedexec cue 1 /cmd=\"off exec $Name\"is valid, but requires name to be unique and without spaces.be however aware that the variable called $Name will not be resolved during the Assign syntax (as it is inside quotes) and the CMD will literally be \"off exec $Name\", thus the variable gets resolved first when cue is run and CMD is executed"
+    },
+    {
+      "author": "I-allu-I",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "November 23, 2017 at 9:28 AM#4Hi,Did we get any solution for this?Thanks in advance-Alex"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "November 25, 2017 at 2:29 AM#5Setvar $cmd = \"Off Exec \"Addvar $cmd = $\"Name\"Assign Cue x /cmd=$\"cmd\""
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "November 27, 2017 at 11:11 PM#6HiAvoid space in names if you want to use macros and variables.Use underline : my_name"
+    }
+  ],
   "replies": 0,
   "thread_id": "58120",
   "title": "name in cmd line",

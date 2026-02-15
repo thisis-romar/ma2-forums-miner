@@ -3,6 +3,26 @@
   "author": "bigbobmegadeth",
   "post_date": null,
   "post_text": "October 23, 2014 at 7:52 AM#1Hi all,I've searched the forum and RTFM but I can't seem to figure out a macro that will let me select fixtures that are actively using a given preset.For example, I want to select all my fixtures that are using the \"blue\" color preset.Thank you in advance!",
+  "posts": [
+    {
+      "author": "bigbobmegadeth",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 23, 2014 at 7:52 AM#1Hi all,I've searched the forum and RTFM but I can't seem to figure out a macro that will let me select fixtures that are actively using a given preset.For example, I want to select all my fixtures that are using the \"blue\" color preset.Thank you in advance!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 23, 2014 at 9:15 PM#2the IfOutput keyword should do the job?http://help.malighting.com/view/?page=ref…eyword_IfOutput"
+    },
+    {
+      "author": "bigbobmegadeth",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 24, 2014 at 2:09 AM#3Ah, thank you. I'm silly. For some reason I was stuck on the IfActive command, thinking that had to be it."
+    }
+  ],
   "replies": 0,
   "thread_id": "43927",
   "title": "Macro to select active fixtures using a specific preset?",

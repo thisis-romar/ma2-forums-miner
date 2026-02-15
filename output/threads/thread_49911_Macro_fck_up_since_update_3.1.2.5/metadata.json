@@ -2,36 +2,41 @@
   "assets": [
     {
       "checksum": "sha256:fbc886016644849b1357a02fcc3e1abb8d6ae67d8db4566051fab58285dad080",
-      "download_count": 98,
+      "download_count": 106,
       "filename": "74 P10 Color Pulse _.xml",
+      "post_number": 3,
       "size": 7397,
       "url": "https://forum.malighting.com/file-download/3875/"
     },
     {
       "checksum": "sha256:15330de2f156f62183bb8df434bedc4de51b59b04730d39bde25e9b9146e7687",
-      "download_count": 78,
+      "download_count": 87,
       "filename": "49 RGB CTO + 72.xml",
+      "post_number": 3,
       "size": 862,
       "url": "https://forum.malighting.com/file-download/3876/"
     },
     {
       "checksum": "sha256:445108559987a8c26788f3eca4bfdd6c6971a72498447cee1150ae00b9d109cd",
-      "download_count": 99,
+      "download_count": 107,
       "filename": "50 RGB CTO + 144.xml",
+      "post_number": 3,
       "size": 868,
       "url": "https://forum.malighting.com/file-download/3877/"
     },
     {
       "checksum": "sha256:135b3ad965fc873819ef27b95c09f92d1d21dfa55ac7e985452397b071d5e249",
-      "download_count": 88,
+      "download_count": 96,
       "filename": "51 RGB CTO + 216.xml",
+      "post_number": 3,
       "size": 868,
       "url": "https://forum.malighting.com/file-download/3878/"
     },
     {
       "checksum": "sha256:8b7821496de87700b1b55d4727fcb8e8669f55bb661516f0d612fc5122877517",
-      "download_count": 93,
+      "download_count": 101,
       "filename": "52 RGB CTO + 288.xml",
+      "post_number": 3,
       "size": 868,
       "url": "https://forum.malighting.com/file-download/3879/"
     }
@@ -39,6 +44,74 @@
   "author": "GSnoodePlannen",
   "post_date": null,
   "post_text": "November 18, 2015 at 4:17 PM#1I've made a macro to delete old, create and store new effects. Before the update I would start my macro, after a few lines it starts a second macro, which would run from first untill the last line, and after that the first macro would continue where it started.Commandline feedback looks like this:Go macro 1macro 1 line 1: ....macro 1 line 2 : go macro 2macro 2 line 1 : ....macro 2 line 2 : ....macro 2 line 3 : ....macro 2 line 4 : ....(end of macro 2)macro 1 line 3 : ....macro 1 line 4 : ....etc.After the update something changed with the timing, and I can't find the solution.Whenever I start the first macro, it starts like it should, but when it starts the second macro both macros run at the same time. Commandline feedback looks like this:Go macro 1macro 1 line 1 : ....macro 1 line 2 : go macro 2macro 2 line 1 : ....macro 1 line 3 : ....macro 2 line 2 : ....macro 1 line 4 : ...macro 2 line 3 : ....macro 1 line 5 : ....macro 2 line 4 : ....(end of macro 2)macro 1 line 6 : ....macro 1 line 7 : ....etc.Does anyone know how to solve this?",
+  "posts": [
+    {
+      "author": "GSnoodePlannen",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 18, 2015 at 4:17 PM#1I've made a macro to delete old, create and store new effects. Before the update I would start my macro, after a few lines it starts a second macro, which would run from first untill the last line, and after that the first macro would continue where it started.Commandline feedback looks like this:Go macro 1macro 1 line 1: ....macro 1 line 2 : go macro 2macro 2 line 1 : ....macro 2 line 2 : ....macro 2 line 3 : ....macro 2 line 4 : ....(end of macro 2)macro 1 line 3 : ....macro 1 line 4 : ....etc.After the update something changed with the timing, and I can't find the solution.Whenever I start the first macro, it starts like it should, but when it starts the second macro both macros run at the same time. Commandline feedback looks like this:Go macro 1macro 1 line 1 : ....macro 1 line 2 : go macro 2macro 2 line 1 : ....macro 1 line 3 : ....macro 2 line 2 : ....macro 1 line 4 : ...macro 2 line 3 : ....macro 1 line 5 : ....macro 2 line 4 : ....(end of macro 2)macro 1 line 6 : ....macro 1 line 7 : ....etc.Does anyone know how to solve this?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 18, 2015 at 6:01 PM#2maybe this solution could work for youin the line of macro 1 where you start macro 2, halt macro 1 by entering \"Go\" in the wait columnadd a line to macro 2 where you resume macro 1 (Go Macro 1)"
+    },
+    {
+      "author": "GSnoodePlannen",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 18, 2015 at 6:33 PM#3Thanks for the quick reply!That could be a solution, but it would mean a shitload of programming, and I'll have to press go about 1000 times because of the way I made the macros.I also could program a wait in the main macro after it starts the other macro, but that would be a shitload of programming as wellHoping that it could be solved by adjusting something in setup or something like that.I´ve attached the largest macros. It should create an effect with five steps.The first number is where it should be stored, and \"74 P10 Color Pulse\" is the one that starts the sequence.Before starting the macro, store a few fixtures at group 224 thru 228. The effect made will affect these groups.Files74 P10 Color Pulse _.xml7.4 kB – 106 Downloads49 RGB CTO + 72.xml862 Byte – 87 Downloads50 RGB CTO + 144.xml868 Byte – 107 Downloads51 RGB CTO + 216.xml868 Byte – 96 Downloads52 RGB CTO + 288.xml868 Byte – 101 Downloads"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "November 18, 2015 at 7:03 PM#4maybe a solution could be to edit your macros 49 thru 52 to each only containing one line:e.g.CodeAttribute \"colorrgb*\" + \"cto\" At Effectphase 216"
+    },
+    {
+      "author": "GSnoodePlannen",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "November 18, 2015 at 7:29 PM#5That does work, and a lot less programming.But do you know if something changed in the last update? Because before the update it worked perfectly..."
+    },
+    {
+      "author": "NComeaux7112",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "February 7, 2018 at 7:47 PM#6Howdy,Has anyone come across a solution to this problem? We upgraded to 3.2.2.16 a good while back, but I only started having issues with my macro timing within the last couple of months. In some macros the wait times  I plug in work fine in seconds, but in other macros I have to multiply the value by 10 to get close to what I want...does anyone have a solution, or know if any of the more current updates address this issue?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "February 8, 2018 at 12:34 AM#7Have you tried updating to v3.3.4.3?"
+    },
+    {
+      "author": "NComeaux7112",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "August 21, 2018 at 3:26 PM#8UPDATE as of v3.3.4.3After much banging our heads on a brick wall, we finally figured out what our problem was. It is still not fixed for us so I don't know if there's a syntax problem on our end or if this is a setting we don't know or maybe it's just a bug. To recap here's the macro structure we have:Macro 1 Line 1 : Prompt for a passcodeMacro 1 Line 2 : If passcode is correct, run macro 2Macro 2 Line 1 : Group 1 At FullMacro 2 Line 2 : Park Group 1Macro 2 Line 3 : ClearAllEach line in Macro 2 had a 1 Second wait on it. What we realized was that the wait time for macro 2 line 1 started as soon as Macro 1 was fired. As a result, if the operator took more than 1 second to type in the prompt then Macro 2 Line 1's wait would be negated and Line 1 and 2 would fire simultaneously. We set the wait time for Macro 2 Line 1 to 10 seconds and were able to see that however long we took to enter the prompt in macro 1 was subtracted from the wait time in Macro 2 Line 1.A workaround or fix would be awesome, this problem tracks between computers and doesn't matter where the macro is in the pool for us.Thanks!"
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "August 21, 2018 at 5:31 PM#9Wait times? Hm. Maybe there has been something changed the way that macros do not wait for things to complete. That's definately the case. Using operations that change things like groups or select worlds need a wait to complete the task. In general a few hundrets of seconds should be enough.In the case the user has to enter anything, the macro definately waits for the input. I do use this in 3.3.4.3 and it works.Codesetuservar $pass = (please enter passcode)[$pass == \"correct passcode\"] go macro 2This should prompt for an input and only if the input is closed with a \"please\" the macro will continue with line 2. In other case the macro will stop.To reduce coding you could also to a counting loop 'cause that's what you macro does.Codesetuservar $effect=16go macro 49...store ...adduservar $effect=1[$effect <= 24] go macro 1.1.2The last line calls the macro 1 again but starts at line 2, so the uservar $effect is not reset to 16 and the macro runs for another effect. In your specific case you will need more variables to increase all the values like phase etc. in the next loop.If you want to keep the macro it's easy to do a search&replace in the xml-file and then reimport the macro into the showfile. This makes replacing \"go macro 49\" by \"Attribute \"colorrgb*\" + \"cto\" At Effectphase 216\" a fast and easy job.Gralf"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "August 21, 2018 at 5:32 PM#10From your description, and what I can see from testing, a simple work around should be to insert an extra empty macroline as line 1, (with the same wait-time of 1 second as the original line 1), then it wouldn't matter if line 1&2 is executed at the same time, as line 1 is empty and line 2 contains the syntax of the original line 1."
+    },
+    {
+      "author": "NComeaux7112",
+      "post_date": null,
+      "post_number": 11,
+      "post_text": "August 21, 2018 at 5:52 PM#11glad that simple fix worked perfectly! I added a first blank line with a wait of 1s in Macro 2 to negate the timing issue. Thanks for the help! I would still love to find out why the timing overlaps like that, it doesn't seem like the most intuitive way for macros to interact"
+    }
+  ],
   "replies": 0,
   "thread_id": "49911",
   "title": "Macro f*ck up since update 3.1.2.5",

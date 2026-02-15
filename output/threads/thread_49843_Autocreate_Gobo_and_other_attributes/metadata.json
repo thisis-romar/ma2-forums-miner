@@ -3,6 +3,20 @@
   "author": "Ronnie Hulshof",
   "post_date": null,
   "post_text": "November 14, 2015 at 9:39 AM#1Hi top Light engineers,i found many ways to do a create for colors but is there a way to make a Macro that creates the Gobo collection of selected fixtures or a Group ? and saved this to the gobo pool. ? also for beam etc.kind reagardsRonnie Hulshof",
+  "posts": [
+    {
+      "author": "Ronnie Hulshof",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 14, 2015 at 9:39 AM#1Hi top Light engineers,i found many ways to do a create for colors but is there a way to make a Macro that creates the Gobo collection of selected fixtures or a Group ? and saved this to the gobo pool. ? also for beam etc.kind reagardsRonnie Hulshof"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 18, 2015 at 11:10 PM#2Have a look at the auto-create menu inside the setup, this does exactly what you want without writing complicated macros"
+    }
+  ],
   "replies": 0,
   "thread_id": "49843",
   "title": "Autocreate Gobo and other attributes",

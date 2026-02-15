@@ -3,6 +3,92 @@
   "author": "Vlad7",
   "post_date": null,
   "post_text": "January 27, 2017 at 2:38 PM#1Hey guys!I'm not able to create new variable...Ex:setvar $allred= image 1 + 2 + 3 + 4In the command line it appeas like this:Executig: SetVar (in green) $allred= Image (in green) 1 + 2 + 3 + 4(All the + mark are in green too)But when i write Listvar in the commandline .. i didn't see my new $allred variable in the list..Any idea..i mean..every variable i try to add it doesn't work at all..thanks guy!",
+  "posts": [
+    {
+      "author": "Vlad7",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 27, 2017 at 2:38 PM#1Hey guys!I'm not able to create new variable...Ex:setvar $allred= image 1 + 2 + 3 + 4In the command line it appeas like this:Executig: SetVar (in green) $allred= Image (in green) 1 + 2 + 3 + 4(All the + mark are in green too)But when i write Listvar in the commandline .. i didn't see my new $allred variable in the list..Any idea..i mean..every variable i try to add it doesn't work at all..thanks guy!"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 27, 2017 at 2:45 PM#2You need to enclose the entire string in quotes. setvar $allred = \"image 1 + 2 + 3 + 4\""
+    },
+    {
+      "author": "Vlad7",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 27, 2017 at 5:41 PM#3Thanks a lot..works fine !!!"
+    },
+    {
+      "author": "Vlad7",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "January 30, 2017 at 12:51 AM#4Well.. i don't know why but it doesn't work with this line..SetVar $allblue=''image 585  + 601  + 617  + 633  + 649''thanks!"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "January 30, 2017 at 1:10 AM#5Define \"doesn't work.\" That line produces a syntax error? Or the variable gets defined, but isn't defined as what you think it's supposed to be? Or it gets defined as you think it should, but then doesn't work as you expect when you recall the value?"
+    },
+    {
+      "author": "Vlad7",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "January 30, 2017 at 1:25 AM#6Hi,I don't see my variable $allblue in the list when i wrote listvar..But there's no syntax error when I create it!Also, the variable doesn't work when i use it in a macro .."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "January 30, 2017 at 2:17 AM#7Did you do SetUserVar by any chance?If you type it into the command line directly, and then do ListVar, does it still not show up?"
+    },
+    {
+      "author": "Vlad7",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "January 30, 2017 at 2:51 AM#8nop nothing with this line..SetUserVar $allblue= ''  Image 585  + 601  + 617  + 633  + 649''"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "January 30, 2017 at 3:17 AM#9Whoa, hold on a sec there. I think you might need to go through theVariables tutorialagain. (Also, maybe take a look atthis webinar(open link in new tab)).There are global variables and user variables. Set/Add/ListVar deal with global variables. Set/Add/ListUserVar deal with user variables. If you do SetUserVar, you won't see the resulting variable with ListVar, because you created a user variable, but are listing global variables."
+    },
+    {
+      "author": "Vlad7",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "January 30, 2017 at 4:01 AM#10Well, i understand the difference..i'm not able anymore to set new ''setvar''...even a simply line like this:SetVar $chase=''executor 101 + 102 + 103''"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 11,
+      "post_text": "January 30, 2017 at 2:28 PM#11So when you execute Setvar $chase=\"Executor 101 + 102 + 103\" and then type Listvar, your command line doesn't show you the variable $chase? What user rights does the user you're logged-in as have? When was the last time you saved and reloaded your showfile? Or restarted the console / onPC you're working on?"
+    },
+    {
+      "author": "Vlad7",
+      "post_date": null,
+      "post_number": 12,
+      "post_text": "January 30, 2017 at 2:32 PM#12Well..look like everything works this mornig after a reboot of my laptop..But i do the same than yesterday!!Weirds!!"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 13,
+      "post_text": "January 30, 2017 at 3:26 PM#13Turn if off and on again. Works every time!!"
+    },
+    {
+      "author": "Vlad7",
+      "post_date": null,
+      "post_number": 14,
+      "post_text": "January 30, 2017 at 5:43 PM#14Haha!Thanks for your help Ryan!"
+    }
+  ],
   "replies": 0,
   "thread_id": "56829",
   "title": "setvar $   Question",

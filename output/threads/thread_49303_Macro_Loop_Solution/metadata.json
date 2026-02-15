@@ -3,6 +3,14 @@
   "author": "Jipi",
   "post_date": null,
   "post_text": "October 18, 2015 at 10:29 PM#1Hifor loop macro in v3.1.2.5 try this:line 22= My first line of the loopline 28= AddUserVar $loopstart=1line 29= [$loopstart>$loopend] Go macro 1.\"mymacro\".31line 30= [$loopstart<=$loopend] Go macro 1.\"mymacro\".22 Thru 30line 31= ClearAll (this is my line after the loop)JP C.French Light Opérator",
+  "posts": [
+    {
+      "author": "Jipi",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 18, 2015 at 10:29 PM#1Hifor loop macro in v3.1.2.5 try this:line 22= My first line of the loopline 28= AddUserVar $loopstart=1line 29= [$loopstart>$loopend] Go macro 1.\"mymacro\".31line 30= [$loopstart<=$loopend] Go macro 1.\"mymacro\".22 Thru 30line 31= ClearAll (this is my line after the loop)JP C.French Light Opérator"
+    }
+  ],
   "replies": 0,
   "thread_id": "49303",
   "title": "Macro Loop Solution",

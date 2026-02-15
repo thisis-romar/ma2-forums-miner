@@ -3,6 +3,20 @@
   "author": "sjorse1996",
   "post_date": null,
   "post_text": "April 12, 2016 at 8:58 AM#1hi you all!i''m looking for a macro that makes a chase of a cuestack and back.for exemple:seq x has 3 cue's that are selected so i can go+ them.after some tapping i want to set a ''switch'' so a chase take over the tapping of the go+ buttonany idea's?thanks allreadySjors ErkelandLight Design and OperatingALE Light & Sound",
+  "posts": [
+    {
+      "author": "sjorse1996",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 12, 2016 at 8:58 AM#1hi you all!i''m looking for a macro that makes a chase of a cuestack and back.for exemple:seq x has 3 cue's that are selected so i can go+ them.after some tapping i want to set a ''switch'' so a chase take over the tapping of the go+ buttonany idea's?thanks allreadySjors ErkelandLight Design and OperatingALE Light & Sound"
+    },
+    {
+      "author": "sebmdp",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 12, 2016 at 11:44 AM#2Hi,An executor can become a chase with this command :assign exec x /chaser=onBy keeping to hit your go+ while your executor is a sequence you might launch this macro when you want that your exec becomes a chase and vice versa.Codeassign exec x /chaser=on ........................followLabel macro M \"Chaser Off\" ........................goassign exec x /chaser=Off ........................followLabel macro M \"Chaser On\" ........................followHope this helpRegards.Sebastien"
+    }
+  ],
   "replies": 0,
   "thread_id": "52425",
   "title": "Macro for chase or cuestack",

@@ -3,6 +3,62 @@
   "author": "HillaryKnox",
   "post_date": null,
   "post_text": "May 12, 2016 at 11:57 PM#1So, this is completely based in laziness, but...Would there be a syntax for a macro that deletes a sequence currently assigned to an executor? Ideally like like to be able to hit <Macro> <any button on an executor> and have it delete the sequence assigned to that executor.",
+  "posts": [
+    {
+      "author": "HillaryKnox",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 12, 2016 at 11:57 PM#1So, this is completely based in laziness, but...Would there be a syntax for a macro that deletes a sequence currently assigned to an executor? Ideally like like to be able to hit <Macro> <any button on an executor> and have it delete the sequence assigned to that executor."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 13, 2016 at 2:12 AM#2Methinks you're looking at LUA for this."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 14, 2016 at 12:40 AM#3Have you triedDelete cue * @"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 14, 2016 at 1:53 AM#4Ooo, nice. \"Delete Cue Thru @\" would work as well."
+    },
+    {
+      "author": "HillaryKnox",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 23, 2016 at 5:15 PM#5Awesome. Is there a way to incorporate the idea of /nc into that, so it doesn't ask me if I want to do it cue only or normal, it just does it? Because having to hit Please one extra time is just killing me. Not really, but since we're talking about it...I didn't realize till just this moment that a sequence couldn't exist without a single cue in it..."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "May 23, 2016 at 5:24 PM#6Sure. Delete /nc Cue Thru @"
+    },
+    {
+      "author": "HillaryKnox",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "May 23, 2016 at 5:28 PM#7ah I had the /nc in the wrong place...subject closed. Thanks!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "May 23, 2016 at 6:20 PM#8It doesn't mather where you put the /options, these are automatically moved to the end, when syntax is executed, to allow for the workflow discussed in this thread./nc Delete Cue Thru @Delete /nc Cue Thru @Delete Cue Thru /nc  @Delete Cue  /nc Thru @it does however mather where you put the @ (needs to be at the end)"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "May 23, 2016 at 6:27 PM#9True. In my head, it makes the most sense to have them either at the very end, or right after the action."
+    }
+  ],
   "replies": 0,
   "thread_id": "53016",
   "title": "Delete sequence",

@@ -3,6 +3,56 @@
   "author": "Disni",
   "post_date": null,
   "post_text": "May 15, 2019 at 1:14 PM#1Hey Hive Mind..I wonder, is there a way to create a macro to swap a specific fixture's Instances?For example, I have a fixture with 4 separate tilts, and I want to have the option to decide which TILT is the 1st, 2nd.. etc.So if I have fixture X.1/ X.2/ X.3/ X.4, where naturally, each Instance has a specific DMX channel in the dmx data sheet, so for example .1 is channels 11+12, .2 is 13+14, and so on, and I want to have .2 on channels 11+12 and .1 on 13+14..Anyone has a quick hack for this perhaps?Much appreciated..Denis",
+  "posts": [
+    {
+      "author": "Disni",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 15, 2019 at 1:14 PM#1Hey Hive Mind..I wonder, is there a way to create a macro to swap a specific fixture's Instances?For example, I have a fixture with 4 separate tilts, and I want to have the option to decide which TILT is the 1st, 2nd.. etc.So if I have fixture X.1/ X.2/ X.3/ X.4, where naturally, each Instance has a specific DMX channel in the dmx data sheet, so for example .1 is channels 11+12, .2 is 13+14, and so on, and I want to have .2 on channels 11+12 and .1 on 13+14..Anyone has a quick hack for this perhaps?Much appreciated..Denis"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 16, 2019 at 2:22 AM#2I'd imagine you'd have to do it in the fixture profile but without seeing how the instance manager/course channels are organized, wouldn't know what needs to be changed."
+    },
+    {
+      "author": "Disni",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 16, 2019 at 11:35 AM#3Thanks Kai,I am talking about a fixture named \"IVL Carre\" by Minuit Une.It is as follows (pictures of the fixture file and instance manager attached):.2 (TILT 1) - DMX 11+12.3 (TILT 2) - DMX 13+14.4 (TILT 3) - DMX 15+16.5 (TILT 4) - DMX 17+18So I want to find a quick and efficient way to change the physical tilt in relation to the instance..So for example, If I set TILT 3 to be instance .2TILT 4 will move to instance .3TILT 1 instance .4TILT 2 instance .5It is indeed a manipulation in the fixture file itself, not sure how to do that though..Thanks,DImagesModule TILT Manager.jpg137.24 kB1,456 × 756Instance Manager.jpg130.39 kB1,462 × 754"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 17, 2019 at 12:32 AM#4HiStore a group with the order you want and use it to recall your 4 instances ?Why dou you want to swap ?"
+    },
+    {
+      "author": "Disni",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 17, 2019 at 12:42 PM#5If you are familiar with the fixture, it will be easier to understand..But mainly because if for example you arrive at a venue, and you find out that the IVLs were hanged in a certain orientation, meaning that in the original design the screen panel of the fixture (meaning, TILT 1 or .2) should face down, and physically it is facing left for example, then some cues, especially in terms of position and symmetry, are all messed up.A macro to determine that, should theoretically solve this issue..It is something in the likes of pan/tilt invert in a standard moving head fixture, but I guess a step further for an instance invert.."
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "May 20, 2019 at 5:36 AM#6so normally when a fixture is hung the opposite direction from how it was programmed using previs, you can swap the fixture profile from the desk. christian jackson has avideoexplaining it, but essentially you just reverse the addresses for the fixtures instances.this situation may be a bit different, however, in that you have multiple tilt instances (odd), but in theory it should still work if you just swap the addresses for the tilt attributes to correspond to how they are hung in real life. alternatively, most fixtures will have a menu option to reverse pixel/tilt when this is possible (x4 20 bar, chorus line 16, colorforces)"
+    },
+    {
+      "author": "Disni",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "May 22, 2019 at 6:51 AM#7Yep. that I know, and that is exactly what I want to do.But is there a shortcut in the style of a Macro to do that?That is the question...But thanks anyway.."
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "May 25, 2019 at 4:57 AM#8not to my knowledge but entirely possible..."
+    }
+  ],
   "replies": 0,
   "thread_id": "63948",
   "title": "Macro to swap a fixture's instance?",

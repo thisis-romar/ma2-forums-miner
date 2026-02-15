@@ -3,6 +3,20 @@
   "author": "ambulance23",
   "post_date": null,
   "post_text": "July 25, 2017 at 5:11 PM#1Is it possible to check if the single X in a MATricks is bigger than 1?I tried: [Interleave.=>1] setuservar $Test1 at 1. But it sets always $Test1 at 1",
+  "posts": [
+    {
+      "author": "ambulance23",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 25, 2017 at 5:11 PM#1Is it possible to check if the single X in a MATricks is bigger than 1?I tried: [Interleave.=>1] setuservar $Test1 at 1. But it sets always $Test1 at 1"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 27, 2017 at 9:18 PM#2What do you want to achieve? The syntax you are using doesn't make sense for the console, you are now referencing a variable which might not even exist in your show, the syntax you wrote here can be used to hang an action after a certain value, in your case 1For example:Setuservar $interleave=(\"value 0 thru 255\")would ask for a value and set the newly created variable  to the choosen value[$interleave==2] MAtricksinterleave 2checks if the value of the variable $interleave is 1 and executes the assigned action; in this case it sets the MAtricks Interleave at 2As far as i know there is no command to check if the singleX is higher than 1, however you could reset the entire MAtricks engine with this command; \"MAtricksReset\" this will set everything to 0 and than you can start fresh"
+    }
+  ],
   "replies": 0,
   "thread_id": "59120",
   "title": "MATricks single",

@@ -3,6 +3,20 @@
   "author": "BluE",
   "post_date": null,
   "post_text": "August 26, 2016 at 11:02 AM#1Hey there,let's say I have a Fixure with a 5x5 LED Matrix. It has 26 Instances (.1 main instances .2 -.26 rgb LED)I want to autocreate my 25 LED Instances as a 5x5 Matrix in my Group view.My problem looks like this.Storing the first Instance of the first fixture works fine.But when i try to increase the FixtureID it screws up the ID. My Syntax looks like thisFixture $fixIDStore Group $groupIDaddvar $fixIDaddvar $groupIDAfter that there is a condition which loops the macro until the condition is no longer fullfilled.lets say I Start with Fixure 101.1. It is stored in Group 1Now i Increase the $fixID by 1Problem: $fixID now has the value 102.10000 and not 102.1 so now my macro starts storing empty groups because there is no fixture 102.10000.So basicly the problem is the macro adds 0s to my variable.Any Ideas how to solve this problem. (Autocreate the Groups in the SetupWindow will not do what I want to achieve)Thanks in advance",
+  "posts": [
+    {
+      "author": "BluE",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 26, 2016 at 11:02 AM#1Hey there,let's say I have a Fixure with a 5x5 LED Matrix. It has 26 Instances (.1 main instances .2 -.26 rgb LED)I want to autocreate my 25 LED Instances as a 5x5 Matrix in my Group view.My problem looks like this.Storing the first Instance of the first fixture works fine.But when i try to increase the FixtureID it screws up the ID. My Syntax looks like thisFixture $fixIDStore Group $groupIDaddvar $fixIDaddvar $groupIDAfter that there is a condition which loops the macro until the condition is no longer fullfilled.lets say I Start with Fixure 101.1. It is stored in Group 1Now i Increase the $fixID by 1Problem: $fixID now has the value 102.10000 and not 102.1 so now my macro starts storing empty groups because there is no fixture 102.10000.So basicly the problem is the macro adds 0s to my variable.Any Ideas how to solve this problem. (Autocreate the Groups in the SetupWindow will not do what I want to achieve)Thanks in advance"
+    },
+    {
+      "author": "BluE",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 26, 2016 at 11:25 AM#2nevermind, I found a workaroundFor those who are interested.You have to seperate the FixID and the InstanceIDso if you have fixture 101.1 you need to variables$FixID 101 (which is 101)and $InstID (which is 1)$FixID.$InstID works fine"
+    }
+  ],
   "replies": 0,
   "thread_id": "54642",
   "title": "Autocreate Groups via Macro",

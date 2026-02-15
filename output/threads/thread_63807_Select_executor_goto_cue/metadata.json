@@ -3,6 +3,32 @@
   "author": "NielsJ",
   "post_date": null,
   "post_text": "April 23, 2019 at 5:28 PM#1I have seen this work but can't seem to get the syntax correct trying to create a macro that will select the next executor I touch and goto a specific cue in the stack.",
+  "posts": [
+    {
+      "author": "NielsJ",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 23, 2019 at 5:28 PM#1I have seen this work but can't seem to get the syntax correct trying to create a macro that will select the next executor I touch and goto a specific cue in the stack."
+    },
+    {
+      "author": "Moe696",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 23, 2019 at 10:49 PM#2You could do something like this:CodeSetUserVar §gotocue=(\"Enter Cue Number\")Select @Goto Cue §gotocueOr without selecting the executor:CodeSetUserVar §gotocue=(\"Enter Cue Number\")Goto Cue §gotocue @"
+    },
+    {
+      "author": "NielsJ",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 24, 2019 at 1:34 AM#3Thank you kindly"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 25, 2019 at 2:22 PM#4HiYou can do this with buttons :[GOTO] # [exec button] (where # is cue number)It's faster than a macro."
+    }
+  ],
   "replies": 0,
   "thread_id": "63807",
   "title": "Select executor goto cue",

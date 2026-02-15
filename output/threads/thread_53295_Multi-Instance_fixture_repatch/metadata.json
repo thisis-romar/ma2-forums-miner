@@ -3,6 +3,14 @@
   "author": "TRexroat",
   "post_date": null,
   "post_text": "May 30, 2016 at 3:33 AM#1As a lot of you know, the MA Vectorworks plugin has its glitches, and one of them is multi-instance fixtures (i.e. Martin Mac Aura in extended mode, multi-cel LED strips like a Colorblaze, Colorforce, etc).I've noticed after a successful import that all the patched values import correctly, it just doesn't quite translate the fixture profile correct for multi instance fixtures. So I end up doing one of two things: either completely repatching those particular fixtures, or grabbing all of the channels in that fixture type, and remounting the fixture type, then reapply the dmx address. Either way I end up having to repatch the fixtures. And depending on who put your show together, this process can be a bear.I'm hoping that someone has an idea for a macro to solve this. I had the idea that if there's a way to write a variable that will grab what dmx address a single fixture is patched to, temporarily hold that, then remount the fixture type, and then reapply the dmx patch, one could very easily rinse and repeat for all of the channels within that fixture type (hopefully patched to the same layer).Any help would be awesome. Thanks!-T-Rex",
+  "posts": [
+    {
+      "author": "TRexroat",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 30, 2016 at 3:33 AM#1As a lot of you know, the MA Vectorworks plugin has its glitches, and one of them is multi-instance fixtures (i.e. Martin Mac Aura in extended mode, multi-cel LED strips like a Colorblaze, Colorforce, etc).I've noticed after a successful import that all the patched values import correctly, it just doesn't quite translate the fixture profile correct for multi instance fixtures. So I end up doing one of two things: either completely repatching those particular fixtures, or grabbing all of the channels in that fixture type, and remounting the fixture type, then reapply the dmx address. Either way I end up having to repatch the fixtures. And depending on who put your show together, this process can be a bear.I'm hoping that someone has an idea for a macro to solve this. I had the idea that if there's a way to write a variable that will grab what dmx address a single fixture is patched to, temporarily hold that, then remount the fixture type, and then reapply the dmx patch, one could very easily rinse and repeat for all of the channels within that fixture type (hopefully patched to the same layer).Any help would be awesome. Thanks!-T-Rex"
+    }
+  ],
   "replies": 0,
   "thread_id": "53295",
   "title": "Multi-Instance fixture repatch",

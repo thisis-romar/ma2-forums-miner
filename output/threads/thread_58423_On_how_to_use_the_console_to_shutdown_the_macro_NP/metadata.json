@@ -3,6 +3,50 @@
   "author": "Kirsliu023",
   "post_date": null,
   "post_text": "May 7, 2017 at 7:21 AM#1Dear All:on how to use the console to shutdown the macro NPU? Can it be established?Thankskirs",
+  "posts": [
+    {
+      "author": "Kirsliu023",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 7, 2017 at 7:21 AM#1Dear All:on how to use the console to shutdown the macro NPU? Can it be established?Thankskirs"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 7, 2017 at 6:07 PM#2http://help.malighting.com/view/php/searc….xml&lang=en-us"
+    },
+    {
+      "author": "Kirsliu023",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 9, 2017 at 6:06 AM#3dear:see, I do not know how to write! Could youtell me how to write it? Thank you!!!"
+    },
+    {
+      "author": "GregoryMatveev",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 10, 2017 at 11:36 PM#4Shutdown (NPU's IP) /noconfirmshould work this way"
+    },
+    {
+      "author": "Kirsliu023",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 11, 2017 at 12:50 PM#5Thanks"
+    },
+    {
+      "author": "clear_all",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "May 11, 2017 at 8:12 PM#6Only four days after your posting, this link redirects to a 404 page.Can anyone at ACT talk to MA about maybe putting the old help.malighting.com back online since so much of this forum references it?"
+    },
+    {
+      "author": "xinjiangwang",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "May 27, 2017 at 1:54 PM#7ok xiexie!"
+    }
+  ],
   "replies": 0,
   "thread_id": "58423",
   "title": "On how to use the console to shutdown the macro NPU? Can it be established?",

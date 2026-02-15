@@ -3,6 +3,38 @@
   "author": "robk82",
   "post_date": null,
   "post_text": "July 19, 2018 at 3:34 PM#1I need to create a numerical counter to keep track of things in my venue. My idea is to have the operator simply hit a layout view button or an xKey macro that will then show the amount of times that button has been hit in the layout view. This is to help us keep track of certain things that continually happen throughout the day and also shows real time information to the stage manager. Is this doable with a simple macro?My 1st thought is to have an image displayed in the layout at zero, then each time the button is hit the image will overwrite with the corresponding number. Any thoughts or suggestions of how to go about this in a easier way?Any help is appreciated.Cheers,~Rob K",
+  "posts": [
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 19, 2018 at 3:34 PM#1I need to create a numerical counter to keep track of things in my venue. My idea is to have the operator simply hit a layout view button or an xKey macro that will then show the amount of times that button has been hit in the layout view. This is to help us keep track of certain things that continually happen throughout the day and also shows real time information to the stage manager. Is this doable with a simple macro?My 1st thought is to have an image displayed in the layout at zero, then each time the button is hit the image will overwrite with the corresponding number. Any thoughts or suggestions of how to go about this in a easier way?Any help is appreciated.Cheers,~Rob K"
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 19, 2018 at 6:02 PM#2Hi!Without using any macro this could simply be done with \"Store\".Assuming Exec 201 is empty and programmer is empty, enter the following commands at commandline to create a counter-sequence:1. store cue 0.1 exec 2012. select exec 2013. assign cue 0.1 /Mode=Release4. label exec 201 \"counter\"5. assign cue 0.1 /CMD=\"store exec 201 /nc\"6. assign top ExecButton1 201Now, everytime you press the button X1 the cue 0.1 is run, adds a cue to the sequence and stops the sequence. The number of cues in the sequence is the number the button has been pressed.If you like to do it with macros, take a look at the command \"adduservar\" in the help. This will add any number to a counter-variable which another macro could use to e.g. change images inside layouts by changing/moving images inside the image-pool.Gralf"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 21, 2018 at 12:44 AM#3HiAs an exemple, try this macro.Launch it once to start the counterJust put in the command field of your cue : [color=#99FF00]Macro 1.\"counter*\".4[/color]Every time you trig your cue, macro name changes and show \"counter : #\"Macro \"Counter\"[color=#99FF00]1. SetVar $count 0;  SetVar $base \"counter : \" [color=#FFFFFF]--to start the counter[/color]2. SetVar $name $base;  AddVar $name $count3. Label Macro \"counter*\" $\"name\" [/color]  [color=#FFFF33]Wait=GO[/color][color=#99FF00]4. AddVar $count 1 [color=#FFFFFF]--line trigged by cue to increase the counter[/color]5. SetVar $name $base;  AddVar $name $count6. Label Macro \"counter*\" $\"name\"[/color]   [color=#FFFF33]Wait=GO[/color][color=#99FF00]7. Label Macro \"counter*\" \"Counter (click to start)\"[/color] --to reset"
+    },
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "July 27, 2018 at 5:35 PM#4This is exactly what I needed! It works so well. Thank you!!!!"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "July 28, 2018 at 9:17 PM#5You're welcome.Enjoy"
+    }
+  ],
   "replies": 0,
   "thread_id": "61794",
   "title": "Create a numerical counter.",

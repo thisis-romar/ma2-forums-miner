@@ -3,6 +3,38 @@
   "author": "thruvik",
   "post_date": null,
   "post_text": "September 24, 2014 at 10:57 AM#1Hi,I am wondering how to create a macro for editing values or attributes through a cuelist. Let's say I want to bring channel 1 thru 6 down 6% if their values are above 50 for the entire cuelist. For an idividual, active cue, I would make a macro which goes:IfOutput channel 1 thru 6 at 50 thruAt -6Update /cIf I would make it for a cuelist, I could add a >>> and Go Macro, to make it recursive. But how will I make the makro stop running at the end of the cuelist?",
+  "posts": [
+    {
+      "author": "thruvik",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 24, 2014 at 10:57 AM#1Hi,I am wondering how to create a macro for editing values or attributes through a cuelist. Let's say I want to bring channel 1 thru 6 down 6% if their values are above 50 for the entire cuelist. For an idividual, active cue, I would make a macro which goes:IfOutput channel 1 thru 6 at 50 thruAt -6Update /cIf I would make it for a cuelist, I could add a >>> and Go Macro, to make it recursive. But how will I make the makro stop running at the end of the cuelist?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 24, 2014 at 1:34 PM#2version 3.0.0.x introduced the Search and Replace commands exactly for this purpose.check out the releasenotes for syntax-description:http://help.malighting.com/view/topic/Top…eNotes_3_0.htmlthere is also several predefined macros for general replace scenariosyour examle case could go something like thisCodeSearch Channel 1 Thru 6 If Sequence 1finds the places in Sequence 1 where channel 1 thru 6 is presentCodeReplace At 50 Thru 100 With 44 Thru 94 If SearchresultReplaces values between 50 and 100 with values that are 6% lower, in the objects found in the previous search (ch. 1-6 /seq 1)"
+    },
+    {
+      "author": "thruvik",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 24, 2014 at 5:10 PM#3Good idea. But just for the fun of it, my ma is running 2.9.x and search is not implemented yet. Any other suggestions, other than an upgrade?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 24, 2014 at 8:56 PM#4\"If I would make it for a cuelist, I could add a >>> and Go Macro, to make it recursive. But how will I make the makro stop running at the end of the cuelist?\"let your macro add e.g. cue 9999, with cmdlinks to stop the macro  - and to delete cue 9999"
+    },
+    {
+      "author": "thruvik",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "September 24, 2014 at 10:03 PM#5Aha, good idea! I'll try that later on.Thanks."
+    }
+  ],
   "replies": 0,
   "thread_id": "43560",
   "title": "Edit all cues in a list",

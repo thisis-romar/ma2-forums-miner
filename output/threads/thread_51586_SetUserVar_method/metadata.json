@@ -3,6 +3,20 @@
   "author": "justinpma",
   "post_date": null,
   "post_text": "March 1, 2016 at 3:45 AM#1Hi,I'm experimenting about SetUserVar but can't get to a conclusion;what I want is;* Copy cue (X Copy Cue Number?) at Cue(Y Store Cue Number?)* Stomp Cue Y* Update Cue Yso basically, I just enter the numbers for Copy Cue Number and Store Cue Number.The Stomp Cue and Update Cue will follow whatever number I key in on ' Y Store Cue Number 'I tried;* SetUserVar $selectedex=( \"Store Cue Number ?\" )* Copy Cue ( Copy Cue Number?) at Cue $selectedex* Stomp Cue $selectedex* Update Cue $selectedexIt work fine,But it will popup the 'Store Cue Number ?' firstI want it to popup 'Copy Cue Number?' first then 'Store Cue Number ?'Please advice",
+  "posts": [
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 1, 2016 at 3:45 AM#1Hi,I'm experimenting about SetUserVar but can't get to a conclusion;what I want is;* Copy cue (X Copy Cue Number?) at Cue(Y Store Cue Number?)* Stomp Cue Y* Update Cue Yso basically, I just enter the numbers for Copy Cue Number and Store Cue Number.The Stomp Cue and Update Cue will follow whatever number I key in on ' Y Store Cue Number 'I tried;* SetUserVar $selectedex=( \"Store Cue Number ?\" )* Copy Cue ( Copy Cue Number?) at Cue $selectedex* Stomp Cue $selectedex* Update Cue $selectedexIt work fine,But it will popup the 'Store Cue Number ?' firstI want it to popup 'Copy Cue Number?' first then 'Store Cue Number ?'Please advice"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 1, 2016 at 8:55 AM#2hiline 1 : setvar $cuecopy = (copy cue number ?)2 : setvar $selectedex = (\"store cue number ?\")3 : copy cue $cuecopy at cue $selectedexetc..."
+    }
+  ],
   "replies": 0,
   "thread_id": "51586",
   "title": "SetUserVar method",

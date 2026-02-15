@@ -3,6 +3,32 @@
   "author": "aerian",
   "post_date": null,
   "post_text": "August 18, 2022 at 11:44 AM#1Hello,I would like to modify the Destination IP of a ArtNet Network via the command line. I tried \"Assign Root 4.1.1 / DestinationIP=\"2.0.0.1\" but it doesn't work. The same without the quotes. I did choose the OutputUnicast mode before.An brilliant idea ?Thanks.",
+  "posts": [
+    {
+      "author": "aerian",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 18, 2022 at 11:44 AM#1Hello,I would like to modify the Destination IP of a ArtNet Network via the command line. I tried \"Assign Root 4.1.1 / DestinationIP=\"2.0.0.1\" but it doesn't work. The same without the quotes. I did choose the OutputUnicast mode before.An brilliant idea ?Thanks."
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 18, 2022 at 7:28 PM#2Hi Aerian,I have not tried this one myself however themanualstates the following:QuoteThe following table displays the assignable parameter by use the command Assign Protocol [Network Protocol ID] . [Row ID] / [Parameter] = [Parameter Value].Which would result in this commandline:  [color=#00FF00]Assign Protocol 1.1 / DestinationIP= \"2.0.0.1\"[/color] for the first line of Art-Net"
+    },
+    {
+      "author": "aerian",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 19, 2022 at 12:52 PM#3Thanks a lot Mark.Your command seems to work too since I have no error message in the Command Line Feedback.Futhermore, with both your command and the mine, if I replace the IP adress by 0, it put the Destination IP to 0.0.0.0."
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "August 20, 2022 at 10:42 AM#4Quote from AerianFuthermore, with both your command and the mine, if I replace the IP adress by 0, it put the Destination IP to 0.0.0.0.Thats probably because ip adres 0 is nothing. So GMA will convert it to 0.0.0.0 which basically says that the adres you have giving it is not routable. Which is correct in this case because we cannot send data to that adres."
+    }
+  ],
   "replies": 0,
   "thread_id": "67360",
   "title": "ArtNet DestinationIP via Command Line",

@@ -3,6 +3,20 @@
   "author": "jkezza",
   "post_date": null,
   "post_text": "March 27, 2023 at 1:25 AM#1Im Trying to build a macro that selects all current output data into the programmer.Currently i have been doing it as selecting all fixtures and then selecting each attribute twice to then oull this data into the programmer.It works but it looks very messy and i dont really like it.Was wondering if there was a nice way to streamline this.It would also be good if this worked in blind as then i coould use the alternate command line and not effect the live command line as i have found this current process does not allow for this and results in a \"off\" dimmer output.",
+  "posts": [
+    {
+      "author": "jkezza",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 27, 2023 at 1:25 AM#1Im Trying to build a macro that selects all current output data into the programmer.Currently i have been doing it as selecting all fixtures and then selecting each attribute twice to then oull this data into the programmer.It works but it looks very messy and i dont really like it.Was wondering if there was a nice way to streamline this.It would also be good if this worked in blind as then i coould use the alternate command line and not effect the live command line as i have found this current process does not allow for this and results in a \"off\" dimmer output."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 27, 2023 at 9:22 PM#2check this thread:http://www.ma-share.net/forum/read.php…55495#msg-55495"
+    }
+  ],
   "replies": 0,
   "thread_id": "67629",
   "title": "Select all attribute data",

@@ -3,6 +3,20 @@
   "author": "scoobytoobins",
   "post_date": null,
   "post_text": "November 1, 2017 at 10:29 PM#1Hi all,I'm looking for a macro to help me change MIDI note triggering across executors. That is, on Executor one, for example, will trigger cue 2 while on Executor two, MIDI note 60 triggers cue 6.  I saw someone who had something similar and kept his showfile SO clean with such a minimal amount of MIDI notes and I'm looking to do the same thing but really stuck on how to even start writing that macro.Any help would be truly tremendous.Kai",
+  "posts": [
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 1, 2017 at 10:29 PM#1Hi all,I'm looking for a macro to help me change MIDI note triggering across executors. That is, on Executor one, for example, will trigger cue 2 while on Executor two, MIDI note 60 triggers cue 6.  I saw someone who had something similar and kept his showfile SO clean with such a minimal amount of MIDI notes and I'm looking to do the same thing but really stuck on how to even start writing that macro.Any help would be truly tremendous.Kai"
+    },
+    {
+      "author": "Moe696",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 3, 2017 at 10:09 AM#2I am not sure what you want to achieve.Do you just want midinote 60 trigger Cue 2 on Executor 1 and Cue 6 on Executor 2 together?Or do you want midinote 60 trigger different cues on different Executors depending on the current situation?"
+    }
+  ],
   "replies": 0,
   "thread_id": "59926",
   "title": "REQUEST: Changing MIDI notes on different executors CMD",

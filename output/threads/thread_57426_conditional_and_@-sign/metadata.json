@@ -3,6 +3,38 @@
   "author": "sebmdp",
   "post_date": null,
   "post_text": "March 4, 2017 at 10:37 AM#1Hello,I'm trying to achieve a simple macro :if my variable comply with a value : select @if not, ignore the @-sign et keep going.Code[$myvar==toto] select @...To my experience a condional line ended by the @-sign will be operated whatever the condition result.If it's really the case and not a mistake on my side, how can I manage that when the condition is false ? how could I workaround, apart from a jump line order inside the macro ?Thanks for your help.Regards.",
+  "posts": [
+    {
+      "author": "sebmdp",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 4, 2017 at 10:37 AM#1Hello,I'm trying to achieve a simple macro :if my variable comply with a value : select @if not, ignore the @-sign et keep going.Code[$myvar==toto] select @...To my experience a condional line ended by the @-sign will be operated whatever the condition result.If it's really the case and not a mistake on my side, how can I manage that when the condition is false ? how could I workaround, apart from a jump line order inside the macro ?Thanks for your help.Regards."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 4, 2017 at 1:48 PM#2as far as I can see this works as expected.the @-sign puts the macroline content into commandline-entry and awaits for user to append more syntax.after user have appended and completed the syntax, the resulting macroline is evaluated (including any conditions, and only performs the selection if it evaluates to true)"
+    },
+    {
+      "author": "sebmdp",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 4, 2017 at 2:37 PM#3Unfortunately for me and as usual, you're totally right...I wish that the condition would be evaluated first, rather than acting the @-sign, interacting with the command-line (w/o CLI) waiting for the user act and only after that check the macroline condition.Is there a trick to invert the process ?!!Thanks."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 4, 2017 at 3:17 PM#4I think your best option would be to put the @ in a separate macroline and use conditions in the line before to disable that macroline"
+    },
+    {
+      "author": "sebmdp",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "March 4, 2017 at 3:52 PM#5Thanks for your help.I appreciate.Regards."
+    }
+  ],
   "replies": 0,
   "thread_id": "57426",
   "title": "conditional and @-sign",

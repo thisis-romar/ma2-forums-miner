@@ -3,6 +3,26 @@
   "author": "YettiC",
   "post_date": null,
   "post_text": "December 5, 2014 at 10:06 AM#1Hi All,How would I make a variable macro that adds a CMD to the current Cue?ExampleAssign Cmd(\"CMD here\")CheersYettic",
+  "posts": [
+    {
+      "author": "YettiC",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 5, 2014 at 10:06 AM#1Hi All,How would I make a variable macro that adds a CMD to the current Cue?ExampleAssign Cmd(\"CMD here\")CheersYettic"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 5, 2014 at 11:27 AM#2try thisAssign Part 0 /cmd=(\"CMD here\")"
+    },
+    {
+      "author": "YettiC",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 6, 2014 at 7:40 AM#3Perfect thanks!!"
+    }
+  ],
   "replies": 0,
   "thread_id": "44510",
   "title": "CMD variable macro",

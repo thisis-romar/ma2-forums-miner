@@ -3,6 +3,20 @@
   "author": "entex",
   "post_date": null,
   "post_text": "May 22, 2018 at 6:39 PM#1Hey guys!I'm working on a custom extension for the famous 'Presets to Macro' plugin.I want to add some lines to the created macros, which copy a source image to a destination, but depending on 2 variables, which i declared in my UserVariable macro as global vars.Like: Copy Image '$imgSource + 1' to '$imgDest + 1'I want the macros to work wherever the images are just by assigning 2 global variables.Is there a way to execute logical operations in macro creating another variable like setvar $i = $img + 1?I don't want to create one for every macro and i might get some trouble by calling multiple macros simultaneously, which all want to give the new variable another content.Greetings!",
+  "posts": [
+    {
+      "author": "entex",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 22, 2018 at 6:39 PM#1Hey guys!I'm working on a custom extension for the famous 'Presets to Macro' plugin.I want to add some lines to the created macros, which copy a source image to a destination, but depending on 2 variables, which i declared in my UserVariable macro as global vars.Like: Copy Image '$imgSource + 1' to '$imgDest + 1'I want the macros to work wherever the images are just by assigning 2 global variables.Is there a way to execute logical operations in macro creating another variable like setvar $i = $img + 1?I don't want to create one for every macro and i might get some trouble by calling multiple macros simultaneously, which all want to give the new variable another content.Greetings!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 23, 2018 at 11:32 PM#2look up the function \"AddVar\" in the manual"
+    }
+  ],
   "replies": 0,
   "thread_id": "61375",
   "title": "Logical Operations in Macros",

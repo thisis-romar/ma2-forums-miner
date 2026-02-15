@@ -3,6 +3,20 @@
   "author": "hantoo",
   "post_date": null,
   "post_text": "December 10, 2019 at 8:47 AM#1Hi All,Does anyone have a plugin that when pressed inverts the encoders for tilt (within the settings if possible) of certain fixtures?Or can you help point me in the right direction?Thanks all",
+  "posts": [
+    {
+      "author": "hantoo",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 10, 2019 at 8:47 AM#1Hi All,Does anyone have a plugin that when pressed inverts the encoders for tilt (within the settings if possible) of certain fixtures?Or can you help point me in the right direction?Thanks all"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 10, 2019 at 9:22 AM#2A macro with something like this should do the job:CodeAssign Fixture (enter fixture number) /TiltEnc.Invert=On"
+    }
+  ],
   "replies": 0,
   "thread_id": "65053",
   "title": "Macro For Fixture Encoder Invert",

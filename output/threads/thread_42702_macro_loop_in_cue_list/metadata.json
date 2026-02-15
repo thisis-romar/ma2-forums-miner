@@ -3,6 +3,56 @@
   "author": "NKlightjocky",
   "post_date": null,
   "post_text": "July 27, 2014 at 2:59 PM#1hello,can i make a macro who can say in a cue list loop to cue 1?",
+  "posts": [
+    {
+      "author": "NKlightjocky",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 27, 2014 at 2:59 PM#1hello,can i make a macro who can say in a cue list loop to cue 1?"
+    },
+    {
+      "author": "stevenmorgan94",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 27, 2014 at 9:01 PM#2You could just add a command to executer window to the last cue that is \"Go To Cue 1\" and it will jump to the top."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 27, 2014 at 9:20 PM#3a cuelist already have inbuildt looping functionality, just choose \"Cue 1\" in the loop column"
+    },
+    {
+      "author": "NKlightjocky",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "August 2, 2014 at 6:31 PM#4i know a cruelest already have a inbuilt looping but that is the point i wanna make a macro who can do the loop functionality  .so when i have this macro i don't need any more go in the cue list and say in the looping go back to cue 1"
+    },
+    {
+      "author": "Haytech",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "September 1, 2014 at 6:58 PM#5Hi,What you are looking for sounds to me like\"Goto executor 1.1 cue 1\"Or for the selected execGoto cue 1"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "September 2, 2014 at 6:35 PM#6Assigning loops to cues is not supported by macro unfortunatelyIt appearce to be changed with version 3"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "September 2, 2014 at 9:06 PM#7CodeAssign Cue x /loop=1should create a loop from cue x to cue 1If you merely want to loop from last to first cue, you could rather enable \"Wrap around\" in the exec assignmenuCodeAssign Executor /wrap=on"
+    },
+    {
+      "author": "NKlightjocky",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "September 5, 2014 at 6:06 PM#8thanks Gladnow it works"
+    }
+  ],
   "replies": 0,
   "thread_id": "42702",
   "title": "macro loop in cue list",

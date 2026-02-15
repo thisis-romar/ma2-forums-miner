@@ -3,6 +3,32 @@
   "author": "HillaryKnox",
   "post_date": null,
   "post_text": "November 2, 2015 at 7:17 PM#1Is there a command line/macro way to put all Group Masters at full (regardless of what executor they are assigned to?). Normally I'd address specific executors, but I have group masters that change location on a daily basis, as well as group masters that are created & deleted on a daily basis. So I'm basically looking for a command line version of holding down Group and pressing All Positive/Negative Full.",
+  "posts": [
+    {
+      "author": "HillaryKnox",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 2, 2015 at 7:17 PM#1Is there a command line/macro way to put all Group Masters at full (regardless of what executor they are assigned to?). Normally I'd address specific executors, but I have group masters that change location on a daily basis, as well as group masters that are created & deleted on a daily basis. So I'm basically looking for a command line version of holding down Group and pressing All Positive/Negative Full."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 2, 2015 at 7:36 PM#2I I don't think there is any commands for this.....a very dirty workaround:CodeLabel Group * \"I am a group\"Executor *.\"I am a group\" At 100Oops /nc"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 2, 2015 at 8:13 PM#3HiMaybe you can just open a \"master\" window (in \"other\" windows)"
+    },
+    {
+      "author": "HillaryKnox",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "November 2, 2015 at 8:37 PM#4Heh, dirty is right. I'll give it a shot, but I'm slightly hesitant to make this my final solution, just because I've got another programmer in parallel with me on this show, and I'm marginally freaked out about renaming all his groups. But maybe I can make it work if all my inhibs are within a specific group range, which I think is doable.Thanks"
+    }
+  ],
   "replies": 0,
   "thread_id": "49600",
   "title": "All Group Masters at Full?",

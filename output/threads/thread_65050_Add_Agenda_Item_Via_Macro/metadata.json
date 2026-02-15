@@ -3,6 +3,20 @@
   "author": "Nope",
   "post_date": null,
   "post_text": "December 9, 2019 at 5:46 AM#1Is it possible to add an agenda item via a macro? I don't want any popup boxes or anything. I just want the item to be added without the current operator having to the worry about it. An example of how it would be used is say I wanted to add an agenda item to do something 5 minutes from now.Thanks in advance!",
+  "posts": [
+    {
+      "author": "Nope",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 9, 2019 at 5:46 AM#1Is it possible to add an agenda item via a macro? I don't want any popup boxes or anything. I just want the item to be added without the current operator having to the worry about it. An example of how it would be used is say I wanted to add an agenda item to do something 5 minutes from now.Thanks in advance!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 10, 2019 at 10:47 PM#2yes it is possible to create Agenda Items via generic commandline.check out the keywords: Store, Assign and Agenda in the manual.for your specific scenario, \"do something 5 minutes from now\" you would use a countdowntimer, not Agenda.check out the keywords: Store, Assign and Timer in the manual."
+    }
+  ],
   "replies": 0,
   "thread_id": "65050",
   "title": "Add Agenda Item Via Macro",

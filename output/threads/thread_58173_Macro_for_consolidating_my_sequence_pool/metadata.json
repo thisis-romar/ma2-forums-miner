@@ -3,6 +3,44 @@
   "author": "Vonder",
   "post_date": null,
   "post_text": "April 19, 2017 at 5:16 PM#1I've recently deleted a bunch of sequences that I don't use anymore and am trying to figure out a quick way to fill the empty slots in my sequence pool.  Anyone know of a way to consolidate my remaining sequences?",
+  "posts": [
+    {
+      "author": "Vonder",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 19, 2017 at 5:16 PM#1I've recently deleted a bunch of sequences that I don't use anymore and am trying to figure out a quick way to fill the empty slots in my sequence pool.  Anyone know of a way to consolidate my remaining sequences?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 19, 2017 at 5:33 PM#2CodeMove Sequence * At 1"
+    },
+    {
+      "author": "Vonder",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 19, 2017 at 5:43 PM#3That's what I thought as well but that command doesn't work. I tried Move Sequence 32 thru 500 at sequence 31(first empty pool slot) but all that did was move everything down by one. all the gaps are still there."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 19, 2017 at 5:47 PM#4did you try my syntax?"
+    },
+    {
+      "author": "Vonder",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "April 19, 2017 at 6:05 PM#5ahh I had sequences locked, causing it not to work. Thanks"
+    },
+    {
+      "author": "xinjiangwang",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "May 27, 2017 at 1:53 PM#6ok!"
+    }
+  ],
   "replies": 0,
   "thread_id": "58173",
   "title": "Macro for consolidating my sequence pool",

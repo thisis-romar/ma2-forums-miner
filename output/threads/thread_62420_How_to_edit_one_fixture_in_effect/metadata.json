@@ -3,6 +3,32 @@
   "author": "screamizh123",
   "post_date": null,
   "post_text": "September 28, 2018 at 11:26 PM#1Hi! How to edit one fixture in effect?for example, I apply “pan/tilt circle” effect on a group of spots, but I want to change the min and max values to one of them, as it gets out of the general concept. I can separate this device into a separate line in this effect, with the same parameters.How can this be done differently?",
+  "posts": [
+    {
+      "author": "screamizh123",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 28, 2018 at 11:26 PM#1Hi! How to edit one fixture in effect?for example, I apply “pan/tilt circle” effect on a group of spots, but I want to change the min and max values to one of them, as it gets out of the general concept. I can separate this device into a separate line in this effect, with the same parameters.How can this be done differently?"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 29, 2018 at 3:46 PM#2HiIf your effect is stored in a cue, just edit effect values for your fixture in the effect layer."
+    },
+    {
+      "author": "screamizh123",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 29, 2018 at 6:56 PM#3can you explain more? I have an effect in which 18 devices are recorded. I want to change the values of one of them. I need to create a new layer in this effect and add this device there and already there edit it?"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 29, 2018 at 8:00 PM#4Store your effect in a cue. Then edit the cue and change what you want with encoders, clicking the effect layer button."
+    }
+  ],
   "replies": 0,
   "thread_id": "62420",
   "title": "How to edit one fixture in effect?",

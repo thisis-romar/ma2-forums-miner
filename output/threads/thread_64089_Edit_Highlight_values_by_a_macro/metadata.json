@@ -3,6 +3,14 @@
   "author": "bibaboo56",
   "post_date": null,
   "post_text": "June 13, 2019 at 6:42 AM#1I need a macro to modify Highlight values of a FixtureType.Every time I replace a fixture, I do it manualy... But it takes time...I want to remove everything from the Highlight exept Dimmer, Color and Shutter.(I try to make a preset then -> Assign -> Preset -> Please -> Highlight but this way alow just to modify values, not to remove)Does anyone have the solution ?// sorry for my english",
+  "posts": [
+    {
+      "author": "bibaboo56",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 13, 2019 at 6:42 AM#1I need a macro to modify Highlight values of a FixtureType.Every time I replace a fixture, I do it manualy... But it takes time...I want to remove everything from the Highlight exept Dimmer, Color and Shutter.(I try to make a preset then -> Assign -> Preset -> Please -> Highlight but this way alow just to modify values, not to remove)Does anyone have the solution ?// sorry for my english"
+    }
+  ],
   "replies": 0,
   "thread_id": "64089",
   "title": "Edit Highlight values by a macro",

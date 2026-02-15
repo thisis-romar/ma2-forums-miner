@@ -3,6 +3,50 @@
   "author": "aini976186",
   "post_date": null,
   "post_text": "October 19, 2017 at 3:38 AM#1Is there a way to follow the macro of the last fixture?Thank you",
+  "posts": [
+    {
+      "author": "aini976186",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 19, 2017 at 3:38 AM#1Is there a way to follow the macro of the last fixture?Thank you"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 19, 2017 at 5:09 AM#2I don't understand what you're asking. Can you rephrase the question please?"
+    },
+    {
+      "author": "aini976186",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 19, 2017 at 7:32 AM#3Follow the value of the previous luminaireMy English is not good"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 19, 2017 at 3:06 PM#4Fixture 1 is doing something, and you want Fixture 2 to do the same thing that Fixture 1 is doing?Fixture 2 At Fixture 1There are of course ways to limit which attributes this applies to as well, such as:- Holding the [At] key and defining a filter- Calling a filter that you've already defined- Using \"If\" (for example, adding \"If Presettype 4\" to the end of the syntax above would only copy over the color attributes.Is that what you were looking for?"
+    },
+    {
+      "author": "clear_all",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "October 19, 2017 at 10:12 PM#5I think he's looking for a single button \"at previous fixture\" command.Currently my workaround for that is ugly as hell, but works:1: Previous2: store /o group 9993: Next4: at group 999I'm not proud of it, but it's held up fairly well so far."
+    },
+    {
+      "author": "aini976186",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "October 20, 2017 at 1:04 AM#6Thank you."
+    },
+    {
+      "author": "aini976186",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "October 20, 2017 at 1:24 AM#7My-Next-At selection-At @What advice do you have?"
+    }
+  ],
   "replies": 0,
   "thread_id": "59800",
   "title": "Macro question",

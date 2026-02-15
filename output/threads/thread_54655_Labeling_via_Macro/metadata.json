@@ -3,6 +3,68 @@
   "author": "thetylerherron",
   "post_date": null,
   "post_text": "August 28, 2016 at 2:24 AM#1I've looked a bit on the forums and have found various ways to accomplish some of what I want, but not all of what I want. Here's what I'm wanting to do:Write a macro that will store a cue and then label that cue with a predefined name (i.e. Verse, Chorus, Bridge, etc).I've got macros that will store the cue, go to the cue, and then run the Label command. Then I have to type the name. I'm trying to eliminate typing the name itself, but if I put anything after the \"Label\" command, it tries to find a cue labeled that name.Anyone know how to do this? I'm just wanting several different macros that I can push \"Store Verse\" \"Store Chorus\" \"Store Bridge\" etc etc.Bonus points if I could have a single macro that I can push and then type in a number. 1=Verse 2=Chorus 3=Bridge, etc.-Tyler",
+  "posts": [
+    {
+      "author": "thetylerherron",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 28, 2016 at 2:24 AM#1I've looked a bit on the forums and have found various ways to accomplish some of what I want, but not all of what I want. Here's what I'm wanting to do:Write a macro that will store a cue and then label that cue with a predefined name (i.e. Verse, Chorus, Bridge, etc).I've got macros that will store the cue, go to the cue, and then run the Label command. Then I have to type the name. I'm trying to eliminate typing the name itself, but if I put anything after the \"Label\" command, it tries to find a cue labeled that name.Anyone know how to do this? I'm just wanting several different macros that I can push \"Store Verse\" \"Store Chorus\" \"Store Bridge\" etc etc.Bonus points if I could have a single macro that I can push and then type in a number. 1=Verse 2=Chorus 3=Bridge, etc.-Tyler"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 28, 2016 at 4:45 AM#2Label Cue $selectedexeccue \"name\".Conditional Expressions. You can probably figure it out from there."
+    },
+    {
+      "author": "thetylerherron",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 28, 2016 at 9:03 AM#3That's exactly what I'm looking for! Thank you sir!Here's the macro I came up with if someone else wants to use or modify. I added a little option to type in something other than a number. So if one of the 6 options isn't what you wanted the name to be, you can just type in the name and the macro will take care of it.Code01: Store02: Go03: SetUserVar $section = (\"1=Verse, 2=Chorus, 3=Bridge, 4=Inst, 5=Build, 6=Ending\")04: SetUserVar $otherBool = \"true\"05: [$section == 1]  SetUserVar $cuename = \"Verse\";  SetUserVar $otherBool = \"false\"06: [$section == 2]  SetUserVar $cuename = \"Chorus\";  SetUserVar $otherBool = \"false\"07: [$section == 3]  SetUserVar $cuename = \"Bridge\";  SetUserVar $otherBool = \"false\"08: [$section == 4]  SetUserVar $cuename = \"Instrumental\";  SetUserVar $otherBool = \"false\"09: [$section == 5]  SetUserVar $cuename = \"Build\";  SetUserVar $otherBool = \"false\"10: [$section == 6]  SetUserVar $cuename = \"Ending\";  SetUserVar $otherBool = \"false\"11: [$otherBool == true]  SetUserVar $cuename = $section12: Label Cue $selectedexeccue $\"cuename\"Display More"
+    },
+    {
+      "author": "pumbah01",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 25, 2016 at 2:00 PM#4Hey tyler Wats the macros that i can use for1. store the cue2.go to cue3.run the label command"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "October 25, 2016 at 10:46 PM#5HiI don't understand why you use $otherbool variable...Why not just:[$section == 1] label cue $selectedexeccue \"Verse\"etc..."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "October 25, 2016 at 11:00 PM#6I suggested a more efficient version of this macro too, here:http://www.ma-share.net/forum/read.php…55178#msg-55178"
+    },
+    {
+      "author": "thetylerherron",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "October 30, 2016 at 10:18 AM#7The other bool variable was so I could type in a different name if I didn't want to use one of the \"pre-defined\" names I had set. As Ryan suggested there was a more efficient way of doing that, though.In practice, this macro hasn't been super useful. I don't use this macro to store cues and label them, as I've found it faster to just write 6 different macros for each. One push of a button gets me the result, instead of 3 (Macro, type number, please). If I used a lot of macros, I could probably consolidate it back, but right now I have room, so I just use a bunch for each situation."
+    },
+    {
+      "author": "thetylerherron",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "October 30, 2016 at 10:23 AM#8Code01: Store02: Go Fade 003: Label Cue $selectedexeccue (\"Name?\")04: Assign Cue $selectedexeccue /cmd=(\"CMD?\")That should work for you. I think. Not at a console to test. fyi, I like to add the \"fade 0\" to this kind of macro so I don't have to wait for the cue to finish transitioning to name it. The macro gives me some trouble if I don't."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "October 30, 2016 at 6:38 PM#9i'd write :[$section> 6] label $selectedexecue = $sectionAnd you don't have to use an additional variable."
+    },
+    {
+      "author": "thetylerherron",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "October 31, 2016 at 1:18 PM#10Yup, that's more or less what Ryan suggested in the following macro:01: Store02: Go03: SetUserVar $cuename = (\"1=Verse, 2=Chorus, 3=Bridge, 4=Inst, 5=Build, 6=Ending\")04: [$cuename == 1]  SetUserVar $cuename = \"Verse\"05: [$cuename == 2]  SetUserVar $cuename = \"Chorus\"06: [$cuename == 3]  SetUserVar $cuename = \"Bridge\"07: [$cuename == 4]  SetUserVar $cuename = \"Instrumental\"08: [$cuename == 5]  SetUserVar $cuename = \"Build\"09: [$cuename == 6]  SetUserVar $cuename = \"Ending\"10: Label Cue $selectedexeccue $\"cuename\"Which I've updated mine to follow.Question, because I don't fully understand variables in MA, i'm used to defining ints, strings, etc. If I used your idea and did [$section > 6] etc, is there a situation where the macro would break? I.E. is there a string that is < 6 but not equal to 1-6? Like what happens if I typed 0 for some random reason.I'll have to do some reading on how MA compares variables, (more specifically strings)."
+    }
+  ],
   "replies": 0,
   "thread_id": "54655",
   "title": "Labeling via Macro",

@@ -3,6 +3,20 @@
   "author": "Rik",
   "post_date": null,
   "post_text": "October 10, 2021 at 9:39 PM#1Hi,I want to make a flash button to temporarily double the speed of the speedmaster.Does someone know how I can make this?Thanks in advance,LD-RV",
+  "posts": [
+    {
+      "author": "Rik",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 10, 2021 at 9:39 PM#1Hi,I want to make a flash button to temporarily double the speed of the speedmaster.Does someone know how I can make this?Thanks in advance,LD-RV"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 13, 2021 at 3:21 PM#2Would probably do it as a DMX remote where one fixture at 100 sends the CMD to doublespeed, and one fixture at 0 sends the CMD to halfspeed. Store them both at full on a flash button."
+    }
+  ],
   "replies": 0,
   "thread_id": "66835",
   "title": "Flash DoubleSpeed speedmaster",

@@ -3,6 +3,20 @@
   "author": "nathandkdesign",
   "post_date": null,
   "post_text": "May 22, 2019 at 11:25 PM#1Does anybody know if it's possible to have dmx values trigger a macro?i.e.If dmx address 1.1 (universe 1, dmx address 1) = 10Then execute Macro 1Furthermore, I would need 2 different values to match...i.e.If dmx address 1.1 = 10 AND dmx address 1.2 = 25Then execute Macro 1",
+  "posts": [
+    {
+      "author": "nathandkdesign",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 22, 2019 at 11:25 PM#1Does anybody know if it's possible to have dmx values trigger a macro?i.e.If dmx address 1.1 (universe 1, dmx address 1) = 10Then execute Macro 1Furthermore, I would need 2 different values to match...i.e.If dmx address 1.1 = 10 AND dmx address 1.2 = 25Then execute Macro 1"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 23, 2019 at 1:25 PM#2HiUse Lua for this :return function()local val1, val2 = gma.show.getdmx(1),gma.show.getdmx(2)if val1==10 and val2==25 dogma.cmd('macro 1')end"
+    }
+  ],
   "replies": 0,
   "thread_id": "63986",
   "title": "DMX Value to trigger a macro",

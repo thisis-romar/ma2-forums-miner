@@ -3,6 +3,38 @@
   "author": "TECside",
   "post_date": null,
   "post_text": "January 17, 2016 at 6:26 PM#1HiIn older topics I read something about LUA. It looks like a really nice language to work with and it would then be possible to make proper while loops in macro's.Is there a way to implement LUA language in a macro.Let's say populate a a color sequence with colors without having to type each line.Thank you",
+  "posts": [
+    {
+      "author": "TECside",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 17, 2016 at 6:26 PM#1HiIn older topics I read something about LUA. It looks like a really nice language to work with and it would then be possible to make proper while loops in macro's.Is there a way to implement LUA language in a macro.Let's say populate a a color sequence with colors without having to type each line.Thank you"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 20, 2016 at 1:44 PM#2as far i know about, macros and lua plugins are two differents things. You must create a plugin"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 28, 2016 at 7:55 PM#3LUA is a scripting language which is implemented in GMA2 since v3.1.0.x and can be used to do tasks beyond the regular programmer, where macros are just \"sequenced\" command tasks from the command line. For specific LUA questions i would recommend the LUA Plugin forum, which can be foundHERE"
+    },
+    {
+      "author": "Hwellink",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 2, 2016 at 8:33 PM#4It is, however, possible to run LUA commands directly from the commandline, and that means also from a macro. The correct syntax isCode[color=#66FF00]LUA[/color] \"--LUA Syntax\"If you want to run a plugin, simply callCode[color=#66FF00]Plugin[/color] xWith Regards,Harm Wellink"
+    },
+    {
+      "author": "TECside",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "February 11, 2016 at 10:08 AM#5Thanks guysI will try that. Actually the only thing I would like to do is to run loops with increments in macros.Best RegardsGiovanni"
+    }
+  ],
   "replies": 0,
   "thread_id": "50619",
   "title": "LUA and macro's",

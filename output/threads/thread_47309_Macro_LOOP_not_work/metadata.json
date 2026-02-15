@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:49c6140c2fba26253829c139157374cc7528bddf223c563e1a5a922ba17e34c9",
-      "download_count": 99,
+      "download_count": 109,
       "filename": "COL_to_EXEC1.xml",
+      "post_number": 3,
       "size": 2802,
       "url": "https://forum.malighting.com/file-download/3688/"
     }
@@ -11,6 +12,56 @@
   "author": "alenokia",
   "post_date": null,
   "post_text": "June 17, 2015 at 9:38 AM#1Hi, i cant take control over my macro to auto store 15 preset of color into a sequence in version 3.1.0.8... it run on preset 4.1 4.2 4.3 then jump some lines...I leave my screen capture[Blocked Image:http://imageshack.com/a/img910/7474/d3xaOE.png]",
+  "posts": [
+    {
+      "author": "alenokia",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 17, 2015 at 9:38 AM#1Hi, i cant take control over my macro to auto store 15 preset of color into a sequence in version 3.1.0.8... it run on preset 4.1 4.2 4.3 then jump some lines...I leave my screen capture[Blocked Image:http://imageshack.com/a/img910/7474/d3xaOE.png]"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 17, 2015 at 3:37 PM#2please upload your macro aswell"
+    },
+    {
+      "author": "alenokia",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "June 18, 2015 at 2:36 AM#3MacroooFilesCOL_to_EXEC1.xml2.8 kB – 109 Downloads"
+    },
+    {
+      "author": "alenokia",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "June 23, 2015 at 3:24 PM#4GLAD... it work my macro to you?someone can make this macro work???? or just fail this macro to me?thanks"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "June 23, 2015 at 5:13 PM#5I don't know why you macro fails after 4 loops.seems to be possible to workaround by looping via a second macro:[$pcc<=$hasta]  Go Macro 1.\"another\".1macro another:Macro 1.\"COL_to_EXEC1\".12"
+    },
+    {
+      "author": "alenokia",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "June 25, 2015 at 11:28 PM#6ok, I'll try with that solution.thanks!!!!!"
+    },
+    {
+      "author": "PascalV",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "July 3, 2015 at 9:22 AM#7Hi, i have exactly the same problem with a macro with loop. It work perfectly on version 3.0.0.5, and works with erratic loop on version 3.1.0.8."
+    },
+    {
+      "author": "Dalla3D",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "July 16, 2015 at 11:30 AM#8Works fine with 2 linked macrosI had the same problem whit the new version..."
+    }
+  ],
   "replies": 0,
   "thread_id": "47309",
   "title": "Macro LOOP not work",

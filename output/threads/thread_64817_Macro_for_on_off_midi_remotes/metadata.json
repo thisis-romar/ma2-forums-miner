@@ -3,6 +3,20 @@
   "author": "voyager",
   "post_date": null,
   "post_text": "October 16, 2019 at 5:58 PM#1Hi . Can somebody help?  I need macro for  on off  midi on desk .",
+  "posts": [
+    {
+      "author": "voyager",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 16, 2019 at 5:58 PM#1Hi . Can somebody help?  I need macro for  on off  midi on desk ."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 16, 2019 at 6:38 PM#2in the macro-editor, press the button \"Load Predefined\", scroll down to M and you should find what you need."
+    }
+  ],
   "replies": 0,
   "thread_id": "64817",
   "title": "Macro for on off midi remotes",

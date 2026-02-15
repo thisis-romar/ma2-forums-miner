@@ -3,6 +3,50 @@
   "author": "omgstfu",
   "post_date": null,
   "post_text": "August 17, 2019 at 10:42 PM#1I was wondering if it is possible to change the color of the gel assigned in the patch to a dimmer via command line similar to how you can change the Appearance of an executor via command line like this which would change the Appearance to green.CodeAppearance Executor 201 /r=0 /g=100 /b=0",
+  "posts": [
+    {
+      "author": "omgstfu",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 17, 2019 at 10:42 PM#1I was wondering if it is possible to change the color of the gel assigned in the patch to a dimmer via command line similar to how you can change the Appearance of an executor via command line like this which would change the Appearance to green.CodeAppearance Executor 201 /r=0 /g=100 /b=0"
+    },
+    {
+      "author": "nrgsille",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 19, 2019 at 7:43 PM#2Hello there,it is possible to set the color via cmd, but it will not work like appearance.Syntax is defined like following:Assign root livesetup.layers.*layernumber*.*fixture*.*subfixture* /color=*max16777216*The colors are calculated differently, it is the result of 256x256x256 so the max value is 16777216. The value to set the color to red would be just 255, but for cyan it is 16776960. Every time you get over 256, the next color will add 1 value and red begins again with the next 256 steps.The syntax for cyan would look likeCodeAssign root livesetup.layers.3.1.1 /color=16776960A few examples:red=255green=65280yellow=65535blue=16711680cyan=16776960Visit my website to get nice 3D fixture profiles for grandMA2 and dot2NRGSille Lighting Design"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 21, 2019 at 1:59 PM#3Don't need to go through the root - you can just assign it to the Fixture or Channel directly:Assign Fixture x /color=yAssign Channel x /color=yHere's the math for y:y = (Red Value) + (Green Value * 256) + (Blue Value * 65536)For example, R/G/B = 50/180/222y = (50) + (180 * 256) + (222 * 65536)y = 50 + 46,080 + 14,548,992y = 14,595,122Assign Fixture x /color=14595122"
+    },
+    {
+      "author": "Moe696",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "August 23, 2019 at 8:08 PM#4Hey Ryan,I tried your math and sometimes it works but sometimes it doesn't.E.g.Code[color=#FF0000]R250[/color]    [color=#66CC33]G250[/color]       [color=#3333FF]B250[/color][color=#FF0000]250[/color] + [color=#66CC33]250*256[/color] + [color=#3333FF]250*65.536[/color] = 16.448.250Channel get the colorvalues[color=#FF0000]R250[/color] [color=#66CC33]G250[/color] [color=#3333FF]B250[/color]Everything is fine.ButCode[color=#FF0000]R251[/color]    [color=#66CC33]G250[/color]       [color=#3333FF]B250[/color][color=#FF0000]251[/color] + [color=#66CC33]250*256[/color] + [color=#3333FF]250*65.536[/color] = 16.448.251Channel should have[color=#FF0000]R251[/color] [color=#66CC33]G250[/color] [color=#3333FF]B250[/color] but gets[color=#FF0099]R25[b]2[/b][/color] [color=#66CC33]G250[/color] [color=#3333FF]B250[/color]It is even worse when I am trying to set the channel back to white:Code[color=#FF0000]R255[/color]    [color=#66CC33]G255[/color]       [color=#3333FF]B255[/color][color=#FF0000]255[/color] + [color=#66CC33]255*256[/color] + [color=#3333FF]255*65.536[/color] = 16.777.215Channel values are set to[color=#FF0000]R0[/color] [color=#66CC33]G0[/color] [color=#3333FF]B0[/color] = Black instead of white.When I set it to 16.777.216 (the maximum value possible) it turns black as well.Can someone explain to me why it is working sometimes and sometimes it is not?Or give me a hint where I am wrong?Thank you!Moe"
+    },
+    {
+      "author": "nrgsille",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "August 24, 2019 at 1:35 PM#5It is somehow not possible to get an odd result and the last 2 values are always blackVisit my website to get nice 3D fixture profiles for grandMA2 and dot2NRGSille Lighting Design"
+    },
+    {
+      "author": "Moe696",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "January 16, 2020 at 8:11 AM#6Okay, thank you.Is there a way to make it an even number by math?"
+    },
+    {
+      "author": "Jakojiki",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "February 12, 2020 at 5:09 PM#7Hey ThereYour Method is somehow not working for me even if I try to copypaste your Line in my Comandline.Any Ideas ?Thanks For Helping"
+    }
+  ],
   "replies": 0,
   "thread_id": "64436",
   "title": "Possible To Change Dimmer Color By Command Line?",

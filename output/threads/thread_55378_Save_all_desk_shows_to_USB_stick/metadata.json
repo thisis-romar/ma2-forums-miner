@@ -3,6 +3,32 @@
   "author": "Sasu suntio",
   "post_date": null,
   "post_text": "October 7, 2016 at 2:06 PM#1How to write macro, save to all shows to desk to USB ?",
+  "posts": [
+    {
+      "author": "Sasu suntio",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 7, 2016 at 2:06 PM#1How to write macro, save to all shows to desk to USB ?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 7, 2016 at 2:23 PM#2If you know the names of all your shows, then I guess you could do something like:SD 1Loadshow \"filename.show.gz\" /timeconfig /globalsettings /localsettings /protocols /network /userSD 4Saveshow<repeat>However, you can also use FTP to grab everything:FTP for Show File Management(open link in new tab)"
+    },
+    {
+      "author": "Sasu suntio",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 7, 2016 at 2:37 PM#3Problems is I don't know all show names?"
+    },
+    {
+      "author": "ALX",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 9, 2016 at 4:50 AM#4Access the showfiles on the desk via FTP and transfer them to a USB stick using a connected computer.TutorialHERE"
+    }
+  ],
   "replies": 0,
   "thread_id": "55378",
   "title": "Save all desk shows to USB stick",

@@ -3,6 +3,26 @@
   "author": "mflte_mflight",
   "post_date": null,
   "post_text": "September 24, 2020 at 9:57 PM#1Good afternoon lit !!!I have a macro calling another macroBut in the macro I call I don't want it to execute the last line, but I need that line when I use this macro aloneHow do I disable this line in the macro I'm going to use to call.See the attached images.image 01: the one you will callimage 02: there is a line that I don't want to execute, which would be line 15.And skip to the next macro on line 5 of image 01.how would this conditional be?Imagesimage 01 the one you will call.jpg196.8 kB720 × 1,280image 02 there is a line that I don't want to execute, which would be line 15.jpg249.77 kB720 × 1,280",
+  "posts": [
+    {
+      "author": "mflte_mflight",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 24, 2020 at 9:57 PM#1Good afternoon lit !!!I have a macro calling another macroBut in the macro I call I don't want it to execute the last line, but I need that line when I use this macro aloneHow do I disable this line in the macro I'm going to use to call.See the attached images.image 01: the one you will callimage 02: there is a line that I don't want to execute, which would be line 15.And skip to the next macro on line 5 of image 01.how would this conditional be?Imagesimage 01 the one you will call.jpg196.8 kB720 × 1,280image 02 there is a line that I don't want to execute, which would be line 15.jpg249.77 kB720 × 1,280"
+    },
+    {
+      "author": "jshdesigns",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 28, 2020 at 5:29 PM#2If I'm understanding this correctly, in your first macro insert a new command at line 4:Assign Macro 1.\"Clone Beams All\".15 /Disabled=YesThen in your second macro put a new line 16:Assign Macro 1.\"Clone Beams All\".15 /Disabled=NoSo if your first macro is called, it won't execute line 15 in your second macro, but will enable it after being executed in case you call it by itself.Just be careful because if you insert any new macro lines in your second macro, then the line you want to disable no longer becomes #15.Another way to do this is with a variable following the same steps above.First Macro New Line 4: Setvar $Condition = \"True\"Second Macro Line 15: [$Condition = \"False\"](Clone Beams All OK! Aperte Enter)Second Macro Line 16: Setvar $Condition =\"False\""
+    },
+    {
+      "author": "mflte_mflight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 13, 2020 at 9:51 PM#3Thanks, it worked !!!"
+    }
+  ],
   "replies": 0,
   "thread_id": "66101",
   "title": "Conditional not to execute a line",

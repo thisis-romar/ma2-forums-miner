@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:bdf86f410b456bdaf9d7590622c1d5c6ddf8d02d362956b238a41cec505c9a3f",
-      "download_count": 215,
+      "download_count": 228,
       "filename": "dmx remotes.show.gz",
+      "post_number": 2,
       "size": 989123,
       "url": "https://forum.malighting.com/file-download/4662/"
     }
@@ -11,6 +12,38 @@
   "author": "takumizero2",
   "post_date": null,
   "post_text": "February 5, 2021 at 7:35 AM#1Hello.I am a lighting operator in Japan.How can I set up a macro to adjust the Width of an effect in real time with a fader?",
+  "posts": [
+    {
+      "author": "takumizero2",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 5, 2021 at 7:35 AM#1Hello.I am a lighting operator in Japan.How can I set up a macro to adjust the Width of an effect in real time with a fader?"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 6, 2021 at 5:20 PM#2Hello Takumizero,I have done this with a few dmx remotes, have a look at the attached showfile. On screen 2 i have made a view with 2 playback bars and a commandline feedback. when moving fader 1.15 you will see that fader 1 thru 11 will execute command \"assign effect 1/width=X\" where X represents a width value for effect 1.In the Patch menu you will find 3 layers ( Width CTRL, Width Fader CTRL and Test Fixtures)Under layer Width CTRL you find 1 patched dimmer fixture (channel 1 dmx 10.1) This fixture is programmed at full in sequence 13 cue 1. This fixture controls the dmx remotes for executor 16 thru 26.Under layer Width Fader CTRL you find 11 dimmers patched at dmx 10.11 thru 10.21 (channel 11 thru 21) these channels are used in sequence 33 thru 43. All at full but individualy used per sequence (channel 11 at full in sequence 33, channel 12 at full in sequence 34 and so on) These channels are used to control fader 1 thru 11 by dmx remoteIn the Test Fixture layer you find 10 VL3000 Spots arranged in a row to check the output in MA3DBesides this i have made 11 DMX profiles named TRIG 1 thru TRIG 11. These profiles are used in sequence 33 thru 43 to modify the moment when they give output. (Trig 1 in sequence 33, Trig 2 in sequence 34 and so on)I have setup 11 faders for the widths 0 thru 100% in steps of 10% (exec 1 thru 11, sequence 1 thru 11) (those sequences contain only one cue without programmed information but with a command)Than i have setup 11 faders that control fader 1 thru 11 (fader 16 thru 26, sequence 33 thru 34)In the Dmx remotes i have made 11 remotes to control fader 16 thru 26 thru 1 dmx channel (channel 1 dmx 10.1) (CTRL fader 1 thru 11)In the same menu i have made another 11 remotes to control fader 1 thru 11 ( channel 11 thru 21 dmx 10.11 thru 10.21) (Width fader 1 thru 11)When moving fader 15 you see that fader 16 thru 26 are moving at the same time but due to the dmx profiles used fader 1 thru 11 are moving only when moving thru a certain part of the fader. When fader 1 thru 11 are activated they execute a command (assign effect 1/width=X) Due to the DMX profiles they are only active for a small range of movement so the width is adjusted thru the entire range when moving fader 15 up and down.If you need a more flowing control over the width you need to setup more dmx remotes, dmx profiles, faders and sequences.Filesdmx remotes.show.gz989.12 kB – 228 Downloads"
+    },
+    {
+      "author": "takumizero2",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 12, 2021 at 5:00 AM#3MerkvanderMeulenThanks for your reply!You're so kind to share that with us!I've tried it right away!It worked!I was just thinking about adjusting the Width from 1-100%, but it's going to be a pretty steady process.Thanks for sharing this really helpful info!"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 12, 2021 at 6:37 AM#4Your welcome!"
+    },
+    {
+      "author": "Koideg",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "August 30, 2022 at 4:53 AM#5I've only done this with movement FX:1. \"Assign\" \"Effect\" number or name \"At\" Fader/Executor you want.The fader is now the size (or width) master for the individual Effect.The other control I have size:1. Select the Fixtures you want to control.2. Tap on \"Position\" in the programmer.3. Tap on \"Effect\" (next to \"Value\")4. Tap on either \"Tilt\" or \"Pan\"5. A pop up window will appear. Select \"Stomp\"6. Now \"Store\" \"At\" tap the fader/executor you want.7. Tap \"Assign\" then the fader/executor and switch the fader to \"Temp\"This is now the Size Master for all moving FX (of the fixtures you selected)."
+    }
+  ],
   "replies": 0,
   "thread_id": "66365",
   "title": "Effect Width Fader",

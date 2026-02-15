@@ -3,6 +3,20 @@
   "author": "grey",
   "post_date": null,
   "post_text": "March 21, 2017 at 5:23 PM#1Can not I make a macro to test the connection of several consoles over a network roughly speaking ping!",
+  "posts": [
+    {
+      "author": "grey",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 21, 2017 at 5:23 PM#1Can not I make a macro to test the connection of several consoles over a network roughly speaking ping!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 21, 2017 at 6:56 PM#2the commandCodeNetworkSpeedTestwill do this"
+    }
+  ],
   "replies": 0,
   "thread_id": "57729",
   "title": "ping consoles macro",

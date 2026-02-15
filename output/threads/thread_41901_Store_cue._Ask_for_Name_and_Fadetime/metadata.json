@@ -3,6 +3,50 @@
   "author": "emanueltilly",
   "post_date": null,
   "post_text": "May 31, 2014 at 9:27 AM#1Hi! I'm not that good at creating macros that ask questions, so I'm just going to ask you guysI want to create a macro that stores a cue in my selected cuelist, and asks for what name the cue should have and what fadetime it should have. I think this would be possible in some way after reading the manual a bit, right?Since I'm using a PC only setup this would be a hudge timesaver!",
+  "posts": [
+    {
+      "author": "emanueltilly",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 31, 2014 at 9:27 AM#1Hi! I'm not that good at creating macros that ask questions, so I'm just going to ask you guysI want to create a macro that stores a cue in my selected cuelist, and asks for what name the cue should have and what fadetime it should have. I think this would be possible in some way after reading the manual a bit, right?Since I'm using a PC only setup this would be a hudge timesaver!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 31, 2014 at 3:05 PM#2try this:Store Cue (number?) Fade (time?) (\"Name?\")"
+    },
+    {
+      "author": "emanueltilly",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 31, 2014 at 9:25 PM#3Hi!This is great! I did not even know you could do that.But is there any workaround so that you don't have to wright the cuenumber, so that it just stores the next cue?Otherwise, thank you so much!"
+    },
+    {
+      "author": "kylebjordahl",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "June 1, 2014 at 1:43 AM#4If you leave out the \"Cue (number?)\" portion, it should store the next available cue."
+    },
+    {
+      "author": "emanueltilly",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "June 1, 2014 at 8:13 AM#5That's what I thaught, but I can't get it to work. Tried it both with a empty cuestack and with one already having a couple of cues in it."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "June 1, 2014 at 10:45 AM#6unfortunately, in the store syntax, name is a second argument to the store function, name is defined as what comes after the store destination (cue-number in this case), so you cannot exclude the store-destination (number) without excluding the name, otherwise the name will be interpreted as the first argument - the destination.I your selected executor is a main sequence, always located at e.g. exec 15, you could provide theexecutoras the store destination instead,Store Executor 15 Fade (time?) (\"Name?\")"
+    },
+    {
+      "author": "emanueltilly",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "June 1, 2014 at 2:24 PM#7Yes that would work. Thank you!"
+    }
+  ],
   "replies": 0,
   "thread_id": "41901",
   "title": "Store cue. Ask for Name and Fadetime?",

@@ -3,6 +3,32 @@
   "author": "Laurijn",
   "post_date": null,
   "post_text": "July 24, 2017 at 6:56 PM#1have any own an idea what the best way is for my folow problemi want in a macro an cmd that stores a cmd in a cueis that posible to do that or must i do that in lua script",
+  "posts": [
+    {
+      "author": "Laurijn",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 24, 2017 at 6:56 PM#1have any own an idea what the best way is for my folow problemi want in a macro an cmd that stores a cmd in a cueis that posible to do that or must i do that in lua script"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 24, 2017 at 7:45 PM#2Could this be a solution?: Assign cue x/cmd=\"command needed for that cue\""
+    },
+    {
+      "author": "Laurijn",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 24, 2017 at 7:51 PM#3when i insert de cmd in the cmd line then makes de ma cmd =cmdhelpof is it voor lua script"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "July 24, 2017 at 8:14 PM#4This is just a basic commandline function, please make sure you a sharp eye at the spaces used in your commandline, this would explain the change to CmdHelp"
+    }
+  ],
   "replies": 0,
   "thread_id": "59106",
   "title": "store cmd for cue",

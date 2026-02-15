@@ -3,6 +3,20 @@
   "author": "bowyabowya",
   "post_date": null,
   "post_text": "November 6, 2016 at 9:34 AM#1HI all ~I have a question with how to set midi encorder and can use Align function.I use Touchosc 1.9.8Now i set my encorder cmd like thisnote1 Attribute $val At + $resnote2 Attribute $val At - $resnote3 SetVar $res= \"1\"note4 SetVar $val=\"pan\"note5 Align\"><\"but i cant use Align function...when i change my value with midi encorder then Align function will turn off...anyone can teach me? Thanks alot!!!!",
+  "posts": [
+    {
+      "author": "bowyabowya",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 6, 2016 at 9:34 AM#1HI all ~I have a question with how to set midi encorder and can use Align function.I use Touchosc 1.9.8Now i set my encorder cmd like thisnote1 Attribute $val At + $resnote2 Attribute $val At - $resnote3 SetVar $res= \"1\"note4 SetVar $val=\"pan\"note5 Align\"><\"but i cant use Align function...when i change my value with midi encorder then Align function will turn off...anyone can teach me? Thanks alot!!!!"
+    },
+    {
+      "author": "MichaelK",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 6, 2016 at 6:24 PM#2For Allign I use Macros and trigger them separately with different notes.You'll find the Allign-Macros as predefined Macros.M."
+    }
+  ],
   "replies": 0,
   "thread_id": "55781",
   "title": "How to set midi encorder and can use Align function?",

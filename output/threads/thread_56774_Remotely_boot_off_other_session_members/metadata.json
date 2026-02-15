@@ -3,6 +3,32 @@
   "author": "TRexroat",
   "post_date": null,
   "post_text": "January 24, 2017 at 9:10 PM#1Hey guys,Just curious if there's a syntax option to boot other consoles off the session via IP address. I often times will have a console/workstation online in my dimmer pit. I usually assign that console the IP address 192.168.0.10, while my primary is x.1, and my backup is x.2.Wondering if I can remotely kick that IP address off from my master console?Thanks in advance,T-Rex",
+  "posts": [
+    {
+      "author": "TRexroat",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 24, 2017 at 9:10 PM#1Hey guys,Just curious if there's a syntax option to boot other consoles off the session via IP address. I often times will have a console/workstation online in my dimmer pit. I usually assign that console the IP address 192.168.0.10, while my primary is x.1, and my backup is x.2.Wondering if I can remotely kick that IP address off from my master console?Thanks in advance,T-Rex"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 25, 2017 at 1:34 AM#2[color=#66FF33]RemoteCommand[/color] 192.168.0.10 \"LeaveSession\"Might also just be able to do [color=#66FF33]LeaveSession[/color] 192.168.0.10, but I'm not sure about that one without testing."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 25, 2017 at 8:01 AM#3I believe this should do the jobCodeDisconnectStation 192.168.0.10or merelyCodeDS 10"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "January 25, 2017 at 1:49 PM#4Learn something new every day."
+    }
+  ],
   "replies": 0,
   "thread_id": "56774",
   "title": "Remotely boot off other session members",

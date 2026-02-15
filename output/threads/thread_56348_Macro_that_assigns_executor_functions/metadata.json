@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:743a6db07b63bcd129f4a4cb9e60251b37bf9268f1ff3978fe5b7b78246cb7a8",
-      "download_count": 49,
+      "download_count": 58,
       "filename": "Assign Exec Temp Load Go Tempfade.xml",
+      "post_number": 2,
       "size": 1048,
       "url": "https://forum.malighting.com/file-download/4141/"
     }
@@ -11,6 +12,26 @@
   "author": "Duplicate Bastian",
   "post_date": null,
   "post_text": "December 17, 2016 at 9:20 AM#1Hi,I'm looking for a macro that assigns the functions of an arbitrary executor.Something like:assign temp execbutton1assign load execbutton2assign go execbutton3assign temp fader @I want to create three or four macros for standard executor functions...If you have any ideas please let me know.Thanks, Bastian",
+  "posts": [
+    {
+      "author": "Duplicate Bastian",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 17, 2016 at 9:20 AM#1Hi,I'm looking for a macro that assigns the functions of an arbitrary executor.Something like:assign temp execbutton1assign load execbutton2assign go execbutton3assign temp fader @I want to create three or four macros for standard executor functions...If you have any ideas please let me know.Thanks, Bastian"
+    },
+    {
+      "author": "Moe696",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 17, 2016 at 10:52 AM#2I created a macro based on your message.Of course you could replace the functions with UserVars as well.GreetingsMoeFilesAssign Exec Temp Load Go Tempfade.xml1.05 kB – 58 Downloads"
+    },
+    {
+      "author": "Duplicate Bastian",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "December 17, 2016 at 11:04 AM#3Thanks, that's exactly what I was looking for!!!"
+    }
+  ],
   "replies": 0,
   "thread_id": "56348",
   "title": "Macro that assigns executor functions?",

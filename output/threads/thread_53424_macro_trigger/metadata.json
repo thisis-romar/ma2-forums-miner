@@ -3,6 +3,20 @@
   "author": "PolyChrome Dlux",
   "post_date": null,
   "post_text": "June 5, 2016 at 10:05 PM#1Is there a way to tell a macro or cmd to only run once after it has been triggered? I.E when you want to add a \"goto cue\" to in the middle of a sequence and then continue after passing that macro again.",
+  "posts": [
+    {
+      "author": "PolyChrome Dlux",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 5, 2016 at 10:05 PM#1Is there a way to tell a macro or cmd to only run once after it has been triggered? I.E when you want to add a \"goto cue\" to in the middle of a sequence and then continue after passing that macro again."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 5, 2016 at 10:48 PM#2sequences already has inbuild functionality for this.select the cue you want to goto in the Loop column, and set the Lcount to 1"
+    }
+  ],
   "replies": 0,
   "thread_id": "53424",
   "title": "macro trigger",

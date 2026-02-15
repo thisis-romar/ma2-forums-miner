@@ -3,6 +3,20 @@
   "author": "Ecoflac",
   "post_date": null,
   "post_text": "April 20, 2017 at 11:56 AM#1Hi,i want to change the Appearance of the selected macro -this would be easier if i could get the macro number of my executed macro as variableAppearance Macro 30 thru 50 /s=0Appearance Macro $variable /g=100is there any chance to get the Number?thanks a lot!Ecoflac",
+  "posts": [
+    {
+      "author": "Ecoflac",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 20, 2017 at 11:56 AM#1Hi,i want to change the Appearance of the selected macro -this would be easier if i could get the macro number of my executed macro as variableAppearance Macro 30 thru 50 /s=0Appearance Macro $variable /g=100is there any chance to get the Number?thanks a lot!Ecoflac"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 20, 2017 at 1:34 PM#2HiThere is no \"selected macro\"."
+    }
+  ],
   "replies": 0,
   "thread_id": "58185",
   "title": "Get Macro Number",

@@ -3,6 +3,26 @@
   "author": "Jbone",
   "post_date": null,
   "post_text": "January 22, 2019 at 1:02 AM#1I use Skypanels constantly at work and I wrote a macro that gives me a pop up so that I can enter the desired color temperature. My question is, how can make it so that it only applies to my selection? If I have nothing selected and hit it, everything with that attribute goes to the color temp that I enter, but adding the word Selection at the begining doesn’t do it. Any help is much appreciated.As it is now:Attribute”colortemperature” At (Temp?)",
+  "posts": [
+    {
+      "author": "Jbone",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 22, 2019 at 1:02 AM#1I use Skypanels constantly at work and I wrote a macro that gives me a pop up so that I can enter the desired color temperature. My question is, how can make it so that it only applies to my selection? If I have nothing selected and hit it, everything with that attribute goes to the color temp that I enter, but adding the word Selection at the begining doesn’t do it. Any help is much appreciated.As it is now:Attribute”colortemperature” At (Temp?)"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 22, 2019 at 7:29 AM#2try addingIf Selectionat the end."
+    },
+    {
+      "author": "Jbone",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 22, 2019 at 9:34 PM#3Yep, that was it. Thank you very, very much!"
+    }
+  ],
   "replies": 0,
   "thread_id": "63207",
   "title": "Color temp adjustment via macro",

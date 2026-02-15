@@ -3,6 +3,20 @@
   "author": "SharonM",
   "post_date": null,
   "post_text": "June 15, 2014 at 11:10 AM#1Hi everyone!I'm trying to write a macro that takesAll positive and negative groupmasters to full. Is their a way to do that in MA2?Tnx",
+  "posts": [
+    {
+      "author": "SharonM",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 15, 2014 at 11:10 AM#1Hi everyone!I'm trying to write a macro that takesAll positive and negative groupmasters to full. Is their a way to do that in MA2?Tnx"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 15, 2014 at 2:33 PM#2I don't think there is any syntax to do this, you will need to use the softkeys in the groupmaster overview menu.CodeMenu \"GM\"---you could however try this workaround to setanygroupmaster to full:(v3)Label Group * \"I am a group\"Executor *.\"I am a group\" At FullOops /nc"
+    }
+  ],
   "replies": 0,
   "thread_id": "42113",
   "title": "Macro for groupmaster",

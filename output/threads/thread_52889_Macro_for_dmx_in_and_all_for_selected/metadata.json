@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:5b8b13778f7761156b0a3ce0d5121e99179b9c4ff5329fe525cdf76f0b786917",
-      "download_count": 543,
+      "download_count": 554,
       "filename": "Position theif.xml",
+      "post_number": 6,
       "size": 758,
       "url": "https://forum.malighting.com/file-download/4066/"
     }
@@ -11,6 +12,44 @@
   "author": "justinpma",
   "post_date": null,
   "post_text": "May 6, 2016 at 9:43 AM#1Hi,How can I write a macro for storing cue with dmx source:dmx in and all for selected?",
+  "posts": [
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 6, 2016 at 9:43 AM#1Hi,How can I write a macro for storing cue with dmx source:dmx in and all for selected?"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 6, 2016 at 10:59 AM#2store /use=allforselectedstore /so=\"dmx in\""
+    },
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 7, 2016 at 3:48 AM#3How can I do that in one command?The dmx in command didn't work too"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 7, 2016 at 4:19 AM#4Just combine the /options into one line: Store /use= /so=Make sure you enclose \"DMX In\" in quotes, otherwise it'll think you're trying to say /so=dmx."
+    },
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 7, 2016 at 4:35 AM#5Got it, thank you"
+    },
+    {
+      "author": "Brock",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "August 4, 2016 at 11:58 AM#6I made this one, that steals the incoming position data for selected fixtures, and stores it on the first available position preset...Have funBrockFilesPosition theif.xml758 Byte – 554 Downloads"
+    }
+  ],
   "replies": 0,
   "thread_id": "52889",
   "title": "Macro for dmx in and all for selected",

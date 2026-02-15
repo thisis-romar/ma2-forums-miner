@@ -3,6 +3,20 @@
   "author": "SD456",
   "post_date": null,
   "post_text": "September 11, 2017 at 12:17 PM#1Hello everyone!I would like make a macro to select only those fixtures and channels which have value.Let me explain what I want.So, I have a scene made from multiple executors, I set the first one (with 6 dimmers), at lets say 30. The second at 45 (another 6 dimmer), and the third one at 75 (4 fixtures).How can I select only those dimmers, channels and fixtures, which have values to them?Thanks for the help in advance!",
+  "posts": [
+    {
+      "author": "SD456",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 11, 2017 at 12:17 PM#1Hello everyone!I would like make a macro to select only those fixtures and channels which have value.Let me explain what I want.So, I have a scene made from multiple executors, I set the first one (with 6 dimmers), at lets say 30. The second at 45 (another 6 dimmer), and the third one at 75 (4 fixtures).How can I select only those dimmers, channels and fixtures, which have values to them?Thanks for the help in advance!"
+    },
+    {
+      "author": "madsonic",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 12, 2017 at 1:53 AM#2I think what you are looking for is the keywordIfOutput.To activate the selcected channels for storing double-press Enter.greetingsMatthias"
+    }
+  ],
   "replies": 0,
   "thread_id": "59496",
   "title": "How can I select only those channels/fixtures which have value.",

@@ -3,6 +3,32 @@
   "author": "kishansiyal",
   "post_date": null,
   "post_text": "January 16, 2017 at 9:37 PM#1Hi,I want to create a macro that will act as the goto button or the load button that is i want to click on the macro then select the executor and then the cue.when I put a goto in the macro and try it that doesn't workI know its a silly doubt but please help me out with it. thanks.",
+  "posts": [
+    {
+      "author": "kishansiyal",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 16, 2017 at 9:37 PM#1Hi,I want to create a macro that will act as the goto button or the load button that is i want to click on the macro then select the executor and then the cue.when I put a goto in the macro and try it that doesn't workI know its a silly doubt but please help me out with it. thanks."
+    },
+    {
+      "author": "Duplicate dherderich",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 17, 2017 at 9:04 AM#2[At-Sign]Goto @Load @"
+    },
+    {
+      "author": "kishansiyal",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 17, 2017 at 7:06 PM#3hi,Thanks a lot that been a gr8 help for me, I know it's very silly thing to ask."
+    },
+    {
+      "author": "dj_rappa",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 5, 2017 at 8:35 AM#4There are no silly questions, only silly people......and they all use hogs :p"
+    }
+  ],
   "replies": 0,
   "thread_id": "56639",
   "title": "Macro to create Playback Function.",

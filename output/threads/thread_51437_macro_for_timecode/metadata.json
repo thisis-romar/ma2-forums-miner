@@ -3,6 +3,44 @@
   "author": "justinpma",
   "post_date": null,
   "post_text": "February 23, 2016 at 3:13 PM#1Hi,Is there a macro that I can switch between internal or timecode slot?",
+  "posts": [
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 23, 2016 at 3:13 PM#1Hi,Is there a macro that I can switch between internal or timecode slot?"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 23, 2016 at 4:28 PM#2Assign Timecode x /slot=-1 (or \"intern\") is Internal0 (or \"link selected\") is Selected1..8 is the specific slot"
+    },
+    {
+      "author": "Viallon",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 25, 2016 at 10:15 AM#3WoooW!Thank you!"
+    },
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 25, 2016 at 2:56 PM#4Thank you,I've wrote this macro which I would like to share,hopefully will work for others without problemSetUserVar $select=(\"1.Internal 2.Link Selected 3.TC Slot\")[$select==\"1\"]  Assign Timecode (Which Timecode Pool?)/slot= -1[$select==\"2\"]  Assign Timecode (Which Timecode Pool?)/slot= 0[$select==\"3\"]  Assign Timecode (Which Timecode Pool?)/slot=(Which Slot?)It's a very simple one where you can pick which slot to go for and which time code pool you want to apply it."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "February 25, 2016 at 4:00 PM#5Why not just:[color=#66FF00]Assign Timecode[/color] (Which TC Show?) /slot=(Which slot? -1=Internal, 0=Selected, or 1..8)"
+    },
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "February 26, 2016 at 12:52 AM#6Yeah, I thought about that.Somehow, I forgot the reason why I didn't go with it.probably because I want to reduce the number of press button since I actually just switch between internal and selected mostlywhich is option 1 or 2 for me instead of -1 or 0.doesn't make so much different, I guessthank you for the suggestion"
+    }
+  ],
   "replies": 0,
   "thread_id": "51437",
   "title": "macro for timecode",

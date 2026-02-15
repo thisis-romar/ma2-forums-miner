@@ -3,6 +3,38 @@
   "author": "Duplicate SAJALX",
   "post_date": null,
   "post_text": "November 3, 2014 at 5:15 AM#1Hey all,I'm looking to make a Macro to select a range of channels but only the ones that have a level.I'm trying the IfOutput command combined with \"Channels X thru Y\" variations with out any luck.Once I get the command syntax the Macro should be easy.I want to be able to tap the Macro, input a range of numbers \"1 Thru 5 + 8 Thru 12\" for example, and have it select only the fixtures in that range that have a level above 0.Thanks,Brennan",
+  "posts": [
+    {
+      "author": "Duplicate SAJALX",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 3, 2014 at 5:15 AM#1Hey all,I'm looking to make a Macro to select a range of channels but only the ones that have a level.I'm trying the IfOutput command combined with \"Channels X thru Y\" variations with out any luck.Once I get the command syntax the Macro should be easy.I want to be able to tap the Macro, input a range of numbers \"1 Thru 5 + 8 Thru 12\" for example, and have it select only the fixtures in that range that have a level above 0.Thanks,Brennan"
+    },
+    {
+      "author": "ivers",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 3, 2014 at 6:20 AM#2If you select your fixtures first, this one will work.store group 999 /oifoutput @if group 999delete group 999 /ncThis one will ask the user to specify which value range that should be included.If you only want to read the fixtures above zero, skip the @ (or simply press enter when the the ifoutput keyword appears in the cmdline)"
+    },
+    {
+      "author": "Duplicate SAJALX",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 3, 2014 at 10:59 PM#3You might need to talk me through this one as I don't believe that will work for what I'm trying to do.Imagine you have 100 conventional channels. Channels 51 through 55 and 61 through 65 are at 75%. What I want is to be able to type \"1 ThruOn 100 @ 50\" and have only 51 through 55 and 61 through 65 go to 50% without selecting other channels (amusing they are at 0).Maybe this needs to be an MA+ Thru button command not a macro?Thanks,Brennan"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "November 3, 2014 at 11:36 PM#4IfOutput->select all channels with output above zeroIf Channel 1 Thru 100->but of those with output, only ch 1 thru 100At 50should do the job,- basically the same as Ivers macro, intersect two selections via the if keyword.one group being all with output, second group your given range, the intersection would be the channels in the given group that has output.if you want to save a few keystrokes, your macro could go:CodeClearSelectionIfOutputIf @the @ will halt the macro mid-command and let you finish off with your range and targetvalue: Channel 1 Thru 100 at 50"
+    },
+    {
+      "author": "Duplicate christof",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "November 4, 2014 at 8:08 AM#5The command works also in an even simpler way. You can save one line:IfOutput Channel 1 Thru 100At 50Christof"
+    }
+  ],
   "replies": 0,
   "thread_id": "44070",
   "title": "Thru On Macro?",

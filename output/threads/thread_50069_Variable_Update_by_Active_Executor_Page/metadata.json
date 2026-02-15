@@ -3,6 +3,26 @@
   "author": "JCostello",
   "post_date": null,
   "post_text": "November 30, 2015 at 4:50 PM#1I am having trouble coming up with the proper syntax for the start of a chain of macros.  What I am looking to do is to have a variable change depending on which page of executors is currently active.  Something like this, with the section with asterisks around it being the trouble spot:setvar $actfixpage = *Active Page*Not sure if this is even possible to work the way I want it to without running the macro each time I switch executor pages, but would definitely save a lot of time if there is a way to make this work.  Any suggestions?Jim",
+  "posts": [
+    {
+      "author": "JCostello",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 30, 2015 at 4:50 PM#1I am having trouble coming up with the proper syntax for the start of a chain of macros.  What I am looking to do is to have a variable change depending on which page of executors is currently active.  Something like this, with the section with asterisks around it being the trouble spot:setvar $actfixpage = *Active Page*Not sure if this is even possible to work the way I want it to without running the macro each time I switch executor pages, but would definitely save a lot of time if there is a way to make this work.  Any suggestions?Jim"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 30, 2015 at 6:53 PM#2it is not possible to set or update serdefinable variables as you describe.the console however provide several inbuild variables to be able to retrieve such statuses.e.g.$BUTTONPAGE$FADERPAGEtypeLISTVARto see all variables, both userdefined and inbuildt"
+    },
+    {
+      "author": "JCostello",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 30, 2015 at 7:25 PM#3actually, I can make what I'm doing work using the variables built in the consoles, just hadn't thought of that.  thank you, glad.Jim"
+    }
+  ],
   "replies": 0,
   "thread_id": "50069",
   "title": "Variable Update by Active Executor Page",

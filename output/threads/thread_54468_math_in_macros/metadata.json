@@ -3,6 +3,44 @@
   "author": "electroaudio",
   "post_date": null,
   "post_text": "August 13, 2016 at 1:55 PM#1I want to control MADRIX over dmx , but instead of selecting a fixed storage in madrix i would like to make a intelligent selection depending on different parameters.one is which chase that is run and the other is which colour that chase has.for instance [current chase] * 8 + [current colour] and to output it to the madrix storage selectchannel.and everytime the colour or the chase is changed then the calculated value should update madrix.This is my first adventure into real macroprogramming in grandma , so i dont even know how to handle the problem properly....I could use commands in the CMD-box for every fader and button , like setvar $colour=\"1\" or setvar $chase=\"5\", is it then possible to add a macro after that in the commandline, that would calculate and send that value to madrix? or do i need to do one macro for each change with the proper setvar command? or can i somehow pass a value to a macro like in other shellscriptlanguages?",
+  "posts": [
+    {
+      "author": "electroaudio",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 13, 2016 at 1:55 PM#1I want to control MADRIX over dmx , but instead of selecting a fixed storage in madrix i would like to make a intelligent selection depending on different parameters.one is which chase that is run and the other is which colour that chase has.for instance [current chase] * 8 + [current colour] and to output it to the madrix storage selectchannel.and everytime the colour or the chase is changed then the calculated value should update madrix.This is my first adventure into real macroprogramming in grandma , so i dont even know how to handle the problem properly....I could use commands in the CMD-box for every fader and button , like setvar $colour=\"1\" or setvar $chase=\"5\", is it then possible to add a macro after that in the commandline, that would calculate and send that value to madrix? or do i need to do one macro for each change with the proper setvar command? or can i somehow pass a value to a macro like in other shellscriptlanguages?"
+    },
+    {
+      "author": "electroaudio",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 14, 2016 at 12:00 AM#2ok found a solution but it is a messy hack, anyway, it works"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 14, 2016 at 4:54 PM#3then, share it"
+    },
+    {
+      "author": "electroaudio",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "August 24, 2016 at 12:48 PM#4Ok, for every colour and movement i will have to create one script who sets the appropiate value and calculates the dmxvalue for madrix.setvar $colour= (the value that should change) (or update $chase in the same way if it is a chase)Fixture (madrix simple 3ch mode) attribute clipdir AT $colour+16*$chaseso then it will be one script for each colour and one script for each chase that is run from the cues CMD box.i dont really like that it goes thru the programmer with the fixture command , so if it possible to change that then it would be much better... any tips are welcome herei will also add som other householdstuff in each script, for instance, to set the right clipdir in madrix and such stuff.and, whenever i find a way to make a simple resolume arena dmxlist , then there will be a new set of similar scripts for arena too"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "August 24, 2016 at 1:03 PM#5another plausible approach would be to store the clipdir value 1 thru 16 in your color-executorsthen store a clipdir static (flat high)relative effectvalueof 16,32,48 etc in your chase-executors."
+    },
+    {
+      "author": "electroaudio",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "August 30, 2016 at 9:03 AM#6glad Wrote:-------------------------------------------------------> another plausible approach would be to store the> clipdir value 1 thru 16 in your color-executors> then store a clipdir static (flat high)  relative> effectvalue of 16,32,48 etc in your> chase-executors.How do i store the value in the executor?"
+    }
+  ],
   "replies": 0,
   "thread_id": "54468",
   "title": "math in macros?",

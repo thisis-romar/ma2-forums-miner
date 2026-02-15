@@ -3,6 +3,32 @@
   "author": "Rublex",
   "post_date": null,
   "post_text": "November 8, 2014 at 2:17 PM#1HiHow can i create a macro that has fade time when i stomp the effect?I use the predefined macro \"stomp effects\", But i want it to fade out, not clip.Anyone?",
+  "posts": [
+    {
+      "author": "Rublex",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 8, 2014 at 2:17 PM#1HiHow can i create a macro that has fade time when i stomp the effect?I use the predefined macro \"stomp effects\", But i want it to fade out, not clip.Anyone?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 9, 2014 at 11:30 PM#2Stomp should obey Program Time so something like this might do the jobSpecialMaster 2.\"program time\" At 5On SpecialMaster 2.\"program time\"Stomp ..........Off SpecialMaster 2.\"program time\""
+    },
+    {
+      "author": "sebmdp",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 10, 2014 at 2:34 PM#3Hi,If your effect has been assigned to an executor you can assign an off time to this executor.There is a built in macro into the predefined macros to do that quickly.Hope this help"
+    },
+    {
+      "author": "Rublex",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "November 16, 2014 at 1:50 PM#4Thx!"
+    }
+  ],
   "replies": 0,
   "thread_id": "44141",
   "title": "Stomp effect fade",

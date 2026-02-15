@@ -3,6 +3,32 @@
   "author": "Atom Sphere",
   "post_date": null,
   "post_text": "March 30, 2020 at 4:04 PM#1Is it possible to make a macro that open the Temporary Store option window?For an onPC use where the long press don't really work?",
+  "posts": [
+    {
+      "author": "Atom Sphere",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 30, 2020 at 4:04 PM#1Is it possible to make a macro that open the Temporary Store option window?For an onPC use where the long press don't really work?"
+    },
+    {
+      "author": "jfguedes",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 30, 2020 at 4:45 PM#2Not to my knowledge...TypeMenu /?to view the list of options for menu"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 30, 2020 at 7:43 PM#3this seems to do the job:LUA \"gma.canbus.hardkey(59, true, true);gma.canbus.hardkey(59, false, false)\""
+    },
+    {
+      "author": "Atom Sphere",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 31, 2020 at 10:52 AM#4Thanks! I've looked around but it seems that the only thing accessible in the command line is the default store option..."
+    }
+  ],
   "replies": 0,
   "thread_id": "65498",
   "title": "Temporary Store Option",

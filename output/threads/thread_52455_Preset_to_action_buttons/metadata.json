@@ -3,6 +3,20 @@
   "author": "SkäggPetter",
   "post_date": null,
   "post_text": "April 14, 2016 at 12:49 AM#1HiI would like to do a macro that works like this1  select my fixtures2  select what kind of preset type3 select on what exe buttons it should be stored atand i would also use the label of the preset  to the exe buttonsBest regards",
+  "posts": [
+    {
+      "author": "SkäggPetter",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 14, 2016 at 12:49 AM#1HiI would like to do a macro that works like this1  select my fixtures2  select what kind of preset type3 select on what exe buttons it should be stored atand i would also use the label of the preset  to the exe buttonsBest regards"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 14, 2016 at 8:42 PM#2hifixture (which fixtures ?)at preset (what preset ? ie 3.21)store exec (which exec ? ie 1.6)to extract preset name you need to use LUA plugin"
+    }
+  ],
   "replies": 0,
   "thread_id": "52455",
   "title": "Preset to action buttons",

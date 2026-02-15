@@ -3,6 +3,20 @@
   "author": "eKon",
   "post_date": null,
   "post_text": "November 30, 2018 at 12:09 AM#1Hi,Does anybody know the command to Deactivate the loop in the Q List again?To add a loop I use \"Assign Cue 7 /loop=7\"But how to make it no loop again?Thanks already!",
+  "posts": [
+    {
+      "author": "eKon",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 30, 2018 at 12:09 AM#1Hi,Does anybody know the command to Deactivate the loop in the Q List again?To add a loop I use \"Assign Cue 7 /loop=7\"But how to make it no loop again?Thanks already!"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 30, 2018 at 8:03 AM#2Hiassign cue 7 /loop=none"
+    }
+  ],
   "replies": 0,
   "thread_id": "62851",
   "title": "Loop off through command Line",

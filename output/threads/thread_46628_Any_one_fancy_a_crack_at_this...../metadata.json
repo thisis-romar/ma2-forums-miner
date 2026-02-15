@@ -3,6 +3,26 @@
   "author": "beyondctrl",
   "post_date": null,
   "post_text": "May 13, 2015 at 3:12 PM#1Hi,I've been using MA for a while but haven't really go into the pointy end of Macros.....I am basically looking to trigger an effect on a channel when that channel reaches a value given from an merge.Here is some Pseudo code which may or may not help....!Int i;For (i = 0; i < = 400) {If Current Channel < 65 {Next Channel}If Current Channel == 65 {Go Effect 1;i++;}}Jack",
+  "posts": [
+    {
+      "author": "beyondctrl",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 13, 2015 at 3:12 PM#1Hi,I've been using MA for a while but haven't really go into the pointy end of Macros.....I am basically looking to trigger an effect on a channel when that channel reaches a value given from an merge.Here is some Pseudo code which may or may not help....!Int i;For (i = 0; i < = 400) {If Current Channel < 65 {Next Channel}If Current Channel == 65 {Go Effect 1;i++;}}Jack"
+    },
+    {
+      "author": "Duplicate pyroaxel",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 14, 2015 at 10:45 PM#2With a 1 to 1 patch you can make a Dmx remote patched at 1.65 with a go FX Command. The Command will be triggered when ch 65 has a output higher than 50%."
+    },
+    {
+      "author": "beyondctrl",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 17, 2015 at 7:38 AM#3Hello!Thanks for this. I'm not 100% this will do what I need.I have 2500 channels patched!Jack"
+    }
+  ],
   "replies": 0,
   "thread_id": "46628",
   "title": "Any one fancy a crack at this.....?",

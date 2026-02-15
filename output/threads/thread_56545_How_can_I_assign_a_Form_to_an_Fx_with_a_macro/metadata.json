@@ -3,6 +3,26 @@
   "author": "Lightmean",
   "post_date": null,
   "post_text": "January 9, 2017 at 1:05 AM#1Hey at All,I want to change the shape in the Fx. But I do not know how to do it.I've already tried it with:________________________assign effect 1 /form=4________________________assign effect 1 /form=Pwm________________________assign effect 1 form Pwm________________________Unfortunately nothing has worked.Can you help me?Lg Lightmean",
+  "posts": [
+    {
+      "author": "Lightmean",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 9, 2017 at 1:05 AM#1Hey at All,I want to change the shape in the Fx. But I do not know how to do it.I've already tried it with:________________________assign effect 1 /form=4________________________assign effect 1 /form=Pwm________________________assign effect 1 form Pwm________________________Unfortunately nothing has worked.Can you help me?Lg Lightmean"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 9, 2017 at 4:40 AM#2Forms are a separate, assignable object. Assign Form x At Effect y (or ... At Effect 1.y.z)"
+    },
+    {
+      "author": "sls",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 21, 2017 at 4:42 AM#3Thank you."
+    }
+  ],
   "replies": 0,
   "thread_id": "56545",
   "title": "How can I assign a Form to an Fx with a macro",

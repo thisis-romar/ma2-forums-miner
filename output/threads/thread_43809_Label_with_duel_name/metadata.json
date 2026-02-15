@@ -3,6 +3,20 @@
   "author": "Duplicate cedric-e",
   "post_date": null,
   "post_text": "October 12, 2014 at 6:00 PM#1Hi,Can someone help me with this:I want to create a macro that labels another macro.But the label input havs to be a dual uservalue.something like this:setuservar $group=spotsetuservar $color=Redsetuservar $name=$groupadduservar $name= $colorlabel macro x $nameorsetuservar $group=spotsetuservar $color=Redsetuservar $name=$group $colorlabel macro x $namemy problem is when i use the adduservar function its not possible to add a space between spot and redi want to label the macro spot redthanks!",
+  "posts": [
+    {
+      "author": "Duplicate cedric-e",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 12, 2014 at 6:00 PM#1Hi,Can someone help me with this:I want to create a macro that labels another macro.But the label input havs to be a dual uservalue.something like this:setuservar $group=spotsetuservar $color=Redsetuservar $name=$groupadduservar $name= $colorlabel macro x $nameorsetuservar $group=spotsetuservar $color=Redsetuservar $name=$group $colorlabel macro x $namemy problem is when i use the adduservar function its not possible to add a space between spot and redi want to label the macro spot redthanks!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 12, 2014 at 7:08 PM#2I believe this should work:setuservar $group=\"spot\"setuservar $color=\"Red\"setuservar $name=$\"group\"adduservar $name= \" \"adduservar $name= $\"color\"label macro x $\"name\""
+    }
+  ],
   "replies": 0,
   "thread_id": "43809",
   "title": "Label with duel name",

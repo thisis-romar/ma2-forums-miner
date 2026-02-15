@@ -3,6 +3,26 @@
   "author": "sylvavio",
   "post_date": null,
   "post_text": "October 17, 2016 at 7:18 PM#1Hi,What is the macro to assign a speedmaster to an effect on executor ?because - \"assign executor x.y / speedmaster=z\" does'nt work for Effect Executors...",
+  "posts": [
+    {
+      "author": "sylvavio",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 17, 2016 at 7:18 PM#1Hi,What is the macro to assign a speedmaster to an effect on executor ?because - \"assign executor x.y / speedmaster=z\" does'nt work for Effect Executors..."
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 18, 2016 at 9:59 AM#2If you have the effects directly assigned to an executor (purple executor color) tban that command doesn't work, than you have to assign a speedgroup to the effectsI'am not at a console at the moment but guess the syntax fir that would be something like: assign effect effectpool.effect.effectline/speedgroup=numberofthespeedmaster"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 21, 2016 at 1:53 AM#3If your effect is directly assigned to an exec, just assign speedmaster at your effect :[color=#33FF00]assign sm 3.1 effect 1[/color] or [color=#66FF00]assign effect 1 /speedgroup=\"speed 1\"[/color]For the exec :[color=#66FF00]assign exec 1 /speedmaster=5[/color]For me it's working.And if i assigned 2 differents speedmasters to my effect and my exec both are working...But why have 2 sm for one only thing ? You must chose one..."
+    }
+  ],
   "replies": 0,
   "thread_id": "55491",
   "title": "macro to assign speedmaster to effect executor",

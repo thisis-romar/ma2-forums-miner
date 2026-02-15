@@ -3,6 +3,26 @@
   "author": "scoobytoobins",
   "post_date": null,
   "post_text": "January 23, 2018 at 6:56 PM#1I'm trying, and having tons of difficulty, to write a macro that will change the destination of MIDI notes.For example, let's say Song 1 is playing and MIDI notes 1-50 will trigger cues 1-50. Simple.Then, hypothetical Macro is run for Song 2, and MIDI notes 1-50 will now trigger cues 1-50 on Song 2. The same macro but for Song 3 is run and then MIDI notes 1-50 will trigger cues 1-50 of Song 3. I'm having trouble accessing MIDI settings in the command line which is halting me from being able to make this macro. Any advice?Thanks in advance!",
+  "posts": [
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 23, 2018 at 6:56 PM#1I'm trying, and having tons of difficulty, to write a macro that will change the destination of MIDI notes.For example, let's say Song 1 is playing and MIDI notes 1-50 will trigger cues 1-50. Simple.Then, hypothetical Macro is run for Song 2, and MIDI notes 1-50 will now trigger cues 1-50 on Song 2. The same macro but for Song 3 is run and then MIDI notes 1-50 will trigger cues 1-50 of Song 3. I'm having trouble accessing MIDI settings in the command line which is halting me from being able to make this macro. Any advice?Thanks in advance!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 23, 2018 at 8:01 PM#2There is no remote options in the grandMA2 to trigger specificCuesYou may however triggerExecutorscreate MidiNote remote for Executor 1 - 50 \"Current Page\", then you just have to change Page to have a new song, and have the same midinotes trigger different Executors"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 24, 2018 at 4:01 AM#3You could have each midinote trigger a CMD which was \"Goto Cue x\" (which would assume the selected executor), at which point you would then just need to make sure the executor the chosen song is Selected."
+    }
+  ],
   "replies": 0,
   "thread_id": "60532",
   "title": "MIDI change macro",

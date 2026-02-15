@@ -3,6 +3,26 @@
   "author": "offirbh",
   "post_date": null,
   "post_text": "July 29, 2019 at 11:37 PM#1HiIs there a way to assign mib early to a cue with syntex?Something like:Store cue 11 /m /mib=early. ?OrAssign cue 11 /mib=early. ?Thanks in advance",
+  "posts": [
+    {
+      "author": "offirbh",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 29, 2019 at 11:37 PM#1HiIs there a way to assign mib early to a cue with syntex?Something like:Store cue 11 /m /mib=early. ?OrAssign cue 11 /mib=early. ?Thanks in advance"
+    },
+    {
+      "author": "Moe696",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 30, 2019 at 7:27 AM#2Click here"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 30, 2019 at 7:29 AM#3yes"
+    }
+  ],
   "replies": 0,
   "thread_id": "64363",
   "title": "Mib assignment via macro",

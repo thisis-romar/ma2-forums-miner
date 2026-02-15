@@ -3,6 +3,110 @@
   "author": "ah",
   "post_date": null,
   "post_text": "January 30, 2020 at 2:57 PM#1i am trying to edit effect lines through a macro but i cannot work out how or find the answer.for example i have an effect running and i want to trigger a macro that changes the number of groups in the effect, so it would change the groups line from 2 to 3 without going into the editor so i can change the groups while busking.is this a possibility?thanksAlex",
+  "posts": [
+    {
+      "author": "ah",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 30, 2020 at 2:57 PM#1i am trying to edit effect lines through a macro but i cannot work out how or find the answer.for example i have an effect running and i want to trigger a macro that changes the number of groups in the effect, so it would change the groups line from 2 to 3 without going into the editor so i can change the groups while busking.is this a possibility?thanksAlex"
+    },
+    {
+      "author": "F Dijkers",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 30, 2020 at 4:12 PM#2Hi,I already answered this question at the discuss form, but:This is possible:CodeAssign Effect x /groups=xIt works the same for wings, blocks, etc.Kind regards,Floris DijkersLighting Director & Designerflorisdijkers.comlighting@florisdijkers.com"
+    },
+    {
+      "author": "Thibaultgrh",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 3, 2020 at 2:30 PM#3HelloForm:Assign Form X  At Effect 1.X.YY= line of the effect ( if you have multiple preset in your effect)Groups, wing, blocks, rate, dir  :Assign Effect x /groups= xAssign Effect x /wings= xAssign Effect x /blocks= xAssign Effect x /rate= xAssign Effect x /dir=>You can combine groups and rate to have always the same visual speed1 group - rate = 12 groups - rate = 0.5 etc...Thibault"
+    },
+    {
+      "author": "TomDec",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 1, 2020 at 12:28 AM#4Hello,I have a question about this macro. Can we remplace the \"x\" in the command : Assign effect \"x\" / ......... by the effect that we select by the hand or by the mouse on Ma OnPc.Thanks.Thomas."
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "April 1, 2020 at 2:09 PM#5best way to do this would be to assign it first with a variable.if you want to select it manually use:setvar $yourvar = @assign $yourvar /dir /groups etc.if you want to pick using user input use:setvar $yourvar = (which effect number?)assign effect $yourvar /dir /groups etc.if you want to use it in a cmd with effect lines specified (1.effect.line) then i'd recommend doing it the user input way so you avoid the word 'effect' in your variable.i.e. you can't assign 1.effect 419.2 but you can assign effect 1.$yourvar.2"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "April 16, 2020 at 1:40 AM#6\"Setvar $blah = @\" doesn't work. You could use Glad's Intellivars to do this though."
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "April 16, 2020 at 2:53 PM#7ah, ya. would need quotes around the input so it removes the effect keyword.sorry."
+    },
+    {
+      "author": "akstalele",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "April 19, 2020 at 1:22 PM#8Yes it is possible"
+    },
+    {
+      "author": "TomDec",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "April 20, 2020 at 4:42 PM#9Thanks very much!"
+    },
+    {
+      "author": "moe torola",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "April 22, 2020 at 12:20 AM#10hisome time ago i also thought about  to adress the effects without having to open the effect window.the intention was to control 6 attributes for 6 groups, stored in 6 sequences assigned to 6 fadersfor all controls i filled 360 macros with multiple lines.i used the comparator for lots of lines. for the form selector i ended up with this:the var $gen5 contains 6 effect pool items$gen5=effect 580 th 585-form selector-SetVar $gen5form (\"1 sin, 2 pwm, 3 maxnet, 4 bass, 5 circle\")[$gen5form==1]  Assign Form 8 $gen5[$gen5form==2]  Assign Form 4 $gen5[$gen5form==3]  Assign Form 101 $gen5[$gen5form==4]  Assign Form 20.2 $gen5[$gen5form==5]  Assign Form 19 $gen5for value changes im able to just enter + or - , or numberssome variables must be created first, before starting the macrothis example sets the /with=     for one effect-value changer-SetVar $gen51wthval=(\" + or - or number \")[$gen51wthval==+]  AddVar $gen51wth=+5[$gen51wthval==-]  AddVar $gen51wth=-5[$gen51wthval>=0]  SetVar $gen51wth=$gen51wthval[$gen51wth>100]  SetVar $gen51wth=100[$gen51wth<0]  SetVar $gen51wth=0Assign Effect 1.580 /width=$gen51wthand many more...thats one control page of 6:https://www.magentacloud.de/lnk/pniMBI3R[Blocked Image:https://www.magentacloud.de/lnk/pniMBI3R]link seems not to work, open it in separate tab"
+    },
+    {
+      "author": "Jbmckenzie",
+      "post_date": null,
+      "post_number": 11,
+      "post_text": "May 9, 2020 at 10:09 PM#11Here is a macro that allows you to select an effect, and then edit an attribute within it such as groups, wings, etc.SetVar $Effect = (Which effect do you want to edit?)SetVar $Change = (What attribute?)SetVar $Amount = (How many?)Assign Effect $Effect /$Change=$AmountThere might be a more efficient way to do this but it works..."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 12,
+      "post_text": "May 11, 2020 at 9:15 PM#12HiSo many fantasy here, lolTo choose your effect in your effect pool :Assign /groups=x @OrCd @assign * /groups=xCd/That is that simple."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 13,
+      "post_text": "May 11, 2020 at 9:18 PM#13Hi,why don't you use the form's numbers ?Then, you avoid all your comparisons.sin = 8, cos= 9, pwm=4 etcAssign form 8 effect x"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 14,
+      "post_text": "May 11, 2020 at 9:19 PM#14Kai,Please, check your answer before post.setvar $tt @ doesn't work...Greetings"
+    },
+    {
+      "author": "moe torola",
+      "post_date": null,
+      "post_number": 15,
+      "post_text": "May 12, 2020 at 7:15 AM#15Hi,i don't memorized  the direct pool numbers.In this case i only have to choose a number from 1 to 5."
+    },
+    {
+      "author": "XIaoLe",
+      "post_date": null,
+      "post_number": 16,
+      "post_text": "November 27, 2020 at 4:23 PM#16Excuse me, if I don’t specify which EFFECT is, I want to execute it now. How do I use it? Thank you very much."
+    },
+    {
+      "author": "kdoemelt",
+      "post_date": null,
+      "post_number": 17,
+      "post_text": "July 7, 2023 at 10:58 PM#17This is the way!Also it lets you use wildcards in the names.I'm rebuilding an old AutoPunter to reduce the number and complexity of the macros.Using named effects makes the process much easier."
+    }
+  ],
   "replies": 0,
   "thread_id": "65229",
   "title": "edit effect lines through macros",

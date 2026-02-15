@@ -3,6 +3,38 @@
   "author": "Kees",
   "post_date": null,
   "post_text": "January 13, 2016 at 8:02 PM#1hi,What is the syntax for adding/removing an image to a sequence button in a layout?",
+  "posts": [
+    {
+      "author": "Kees",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 13, 2016 at 8:02 PM#1hi,What is the syntax for adding/removing an image to a sequence button in a layout?"
+    },
+    {
+      "author": "bartr",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 15, 2016 at 5:31 PM#2why would you do that? Whats your purpose with it?"
+    },
+    {
+      "author": "Kees",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 15, 2016 at 7:47 PM#3so i can write a macro to link an image quick to a fixture/executor button in a layout without going into that menu."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "January 21, 2016 at 11:38 AM#4no you can'tthere is no command to assign image to a layout object."
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "January 28, 2016 at 7:50 PM#5The only way to make images appear and disappear in a layout is to copy one image to another e.g. copy image x at image y/overwriteThere is no way you can assign images to objects in the layout because objects in a layout are only references to items in the show file, they don't have a dedicated number within the layout and are therefore not directly assignable"
+    }
+  ],
   "replies": 0,
   "thread_id": "50592",
   "title": "assign image syntax",

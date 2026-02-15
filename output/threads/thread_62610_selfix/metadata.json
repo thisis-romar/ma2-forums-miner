@@ -3,6 +3,26 @@
   "author": "pan_ilford",
   "post_date": null,
   "post_text": "November 3, 2018 at 7:35 AM#1I would like to have a macro performing selfix on actual cue in active sequence. Can it be done with selecting all values, cue only values and tracked values?thx",
+  "posts": [
+    {
+      "author": "pan_ilford",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 3, 2018 at 7:35 AM#1I would like to have a macro performing selfix on actual cue in active sequence. Can it be done with selecting all values, cue only values and tracked values?thx"
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 3, 2018 at 4:12 PM#2There is a global variable called $selectedexeccue. This gives you the cue-number of the selected executor.A \"cue $selectedececcue please\" should select all fixtures in the current cue of the selected executor.Gralf"
+    },
+    {
+      "author": "pan_ilford",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 4, 2018 at 9:09 PM#3Thank you"
+    }
+  ],
   "replies": 0,
   "thread_id": "62610",
   "title": "selfix",

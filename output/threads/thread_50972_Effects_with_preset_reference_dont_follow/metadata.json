@@ -3,6 +3,38 @@
   "author": "Hwellink",
   "post_date": null,
   "post_text": "February 4, 2016 at 12:09 AM#1Hi there, It's me again..I'm having issues with effects referring to high-low values from presets.I use macros to change those presets, to make a lot of color bumps for example with only a few effects.It works, except from the fact that I have to run the macro twice for the effect to keep up. Is this a bug in the software?'The solution I have now is that I copy the color preset to the one i used in the effect twice, with a slight delay. It works, but makes the console do twice as much work. And because of the delay, the color change happens with a delay too.Maybe I'm forgetting something, a setting for the effect, or a function to reload the effects engine or something.Thanks!Harm Wellink",
+  "posts": [
+    {
+      "author": "Hwellink",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 4, 2016 at 12:09 AM#1Hi there, It's me again..I'm having issues with effects referring to high-low values from presets.I use macros to change those presets, to make a lot of color bumps for example with only a few effects.It works, except from the fact that I have to run the macro twice for the effect to keep up. Is this a bug in the software?'The solution I have now is that I copy the color preset to the one i used in the effect twice, with a slight delay. It works, but makes the console do twice as much work. And because of the delay, the color change happens with a delay too.Maybe I'm forgetting something, a setting for the effect, or a function to reload the effects engine or something.Thanks!Harm Wellink"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 4, 2016 at 11:51 AM#2is your effect attched to an exec or in a sequence ?"
+    },
+    {
+      "author": "Hwellink",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 4, 2016 at 5:43 PM#3Hi BentoyLight,My Effect is part of a sequence.Regards,Harm Wellink"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 5, 2016 at 8:05 PM#4hiwhat is your macro ?"
+    },
+    {
+      "author": "wolfgang512",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "March 22, 2016 at 2:20 PM#5I am having the same problem with this... any solutions??The only thing I can see it to be related to (through boring experimentation!) is whether the preset is Global/Universal. My presets are all selective, and I'm having the same issue as mentioned above. But I tried it with a set of global presets and it seems to work okay. But what is the reason for this??Best, Jamie"
+    }
+  ],
   "replies": 0,
   "thread_id": "50972",
   "title": "Effects with preset reference dont follow",

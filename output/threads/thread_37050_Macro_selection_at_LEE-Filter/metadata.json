@@ -2,22 +2,116 @@
   "assets": [
     {
       "checksum": "sha256:ab22ed71c2905a86051ec282ca4af387894fb897329ed49a45170bce7d5ea063",
-      "download_count": 150,
+      "download_count": 165,
       "filename": "sel. at LEE Filter.xml",
+      "post_number": 1,
       "size": 53981,
       "url": "https://forum.malighting.com/file-download/3720/"
     },
     {
       "checksum": "sha256:1453962cbba09224ffbecf8b371f593b28945cada0379c3fd1aa7f3c086fe8a8",
-      "download_count": 180,
+      "download_count": 190,
       "filename": "sel. at ROSCO Filter.xml",
+      "post_number": 1,
       "size": 49768,
       "url": "https://forum.malighting.com/file-download/3721/"
     }
   ],
   "author": "RomanP",
   "post_date": null,
-  "post_text": "June 14, 2013 at 8:20 AM#1The defaultmixcolorreadout must be CMY !!!!Select any Fixture and start the macrotype the lee-number in the box ... thats allits a faster way to set the color.type for Lee 068 only 68 ( without the first zero )All values for the color are from GM2 V 3.0.0.2 SwatchBook   <<<<< UPDATEThe defaultmixcolorreadout must be CMY !!!!if anybody need the others colors ( rosco ... ) i can also create a macro for thisThe macros are now exported with GM2 V3.1.1.1Sorry for my bad englishFilessel. at LEE Filter.xml53.98 kB – 150 Downloadssel. at ROSCO Filter.xml49.77 kB – 180 Downloads",
+  "post_text": "June 14, 2013 at 8:20 AM#1The defaultmixcolorreadout must be CMY !!!!Select any Fixture and start the macrotype the lee-number in the box ... thats allits a faster way to set the color.type for Lee 068 only 68 ( without the first zero )All values for the color are from GM2 V 3.0.0.2 SwatchBook   <<<<< UPDATEThe defaultmixcolorreadout must be CMY !!!!if anybody need the others colors ( rosco ... ) i can also create a macro for thisThe macros are now exported with GM2 V3.1.1.1Sorry for my bad englishFilessel. at LEE Filter.xml53.98 kB – 165 Downloadssel. at ROSCO Filter.xml49.77 kB – 190 Downloads",
+  "posts": [
+    {
+      "author": "RomanP",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 14, 2013 at 8:20 AM#1The defaultmixcolorreadout must be CMY !!!!Select any Fixture and start the macrotype the lee-number in the box ... thats allits a faster way to set the color.type for Lee 068 only 68 ( without the first zero )All values for the color are from GM2 V 3.0.0.2 SwatchBook   <<<<< UPDATEThe defaultmixcolorreadout must be CMY !!!!if anybody need the others colors ( rosco ... ) i can also create a macro for thisThe macros are now exported with GM2 V3.1.1.1Sorry for my bad englishFilessel. at LEE Filter.xml53.98 kB – 165 Downloadssel. at ROSCO Filter.xml49.77 kB – 190 Downloads"
+    },
+    {
+      "author": "GoslingProductions",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 4, 2013 at 8:25 AM#2Great!I also have a generic Lee Filters swatch macro which populates the colour pallet with swatch colours if needed"
+    },
+    {
+      "author": "All Jonny Services",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 20, 2013 at 2:10 AM#3Hey,A rosco one would be great if you could.Thanks"
+    },
+    {
+      "author": "RomanP",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 20, 2013 at 3:18 PM#4Hi Jonny,i added the macro for Roscolux & CineGel ( in one macro ) in my first message.If you want you can test itRoman"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "October 21, 2013 at 12:26 AM#5Hi Roman in addition to your macro you could add: Assign Userprofile \"Username\" /defaultcolormode=CMYto force the colormode to CMY"
+    },
+    {
+      "author": "Duplicate Jason Gardash",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "January 27, 2014 at 6:30 PM#6Hey Mark,I tried adding this to my color macro but I get and error #14 Object does not exist.I'm using 2.9.0.7  Build date Nov 8 2013any ideas?Jason"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "January 28, 2014 at 9:52 AM#7yes this was a command that worked in 2.8.x. now the default colormode has been renamed to default mixcolor, i have not yet figured out what the new keyword would look like but when i know it i will post it here"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "January 28, 2014 at 10:10 AM#8Hi JasonThe macro line should be :Assign UserProfile \"MyUsername\" /defaultmixcolorreadout=CMY"
+    },
+    {
+      "author": "Duplicate Jason Gardash",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "January 28, 2014 at 3:46 PM#9thanks for the reply,I was messing with different mixcolor wording yesterday.. readout is one I would never had though of.Jason."
+    },
+    {
+      "author": "RomanP",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "June 23, 2014 at 1:11 PM#10Hi,i made a update of the macro with  GM2 V 3.0.0.2 SwatchBook"
+    },
+    {
+      "author": "markandrewpowell",
+      "post_date": null,
+      "post_number": 11,
+      "post_text": "July 24, 2015 at 11:11 PM#11Hello, I cant seem to get this macro to work. I select fixtures, run the macro and type in the number but the color output is nowhere near correct. Any clues to what Im doing wrong?For instance, Lee 106 gives RGB values of R: 1% G: 19% B: 4%Many thanks for any help or advice."
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 12,
+      "post_text": "July 25, 2015 at 1:20 PM#12This looks like the default colormix readout is set to the wrong setting, set the readout to CMY by this syntax: assign userprofile \"yourusername\"/defaultmixcolorreadout=cmy"
+    },
+    {
+      "author": "RomanP",
+      "post_date": null,
+      "post_number": 13,
+      "post_text": "July 26, 2015 at 7:06 PM#13You are right the defaultmixcolorreadout must be cmyI had it not integrated, because i have a another macro thattoogle the defaultmixcolorreadout mode from cmy <> rgbSorry for my bad english"
+    },
+    {
+      "author": "markandrewpowell",
+      "post_date": null,
+      "post_number": 14,
+      "post_text": "July 27, 2015 at 9:26 PM#14Thanks for the replies gents. Set the default color mix to CMY but still the same result. I'm sure I'm doing something wrong here!Any other help greatly appreciated."
+    },
+    {
+      "author": "RomanP",
+      "post_date": null,
+      "post_number": 15,
+      "post_text": "July 28, 2015 at 8:30 AM#15No, you make all right.I testet with my marco in my showfile.If i try the macro in the first post here, i have also strange values. I don´t know whyToday i export the macro with GM2 V3.1.1.1if you want you can test the macros in the first post now"
+    }
+  ],
   "replies": 0,
   "thread_id": "37050",
   "title": "Macro: selection at LEE-Filter",

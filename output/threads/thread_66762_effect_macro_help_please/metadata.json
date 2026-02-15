@@ -3,6 +3,20 @@
   "author": "cgood",
   "post_date": null,
   "post_text": "August 25, 2021 at 7:11 PM#1Looking for the syntax to create a macro to change a specific effect that would change the low/high value to a specific color preset. Thank you.",
+  "posts": [
+    {
+      "author": "cgood",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 25, 2021 at 7:11 PM#1Looking for the syntax to create a macro to change a specific effect that would change the low/high value to a specific color preset. Thank you."
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 30, 2021 at 12:39 PM#2Hi Goodtech,As far as i know there is no way to assign a preset thru commandline to a effectvalue (high/low).If i understand you correctly you want to find a way to edit effects on the fly (busking style)What i do to edit effects on the fly is use two dedicated presets for high and low values in an effect and overwrite those presets thru macro's:[color=#33FF00]copy preset a.b at preset c.d/overwrite.[/color]That way you can edit your effcets to your needs"
+    }
+  ],
   "replies": 0,
   "thread_id": "66762",
   "title": "effect macro help please",

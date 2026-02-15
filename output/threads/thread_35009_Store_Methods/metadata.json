@@ -3,6 +3,32 @@
   "author": "stefan90kauw",
   "post_date": null,
   "post_text": "February 5, 2013 at 5:48 PM#1Hello,I'd like to create a second cue from a macro.What is the correct syntax to select the 'Create Second Cue' method for storing the next Cue?Thanks guys!",
+  "posts": [
+    {
+      "author": "stefan90kauw",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 5, 2013 at 5:48 PM#1Hello,I'd like to create a second cue from a macro.What is the correct syntax to select the 'Create Second Cue' method for storing the next Cue?Thanks guys!"
+    },
+    {
+      "author": "bundao",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 5, 2013 at 7:36 PM#2Use /append or /a for short"
+    },
+    {
+      "author": "Skip",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 19, 2016 at 6:59 PM#3Store sequence 1 at next cue"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 20, 2016 at 6:52 PM#4just \"store seq 1 /noconfirm\" create next cueor \"store exec 1 /nc\"create a 2nd cue is default behavior"
+    }
+  ],
   "replies": 0,
   "thread_id": "35009",
   "title": "Store Methods",

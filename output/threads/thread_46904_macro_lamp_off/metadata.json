@@ -3,6 +3,20 @@
   "author": "suhazkannan",
   "post_date": null,
   "post_text": "June 1, 2015 at 3:02 PM#1how can i make a lamp off macro ?? just for once group ??",
+  "posts": [
+    {
+      "author": "suhazkannan",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 1, 2015 at 3:02 PM#1how can i make a lamp off macro ?? just for once group ??"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 1, 2015 at 4:22 PM#2Create a preset with the correct value, label it something like lamp offThan make a macro that looks like this- Group X at preset \"lamp off\"- Off Group XX is the number of the group you want to switch off: keep a bit of time between the 2 lines to make sure the lamp off will be executed by the fixturesOr make a macro with values:- Group X; attribute lampcontrol at Y- Off Group XWhere Y is the value for lamp off. The name of the attribute might be slightly different because some manufacturers are putting the lamp control functions on other channels"
+    }
+  ],
   "replies": 0,
   "thread_id": "46904",
   "title": "macro lamp off",

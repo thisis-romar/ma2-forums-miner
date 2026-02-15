@@ -3,6 +3,38 @@
   "author": "Milton de la Cruz",
   "post_date": null,
   "post_text": "March 29, 2019 at 4:37 PM#1pop-up windows",
+  "posts": [
+    {
+      "author": "Milton de la Cruz",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 29, 2019 at 4:37 PM#1pop-up windows"
+    },
+    {
+      "author": "Moe696",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 29, 2019 at 4:48 PM#2Have a lookhere"
+    },
+    {
+      "author": "Milton de la Cruz",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 31, 2019 at 8:34 PM#3Yes bro, thanks for answering me.I refer to large-sized pop-up windows, similar to pop-up windows using LUA (PLUGIN)"
+    },
+    {
+      "author": "Hedsma",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 17, 2019 at 9:32 PM#4Hey there!Do you mean this Box?LUA \"gma.gui.confirm('title','desc')\"Hope it helps!//Martin"
+    },
+    {
+      "author": "Milton de la Cruz",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "September 17, 2019 at 9:37 PM#5that's it!! thank bro!"
+    }
+  ],
   "replies": 0,
   "thread_id": "63678",
   "title": "hey guys!! I need to know how is possible to create pop-up windows in grandMA2.  it's possible to macro or Lua?    thanks!",

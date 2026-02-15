@@ -3,6 +3,32 @@
   "author": "RoodLD",
   "post_date": null,
   "post_text": "July 25, 2014 at 2:40 AM#1My goal is to have a flash button trigger my Align<> macro. Then when I release the flash button have a macro trigger that restores the Align back to OFF.Im stuck on the restoring to OFF Align.  I cant seem to get the Syntax \"Off Flash Exectuer 1.107\" to trigger anything.  Ive tried multiple \"if\" commands with no success. Like \"If Off Flash Exec 1.107 Go exec 1.106\" Where 1.106 is the Align Off Seq Executer.Maybe I am over thinking it.  Any help would be appreciated.ThanksJim RoodLighting Designerhttp://www.jimrood.com",
+  "posts": [
+    {
+      "author": "RoodLD",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 25, 2014 at 2:40 AM#1My goal is to have a flash button trigger my Align<> macro. Then when I release the flash button have a macro trigger that restores the Align back to OFF.Im stuck on the restoring to OFF Align.  I cant seem to get the Syntax \"Off Flash Exectuer 1.107\" to trigger anything.  Ive tried multiple \"if\" commands with no success. Like \"If Off Flash Exec 1.107 Go exec 1.106\" Where 1.106 is the Align Off Seq Executer.Maybe I am over thinking it.  Any help would be appreciated.ThanksJim RoodLighting Designerhttp://www.jimrood.com"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 25, 2014 at 11:26 AM#2Hi Jim,I'am pretty sure this will not work because, align is a programming function, second point is that the release of a button can not be used as \"trigger\", its just releasing the executor and its content"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 25, 2014 at 3:49 PM#3the only way to make the release of a button trigger something is to use DMX-remotescreate two dummychannels, one with defaultvalue 0, the second with defaultvalue 100,create a temp button that sets ch1 to 100 and ch2 to zero, and set up dmx-remotes for ch1 (press) and ch2 (release)."
+    },
+    {
+      "author": "RoodLD",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "July 25, 2014 at 7:10 PM#4This works great!!  Thank you.No need for the (press) remote trigger.  Only need the (release) Remote trigger.I have exec button 1.101 as temp with cue that has dummy 1 @ 100 and Dummy 2 @ 0 with Align <> macro in cmd.  When i release the temp button it resets the dummy channel and triggers another seq on page 999 that has the macro in in for OFF align.Works great!!  Thanks again.Jim RoodLighting Designer/ Programmerhttp://www.jimrood.comjprood@gmail.com"
+    }
+  ],
   "replies": 0,
   "thread_id": "42656",
   "title": "Help with Align Macro",

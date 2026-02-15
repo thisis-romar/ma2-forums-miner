@@ -3,6 +3,20 @@
   "author": "Nic_MIcael",
   "post_date": null,
   "post_text": "June 13, 2022 at 5:19 PM#1I want to control a few effects masters in a certain executors with one executor ( like a playback) its possible ?",
+  "posts": [
+    {
+      "author": "Nic_MIcael",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 13, 2022 at 5:19 PM#1I want to control a few effects masters in a certain executors with one executor ( like a playback) its possible ?"
+    },
+    {
+      "author": "zakkbeard",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 15, 2022 at 5:15 PM#22 methods, one quick, one less so:METHOD 1:1. store all the effects you want into the one exec to rule them all.2. assign that exec's fader to Temp.3. Profit!METHOD 2:1. Create a dummy dimmer fixture (make a new layer in your patch, set the patch WAAAAAY out of the way i.e. 100.1)2. Go to Setup > Show > Remote Inputs Setup3. Select the DMX Remotes tab4. Add a new remote - set the DMX to whatever the dummy fixture is patched to, set Type to Exec, set the Page and Executor of the exec your effect is on, set the Button to Fader. Repeat this step for every effect you want to control at once.5. Set the dummy fixture at full, store into the exec you want as the master6. Assign that exec's fader to Temp7. Profit, but nerdier!"
+    }
+  ],
   "replies": 0,
   "thread_id": "67291",
   "title": "Multiples Effects in one master executor",

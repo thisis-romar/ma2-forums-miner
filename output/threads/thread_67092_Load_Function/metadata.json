@@ -3,6 +3,26 @@
   "author": "Yannickstok",
   "post_date": null,
   "post_text": "February 22, 2022 at 4:29 AM#1Hello,I would like to make a function in my showfile, to click a few executors(strobe,movement). That they will turn into load and can fire them with one cue, and reset them after. is this possible and so yes, how?",
+  "posts": [
+    {
+      "author": "Yannickstok",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 22, 2022 at 4:29 AM#1Hello,I would like to make a function in my showfile, to click a few executors(strobe,movement). That they will turn into load and can fire them with one cue, and reset them after. is this possible and so yes, how?"
+    },
+    {
+      "author": "bullock",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 9, 2022 at 2:59 PM#2You can hold SELECT and choose several Execs, then MASTER GO will execute, followed by OFF PLEASE to turn off selected Execs"
+    },
+    {
+      "author": "zakkbeard",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 28, 2022 at 5:05 AM#3The way to get there for me is to have each of the execs assigned to a rate master. the rate master will stop all things, so if you have it at 0 (Stop), and click go on multiple execs, they will be held back by that rate master. one of the assignable functions is \"Rate1,\" which will immediately put that rate master at 1:1, thereby letting the execs fire at their given fade time. I use this specifically and exclusively for things that are always fired immediately (snapping to gobos, setting strobe from open to strobe, etc.), so i have a separate exec on my utilities page with 2 cues, one sets the rate master at 0 via cmd, the other sets it at 1:1 - the 0 cue being a follow, the 1 being a go with 0 fade. I have a macro set up to Go that exec, so its a moveable, assignable button that instantly fires all of the execs i've hit go on, effectively 'loading' multiple execs at once, and then firing at my button push. happy to help you if you need further guidance."
+    }
+  ],
   "replies": 0,
   "thread_id": "67092",
   "title": "Load Function",

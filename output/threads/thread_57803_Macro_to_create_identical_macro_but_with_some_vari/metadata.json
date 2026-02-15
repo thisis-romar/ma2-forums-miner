@@ -3,6 +3,26 @@
   "author": "michieldc",
   "post_date": null,
   "post_text": "March 25, 2017 at 6:50 PM#1Hello dear MA usersI have a Macro Question...I'd like to create a macro that creates an almost identical macro to the one on the previous macro number but updates some numbers in the syntax/command linesfor examplemacro 1line1: gotocue 1 executor 50.146line 2: copy $uservar at $uservar /oline 3: copy image 66 at image 98 /oline 4: $uservar at $ uservar /othe next macro should beline1: gotocue 2 executor 50.146line 2: copy $uservar at $uservar /oline 3: copy image 67 at image 99 /oline 4: $uservar at $ uservar /othe only variables changing are the cue number in line 1 and the images numbers in line 3 (basically they add 1 with every new macro)Any thoughts, i've been staring at it too long now.Thank you for your help!",
+  "posts": [
+    {
+      "author": "michieldc",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 25, 2017 at 6:50 PM#1Hello dear MA usersI have a Macro Question...I'd like to create a macro that creates an almost identical macro to the one on the previous macro number but updates some numbers in the syntax/command linesfor examplemacro 1line1: gotocue 1 executor 50.146line 2: copy $uservar at $uservar /oline 3: copy image 66 at image 98 /oline 4: $uservar at $ uservar /othe next macro should beline1: gotocue 2 executor 50.146line 2: copy $uservar at $uservar /oline 3: copy image 67 at image 99 /oline 4: $uservar at $ uservar /othe only variables changing are the cue number in line 1 and the images numbers in line 3 (basically they add 1 with every new macro)Any thoughts, i've been staring at it too long now.Thank you for your help!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 26, 2017 at 10:12 AM#2It is not possible create a macro that makes a modified copy of another macro.There is no way for commandline to read, interpret and modify the content of the macrolines that needs adjustment."
+    },
+    {
+      "author": "captainflo22",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 27, 2017 at 11:30 PM#3Macro First ValuesSetvar $cue = (First Cue?)Setvar $imagefrom = (First Image Source?)Setvar $imageto = (First Image Destination)Macro DO and ADDline1: gotocue$cueexecutor 50.146line 2: copy $uservar at $uservar /oline 3: copy image$imagefromat image$imageto/oline 4: $uservar at $ uservar /oline 5:Addvar $cue = 1line 6:Addvar $imagefrom = 1line 7:Addvar $imageto = 1Macro CLEAN VariablesSetvar $cue =Setvar $imagefrom =Setvar $imageto =\"leave Blank after = to release the variables\""
+    }
+  ],
   "replies": 0,
   "thread_id": "57803",
   "title": "Macro to create identical macro but with some variables ???",

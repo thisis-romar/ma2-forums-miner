@@ -3,6 +3,20 @@
   "author": "Duplicate Marco",
   "post_date": null,
   "post_text": "April 4, 2015 at 1:48 PM#1Hi colleaguesSorry Guys for my Bad english.i looking for a Cmd Syntax for Rate1.If i write in the Cmd \"Rate1\" Rate1 is 1 the Fader is on 50%.What is the Syntax for Rate1 at 15 for example.Thanks for Answer.Happy Eastern from Switzerland",
+  "posts": [
+    {
+      "author": "Duplicate Marco",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 4, 2015 at 1:48 PM#1Hi colleaguesSorry Guys for my Bad english.i looking for a Cmd Syntax for Rate1.If i write in the Cmd \"Rate1\" Rate1 is 1 the Fader is on 50%.What is the Syntax for Rate1 at 15 for example.Thanks for Answer.Happy Eastern from Switzerland"
+    },
+    {
+      "author": "sebmdp",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 16, 2015 at 7:30 PM#2Hello,The syntax is :CodeSpecialMaster 4.1 At 154 is to call the Rate Masters & 1 is for the first Rate MasterIf you type the command below in the command line you'll find all the masters IDCodeList SpecialMasterHope this help.Regards.S.D."
+    }
+  ],
   "replies": 0,
   "thread_id": "46084",
   "title": "Rate1 by Cmd",

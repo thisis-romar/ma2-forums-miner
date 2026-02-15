@@ -3,6 +3,74 @@
   "author": "SodreLD",
   "post_date": null,
   "post_text": "September 3, 2019 at 6:35 PM#1Hi Guys, I have a problem with my macro clone:Clone Group \"Source Group\" at Group \"Destination Group\" If Sequence 1 thru /lm /ncBut when I Clone my source left group with destination left group, it doesn't clone correct.It clones all scrambled, not right clone the left source group with the left destination group, and so with the other groups, such as odd and evv, when I use the clone for these groups always clones the clone, would anyone know tell me what I can be doing wrong or is there any other way to do it? because I really need to clone my cues of performers correctly, because there are times that I use only odd and evv or left and right or in out, I need an urgent help !!! Thanks guys!",
+  "posts": [
+    {
+      "author": "SodreLD",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 3, 2019 at 6:35 PM#1Hi Guys, I have a problem with my macro clone:Clone Group \"Source Group\" at Group \"Destination Group\" If Sequence 1 thru /lm /ncBut when I Clone my source left group with destination left group, it doesn't clone correct.It clones all scrambled, not right clone the left source group with the left destination group, and so with the other groups, such as odd and evv, when I use the clone for these groups always clones the clone, would anyone know tell me what I can be doing wrong or is there any other way to do it? because I really need to clone my cues of performers correctly, because there are times that I use only odd and evv or left and right or in out, I need an urgent help !!! Thanks guys!"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 3, 2019 at 7:26 PM#2Has this syntax worked before?If you use the GUI and take the source group selection on the left and destination group at right, do they line up there?"
+    },
+    {
+      "author": "clear_all",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 4, 2019 at 3:12 AM#3Are you cloning multi-instance fixtures to single-instance or vise-versa?"
+    },
+    {
+      "author": "SodreLD",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 4, 2019 at 1:23 PM#4Yes, has this syntax worked before in other showfile"
+    },
+    {
+      "author": "SodreLD",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "September 4, 2019 at 1:25 PM#5I cloning multi-instance, have some problem with this?"
+    },
+    {
+      "author": "SodreLD",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "September 4, 2019 at 3:10 PM#6I test this Clone Macro in other showfile, and it worked. I don't understand it..."
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "September 4, 2019 at 3:21 PM#7Would just need to make sure that you're instances are matching up to the appropriate instances on the destination group (i.e. instance 1 to instance 1, instance 2 to instance 2 or at least main module to main module, pixel to pixel etc.)Again, if you use the GUI and select the groups as selection, do they line up there?"
+    },
+    {
+      "author": "SodreLD",
+      "post_date": null,
+      "post_number": 8,
+      "post_text": "September 4, 2019 at 6:01 PM#8I managed to fix"
+    },
+    {
+      "author": "SodreLD",
+      "post_date": null,
+      "post_number": 9,
+      "post_text": "September 4, 2019 at 6:01 PM#9I managed to fix"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 10,
+      "post_text": "September 4, 2019 at 6:47 PM#10Can you share what solved your problem?"
+    },
+    {
+      "author": "SodreLD",
+      "post_date": null,
+      "post_number": 11,
+      "post_text": "September 9, 2019 at 7:31 AM#11I added new fixtures in the showfile for each fixture type and group type, for example:I have a group called \"AllSpot\", but I added one more fixture that doesn't exist in any other group, ie it will only have reference of the group \"AllSpot\". So I added one \"OddSpot\" group to another \"EvvSpot\", \"LeftSpot\", \"RightSpot\" and so on, only one fixrure for each different group, so at the time of cloning I just clone the Fixture I added in each group.This is the command line:Clone Fixrture \"LeftSpotSource\"  At Group \"LeftSpot\"  If Sequence 1  Thru /lm /nc"
+    }
+  ],
   "replies": 0,
   "thread_id": "64521",
   "title": "Error Clone Macro! H E L P!",

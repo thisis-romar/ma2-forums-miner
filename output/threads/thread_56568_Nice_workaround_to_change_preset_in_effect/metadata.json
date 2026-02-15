@@ -3,6 +3,26 @@
   "author": "Duplicate bentoylight",
   "post_date": null,
   "post_text": "January 11, 2017 at 1:28 AM#1HiNiklas Au, on MA-Lighting group on FB, share a nice solution, and for me the most elegant one, to change preset low and high in effects, instead  of merging presetlow and presethigh.here it is :[color=#99FF00]selfix effect 10at effect 10at preset 4.15 /layer=effectlowstore effect 10 /m[/color]You can refer to help/effectlow and other keywords for effects.Enjoy",
+  "posts": [
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 11, 2017 at 1:28 AM#1HiNiklas Au, on MA-Lighting group on FB, share a nice solution, and for me the most elegant one, to change preset low and high in effects, instead  of merging presetlow and presethigh.here it is :[color=#99FF00]selfix effect 10at effect 10at preset 4.15 /layer=effectlowstore effect 10 /m[/color]You can refer to help/effectlow and other keywords for effects.Enjoy"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 11, 2017 at 3:39 AM#2And use BlindEdit if you're worried about doing stuff in your live programmer."
+    },
+    {
+      "author": "VClaiborne",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "June 21, 2017 at 7:44 PM#3editing my post.. worked out a way how to make this work for template effects..  seems that I have to add fixtures into the effect and then remove them once I've changed the high/low value.. any other suggestions?"
+    }
+  ],
   "replies": 0,
   "thread_id": "56568",
   "title": "Nice workaround to change preset in effect",

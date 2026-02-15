@@ -3,6 +3,32 @@
   "author": "pan_ilford",
   "post_date": null,
   "post_text": "February 15, 2019 at 4:29 PM#1Hi,I'd like to create a macro, which stores a gobo preset into a specific cue, so I can easily change a video clip varying with the cast.Thank you",
+  "posts": [
+    {
+      "author": "pan_ilford",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 15, 2019 at 4:29 PM#1Hi,I'd like to create a macro, which stores a gobo preset into a specific cue, so I can easily change a video clip varying with the cast.Thank you"
+    },
+    {
+      "author": "clear_all",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 15, 2019 at 5:28 PM#2Build your cue around a 'master' preset.Have multiple clip presets for the different iterations.Have your macro copy /overwrite the clip of the day onto your master preset."
+    },
+    {
+      "author": "pan_ilford",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 16, 2019 at 12:20 PM#3Can you provide the content of a macro, please? Once I understand how this works, it can help me with a lot of other stuff too. Let's say the sequence 1, executor 1.1, cue 25, gobo preset 1 to 4.Thanks"
+    },
+    {
+      "author": "pan_ilford",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 22, 2019 at 11:52 AM#4I did it!ClearallFixture AAt preset BUpdate sequence C cue DClearallThanks for not advising me, so I had to figure it out myself. I feel good"
+    }
+  ],
   "replies": 0,
   "thread_id": "63397",
   "title": "apply a preset to a specific cue",

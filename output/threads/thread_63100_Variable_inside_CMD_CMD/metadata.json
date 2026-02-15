@@ -3,6 +3,20 @@
   "author": "scoobytoobins",
   "post_date": null,
   "post_text": "January 9, 2019 at 10:52 PM#1Hey all,I'm trying to write a macro that will assign a CMD to the first cue of an executor. In the CMD I'd like to use a variable. Is this possible?For example, I'm trying to change specialmaster 3.1 to BPM 120. In the macro I would use:setuservar $songbpm = 120Assign cue 1 /cmd = \"specialmaster 3.1 at $songbpm\"However, since it's in quotations, what is added to the CMD is '$songbpm' instead of 120.Is there any way to make a uservar work in quotations? Or is there another way that I'm not thinking of?",
+  "posts": [
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 9, 2019 at 10:52 PM#1Hey all,I'm trying to write a macro that will assign a CMD to the first cue of an executor. In the CMD I'd like to use a variable. Is this possible?For example, I'm trying to change specialmaster 3.1 to BPM 120. In the macro I would use:setuservar $songbpm = 120Assign cue 1 /cmd = \"specialmaster 3.1 at $songbpm\"However, since it's in quotations, what is added to the CMD is '$songbpm' instead of 120.Is there any way to make a uservar work in quotations? Or is there another way that I'm not thinking of?"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 10, 2019 at 4:30 AM#2Solved with help from FB:SetVar $songBPM = 120SetVar $cmd = “SpecialMaster 3.1 at “AddVar $cmd = $songBPMAssign cue 1 /cmd = $”cmd”"
+    }
+  ],
   "replies": 0,
   "thread_id": "63100",
   "title": "Variable inside CMD CMD",

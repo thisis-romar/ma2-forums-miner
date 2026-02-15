@@ -3,6 +3,38 @@
   "author": "screamizh123",
   "post_date": null,
   "post_text": "September 25, 2018 at 5:24 PM#1Hello! I want to assign effect Low Value with command:Assign Effect 1.1.1 thru 1.1.2 /lowvalue=How can i use my preset here? Something like \"2.1 Position\".I tried a lot of ways, does not work(",
+  "posts": [
+    {
+      "author": "screamizh123",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 25, 2018 at 5:24 PM#1Hello! I want to assign effect Low Value with command:Assign Effect 1.1.1 thru 1.1.2 /lowvalue=How can i use my preset here? Something like \"2.1 Position\".I tried a lot of ways, does not work("
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 25, 2018 at 11:50 PM#2as there are no direct way to assign a preset to the lowvalue property, there are two different approaches, depending on what you are actually trying to do:to build a new effect with preset 2.1 as lowvalue:select the effect low layerCodeLayer EffectLowcall the presetCodeAt preset 2.1set values for the other layersStore as new effect.-----to change the presetcontent used for low-value in an existing effect:have the effect low-value reference a permanent placeholder preset.e.g Preset 2.99 \"mylowvalue\"change the content of this placeholder preset with your desired presets:Copy Preset 2.1 At Preset 2.99 /overwrite"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 26, 2018 at 8:29 AM#3HiYou can change low value as a preset withselfix effect x; at preset 2.1 /layer=effectlow; store effect x"
+    },
+    {
+      "author": "screamizh123",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 26, 2018 at 8:50 AM#4Thank you so much!"
+    },
+    {
+      "author": "screamizh123",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "September 26, 2018 at 8:50 AM#5Thank you!!"
+    }
+  ],
   "replies": 0,
   "thread_id": "62393",
   "title": "How to select values ​​from the preset?",

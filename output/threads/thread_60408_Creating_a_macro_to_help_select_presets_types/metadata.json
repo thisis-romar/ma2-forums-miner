@@ -3,6 +3,20 @@
   "author": "Thecrump",
   "post_date": null,
   "post_text": "January 9, 2018 at 5:37 AM#1Hello,I am trying to create a macro that will allow the user to make sure that particular a storing preset type is selected.Such as having a macro to select when you want to be in \"selective\", \"global\", or \"universal\" mode.I have seen a few syntax'sex.Root \"Userprofiles\".$\"USERPROFILE\".\"StoreDefaults\".\"PresetDefaults\" /MODE=PRESET TYPE DEFAULTRoot PresetType /defaultscope=selectiveAny advice or information would be amazing!all the best.-Jenn",
+  "posts": [
+    {
+      "author": "Thecrump",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 9, 2018 at 5:37 AM#1Hello,I am trying to create a macro that will allow the user to make sure that particular a storing preset type is selected.Such as having a macro to select when you want to be in \"selective\", \"global\", or \"universal\" mode.I have seen a few syntax'sex.Root \"Userprofiles\".$\"USERPROFILE\".\"StoreDefaults\".\"PresetDefaults\" /MODE=PRESET TYPE DEFAULTRoot PresetType /defaultscope=selectiveAny advice or information would be amazing!all the best.-Jenn"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 9, 2018 at 7:56 AM#2Macros for changing Preset Storemodes is included in the consoleEdit Macro and select \"Load Predefined\"Another approach:Rather than having a macro that changes default storemode, which has to be called before you do the Store, you could create macros that activates Store with the desired mode embedded in the Store command:Store SelectiveCodeStore /s @Store GlobalCodeStore /g @Store UniversalCodeStore /u @"
+    }
+  ],
   "replies": 0,
   "thread_id": "60408",
   "title": "Creating a macro to help select presets types",

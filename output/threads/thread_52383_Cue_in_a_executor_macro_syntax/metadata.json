@@ -3,6 +3,20 @@
   "author": "AISConnor",
   "post_date": null,
   "post_text": "April 10, 2016 at 5:32 AM#1Hey all,Probably a simple answer but what is the macro syntax to play a ingle cue in a executor button? Ive tried Go ExecButton 2.101 Cue 1 but nothing happens. When I pull the Cue 1 part of course it works, but i want to just call that specific cue.Any ideas?Thanks,Connor",
+  "posts": [
+    {
+      "author": "AISConnor",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 10, 2016 at 5:32 AM#1Hey all,Probably a simple answer but what is the macro syntax to play a ingle cue in a executor button? Ive tried Go ExecButton 2.101 Cue 1 but nothing happens. When I pull the Cue 1 part of course it works, but i want to just call that specific cue.Any ideas?Thanks,Connor"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 10, 2016 at 6:22 AM#2Goto allows you to specify a cue. Go just triggers the next (or loaded) cue, whatever it may be."
+    }
+  ],
   "replies": 0,
   "thread_id": "52383",
   "title": "Cue in a executor macro syntax",

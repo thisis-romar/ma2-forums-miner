@@ -3,6 +3,26 @@
   "author": "Jonasbauters",
   "post_date": null,
   "post_text": "April 25, 2017 at 8:56 PM#1How can i select multiple effects and set groups?Now i have:SetUserVar $groups=(\"how many groups?\")SetUserVar $Effect=(witch effects?\")Assign $effect /Groups=$groups",
+  "posts": [
+    {
+      "author": "Jonasbauters",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 25, 2017 at 8:56 PM#1How can i select multiple effects and set groups?Now i have:SetUserVar $groups=(\"how many groups?\")SetUserVar $Effect=(witch effects?\")Assign $effect /Groups=$groups"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 28, 2017 at 1:11 PM#2SetUserVar $groups=(\"how many groups?\")SetUserVar $Effect=(\"witch effects?\") -- ie: 1thru 10Assign effect $effect /Groups=$groups"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 28, 2017 at 1:52 PM#3no need to set variables..CodeAssign Effect (which effects?)  /Groups=(how many groups?)"
+    }
+  ],
   "replies": 0,
   "thread_id": "58294",
   "title": "Select effects",

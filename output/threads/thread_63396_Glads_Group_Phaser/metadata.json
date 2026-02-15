@@ -2,15 +2,54 @@
   "assets": [
     {
       "checksum": "sha256:84c48ab05505a93419c9e4abea9b5a7d73c9ea410fe1aad1f7c80194a0a06354",
-      "download_count": 89,
+      "download_count": 99,
       "filename": "GGP.xml",
+      "post_number": 1,
       "size": 6799,
       "url": "https://forum.malighting.com/file-download/4479/"
     }
   ],
   "author": "glad",
   "post_date": null,
-  "post_text": "February 14, 2019 at 11:20 PM#1Creating effects grouped by groups is not easy on the grandMA2.If the groups contains different amount of fixtures, then no inbuilt effect property (groups/blocks/wings/interleave) are able to distribute the phase properly to make each group act as if it was one fixture.This macro makes it easier....- Enter amount of groups/steps- Select groups via Group-pool- Select template effect via Effect-pool- Select empty location via Effect-pool- Label the generated selective effect with your keyboard.Please look at the info-text of the macro, and info-text of the macrolines for further instructions and to learn how it works...FilesGGP.xml6.8 kB – 89 Downloads",
+  "post_text": "February 14, 2019 at 11:20 PM#1Creating effects grouped by groups is not easy on the grandMA2.If the groups contains different amount of fixtures, then no inbuilt effect property (groups/blocks/wings/interleave) are able to distribute the phase properly to make each group act as if it was one fixture.This macro makes it easier....- Enter amount of groups/steps- Select groups via Group-pool- Select template effect via Effect-pool- Select empty location via Effect-pool- Label the generated selective effect with your keyboard.Please look at the info-text of the macro, and info-text of the macrolines for further instructions and to learn how it works...FilesGGP.xml6.8 kB – 99 Downloads",
+  "posts": [
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 14, 2019 at 11:20 PM#1Creating effects grouped by groups is not easy on the grandMA2.If the groups contains different amount of fixtures, then no inbuilt effect property (groups/blocks/wings/interleave) are able to distribute the phase properly to make each group act as if it was one fixture.This macro makes it easier....- Enter amount of groups/steps- Select groups via Group-pool- Select template effect via Effect-pool- Select empty location via Effect-pool- Label the generated selective effect with your keyboard.Please look at the info-text of the macro, and info-text of the macrolines for further instructions and to learn how it works...FilesGGP.xml6.8 kB – 99 Downloads"
+    },
+    {
+      "author": "willybsm",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 16, 2019 at 12:10 PM#2Hi GladI am surprised at the content of line 9:Store Group EnableVideoCodecsI just checked directly in the file:Store Group $mygroupweirdI'll be able to make it work suddenlythank you"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 16, 2019 at 12:55 PM#3Hi William,thanks for the bugreport.Seems that I had managed to insert an illegal character into that line, in the late tidying.The tricky thing about illegal characters in MA is that they are not all properly filtered out(depending on local language and keycodes)on my Norwegian keyboard $ is AltGr-4, and £ is AltGr-3if I accidentally hit 3 instead of 4, the £ character is inserted, but invisible with zero width.and it is easy to just think that you didn't hit the AltGr-4 properly, and you enter the dollarsign, resulting in £$myvar, but displayed as[color=#000033]£[/color]$myvar(highlight text do see)This can only be seen in the xml, but can be detected on the console, by using the arrow key, where you suddenly will see that there is an extra arrow-press necessary to move past that invisible character.nevertheless, I have uploaded the edited version."
+    },
+    {
+      "author": "Marcelo Assumpção",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 22, 2019 at 9:16 PM#4It's doesn't work , on ver 3.6.6.1"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "April 23, 2019 at 1:22 PM#5as you in your PM mention that it only doesn't work when logged in withyouruserprofile, you may have some uservars with the same name as the vars used by this macro.type listuservar, and check if you have any of these variablenames in use:Code$myname$mystep$myMaxStep$loopentry$mygroup$mysample$mydummyif so, you will need to delete your uservars to use my macro.to delete a uservar, set the variable to nothing. e.g.CodeSetuservar $myname"
+    },
+    {
+      "author": "Marcelo Assumpção",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "May 6, 2019 at 7:03 AM#6Perfect! Thank you so much!"
+    }
+  ],
   "replies": 0,
   "thread_id": "63396",
   "title": "Glads Group Phaser",

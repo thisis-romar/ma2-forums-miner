@@ -3,6 +3,38 @@
   "author": "alexnoel.co",
   "post_date": null,
   "post_text": "May 23, 2018 at 11:46 PM#1I'd like to be able to store some user interaction into a variable, along the lines of \"SetVar $cmd = @\".It seems like the spaces that are coming from the \"@\" result are making that command invalid, so I need to essentially get the result of the @ command in quotations.Doing SetVar $cmd = \"@\" doesn't work, and the command line doesn't treat /\"  @ /\" as if it were escape characters. Is there a way around this?",
+  "posts": [
+    {
+      "author": "alexnoel.co",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 23, 2018 at 11:46 PM#1I'd like to be able to store some user interaction into a variable, along the lines of \"SetVar $cmd = @\".It seems like the spaces that are coming from the \"@\" result are making that command invalid, so I need to essentially get the result of the @ command in quotations.Doing SetVar $cmd = \"@\" doesn't work, and the command line doesn't treat /\"  @ /\" as if it were escape characters. Is there a way around this?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 24, 2018 at 12:35 AM#2It should be possible to do this with IntelliVars: (example assumes Presets)CodeSetVar $mypreset = \"Preset \"CD @$CAPTURECD /AddVar $mypreset = $C_NOread how to obtain and use IntelliVars here:http://www.ma-share.net/forum/read.php…61174#msg-61174"
+    },
+    {
+      "author": "alexnoel.co",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 24, 2018 at 1:24 AM#3This is brilliant work, thank you!"
+    },
+    {
+      "author": "ram0003",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 24, 2018 at 9:15 AM#4I've noticed that you can only select objects that only exist. Is it possible to create the object and select it in one @ command?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 24, 2018 at 9:46 AM#5This could work:create the object with a known name at a known location.Cut, then paste object with  @Then change destination via known name, to capture infoe.g.CodeStore Group 999 \"MyTempGroup\"Cut Group 999Paste @CD Group \"MyTempGroup\"$captureCD /Setvar $GroupID=$C_NOLabel Group $GroupID \"MyPermanentName\""
+    }
+  ],
   "replies": 0,
   "thread_id": "61388",
   "title": "Command line @ interaction with variables",

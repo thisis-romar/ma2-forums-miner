@@ -3,6 +3,26 @@
   "author": "tim.vf",
   "post_date": null,
   "post_text": "February 18, 2022 at 9:45 PM#1Hello FriendsI have a Question:I want to make a macro for the attribute for example Beam. Of course i know there is AutoCreate but i dont want to create for example 63 different Shutter \"position\" i will never use. My idee is to write a macro which I can just select a fixture and then say (Fixture X Attribute \"BEAM\" at \"max Strobe\"). Instead of go and look which is the right Value for the \"max Strobe\" i want to us the name. Is that possible and when yes how i have to write the macro?Thx for our Help!tweb463",
+  "posts": [
+    {
+      "author": "tim.vf",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 18, 2022 at 9:45 PM#1Hello FriendsI have a Question:I want to make a macro for the attribute for example Beam. Of course i know there is AutoCreate but i dont want to create for example 63 different Shutter \"position\" i will never use. My idee is to write a macro which I can just select a fixture and then say (Fixture X Attribute \"BEAM\" at \"max Strobe\"). Instead of go and look which is the right Value for the \"max Strobe\" i want to us the name. Is that possible and when yes how i have to write the macro?Thx for our Help!tweb463"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 19, 2022 at 4:31 PM#2Hi Tweb463As far as i know this is not possible, you can call an attribute by its name ( as you already found: [color=#00FF00]attribute \"name of the attribute \"at value[/color] but not the subattribute and its set of functions (at least not thru regular commandline)Perhaps this might be possible by using LUA, however i don't know how that works.A possible work around (which takes a lot of time) is to edit the fixturetype to use only the functions you need in your show and than use autocreate to create the presets you need."
+    },
+    {
+      "author": "zakkbeard",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 28, 2022 at 5:20 AM#3It's not exactly possible, but depending on the application, you only need to do this once per fixture type. Provided the presets in question are global, you can either A: update your presets as normal, then store one extra fixture with no patch into a layer in your patch specifically for \"Fixturetype Storage.\" That way the global presets are maintained through the fixture type even after deleting them from your active fixture layer (i.e. when cloning a rig day to day). Option B: start looking at Preset References (Setup > Auto Create > \"Create Preset Reference\" Tab), which will store the presets you've made as a part of the fixture type. CheckHEREfor a quick video on it.Hope this helps!"
+    }
+  ],
   "replies": 0,
   "thread_id": "67090",
   "title": "Attribute with \"name\"",

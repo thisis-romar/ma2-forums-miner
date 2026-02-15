@@ -3,6 +3,20 @@
   "author": "rchrdprks",
   "post_date": null,
   "post_text": "May 8, 2020 at 11:14 PM#1Hi There,I am trying to create a 'load if' type macro but can't quite get the syntax.I was was looking at some thing like;load executor x...then the pop up appears and I select a cue number,so then next line would be some thing like...assuming i selected cue 1if 1 label macro y \"white\"or if cue 2 selectedif 2 label macro y \"red\"or is it something like;2= label macro y \"red'Many thanks in advance,Richard",
+  "posts": [
+    {
+      "author": "rchrdprks",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 8, 2020 at 11:14 PM#1Hi There,I am trying to create a 'load if' type macro but can't quite get the syntax.I was was looking at some thing like;load executor x...then the pop up appears and I select a cue number,so then next line would be some thing like...assuming i selected cue 1if 1 label macro y \"white\"or if cue 2 selectedif 2 label macro y \"red\"or is it something like;2= label macro y \"red'Many thanks in advance,Richard"
+    },
+    {
+      "author": "F Dijkers",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 9, 2020 at 12:12 PM#2Hi,I answered your question in the main thread before:Hi,That's not the right syntax, I get what you want to achieve, but this isn't actual coding language. If you want to do this without LUA, I'd advise you to use conditions. Therefore you'd have to rethink your steps a bit. I'd put some cmd info in the cues you have over there, for example; SetVar x = 1.Then you can do things like: [x == 1] Label Macro x \"white\". Basically it says If x equals 1 then label macro x \"white\".I'd build something like an executor with a goto to choose between cue 1 and 2. Then I'd do for cue 1's cmd: SetVar x = 1, and for cue 2's cmd: SetVar x = 2.Then I'd write a macro with 2 lines, 1 that says: [x == 1] Label Macro x \"white\"and 1 that says: [x ==2] Label Macro x \"red\".If you have set it all up correctly, you can run this macro in both your cues, using ;.Again, Im not entirely sure what you exactly want to achieve, but feel free to ask some further questions if this is not what you expected it to be."
+    }
+  ],
   "replies": 0,
   "thread_id": "65645",
   "title": "load if?",

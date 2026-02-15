@@ -3,6 +3,50 @@
   "author": "jul poil",
   "post_date": null,
   "post_text": "June 28, 2016 at 8:57 PM#1Hi to allAnyone would know how to park the effectform of a parameter, but not the parameter value itself?For exemple, park the effectform of the dimmer for some fixtures to prevent an effect modify the output, but still have the availabilty to modify the normal value of the dimmer, with the dimmer wheel, a cue or the grandmaster.Something like an Effect-Only-Protect...Thanks to all",
+  "posts": [
+    {
+      "author": "jul poil",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 28, 2016 at 8:57 PM#1Hi to allAnyone would know how to park the effectform of a parameter, but not the parameter value itself?For exemple, park the effectform of the dimmer for some fixtures to prevent an effect modify the output, but still have the availabilty to modify the normal value of the dimmer, with the dimmer wheel, a cue or the grandmaster.Something like an Effect-Only-Protect...Thanks to all"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 29, 2016 at 3:29 AM#2Set the parameter's form to Stomp, store to a separate sequence, and set the sequence to Super Priority."
+    },
+    {
+      "author": "jul poil",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "June 29, 2016 at 8:42 PM#3Thanks RyanIt doesn't exactly fit what I want to do, but it's a good \"plan B\".In fact I would like to keep control of the parameter (usual mode), and just protect it against effect.There is no way to separate value and effect form of a parameter?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "June 29, 2016 at 9:01 PM#4what doesn't fit?to my understanding, Ryan's solution does exactly what you asking for, assuming that you not already for some reason has set your effects to playback with super priority"
+    },
+    {
+      "author": "jul poil",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "June 29, 2016 at 9:19 PM#5I mean it doesn't fit because I would like to do it without having to store any cue or effect.I see that is a solution which works, but I was looking for something more simple (like normal park / unpark) which is a simple code line...It's overall if I have to park several groups / parameters and begin to have lot of cues / effects running, if I have to unpark one it's coming more complicated to find the right cue.I should prefera simple line code that I tried but doen't really works (because it parks effectform and value toghether) : Park PresetType 1 EffectFormAny idea to correct it?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "June 29, 2016 at 9:58 PM#6well, Parking is Parking, which locks a DMX-channel to a fixed value.parking a fixture or an attribute is merely a shortcut to \"park the DMX-channels affect by this fixture/attribute\"(e.g you cannot park a virtual dimmer, as it has no dmx-channel)a DMX-channel does not have any effect or value layer, the DMX-channel is a combination of value/effect-layers, masters and DMX-profiles."
+    },
+    {
+      "author": "jul poil",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "June 29, 2016 at 11:02 PM#7OK it's clearerThanks to all!"
+    }
+  ],
   "replies": 0,
   "thread_id": "53831",
   "title": "How to park the effectform of a parameter?",

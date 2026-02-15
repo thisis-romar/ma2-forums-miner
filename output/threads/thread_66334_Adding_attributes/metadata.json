@@ -3,6 +3,14 @@
   "author": "zombo",
   "post_date": null,
   "post_text": "January 24, 2021 at 12:29 PM#1Hello! I'm trying to figure out how to add missing attributees to my show. For example, there're some spot fixtures in my main showfile,that have only 1 gobo wheel. So when I'm changing fixture type or clone this fixtures to another fixture type, and see that some of desured gobos are in gobo wheel 2 and 3, so I cant't add it to my sequences just updating the presets. Do anyone have any solutions for such situations?",
+  "posts": [
+    {
+      "author": "zombo",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 24, 2021 at 12:29 PM#1Hello! I'm trying to figure out how to add missing attributees to my show. For example, there're some spot fixtures in my main showfile,that have only 1 gobo wheel. So when I'm changing fixture type or clone this fixtures to another fixture type, and see that some of desured gobos are in gobo wheel 2 and 3, so I cant't add it to my sequences just updating the presets. Do anyone have any solutions for such situations?"
+    }
+  ],
   "replies": 0,
   "thread_id": "66334",
   "title": "Adding attributes",

@@ -3,6 +3,14 @@
   "author": "jfarrow",
   "post_date": null,
   "post_text": "February 19, 2015 at 5:04 PM#1I've been working on a Macro to use stopwatch timing to modify PresetType timing in cues.CodeBlindEdit OnGroup 8PresetType \"COLOR\"Fade $timer1*0.5 Delay 0 Thru $timer1*0.5 Thru 0Store Executor 10.101 Thru 10.105  + 10.116 Thru 10.120/mergeBlindEdit OffThe lineFade $timer1*0.5 Delay 0 Thru $timer1*0.5 Thru 0evaluates asERROR : *0.5 Fade 2.767 Delay 0 Thru 2.767*0.5 Thru 0ERROR #1: UNKNOWN COMMANDBUT if I remove the *0.5 from the Fade the the macro functions as expected.Further testing has shown that multiplication enclosed by THRU commands is evaluated, but expressions not enclosed generate an error.Is there a solution to this error?Secondly; my initial effort was to modify the timing of a timing only color preset and have that modify my cues via preset reference, but it appears that timing in presets is stored in cues as hard values not as a preset reference. Is that correct?I'm running 3.0.0.5 on an MA 2 Fullsize",
+  "posts": [
+    {
+      "author": "jfarrow",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 19, 2015 at 5:04 PM#1I've been working on a Macro to use stopwatch timing to modify PresetType timing in cues.CodeBlindEdit OnGroup 8PresetType \"COLOR\"Fade $timer1*0.5 Delay 0 Thru $timer1*0.5 Thru 0Store Executor 10.101 Thru 10.105  + 10.116 Thru 10.120/mergeBlindEdit OffThe lineFade $timer1*0.5 Delay 0 Thru $timer1*0.5 Thru 0evaluates asERROR : *0.5 Fade 2.767 Delay 0 Thru 2.767*0.5 Thru 0ERROR #1: UNKNOWN COMMANDBUT if I remove the *0.5 from the Fade the the macro functions as expected.Further testing has shown that multiplication enclosed by THRU commands is evaluated, but expressions not enclosed generate an error.Is there a solution to this error?Secondly; my initial effort was to modify the timing of a timing only color preset and have that modify my cues via preset reference, but it appears that timing in presets is stored in cues as hard values not as a preset reference. Is that correct?I'm running 3.0.0.5 on an MA 2 Fullsize"
+    }
+  ],
   "replies": 0,
   "thread_id": "45435",
   "title": "Evaluate Expression within Macro & Preset Timing",

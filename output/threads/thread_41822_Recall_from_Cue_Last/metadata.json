@@ -3,6 +3,32 @@
   "author": "trench117",
   "post_date": null,
   "post_text": "May 23, 2014 at 2:48 PM#1Hi,I need a macro that would perform the ETC function \"Recall from Cue Last\". Basically would let me select a fixture then set all its attributes including intensity to what it was in the previous cue.I honestly would not know where to begin. Any thoughts would be appreciated.Cheers,D",
+  "posts": [
+    {
+      "author": "trench117",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 23, 2014 at 2:48 PM#1Hi,I need a macro that would perform the ETC function \"Recall from Cue Last\". Basically would let me select a fixture then set all its attributes including intensity to what it was in the previous cue.I honestly would not know where to begin. Any thoughts would be appreciated.Cheers,D"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 23, 2014 at 8:52 PM#2this should do the job:Preview Cue [color=#FF0000](load current cue in the previeweditor)[/color]Preview Cue Previous  [color=#FF0000](load last cue in the previeweditor)[/color]PreviewEdit Off [color=#FF0000](exit previeweditor)[/color]At Cue PreviewExecutor /status [color=#FF0000](fetch values from current cue of the previewExec, which is the last cue)[/color]---- but what is the purpose of this functionality?if it is to prevent the fixture to change/move in the current cue, on a tracking console, removing the fixture from the current cue, would be the usual approach:Remove Fixture xUpdateor if fixture x is already selected:Remove SelectionUpdate(Remove=2xDelete, Selection=2xFixture)"
+    },
+    {
+      "author": "trench117",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 24, 2014 at 5:01 PM#3Great thanks I will try this out.The function would be to copy all values from the previous cue for when a catalyst video layer is fading out. Sometimes during the fadeout attributes snap change live in the next cue. I simply need to copy everything from the previous cue and update with intensity at 0.Thanks again.D"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 24, 2014 at 5:30 PM#4still, I would recommend to remove the attributes, and set dimmer to zero, rather than copying them from previous cue.- it is the existance of different values in the fadeout cue that causes you problem.Copying the values from previous cue, is a short term solution, the problem would re-appear next time you change the original cue.a macro withCodeRemove SelectionAt 0should solve your transition issue AND prevent it from happen again"
+    }
+  ],
   "replies": 0,
   "thread_id": "41822",
   "title": "Recall from Cue Last",

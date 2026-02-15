@@ -3,6 +3,26 @@
   "author": "JohanRivera",
   "post_date": null,
   "post_text": "May 2, 2020 at 11:45 PM#1HelloI am trying to create a macro that creates a new macro with 3 different editable lines with pop-up questionsCan anybody help me?",
+  "posts": [
+    {
+      "author": "JohanRivera",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 2, 2020 at 11:45 PM#1HelloI am trying to create a macro that creates a new macro with 3 different editable lines with pop-up questionsCan anybody help me?"
+    },
+    {
+      "author": "F Dijkers",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 3, 2020 at 1:22 PM#2Hi,You'll need to create the macro first. Then, you need to store 3 different lines. After that you'll need to assign the 3 created lines by input. The macro would look something like this:Line 1CodeStore Macro xLine 2CodeStore Macro 1.x.1 thru 1.x.3Line 3CodeAssign Macro 1.x.1 /cmd=()Line 4CodeAssign Macro 1.x.2 /cmd=()Line 5CodeAssign Macro 1.x.3 /cmd=()Sincerely,Floris DijkersLighting Director & Designerflorisdijkers.comlighting@florisdijkers.com"
+    },
+    {
+      "author": "JohanRivera",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 4, 2020 at 3:16 AM#3Thank you"
+    }
+  ],
   "replies": 0,
   "thread_id": "65618",
   "title": "Macro create macro different lines",

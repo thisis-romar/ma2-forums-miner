@@ -3,6 +3,38 @@
   "author": "deaconknives",
   "post_date": null,
   "post_text": "January 21, 2016 at 3:34 AM#1Hi, wondering how to name a SetVar (which is the name of a preset), and then use that SetVar to recall it...Something like:SetVar $currentcolor=REDAt Preset 4.\"$currentcolor\"This doesn't work as it put the Var in quotation marks, where I just want to put the result in quotation marks if that makes sense...Thanks",
+  "posts": [
+    {
+      "author": "deaconknives",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 21, 2016 at 3:34 AM#1Hi, wondering how to name a SetVar (which is the name of a preset), and then use that SetVar to recall it...Something like:SetVar $currentcolor=REDAt Preset 4.\"$currentcolor\"This doesn't work as it put the Var in quotation marks, where I just want to put the result in quotation marks if that makes sense...Thanks"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 21, 2016 at 10:58 AM#2use :  at preset 4.$\"currentcolor\"if you color name is just RED, BLUE or any single name which is not a command, you don't need quotes:at preset 4.RED is ok,at preset 4.DARK RED or at preset 4.ON RED are not > 4.\"dark red\" , 4.\"on red\" okremember that value name are not case sensitive : RED = red = Red = rED etc..."
+    },
+    {
+      "author": "deaconknives",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 21, 2016 at 10:48 PM#3Thanks, but I dont think this will work as i'm using numbers for the names of my presets - eg. 2200 K = \"2200\"Idea is that the LD can press a group, press the macro which asks for a color temp - they type it and it goes to the preset of the same name."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "January 22, 2016 at 1:53 PM#4first post you wrote : color \"red\"To avoid number confusion here is what i do :my color names are labelling like : _2200Then in your macro:setvar $col = \"_\"addvar $col = (which color ?)  -----> $col = _2200at preset 4.$\"col\"and it works fineyou can replace _ by any sign not use as a command (ie: L, Lee, Col, K etc...)Enjoy"
+    },
+    {
+      "author": "Wsiilva",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "February 8, 2016 at 10:44 PM#5i know a better waytipsetvar$mypreset=\"selfix preset\"-- know go into macro window and edit a empty macro and type this$mypreset ( \"what preset?\")-- preset are knowing by dot like 1.1 dimer 2.1 position so far and so on-- doing that you can call any preset  on any giving time"
+    }
+  ],
   "replies": 0,
   "thread_id": "50670",
   "title": "Set Var AND Referencing Name \"\"",

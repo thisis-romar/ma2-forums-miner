@@ -3,6 +3,44 @@
   "author": "costalight",
   "post_date": null,
   "post_text": "November 2, 2015 at 1:29 AM#1Hello,Would you like to help me with the next questionAssign Marco 1.201.1 /cmd\"groep\" $groupnummerI Get only (macro 201 Line 1 )Line 1 :GroupI would like to have.Line 1 :Group  (result from $groupnummer )Thanks",
+  "posts": [
+    {
+      "author": "costalight",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 2, 2015 at 1:29 AM#1Hello,Would you like to help me with the next questionAssign Marco 1.201.1 /cmd\"groep\" $groupnummerI Get only (macro 201 Line 1 )Line 1 :GroupI would like to have.Line 1 :Group  (result from $groupnummer )Thanks"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 2, 2015 at 3:54 AM#2I'm not sure whether you want the line to call a variable group or a static group that is set at the time of the assignment. So:If you want to call a variable group:[color=#66FF00]Assign Macro[/color] 1.x.y /cmd=\"group $groupnumber\"If you want to call a static group set at the time of assignment:[color=#66FF00]Setvar[/color] $command = \"Group \"[color=#66FF00]Addvar[/color] $command = $groupnumber[color=#66FF00]Assign Macro[/color] 1.x.y /cmd=$\"command\""
+    },
+    {
+      "author": "costalight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 2, 2015 at 7:23 AM#3Hello Ryan,Thanks for your quick response.I would like to have.Setvar $command = \"Group \"Addvar $command = $groupnumberAssign Macro 1.x.y /cmd=$\"command\"It works only I would like to haveLine 1 : copy group(result $\"command\")At group 161/oI hope to hear from you soon.Costa"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "November 2, 2015 at 1:37 PM#4Assuming I'm understanding what you're trying to do, it's the same process...[color=#66FF00]Setvar[/color] $command = \"Copy Group \"[color=#66FF00]Addvar[/color] $command = $groupnumber[color=#66FF00]Addvar[/color] $command = \" At Group 161 /o\"[color=#66FF00]Assign Macro[/color] 1.x.y /cmd=$\"command\""
+    },
+    {
+      "author": "costalight",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "November 2, 2015 at 9:05 PM#5Thanks Ryan!!!!!"
+    },
+    {
+      "author": "costalight",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "November 2, 2015 at 9:59 PM#6Hello,It Works.And if I have a selection to and  want to save it in $groupnumber.?"
+    }
+  ],
   "replies": 0,
   "thread_id": "49588",
   "title": "Macro For a Macro",

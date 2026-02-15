@@ -3,6 +3,38 @@
   "author": "Alejandro Sayavera Solis",
   "post_date": null,
   "post_text": "April 22, 2018 at 6:31 PM#1Hi im trying to include some commands on a macro but i don t know how can i solve the next issues:1/ its posible to change the trig mode in a cue ?? need to change go by follow2/ its posible put some trig time",
+  "posts": [
+    {
+      "author": "Alejandro Sayavera Solis",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 22, 2018 at 6:31 PM#1Hi im trying to include some commands on a macro but i don t know how can i solve the next issues:1/ its posible to change the trig mode in a cue ?? need to change go by follow2/ its posible put some trig time"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 22, 2018 at 6:35 PM#2CodeAssign Cue x /trig=follow /trigtime=3"
+    },
+    {
+      "author": "Alejandro Sayavera Solis",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 22, 2018 at 7:24 PM#3THANK U some much GLAD!!! always on top!!I know some time ago was speaking about it but maybe something change and now its possible.... it could be possible introduce via macro a cmd sentence in a cue????"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 22, 2018 at 10:31 PM#4not sure what you are asking..you can use the same syntax for cmdCodeAssign Cue x /cmd=\"Pause Executor 1 Thru 5\""
+    },
+    {
+      "author": "Alejandro Sayavera Solis",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "April 26, 2018 at 11:21 PM#5Hi Glad, sorry to be late finally i got the idea to write its the same as u writte me. the same i said u always thank so much for help me"
+    }
+  ],
   "replies": 0,
   "thread_id": "61203",
   "title": "HELP WITH SOME COMMANDS",

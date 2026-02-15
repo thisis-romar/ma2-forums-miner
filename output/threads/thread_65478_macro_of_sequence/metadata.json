@@ -3,6 +3,44 @@
   "author": "jacklightwave",
   "post_date": null,
   "post_text": "March 25, 2020 at 4:05 PM#1i have 1 sequence ,  but in sequence have 10 cue , i want to assign cue to executor button,example ;   macro line 1 :  assign cue 1 sequence 1 at executor 1.101macro line 2 :  assign cue 2 sequence 1 at executor 1.102macro line 3 :  assign cue 3 sequence 1 at executor 1.103   ......  until macro line 10it can't run  , what i'm wrong bro ?    i want to have only one sequence but i want to use cue in sequence to executor .thx for answer brobest regards",
+  "posts": [
+    {
+      "author": "jacklightwave",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 25, 2020 at 4:05 PM#1i have 1 sequence ,  but in sequence have 10 cue , i want to assign cue to executor button,example ;   macro line 1 :  assign cue 1 sequence 1 at executor 1.101macro line 2 :  assign cue 2 sequence 1 at executor 1.102macro line 3 :  assign cue 3 sequence 1 at executor 1.103   ......  until macro line 10it can't run  , what i'm wrong bro ?    i want to have only one sequence but i want to use cue in sequence to executor .thx for answer brobest regards"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 25, 2020 at 4:21 PM#2why do you want to have only one sequence?"
+    },
+    {
+      "author": "jacklightwave",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 25, 2020 at 4:32 PM#3in show file have another sequence bro ,  but this sequence 1  i want to make on more executor  ?  it can ? bro   ,  i will export sequence to another show ,  thx"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 25, 2020 at 6:43 PM#4as far as I know you can't assign a cue to an executor. you'd have to copy the cue to a new sequence and then assign that sequence to an executor.copy seq x cue 1 at seq y cue 1 /oassign seq y exec 1.101copy seq x cue 2 at seq z cue 1 /oassign seq z exec 1.102etc.I have no idea why you'd want to do this, but this syntax should help you out."
+    },
+    {
+      "author": "jacklightwave",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "March 26, 2020 at 8:53 AM#5thx for answer bro"
+    },
+    {
+      "author": "reade",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "March 31, 2020 at 8:05 PM#6you could just use store look for each cue"
+    }
+  ],
   "replies": 0,
   "thread_id": "65478",
   "title": "macro of sequence",

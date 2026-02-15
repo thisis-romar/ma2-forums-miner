@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:46dcf8eaa7dbb02eb615e7c196d7da019c1b83ac31ae0aa93b5179f19ddf4eba",
-      "download_count": 208,
+      "download_count": 219,
       "filename": "next if active macro test.show.gz",
+      "post_number": 2,
       "size": 150588,
       "url": "https://forum.malighting.com/file-download/4361/"
     }
@@ -11,6 +12,20 @@
   "author": "Bensley69",
   "post_date": null,
   "post_text": "January 7, 2018 at 7:53 AM#1Hey everyone,I have started using Macros and turns out they are nothing like Java hahah.So what i am trying to do is have a macro that everytime activated it triggers all my sequences, which i got to workCodeGo AllSequExecutorsBut what i want is that if i have set the executor on, then it triggers it.So- I turn on for examp sequence executor 1, 4 and 7- Hit macro execute button- and 1,4,7 advance and 2,3,6,8 don't move or turn onAnd i know i can set it to turn on then individually, but that would only work if it was always 1, 4 and 7 that i wanted to quickly trigger, next time it might be 2,5,10I did a bit of research but everything is very vague.Any help would be greatThanksBensley",
+  "posts": [
+    {
+      "author": "Bensley69",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 7, 2018 at 7:53 AM#1Hey everyone,I have started using Macros and turns out they are nothing like Java hahah.So what i am trying to do is have a macro that everytime activated it triggers all my sequences, which i got to workCodeGo AllSequExecutorsBut what i want is that if i have set the executor on, then it triggers it.So- I turn on for examp sequence executor 1, 4 and 7- Hit macro execute button- and 1,4,7 advance and 2,3,6,8 don't move or turn onAnd i know i can set it to turn on then individually, but that would only work if it was always 1, 4 and 7 that i wanted to quickly trigger, next time it might be 2,5,10I did a bit of research but everything is very vague.Any help would be greatThanksBensley"
+    },
+    {
+      "author": "barthornesch",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 22, 2018 at 5:01 PM#2Hello Bensley69,I have attached a showfile with the function I asume you are after. If this is in fact what you want I will try to make it a bit more versatile in such a way that it won't interfere with your current showfiles. (the macro called Initialize is only needed when everything is turned off).If you would like an explanation of how I got it to work, just ask!If this is not what you are after, just let me know what you want done different and I will see what I can do to improve it.Filesnext if active macro test.show.gz150.59 kB – 219 DownloadsBart HorneschLighting Designer,Lighting Technician,Lighting Operator."
+    }
+  ],
   "replies": 0,
   "thread_id": "60390",
   "title": "Request: Go Sequence If Executor On",

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.6.1/MA.xsd" major_vers="3" minor_vers="6" stream_vers="1">
+	<Info datetime="2019-05-25T23:32:35" showfile="3dd-pre_viz 1 song done" />
+	<Macro index="42" name="LEAP FROG SAVE">
+		<Macroline index="0" delay="900">
+			<text>SelectDrive 1</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>SaveShow</text>
+		</Macroline>
+		<Macroline index="2" delay="900">
+			<text>SelectDrive 4</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>SaveShow</text>
+		</Macroline>
+		<Macroline index="4" delay="900">
+			<text>SelectDrive 5</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>SaveShow</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>Macro &quot;LEAP FROG SAVE&quot; LINE 1</text>
+		</Macroline>
+	</Macro>
+</MA>

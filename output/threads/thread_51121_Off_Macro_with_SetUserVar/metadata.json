@@ -3,6 +3,44 @@
   "author": "Viallon",
   "post_date": null,
   "post_text": "February 7, 2016 at 5:03 PM#1Hi all,Trying to make a complex macro to practice :I want To give user choice to abort this macro (Show Cleaner).No. 1SetUserVar $AreYouSure=(\"Proceed Show Cleaner? 1=Go 0=Abort\")No. 2[$AreYouSure==1]  Delete Page ThruNo. 3[$AreYouSure==0]  Off Macro \"Show Cleaner\"It doesn't work properly. When I type 0 it won't execute line 4 thru... but macro is still activate (yellow triangle).If I test line, macro is desactivate as expected.I already tried with macro number but same behavior.Any idea?best",
+  "posts": [
+    {
+      "author": "Viallon",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 7, 2016 at 5:03 PM#1Hi all,Trying to make a complex macro to practice :I want To give user choice to abort this macro (Show Cleaner).No. 1SetUserVar $AreYouSure=(\"Proceed Show Cleaner? 1=Go 0=Abort\")No. 2[$AreYouSure==1]  Delete Page ThruNo. 3[$AreYouSure==0]  Off Macro \"Show Cleaner\"It doesn't work properly. When I type 0 it won't execute line 4 thru... but macro is still activate (yellow triangle).If I test line, macro is desactivate as expected.I already tried with macro number but same behavior.Any idea?best"
+    },
+    {
+      "author": "willybsm",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 7, 2016 at 6:18 PM#2Try this:No. 1 SetUserVar $AreYouSure=(\"Proceed Show Cleaner? 1=Go\")No. 2 [$AreYouSure==1] Delete Page ThruAnd to finish properly:No. 3 SetUserVar $AreYouSure= \"\""
+    },
+    {
+      "author": "Viallon",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 7, 2016 at 6:46 PM#3Thank for replyUnfortunately it doesn't work in this case because there are other SetUserVar following three first linesSetUserVar $AreYouSure=(\"Proceed Show Cleaner? 1=Go 0=Abort\")[$AreYouSure==1]  SetUserVar $Pages=(\"Delete All Pages ? 1=Yes 0=No\")[$AreYouSure==0]  Off Macro \"Show Cleaner\"    {>>>>> this doesn't off macro \"Show Cleaner\"}[$Pages==1]  Delete Page 1  ThruSetUserVar $Seq=(\"Delete All Seq ? 1=Yes 0=No\")[$Seq==1]  Delete Sequence 1  Thruetc etc etcOption you gave continue macro..."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "February 8, 2016 at 1:19 PM#4Salut Stéphi get same problem, i can't figure out any solutionBien à toiBenoît B."
+    },
+    {
+      "author": "Viallon",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "February 8, 2016 at 2:28 PM#5Hey Ben, you're everywhereI found a \"not too bad\" option, using other macro to switch off (or pause, or whatever) is working properly for me.Best"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "February 8, 2016 at 2:39 PM#6hey heythat's what i was doing and going to tell youcheers(les grands esprits se rencontrent)"
+    }
+  ],
   "replies": 0,
   "thread_id": "51121",
   "title": "Off Macro with SetUserVar",

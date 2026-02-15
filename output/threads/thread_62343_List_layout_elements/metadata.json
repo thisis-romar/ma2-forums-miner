@@ -3,6 +3,20 @@
   "author": "Duplicate vjandrea",
   "post_date": null,
   "post_text": "September 16, 2018 at 12:09 AM#1Hello there,I am trying to retrieve and possibily edit the elements of a layout using the command line. If I use List I can see only two default elements for every layout (background and grid?) but not the elements added manually.Does anyone know if there's a way to interact with layout elements using the command line?thanksandreaP.S. the command I used to list the layout elements is:CodeList 38.1.*.*.*",
+  "posts": [
+    {
+      "author": "Duplicate vjandrea",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 16, 2018 at 12:09 AM#1Hello there,I am trying to retrieve and possibily edit the elements of a layout using the command line. If I use List I can see only two default elements for every layout (background and grid?) but not the elements added manually.Does anyone know if there's a way to interact with layout elements using the command line?thanksandreaP.S. the command I used to list the layout elements is:CodeList 38.1.*.*.*"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 22, 2018 at 11:16 AM#2There is no way to interact with layout elements via command line."
+    }
+  ],
   "replies": 0,
   "thread_id": "62343",
   "title": "List layout elements",

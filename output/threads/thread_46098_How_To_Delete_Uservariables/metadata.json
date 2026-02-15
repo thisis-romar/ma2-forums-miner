@@ -3,6 +3,26 @@
   "author": "Buzz313th",
   "post_date": null,
   "post_text": "April 6, 2015 at 8:00 AM#1Does anyone know the syntax to completely delete a Uservar?JB",
+  "posts": [
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 6, 2015 at 8:00 AM#1Does anyone know the syntax to completely delete a Uservar?JB"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 6, 2015 at 9:43 AM#2setuservar $myvar=\"\""
+    },
+    {
+      "author": "Buzz313th",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 6, 2015 at 5:08 PM#3Thanks!Glad...Glad your around.JB"
+    }
+  ],
   "replies": 0,
   "thread_id": "46098",
   "title": "How To Delete Uservariables",

@@ -3,6 +3,44 @@
   "author": "chrisjames",
   "post_date": null,
   "post_text": "October 7, 2019 at 10:06 PM#1Hi all,I'm new to MA, and am trying to make a macro to make it quicker to colour effects using the appearance window.For example, I'd like to assign a specific colour to effect 61 thru 70, another colour for 71 thru 80 etc etc, using variables.What's the best way to do this?Thanks!",
+  "posts": [
+    {
+      "author": "chrisjames",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 7, 2019 at 10:06 PM#1Hi all,I'm new to MA, and am trying to make a macro to make it quicker to colour effects using the appearance window.For example, I'd like to assign a specific colour to effect 61 thru 70, another colour for 71 thru 80 etc etc, using variables.What's the best way to do this?Thanks!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 7, 2019 at 10:25 PM#2did you check out the keyword description in the inbuilt help?typeCodeHelp Appearanceinto the commandline and press please"
+    },
+    {
+      "author": "Hedsma",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 8, 2019 at 9:59 AM#3Hi!Here is a link to ACT:s syntax list.Click meEx;Red is \"Appearance /r=100 /g=0 /b=0 @\"Green is \"Appearance /r=0 /g=100 /b=0 @\"Blue is \"Appearance /r=0 /g=0 /b=100 @\"Use them in a macro to work properly//Martin"
+    },
+    {
+      "author": "chrisjames",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 10, 2019 at 12:23 AM#4Thanks for your replies. Do you know if it is possible to recall the colour picker to make a colour selection each time the macro is used, or does the colour data have to derive from the macro syntax?"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "October 10, 2019 at 3:37 AM#5that would kind of seem to defeat the purpose in my opinion since that would basically be the same thing as 'appearance object x' in the command line. you could use your macro to say 'appearance object x @' and then enter in the command line which will bring up your color picker."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "October 10, 2019 at 7:36 AM#6Appearance Effect 61 Thru 70"
+    }
+  ],
   "replies": 0,
   "thread_id": "64771",
   "title": "Appearance Macro",

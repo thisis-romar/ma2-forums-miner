@@ -3,6 +3,32 @@
   "author": "PolyChrome Dlux",
   "post_date": null,
   "post_text": "October 13, 2017 at 3:16 PM#1I am trying to write a macro that has a pop up window and ask if you would like to continue. How do i write it so that if I type yes or y it continues the macro? Or if i write no or N it will stop the macro.",
+  "posts": [
+    {
+      "author": "PolyChrome Dlux",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 13, 2017 at 3:16 PM#1I am trying to write a macro that has a pop up window and ask if you would like to continue. How do i write it so that if I type yes or y it continues the macro? Or if i write no or N it will stop the macro."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 13, 2017 at 4:46 PM#2A couple ways you could do this. One way would be to just press ESC at the popup to cancel. Another way would be that the next line checks to see if you typed \"n\", and if you did, Off Macro x. Otherwise, continue."
+    },
+    {
+      "author": "PolyChrome Dlux",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 13, 2017 at 4:53 PM#3Thanks!"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 13, 2017 at 11:14 PM#4setvar $confirm (Do you want to continue ?  Y/N)[$confirm==N] off macro xYou can use 0 and 1 instead of Y or N, then it's faster to use the numeric keypad."
+    }
+  ],
   "replies": 0,
   "thread_id": "59750",
   "title": "User input in macro",

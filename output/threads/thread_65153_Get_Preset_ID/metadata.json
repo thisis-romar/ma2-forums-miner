@@ -3,6 +3,26 @@
   "author": "Manlightman",
   "post_date": null,
   "post_text": "January 14, 2020 at 1:47 PM#1Hi, I can't figure this one out with the manual.Can I get the preset ID (or number) and store it in a variable?Right now it's for a simple Problem. I want to build a macro which stores a selective preset as universal preset. What I was looking for, was the possibility to call the Macro, tab the Preset and then restore a Preset with that particular preset ID.Therefore I want to extract the ID and store into a variable.Am I wrong to do so? Is it even possible?Thanks",
+  "posts": [
+    {
+      "author": "Manlightman",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 14, 2020 at 1:47 PM#1Hi, I can't figure this one out with the manual.Can I get the preset ID (or number) and store it in a variable?Right now it's for a simple Problem. I want to build a macro which stores a selective preset as universal preset. What I was looking for, was the possibility to call the Macro, tab the Preset and then restore a Preset with that particular preset ID.Therefore I want to extract the ID and store into a variable.Am I wrong to do so? Is it even possible?Thanks"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 14, 2020 at 4:49 PM#2might be possible with glads intellivars? could be wrong though."
+    },
+    {
+      "author": "Manlightman",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 14, 2020 at 5:04 PM#3Thanks, looks interesting.I'll look into it!"
+    }
+  ],
   "replies": 0,
   "thread_id": "65153",
   "title": "Get Preset ID",

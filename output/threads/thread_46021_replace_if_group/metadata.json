@@ -3,6 +3,32 @@
   "author": "Duplicate cedric-e",
   "post_date": null,
   "post_text": "March 28, 2015 at 12:22 PM#1Hi all,Im creating a macro to rotate fixture position's by 90 degrees.Store group 999/o (this syntax store's the selected fixture)Replace Attribute \"PAN\"  At -270  Thru 270  With -360  Thru 180/NC if group 999The CMDline feedback tells me: The replace value's operations gave 0 results.When I delete the if group 999 the syntax works fine and rotate my fixtures.To work around this I created another macro:Store World 999/oWorld 999SetUserVar $direction= (\"select direction - OR +)[$direction==-]  Replace Attribute \"PAN\"  At -270  Thru 270  With -360  Thru 180/NC[$direction==+]  Replace Attribute \"PAN\"  At -270  Thru 270  With -180  Thru 360/NCWorld 1Delete World 999SetUserVar $direction=\"\"\"can someone help my why the if group doens't work?many thanks",
+  "posts": [
+    {
+      "author": "Duplicate cedric-e",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 28, 2015 at 12:22 PM#1Hi all,Im creating a macro to rotate fixture position's by 90 degrees.Store group 999/o (this syntax store's the selected fixture)Replace Attribute \"PAN\"  At -270  Thru 270  With -360  Thru 180/NC if group 999The CMDline feedback tells me: The replace value's operations gave 0 results.When I delete the if group 999 the syntax works fine and rotate my fixtures.To work around this I created another macro:Store World 999/oWorld 999SetUserVar $direction= (\"select direction - OR +)[$direction==-]  Replace Attribute \"PAN\"  At -270  Thru 270  With -360  Thru 180/NC[$direction==+]  Replace Attribute \"PAN\"  At -270  Thru 270  With -180  Thru 360/NCWorld 1Delete World 999SetUserVar $direction=\"\"\"can someone help my why the if group doens't work?many thanks"
+    },
+    {
+      "author": "Duplicate christof",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 28, 2015 at 1:21 PM#2Hi,intead of \"if group\" this should do the job:SEARCHgroup 999Replace Attribute \"PAN\" At -270 Thru 270 With -360 Thru 180/NC ifSEARCHRESULTChristof"
+    },
+    {
+      "author": "Duplicate cedric-e",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 29, 2015 at 9:31 PM#3Thanks Christof, this does the job.Do you know the theory why this is working and the if group not?This can help me in the future."
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "April 4, 2015 at 11:42 PM#4the IF condition in the REPLACE syntax is used to indicate where (in which objects) the replacing should be performed.There is no pan data stored in group 999, group 999 only contains a selection of fixtures"
+    }
+  ],
   "replies": 0,
   "thread_id": "46021",
   "title": "replace if group",

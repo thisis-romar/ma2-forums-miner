@@ -3,6 +3,38 @@
   "author": "Heather Cossette",
   "post_date": null,
   "post_text": "May 4, 2016 at 2:05 AM#1Ok my beautiful MA2 programmers I need help...... I have looked pretty deep into MA-share and Google and can't find a solution so I just thought I would ask you guys.I am running MA2 onPC with a wing. This means I only have 6 faders...... for my punt page I have a midi pad set up that is firing executer buttons. What I want to do is store a position effect on a button and then set my two sub masters as size and speed. Speed I figured out..... set the cue to rate1 and one of my sub masters is rate1. The size function is what I am having trouble with. I know I could save the effects on a fader and make it a temp fader but I am looking for a more global option that doesn't eat up my 6 playback faders that I want to use for my fixture intensities. Im reading about writing a macro for it but I'm not sure if that is the right direction and what syntax would I use? As I write this I also realize I need it to control only position high and low values I wouldn't want to change a dimmer or color effect. Let me know what you think, or if you have the solution, and please let me know if I'm crazy and should stop wasting my time. Thanks!!!!!!",
+  "posts": [
+    {
+      "author": "Heather Cossette",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 4, 2016 at 2:05 AM#1Ok my beautiful MA2 programmers I need help...... I have looked pretty deep into MA-share and Google and can't find a solution so I just thought I would ask you guys.I am running MA2 onPC with a wing. This means I only have 6 faders...... for my punt page I have a midi pad set up that is firing executer buttons. What I want to do is store a position effect on a button and then set my two sub masters as size and speed. Speed I figured out..... set the cue to rate1 and one of my sub masters is rate1. The size function is what I am having trouble with. I know I could save the effects on a fader and make it a temp fader but I am looking for a more global option that doesn't eat up my 6 playback faders that I want to use for my fixture intensities. Im reading about writing a macro for it but I'm not sure if that is the right direction and what syntax would I use? As I write this I also realize I need it to control only position high and low values I wouldn't want to change a dimmer or color effect. Let me know what you think, or if you have the solution, and please let me know if I'm crazy and should stop wasting my time. Thanks!!!!!!"
+    },
+    {
+      "author": "skyest1212",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 26, 2016 at 4:05 PM#2I too would like the option to expand my faders to control the size of movement."
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 26, 2016 at 4:57 PM#3Maybe you could make some macros which only selects the executors containing your effects and let the two 100mm faders be temp faders to control the size of the effects"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 26, 2016 at 11:07 PM#4assign effect 1.myeffect.myline /highvalue=(?) /lowvalue=(?)"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 26, 2016 at 11:37 PM#5one solution is to use internal DMX-remotes:1) Assign all your movement effects to executorfader 15-30- open a playbackwindow to see and access these.2) Patch 15 additional dimmerchannels as channel 1001 to 1015, to e.g. Universe 99.001 - 99.0153) Setup DMX remotes for 99.001 thru 99.015 controlling the fader of executor 15-304) Store channel 1001 to full on your first buttonExec, 1002 on your second etc.and assign a Playbackmaster dependency to your buttonexecs5) assign the Playbackmaster to one of your fader-executors, or your 100mm faders.Your playbackmaster will control the output of your buttonexecs, the output of your button execs will control the faders of your effects"
+    }
+  ],
   "replies": 0,
   "thread_id": "52848",
   "title": "Controlling position effect size on one of the submasters.",

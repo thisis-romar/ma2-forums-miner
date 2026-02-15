@@ -2,22 +2,50 @@
   "assets": [
     {
       "checksum": "sha256:180dcddc2e37dc9dd1b0c33e98b9ce36da991692fb71697fade7d3a6888185d0",
-      "download_count": 153,
+      "download_count": 164,
       "filename": "Color Form Gen.xml",
+      "post_number": 1,
       "size": 16748,
       "url": "https://forum.malighting.com/file-download/4491/"
     },
     {
       "checksum": "sha256:f4f9733845ffc9a77b11d91ae46a87c2b6280a2d7e7b897d07daf5eed99cd4c6",
-      "download_count": 169,
+      "download_count": 181,
       "filename": "Position Form Generator.xml",
+      "post_number": 4,
       "size": 9306,
       "url": "https://forum.malighting.com/file-download/4525/"
     }
   ],
   "author": "jshdesigns",
   "post_date": null,
-  "post_text": "April 25, 2019 at 3:36 AM#1Hi all,Attached is a macro that will create a new Form with 3 or 4 colors of your choice. Write down the RGB values (in percent) of the colors you want to add to the form. Run the macro and answer the questions. You can also choose if you want the form to crossfade or snap/chase between the colors as well.Let me know of any issues, or if you're interested in adding more colors or a similar macro using other attributes like Pan/Tilt.Enjoy!FilesColor Form Gen.xml16.75 kB – 153 Downloads",
+  "post_text": "April 25, 2019 at 3:36 AM#1Hi all,Attached is a macro that will create a new Form with 3 or 4 colors of your choice. Write down the RGB values (in percent) of the colors you want to add to the form. Run the macro and answer the questions. You can also choose if you want the form to crossfade or snap/chase between the colors as well.Let me know of any issues, or if you're interested in adding more colors or a similar macro using other attributes like Pan/Tilt.Enjoy!FilesColor Form Gen.xml16.75 kB – 164 Downloads",
+  "posts": [
+    {
+      "author": "jshdesigns",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 25, 2019 at 3:36 AM#1Hi all,Attached is a macro that will create a new Form with 3 or 4 colors of your choice. Write down the RGB values (in percent) of the colors you want to add to the form. Run the macro and answer the questions. You can also choose if you want the form to crossfade or snap/chase between the colors as well.Let me know of any issues, or if you're interested in adding more colors or a similar macro using other attributes like Pan/Tilt.Enjoy!FilesColor Form Gen.xml16.75 kB – 164 Downloads"
+    },
+    {
+      "author": "slinso1",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 26, 2019 at 8:22 AM#2So how it work basically what is the working for."
+    },
+    {
+      "author": "SteweeCee",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 29, 2019 at 12:26 PM#3sick"
+    },
+    {
+      "author": "jshdesigns",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "June 17, 2019 at 4:50 AM#4Per request, here is the version for positions.Same process, write down your position values in percent (change the readout in your fixture sheet to percent to get this value), run the macro and answer the questions. When you go to create the effect, make sure the Low and High values are the min and max physical values of your fixtures Pan/Tilt. Example:Your movers can pan 540deg and tilt 270deg. Your Pan Effect Low value should be -270 and High value 270. Tilt Low value -135 and High value 135.You can choose between a linear fade or spline between points, which allows you to create some fun forms, like circles, ovals, squares, triangles, figure 8's...etc.FilesPosition Form Generator.xml9.31 kB – 181 Downloads"
+    }
+  ],
   "replies": 0,
   "thread_id": "63812",
   "title": "Color Form Generator",

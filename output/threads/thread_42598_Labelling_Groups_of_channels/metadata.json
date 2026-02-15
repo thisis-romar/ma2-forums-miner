@@ -3,6 +3,32 @@
   "author": "khumphrey",
   "post_date": null,
   "post_text": "July 20, 2014 at 9:33 PM#1Hi all,On my console I have probably just over 100 groups of channels. I'm wanting to label them (the channels, not the groups) so with a quick glance at a channel display I can see the labels so I know it's \"FOH5 Blue\" instead of just channel 17 and wondering what that is.I've been trying to write a macro that will label the active channels but so far I can't get it to work. The easiest way I've found so far is to select the group. and then'LABEL''drag finger across highlighted active channels''PLEASE'I can't seem to find away to label active channels? And if I try to label the group or the sequence it of course labels the group or the sequence. I have tried LABEL IfACTIVE, LABEL SelFix Group 1, and several other variations.Any suggestions? I've tried watching the command line to see what's going on but it doesn't show much.Many thanks,Kevin",
+  "posts": [
+    {
+      "author": "khumphrey",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 20, 2014 at 9:33 PM#1Hi all,On my console I have probably just over 100 groups of channels. I'm wanting to label them (the channels, not the groups) so with a quick glance at a channel display I can see the labels so I know it's \"FOH5 Blue\" instead of just channel 17 and wondering what that is.I've been trying to write a macro that will label the active channels but so far I can't get it to work. The easiest way I've found so far is to select the group. and then'LABEL''drag finger across highlighted active channels''PLEASE'I can't seem to find away to label active channels? And if I try to label the group or the sequence it of course labels the group or the sequence. I have tried LABEL IfACTIVE, LABEL SelFix Group 1, and several other variations.Any suggestions? I've tried watching the command line to see what's going on but it doesn't show much.Many thanks,Kevin"
+    },
+    {
+      "author": "Duplicate pyroaxel",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 21, 2014 at 10:58 AM#2Label fixture thru if programmer works."
+    },
+    {
+      "author": "khumphrey",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 21, 2014 at 6:37 PM#3Fantastic, thanks!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "July 25, 2014 at 4:06 PM#4if you wnat to label the selected channels, and not the active, tryLabel Selection"
+    }
+  ],
   "replies": 0,
   "thread_id": "42598",
   "title": "Labelling Groups of channels",

@@ -3,6 +3,26 @@
   "author": "helleden",
   "post_date": null,
   "post_text": "November 25, 2017 at 7:00 PM#1hy,is it possible to save a fixture attribute value in a variable?i try doing a mirror between 2 fixtures with shapers for doing focus easilylike this: fixture 1 attribute 1A at fixture 2 attribute 3Aand fixture 1 attribute 3A at fixture 2 attribute 1Alight is live",
+  "posts": [
+    {
+      "author": "helleden",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 25, 2017 at 7:00 PM#1hy,is it possible to save a fixture attribute value in a variable?i try doing a mirror between 2 fixtures with shapers for doing focus easilylike this: fixture 1 attribute 1A at fixture 2 attribute 3Aand fixture 1 attribute 3A at fixture 2 attribute 1Alight is live"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 25, 2017 at 11:56 PM#2is it possible to save a fixture attribute value in a variable?No, this is not possible....."
+    },
+    {
+      "author": "helleden",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 26, 2017 at 7:10 AM#3thanks for the answer gladhave a good daylight is live"
+    }
+  ],
   "replies": 0,
   "thread_id": "60111",
   "title": "attribute value",

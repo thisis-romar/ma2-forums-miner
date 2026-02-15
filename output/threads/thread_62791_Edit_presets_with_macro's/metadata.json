@@ -3,6 +3,26 @@
   "author": "Gaukert",
   "post_date": null,
   "post_text": "November 22, 2018 at 12:23 AM#1Hey,Can someone tell me how i can make a macro that will progam everything, all presets. I kinda figured some parts out but i cant figure out how can tell the CMD at which value it should store it.Lets say i want to progam a preset called Gobo 1, in this preset there is a G1 Gobo (so its shouldnt take G1<> aswell, only G1) and from the G1 there is a gobo called \"Gobo 1.1\". How do i store \"Gobo 1.1\" in a preset with a macro? And how can i make this that it will only select the things i want, ofc change the name but if say G1 to the CMD it includes G1<> aswell.Hope someone can help me out",
+  "posts": [
+    {
+      "author": "Gaukert",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 22, 2018 at 12:23 AM#1Hey,Can someone tell me how i can make a macro that will progam everything, all presets. I kinda figured some parts out but i cant figure out how can tell the CMD at which value it should store it.Lets say i want to progam a preset called Gobo 1, in this preset there is a G1 Gobo (so its shouldnt take G1<> aswell, only G1) and from the G1 there is a gobo called \"Gobo 1.1\". How do i store \"Gobo 1.1\" in a preset with a macro? And how can i make this that it will only select the things i want, ofc change the name but if say G1 to the CMD it includes G1<> aswell.Hope someone can help me out"
+    },
+    {
+      "author": "MJ",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 1, 2019 at 3:42 PM#2use filters"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 27, 2019 at 8:52 PM#3The problem here is that fixtures don't have the same dmx layout/naming used in librariesYou can put attributes at specific values: Attribute \"Gobo1\" at value\"gobo 1.1\" is just a name in the MA Library which can be changed by the user so therefore not a usefull reference for calling in macrosWhat you could do is let a macro create a certain amount of presets, reference those presets into your programming and when done update those presets with the correct values"
+    }
+  ],
   "replies": 0,
   "thread_id": "62791",
   "title": "Edit presets with macro's",

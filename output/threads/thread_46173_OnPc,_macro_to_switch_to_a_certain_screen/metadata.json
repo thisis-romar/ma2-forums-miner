@@ -3,6 +3,32 @@
   "author": "Bhagat",
   "post_date": null,
   "post_text": "April 9, 2015 at 3:12 PM#1Gents,Perhaps someone can help me with this:For a venue that uses OnPc with one monitor ( in singlescreen mode),I have written a macro that loads a certain show from the template folder. In itself that works fine, but the thing I cannot figure out, is how to also automaticly switch to screen 2. I cannot get past the command section, and I can't seem to find a syntax that mimics a buttonpress on \"screen 2\"The goal of this exercise is to have multiple users login, activate a certain macro to load a certain show, without having any further knowledge of OnPc. On the attached wing there are a few executors to play with, and I would also like them to have screen 2 active, on which I made a layoutview.Thanks",
+  "posts": [
+    {
+      "author": "Bhagat",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 9, 2015 at 3:12 PM#1Gents,Perhaps someone can help me with this:For a venue that uses OnPc with one monitor ( in singlescreen mode),I have written a macro that loads a certain show from the template folder. In itself that works fine, but the thing I cannot figure out, is how to also automaticly switch to screen 2. I cannot get past the command section, and I can't seem to find a syntax that mimics a buttonpress on \"screen 2\"The goal of this exercise is to have multiple users login, activate a certain macro to load a certain show, without having any further knowledge of OnPc. On the attached wing there are a few executors to play with, and I would also like them to have screen 2 active, on which I made a layoutview.Thanks"
+    },
+    {
+      "author": "blah",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 15, 2015 at 11:23 PM#2Hi,Bumping this one up, as I too was trying to figure out a similar macro.Any idea, anyone ?Cheers,"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 16, 2015 at 10:40 AM#3I don't think this is possible by commandline, but if you save the show with screen 2 opened you should get the exact state of the console back when loading the show, so with screen 2 opened"
+    },
+    {
+      "author": "dj_rappa",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 17, 2015 at 6:56 AM#4Is there anyway to have it remember the size/maximized state of the window? I have a constant annoying problem that when ever I start up one setup one of my screens opens up non maximized with the screen 1, 2, etc buttons overlapping onto the second display.So you need to mess around getting the mouse and making it right."
+    }
+  ],
   "replies": 0,
   "thread_id": "46173",
   "title": "OnPc, macro to switch to a certain screen?",

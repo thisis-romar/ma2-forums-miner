@@ -3,6 +3,50 @@
   "author": "Duplicate ZaneBlanchard",
   "post_date": null,
   "post_text": "November 10, 2018 at 3:07 AM#1I'm trying to set up a macro so that I can type in my color temperature for a Skypanel and the macro does the calculations for me. I have it down but it requires me to divide twice, in the correct order of operations.Here's the Macro:PresetType \"Color\"Attribute \"ColorTemperature\" At (Color Temperature) - 2800 / 0.10986496 / 655.35Mathematically this works to get the correct percentage, however the command line is processing the equation as a whole. It needs to subtract 2800, divide that answer by .10986496, then divide that answer by 655.35 (For 16-bit).Is there a way instead to set the attribute to the dmx value wherever it lands in 0-65535 in the macro so I don't need to divide by 655.35 to get the percentage?",
+  "posts": [
+    {
+      "author": "Duplicate ZaneBlanchard",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 10, 2018 at 3:07 AM#1I'm trying to set up a macro so that I can type in my color temperature for a Skypanel and the macro does the calculations for me. I have it down but it requires me to divide twice, in the correct order of operations.Here's the Macro:PresetType \"Color\"Attribute \"ColorTemperature\" At (Color Temperature) - 2800 / 0.10986496 / 655.35Mathematically this works to get the correct percentage, however the command line is processing the equation as a whole. It needs to subtract 2800, divide that answer by .10986496, then divide that answer by 655.35 (For 16-bit).Is there a way instead to set the attribute to the dmx value wherever it lands in 0-65535 in the macro so I don't need to divide by 655.35 to get the percentage?"
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 10, 2018 at 9:31 AM#2Maybe a step with variables could help:Codesetvar $ctemp=(Color Temperature)addvar $ctemp = -2800attribute \"ColorTemperature\" at $ctemp / 0.10986496 / 655.35I did the calculation for all the color temperatures in excel and entered the values as channelsets. This enables the operator to select the color temperature in the calculator and displays the value on the encoder and the fixturesheet. That's a lot of work to enter all those values, but it's more accurate than the \"display physical values\" with just the range of 2800-10000K.Gralf"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 10, 2018 at 12:46 PM#3you could consider to change the generic range for this attribute to go from 2.8 to 10.0 instead of 0 to 100."
+    },
+    {
+      "author": "Duplicate ZaneBlanchard",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "November 10, 2018 at 6:48 PM#4That's a good idea as well, I'll try to figure out that process thank you."
+    },
+    {
+      "author": "Duplicate ZaneBlanchard",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "November 10, 2018 at 6:56 PM#5Ah unfortunately this doesn't work, it seems to have a problem with the order of operations no matter what variables."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "November 14, 2018 at 4:49 PM#6Hi((a-b)/c)/d = (a-b)/(c*d) = (a-b)*(1/c*d)(temp - 2800)*1/(0.10986496*655.35)Sosetvar $temp (color temp)addvar $temp -2800attribute dim at $temp*0.0136986"
+    },
+    {
+      "author": "Duplicate ZaneBlanchard",
+      "post_date": null,
+      "post_number": 7,
+      "post_text": "November 16, 2018 at 6:23 AM#7Thank you sir, actually fixed it right up when I changed the generic values in the patch and fixture schedule myself. Didn't need to do any equations!"
+    }
+  ],
   "replies": 0,
   "thread_id": "62693",
   "title": "Equations in Macros",

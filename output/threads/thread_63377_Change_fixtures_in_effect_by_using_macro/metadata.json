@@ -3,6 +3,26 @@
   "author": "TimonTerWijlen96",
   "post_date": null,
   "post_text": "February 12, 2019 at 9:51 PM#1Hi guys 'n gurls!When I update a group, how is it possible to update the fx by using a macro. For example: I store my spot and wash groups into a group I use for dim fx, how can I update that fx so it use the fixtures I stored in the fx group?Let me know!",
+  "posts": [
+    {
+      "author": "TimonTerWijlen96",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 12, 2019 at 9:51 PM#1Hi guys 'n gurls!When I update a group, how is it possible to update the fx by using a macro. For example: I store my spot and wash groups into a group I use for dim fx, how can I update that fx so it use the fixtures I stored in the fx group?Let me know!"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "February 17, 2019 at 7:45 PM#2Call them by name.I’d use ‘wings_wash’ and ‘sin_wash’ and ‘swing_wash’ as effect names, then store the group of your new washes, select that group and then store effect *.’wash’"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "February 18, 2019 at 1:57 PM#3The right syntax is : store effect 1.\"*wash\".*1 is effect pool*wash calls all effects with wash in label* are all lines"
+    }
+  ],
   "replies": 0,
   "thread_id": "63377",
   "title": "Change fixtures in effect by using macro",

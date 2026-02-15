@@ -3,6 +3,20 @@
   "author": "rick6",
   "post_date": null,
   "post_text": "March 18, 2018 at 11:41 PM#1Hi.I'm still a bit new to this so i'm sorry if this is a obvious questionWhat i want is actually really simple. Basically i need a macro to execute a command, for example \"Go\" or \" \"Executor 1 At 100\" only if a specific channel is at 100.Something tells me i need to use some variation of the SetVar keyword..Thank you in advance.",
+  "posts": [
+    {
+      "author": "rick6",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 18, 2018 at 11:41 PM#1Hi.I'm still a bit new to this so i'm sorry if this is a obvious questionWhat i want is actually really simple. Basically i need a macro to execute a command, for example \"Go\" or \" \"Executor 1 At 100\" only if a specific channel is at 100.Something tells me i need to use some variation of the SetVar keyword..Thank you in advance."
+    },
+    {
+      "author": "Cheng kuo young",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 25, 2018 at 11:06 AM#2you can  set a macroChannel (What \" Channels? \" )  At 100Assign the macro to a button  and push it"
+    }
+  ],
   "replies": 0,
   "thread_id": "60916",
   "title": "Execute a command only if a specific channel is at 100",

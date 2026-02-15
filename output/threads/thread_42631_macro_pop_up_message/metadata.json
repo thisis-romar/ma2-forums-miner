@@ -3,6 +3,44 @@
   "author": "marlonpdm",
   "post_date": null,
   "post_text": "July 23, 2014 at 12:03 PM#1Can anyone help me please how to make a macro pop up message only.thank you!",
+  "posts": [
+    {
+      "author": "marlonpdm",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "July 23, 2014 at 12:03 PM#1Can anyone help me please how to make a macro pop up message only.thank you!"
+    },
+    {
+      "author": "Duplicate pyroaxel",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "July 23, 2014 at 12:41 PM#2(\"Write what you want like this \")"
+    },
+    {
+      "author": "marlonpdm",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "July 23, 2014 at 2:17 PM#3Thank you!is it possible to have a pop up without the box to enter something?just the message pop up?"
+    },
+    {
+      "author": "marlonpdm",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "July 23, 2014 at 2:28 PM#4what is the syntax for the please button?i want to make a macro that will say a message (\"WELCOME\") then next line after 3 sec will pop up (\"starting your show\"). this without having to press the any buttom just one macro.thank you so much!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "July 25, 2014 at 4:02 PM#5there is no syntax for Please - a (\"Dialog\") will wait for user-input.if you want to make fancy splash screens with text, graphics or whatever, you coudl use LayourViews and call these with your macro"
+    },
+    {
+      "author": "marlonpdm",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "July 29, 2014 at 12:43 PM#6thank you!last thing.is there a macro i can a make with flashing text?"
+    }
+  ],
   "replies": 0,
   "thread_id": "42631",
   "title": "macro pop up message",

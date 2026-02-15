@@ -3,6 +3,26 @@
   "author": "Haytech",
   "post_date": null,
   "post_text": "September 11, 2014 at 1:06 PM#1Hi,how can I generate a random number in a personal Variable.I want to call my colorcuestacks randomly so i need a new random number between 0 and 12 each time i use my goto macro.Cheers",
+  "posts": [
+    {
+      "author": "Haytech",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 11, 2014 at 1:06 PM#1Hi,how can I generate a random number in a personal Variable.I want to call my colorcuestacks randomly so i need a new random number between 0 and 12 each time i use my goto macro.Cheers"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 11, 2014 at 2:34 PM#2you could create a 12 cue sequence each with the CMDSetUserVar $random=1;SetUserVar $random=2;etcSet the sequence to Chasemode, Direction random, and run the sequence to get the random number.."
+    },
+    {
+      "author": "Haytech",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 11, 2014 at 7:30 PM#3Thank You Glad!It. Works like a Charm"
+    }
+  ],
   "replies": 0,
   "thread_id": "43344",
   "title": "Generate a random two digit number",

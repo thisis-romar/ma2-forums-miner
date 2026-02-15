@@ -3,6 +3,38 @@
   "author": "mybigmac",
   "post_date": null,
   "post_text": "September 19, 2016 at 6:43 PM#1Hi all,Is there a way, thru macro, to get a cue name ?Thank's and happy programming,",
+  "posts": [
+    {
+      "author": "mybigmac",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "September 19, 2016 at 6:43 PM#1Hi all,Is there a way, thru macro, to get a cue name ?Thank's and happy programming,"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "September 19, 2016 at 7:12 PM#2no, not with a macro.it can however be done with a Lua Plugin"
+    },
+    {
+      "author": "mybigmac",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "September 19, 2016 at 9:06 PM#3Thank's that's help.I will not spend too much time looking for a solution that does not exist !"
+    },
+    {
+      "author": "sylvavio",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "September 25, 2016 at 1:07 PM#4Hi,So I assume the answer is the same for a preset name ?"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "September 25, 2016 at 1:30 PM#5macros/commndline can only get data from $variablesso the answer is the same for everything, apart from what you see if you open a commandline feedback window and type LISTVAR."
+    }
+  ],
   "replies": 0,
   "thread_id": "55030",
   "title": "Getting cue name",

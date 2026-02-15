@@ -3,6 +3,26 @@
   "author": "bshock84",
   "post_date": null,
   "post_text": "April 17, 2016 at 3:13 AM#1Anyone know if there's a way to disable a range of macros from the commandline?  Wanting to create a macro that disables all of my song macros, so an opening act LD can't accidentally fire one of my song macros.-- Ben.",
+  "posts": [
+    {
+      "author": "bshock84",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 17, 2016 at 3:13 AM#1Anyone know if there's a way to disable a range of macros from the commandline?  Wanting to create a macro that disables all of my song macros, so an opening act LD can't accidentally fire one of my song macros.-- Ben."
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "April 17, 2016 at 10:36 AM#2assign macro x thru y /disabled=yes (or no) --for a range of macrosassign macro thru /disabled=yes --for all macrosassign macro 1.x.y thru z /disabled=yes -- for a range of lines in one macro (x=macro, y and z = lines)if your songs macros are labeled \"song 1\", \"song 2\" etc.. :assign macro \"song *\" /disabled=yesEnjoy"
+    },
+    {
+      "author": "bshock84",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "April 17, 2016 at 6:26 PM#3Awesome! Thank you!"
+    }
+  ],
   "replies": 0,
   "thread_id": "52515",
   "title": "Disabling a range of macros commandline",

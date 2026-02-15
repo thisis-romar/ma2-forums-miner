@@ -3,6 +3,20 @@
   "author": "Milton de la Cruz",
   "post_date": null,
   "post_text": "November 20, 2019 at 4:14 AM#1HI GUYS!How I can to assign IGNORE EXECTIME via MACRO on a EXEC??Right now I´M using this Sintaxis ...ASSIGN EXEC X.Y /ignoreexectime = Onbuuuut, It´s not working yet!",
+  "posts": [
+    {
+      "author": "Milton de la Cruz",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 20, 2019 at 4:14 AM#1HI GUYS!How I can to assign IGNORE EXECTIME via MACRO on a EXEC??Right now I´M using this Sintaxis ...ASSIGN EXEC X.Y /ignoreexectime = Onbuuuut, It´s not working yet!"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 20, 2019 at 7:04 AM#2please look in the commandline feedback, to check how the console interprets your syntax.Your syntax is not executed as you enter it:ASSIGN EXEC X.Y /ignoreexectime = On-->Assign Executor x.y On /ignoreexectimeIn this scenario the value you are trying to assign to the /option, is accidentally also a keyword, and the commandline preprocessor messes up your original syntax when sorting keywords and options.Please use a syntax variants where ON is not a freestanding entity, to make sure your entered syntax is being properly interpreted.e.g.Assign Executor x.y /IgnoreExecTime=OnAssign Executor x.y /IgnoreExecTime = \"On\"Assign Executor x.y /IgnoreExecTime = 1"
+    }
+  ],
   "replies": 0,
   "thread_id": "64979",
   "title": "IGNORE EXECTIME via MACRO",

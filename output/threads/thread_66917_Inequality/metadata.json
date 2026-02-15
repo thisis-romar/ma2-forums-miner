@@ -3,6 +3,38 @@
   "author": "dahinn",
   "post_date": null,
   "post_text": "November 23, 2021 at 1:36 PM#1Hi,Could somebody tell how I can use inequality in a macro, something like this:[$qwe ~= 1] store exec 1.1.Thanks in advance.",
+  "posts": [
+    {
+      "author": "dahinn",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "November 23, 2021 at 1:36 PM#1Hi,Could somebody tell how I can use inequality in a macro, something like this:[$qwe ~= 1] store exec 1.1.Thanks in advance."
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "November 24, 2021 at 11:30 AM#2Have a look atTHIS"
+    },
+    {
+      "author": "dahinn",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "November 24, 2021 at 3:00 PM#3It explains how to set condition \"if equal\" but not \"if not equal\". I think the only way to use plugins =("
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "November 24, 2021 at 5:04 PM#4something like this should do the job:SetVar $inequality = \"yes\"[$qwe == 1] SetVar $inequality = \"no\"[$inequality == \"yes\"] store exec 1.1"
+    },
+    {
+      "author": "dahinn",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "November 25, 2021 at 10:08 AM#5Oh, such a cool solution! Thanks, Glad."
+    }
+  ],
   "replies": 0,
   "thread_id": "66917",
   "title": "Inequality",

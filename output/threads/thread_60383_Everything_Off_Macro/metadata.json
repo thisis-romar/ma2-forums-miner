@@ -3,6 +3,32 @@
   "author": "glover",
   "post_date": null,
   "post_text": "January 5, 2018 at 8:03 PM#1Is it possible to create a macro that will perform the same action as \"Everything Off\" from double Off Off menu?",
+  "posts": [
+    {
+      "author": "glover",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 5, 2018 at 8:03 PM#1Is it possible to create a macro that will perform the same action as \"Everything Off\" from double Off Off menu?"
+    },
+    {
+      "author": "thetylerherron",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 6, 2018 at 2:46 AM#2Off Page Thrushould do what you need."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 6, 2018 at 4:08 AM#3Needs a little more than that. There are lots of things that don't live on executors but would still be turned off by {Everything Off}.Off Page ThruOff Sequence ThruOff Effect ThruOff Timecode ThruOff Timer ThruOff Plugin ThruOff Macro Thru (make sure you put this line last, or exclude the \"Everything Off\" macro from that line, or else it will turn itself off and not kill anything else.)"
+    },
+    {
+      "author": "glover",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "January 6, 2018 at 11:48 AM#4Ryan Kanarekthanks for your help. In GM1 I use a macro with parameters like \"Off executor 1 thru 100, Off fader 1 thru 100 etc\" but I knew there must be better, more elegant way to do this. I didn't know that \"Thru\" parameter switch all faders or executors. Thanks a lot !"
+    }
+  ],
   "replies": 0,
   "thread_id": "60383",
   "title": "\"Everything Off\" Macro",

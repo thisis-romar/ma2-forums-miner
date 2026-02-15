@@ -3,6 +3,20 @@
   "author": "Galactica",
   "post_date": null,
   "post_text": "March 29, 2022 at 5:56 PM#1Hello everyone,Can someone help me with the syntax to build a macro that asks \"what universe?\" then selects the whole universe after I input the number.Thanks in advance",
+  "posts": [
+    {
+      "author": "Galactica",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 29, 2022 at 5:56 PM#1Hello everyone,Can someone help me with the syntax to build a macro that asks \"what universe?\" then selects the whole universe after I input the number.Thanks in advance"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 5, 2022 at 1:31 PM#2setvar $universeask = (what universe?)selfix DMX $universeask.1 thru $universeask.512"
+    }
+  ],
   "replies": 0,
   "thread_id": "67145",
   "title": "MAcro to select whole universe",

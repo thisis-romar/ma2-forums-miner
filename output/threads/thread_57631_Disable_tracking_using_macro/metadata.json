@@ -3,6 +3,38 @@
   "author": "Mikevdp",
   "post_date": null,
   "post_text": "March 16, 2017 at 3:41 PM#1Is there a way to disable tracking using a macro?thanks in advance.Mike-",
+  "posts": [
+    {
+      "author": "Mikevdp",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "March 16, 2017 at 3:41 PM#1Is there a way to disable tracking using a macro?thanks in advance.Mike-"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "March 16, 2017 at 4:31 PM#2https://support.actlighting.com/knowledgeBase/11662799"
+    },
+    {
+      "author": "jfguedes",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "March 22, 2017 at 1:05 PM#3Hi,I'm trying to assign by macro all the options for some special executors we use. I managed to change everything except for: \"Stepped Rate\", \"Input Filter\" and \"Playback Filter\".Is there any way to do this by command line?Thank you in advance,J"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "March 22, 2017 at 9:44 PM#4Looks like \"Stepped Rate\" isn't assignable via syntax, as far as I can tell.For Input/Playback Filters, Filters and Worlds are their own objects, which can be assigned to Sequences (as input filters) or Executors (as playback filters):Assign Filter x At Sequ y (Input Filter)Assign World a At Exec b.c (Playback Filter)"
+    },
+    {
+      "author": "jfguedes",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "March 23, 2017 at 9:16 AM#5Thanks"
+    }
+  ],
   "replies": 0,
   "thread_id": "57631",
   "title": "Disable tracking using macro",

@@ -3,6 +3,20 @@
   "author": "maxrahier31",
   "post_date": null,
   "post_text": "January 15, 2021 at 5:58 PM#1Hi everybody.I looking for a kind of macro who can do \"take selection\" on a FX.So this is the plan:First I update my group N with the fixtures of the day.2nd, I click on my macro and:=> Select group group N=> Take selection (here my group N) on effects X Thru Ymaybe it is possible to do it with variables as \"which group?\" and \"which Effects?\" to be more helpful?I tried some lines, but seems it don't work at all...",
+  "posts": [
+    {
+      "author": "maxrahier31",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 15, 2021 at 5:58 PM#1Hi everybody.I looking for a kind of macro who can do \"take selection\" on a FX.So this is the plan:First I update my group N with the fixtures of the day.2nd, I click on my macro and:=> Select group group N=> Take selection (here my group N) on effects X Thru Ymaybe it is possible to do it with variables as \"which group?\" and \"which Effects?\" to be more helpful?I tried some lines, but seems it don't work at all..."
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 18, 2021 at 12:47 PM#2this is discussed all over the place in this forum.the syntax to take selection of an effect with a currently selected group isstore effect 1.effect.line /oif you want to be asked beforehand you can use variables like $selectionfx and then usesetvar $selectionfx = \"(which effect #?)\"store effect 1.$selectionfx.line /o"
+    }
+  ],
   "replies": 0,
   "thread_id": "66315",
   "title": "Take Selection on FX",

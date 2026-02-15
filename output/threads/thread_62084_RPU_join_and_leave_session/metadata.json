@@ -3,6 +3,26 @@
   "author": "robk82",
   "post_date": null,
   "post_text": "August 15, 2018 at 3:32 PM#1We recently added an RPU into our rig, the only problem is that it is creating issues with shutdown and startup. I'm wondering if there is a way to get the RPU to leave the session with a macro, and also join it with a macro.The console is set as the master, however the RPU stays on and when we turn on the console, it only gets about halfway through the startup macro before it stops. For now we have the operators running the startup macro again once the console is fully booted up. If I can get the RPU to leave the session during shutdown, and then rejoin it at the end of our startup macro, I believe this would solve the issues.Any help is appreciated.Cheers,~Rob",
+  "posts": [
+    {
+      "author": "robk82",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "August 15, 2018 at 3:32 PM#1We recently added an RPU into our rig, the only problem is that it is creating issues with shutdown and startup. I'm wondering if there is a way to get the RPU to leave the session with a macro, and also join it with a macro.The console is set as the master, however the RPU stays on and when we turn on the console, it only gets about halfway through the startup macro before it stops. For now we have the operators running the startup macro again once the console is fully booted up. If I can get the RPU to leave the session during shutdown, and then rejoin it at the end of our startup macro, I believe this would solve the issues.Any help is appreciated.Cheers,~Rob"
+    },
+    {
+      "author": "gralf",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "August 15, 2018 at 5:49 PM#2You can try the remotecommand on the RPU:http://help2.malighting.com/Page/grandMA2/…4/remotecommandCoderemotecommand <IP of RPU> \"leavesession\"Gralf"
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "August 23, 2018 at 11:58 PM#3Or theDisconnectStationandInviteStationkeywords."
+    }
+  ],
   "replies": 0,
   "thread_id": "62084",
   "title": "RPU join and leave session",

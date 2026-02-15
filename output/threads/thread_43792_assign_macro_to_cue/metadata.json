@@ -3,6 +3,38 @@
   "author": "Duplicate cedric-e",
   "post_date": null,
   "post_text": "October 10, 2014 at 6:20 PM#1hi,just a short question:is there away to assign a macro or a command to the commandline of 1 cue.with another macro.sommthing like:assign macro 100 at cue 1or assign cue/cmd=macro100thanks!",
+  "posts": [
+    {
+      "author": "Duplicate cedric-e",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 10, 2014 at 6:20 PM#1hi,just a short question:is there away to assign a macro or a command to the commandline of 1 cue.with another macro.sommthing like:assign macro 100 at cue 1or assign cue/cmd=macro100thanks!"
+    },
+    {
+      "author": "Duplicate cedric-e",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 10, 2014 at 6:25 PM#2okay sorry i was to fast...the correct command is:assign exec x cue x /cmd=\"macro x\""
+    },
+    {
+      "author": "Kris Goodman",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 11, 2014 at 12:43 AM#3Are you not better doing....assign sequence x cue x /cmd=\"macro x\"That way if you change the exec that you place the sequence you won't have to update the macro that issues the command every time you move the sequence to another exec.-----------------------------Kris Goodman (The Flying Lampie)Lighting Director/ProgrammerMobile: +44 (0)7784 029 892Email:kris@theflyinglampie.comWeb:http://www.theflyinglampie.com"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "October 11, 2014 at 1:31 PM#4When assigning a cue on a executor you are actually editing the sequence so there is nothing wrong with the way Cedric-E described"
+    },
+    {
+      "author": "Duplicate cedric-e",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "October 11, 2014 at 8:42 PM#5I understand what Kris mean...But i don't need it in that way.I just want to store a executor where the place is given with a uservar and directly assign 1 macro to the cue.thanks!"
+    }
+  ],
   "replies": 0,
   "thread_id": "43792",
   "title": "assign macro to cue",

@@ -3,6 +3,20 @@
   "author": "DLion",
   "post_date": null,
   "post_text": "June 16, 2019 at 5:29 AM#1What is the syntax to disable a macro line?",
+  "posts": [
+    {
+      "author": "DLion",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "June 16, 2019 at 5:29 AM#1What is the syntax to disable a macro line?"
+    },
+    {
+      "author": "DLion",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "June 16, 2019 at 5:32 AM#2I'll search first next timeassign macro 1.macro.line /disabled=yes"
+    }
+  ],
   "replies": 0,
   "thread_id": "64112",
   "title": "Is it possible to enable/disable certain lines with another macro?",

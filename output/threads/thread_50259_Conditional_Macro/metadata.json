@@ -3,6 +3,14 @@
   "author": "chinczykop",
   "post_date": null,
   "post_text": "December 15, 2015 at 2:18 PM#1I need to create a macro for check the first 20 cue. I want to check the first 20 cue and when one of them are set \"ON\" then set the cue nr 23 ON also enable.",
+  "posts": [
+    {
+      "author": "chinczykop",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 15, 2015 at 2:18 PM#1I need to create a macro for check the first 20 cue. I want to check the first 20 cue and when one of them are set \"ON\" then set the cue nr 23 ON also enable."
+    }
+  ],
   "replies": 0,
   "thread_id": "50259",
   "title": "Conditional Macro",

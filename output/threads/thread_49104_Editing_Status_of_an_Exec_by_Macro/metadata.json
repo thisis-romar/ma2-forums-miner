@@ -3,6 +3,20 @@
   "author": "Revolution",
   "post_date": null,
   "post_text": "October 6, 2015 at 8:42 AM#1Hi,im looking for the Syntax to edit the Funktion of an Exec.For Example making a Sequence to a Chaser.Thanks 4 ur help.",
+  "posts": [
+    {
+      "author": "Revolution",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 6, 2015 at 8:42 AM#1Hi,im looking for the Syntax to edit the Funktion of an Exec.For Example making a Sequence to a Chaser.Thanks 4 ur help."
+    },
+    {
+      "author": "Duplicate Ryan Kanarek",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 6, 2015 at 7:36 PM#2/chaser=on/offCheck this out for more(open in new tab)."
+    }
+  ],
   "replies": 0,
   "thread_id": "49104",
   "title": "Editing Status of an Exec by Macro",

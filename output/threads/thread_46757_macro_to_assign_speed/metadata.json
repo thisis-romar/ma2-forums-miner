@@ -3,6 +3,20 @@
   "author": "justinpma",
   "post_date": null,
   "post_text": "May 19, 2015 at 12:24 PM#1Hi All,I know the define macro to assign speed to effects.But how can I write on that assign speed or rate to seq?",
+  "posts": [
+    {
+      "author": "justinpma",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 19, 2015 at 12:24 PM#1Hi All,I know the define macro to assign speed to effects.But how can I write on that assign speed or rate to seq?"
+    },
+    {
+      "author": "Michael Storkebaum",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 20, 2015 at 8:07 PM#2Use this macroline:Assign Executor 1 /Speedmaster=Speed1orAssign Exe 27 /Speedmaster=Speed12"
+    }
+  ],
   "replies": 0,
   "thread_id": "46757",
   "title": "macro to assign speed",

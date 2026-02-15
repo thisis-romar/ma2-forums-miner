@@ -3,6 +3,20 @@
   "author": "offirbh",
   "post_date": null,
   "post_text": "December 15, 2021 at 9:30 AM#1DeleteShow $showfile /b /ncits gives me the variable solution but not the actioni want to delete my backup show files",
+  "posts": [
+    {
+      "author": "offirbh",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "December 15, 2021 at 9:30 AM#1DeleteShow $showfile /b /ncits gives me the variable solution but not the actioni want to delete my backup show files"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "December 15, 2021 at 2:57 PM#2try including syntax to quote the showfile name:DeleteShow $\"showfile\" /b /nc"
+    }
+  ],
   "replies": 0,
   "thread_id": "66973",
   "title": "how to use variable in delete show macro?",

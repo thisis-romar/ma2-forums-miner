@@ -2,8 +2,9 @@
   "assets": [
     {
       "checksum": "sha256:918ff468f6342e8f9e39205f7480d47914593086e1fb9485f0ee496d145a44e5",
-      "download_count": 96,
+      "download_count": 105,
       "filename": "COLORprompt.xml",
+      "post_number": 2,
       "size": 780,
       "url": "https://forum.malighting.com/file-download/4151/"
     }
@@ -11,6 +12,20 @@
   "author": "pmdjh",
   "post_date": null,
   "post_text": "January 6, 2017 at 6:15 PM#1I would like to be able to have a macro that prompts me for a color choice via the color picker.Basically:Fixture 1PROMPT FOR COLORstore preset 4.1 /mergeClear x 3How can I do this?",
+  "posts": [
+    {
+      "author": "pmdjh",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 6, 2017 at 6:15 PM#1I would like to be able to have a macro that prompts me for a color choice via the color picker.Basically:Fixture 1PROMPT FOR COLORstore preset 4.1 /mergeClear x 3How can I do this?"
+    },
+    {
+      "author": "Duplicate MarkvanderMeulen",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 7, 2017 at 11:27 AM#2You could do this by recalling a view containing the colorpickerE.G:Fixture X thru YView \"Colorpicker\"than edit the colorStore Preset 4.1/MergeClearallSee attached macro, this will basicly do what you want and gives you 10 seconds to edit the color before storing the colorpreset, only thing you have to do is to create a view called \"Colorpicker\"FilesCOLORprompt.xml780 Byte – 105 Downloads"
+    }
+  ],
   "replies": 0,
   "thread_id": "56531",
   "title": "Color Prompt",

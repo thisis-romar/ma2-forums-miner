@@ -3,6 +3,26 @@
   "author": "Mabarbe",
   "post_date": null,
   "post_text": "April 30, 2020 at 6:05 PM#1Hi, Im trying to create a macro asking me which cue to Selfix from the selected executor. Basically what I want is to ask me Current or Next and then selfix according to the selection (obviously).Only way I thought for selecting the next cue without changing the ouput on stage is through preview modeSo far it goes like this and is working (All Follow) :ClearSelectionPreview Edit OnSetVar $answer=(\"Which cue do you want to SelFix ? 1=Current / 2=Next\")[$answer==\"1\"]  SelFix Cue[$answer==\"2\"]  Preview Next ;  SelFix PreviewExecutor CueAny suggestions to improve this macro ? What do you think ?",
+  "posts": [
+    {
+      "author": "Mabarbe",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 30, 2020 at 6:05 PM#1Hi, Im trying to create a macro asking me which cue to Selfix from the selected executor. Basically what I want is to ask me Current or Next and then selfix according to the selection (obviously).Only way I thought for selecting the next cue without changing the ouput on stage is through preview modeSo far it goes like this and is working (All Follow) :ClearSelectionPreview Edit OnSetVar $answer=(\"Which cue do you want to SelFix ? 1=Current / 2=Next\")[$answer==\"1\"]  SelFix Cue[$answer==\"2\"]  Preview Next ;  SelFix PreviewExecutor CueAny suggestions to improve this macro ? What do you think ?"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 1, 2020 at 3:08 PM#2well, what are you trying to do? a selfix doesn't need preview or blindedit or anything, it just selects the fixtures that are programmed in the cue you are selecting. so i would guess that you're using it to start something else, in which case i wouldn't know any way to improve it since i don't know what you're using it for!one different option rather than 'preview next' and selfix previewexec cue is to use $selectedexeccue and addvar[$answer==1] selfix $selectedexeccue[$answer==2] setvar $nextexeccue = $selectedexeccue[$answer==2] addvar $nextexeccue = 1[$answer==2] selfix $nextexeccue"
+    },
+    {
+      "author": "Mabarbe",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 1, 2020 at 5:38 PM#3Thanks, I like this approach as well.Im just looking for different thoughts about quick access. All I'm trying to do is to save steps while programming or updating a cue. It is not for a specific task, no worries.I tried your macro (I found out I had to add «Cue» after Selfix, otherwise it would not selfix anything)  and it works well !Only problem, if my cue number is not whole (.5, etc) and I try to select the next cue, I would get error message like this (example, with actual Cue 2.5) : Error : Selfix 3.50000000000 Erro #9 : Number too large (Cue 3,5 doesnt exist)That is probably because $nextexeccue adds 1 to the actual cue number value to select the next one. I will try to find a different way, otherwise changing the cue numbers from the cue list should correct this issue as well.Thanks a lot !"
+    }
+  ],
   "replies": 0,
   "thread_id": "65612",
   "title": "Selfix macro for current and next cue",

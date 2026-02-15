@@ -3,6 +3,26 @@
   "author": "MoRida",
   "post_date": null,
   "post_text": "October 22, 2019 at 2:18 AM#1Is there a way to say loop macro lines x thru y a certain number of times, then stop?",
+  "posts": [
+    {
+      "author": "MoRida",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "October 22, 2019 at 2:18 AM#1Is there a way to say loop macro lines x thru y a certain number of times, then stop?"
+    },
+    {
+      "author": "scoobytoobins",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "October 22, 2019 at 2:55 AM#2you could do something like:setvar $loopcmd = 1---whatever your macro line is---addvar $loopcmd = 1[$loopcmd<x] macro 1.macronumber.line (---whatever your macro line is---) where x is the amount of times you want to loop"
+    },
+    {
+      "author": "Duplicate bentoylight",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "October 22, 2019 at 10:01 PM#3macro \"loop\"1. setvar $count 12. setvar $end x3. your commands4. ...9. addvar $count 110. [$count<=$end] macro 1.\"loop\".3Refer to \"square brackets\" help.if you do [$loopcmd<x], you'll miss the last step."
+    }
+  ],
   "replies": 0,
   "thread_id": "64844",
   "title": "Loop a macro",

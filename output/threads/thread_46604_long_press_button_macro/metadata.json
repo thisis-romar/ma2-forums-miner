@@ -3,6 +3,44 @@
   "author": "laix",
   "post_date": null,
   "post_text": "May 12, 2015 at 1:47 PM#1Hi guys,Just a quick thing,  how to write a long press button in a macro.I'm working onFixture 99 At (long press) (choose attribute) Fixture 98Thanks",
+  "posts": [
+    {
+      "author": "laix",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "May 12, 2015 at 1:47 PM#1Hi guys,Just a quick thing,  how to write a long press button in a macro.I'm working onFixture 99 At (long press) (choose attribute) Fixture 98Thanks"
+    },
+    {
+      "author": "laix",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "May 12, 2015 at 5:41 PM#2For now...fixture () at fixture () if attribute dim + pan + tilt"
+    },
+    {
+      "author": "kdoemelt",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "May 13, 2015 at 7:59 PM#3Another way to do this would be to create a filter with the selected attributes. The result is the same.If you want the current selection in the programmer to take values from a selected fixture then marco is :1: Filter (x)2: At Fixture @Everything in the programmer will take the filtered values from the next number you type.If you want to specify a target fixture not currently in the programmer then add this line to the top:Fixture @This will leave values already in the programmer in place, and put the filtered values into the selected fixture.Thanks,Kurt"
+    },
+    {
+      "author": "kdoemelt",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "May 13, 2015 at 11:52 PM#4And because there are so many ways to do the same thing on the MA, here is one more...The long press you are looking for is actually the attributes filter menu.If you insert this line in your macro:Menu \"AF\" OnIt will bring up that filter screen.I hope that helps.- Kurt"
+    },
+    {
+      "author": "laix",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "May 14, 2015 at 4:48 PM#5Thanks Kurt,Today i did this one  to copy an attribute from a fixture stored in a cue,  clear the program andFixture (a)  At Executor () Cue () If Attribute dim + pan ...... + ()Destination fixture and  target fixture are the same"
+    },
+    {
+      "author": "kdoemelt",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "May 15, 2015 at 10:56 PM#6You are very welcome!Yes, you can use this for pulling values from another cue location.I like to use defined filters in combination with extracting values. This can also be used to extract certain attributes from presets as well.I tend to write a lot of \"All\" palettes and sometimes I just want the color, or position from that preset.I have a set of filters on the user 2 X11-X20 buttons under the  9\" display as part of my programming Marcos."
+    }
+  ],
   "replies": 0,
   "thread_id": "46604",
   "title": "long press button macro",

@@ -3,6 +3,44 @@
   "author": "pinch",
   "post_date": null,
   "post_text": "January 24, 2019 at 1:26 PM#1Hello !I am trying to create a macro allowing me to do a B.O. after a cue in tracking mode. On the 2nd line of my macro I enter the cue before my black out and on line 9 I add 0.001 to my variable cue destination of my black out. Unfortunately the console adds me 3 zeros and it makes me a mistake ... (See the two photos attached)Someone would have an idea to addvar without the console does not add these 3 zeros?Thank you !Imagesimg1.jpg516.06 kB2,048 × 1,536img2.jpg465.7 kB2,048 × 1,536",
+  "posts": [
+    {
+      "author": "pinch",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "January 24, 2019 at 1:26 PM#1Hello !I am trying to create a macro allowing me to do a B.O. after a cue in tracking mode. On the 2nd line of my macro I enter the cue before my black out and on line 9 I add 0.001 to my variable cue destination of my black out. Unfortunately the console adds me 3 zeros and it makes me a mistake ... (See the two photos attached)Someone would have an idea to addvar without the console does not add these 3 zeros?Thank you !Imagesimg1.jpg516.06 kB2,048 × 1,536img2.jpg465.7 kB2,048 × 1,536"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 2,
+      "post_text": "January 24, 2019 at 10:44 PM#2unfortunately applying AddUservar converts the variable to a floatingpoint (with 6 digits).--if you use IntelliVars you could replace line 8 withCode$FORMULA \"$cue=$cue + 0.001\" ; $CALCULATE(+ change the wait-time of line 8 from 'Follow' to 0.05s)learn more about IntelliVars here:[url=http://www.ma-share.net/forum/read.php…61174#msg-61174]Glad's IntelliVars[/url]"
+    },
+    {
+      "author": "pinch",
+      "post_date": null,
+      "post_number": 3,
+      "post_text": "January 25, 2019 at 7:54 AM#3Hi Glad and thank you for your answer.I just tested your macro and everything works perfectly if the cue number is just 1 or 2 or 3... but if the cue number is .001 or .002 ... he stores in cue .001.001 or .002.001"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 4,
+      "post_text": "January 25, 2019 at 1:24 PM#4please post your new macro"
+    },
+    {
+      "author": "pinch",
+      "post_date": null,
+      "post_number": 5,
+      "post_text": "January 25, 2019 at 3:14 PM#5Of course !after running your macro \"create GLADs Intellivars Vol.2\"I have running my macro \"BO\"01 Blind On02 Setuservar $cue = (BO after which cue ?)03 Block Cue $cue Presettype \"dimmer\"04 Search Attribute \"dim\" At 0.1 Thru 100 if Cue $cue /nc05 SelFix SearchResult06 Unblock Cue $cue Presettype \"dimmer\"07 At 008 $FORMULA \"$cue=$cue + 0.001\" ; $CALCULATE09 Store Cue $cue /cueonly /nc10 Label Cue $cue \"B.O.\"11 ClearSelection12 Blind OffYou can see the before and after the result on the attached photos...Thanks for your help !ImagesIMG_20190125_154414_HHT.jpg3.77 MB4,000 × 3,000IMG_20190125_154707_HHT.jpg4.31 MB4,000 × 3,000IMG_20190125_154707_HHT.jpg4.31 MB4,000 × 3,000"
+    },
+    {
+      "author": "glad",
+      "post_date": null,
+      "post_number": 6,
+      "post_text": "January 25, 2019 at 4:40 PM#6Check the timestamp of your executed Macrolines.line 9 executes at the same time as the IntelliVars of line 8, way too fast, giving no time for the Intellivars to do their job.Seems like you didn't enter the required timing in the Wait columnPlease make sure that this column reads \"0.05\" instead of \"Follow\""
+    }
+  ],
   "replies": 0,
   "thread_id": "63225",
   "title": "Black out in tracking",
