@@ -1,0 +1,28 @@
+{
+  "assets": [
+    {
+      "checksum": "sha256:50e90482f7d7a708c69dc5af4766234a1d42b303e252fe27a8f2585dfbbedb1e",
+      "download_count": 6,
+      "filename": "Mirror Moving.xml",
+      "post_number": 1,
+      "size": 6227,
+      "url": "https://forum.malighting.com/file-download/6063/"
+    }
+  ],
+  "author": "Floriann",
+  "post_date": null,
+  "post_text": "February 27, 2026 at 6:27 PM#1Hello everybody,I wanted to share a macro I wrote some time ago. I work in a theatre and we often use lights somewhat symmetrically. This means we will start making a preset with a moving light from a front of house position from stage right. After finishing that we often also create the preset for the same position stage left. This can be quickly done by “Channel X at Channel Y” and flipping the pan attribute by multiplying by -1. In theatre we work with profiles most of the time and are using the shapers too. That’s why I wrote this macro to help mirror the channels, including the shapers and their rotation too.The workflow is similar to “Channel At Channel”. You have your first fixture focussed and in programmer (doesn’t matter if these are only live values or already stored as preset). You then start the macro which asks you for the the old and new channel. After your input the macro will store a temporary preset which will be deleted later. From there the values are extracted to the new fixture preserving the reference to a color preset if possible. The pan values is multiplied by -1 and then the shaper rotation and blade attributes are mirrored using the “Replace Attribute” command. Then the preset is applied to the old channel again because some values are lost due to the replace command moving the data to the new channel. The temporary preset and all user variables are deleted.In the macro are disabled lines for also mirroring barndoors. This works theoretically, but I am not using this in live production, because our barndoors are too finicky to trust them with this. Executing this macro in production looks, well, interesting seeing the values replaced live on stage.What you need to know if you want to try out this macro:- The macro is only working with channels right now, but can obviously be changed to fixtures.- Your fixture types need to use the correct attribute definitions used by the macro.- The numbering of your blades has to match.Please let me know if you try out my macro and I would love hearing your feedback or ideas for improvement. For example, I would love to keep the preset reference for the old channel or have the option to automatically store the new channel into the preset, but I don’t know a way how this would be possible.Have funLink to GitHubFilesMirror Moving.xml6.23 kB – 6 Downloads",
+  "posts": [
+    {
+      "author": "Floriann",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "February 27, 2026 at 6:27 PM#1Hello everybody,I wanted to share a macro I wrote some time ago. I work in a theatre and we often use lights somewhat symmetrically. This means we will start making a preset with a moving light from a front of house position from stage right. After finishing that we often also create the preset for the same position stage left. This can be quickly done by “Channel X at Channel Y” and flipping the pan attribute by multiplying by -1. In theatre we work with profiles most of the time and are using the shapers too. That’s why I wrote this macro to help mirror the channels, including the shapers and their rotation too.The workflow is similar to “Channel At Channel”. You have your first fixture focussed and in programmer (doesn’t matter if these are only live values or already stored as preset). You then start the macro which asks you for the the old and new channel. After your input the macro will store a temporary preset which will be deleted later. From there the values are extracted to the new fixture preserving the reference to a color preset if possible. The pan values is multiplied by -1 and then the shaper rotation and blade attributes are mirrored using the “Replace Attribute” command. Then the preset is applied to the old channel again because some values are lost due to the replace command moving the data to the new channel. The temporary preset and all user variables are deleted.In the macro are disabled lines for also mirroring barndoors. This works theoretically, but I am not using this in live production, because our barndoors are too finicky to trust them with this. Executing this macro in production looks, well, interesting seeing the values replaced live on stage.What you need to know if you want to try out this macro:- The macro is only working with channels right now, but can obviously be changed to fixtures.- Your fixture types need to use the correct attribute definitions used by the macro.- The numbering of your blades has to match.Please let me know if you try out my macro and I would love hearing your feedback or ideas for improvement. For example, I would love to keep the preset reference for the old channel or have the option to automatically store the new channel into the preset, but I don’t know a way how this would be possible.Have funLink to GitHubFilesMirror Moving.xml6.23 kB – 6 Downloads"
+    }
+  ],
+  "replies": 0,
+  "thread_id": "69777",
+  "title": "Mirror Moving",
+  "url": "https://forum.malighting.com/forum/thread/69777-mirror-moving/",
+  "views": 0
+}

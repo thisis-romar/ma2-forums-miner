@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.61/MA.xsd" major_vers="3" minor_vers="9" stream_vers="61">
+	<Info datetime="2026-02-27T10:55:01" showfile="Mirror Moving" />
+	<Macro index="2" name="Mirror Moving">
+		<InfoItems>
+			<Info date="2026-02-27T10:55:01">
+This macro can mirror moving lights symmetrically, including pan, shaper values and the rotation of the shaper assembly. 
+
+Have your already focussed moving light with active values in the programmer (preset or hard values).
+Start the macro and input the channel Id for the old and new channel. 
+
+A temporary preset is stored and the values are copied to the new channel preserving the color preset reference if possible.
+The pan value is mirrored, the shaper rotation inverted and the blades are mirrored across a vertical axis.
+The values of the old channel are reapplied because some values are lost by moving them to the new channel.
+The temporary preset and user variables are deleted and the new channel is selected. 
+
+You can now fine tune the values for your new channel and then store it to a preset.
+Attention: Be aware that the preset reference of the old channel is lost!
+
+(c) Florian Granzow, 2025, v3.3</Info>
+		</InfoItems>
+		<Appearance Color="9f3fff" />
+		<Macroline index="0">
+			<text>SetUserVar $Old = (Channel Old); SetUserVar $New = (Channel New)</text>
+			<info>(c) Florian Granzow, 2025, v3.3</info>
+		</Macroline>
+		<Macroline index="1" delay="0.1">
+			<text>SetUserVar $Preset = &apos; &quot;temp Mirror Moving&quot; &apos;</text>
+			<info>Temp preset name</info>
+		</Macroline>
+		<Macroline index="2" />
+		<Macroline index="3" delay="0.1">
+			<text>Store Preset 0.$Preset If Channel $Old If - PresetType 4 /noconfirm /keepactive /selective</text>
+			<info>Store Preset for all Attributes except Color</info>
+		</Macroline>
+		<Macroline index="4" />
+		<Macroline index="5">
+			<text>Channel $New At Channel $Old If PresetType 4</text>
+			<info>Copy Color (preserve reference)</info>
+		</Macroline>
+		<Macroline index="6" delay="0.1">
+			<text>Channel $New Extract Channel $Old If - PresetType 4</text>
+			<info>Copy other values (hard values)</info>
+		</Macroline>
+		<Macroline index="7" />
+		<Macroline index="8">
+			<text>Attribute &quot;Pan&quot; At *-1</text>
+			<info>Mirror pan value</info>
+		</Macroline>
+		<Macroline index="9">
+			<text>Replace Channel $New Attribute &quot;Shaper Rot&quot; At 0 Thru 100 With 100 Thru 0 If Programmer /nc</text>
+			<info>Mirror ShaperRot</info>
+		</Macroline>
+		<Macroline index="10" disabled="true">
+			<text>Replace Channel $New Attribute &quot;BarndoorsAssembly&quot; At 0 Thru 100 With 100 Thru 0 If Programmer /nc</text>
+			<info>Mirror Assembly</info>
+		</Macroline>
+		<Macroline index="11" />
+		<Macroline index="12">
+			<text>Replace Attribute &quot;Blade1A&quot; Channel $Old With Attribute &quot;Blade1B&quot; Channel $New If Programmer /nc</text>
+			<info>Mirror shaper</info>
+		</Macroline>
+		<Macroline index="13">
+			<text>Replace Attribute &quot;Blade1B&quot; Channel $Old With Attribute &quot;Blade1A&quot; Channel $New If Programmer /nc</text>
+		</Macroline>
+		<Macroline index="14">
+			<text>Replace Attribute &quot;Blade3A&quot; Channel $Old With Attribute &quot;Blade3B&quot; Channel $New If Programmer /nc</text>
+		</Macroline>
+		<Macroline index="15">
+			<text>Replace Attribute &quot;Blade3B&quot; Channel $Old With Attribute &quot;Blade3A&quot; Channel $New If Programmer /nc</text>
+		</Macroline>
+		<Macroline index="16">
+			<text>Replace Attribute &quot;Blade2A&quot; Channel $Old With Attribute &quot;Blade4B&quot; Channel $New If Programmer /nc</text>
+		</Macroline>
+		<Macroline index="17">
+			<text>Replace Attribute &quot;Blade2B&quot; Channel $Old With Attribute &quot;Blade4A&quot; Channel $New If Programmer /nc</text>
+		</Macroline>
+		<Macroline index="18">
+			<text>Replace Attribute &quot;Blade4A&quot; Channel $Old With Attribute &quot;Blade2B&quot; Channel $New If Programmer /nc</text>
+		</Macroline>
+		<Macroline index="19" delay="0.2">
+			<text>Replace Attribute &quot;Blade4B&quot; Channel $Old With Attribute &quot;Blade2A&quot; Channel $New If Programmer /nc</text>
+		</Macroline>
+		<Macroline index="20" disabled="true">
+			<text>Replace Attribute &quot;Barndoor1&quot; Channel $Old With Attribute &quot;Barndoor2&quot; Channel $New If Programmer /nc</text>
+			<info>Mirror barndoors</info>
+		</Macroline>
+		<Macroline index="21" disabled="true">
+			<text>Replace Attribute &quot;Barndoor2&quot; Channel $Old With Attribute &quot;Barndoor1&quot; Channel $New If Programmer /nc</text>
+		</Macroline>
+		<Macroline index="22" disabled="true">
+			<text>Replace Attribute &quot;Barndoor3&quot; Channel $Old With Attribute &quot;Barndoor4&quot; Channel $New If Programmer /nc</text>
+		</Macroline>
+		<Macroline index="23" delay="0.2" disabled="true">
+			<text>Replace Attribute &quot;Barndoor4&quot; Channel $Old With Attribute &quot;Barndoor3&quot; Channel $New If Programmer /nc</text>
+		</Macroline>
+		<Macroline index="24" />
+		<Macroline index="25" delay="0.1">
+			<text>Channel $Old Extract Preset 0.$Preset</text>
+			<info>Reapply lost values</info>
+		</Macroline>
+		<Macroline index="26">
+			<text>Delete Preset 0.$Preset</text>
+			<info>Clean tmp preset</info>
+		</Macroline>
+		<Macroline index="27">
+			<text>Channel $New</text>
+			<info>Select new Channel to adjust values</info>
+		</Macroline>
+		<Macroline index="28" delay="0.1">
+			<text>LUA &quot;gma.echo(&apos;Mirrored Channel &apos; .. gma.user.getvar(&apos;Old&apos;) .. &apos; At Channel &apos; .. gma.user.getvar(&apos;New&apos;)) gma.feedback(&apos;Mirrored Channel &apos; .. gma.user.getvar(&apos;Old&apos;) .. &apos; At Channel &apos; .. gma.user.getvar(&apos;New&apos;))&quot;</text>
+			<info>Command line feedback</info>
+		</Macroline>
+		<Macroline index="29" />
+		<Macroline index="30">
+			<text>SetUserVar $Old = &quot;&quot;; SetUserVar $New = &quot;&quot; ; SetUserVar $Preset = &quot;&quot;</text>
+			<info>Clean UserVar</info>
+		</Macroline>
+	</Macro>
+</MA>
