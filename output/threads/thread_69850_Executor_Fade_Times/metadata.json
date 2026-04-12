@@ -1,0 +1,19 @@
+{
+  "assets": [],
+  "author": "LucaD",
+  "post_date": null,
+  "post_text": "April 7, 2026 at 7:39 PM#1Hello,I need a Macro which change the Fade Times of all Cues in the Sequences which assigned to the Executors 5.1 Thru 5.30.Some Executors in this range are empty and I get \"Error #28: No Cue Source given\" when I try it with my Command \"Assign Executor 5.1 Thru 5.30 Cue 1 Thru * /Fade = (Fadetime)\".The weird thing is that this command works in some of my showfiles, but not in all of them, but the execs in the file are assigned equal.",
+  "posts": [
+    {
+      "author": "LucaD",
+      "post_date": null,
+      "post_number": 1,
+      "post_text": "April 7, 2026 at 7:39 PM#1Hello,I need a Macro which change the Fade Times of all Cues in the Sequences which assigned to the Executors 5.1 Thru 5.30.Some Executors in this range are empty and I get \"Error #28: No Cue Source given\" when I try it with my Command \"Assign Executor 5.1 Thru 5.30 Cue 1 Thru * /Fade = (Fadetime)\".The weird thing is that this command works in some of my showfiles, but not in all of them, but the execs in the file are assigned equal."
+    }
+  ],
+  "replies": 0,
+  "thread_id": "69850",
+  "title": "Executor Fade Times",
+  "url": "https://forum.malighting.com/forum/thread/69850-executor-fade-times/",
+  "views": 0
+}
